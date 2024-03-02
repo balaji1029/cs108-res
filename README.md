@@ -1,5 +1,7 @@
 # Cheat Sheets and Resources for CS 108 Midsem
 
+### Don't forget to star this repo... 😉😉
+
 This repo contains the resources for CS 108 midsem.
 
 Clone this repo using the command
