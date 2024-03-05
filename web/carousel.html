@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Carousel</title>
+    <style>
+        img{
+            height: 50vh;
+        }
+
+        /* .body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        
+
+        .carousel{
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            position: absolute;
+            /* top: 50%;
+            left: 0;
+            /* width: 100%;
+            height: 100%; */
+            /* border: 2px solid black; */
+        }
+
+        .previous, .next{
+            position: absolute;
+            top: 50%;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 3px;
+            transition: 0.9s ease;
+        }
+
+        .previous:hover, .next:hover{
+            background-color: rgba(0, 0, 0, 0.541);
+            cursor: pointer;
+        }
+
+        .previous{
+            left: 0;
+        }
+
+        .next{
+            right: 0;
+        }
+
+        .slide{
+            display:none;  
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carousel">
+        <div class="slide">
+            <img src="1.jpg" alt="Image 1">
+        </div>
+        
+        <div class="slide">
+            <img src="2.jpg" alt="Image 2">
+        </div>
+
+        <div class="slide">
+            <img src="3.jpg" alt="Image 3">
+        </div>
+
+        <div class="slide">
+            <img src="4.jpg" alt="Image 4">
+        </div>
+
+        <!-- Unicode Decimal Code for arrows -->
+        <a class="previous" onclick="previous()">&#10094;</a>
+        <a class="next" onclick="next()">&#10095;</a>
+    </div>    
+
+    <script>
+        let curr_slide_num = 0;
+        displaySlide(curr_slide_num);
+
+        function displaySlide(n){
+            let slides = document.getElementsByClassName("slide");
+            for(let i=0; i<slides.length; i++){
+                slides[i].style.display = "none";
+            }
+            slides[n].style.display = "block";
+        }
+
+        function next(){
+            let slides = document.getElementsByClassName("slide");
+            curr_slide_num = (curr_slide_num + 1)%(slides.length);
+            displaySlide(curr_slide_num);
+        }
+
+        function previous(){
+            let slides = document.getElementsByClassName("slide");
+            curr_slide_num = curr_slide_num - 1;
+            if (curr_slide_num < 0) curr_slide_num = slides.length-1;
+            displaySlide(curr_slide_num);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+body{
+    background-color: azure;
+}
+h1{
+    text-align: center;
+    
+}
+#form{
+    text-align: center;
+}
+#feedback{
+    width: 50%;
+    margin: auto;
+}

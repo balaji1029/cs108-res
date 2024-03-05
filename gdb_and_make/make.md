@@ -254,7 +254,6 @@ Both `*` and `%` are called wildcards in Make, but they mean entirely different 
 print: $(wildcard *.c)
 	ls -la  $?
 ```
-
 `*` may be used in the target, prerequisites, or in the `wildcard` function.
 
 Danger: `*` may not be directly used in a variable definitions

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IITB CSE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- A simple table with four columns - S.No, Roll No., Name, Graduating Year, Research Interests-->
+    <div class="students">
+        <h3>Honorable Students of Computer Science</h3>
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>Roll No.</th>
+                <th>Name</th>
+                <th>Graduating Year</th>
+                <th>Research Interests</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>210050138</td>
+                <td><a href="https://www.cse.iitb.ac.in/~sachiray/" target="_blank">Sabyasachi Samantaray</a></td>
+                <td>2025</td>
+                <td>Deep Learning, NLP, CV</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>210050061</td>
+                <td><a href="https://www.cse.iitb.ac.in/~guramrit/" target="_blank">Guramrit Singh</a></td>
+                <td>2025</td>
+                <td>Edge Computing, Virtualisation Technologies</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>22b1053</td>
+                <td>Kavya Gupta</td>
+                <td>2026</td>
+                <td>Network Security, Distributed Systems</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>22b1003</td>
+                <td>Saksham Rathi</td>
+                <td>2026</td>
+                <td>Graph Theory, Combinatorics</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Now another div with a simple form asking to add a student to a table. The form asks for
+    Roll No, Name, Graduation Year, Link to website, if present and Research Interests-->
+    <div class="add-student">
+        <h3>Add a new student</h3>
+        <form action="" id="info-form">
+            <label for="rollno">Roll Number:</label>
+            <input type="text" id="rollno" name="rollno" placeholder="Enter Roll Number"><br><br>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Name"><br><br>
+
+            <label for="gradyear">Graduation Year:</label>
+            <select id="gradyear" name="gradyear" size="3">
+                <option value="2022">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+            </select><br><br>
+
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" placeholder="Enter Website"><br><br>
+
+            <label for="research">Research Interests:</label><br>
+            <textarea id="research" name="research" placeholder="Enter Research Interests" style="height:50px"></textarea><br><br>
+
+            <input type="submit" value="Submit" class="submit">
+        </form>
+
+        <script>
+
+            function isValid(content, regexp){
+                return regexp.test(content);
+            }
+
+            // Here we will validate the form before adding student to the table
+            function handleSubmit(event){
+                // Prevent the default form submission behavior
+                event.preventDefault();
+
+                let rollno = document.getElementById("rollno").value;
+                let name = document.getElementById("name").value;
+                let gradyear = document.getElementById("gradyear").value;
+                let website = document.getElementById("website").value;
+                let research = document.getElementById("research").value;
+
+                // Validate roll number - Should be of form YYBXXXX
+                let rollno_regexp = /^[0-9]{2}B[0-9]{4}$/
+                // Validate name - Should contain letters only and no two consecutive spaces
+                let name_regexp = /^([a-zA-Z]+\s)*([a-zA-Z]+)$/
+                // Validate website - Should be a valid URL -- Additional Task (remove the url type and replace it with text)
+                // website_regexp = TODO
+                if(!isValid(rollno, rollno_regexp)){
+                    alert("Invalid Roll Number");
+                    return;
+                }
+                if(!isValid(name, name_regexp)){
+                    alert("Invalid Name");
+                    return;
+                }
+                if(gradyear == ""){
+                    alert("Invalid Graduation Year");
+                    return;
+                }
+                // Recall website is not a required field
+                if(website != "" && !isValid(website, website_regexp)){
+                    alert("Invalid Website");
+                    return;
+                }
+                if(research == ""){
+                    alert("Invalid Research Interests");
+                    return;
+                }
+                alert("Student added successfully");
+                // reset the form
+                document.getElementById("info-form").reset();
+
+            }
+
+            document.getElementById("info-form").addEventListener("submit", handleSubmit)
+        </script>
+</body>
+</html>

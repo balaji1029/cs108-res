@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Party Sequence</title>
+</head>
+<body>
+
+<label for="inputN">Enter the value of n:</label>
+<input type="number" id="inputN" min="1" step="1" value="1">
+<button onclick="whoops()">Calculate</button>
+<p id="result"></p>
+
+<script>
+    function whoops(){
+        var n = document.getElementById("inputN").value;
+        document.getElementById("result").innerHTML="Result: "+derang(n);
+    }
+    function derang(n){
+        if(n<2){return 0;}
+        if(n==2){return 1;}
+        return ((n-1)*(derang(n-1)+derang(n-2)));
+
+    }
+</script>
+
+</body>
+</html>

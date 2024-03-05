@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/tryit/trycompiler.asp?filename= by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 14:24:45 GMT -->
+<head>
+<title>Tryit Compiler v1.0</title>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="https://www.w3schools.com/images/w3schools_logo.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<link rel="preload" href="../lib/fonts/fontawesome8deb.woff2?14663396" as="font" type="font/woff2" crossorigin> 
+<link rel="preload" href="../lib/fonts/source-code-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="stylesheet" href="../lib/w3schools30.css">
+<link rel="stylesheet" href="../lib/codemirror_multi.css">
+<script src="../lib/codemirror_multi.js"></script>
+<script src="../lib/codemirror_htmlmixed.js"></script>
+<script src="../lib/codemirror_xml.js"></script>
+<script src="../lib/codemirror_mathematica.js"></script>
+<script src="../lib/codemirror_autorefresh.js"></script>
+<script src="../lib/codemirror_python.js"></script>
+<script src="../lib/codemirror_shell.js"></script>
+<script src="../lib/codemirror_clike.js"></script>
+<script src="../lib/codemirror_clojure.js"></script>
+<script src="../lib/codemirror_fortran.js"></script>
+<script src="../lib/codemirror_go.js"></script>
+<script src="../lib/codemirror_javascript.js"></script>
+<script src="../lib/codemirror_php.js"></script>
+<script src="../lib/codemirror_perl.js"></script>
+<script src="../lib/codemirror_r.js"></script>
+<script src="../lib/codemirror_ruby.js"></script>
+<script src="../lib/codemirror_swift.js"></script>
+<script src="../lib/codemirror_vb.js"></script>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KTCFC3S');
+</script>
+<!-- End Google Tag Manager -->
+
+<script src="../lib/uic3447.js?v=1.0.5"></script>
+<script data-cfasync="false" type="text/javascript">
+var k42 = false;
+
+// GPT slots
+var gptAdSlots = [];
+window.googletag = window.googletag || { cmd: [] };
+googletag.cmd.push(function() {
+  var leaderMapping = googletag.sizeMapping().
+  // Mobile ad
+  addSize([0, 0], [320, 50]). 
+  // Vertical Tablet ad
+  addSize([468, 0], [468, 60]). 
+  // Horizontal Tablet
+  addSize([728, 0], [728, 90]).
+  // Desktop and bigger ad
+  addSize([970, 0], [[728, 90], [970, 90]]).build();
+  // addSize([970, 0], [728, 90]).build();
+  gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1428407818244-0').
+  // gptAdSlots[0] = googletag.defineSlot('/16833175/TryitLeaderboard', [728, 90], 'div-gpt-ad-1428407818244-0').
+  defineSizeMapping(leaderMapping).addService(googletag.pubads());
+  googletag.pubads().setTargeting("content","try" + (function () {
+    var folder = location.pathname;
+    folder = folder.replace("../index.html", "");
+    folder = folder.substr(0, folder.indexOf("../index.html"));
+    return folder;
+  })());
+});  
+
+</script>
+<script data-cfasync="false" type="text/javascript">
+    window.snigelPubConf = {
+    "adengine": {
+
+      "activeAdUnits": [],
+      "additionalGptAdSlotIds": ["div-gpt-ad-1428407818244-0"]
+
+  }
+}
+uic_r_a()
+</script>
+<script async data-cfasync="false" src="../../cdn.snigelweb.com/adengine/w3schools.com/loader.js" type="text/javascript"></script>
+<script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (970) && afterResize >= (970)) || (xbeforeResize >= (970) && afterResize < (970)) ||
+        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
+        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
+        xbeforeResize = afterResize;
+              
+        uic_r_m();
+         
+    }
+    if (window.screen.availWidth <= 768) {
+      restack(window.innerHeight > window.innerWidth);
+    }
+    fixDragBtn();
+    showFrameSize();    
+}
+</script>
+<style>
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  color:#000000;
+  margin:0px;
+  font-size:100%;
+}
+.trytopnav {
+  height:48px;
+  overflow:hidden;
+  min-width:380px;
+  position:absolute;
+  width:100%;
+  top:99px;
+  background-color:#E7E9EB;
+}
+.topnav-icons {
+  margin-right:8px;
+}
+.trytopnav a,.trytopnav button {
+  color:#999999;
+}
+.w3-bar .w3-bar-item:hover {
+  color:#757575 !important;
+}
+a.w3schoolslink {
+  padding:0 !important;
+  display:inline !important;
+}
+a.w3schoolslink:hover,a.w3schoolslink:active {
+  text-decoration:underline !important;
+  background-color:transparent !important;
+}
+#dragbar{
+  position:absolute;
+  cursor: col-resize;
+  z-index:3;
+  padding:5px;
+}
+#shield {
+  display:none;
+  top:0;
+  left:0;
+  width:100%;
+  position:absolute;
+  height:100%;
+  z-index:4;
+}
+#framesize span {
+  font-family:Consolas, monospace;
+}
+#container {
+  background-color:#E7E9EB;
+  width:100%;
+  overflow:auto;
+  position:absolute;
+  top:144px;
+  bottom:0;
+  height:auto;
+}
+#textareacontainer, #iframecontainer {
+  float:left;
+  height:100%;
+  width:50%;
+}
+#textarea, #iframe {
+  height:100%;
+  width:100%;
+  padding-bottom:10px;
+  padding-top:1px;
+}
+#textarea {
+  padding-left:10px;
+  padding-right:5px;  
+}
+#iframe {
+  padding-left:5px;
+  padding-right:10px;
+  color:#ffffff;
+  font-family: consolas,"courier new",monospace;    
+}
+#textareawrapper {
+  width:100%;
+  height:100%;
+  background-color: #ffffff;
+  position:relative;
+  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#iframewrapper {
+  width:100%;
+  height:100%;
+  -webkit-overflow-scrolling: touch;
+  background-color: #ffffff;
+  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  color:#ffffff;
+  font-family: consolas,"courier new",monospace;  
+}
+#textareaCode, #textareaCodeInput, #textareaCode2, #textareaCode3 {
+  background-color: #ffffff;
+  font-family: consolas,"courier new",monospace;
+  font-size:15px;
+  height:100%;
+  width:100%;
+  padding:8px;
+  resize: none;
+  border:none;
+  line-height:normal;    
+}
+
+.CodeMirror.cm-s-default {
+  line-height:normal;
+  padding: 4px;
+  height:100%;
+  width:100%;
+}
+#iframeResult, #iframeSource {
+  background-color: #000000;
+  color:#ffffff;
+  font-family: consolas,"courier new",monospace!important;  
+  height:100%;
+  width:100%;  
+  padding:8px;
+}
+#iframeResult * {
+  font-family: consolas,"courier new",monospace!important;  
+}
+#stackV {background-color:#999999;}
+#stackV:hover {background-color:#BBBBBB !important;}
+#stackV.horizontal {background-color:transparent;}
+#stackV.horizontal:hover {background-color:#BBBBBB !important;}
+#stackH.horizontal {background-color:#999999;}
+#stackH.horizontal:hover {background-color:#999999 !important;}
+#textareacontainer.horizontal,#iframecontainer.horizontal{
+  height:50%;
+  float:none;
+  width:100%;
+}
+#textarea.horizontal{
+  height:100%;
+  padding-left:10px;
+  padding-right:10px;
+}
+#iframe.horizontal{
+  height:100%;
+  padding-right:10px;
+  padding-bottom:10px;
+  padding-left:10px;  
+}
+#container.horizontal{
+  min-height:200px;
+  margin-left:0;
+}
+#tryitLeaderboard {
+  background-color:#ffffff;
+  overflow:hidden;
+  text-align:center;
+  margin-top:5px;
+  height:90px;
+}
+.w3-dropdown-content {width:350px}
+
+#runbtn {
+  background-color:#04AA6D;
+  color:white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:18px;
+  padding:6px 25px;
+  margin-top:4px;
+  border-radius:5px;
+  word-spacing:10px;
+}
+#runbtn:hover {
+  background-color: #059862 !important;
+  color:white!important;
+}
+#getwebsitebtn {
+  background-color:#04AA6D;
+  font-family: 'Source Sans Pro', sans-serif;  
+  color: white;
+  font-size: 18px;
+  padding:6px 15px;
+  margin-top:4px;
+  margin-right: 10px;
+  display: block;
+  float: right;
+  border-radius: 5px;
+}
+#getwebsitebtn:hover {
+  background-color: #059862 !important;
+  color:white!important;
+}
+
+@media screen and (max-width: 727px) {
+  .trytopnav {top:70px;}
+  #container {top:116px;}
+}
+@media screen and (max-width: 467px) {
+  .trytopnav {top:60px;}
+  #container {top:106px;}
+  .w3-dropdown-content {width:100%}
+}
+@media only screen and (max-device-width: 768px) {
+  #iframewrapper {overflow: auto;}
+  #container     {min-width:320px;}
+  .stack         {display:none;}
+  #tryhome       {display:block;}
+}
+
+@font-face {
+font-family: 'fontawesome';
+src:url('../lib/fonts/fontawesome8deb.eot?14663396');
+src:url('../lib/fonts/fontawesome8deb.eot?14663396#iefix') format('embedded-opentype'),
+    url('../lib/fonts/fontawesome8deb.woff?14663396') format('woff'),
+    url('../lib/fonts/fontawesome8deb.ttf?14663396') format('truetype'),
+    url('../lib/fonts/fontawesome8deb.svg?14663396#fontawesome') format('svg');
+font-weight:normal;
+font-style:normal;
+}
+.fa {
+  display:inline-block;
+  font:normal normal normal 14px/1 FontAwesome;
+  font-size:inherit;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transform:translate(0,0);
+}
+.fa-2x {
+  font-size:2em;
+}
+.fa-home:before {content: '\e800'; }
+.fa-save:before {content: '\e804'; }
+.fa-rotate:before {content: '\e813'; }
+.fa-adjust:before { content: '\e80b'; }
+.fa-menu:before { content: '\f0c9'; }
+.loader {
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+#saveLoader {
+    margin:20px;
+}
+#runloadercontainer{
+  display:none;
+  position:absolute;
+  background-color:#000;
+  z-index:9;
+}
+#runloader{
+  margin:auto;
+  border: 10px solid #333;
+  border-top: 10px solid #04AA6D;
+  border-radius: 50%;
+  max-width: 150px;
+  max-height: 150px;
+  animation: spin 2s linear infinite;
+  position:relative;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#iframewrapper {
+	
+}
+
+.tabs-container {
+}
+.tabs {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -1px;
+  background-color:#E7E9EB;
+}
+.tab {
+  padding: 5px 10px;
+  background: #ddd;
+  width: fit-content;
+  display: inline-block;
+  cursor: pointer;
+
+  }
+.tab.active {
+  background: #fff;
+  border-bottom-color: white !important;
+}
+
+.tab-pane {
+  display: none;
+}
+.tab-pane.active { 
+  display: block;
+}
+a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu, button.topnav-icons.fa-adjust {
+    font-size: 28px!important;
+}
+#langOption:hover {
+  color:#000!important;
+  outline:1px solid #ccc;
+}
+
+
+body.darktheme {
+  background-color:rgb(40, 44, 52);
+  background-color:#1d2a35;  
+  color: #ddd;  
+
+}
+body.darktheme #tryitLeaderboard{
+  background-color:rgb(40, 44, 52);
+  background-color:#1d2a35;
+  color: #ddd;  
+  
+}
+body.darktheme .trytopnav{
+  background-color:#616161;
+  background-color:#38444d;  
+  color:#dddddd;
+}
+body.darktheme #container {
+  background-color:#616161;
+  background-color:#38444d;  
+}
+body.darktheme #textareaCode, body.darktheme #textareaCodeInput, body.darktheme #textareaCode2, body.darktheme #textareaCode3 {
+  background-color:rgb(40, 44, 52);
+  color:#fff;
+  background-color:#1d2a35;
+  background-color:rgb(21,32,43);
+  
+  color: #ddd;    
+}
+
+body.darktheme .trytopnav a,body.darktheme .trytopnav button {
+  color:#dddddd;
+}
+
+body.darktheme .tabs {
+  background-color:#616161;
+  background-color:#38444d;  
+  color: #ddd;  
+}
+body.darktheme .tab {
+  background-color:#616161;
+  background-color:#4b5b68;  
+  color: #ddd;  
+}
+body.darktheme .tab.active {
+    background: rgb(40, 44, 52);
+    color:#fff;
+  background-color:#1d2a35;
+  background-color:rgb(21,32,43);
+  
+  color: #ddd;  
+    border-bottom-color: rgb(40, 44, 52)!important;
+    border-bottom-color: #1d2a35!important;
+}
+body.darktheme #textareawrapper {
+    background-color: rgb(40, 44, 52)!important;
+  background-color:#1d2a35!important;
+  background-color:rgb(21,32,43)!important;
+  
+  xxcolor: #ddd;  
+    
+}
+</style>
+<!--[if lt IE 8]>
+<style>
+#textareacontainer, #iframecontainer {width:48%;}
+#container {height:500px;}
+#textarea, #iframe {width:90%;height:450px;}
+#textareaCode, #textareaCodeInput, #textareaCode2, #textareaCode3, #iframeResult {height:450px;}
+.stack {display:none;}
+</style>
+<![endif]-->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="../../www.googletagmanager.com/ns248c.html?id=GTM-KTCFC3S"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<h3>
+<img border="0" src="https://www.w3schools.com/images/stop.gif" align="absmiddle" width="32" height="32">
+The file you asked for does not exist
+</h3>

@@ -34,7 +34,7 @@ keywords:
 | `[role="dialog"]` | Attribute    |
 
 ### Combinators
-
+    
 | Selector            | Description       |
 | ------------------- | ----------------- |
 | `.parent .child`    | Descendant        |
