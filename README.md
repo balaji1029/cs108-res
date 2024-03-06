@@ -21,10 +21,6 @@ To install these extensions, make sure your VS Code version is above __1.86.0__ 
 
 Or import the CS108-Midsem profile for VS Code in the repo (File -> Preferences -> Profiles -> Import Profile).
 
-Unzip the w3schools.zip file using
+I would recommend just importing the profile as .vsix file is a bit outdated
 
-```bash
-unzip w3schools.zip
-```
-
-The **w3schools.zip** contains __git, html, css, js and cpp__ resources only.
+The **w3schools.zip** contains __git, html, css, js, how to and cpp__ resources only.
