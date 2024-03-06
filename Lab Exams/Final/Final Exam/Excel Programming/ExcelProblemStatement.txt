@@ -1,0 +1,43 @@
+Instructions before solving :
+
+1. To solve this lab, use the Libre Office application installed on the lab machine.
+Navigate to the folder "bodhitreeWorkspace\11\126\333\labDirectory", and open HiringResults.xlsx. Complete the required actions mentioned.
+3. Check Formulae.pdf for necessary references for formulae that you may need.
+4. POST THE SUBMISSION, DOWNLOAD THE SUBMISSION, AND CHECK WHETHER YOU ARE ABLE TO OPEN THE EXCEL FILE. [AS DURING THE ASSIGNMENT, WE OBSERVED A LOT OF EXCEL FILES GETTING CORRUPTED.]
+5. There shouldn't different formulae for different rows in the same column, only the numbers representing the rows should change.
+6. When saving the excel, use Excel 2007-365 format to save as .xlsx (not as .ODF)
+************Problem Statement*************
+
+You have started a transportation company named "Hola" and are currently recruiting drivers.
+
+In the "HiringDetails.xlsx" file,
+
+In Sheet 'Details', Column A has the state code, and Column B contains the state name for that respective code.
+
+In Sheet 'Main', Column A contains the license ID of the driver, where first 2 characters contains the state code of the state the driver belongs to.
+
+E.g., if ID is AP01 19980701234,
+AP(The first 2 characters) means he/she is from Andhra Pradesh (AP is the state code of Andhra Pradesh )
+
+Column B contains the license holder's name in the format 'FirstName#LastName'
+Eg: If the name is "Pavan Kumar#Yalavarthi" , first name is Pavan Kumar and the last name is Yalavarthi.
+
+Column C contains the grades he/she received in multiple rounds in the form of a string containing either P (pass) or F (fail).
+E.g., if the grade string is PPPPPPPPPF, he passed the first nine rounds and failed on the 10th round.
+
+Now, you need to fill in the rest of the columns as mentioned below.
+
+Column D should contain the driver's first name.
+Column E should contain the driver's last name. 
+Column F should contain the driver's state name. 
+(Additional marks if your VLOOKUP formula for state name works even when the number of rows is increased by adding union territory codes. 
+In simple words, your VLOOKUP formula should be independent of the number of rows in the Details sheet to receive additional marks.)
+
+Column G should contain the number of rounds he passed. 
+Hint: The number of Ps in the string = Length of the string - Length of the string without Ps.
+
+Column H should contain the job status, whether "Selected" or "Rejected". if he passed at least 7 rounds, he is Selected; otherwise, Rejected.
+
+
+Note : Actual marks including partial will be assigned post exam based on server side evaluation since this needs macros based on windows machine. 
+Client evaluation for now are just pass or fail.

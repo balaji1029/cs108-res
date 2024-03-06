@@ -1,0 +1,181 @@
+In the scripts folder, you will find 3 scripts present :-
+
+reset.sh :- For initializing the activity and creating the working_directory folder, and also
+            for resetting everything to scratch if you mess something up.
+
+submit.sh :- Run this script before submitting. Submitting without running this script may lead
+             to problems with git.
+
+reopen.sh :- If you wish to continue work from where you left off, after running submit.sh, use
+             reopen.sh. It brings you to the same state from where you submitted.
+
+***PLEASE USE RESET.SH WITH CAUTION IT CAN ERASE ALL YOUR PROGRESS IF FILES HAVE NOT BEEN COMMITTED ON GIT VCS****
+
+To run each script, first navigate to the scripts folder using the cd command.
+Then run the command bash <script_name>.sh
+
+P.S. :- All git commands have to be run inside the merge_repo directory and NOT the labDirectory
+        to avoid conflicts with the VLab .git folder.
+
+Navigate to scripts/ and run bash reset.sh to begin the activity.
+
+----Git Errors----
+
+After initializing the git repo, you will run into some error about dubious ownership of the directory.
+
+To avoid this run the following command:-
+
+git config --global --add safe.directory /home/labDirectory/merge_repo
+
+This is because we have created a git repo inside another git repo, which is a security issue for git.
+There is a very interesting reason why git has this feature, for those who are interested feel free to
+read up here :- https://github.blog/2022-04-12-git-security-vulnerability-announced/#cve-2022-24765
+
+(Not required for the lab, just if you guys are interested)
+
+Also, when you try to commit, the repo will ask for your username and email. 
+Another security feature which ensures that no unknown person can commit to the repository.
+
+To resolve this run the following commands :- 
+
+git config user.email "<email ID>"
+git config user.name "<name>"
+
+(Don't use the global tag, it may mess up the permissions of the VLab Git)
+
+Eg. 
+
+git config user.email "abc.iitb.ac.in"
+git config user.name "student"
+
+----------------------Merging Rules----------------------
+
+---------------file_1.cpp---------------
+
+file_1.cpp in master takes in 3 numbers and prints an output to the screen.
+file_1.cpp in development also takes in 3 numbers and prints an output to the screen 
+(usually different from the output in the master branch).
+
+Ensure that after merging, file_1.cpp behaves identically to the file_1.cpp in the master branch.
+
+---------------file_2.cpp---------------
+
+file_2.cpp in master takes in 3 numbers and prints an output to the screen.
+file_2.cpp in development also takes in 3 numbers and prints an output to the screen 
+(usually different from the output in the master branch).
+
+Ensure that after merging, file_2.cpp behaves identically to the file_2.cpp in the development branch.
+
+
+---------------file_3.cpp---------------
+
+file_3.cpp in master sorts the numbers given to it in decreasing order and prints them in square brackets, separated by ",".
+Firstly, it takes in the number of tests. For each test, it first takes in the number of integers in the test (say x).
+Then it sorts the next x integers in decreasing order and outputs the result.
+
+Eg. 
+
+Input:- 
+2
+
+5 9 10 11 12 13
+3 21 23 22
+
+Output:-
+[ 13, 12, 11, 10, 9 ]
+[ 23, 22, 21 ]
+
+
+file_3.cpp in development works similarly to file_3.cpp in master, except it prints the numbers in increasing order
+and in curly braces, separated by "|".
+
+
+Eg. 
+
+Input:- 
+2
+
+3 21 23 22
+5 9 10 11 12 13
+
+Output:-
+{ 21 | 22 | 23 }
+{ 9 | 10 | 11 | 12 | 13 }
+
+
+Ensure that after merging, file_3.cpp combines the features of both of these files, i.e. initially it takes in an integer
+as to the number of tests. For each test, it takes in a number (say x) followed by x integers that are sorted in 
+increasing order printed according to file_3 in master, and then another number (say y) followed by y integers 
+that are sorted in decreasing order printed according to file_3 in development.
+
+Eg. 
+
+Input:- 
+2
+
+3 21 23 22
+5 9 10 11 12 13
+
+5 9 10 11 12 13
+3 21 23 22
+
+Output:-
+[ 23, 22, 21 ]
+{ 9 | 10 | 11 | 12 | 13 }
+[ 13, 12, 11, 10, 9 ]
+{ 21 | 22 | 23 }
+
+---------------file_4.cpp---------------
+
+file_4.cpp in master takes in an integer and prints a diamond, the size of which is determined by the input.
+
+Eg. 
+
+Input:-
+7
+
+Output:-
+
+      *      
+     ***     
+    *****    
+   *******   
+  *********  
+ *********** 
+*************
+ *********** 
+  *********  
+   *******   
+    *****    
+     ***     
+      *
+
+file_4.cpp in development takes in an integer and prints an hourglass, the size of which is determined by the input.
+
+Eg. 
+
+Input:-
+7
+
+Output:-
+
+*************
+ *********** 
+  *********  
+   *******   
+    *****    
+     ***     
+      *      
+     ***     
+    *****    
+   *******   
+  *********  
+ *********** 
+*************
+
+Ensure that after merging, instead of file_4.cpp, we have 2 files :- file_4_master.cpp that behaves exactly like the file_4.cpp
+in the master branch and file_4_development.cpp that behaves exactly like the file_4.cpp in the 
+development branch.
+
+You are encouraged to reconstruct the files from the merged file_4.cpp itself, without copying from the previous
+branches, but if that feels too tough, feel free to checkout the files from previous commits.

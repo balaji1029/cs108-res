@@ -1,0 +1,131 @@
+--------------------- Lab 7 Activity 2 ---------------------
+                              General Details
+
+THEME: NumPy and The Matrix
+MAXIMUM MARKS: 8
+
+--------------------------------------------------------------------------
+                                References/Links
+
+1. statistics
+https://numpy.org/doc/stable/reference/routines.statistics.html
+2. sorting
+https://numpy.org/doc/stable/reference/generated/numpy.sort.html
+3. matrix operations
+https://towardsdatascience.com/top-10-matrix-operations-in-numpy-with-examples-d761448cb7a8
+4. padding
+https://numpy.org/doc/stable/reference/generated/numpy.pad.html
+
+--------------------------------------------------------------------------
+                                Problem
+
+Your friend Rockstar is too good at coding and playing with arrays, but you know that Rockstar
+only knows C programming language, while you are comfortable with Python. You want to show to
+your friend that there are faster ways of array and matrix operations using vectorization. You
+know that "numpy" is a magic wand in Python that enables using this very easily and provides a
+lot of functions. You decide to challenge your friend for the title of "Coding God"..
+
+You will have a comma-separated-values (CSV) file (matrix.csv) which is a two-dimensional
+matrix. You have to read this file and convert it into a numpy array. After that, you need to
+perform various operations on it, as detailed below.
+
+The given matrix:
+5,5,84,3,9
+6,11,1,55,58
+1,20,48,12,36
+8,4,41,93,98
+6,17,64,0,13
+
+All expected outputs are given for this input matrix. Do not hardcode the outputs, otherwise
+they will fail for almost all other matrices!
+
+Task 1:
+Print only the elements that belong to the upper diagonal matrix (including the diagonal
+elements) in column-wise fashion.
+
+Expected output (present in task1.txt):
+5
+5 11
+84 1 48
+3 55 12 93
+9 58 36 98 13
+
+Task 2:
+Print mean, median and standard deviation (all along x-axis), determinant and inverse of the
+matrix. You need to print the inverse if the determinant is non-zero. If the determinant is
+zero, there is pseudo-inverse in numpy (Moore Penrose Pseudo Inverse) which needs to be
+printed instead. For the standard deviation, determinant and inverse, keep the precision
+as 2 decimals (check the "around" function in numpy).
+
+Expected output (present in task2.txt):
+[ 5.2 11.4 47.6 32.6 42.8]
+[ 6. 11. 48. 12. 36.]
+[ 2.32  6.34 27.6  36.09 32.73]
+[[-0.58 -0.53 -0.26  0.37  0.74]
+ [ 0.23  0.29  0.08 -0.19 -0.24]
+ [ 0.05  0.03  0.01 -0.02 -0.05]
+ [ 0.32  0.34  0.06 -0.21 -0.34]
+ [-0.29 -0.31 -0.05  0.2   0.29]]
+
+Task 3:
+Print the following:
+(a) original matrix sorted along vertical
+(b) original matrix sorted along horizontal
+(c) original matrix after flattening and sorting
+
+The first output matrix should correspond to sorting along vertical, then along horizontal
+and then the sorted flattened matrix. Each output should appear in a new line. It is fine
+if one output takes multiple lines.
+
+Expected output (present in task3.txt):
+[[ 1  4  1  0  9]
+ [ 5  5 41  3 13]
+ [ 6 11 48 12 36]
+ [ 6 17 64 55 58]
+ [ 8 20 84 93 98]]
+[[ 3  5  5  9 84]
+ [ 1  6 11 55 58]
+ [ 1 12 20 36 48]
+ [ 4  8 41 93 98]
+ [ 0  6 13 17 64]]
+[ 0  1  1  3  4  5  5  6  6  8  9 11 12 13 17 20 36 41 48 55 58 64 84 93
+ 98]
+
+--------------------------------------------------------------------------
+                                Additional
+
+These two tasks are slightly more involved and make use of some other numpy functions that might
+come handy in some specific applications which use matrix representations, like image analysis.
+They are OPTIONAL, and are only for additional learning and reference.
+
+Task 4:
+Flatten the 2-D array into 1-D array, print list of unique elements of the array in sorted order
+with their respective frequencies in the next line, and report (print) the frequency of the
+second largest element in the next line. For this task, you should use only numpy operations,
+and no loops.
+
+Expected output (present in task4.txt):
+[ 0  1  1  3  4  5  5  6  6  8  9 11 12 13 17 20 36 41 48 55 58 64 84 93
+ 98]
+[1 2 1 1 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+1
+
+Task 5:
+Padding is a common operation in image processing. You will be given an integer "n" and you
+need to pad (with value 0), in top, bottom, right and left, which will lead to an increase in
+the row and column size by 2 * n. Essentially, this means that if you have a matrix of size
+N x M, and you want to pad the matrix with dimension "n" and value "0", the matrix would be
+changed to size (n + N + n) x (n + M + n), where the n top and n bottom rows, as well as n left
+and n right columns will be 0. The matrix would be at the center, and will still be of size
+N x M. 
+
+Expected output (present in task5.txt):
+[[ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  5  5 84  3  9  0  0]
+ [ 0  0  6 11  1 55 58  0  0]
+ [ 0  0  1 20 48 12 36  0  0]
+ [ 0  0  8  4 41 93 98  0  0]
+ [ 0  0  6 17 64  0 13  0  0]
+ [ 0  0  0  0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0]]

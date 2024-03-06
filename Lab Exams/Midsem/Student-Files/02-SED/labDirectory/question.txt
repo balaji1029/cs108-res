@@ -1,0 +1,34 @@
+The teacher asked a TA to collate a student list in the format as given below.
+Student ID,First Name,Middle Name,Last Name
+1001,Aarav,Rohit,Patel
+1002,Ishani,Rani,Sharma
+
+
+But the TA messed and submitted a file of the format as given below.
+Student ID
+1001AaravRohitPatel
+1002IshaniRaniSharma
+
+Notice that the header row is missing entries and no ‘,’ seperator
+
+This needs fixing.  So, write a sed script that takes as input a csv file (the messed up file is still csv even though it has no commas :-)  and converts the file into the proper format.
+
+You can assume "Student ID" can only be numeric and any name field ("First Name", "Middle Name" and "Last Name") starts with a capital letter. Assume no other special characters. Separate the fields using commas in the output. Do not assume any constraints on length of any entry(except that it is non-zero).
+
+Input -> 
+Student ID
+1001AaravRohitPatel
+1002IshaniRaniSharma
+
+Output ->
+Student ID,First Name,Middle Name,Last Name
+1001,Aarav,Rohit,Patel
+1002,Ishani,Rani,Sharma
+
+Usage :
+sed -r -f names.sed students.csv
+
+Extra information:
+-r flag of sed : Allows extended regex
+"In sed, the only difference between basic and extended regular expressions is in the behavior of a few special characters: ‘?’, ‘+’, parentheses, braces (‘{}’), and ‘|’."
+Therefore, to match string "aaaab", /a+b/ pattern can be used when -r flag is set(instead of using /a\+b/). 

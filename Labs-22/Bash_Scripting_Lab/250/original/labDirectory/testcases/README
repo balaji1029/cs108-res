@@ -1,0 +1,8 @@
+You can find the testcases here.
+
+The input.txt is the input file that is fed to the script.
+
+The output.txt contains the expected output.
+
+WARNING - Changing the input.txt will not cause the evaluate script to run on the new test case. 
+          The file will only be run on the original test cases.

@@ -1,0 +1,174 @@
+<!-- Hobbies -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    body{
+        background-color: lavender;
+        padding-left: 30px;
+    }
+
+    .hobby-desc{
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        color: indigo;
+    }
+
+    .hobby-title{
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        color:rgb(47, 40, 93);
+    }
+
+    .topnav{
+        display: flex;
+        justify-content: right;
+        background-color: darkslateblue;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: 30px;
+    }  
+
+    a:link, a:visited{
+        color: rgb(186, 184, 184);
+        padding:10px;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color:white;
+        padding:10px;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .hobby-intro{
+            color: indigo;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+    }
+  
+    .learn-more{
+        color: white;
+        background-color: indigo;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #checks{
+        font-family: Arial, Helvetica, sans-serifs;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+    <a href="index.html" target="_blank">Home</a>
+    <a href="projects.html" target="_blank">Projects</a>
+    <a href="education.html" target="_blank">Education</a>
+    <a href="hobbies.html" target="_blank">Hobbies</a>
+    <a href="contact.html" target="_blank">Contact</a>
+</div>
+<br><br><br>
+
+<p class="hobby-intro">Here are some of my hobbies! Check the boxes to learn more about them.</p>
+
+    <div id="hobbies">
+        <div id="checks">
+            <input type="checkbox" name="Playing Volleyball" id="pv">
+            <h5 class="hobby-intro">Playing Volleyball</h5>
+        </div>
+        <br>
+        <div id="checks">
+            <input type="checkbox" name="Playing Badminton" id="pb">
+            <h5 class="hobby-intro">Playing Badminton</h5>
+        </div>
+        <br>
+        <div id="checks">
+            <input type="checkbox" name="Reading" id="r">
+            <h5 class="hobby-intro">Reading</h5>
+        </div>
+        <br>
+        <div id="checks">
+            <input type="checkbox" name="Drawing" id="d">
+           <h5 class="hobby-intro">Drawing</h5>
+        </div>
+        <br>
+        <button class="learn-more" onclick="showHobbies()">Learn More</button>
+        <br><br>
+      
+
+        <p class="hobby-desc" style="display:none;" id="text1">I've been playing volleyball since grade 7 (with a two year gap in between because JEE) and have played in several interschool tournaments. I'm in NSO Volleyball and go for extra practice whenever I find the time. I love playing the sport because it's a wonderful way to take my mind off academic stress.</p>
+            
+      
+      <p class="hobby-desc" style="display:none;" id="text2">Apart from volleyball, I also enjoy playing badminton in my free time.</p>
+      
+      
+      
+      <p class="hobby-desc" style="display:none;" id="text3">Reading books has always been my favourite hobby for as long as I can remember. I mostly read fiction and crime novels. Some of my favourite authors are Michael Connelly and David Baldacci.</p>
+      
+      
+      
+      <p class="hobby-desc" style="display:none;" id="text4">Throughout my school years, I have loved doing any kind of projectwork realted to art and craft, be it sketching, drawing or painting. These days it\'s more of a hidden talent that only comes out during extremely boring lectures :p</p>
+      
+  
+    </div> 
+    <script>  
+              
+    function showHobbies(){
+    var t1=document.getElementById("text1");
+    var t2=document.getElementById("text2");
+    var t3=document.getElementById("text3");
+    var t4=document.getElementById("text4");
+    let c1=document.getElementById("pv");
+    let c2=document.getElementById("pb");
+    let c3=document.getElementById("r");
+    let c4=document.getElementById("d");
+      
+
+    if (c1.checked==true){
+        t1.style.display = "block";
+    }
+
+    else{
+        t1.style.display = "none";
+    }
+
+    if (c2.checked==true){
+        t2.style.display = "block";
+    }
+
+    else{
+        t2.style.display = "none";
+    }
+
+       if (c3.checked==true){
+        t3.style.display = "block";
+    }
+
+    else{
+        t3.style.display = "none";
+    }
+
+    if (c4.checked==true){
+        t4.style.display = "block";
+    }
+
+    else{
+        t4.style.display = "none";
+    }    
+
+    }
+    </script>
+</body>
+</html>

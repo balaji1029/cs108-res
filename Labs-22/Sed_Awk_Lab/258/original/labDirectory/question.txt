@@ -1,0 +1,20 @@
+After quickly finishing your C++ script you realize that instead of "pprint"(the function that you have defined) 
+you have written "printf" to yield strings to the standard output(terminal). Seems like you were not using 
+good IDE(seed for following labs) and cannot just find and replace all instances of "printf" with "pprint". 
+
+Task : Given the file test.cpp, you need to replace all instances of "printf" to "pprint".
+You need to ensure that ONLY those instances of "printf" are replaced where it is used a function.
+
+Eg : 
+Input -> 
+printf("eren");
+otherprintf("mikasa");
+
+Output -> 
+pprint("eren");
+otherprintf("mikasa");   // printf in substring is not changed
+
+Note : You need to take filename as argument to bash script
+
+Usage : 
+sed -r -f var_change.sed <filename> > output.txt

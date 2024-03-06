@@ -1,0 +1,45 @@
+Note:
+
+To solve this lab, Kindly use the office application installed on your machine, if available.
+Navigate to the folder "bodhitreeWorkspace\11\109\318\labDirectory", and open Marks.xlsx file and then complete the required actions mentioned in problem statement and save it.
+
+Incase if there is no preinstalled office application, use online tools like google sheets.
+Navigate to the site "https://docs.google.com/spreadsheets/", and select new blank spreadsheet.
+Navigate to File > Open > Upload and browse Marks.xlsx in the folder bodhitreeWorkspace\11\109\318\labDirectory. 
+Complete the required tasks and download a copy to local (File > Download > Microsoft Excel(.xlsx)). This would be present in the downloads folder.
+Copy it and replace the original file "bodhitreeWorkspace\11\109\318\labDirectory\Marks.xlsx". Make sure the file name is Marks.xlsx
+
+************Problem Statement*************
+
+Now we will be looking at how to use formulae in calculating few statistical data.
+
+In the excel named "Marks.xlsx",Column A contains roll numbers, followed by marks till column F for various exams in course CS 104.
+
+Column B to F contains marks of Project(Max marks : 50), Safe Quiz - 1 (Max marks : 20), Mid sem(Max marks : 30),Safe Quiz -2(Max marks : 20),End sem(Max marks : 30)
+
+Below is the Evaluation Plan : 
+SAFE quizzes (Objective ,2) 20% [ Safe quiz-1 10%, Safe quiz-2 10%]
+Proctored Lab Exams (Hands-on, 2) 60% [Mid - 30%, End sem - 30%]
+Project (documentation, code quality,demo, viva) 20%
+Total 100%
+
+
+In Column G, you need to fill the total Score of the respective student corresponding to column A.Maximum marks that can be achievable is 100.
+You need to scale the marks of each exam according to the weightage it carries. 
+For example, In Project, student 23B00030 received 30 marks / 50.  The weightage of project is 20% i.e., 20 marks. 
+So, their project marks counting for total score will be 30 * (20/50) = 12 marks.
+
+
+In Column H, you need to fill respective grade obtained as the rules mentioned below
+
+        >=85% -> A 
+>=75% & < 85% -> B
+>=65% & < 75% -> C
+>=55% & < 65% -> D
+>=45% & < 55% -> E
+        < 45% -> F
+
+Number of students are 100 ie. 23B00001 to 23B00100
+
+In column J, You need to fill the values of the metrics asked in Column I in the respective row
+The metrics required are Average (rounded to 2 decimal places), max, min, mode, median  of Total marks of students and count of failed students (Who got F grade).

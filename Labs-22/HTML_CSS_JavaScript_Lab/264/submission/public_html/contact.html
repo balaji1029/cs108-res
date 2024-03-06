@@ -1,0 +1,105 @@
+<!-- Contact -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lavender;
+            padding: 20px;
+        }
+
+    .contact-intro{
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        color: darkslateblue;
+        padding: 20px;
+    }
+
+    .som{
+        background-color: indigo;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding:5px;
+        font-size: large;
+    }
+    .topnav{
+        display: flex;
+        justify-content: right;
+        background-color: darkslateblue;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: 30px;
+    }
+
+    a:link, a:visited{
+        color: rgb(186, 184, 184);
+        padding:10px;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color:white;
+        padding:10px;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .bawk{
+        display: flex;
+        padding: 5px;
+        align-items: center;
+    }
+
+    .buttonimg{
+        width: 30px;
+        height: 30px;
+        margin:5px;
+    }
+
+    .linkdesc{
+        padding:5px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+    <a href="index.html" target="_blank">Home</a>
+    <a href="projects.html" target="_blank">Projects</a>
+    <a href="education.html" target="_blank">Education</a>
+    <a href="hobbies.html" target="_blank">Hobbies</a>
+    <a href="contact.html" target="_blank">Contact</a>
+</div>
+<br><br><br>
+    
+<p class="contact-intro">Here are my contact details. Feel free to reach out anytime!</p>
+<div id="links">
+    <a href="https://www.instagram.com/deeekshaa_4/"><button type="submit" class="som"><div class="bawk"><img src="images/instagram.png" alt="" class="buttonimg"><p class="linkdesc">Instagram</p></div></button></a>
+</div>
+<br>
+<p class="contact-intro">Phone number: 9442136277</p>
+<p class="contact-intro">Email ID: deekshadhiwakar@gmail.com</p>
+
+<form onsubmit="submitMessage()">
+    <label for="Name">Name</label><br>
+    <input type="text" name="Name" id="Name"><br><br>
+    <label for="Email">Email</label><br>
+    <input type="text" name="Email" id="Email"><br><br>
+    <label for="Message">Message</label><br>
+    <input type="text" name="Message" id="Message"><br><br>
+  <button type="submit" onclick="submitMessage()">Submit</button>
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>

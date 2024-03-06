@@ -1,0 +1,73 @@
+------------------ Activity 4 (HTML/CSS/JS) ---------------------
+                              General Details
+
+THEME: Primality Tester
+MAXIMUM MARKS: 13 (for practice purposes only, not real marks)
+NOTE: Please ensure that HTML tags and id selectors are correct for auto-grading.
+Apart from the mentioned ids, you can use any other ids for your own purpose.
+
+Regarding the screenshots: the primality page has multiple images to show the
+working of the function. You can download the screenshots from flamingo bodhitree.
+
+NOTE:
+1. This activity can be completed by adding all the relevant code in between the start and end
+that have been indicated using comments in all the files.
+2. Some template code has been filled in. Do NOT add code outside the start and end regions.
+3. If you want to use square root function in JavaScript, you can use "Math.sqrt".
+4. You can find a JavaScript example (only for reference for syntax, not to edit/submit) in
+"example.js".
+
+--------------------------------------------------------------------------
+                            Section A: HTML (4)
+
+The following will require use of HTML. Make sure to check with Sections B and C
+to fill up the additional styling/scripting features using CSS/JS. The theme of this
+activity is 'Primality Tester' and you will be creating 2 HTML pages: one corresponding
+to 'Home' and other (titled 'Prime') will be having a field for the primality tester.
+
+NOTE: the class and ids (wherever they are indicated) are necessary for the autograding.
+
+1. Create a navigation bar (div tag, class=topnav) that redirects to respective pages,
+and the pages can either open in the same tab or redirect to a new tab.
+You can refer to index.png in the screenshots. (1)
+
+2. Give a 'title' to each page - Home, Prime. Use the same titles in the navigation bar. (1)
+
+3. Home page (index.html): (2)
+(a) Add a brief description (p tag, id=desc) of yourself in minimum 20 words (1)
+(b) Embed the image (myimage.jpeg, id=myimage), keep its width as 100 pixels and give your
+name as title. (1)
+
+--------------------------------------------------------------------------
+                            Section B: CSS (3)
+
+The following will require CSS. The in-line and internal ones need to be added
+within respective HTML files, and the external ones need to be added to style.css.
+
+1. Use in-line CSS to: (1)
+(a) Make font size of your description/introduction of the Home page 11pt
+
+2. Use internal CSS for: (1)
+(a) Styling the navigation bar (use the class to refer to it, you are free to
+choose the type of styling)
+
+3. Use external CSS for: (1)
+(a) Styling the input field of prime page (use the HTML tag to refer to it,
+style the border to make it as close to the screenshot as possible)
+
+--------------------------------------------------------------------------
+                        Section C: JavaScript (6)
+
+You will need to write the Prime page using a combination of HTML and JavaScript. Create
+functions appropriately within HTML files or in script.js as indicated.
+
+NOTE: isPrime(num) should return 0 if num is not a prime and 1 if prime.
+
+1. Prime page (prime.html) (6)
+(a) Have a form with a text field 'Enter a number:' and a submit button (2)
+(b) Handle the form submission using a function "runFunc" (add this function within
+the HTML file itself) (1)
+(c) Within the runFunc function, access the number entered in the form, and execute
+the function "isPrime" (add this function in script.js) with this number as argument (2)
+(d) Take the output of isPrime, and accordingly display a popup that tells whether the
+number is a prime or not by saying 'Not a prime number' or 'Prime number' (1)

@@ -1,0 +1,37 @@
+Conic Section
+
+Instructions:
+1.To solve this lab kindly use the pdflatex command that is present in the lab machine to compile the latex files and to generate the pdf.
+2.Navigate to the directory “bodhitreeWorkspace/11/126/334/labDirectory”, and fill the necessary code in the “main.tex”.
+3.The “Conicsection.pdf” and also the generated pdf can also be viewed by using the command evince <pdf name>. 
+4.While submitting make sure the code in the lab machine is the same as the one that is being submitted in the VLab.
+
+***************************Problem Statement*********************************
+
+Latex activity involves replicating the “Conicsection.pdf” as close as possible using latex. The “main.tex” contains the template code and you need to fill the necessary code in main.tex to generate a pdf file that is similar to “Conicsection.pdf”.
+Below is the detailed description of the document you need to create. 
+All the packages required for this activity are already imported in the given "main.tex" file and there is no need to import or include any packages in “main.tex”. And the content can be used from the “Conicsection.pdf”.
+
+Following are the major components in each part of the document, which are necessary for evaluation.
+
+ 1. Preamble
+  Title
+  Author
+  Date
+
+2. Section 1 : Introduction
+	It contains a paragraph which can be used from the “Conicsection.pdf”.
+3. Section 2: Types of Conic section
+           Add an unordered list which contains two items. Each item has some text and an image. Each image should have a label and scale=0.5. For example, an Ellipse image should have a label “ellipse”, and similarly for a Parabola image it should have a label “parabola”.
+ 4. Section 3: Properties
+This section contains two subsections namely Equations and Parameters.
+Equation subsection contains unordered lists of two items. Each item has some content in which you have to refer to a particular image. For example if you are referring to an ellipse image you have to refer to figure 1 ( see Conicsection.pdf ). And also each item has an equation. Each equation should have a label, for example, the first equation has a label “equation1”, the second equation has a label “equation2” etc.
+	Parameters subsection contains a table. The table should be labeled as “parameters”.
+
+Usage : 
+pdflatex main
+pdflatex main
+
+Grading details: Your submission will be graded on the basis of the certain tags in the "main.tex" file, though it must generate a pdf without any errors, warnings are acceptable.
+Hence, in most cases exact match between your rendered pdf and "Conicsection.pdf" is not considered, yet it is advisable to create your pdf similar to the given "Conicsection.pdf".
+

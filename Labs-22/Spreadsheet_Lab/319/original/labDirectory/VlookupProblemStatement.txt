@@ -1,0 +1,28 @@
+Note:
+
+To solve this lab, Kindly use the office application installed on your machine, if available.
+Navigate to the folder "bodhitreeWorkspace\11\109\319\labDirectory", and open Employee.xlsx file and then complete the required actions mentioned in problem statement and save it.
+
+Incase if there is no preinstalled office application, use online tools like google sheets.
+Navigate to the site "https://docs.google.com/spreadsheets/", and select new blank spreadsheet.
+Navigate to File > Open > Upload and browse Employee.xlsx in the folder bodhitreeWorkspace\11\109\319\labDirectory. 
+Complete the required tasks and download a copy to local (File > Download > Microsoft Excel(.xlsx)). This would be present in the downloads folder.
+Copy it and replace the original file "bodhitreeWorkspace\11\109\319\labDirectory\Employee.xlsx". Make sure the file name is Employee.xlsx
+
+************Problem Statement*************
+
+In the excel named "Employee.xlsx", 
+Column A contains Employee ID, followed by their first name, Last Name, Salary and ID of their manager. Note that the ID of the manager refers to the employee id of a person in the same sheet.
+
+In Column F, you need to fill their Manager full name (First Name  & Last Name separated by space)
+
+For example, 
+ The first name of Manager is Kameswari and the last name is Chebrolu. The full name in column F needs to be "Kameswari Chebrolu" (Excluding quotes).
+
+For the CEO of the company, the manager ID will be 0. For a CEO you need to fill in his own name as manager name.
+
+Proper error handling, 
+    If manager ID is not found, The respective cell needs to be filled by "Not Found" (Excluding quotes).
+
+
+Post this sort the rows based on employee's Salary in decreasing order, then by their First name in alphabetical order to resolve the tie. You can assume the tie if any breaks by First Name.

@@ -1,0 +1,84 @@
+--------------------- Lab 7 Activity 1 ---------------------
+                              General Details
+
+THEME: Algorithm Analysis 
+MAXIMUM MARKS: 9
+
+--------------------------------------------------------------------------
+                                References/Links
+
+1. matplotlib plotting
+https://matplotlib.org/stable/tutorials/introductory/pyplot.html
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html
+
+--------------------------------------------------------------------------
+                                Problem
+
+You have been given an executable (algo) that implements three sorting algorithms. You do not
+need to worry about the implementations of these, the focus of the lab is on plotting:
+(a) QSP1: one variant of QuickSort
+(b) QSRP: another variant of QuickSort
+(c) BuSo: Bubble Sort
+
+The given executable (algo) also generates three types of arrays internally, which serve as an
+input to the sorting algorithm:
+(a) a random array
+(b) an almost sorted random array (around 10% of elements are out of order)
+(c) reverse of an almost sorted array (almost sorted in decreasing order)
+
+Each of the 3 algorithms is run on one instance of each type. Hence, giving us a total of 9
+pairs of Algorithm + Input.
+
+You need to plot this data, which is recorded based on three metrics:
+(a) runtime of the algorithm
+(b) number of comparisons
+(c) number of swaps
+
+Your task is to first run the executable to generate some data files. The format of these data
+files would be:
+1. All the data files would have 1998 lines each
+2. The odd-numbered lines (1,3,5..) would be the number of elements in the input (ranging from
+1 to 999)
+3. The even-numbered lines (2,4,6..) would be the metric that has been measured (see below for
+details) for the algorithm that has been run
+
+So the number of elements become your x-axis and the metric becomes your y-axis.
+
+The details of the data format are:
+
+Number  | Input type          | Metric          | Algorithm       |
+0       | Random              | Runtime         | QSP1            |
+1       | Random              | Runtime         | QSRP            |
+2       | Random              | Runtime         | BuSo            |
+3       | Random              | Comparisons     | QSP1            |
+4       | Random              | Comparisons     | QSRP            |
+5       | Random              | Comparisons     | BuSo            |
+6       | Random              | Swaps           | QSP1            |
+7       | Random              | Swaps           | QSRP            |
+8       | Random              | Swaps           | BuSo            |
+9       | Almost-Sorted       | Runtime         | QSP1            |
+10      | Almost-Sorted       | Runtime         | QSRP            |
+11      | Almost-Sorted       | Runtime         | BuSo            |
+12      | Almost-Sorted       | Comparisons     | QSP1            |
+13      | Almost-Sorted       | Comparisons     | QSRP            |
+14      | Almost-Sorted       | Comparisons     | BuSo            |
+15      | Almost-Sorted       | Swaps           | QSP1            |
+16      | Almost-Sorted       | Swaps           | QSRP            |
+17      | Almost-Sorted       | Swaps           | BuSo            |
+18      | Almost-Sorted-Rev   | Runtime         | QSP1            |
+19      | Almost-Sorted-Rev   | Runtime         | QSRP            |
+20      | Almost-Sorted-Rev   | Runtime         | BuSo            |
+21      | Almost-Sorted-Rev   | Comparisons     | QSP1            |
+22      | Almost-Sorted-Rev   | Comparisons     | QSRP            |
+23      | Almost-Sorted-Rev   | Comparisons     | BuSo            |
+24      | Almost-Sorted-Rev   | Swaps           | QSP1            |
+25      | Almost-Sorted-Rev   | Swaps           | QSRP            |
+26      | Almost-Sorted-Rev   | Swaps           | BuSo            |
+
+So in your final analysis, you would have 3 algorithms x 3 inputs x 3 metrics. You should plot
+(line plot, plt.plot()) all the 3 algorithms together for each case of input-metric pair so
+that its easier to compare. Also plot 0.1*n*log(n) and 0.01*n^2 in all the plots (total 9
+plots) for the trend analysis.
+
+You can check one of the plots here:
+https://drive.google.com/file/d/156s9oZJ2Oa6CcQNG5I_N2vDRG9cxHfN9/view?usp=share_link

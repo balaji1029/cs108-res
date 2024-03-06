@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "testid": 1,
+            "status": "success",
+            "score": 1,
+            "maximum marks": 1,
+            "message": "Script Executed Successfully. Test Case Passed."
+        },
+        {
+            "testid": 2,
+            "status": "success",
+            "score": 0,
+            "maximum marks": 1,
+            "message": "Script Executed Successfully. Output is not as Expected."
+        },
+        {
+            "testid": 3,
+            "status": "success",
+            "score": 0,
+            "maximum marks": 1,
+            "message": "Script Executed Successfully. Output is not as Expected."
+        },
+        {
+            "testid": 4,
+            "status": "success",
+            "score": 1,
+            "maximum marks": 1,
+            "message": "Script Executed Successfully. Test Case Passed."
+        },
+        {
+            "testid": 5,
+            "status": "success",
+            "score": 0,
+            "maximum marks": 1,
+            "message": "Script Executed Successfully. Output is not as Expected."
+        }
+    ]
+}

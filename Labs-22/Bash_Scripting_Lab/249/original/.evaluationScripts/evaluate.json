@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "testid": 1,
+            "status": "success",
+            "score": 3,
+            "maximum marks": 3,
+            "message": "Script Executed Successfully. Test Case Passed."
+        },
+        {
+            "testid": 2,
+            "status": "success",
+            "score": 3,
+            "maximum marks": 3,
+            "message": "Script Executed Successfully. Test Case Passed."
+        },
+        {
+            "testid": 3,
+            "status": "success",
+            "score": 3,
+            "maximum marks": 3,
+            "message": "Script Executed Successfully. Test Case Passed."
+        },
+        {
+            "testid": 4,
+            "status": "success",
+            "score": 0,
+            "maximum marks": 3,
+            "message": "Error in Executing Script. "
+        },
+        {
+            "testid": 5,
+            "status": "success",
+            "score": 0,
+            "maximum marks": 3,
+            "message": "Error in Executing Script. "
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+Write a bash script to delete all the files having the extension .py in a given directory, and log all these deletions in a file “log.txt” in the same directory as the bash script (NOT the directory where the .py files are to be deleted). Finally print the number of files deleted to the console (NOT to log.txt).
+
+The directory path will be given as an argument to the bash script. Along with deletion of all files, the script should also add the line :- “Deleted <file_name>” (without quotes) to log.txt.
+
+Usage :- bash submission.sh <path-to-directory>
+
+Eg.
+
+Consider the directory “/home/labDirectory/testfolder/” containing files “a.py”, “b.py”, “c.py”,”a.pdf” (quote for emphasis only).
+
+On running the command :- “ bash submission.sh /home/labDirectory/testfolder/”
+
+(quotes are not part of the command and meant only for emphasis),
+
+All the .py files in the testfolder directory should be deleted. The only file remaining in the testfolder directory should be “a.pdf” as it does not have a .py extension.
+
+The log.txt file (created in the same directory as submission.sh) should have the following lines:-
+
+Deleted a.py
+Deleted b.py
+Deleted c.py
+
+Log each individual file on a new line. For full credit, be sure to log ONLY the filename and NOT the whole path of the file (Logs of the form  “Deleted /home/labDirectory/testfolder/a.py” will be given partial credit. For full credit logs should be of the form “Deleted a.py”).
+
+Hint - The basename command might be useful here, use the man pages to see what it does.
+
+You can log the files in any order. Assume log.txt does not exist before running the command.
+
+The terminal should have the output :-
+3
+
+Because 3 files are deleted.
+
+NOTE: Once you run your script, the contents within the testfolder will be deleted. You can either make a copy of it and run on the copy or create your own test case folders.
+
+Test cases provided are a sample only. If your script works over the provided testcases, does not mean your will get full marks. After submission, on the server, we will run your scripts over other a variety of “hidden” testcases.  Only when you pass all, you will get full marks. This is true of not just this bash activity, but all activities in the exam (sed, awk, html,git etc).

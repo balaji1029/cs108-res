@@ -1,0 +1,21 @@
+                              Editor Details
+
+1. It is recommended to use Visual Studio Code (VSC) for this activity.
+2. Once you have fetched the lab files into VLab, minimize the application
+3. To access the lab files from VSC, navigate to the BodhiTree workspace and
+go to the activity path (as told in the lab)
+4. Once you have opened this folder on your local machine, make whatever changes
+you want from VSC (or your preferred editor) and then open the HTML files as preview
+from within VSC or from the browser in order to see it render
+5. MAKE SURE THAT NO FILE IS OPEN IN BOTH VLAB EDITOR AND LOCAL EDITOR AT THE SAME
+TIME, ONLY OPEN THE FILE IN ANY ONE EDITOR AT A TIME
+6. In case you open the file in both editors by mistake, when you close the file
+in VLab, the changes made in local editor will be overwritten, but they can be
+restored by "Undo" (Ctrl-Z)
+7. You can freely use the evaluator on VLab as many times as you want, but DO NOT
+use the VLab file editor to avoid confusion
+8. Once you are done editing the files and previewing, and are ready to submit,
+open VLab, create a commit, and submit as usual, you can cross-check that all
+files are there in VLab editor
+9. The only issue that can arise is that changes made in local editor can be lost
+due to VLab editor, but follow step 6 to recover it

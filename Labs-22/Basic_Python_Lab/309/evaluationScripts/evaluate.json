@@ -1,0 +1,11 @@
+{
+    "marks": {
+        "testcase1": 2,
+        "testcase2": 2
+    },
+    "total": 4,
+    "feedback": {
+        "testcase1": "success",
+        "testcase2": "success"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "data": [
+        {
+            "testid": "1",
+            "status": "success",
+            "score": 14,
+            "message": {
+                "testcase1ExitStaus": 1,
+                "testcase1Result": 2
+            }
+        }
+    ]
+}

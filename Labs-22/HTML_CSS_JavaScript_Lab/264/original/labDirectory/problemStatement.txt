@@ -1,0 +1,140 @@
+------------------- Lab 04 (HTML/CSS/JS) Activity ---------------------
+                              General Details
+
+THEME: Personal Webpage
+MAXIMUM MARKS: 30
+NOTE: Please ensure that class and id selectors (check the references for more details
+on what these mean) are correct for auto-grading.
+Apart from the mentioned ids, you can use any other ids for your own purpose.
+
+For the image given in the public_html folder (myimage.jpeg), you can modify that
+and add your own image, but make sure to keep the SAME NAME (myimage.jpeg) else
+VLab will not pick up the image.
+
+Regarding the screenshots: the hobbies and contact pages have multiple screenshots
+in order to show the steps in which the JavaScript functionality is expected to work.
+A short demonstration video (no audio) is also included in the drive folder.
+
+--------------------------------------------------------------------------
+                              Editor Details
+
+1. It is recommended to use Visual Studio Code (VSC) for this lab. You can install
+it on your local machine from this page: https://code.visualstudio.com/Download
+2. Once you have fetched the lab files into VLab, minimize the application
+3. To access the lab files from VSC, navigate to the directory which you had
+assigned as your workspace (you can check this through the login screen), and
+within the folder, go to the following path (assuming . is your workspace):
+    ./11/91/264/labDirectory
+4. Once you have opened this folder on your local machine, make whatever changes
+you want from VSC (or your editor) and then open the HTML files as preview from
+within VSC or from your browser in order to see it render
+5. MAKE SURE THAT NO FILE IS OPEN IN BOTH VLAB EDITOR AND LOCAL EDITOR AT THE SAME
+TIME, ONLY OPEN THE FILE IN ANY ONE EDITOR AT A TIME
+6. In case you open the file in both editors by mistake, when you close the file
+in VLab, the changes made in local editor will be overwritten, but they can be
+restored by "Undo" (Ctrl-Z)
+7. You can freely use the evaluator on VLab as many times as you want, but DO NOT
+use the VLab file editor to avoid confusion
+8. Once you are done editing the files and previewing, and are ready to submit,
+open VLab, create a commit, and submit as usual, you can cross-check that all
+files are there in VLab editor
+9. The only issue that can arise is that changes made in local editor can be lost
+due to VLab editor, but follow step 6 to recover it
+
+--------------------------------------------------------------------------
+                                References/Links
+
+1. Screenshots of the expected pages can be seen here:
+https://drive.google.com/drive/folders/12xGOvDAmrG6_0iieLkeMx9TosjzcXqVu?usp=share_link
+2. div tag in HTML:
+https://www.geeksforgeeks.org/div-tag-html/
+https://www.freecodecamp.org/news/html-div-what-is-a-div-tag-and-how-to-style-it-with-css/
+3. class and id selectors:
+https://www.w3schools.com/html/html_classes.asp
+https://www.htmldog.com/guides/css/intermediate/classid/
+4. checkbox and javascript
+https://www.w3schools.com/howto/howto_js_display_checkbox_text.asp
+5. javascript popups:
+https://www.w3schools.com/js/js_popup.asp
+
+--------------------------------------------------------------------------
+                            Section A: HTML (14)
+
+The following will require use of HTML. Make sure to check with Sections B and C
+to fill up the additional styling/scripting features using CSS/JS. The theme of this
+activity is 'Personal Website' and you will be creating 5 HTML pages: one corresponding
+to 'Home' and others will be linked from the navigation bar to 'Projects', 'Education',
+'Hobbies' and 'Contact'.
+
+The Hobbies and Contact pages can be handled as part of JavaScript section.
+
+NOTE: the classes and ids (wherever they are indicated) are necessary for the CSS
+autograding.
+
+1. Create a navigation bar (div tag, class=topnav) that links (a tag) and redirects
+to respective pages and the pages should show up within the same browser window (2) -
+you can refer to index.png in the screenshots
+
+2. Give a 'title' to each page - Home, Projects, Education, Hobbies, Contact. Use
+the same titles in the navigation bar. (1)
+
+3. Home page (index.html): (2)
+(a) Add a brief description (p tag, id=desc) of yourself in minimum 150 words
+(b) Embed the image (myimage.jpeg), keep its width as 1000 and give your name as title
+
+4. Projects page (projects.html): (4)
+(a) Make an ordered list (id=projects) of projects
+(b) Add a short description (p tag)
+(c) Minimum 2 projects
+
+5. Education page (education.html): (5)
+(a) Make a table (id=education) of your educational record from Class X
+(b) Add suitable columns like 'Exam' (Matriculation/Intermediate/Graduation),
+'Institute' (School/College/IITB), 'Year' (2020/2022/2026) into table head
+(c) Add data into table body and use td tag for all entries (columns and data)
+(d) Minimum 1 row of data
+
+--------------------------------------------------------------------------
+                            Section B: CSS (4)
+
+The following will require CSS. The in-line and internal ones need to be added
+within respective HTML files, and the external ones need to be added to style.css.
+
+For 2 (internal CSS) and 3 (external CSS) as given below, as long as you refer to the
+class/tag as directed, it should be fine for autograding.
+
+The type of styling (font size, color, etc.) you are free to choose. You can be
+creative here! Explore what all possible styles can be used with various attributes.
+
+1. Use in-line CSS to: (1)
+(a) Make font size of your description/introduction of the Home page 11pt
+
+2. Use internal CSS for: (2)
+(a) Styling the navigation bar (use the class to refer to it)
+(b) Styling of projects page/list (use the tag to refer to it)
+
+3. Use external CSS for: (1)
+(a) Styling the table of education page (use the tag to refer to it)
+
+--------------------------------------------------------------------------
+                        Section C: JavaScript (12)
+
+You will need to write the Hobbies and Contact pages using a combination of HTML and
+JavaScript. Create functions appropriately within HTML files or in script.js as indicated.
+
+1. Hobbies page (hobbies.html): (6)
+(a) Enclose the entire content in a hobbies class (div tag, id=hobbies)
+(b) Use checkboxes (enclose all in a div each, id=checks for all divs) to give option
+to choose hobbies and include descriptions in p tags
+(c) Create a button 'Learn More' and create a JavaScript function 'showHobbies'
+(add this function as JavaScript within the HTML file itself) for handling this
+(hint: use JavaScript events, refer to the 4th link given)
+(d) Display description of selected hobbies upon clicking 'Learn More'
+
+2. Contact page (contact.html): (6)
+(a) Make a 'Contact Me' section (div tag, id=links) and
+add links to social media profiles that redirect to a new tab
+(b) Have a form with text fields 'Name', 'Email' and 'Message', and submit button
+(c) Handle the form 'Submit' button using a function 'submitMessage' (write this in script.js)
+that displays a text in the form of 'Thank you {Name} (email: {Email}) for your message!'
+inside a pop-up on the same page (hint: use JavaScript alert, refer to the 5th link)

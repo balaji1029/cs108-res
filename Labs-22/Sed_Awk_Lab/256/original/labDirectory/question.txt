@@ -1,0 +1,32 @@
+You realize that the entries in "employment.csv" file with "Film" as "High_industry" have to be 
+replaced by "Film&Music". Being familiar with sed, you try out replacing each instance of "Film"
+with "Film&Music".
+
+Task: Given the file "employment.csv" you need to use substitute command of sed to replace 
+all instances of "Film" to "Film&Music".
+
+Eg : 
+Input -> 
+...
+2019-05-05,Number of paid jobs - 34 days,Film,2090110
+2019-05-05,Number of paid jobs - 34 days,Agriculture,95150
+2019-05-05,Number of paid jobs - 34 days,Banking,405050
+2019-05-05,Number of paid jobs - 34 days,Manufacturing,1570740
+2019-05-05,Number of paid jobs - 34 days,Railways,19170
+2019-05-05,Number of paid jobs - 20 days,Film,1828160
+2019-05-05,Number of paid jobs - 20 days,Agriculture,79880
+...
+
+Output ->
+... 
+2019-05-05,Number of paid jobs - 34 days,Film&Music,2090110
+2019-05-05,Number of paid jobs - 34 days,Agriculture,95150
+2019-05-05,Number of paid jobs - 34 days,Banking,405050
+2019-05-05,Number of paid jobs - 34 days,Manufacturing,1570740
+2019-05-05,Number of paid jobs - 34 days,Railways,19170
+2019-05-05,Number of paid jobs - 20 days,Film&Music,1828160
+2019-05-05,Number of paid jobs - 20 days,Agriculture,79880
+...
+
+Usage : 
+sed -f substitute.sed employment.csv > output.txt

@@ -1,0 +1,23 @@
+You have data of some students in university and being a database administrator you are required to
+add a column to the given "students.csv" file for generating new email ids of the students.
+
+Task : You are given "students.csv" file and you have to append a column named "Email-ID"
+to the database. The entries in email id are formed as:
+<firstname><lastname>@surveycorps.com
+
+Eg : 
+Input -> 
+Student ID,First Name,Middle Name,Last Name
+1001,Aarav,Rohit,Patel
+1002,Ishani,Rani,Sharma
+
+Output -> 
+Student ID,First Name,Middle Name,Last Name,Email-ID
+1001,Aarav,Rohit,Patel,AaravPatel@surveycorps.com
+1002,Ishani,Rani,Sharma,IshaniSharma@surveycorps.com
+
+
+Warning: Take care of spaces when using default awk configuration.
+
+Usage : 
+awk -f email.awk students.csv > output.txt

@@ -1,0 +1,54 @@
+<!-- Prime -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width" charset="UTF-8">
+
+        <!-- Start -->
+        <title>Prime</title>
+        <!-- End -->
+        
+        <script>
+            function runFunc() {
+
+                // Start
+                num = document.querySelector('#num').value
+                if (isPrime(num)) {
+                    alert('Prime number')
+                } else {
+                    alert('Not a prime number')
+                }
+                // End
+
+            }
+        </script>
+
+    </head>
+
+<!-- Start -->
+    <script src="script.js"></script>
+<!-- End -->
+
+<body>
+
+    <!-- Start -->
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="prime.html">Prime</a>
+    </div>
+    <form onsubmit="runFunc()">
+        <label for="num">Enter a number: </label>
+        <input type="number" id="num">
+        <input type="submit" value="Check Primality">
+    </form>
+    <script>
+        document.querySelector('form').addEventListener('submit', event => {
+            event.preventDefault()
+        })
+    </script>
+    <!-- End -->
+
+</body>
+
+</html>

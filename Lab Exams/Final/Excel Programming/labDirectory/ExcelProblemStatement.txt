@@ -1,0 +1,66 @@
+Instructions before solving :
+
+1. To solve this lab, Kindly use the Libre office application installed on the lab machine.
+Navigate to the folder "bodhitreeWorkspace\11\109\318\labDirectory", and open HiringResults.xlsx file and then complete the required actions mentioned in problem statement and save it.
+2. You are free to add any number of columns in Main sheet based on your requirement from column K, 
+but make sure the name of the headers to be created should not be one of the header names that are already used.
+3. Do not edit the sheet 'Details'
+4. Finding dificulty with formulae, Don't worry, we got you. Check the file Formulae.pdf for neccessary formulae present in same directory of HiringResults.xlsx.
+
+************Problem Statement*************
+
+You have started a transportation company called "Hola" and currently recruiting drivers.
+
+In the excel named "HiringDetails.xlsx",
+
+In Sheet 'Details', Column A has the State Code and Column B contain the State name for that respective code.
+
+In Sheet 'Main', Column A contains License ID of the driver....
+
+Below is the format of the License ID...
+It is 16 characters long (including space).
+The first two characters are upper-case alphabets that represent the state code of the state the driver belongs to
+The next two characters are digits that represent the RTO code which is followed by a space
+The next four characters are that represent the license issued in a year, followed by two characters that represent month, followed by two characters that represent day of issue of the license
+The next three characters can be any digits from 0-9 to ensure uniqueness.
+
+Eg : If ID is AP01 19980701234,
+AP -> represent he is from Andhra Pradesh ( AP is the state code of Andhra Pradesh )
+01 -> Represent the RTO code
+followed by ' '(space)
+19980701 -> represent the license is issue on 1st July, 1998( Year(1998) followed by month (07), followed by day (01))
+234 -> Random digit for uniqueness
+
+
+Column B contains the License Holder Name in Format 'FirstName#LastName'
+Eg: If Name is "Pavan Kumar#Yalavarthi" , First Name is Pavan Kumar, and Last name is Yalavarthi
+
+Column C contains the Date on which the person attended the Hiring session.
+
+Column D contains the grades he received in multiple rounds in form a string containing characters either P (Pass) or F(Fail)
+For example, If the grades string is PPPPPPPPPF, He passed first 9 rounds and failed on the 10th round.
+
+Now, you need to fill the rest of the columns as mentioned below,
+
+Column E to contain the first name of the driver
+Column F to contain the last name of the driver
+Column G to contain the state name of the driver
+
+Column H to contain Number of days between the Date of issue of license and the date on which the driver attended the hiring session. (This is treated as experience of the driver)
+
+Column I to contain Number of rounds he passed
+Hint : Number of Ps in the string = Length of the string - Length of the string without Ps.
+
+Column J to contain the Job status, whether "Selected" or "Rejected". 
+If the experience of the driver is more than 365 days and if he passed atleast 7 rounds, he is Selected, else Rejected.
+
+Marks Weightage :  (Note: This marks are assigned only on private test cases on server evaluation, For client evaluation it is just passed or failed)
+Column E - 4 Marks
+Column F - 5 Marks
+Column G - 6 Marks
+Column H - 8 Marks
+Column I - 9 Marks
+Column J - 4 marks
+
+Additional 4 marks, if your VLOOKUP formula for state name works even when number of rows is increased by adding union territory codes. 
+In simple words, your VLOOKUP formula should be independent of number of rows in Details sheet to receive additonal marks.

@@ -1,0 +1,10 @@
+{
+    "data": [
+        {
+            "testid": "1",
+            "status": "success",
+            "score": 14,
+            "message": "Results of execution of file_1.cpp on test cases is not as expected. Results of execution of file_2.cpp on test cases is not as expected. file_3.cpp has been merged perfectly! file_4_master.cpp has been merged perfectly! file_4_development.cpp has been merged perfectly! "
+        }
+    ]
+}

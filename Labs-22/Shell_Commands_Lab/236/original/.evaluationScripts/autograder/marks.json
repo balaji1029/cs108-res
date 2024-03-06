@@ -1,0 +1,46 @@
+{
+    "Nav":  {
+        "bar": 2,
+        "titles": 1
+    },
+    "Home": {
+        "desc": 1,
+        "image": 1
+    },
+    "Projects": {
+        "list": 2,
+        "desc": 2
+    },
+    "Education": {
+        "table": 3,
+        "data": 2
+    },
+    "Hobbies": {
+        "checkboxes": 2,
+        "button": 1
+    },
+    "Contact": {
+        "links": 2,
+        "form": 3
+    },
+    "inline-css": {
+        "desc": 1,
+        "style": 1
+    },
+    "internal-css": {
+        "navbar": 1,
+        "projects": 1
+    },
+    "external-css": {
+        "table": 1,
+        "form": 1
+    },
+    "learn-more": {
+        "function": 1,
+        "desc": 2
+    },
+    "submit": {
+        "function": 1,
+        "popup": 1
+    }
+}

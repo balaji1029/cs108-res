@@ -1,0 +1,22 @@
+--------------------- Advanced Python ---------------------
+
+                                Problem
+
+In this lab, you will investigate the performance difference between a non-vectorized (brute force) and
+a vectorized implementation of different matrix operations. You will be provided with two functions: nonvectorized() and vectorized() 
+stored in the file operation.py. Each function will accept a single parameter: a 2D NumPy array (an N×N matrix). 
+The nonvectorized() function implements matrix operations in a brute force way. The nonvectorized() function contains 3 matrix operations: computing transpose of matrix, elementwise multiplication of matrix with its transpose and matrix multiplication of matrix with the result of above two operations.
+
+Your task as follows:
+1) Implement vectorized version of operations from nonvectorized() function in vectorized() function and return the result. 
+   vectorized() function should do similar operations as that of nonvectorized(). The evaluation scripts will check the time required to run the function. 
+2) "testcases/in" folder contains .csv files with each containing one square matrix. You can read these matrics, use those to test your vectorized() code in main.py. 
+   Expected output for those testcases are stored in "testcases/out".
+2) We have ran these two functions on our system and stored the timing values in "data/nonvectorized.txt" and "data/vectorized.txt" respectively. On every line of these text files, there is float value representing time required for respective function.
+3) Read those timing values from files into lists and plot a separate line plots for nonvectorized and vectorized function timing values as shown in sample.png. Note the legend order in sample.png and make sure to follow same order. Path to view sample.png: bodhitreeWorkspace/11/126/337/labDirectory/sample.png
+5) On the same plot, also draw dashed lines representing the functions N, N^2, and N^3 to serve as references for time complexity. 
+   Note: Divide the values of N, N^2, and N^3 by 10^6 for scaling purposes.
+
+Usage: python3 main.py
+
+Sample plot output is shown in the file sample.png (Note: This is not actual answer, its just the sample.)

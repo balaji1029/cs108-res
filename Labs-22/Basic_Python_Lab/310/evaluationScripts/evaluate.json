@@ -1,0 +1,19 @@
+{
+    "marks": {
+        "testcase1": 0,
+        "testcase2": 0,
+        "testcase3": 0,
+        "testcase4": 0,
+        "testcase5": 0,
+        "testcase6": 0
+    },
+    "total": 0,
+    "feedback": {
+        "testcase1": "failed",
+        "testcase2": "failed",
+        "testcase3": "failed",
+        "testcase4": "failed",
+        "testcase5": "failed",
+        "testcase6": "failed"
+    }
+}

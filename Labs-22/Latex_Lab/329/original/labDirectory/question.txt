@@ -1,0 +1,64 @@
+For this activity, you are required to replicate the given pdf "assignment.pdf".
+You have to fill up the "main.tex" and "references.bib" file, which can generate a pdf as close as possible to "assignment.pdf".
+Below is the detailed description of the document you need to create. Read all the instructions before you begin with the activity.
+
+All the packages required for this activity are already imported in the given "main.tex" file. You shouldn't and mustn't import any other packages. 
+
+Following are the major components in each part of the document, which would be considered for evaluation:
+
+1) Preamble
+  -> Title
+  -> Author's name
+  -> Table of contents
+
+2) Section 1 : Introduction
+  -> List of topics
+
+3) Section 2 : Transformation of Random Variable 
+  -> Three mathematical equations (extra weightage for the last one)
+  -> 1 Footnote
+  -> 1 Citation
+
+4) Section 3 : Multi-variate Gaussian Distribution
+  -> 3 subsections
+  -> 2 Citations
+  -> Subfigures
+  -> Table
+  -> Equation 2 (last equation)
+
+5) Headers and Footers for each page (except first one)
+  -> Left header : "Transformation of R.V. and Multivariate Gaussian"
+  -> Right header : "<Your name>"
+  -> Footer : Page number
+
+6) References for all the citations (there are 3 citations)
+
+
+Other details amd resources:
+-> For cases in equation refer : https://www.overleaf.com/latex/examples/cases/nndqpbymnchn 
+-> For footnote : https://www.overleaf.com/learn/latex/Footnotes#The_\footnote_command 
+-> Subfigures (two figures in a row) : https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_3)%3A_Figures%2C_Subfigures_and_Tables#Subfigures
+  - Images are provided in the "images" folder
+  - Need not worry about exact size of the images
+-> Bibliography management and citations : https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex
+-> Customizing header and footer : https://tex.stackexchange.com/questions/87768/creating-running-headers-and-footers-but-not-on-the-first-page#:~:text=%5Cusepackage%7Bfancyhdr%7D%0A%5Cpagestyle%7Bfancy%7D%0A%5Clhead%7BThis%20is%20my%20name%7D%0A%5Crhead%7Bthis%20is%20page%20%5Cthepage%7D%0A%5Ccfoot%7Bcenter%20of%20the%20footer!%7D
+-> Cross-referencing (references to tables, figures or other sections) : https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing 
+-> For citations and references at the end, add 3 references(any) in "references.bib" file. Cite them at the places given in "assignment.pdf"
+
+
+For equations without numbers (like the first 3 equations of section 1), use display math mode : \[ ... \]
+For equation with numbers (like the last equation on section 1), use the "equation" environment : \begin{equation} ... \end{equation}
+
+For any component of the document, refer to the resources given above BEFORE finding other solutions available online.
+
+
+Usage : 
+pdflatex main
+bibtex main
+pdflatex main
+pdflatex main
+
+
+Grading details : Your submission will graded on the basis of the certain tags in the "main.tex" file and "references.bib", though 
+it must generate a pdf without any errors, warnings are acceptable.
+Hence, in most cases exact match between your rendered pdf and "assignment.pdf" is not considered, yet it is advisable to create your pdf as similar as possible to the given "assignment.pdf".

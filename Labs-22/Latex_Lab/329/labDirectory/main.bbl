@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{link1}
+\url{https://www.example.com}.
+
+\bibitem{link2}
+\url{https://www.example.com}.
+
+\bibitem{texbook}
+Donald~E. Knuth.
+\newblock {\em The {\TeX} Book}.
+\newblock Addison-Wesley Professional, 1986.
+
+\end{thebibliography}

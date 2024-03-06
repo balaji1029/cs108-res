@@ -1,0 +1,16 @@
+UserID;Name;Designation;loginShell
+1001;Rahul Singh;Manager;/bin/false
+1002;Anjali Sharma;Assistant Manager;/bin/false
+1003;Rajesh Patel;Team Leader;Valid
+1004;Priya Gupta;Senior Developer;Valid
+1005;Manoj Kumar;Developer;Valid
+1006;Kavita Singh;HR Manager;/bin/false
+1007;Deepak Verma;Marketing Manager;/bin/false
+1008;Shruti Patel;Product Manager;Valid
+1009;Kunal Shah;Assistant Manager;Valid
+1010;Sonali Singh;Project Manager;/bin/false
+1011;Arjun Gupta;Accounts Manager;Valid
+1012;Divya Patel;Operations Manager;/bin/false
+1013;Ashish Sharma;Recruiter;Valid
+1014;Ankit Chauhan;Software Engineer;/bin/false
+1015;Komal Mehra;Quality Assurance Manager;Valid

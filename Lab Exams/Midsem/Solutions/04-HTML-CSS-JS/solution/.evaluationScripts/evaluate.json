@@ -1,0 +1,65 @@
+{
+    "marks": {
+        "Nav": {
+            "bar": 1,
+            "titles": 1
+        },
+        "Home": {
+            "desc": 1,
+            "image": 1
+        },
+        "Prime": {
+            "form": 2,
+            "button": 1
+        },
+        "inline-css": {
+            "desc": 1
+        },
+        "internal-css": {
+            "navbar": 1
+        },
+        "external-css": {
+            "input": 1
+        },
+        "runFunc": {
+            "num": 1,
+            "popup": 1
+        },
+        "isPrime": {
+            "linking": 1,
+            "testcases": 2.0
+        }
+    },
+    "total": 15.0,
+    "feedback": {
+        "Nav": {
+            "bar": "",
+            "titles": ""
+        },
+        "Home": {
+            "desc": "",
+            "image": ""
+        },
+        "Prime": {
+            "form": "",
+            "button": ""
+        },
+        "inline-css": {
+            "desc": ""
+        },
+        "internal-css": {
+            "navbar": ""
+        },
+        "external-css": {
+            "input": ""
+        },
+        "runFunc": {
+            "num": "",
+            "popup": ""
+        },
+        "isPrime": {
+            "linking": "",
+            "testcases": ""
+        }
+    }
+}

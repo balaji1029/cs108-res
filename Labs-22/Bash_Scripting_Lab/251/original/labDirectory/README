@@ -1,0 +1,8 @@
+You can find the testcases here.
+
+The testcases directory contains the testcases with folder names as test-IDs.
+
+The true_output directory contains the expected output for each of the testcases.
+
+WARNING - Changing the directory will not cause the script to run on the new test case. 
+          The file will only be run on the original test cases.

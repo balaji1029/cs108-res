@@ -1,0 +1,24 @@
+Study the format of the file "sample.txt" which stores information about various user 
+accounts. It includes some user accounts (dummy) that have Userids, Name etc, but they are 
+not allowed to login. In this case, they will have “/bin/false” under loginShell. Other users who are allowed to login, will have any other entry like "Valid", "/bin/true", etc.
+ In other words, they can have any entry other than “/bin/false”.
+
+Task : Write an awk script "users.awk" that takes "sample.txt" as input and prints
+the user ids (the first field) of all dummy accounts whose shell is "/bin/false". 
+The Sample Input File is -
+UserID;Name;Designation;loginShell
+10001;ajay;manager;/bin/false
+1001;sunil;clerk;/bin/false
+101;varun;manager;Valid
+60123;amit;manager;/bin/false
+401;tarun;peon;Valid
+
+And after running the script the output should be
+10001
+1001
+60123
+
+Note : The input field separator is ";"
+
+Usage : 
+awk -f users.awk sample.txt > output.txt

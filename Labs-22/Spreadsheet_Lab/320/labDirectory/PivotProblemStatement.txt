@@ -1,0 +1,24 @@
+Note:
+
+To solve this lab, Kindly use the office application installed on your machine, if available.
+Navigate to the folder "bodhitreeWorkspace\11\109\320\labDirectory", and open Sales.xlsx file and then complete the required actions mentioned in problem statement and save it.
+
+Incase if there is no preinstalled office application, use online tools like google sheets.
+Navigate to the site "https://docs.google.com/spreadsheets/", and select new blank spreadsheet.
+Navigate to File > Open > Upload and browse Sales.xlsx in the folder bodhitreeWorkspace\11\109\320\labDirectory. 
+Complete the required tasks and download a copy to local (File > Download > Microsoft Excel(.xlsx)). This would be present in the downloads folder.
+Copy it and replace the original file "bodhitreeWorkspace\11\109\320\labDirectory\Sales.xlsx". Make sure the file name is Sales.xlsx
+
+************Problem Statement*************
+
+You are the proud owner of a multinational home appliances retailer. 
+You have decided to use Pivot Table to analyze your data and see how business can be improved. 
+
+Your data in file "Sales.xlsx" contains information about the Item sold, the Date on which the item was sold, its Selling Price and its Cost price.
+
+You needed to create a pivot table that shows a breakdown of Total Profit from each of Items Sold (in Rows), and the Year each item was sold (in Columns).
+
+You are free to add any number of columns in the "Sales" sheet to derive the required results mainly for Profit and Year( Name the same to the column header)
+
+Note : You need to add the pivot table in new sheet named "Pivot". Look at the snapshot.png for layout off pivot table (Values present in snapshot are some random values). Header names are not checked, only values are checked. 
+

@@ -1,0 +1,95 @@
+<!-- Projects -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: lavender;
+            padding: 10px;
+        }    
+
+        #projects{
+            background-color: darkslateblue;
+            color: white;
+            padding: 8px;
+        }
+
+        .project-title{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .project-desc{
+            color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .projintro{
+            color: indigo;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+        }
+
+        .topnav{
+            display: flex;
+            justify-content: right;
+            background-color: darkslateblue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin-bottom: 30px;
+        }
+
+        a:link, a:visited{
+            color: rgb(186, 184, 184);
+            padding:10px;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color:white;
+            padding:10px;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+
+<div class="topnav">
+    <a href="index.html" target="_blank">Home</a>
+    <a href="projects.html" target="_blank">Projects</a>
+    <a href="education.html" target="_blank">Education</a>
+    <a href="hobbies.html" target="_blank">Hobbies</a>
+    <a href="contact.html" target="_blank">Contact</a>
+</div>
+<br><br><br>
+
+     <p class="projintro">Here are some of the projects I've worked on. I've enjoyed them immensely and hope to work on more in the future.</p>
+    <ol id="projects">
+    <li><div class="project container">
+        <h1 class="project-title">Winter In Data Science (WIDS)</h1>
+        <p class="project-desc">I learnt the basics of natural language processing (NLP) to build a conversational chatbot.</p>
+    </div>
+    </li>
+    <br><hr><br>
+    <li>
+    <div class="project container"></div>
+    <h1 class="project-title">Tinkerkar</h1>
+    <p class="project-desc">I learnt how to operate an Arduino board and program a line following bot using infrared sensors.</p>
+    </li>
+    </ol>
+</body>
+</html>

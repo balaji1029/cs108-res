@@ -1,0 +1,5 @@
+studentid,mathematics,physics,chemistry,grade
+1,20,10,100,FAIL
+2,70,56,50,PASS
+3,40,42,39,PASS
+4,90,29,50,FAIL
