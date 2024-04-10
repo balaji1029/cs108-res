@@ -1,0 +1,223 @@
+window.cca=window.cca||{};(function(win,doc){var cmpCallbacks1={};var ccaoName="cca";var carbonVendorID=493;var ccao=win[ccaoName];ccao.privacy=ccao.privacy||{};;ccao.privacy.que=ccao.privacy.que||[];ccao.privacy.gdpr={CS:"",Consent:false,}
+ccao.privacy.ccpa={Consent:false,ConsentString:"",}
+ccao.privacy.law="";ccao.privacy.ready=false
+ccao.privacy.log=[];var Log=function(message){ccao.privacy.log.push(message);}
+var reportLog=function(){reportPrivacyError(JSON.stringify(ccao.privacy.log));}
+var reportPrivacyError=function(errorMessage){}
+var activatePrivacy=function(){if(ccao.privacy&&ccao.privacy.ready){Log("[WARNING] Attempted to ready privacy again");return}
+ccao.privacy.ready=true;var tempQue=ccao.privacy.que
+for(callback of tempQue){try{callback();}catch(e){Log("[ERROR] issue in callback: "+e.name+": "+e.message)}}
+ccao.privacy.que={push:function(callback){try{callback();}catch(e){Log("[ERROR] issue in callback: "+e.name+": "+e.message)}}}
+var tempQue=null;Log("[INFO] Closing privacy que, record below, ideally it should be empty: "+JSON.stringify(ccao.privacy.que));Log("[INFO] logging final object: "+JSON.stringify(ccao.privacy));}
+var findFrame=function(frameName){let frame=win;var cmpFrame;while(frame){try{if(frame.frames[frameName]){cmpFrame=frame;break;}}catch(ignore){}
+if(frame===win.top){break;}
+frame=frame.parent;}
+return cmpFrame}
+var getGdprAPI=function(){if(win.self==win.top){Log("[INFO] [GDPR-API] Not in iframe")
+if(win.__tcfapi){Log("[INFO] [GDPR-API] API found! TCFV2 established")
+return{gdprAPI:win.__tcfapi,gdprVersion:2}}else if(win.__cmp){Log("[INFO] [GDPR-API] API found! TCFV1.1 established")
+return{gdprAPI:win.__cmp,gdprVersion:1.1}}
+Log("[ERROR] [GDPR-API] TCF API NOT FOUND")
+return{gdprAPI:null,gdprVersion:null}}
+Log("[INFO] [GDPR-API] We are in iframe")
+let cmpFrame;const cmpCallbacks={};const callId=Math.random()+'';cmpFrame=findFrame("__tcfapiLocator")
+if(cmpFrame){Log("[INFO]  [TFCV2] [GDPR-API] Iframe __tcfapiLocator found! gdpr v2, attatching iframe handlers")
+function postMessageHandler(event){let json={};try{json=typeof event.data==='string'?JSON.parse(event.data):event.data;}catch(ignore){}
+const payload=json.__tcfapiReturn;if(payload){if(typeof cmpCallbacks[payload.callId]==='function'){cmpCallbacks[payload.callId](payload.returnValue,payload.success);cmpCallbacks[payload.callId]=null;}}}
+win.addEventListener('message',postMessageHandler,false);return{gdprAPI:function(cmd,version,callback,arg){if(!cmpFrame){callback({msg:'CMP not found'},false);}else{const msg={__tcfapiCall:{command:cmd,parameter:arg,version:version,callId:callId,},};cmpCallbacks[callId]=callback;cmpFrame.postMessage(msg,'*');}},gdprVersion:2};}else{Log("[INFO] [GDPR-API] Iframe __tcfapiLocator not found checking for v1");cmpFrame=findFrame("__cmpLocator");if(!cmpFrame){Log("[ERROR] [GDPR-API] Could not find v1.1 cmp either, giving up")
+reportLog();return{gdprAPI:null,gdprVersion:null}}
+win.addEventListener("message",function(event){var json=typeof event.data==="string"?JSON.parse(event.data):event.data;if(json.__cmpReturn){var i=json.__cmpReturn;if(i&&i.callId&&cmpCallbacks1[i.callId]){if(typeof i.success=="undefined"&&i.returnValue){i.success=true;cmpCallbacks1[i.callId](i.returnValue,i.success);delete cmpCallbacks1[i.callId];}else{Log("[ERROR] [TFCV1.1] [GDPR-API] issue with legacy return iframe data: "+JSON.stringify(i));reportLog();}}else{Log("[ERROR] [TFCV1.1][GDPR-API]  We got hit without callback, probably a double call");reportLog();}}},false);}
+return{gdprAPI:function(cmd,arg,callback){var callId=Math.random()+"";var msg={__cmpCall:{command:cmd,parameter:arg,callId:callId}};cmpCallbacks1[callId]=callback;cmpFrame.postMessage(msg,'*');},gdprVersion:1.1}}
+var doGdprCheckTCFV1=function(gdprAPI){var Call2Params=['getConsentData',null,function(result,success){Log("[INFO][TFCV1.1] Entering Second Callback")
+if(success){Log("[INFO][TFCV1.1] Second Callback has succeeded!");ccao.privacy.gdpr.CS=result.consentData||"";}else{Log("[ERROR][TFCV1.1] success=false on getting consent string");reportLog();activatePrivacy()
+return}}];var Call1Params=['getVendorConsents',[493],function(result,success){Log("[INFO][TFCV1.1]Entering First Callback");if(!success){Log("[ERROR][TFCV1.1] success=false on getting vendor consent");activatePrivacy()
+return}
+Log("[INFO][TFCV1.1] First Callback has succeeded!");var gdprApplies=result&&result.gdprApplies;if(!gdprApplies){Log("[INFO ][TFCV1.1] gdpr does not apply");}
+else{var hasConsent=result&&result.vendorConsents&&result.vendorConsents[493];if(hasConsent){Log("[INFO ][TFCV1.1] gdpr has vendor consent");ccao.privacy.gdpr.Consent=true;activatePrivacy();}else{Log("[INFO ][TFCV1.1] we officially and correctly do not have vendor consent");activatePrivacy();return;}}
+gdprAPI(...Call2Params);}];gdprAPI(...Call1Params)}
+var doGdprCheckTCFV2=function(gdprAPI){Log("[INFO] [TFCV2] setting tfcv2 callback")
+const callback=(tcData,success)=>{Log("[INFO] [TFCV2] calling tfcv2 callback")
+if(success&&(tcData.eventStatus==='tcloaded'||tcData.eventStatus==='useractioncomplete')){Log("[INFO] [TFCV2] We have determined the cmp is ready to give consent information")
+if(!tcData.gdprApplies){Log("[INFO] [TFCV2] the cmp has determined gdpr does not apply")
+return}
+ccao.privacy.gdpr.CS=tcData.tcString;Log("[INFO] [TFCV2] Obtaining consent string: "+tcData.tcString)
+if(tcData.vendor&&tcData.vendor.consents){ccao.privacy.gdpr.Consent=tcData.vendor.consents[carbonVendorID]||false;}else{Log("[ERROR] [TFCV2] unable to obtain consent")
+reportLog();}
+activatePrivacy()
+gdprAPI('removeEventListener',2,(success)=>{if(success){}else{Log("[ERROR] [TFCV2] unable to remove listener")
+reportLog()}},tcData.listenerId);}else{}}
+gdprAPI('addEventListener',2,callback);}
+var doGdprCheck=function(){var gdprVersion;var{gdprAPI,gdprVersion}=getGdprAPI()
+if(!gdprAPI||!gdprVersion){Log("[ERROR] Due to lack of tcf cmp, we must assume no consent")
+activatePrivacy()
+return}
+if(gdprVersion=="2"){doGdprCheckTCFV2(gdprAPI)}
+if(gdprVersion=="1.1"){doGdprCheckTCFV1(gdprAPI)}}
+var doCCPACheck=function(){const deletePersonalData=()=>{};const getConsent=(uspData,success)=>{Log("[INFO] [CCPA] starting callback")
+if(success){Log("[INFO] [CCPA] callback has succeeded")
+ccao.privacy.ccpa.ConsentString=uspData.uspString;if(ccao.privacy.ccpa.ConsentString[2]=="-"||(ccao.privacy.ccpa.ConsentString[2].toLowerCase()=="n"&&ccao.privacy.ccpa.ConsentString[1].toLowerCase()=='y')){Log("[INFO] CCPA getConsent has passed all string checks")
+ccao.privacy.ccpa.Consent=true;activatePrivacy()}else if(ccao.privacy.ccpa.ConsentString[2].toLowerCase()=="y"){Log("[INFO] CCPA consent string indicates user opted out");activatePrivacy();}else{Log("[WARNING] CCPA getConsent did not pass all string checks")
+activatePrivacy()}}else{Log("[ERROR] CCPA getConsent function success was not true")
+reportLog()
+activatePrivacy()}};const delCommand='registerDeletion';const version=1;if(win===win.top){Log("[INFO] [CCPA] not in iframe")
+win.__uspapi("getUSPData",version,getConsent);}else{Log("[INFO] [CCPA]  in iframe")
+let uspapiFrame;let frame=win;while(frame){try{if(frame.frames['__uspapiLocator']){uspapiFrame=frame;break;}}catch(ignore){}
+if(frame===win.top){break;}
+frame=frame.parent;}
+if(uspapiFrame){Log("[INFO] [CCPA] locator frame found")
+win.addEventListener('message',(event)=>{Log("[CCPA] [INFO]  inside post message listener, though this message will fire on other events as well")
+let json={};try{json=typeof event.data==='string'?JSON.parse(event.data):event.data;}catch(ignore){}
+if(json.__uspapiReturn){Log("[CCPA] [INFO]  inside post message listener AND usapireturn exists")
+try{if(json.__uspapiReturn.callId==callId){Log("[INFO] [CCPA] recived event calling callback, assuming correct event because has our id and no way to check")
+getConsent(json.__uspapiReturn.returnValue,json.__uspapiReturn.success)
+return}}catch(e){}}},false);const callId=Math.random()+'';Log("[CCPA] [INFO]  posting to locator frame")
+uspapiFrame.postMessage({__uspapiCall:{command:"getUSPData",version:version,callId:callId,},},'*');}else{Log("[ERROR] [CCPA]  unable to find locator frame from iframe")}}}
+var removeDomainCookies=function(){if(win._ccLauncherSettings&&win._ccLauncherSettings.api){var deleteCookiePixel=new Image(1,1);deleteCookiePixel.src=win._ccLauncherSettings.api+"/forget";}}
+ccao.GeoFound=function(geostring){if(ccao.privacy&&ccao.privacy.ready){Log("[WARNING] Attempted to find geo after privacy has been ready");return;}
+if(!geostring||typeof geostring!=="string"){geostring="unknown";}
+switch(geostring.toLowerCase()){case "eu":case "uk":Log("[INFO] Geo Found check suggsts we are in gdpr territory")
+ccao.privacy.law="gdpr"
+doGdprCheck();break;case "ca":Log("[INFO] Geo Found check suggsts we are in ccpa territory")
+ccao.privacy.law="ccpa";doCCPACheck();break;case "optout":Log("[INFO] Opt Out cookie found, skipping Geo check")
+reportLog();ccao.privacy.law="optout"
+removeDomainCookies();activatePrivacy();break;case "other":Log("[INFO] Geo Found check suggsts we are not in a privacy law applicable territory")
+ccao.privacy.law="na";activatePrivacy();break;case "unknown":default:Log("[INFO] Geo Found check suggsts we are unable to determine applicable privacy geo")
+reportLog();ccao.privacy.law="unknown";activatePrivacy();break;}}
+if(_ccScriptSettings&&_ccScriptSettings.user&&_ccScriptSettings.user.optOut){if(window.localStorage)window.localStorage.clear();if(window.sessionStorage)window.sessionStorage.clear();ccao.GeoFound("optout");}else if(_ccScriptSettings&&_ccScriptSettings.site&&_ccScriptSettings.site.whitelist){ccao.GeoFound('other');}else{try{var xmlHttp=new XMLHttpRequest();xmlHttp.onreadystatechange=function(){if(xmlHttp.readyState==4&&xmlHttp.status==200){var response="";try{response+=xmlHttp.responseText;}catch(e){Log("[ERROR] issue with geo found: "+e.name+": "+e.message)
+Log("[ERROR] response text of bad geo was: "+JSON.stringify(xmlHttp.responseText))}
+ccao.GeoFound(response);}};var locAddress=win._ccLauncherSettings.location;xmlHttp.open("GET",locAddress+"/privacy/location",true);xmlHttp.send();}catch(ignore){}}
+setTimeout(function(){if(ccao.privacy&&ccao.privacy.ready){return}
+if(!ccao.privacy.ready){Log("[ERROR] We never activated privacy somehow")
+reportLog();activatePrivacy();}},10000)
+var fbcnt=0;var fbpixel=function(){if(fbcnt>3){return}
+fbcnt++;if(win._ccScriptSettings&&win._ccScriptSettings.user&&win._ccScriptSettings.user.audienceMemberships&&win._ccScriptSettings.user.audienceMemberships.length>0&&win.fbq){win.fbq("trackCustom","CarbonSegmentEvent",{carbonSegment:win._ccScriptSettings.user.audienceMemberships})}else{setTimeout(fbpixel,1000*fbcnt)}}
+ccao.pixelapi=ccao.pixelapi||{};ccao.pixelapi.fbStandard=function(){if(!ccao.privacy.law||typeof ccao.privacy.law!=="string"){ccao.privacy.law="unknown";}
+switch(ccao.privacy.law.toLowerCase()){case "gdpr":if(ccao.privacy.gdpr.Consent){fbpixel();}
+break;case "ccpa":if(ccao.privacy.ccpa.Consent){fbpixel();}
+break;case "na":fbpixel();break;case "optout":case "unknown":default:break;}}})(window,document);;(function(win,doc){ccao=win["cca"];ccao.privacy=ccao.privacy||{que:[]};var initialised=false;var beforeInitQueue=[];var ccaSettings;var CCAnalytics=function(queue){if(queue&&queue.length){for(var index=0,len=queue.length;index<len;index++){this.processMessage.apply(this,queue[index]);}}
+return this.processMessage;};CCAnalytics.prototype.processMessage=function(){if(arguments&&arguments.length){var eventParametersLen=arguments.length,argArr=[],eventName=arguments[0];if(eventName!=="register-key"){for(var i=1;i<eventParametersLen;i++){argArr[argArr.length]=arguments[i];}
+ccao.sendMessage(eventName,argArr,true);}}};function setAdditionalParametersWithConsent(params){params=setDefaultParams(params)
+if(ccao.pageState){params.push(['GLAM-AID',ccao.pageState.cookieIDs.aid.value||'']);params.push(['GLAM-JID',ccao.pageState.cookieIDs.jid.value||'']);params.push(['GLAM-SID',ccao.pageState.cookieIDs.sid.value||'']);params.push(['APPNEXUS',ccao.pageState.cookieIDs.anid.value||'']);params.push(['extReferer',ccao.pageState.refer.externalRefer||'']);params.push(['curReferer',ccao.pageState.refer.currentRefer||'']);params.push(['url',ccao.pageState.url||'']);params.push(['prevPvid',ccao.pageState.persistentParam.prevPvid||'']);params.push(['pageViews',ccao.pageState.persistentParam.pageViews||'']);params.push(['utm_campaign',ccao.pageState.persistentParam.utm_campaign||'']);params.push(['utm_medium',ccao.pageState.persistentParam.utm_medium||'']);params.push(['utm_term',ccao.pageState.persistentParam.utm_term||'']);params.push(['utm_content',ccao.pageState.persistentParam.utm_content||'']);params.push(['utm_source',ccao.pageState.persistentParam.utm_source||'']);params.push(['landing_url',ccao.pageState.persistentParam.landing_url||'']);params.push(["accountid",win._ccScriptSettings.tap.accountId||'']);params.push(['cn1',ccao.pageState.cn1||'']);params.push(['cn2',ccao.pageState.cn2||'']);params.push(['cns',ccao.pageState.cn1||'']);params.push(['cns',ccao.pageState.cn2||'']);try{ccao.pageState.engagement.registerEngagement();params.push(['engid',ccao.pageState.engagement.id||'']);params.push(['engcount',ccao.pageState.engagement.count!==undefined?ccao.pageState.engagement.count:0]);params.push(['engttl',ccao.pageState.engagement.ttl||'']);}catch(e){console.debug(e)}}
+return params;}
+function setAdditionalParametersWithoutConsent(params){params=setDefaultParamsWithoutConsent(params)
+if(ccao.pageState){params.push(['GLAM-AID',ccao.pageState.cookieIDs.aid.value||'']);params.push(['GLAM-JID',ccao.pageState.cookieIDs.jid.value||'']);params.push(['GLAM-SID',ccao.pageState.cookieIDs.sid.value||'']);params.push(['APPNEXUS',ccao.pageState.cookieIDs.anid.value||'']);params.push(['extReferer',ccao.pageState.refer.externalRefer||'']);params.push(['curReferer',ccao.pageState.refer.currentRefer||'']);params.push(['url',ccao.pageState.url||'']);params.push(['prevPvid',ccao.pageState.persistentParam.prevPvid||'']);params.push(['pageViews',ccao.pageState.persistentParam.pageViews||'']);params.push(['utm_campaign',ccao.pageState.persistentParam.utm_campaign||'']);params.push(['utm_medium',ccao.pageState.persistentParam.utm_medium||'']);params.push(['utm_term',ccao.pageState.persistentParam.utm_term||'']);params.push(['utm_content',ccao.pageState.persistentParam.utm_content||'']);params.push(['utm_source',ccao.pageState.persistentParam.utm_source||'']);params.push(['landing_url',ccao.pageState.persistentParam.landing_url||'']);params.push(["accountid",win._ccScriptSettings.tap.accountId||'']);params.push(['cn1',ccao.pageState.cn1||'']);params.push(['cn2',ccao.pageState.cn2||'']);params.push(['cns',ccao.pageState.cn1||'']);params.push(['cns',ccao.pageState.cn2||'']);try{ccao.pageState.engagement.registerEngagement();params.push(['engid',ccao.pageState.engagement.id||'']);params.push(['engcount',ccao.pageState.engagement.count!==undefined?ccao.pageState.engagement.count:0]);params.push(['engttl',ccao.pageState.engagement.ttl||'']);}catch(e){console.debug(e)}}
+return params;}
+function setDefaultParams(params){params.push(['nct',Date.parse(new Date())]);params.push(['sid',ccaSettings.session.id]);params.push(['ccuid',ccaSettings.user.id]);params.push(['pvid',ccaSettings.pageData.pvid]);return params;}
+function setDefaultParamsWithoutConsent(params){params.push(['nct',Date.parse(new Date())]);params.push(['sid',ccaSettings.session.id]);params.push(['pvid',ccaSettings.pageData.pvid]);return params;}
+function buildUrl(params){if(isConsent()){params=setAdditionalParametersWithConsent(params);}else{params=setAdditionalParametersWithoutConsent(params);}
+var len=params?params.length:0;var result=['?'];while(len-->0){var param=params[len];if(result.length>1){result.push('&')}
+result.push(param[0]+"="+encodeURIComponent(param[1]));}
+return result.join('');}
+function isConsent(){if(!ccao.privacy.law||typeof ccao.privacy.law!=="string"){ccao.privacy.law="unknown";}
+switch(ccao.privacy.law.toLowerCase()){case "gdpr":if(ccao.privacy.gdpr.Consent){return true;}
+break;case "ccpa":if(ccao.privacy.ccpa.Consent){return true;}
+break;case "na":return true;break;case "optout":case "unknown":default:break;}
+return false;}
+var urlchop=function(url){var replacePiece=url;replacePiece=replacePiece.substring(replacePiece.indexOf('//')+2);replacePiece=replacePiece.slice(0,replacePiece.indexOf('/v1')+3);return url.replace(replacePiece,'tag-api-2-0.ccgateway.net')}
+var firePixel=function(endpoint,consentRequired=true){if(!consentRequired||isConsent()){var img=new Image(1,1);img.src=endpoint;}}
+ccao.sendMessage=function(action,params,consentRequired){if(initialised===false){beforeInitQueue.push(function(){ccao.sendMessage(action,params,consentRequired);});return;}
+action=action?"/"+action:"";ccao.privacy=ccao.privacy||{};ccao.privacy.que=ccao.privacy.que||[];ccao.privacy.que.push(function(){var urlData=buildUrl(params);var endpoint=win._ccLauncherSettings.ingestion+"/event/record"+action+urlData;firePixel(endpoint,consentRequired);});}
+function getStoredItem(key){try{var session=win.sessionStorage;if(session){return session.getItem(key);}else{var regex=new RegExp("[\?\&]?"+key+"=([^;\/&]*)",'g');var match=regex.exec(document.cookie);return match?match[1]:'';}}catch(exn){return null;}}
+function setStoredItem(key,value){try{var session=win.sessionStorage;if(session){session.setItem(key,value);}else{document.cookie=key+"="+value;}}catch(exn){document.cookie=key+"="+value;}
+return true;}
+ccao.getSettings(function(settings){ccaSettings=settings;if(ccaSettings.session.id){ccao.messageProcessor=new CCAnalytics(ccao.q);}
+initialised=true;var readyLen=beforeInitQueue.length;for(var i=0;i<readyLen;i++){beforeInitQueue[i]();}
+beforeInitQueue=[];});})(window,document);;(function(win,doc){var ccao=win["cca"];var sessionEndDuration=1800000;function scriptLoad(settings){var cacheParams=getCacheValueParams();var cookieType=(win._ccScriptSettings.cookieSettingsType!==undefined)?win._ccScriptSettings.cookieSettingsType:0;var paramsToSend=[["url",win.location.href],["skey",settings.scriptKey],["scriptId",settings.site.scriptId||""],["parentId",settings.site.parentId||""],["ios",settings.user.ios],["nocookies",settings.user.requiresFingerprint&&cacheParams.fp===false],["cookieType",cookieType],["localCache",cacheParams.localCache],["browserCache",cacheParams.browserCache],["devicefp",settings.user.fingerprint]];switch(cca.privacy.law){case "gdpr":var consentString=cca.privacy.gdpr.CS;break;case "ccpa":var consentString=cca.privacy.ccpa.ConsentString;break;default:break;}
+if(consentString)paramsToSend.push(["privacyConsent",consentString]);var title=document.title;var description=getDescription();if(title)paramsToSend.push(["title",encodeURIComponent(title.substring(0,100))]);if(description)paramsToSend.push(["description",encodeURIComponent(description.substring(0,100))]);var carbonMetadata=win["carbonMetadata"];if(carbonMetadata){paramsToSend.push(["cm",encodeURIComponent(JSON.stringify(carbonMetadata))]);}
+addCCMeta(paramsToSend);if(win.navigator){paramsToSend[paramsToSend.length]=["ua",win.navigator.userAgent];paramsToSend[paramsToSend.length]=["lang",win.navigator.language];}
+if(settings.user.isNew){paramsToSend[paramsToSend.length]=["nu","true"];}
+if(settings.session.isNew){paramsToSend[paramsToSend.length]=["ns","true"];paramsToSend[paramsToSend.length]=["r",doc.referrer];}
+if(win.pbjs&&win.pbjs.getUserIdsAsEids){let eids=win.pbjs.getUserIdsAsEids().map(x=>({key:x.source,ids:x.uids.map(y=>y.id)}));paramsToSend.push(["prebidExternalIds",encodeURIComponent(JSON.stringify(eids))]);}
+if(win.navigator&&win.navigator.cookieDeprecationLabel){var elapsed=false;var timer=win.setTimeout(function(){elapsed=true;ccao.sendMessage("script-load",paramsToSend,true);},100);navigator.cookieDeprecationLabel.getValue().then((label)=>{win.clearTimeout(timer);if(!elapsed){paramsToSend.push(["cookieDeprecationLabel",label]);ccao.sendMessage("script-load",paramsToSend,true);}});}else{ccao.sendMessage("script-load",paramsToSend,true);}}
+ccao.redoScriptLoad=scriptLoad;function getCacheValueParams(){var localUser=win._ccScriptSettings.user.localCachedUser||{localCache:false};if(typeof(localUser.localCache)==="undefined")
+localUser.localCache=false;var bcUser=win._ccScriptSettings.user.browserCachedUser||{browserCache:false};if(typeof(bcUser.browserCache)==="undefined")
+localUser.browserCache=false;var fpFrameUser=win._ccScriptSettings.user.fpframeuser||{fp:false};if(typeof(fpFrameUser.browserCache)==="undefined")
+localUser.fp=false;return Object.assign({},bcUser,localUser,fpFrameUser);}
+var heartbeatNo=0,heartbeatElapsed=0,heartbeatTimes=[30000,30000,60000,180000],heartbeatTimesLen=heartbeatTimes.length;function startHeartbeat(settings){if(!settings.analytics.heartbeat)return;if(heartbeatNo<heartbeatTimesLen){var interval=heartbeatTimes[heartbeatNo++];setTimeout(function(){heartbeatElapsed+=interval;ccao.sendMessage("heartbeat",[["int",heartbeatElapsed]],true);startHeartbeat(settings);},interval);}}
+function getPerf(settings){if(!settings.analytics.logPerf)return;ccao.afterPageLoad(function(){var perf=win.performance||win.webkitPerformance;perf=perf&&perf.timing;if(!perf){perf={loadEventStart:0,navigationStart:0,domainLookupEnd:0,domainLookupStart:0,connectEnd:0,connectStart:0,responseStart:0,requestStart:0,responseEnd:0,fetchStart:0,domInteractive:0,domContentLoadedEventStart:0}}
+var navigationStart=perf.navigationStart;if(0===navigationStart)
+return;var perfArray=[["pgld",perf.loadEventStart-navigationStart],["dmlk",perf.domainLookupEnd-perf.domainLookupStart],["incon",perf.connectEnd-perf.connectStart],["ttfb",perf.responseStart-perf.requestStart],["cndl",perf.responseEnd-perf.responseStart],["redir",perf.fetchStart-navigationStart],["domi",perf.domInteractive-navigationStart],["doml",perf.domContentLoadedEventStart-navigationStart]];ccao.sendMessage("page-perf",perfArray,true);});}
+function getDocHeight(){return Math.max(doc.body.scrollHeight,doc.documentElement.scrollHeight,doc.body.offsetHeight,doc.documentElement.offsetHeight,doc.body.clientHeight,doc.documentElement.clientHeight)}
+function getmeasurements(){var winHeight=win.innerHeight||(doc.documentElement||doc.body).clientHeight,docHeight=getDocHeight()
+return{winHeight:winHeight,docHeight:docHeight,trackLength:docHeight-winHeight};}
+function checkScroll(measurements,scrollTracking,settings){var pctScrolled=0;var scrollTop=window.pageYOffset||(document.documentElement||document.body.parentNode||document.body).scrollTop;if(scrollTop>scrollTracking.deepestScroll){pctScrolled=Math.floor(scrollTop/measurements.trackLength*100);if(pctScrolled>=95&&!scrollTracking["95"]){scrollTracking["95"]=true;sendScrollDepthEvent("95",settings);}else if(pctScrolled>=75&&pctScrolled<95&&!scrollTracking["75"]){scrollTracking["75"]=true;sendScrollDepthEvent("75",settings);}else if(pctScrolled>=50&&pctScrolled<75&&!scrollTracking["50"]){scrollTracking["50"]=true;sendScrollDepthEvent("50",settings);}
+scrollTracking.deepestScroll=scrollTop;}}
+function sendScrollDepthEvent(scrollDepth,settings){var data=[];data.push(["parentId",encodeURIComponent(settings.site.parentId)]);data.push(["scriptId",encodeURIComponent(settings.site.scriptId)]);data.push(["triggerId","scroll-trigger"]);data.push(["triggerLabel","scroll"]);data.push(["eventTarget","document"]);data.push(["customAttributes",["depth="+scrollDepth]]);ccao.sendMessage("custom-scroll-depth",data,true);}
+function scrollDepthCheck(settings){if(!settings.analytics.scrollDepth)return;var measurements=getmeasurements();var throttlescroll;var scrollTracking={deepestScroll:0,50:false,75:false,95:false};ccao.attachCCEvent("resize",function(){measurements=getmeasurements();});ccao.attachCCEvent("scroll",function(){clearTimeout(throttlescroll);throttlescroll=setTimeout(function(){checkScroll(measurements,scrollTracking,settings);},50)},false);}
+function getDescription(){var description;var metas=document.getElementsByTagName('meta');for(var x=0,y=metas.length;x<y;x++){if(metas[x].name.toLowerCase()==="description"){description=metas[x].content;break;}}
+return description||"";}
+function addCCMeta(metaData){var metaTags=document.getElementsByName('cc-meta');if(metaTags===undefined||metaTags===null||metaTags.length<=0)
+return;var ccMeta=metaTags[0].dataset;for(var dataItem in ccMeta){if(ccMeta[dataItem]===""||ccMeta[dataItem]==="undefined")continue;metaData.push([dataItem,ccMeta[dataItem]]);}}
+function getPageMetadata(settings){if(!settings.analytics.pageMetadata)return;var data=[];var title=document.title;var description=getDescription();data.push(["href",encodeURIComponent(location.href)]);data.push(["parentId",encodeURIComponent(settings.site.parentId)]);data.push(["scriptId",encodeURIComponent(settings.site.scriptId)]);if(title)data.push(["title",encodeURIComponent(title.substring(0,100))]);if(description)data.push(["description",encodeURIComponent(description.substring(0,100))]);var carbonMetadata=win["carbonMetadata"];if(carbonMetadata){data.push(["cm",encodeURIComponent(JSON.stringify(carbonMetadata))]);}
+addCCMeta(data);if(data.length)ccao.sendMessage("page-metadata",data,true);}
+var refresh=function(settings){scriptLoad(settings);getPageMetadata(settings);};var addRefresh=function(){win.ccRefresh=win.ccRefresh||[];win.ccRefresh.push([0,refresh]);};win.cca&&win.cca.notifyCCReady(win._ccScriptSettings);ccao.getSettings(function(settings){if(!settings.session.id)return;addRefresh();ccao.privacy=ccao.privacy||{};ccao.privacy.que=ccao.privacy.que||[];ccao.privacy.que.push(function(){scriptLoad(settings);});startHeartbeat(settings);getPerf(settings);getPageMetadata(settings);});})(window,document);;(function(win,doc){var ccao=win["cca"];ccao.privacy=ccao.privacy||{que:[]};var protocol='https:';var executionDelay=500,executionQueue=[],executionTimer;function processQueueMessage(){if(!executionTimer){var func=executionQueue.shift();if(func){func();executionTimer=setTimeout(function(){executionTimer=null;processQueueMessage();},executionDelay);}}}
+function queueForExecution(func){executionQueue.push(func);processQueueMessage();}
+function firePixel(endpoint){if(!ccao.privacy.law||typeof ccao.privacy.law!=="string"){ccao.privacy.law="unknown";}
+switch(ccao.privacy.law.toLowerCase()){case "gdpr":if(ccao.privacy.gdpr.Consent){var img=new Image(1,1);img.src=endpoint;}
+break;case "ccpa":if(ccao.privacy.ccpa.Consent){var img=new Image(1,1);img.src=endpoint;}
+break;case "na":var img=new Image(1,1);img.src=endpoint;break;case "optout":case "unknown":default:break;}}
+function pixelSync(endpoint){return function(){ccao.privacy=ccao.privacy||{};ccao.privacy.que=ccao.privacy.que||[];ccao.privacy.que.push(function(){firePixel(endpoint);});};}
+function fireScript(src,callback,id){if(!ccao.privacy.law||typeof ccao.privacy.law!=="string"){ccao.privacy.law="unknown";}
+switch(ccao.privacy.law.toLowerCase()){case "gdpr":if(ccao.privacy.gdpr.Consent){var syncScript=doc.createElement("script");syncScript.src=src;if(id){syncScript.id=id;}
+syncScript.type="text/javascript";syncScript.async=true;syncScript.style="display: none;";if(callback!==undefined)
+syncScript.addEventListener('load',callback);var pageScript=doc.getElementsByTagName('script')[0];pageScript.parentNode.insertBefore(syncScript,pageScript);}
+break;case "ccpa":if(ccao.privacy.ccpa.Consent){var syncScript=doc.createElement("script");syncScript.src=src;if(id){syncScript.id=id;}
+syncScript.type="text/javascript";syncScript.async=true;syncScript.style="display: none;";if(callback!==undefined)
+syncScript.addEventListener('load',callback);var pageScript=doc.getElementsByTagName('script')[0];pageScript.parentNode.insertBefore(syncScript,pageScript);}
+break;case "na":var syncScript=doc.createElement("script");syncScript.src=src;if(id){syncScript.id=id;}
+syncScript.type="text/javascript";syncScript.async=true;syncScript.style="display: none;";if(callback!==undefined)
+syncScript.addEventListener('load',callback);var pageScript=doc.getElementsByTagName('script')[0];pageScript.parentNode.insertBefore(syncScript,pageScript);break;case "optout":case "unknown":default:break;}}
+function scriptSync(src,callback,id){return function(){ccao.privacy=ccao.privacy||{};ccao.privacy.que=ccao.privacy.que||[];ccao.privacy.que.push(function(){fireScript(src,callback,id);});};}
+function bidswitchPixelSync(settings,partnerSettings,partnerTypeId){queueForExecution(pixelSync(protocol+'//x.bidswitch.net/sync?dsp_id='+partnerSettings.partnerId+'&user_id='+settings.user.id+'&expires=30'));}
+function getSyncUrlParams(settings,partnerTypeId){return '&id='+settings.site.scriptId+'&parentId='+settings.site.parentId+'&ccsid='+settings.session.id+'&ccuid='+settings.user.id+'&ccpt='+partnerTypeId+'&pvid='+settings.pageData.pvid+'&engid='+ccao.pageState.engagement.id+'&engcount='+ccao.pageState.engagement.count+'&engttl='+ccao.pageState.engagement.ttl;}
+function getSyncUrl(partnerSettings,jType){return protocol+'//loadeu.exelator.com/load/?p='+partnerSettings.partnerId+'&g='+partnerSettings.siteId+'&j='+jType;}
+function exelateScriptSync(settings,partnerSettings,partnerTypeId){var gdprString="";if(win._ccLauncherSettings.gdprApplies)
+if(win._ccLauncherSettings.consentString)
+gdprString+="&gdpr=1&gdpr_consent="+win._ccLauncherSettings.consentString;else
+gdprString+="&gdpr=0";if(partnerSettings.isPixel){queueForExecution(pixelSync(getSyncUrl(partnerSettings,"0")+gdprString+getSyncUrlParams(settings,partnerTypeId)));}else{queueForExecution(scriptSync(getSyncUrl(partnerSettings,"d")+gdprString+getSyncUrlParams(settings,partnerTypeId)));}}
+function nielsenPixelSync(settings,partnerSettings,partnerTypeId){var gdprString="";if(win._ccLauncherSettings.gdprApplies)
+if(win._ccLauncherSettings.consentString)
+gdprString+="&gdpr=1&gdpr_consent="+win._ccLauncherSettings.consentString;else
+gdprString+="&gdpr=0";queueForExecution(scriptSync(getSyncUrl(partnerSettings,"d")+gdprString+getSyncUrlParams(settings,partnerTypeId)));return true;}
+function eyeotaSyncScript(settings,partnerSettings,partnerTypeId,syncUserUrl){var gdprString="gdpr=";if(win._ccLauncherSettings.gdprApplies)
+gdprString+="1&gdpr_consent="+win._ccLauncherSettings.consentString;else
+gdprString+="0";queueForExecution(scriptSync(protocol+"//ps.eyeota.net/pixel?"+gdprString+"&pid="+partnerSettings.partnerId+"&t=ajs&sid="+partnerSettings.siteId+"&uid="+settings.user.id,pixelSync(syncUserUrl+'eyeota'+getSyncUrlParams(settings,partnerTypeId))()));}
+function lotameSyncScript(settings,partnerSettings,partnerTypeId,syncUserUrl){var redirectUrl="?"+encodeURIComponent(syncUserUrl+"lotame&puid=")+"$"+encodeURIComponent("{profile_id}"+getSyncUrlParams(settings,partnerTypeId));queueForExecution(pixelSync(protocol+"//sync.crwdcntrl.net/map/c="+partnerSettings.partnerId+"/tp=CKSO"+redirectUrl));}
+function bluekaiSyncScript(settings,partnerSettings,partnerTypeId,syncUserUrl){var redirectUrl="&redir="+encodeURIComponent(syncUserUrl+"bluekai"+getSyncUrlParams(settings,partnerTypeId)+"&")+"puid=$_BK_UUID";queueForExecution(pixelSync(protocol+"//tags.bluekai.com/site/"+partnerSettings.partnerId+"?limit=4&id="+settings.user.id+redirectUrl));}
+function semasioSyncScript(settings,partnerSettings,partnerTypeId,syncUserUrl){var smoRand=Math.random()*100000000000000000;var smoPUrl=escape(win!=parent?doc.referrer:doc.location.href);var smoIframe=win!=parent?'&nIframe=1':'';ccao.privacy.que.push(function(){if(!ccao.privacy.law||typeof ccao.privacy.law!=="string"){ccao.privacy.law="unknown";}
+switch(ccao.privacy.law.toLowerCase()){case "gdpr":if(ccao.privacy.gdpr.Consent){queueForExecution(pixelSync(protocol+"//uip.semasio.net/"+partnerSettings.partnerId+"/info?_referrer="+smoPUrl+"&sType=view&gdpr=1&gdpr_consent="+ccao.privacy.gdpr.CS+"&nJs=1&_ignore="+smoRand+smoIframe))}
+break;case "ccpa":if(ccao.privacy.ccpa.Consent){queueForExecution(pixelSync(protocol+"//uip.semasio.net/"+partnerSettings.partnerId+"/info?_referrer="+smoPUrl+"&sType=view&gdpr=0&gdpr_consent=&nJs=1&_ignore="+smoRand+smoIframe))}
+break;case "na":queueForExecution(pixelSync(protocol+"//uip.semasio.net/"+partnerSettings.partnerId+"/info?_referrer="+smoPUrl+"&sType=view&gdpr=0&gdpr_consent=&nJs=1&_ignore="+smoRand+smoIframe))
+break;case "optout":case "unknown":default:break;}});}
+function shareThisSyncScript(settings,partnerSettings,partnerTypeId,syncUserUrl){ccao.privacy.que.push(function(){if(!ccao.privacy.law||typeof ccao.privacy.law!=="string"){ccao.privacy.law="unknown";}
+switch(ccao.privacy.law.toLowerCase()){case "gdpr":if(ccao.privacy.gdpr.Consent){queueForExecution(scriptSync(protocol+"//pd.sharethis.com/pd/carbon?gdpr_consent="+encodeURI(ccao.privacy.gdpr.CS),null,"stpd-carbon"))}else{}
+break;case "ccpa":break;case "na":queueForExecution(scriptSync(protocol+"//pd.sharethis.com/pd/carbon",null,"stpd-carbon"));break;case "optout":case "unknown":default:queueForExecution(scriptSync(protocol+"//pd.sharethis.com/pd/carbon",null,"stpd-carbon"));break;}});}
+function xandrPixelSync(settings,partnerSettings,partnerTypeId,syncUserUrl){var redirectUrl=encodeURIComponent(syncUserUrl+"xandr"+getSyncUrlParams(settings,partnerTypeId)+"&")+"puid=$UID";queueForExecution(pixelSync(protocol+"//secure.adnxs.com/getuid?"+redirectUrl));}
+function zeotapSyncScript(settings,partnerSettings,partnerTypeId,syncUserUrl){var gdprString="";if(win._ccLauncherSettings.gdprApplies){if(win._ccLauncherSettings.consentString)
+gdprString="&gdpr=1&gdpr_consent="+window.btoa(win._ccLauncherSettings.consentString);else
+gdprString="&gdpr=0";}
+queueForExecution(scriptSync(protocol+"//spl.zeotap.com/mapper.js?zdid="+partnerSettings.partnerId+"&eventType=map&env=mWeb&cluid="+settings.user.id+gdprString,pixelSync(syncUserUrl+'zeotap'+getSyncUrlParams(settings,partnerTypeId))()));}
+function magnitePixelSync(settings,partnerSettings,partnerTypeId,syncUserUrl){ccao.privacy.que.push(function(){if(!ccao.privacy.law||typeof ccao.privacy.law!=="string"){ccao.privacy.law="unknown";}
+switch(ccao.privacy.law.toLowerCase()){case "gdpr":if(ccao.privacy.gdpr.Consent){queueForExecution(pixelSync(protocol+"//token.rubiconproject.com/token?pid="+partnerSettings.partnerId+"&puid="+settings.user.id+"&gdpr=1&gdpr_consent="+ccao.privacy.gdpr.CS))}
+break;case "ccpa":if(ccao.privacy.ccpa.Consent){queueForExecution(pixelSync(protocol+"//token.rubiconproject.com/token?pid="+partnerSettings.partnerId+"&puid="+settings.user.id+"&gdpr=0"))}
+break;case "na":queueForExecution(pixelSync(protocol+"//token.rubiconproject.com/token?pid="+partnerSettings.partnerId+"&puid="+settings.user.id+"&gdpr=0"))
+break;case "optout":case "unknown":default:break;}});}
+function cmiPixelSync(settings,partnerSettings,partnerTypeId,syncUserUrl){queueForExecution(pixelSync(protocol+"//global.ib-ibi.com/image.sbix?go=80000&pid=800&xid="+settings.user.id));}
+function prepareSync(partnerFunction,settings,partnerSetting,partnerTypeId,syncUserUrl){var response={"id":partnerSetting.id,"executed":false};response.execute=function(){if(!response.executed){response.executed=true;return partnerFunction(settings,partnerSetting,partnerTypeId,syncUserUrl);}
+return false;};return response;}
+function getSyncQueue(settings,syncUserUrl){var syncQueue=[];var partnerSyncs=settings.syncs.partnerSyncs;if(partnerSyncs.exelate&&partnerSyncs.exelate.active){syncQueue.push(new prepareSync(exelateScriptSync,settings,partnerSyncs.exelate,partnerSyncs.exelate.partnerTypeId));}
+if(partnerSyncs.blueKai&&partnerSyncs.blueKai.active){syncQueue.push(new prepareSync(bluekaiSyncScript,settings,partnerSyncs.blueKai,partnerSyncs.blueKai.partnerTypeId,syncUserUrl));}
+if(partnerSyncs.semasio&&partnerSyncs.semasio.active){syncQueue.push(new prepareSync(semasioSyncScript,settings,partnerSyncs.semasio,partnerSyncs.semasio.partnerTypeId,syncUserUrl));}
+if(partnerSyncs.shareThis&&partnerSyncs.shareThis.active){syncQueue.push(new prepareSync(shareThisSyncScript,settings,partnerSyncs.shareThis,partnerSyncs.shareThis.partnerTypeId,syncUserUrl));}
+if(partnerSyncs.lotame&&partnerSyncs.lotame.active){syncQueue.push(new prepareSync(lotameSyncScript,settings,partnerSyncs.lotame,partnerSyncs.lotame.partnerTypeId,syncUserUrl));}
+if(partnerSyncs.eyeota&&partnerSyncs.eyeota.active){syncQueue.push(new prepareSync(eyeotaSyncScript,settings,partnerSyncs.eyeota,partnerSyncs.eyeota.partnerTypeId,syncUserUrl));}
+if(partnerSyncs.bidswitch&&partnerSyncs.bidswitch.active){syncQueue.push(new prepareSync(bidswitchPixelSync,settings,settings.syncs.partnerSyncs.bidswitch,partnerSyncs.bidswitch.partnerTypeId));}
+if(partnerSyncs.xandr&&partnerSyncs.xandr.active){syncQueue.push(new prepareSync(xandrPixelSync,settings,partnerSyncs.xandr,partnerSyncs.xandr.partnerTypeId,syncUserUrl));}
+if(partnerSyncs.zeotap&&partnerSyncs.zeotap.active){syncQueue.push(new prepareSync(zeotapSyncScript,settings,partnerSyncs.zeotap,partnerSyncs.zeotap.partnerTypeId,syncUserUrl));}
+if(partnerSyncs.magnite&&partnerSyncs.magnite.active){syncQueue.push(new prepareSync(magnitePixelSync,settings,partnerSyncs.magnite,partnerSyncs.magnite.partnerTypeId,syncUserUrl))}
+if(partnerSyncs.cmi&&partnerSyncs.cmi.active){syncQueue.push(new prepareSync(cmiPixelSync,settings,partnerSyncs.cmi,partnerSyncs.cmi.partnerTypeId,syncUserUrl));}
+if(partnerSyncs.nielsen&&partnerSyncs.nielsen.active){syncQueue.push(new prepareSync(nielsenPixelSync,settings,partnerSyncs.nielsen,partnerSyncs.nielsen.partnerTypeId));}
+return syncQueue;}
+ccao.getSettings(function(settings){var syncQueue=getSyncQueue(settings,win._ccLauncherSettings.ingestion+"/event/record/user-sync?src="),syncQueueLen=syncQueue.length,needClear=false;for(var i=0;i<syncQueueLen;i++){for(var j=0;j<syncQueueLen;j++){if(syncQueue[j].id===i){needClear=needClear||syncQueue[j].execute();}}}
+for(var y=0;y<syncQueueLen;y++){needClear=needClear||syncQueue[y].execute();}
+if(needClear){ccao.clearFlagCookie&&ccao.clearFlagCookie();}});})(window,document);
