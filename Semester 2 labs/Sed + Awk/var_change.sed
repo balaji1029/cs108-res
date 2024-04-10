@@ -1,0 +1,1 @@
+s/\bprintf\s*(/pprint(/g
