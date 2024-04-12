@@ -1,0 +1,707 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Using_colors_in_LaTeX by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:54:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Using colors in LaTeX - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Using colors in LaTeX"><meta name="og:title" content="Using colors in LaTeX"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="Using_colors_in_LaTeX.html"><link rel="stylesheet" href="../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Using_colors_in_LaTeX.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Using_colors_in_LaTeX" hreflang="ja"><link rel="preload" href="../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="iv6ULHMvmGqc5A6Pg1Ilng=="><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="39MhqPM1-GwwFKotLi-fLonRdpqfBTnMOYbQ"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Using_colors_in_LaTeX&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Using_colors_in_LaTeX&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Using colors in LaTeX</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Named_colors_provided_by_the_xcolor_package"><span class="tocnumber">2</span> <span class="toctext">Named colors provided by the xcolor package</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Accessing_additional_named_colors"><span class="tocnumber">2.1</span> <span class="toctext">Accessing additional named colors</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Example_usage"><span class="tocnumber">2.2</span> <span class="toctext">Example usage</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Loading_and_using_named_colors_in_the_color_package"><span class="tocnumber">3</span> <span class="toctext">Loading and using named colors in the color package</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Drivers_and_color"><span class="tocnumber">4</span> <span class="toctext">Drivers and color</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Drivers_for_color_and_xcolor"><span class="tocnumber">4.1</span> <span class="toctext">Drivers for color and xcolor</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Automatic_color_driver_detection"><span class="tocnumber">4.2</span> <span class="toctext">Automatic color driver detection</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#More_advanced_example_using_the_dvisvgm_driver_to_create_an_SVG_file"><span class="tocnumber">4.3</span> <span class="toctext">More advanced example using the dvisvgm driver to create an SVG file</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Creating_your_own_colors"><span class="tocnumber">5</span> <span class="toctext">Creating your own colors</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#xcolor-only_color_models"><span class="tocnumber">5.1</span> <span class="toctext">xcolor-only color models</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Setting_the_page_background_color"><span class="tocnumber">6</span> <span class="toctext">Setting the page background color</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Additional_color_packages_for_LuaLaTeX"><span class="tocnumber">7</span> <span class="toctext">Additional color packages for LuaLaTeX</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#The_luacolor_package"><span class="tocnumber">7.1</span> <span class="toctext">The luacolor package</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#The_lua-ul_package"><span class="tocnumber">7.2</span> <span class="toctext">The lua-ul package</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Example:_luacolor"><span class="tocnumber">7.3</span> <span class="toctext">Example: luacolor</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Example:_lua-ul"><span class="tocnumber">7.4</span> <span class="toctext">Example: lua-ul</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#Further_reading"><span class="tocnumber">8</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>This article explains how to use color in your LaTeX document via the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/color?lang=en"><code>color</code></a> or <a rel="nofollow" class="external text" href="https://ctan.org/pkg/xcolor?lang=en"><code>xcolor</code></a> packages. Note that user-level documentation of the <code>color</code> package is contained in <a rel="nofollow" class="external text" href="http://mirrors.ctan.org/macros/latex/required/graphics/grfguide.pdf">The LaTeX standard graphics bundle</a>.
+</p><p>Both packages provide a common set of commands for color manipulation, but <code>xcolor</code> is more flexible and supports a larger number of color models, so is the recommended approach.
+</p><p>We’ll start with the following example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xcolor<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+This example shows some instances of using the <span class="k">\texttt</span><span class="nb">{</span>xcolor<span class="nb">}</span> package 
+to change the color of elements in <span class="k">\LaTeX</span>.
+
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\color</span><span class="nb">{</span>blue<span class="nb">}</span>
+<span class="k">\item</span> First item
+<span class="k">\item</span> Second item
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+<span class="k">\noindent</span>
+<span class="nb">{</span><span class="k">\color</span><span class="nb">{</span>red<span class="nb">}</span> <span class="k">\rule</span><span class="nb">{</span><span class="k">\linewidth</span><span class="nb">}{</span>0.5mm<span class="nb">}}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=A+basic+xcolor+package+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxcolor%7D%0A%5Cbegin%7Bdocument%7D%0AThis+example+shows+some+instances+of+using+the+%5Ctexttt%7Bxcolor%7D+package+%0Ato+change+the+color+of+elements+in+%5CLaTeX.%0A%0A%5Cbegin%7Bitemize%7D%0A%5Ccolor%7Bblue%7D%0A%5Citem+First+item%0A%5Citem+Second+item%0A%5Cend%7Bitemize%7D%0A%0A%5Cnoindent%0A%7B%5Ccolor%7Bred%7D+%5Crule%7B%5Clinewidth%7D%7B0.5mm%7D%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>xcolor</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Example use of xcolor package in LaTeX" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/2c/OLxcolor1brev2.png" decoding="async" width="537" height="136" />
+</p><p>In this example, the package <code>xcolor</code> is imported with
+</p>
+<div class="example"><div class="code"><div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>xcolor<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>then the command <code>\color{blue}</code> sets the <code>blue</code> color for the current block of text. In this case for the <code>itemize</code> environment.
+</p><p>The code to typeset the horizontal line created by <code>\rule{\linewidth}{0.5mm}</code> is contained in a group, delimited by { and }, in order to keep the effects of the <code>\color{red}</code> local to that group.
+</p>
+<h2><span class="mw-headline" id="Named_colors_provided_by_the_xcolor_package">Named colors provided by the <code>xcolor</code> package</span></h2>
+<p>As noted in the <a rel="nofollow" class="external text" href="http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf">xcolor package documentation</a>, the following named colors are always available without needing to load any package options:
+</p><p><img alt="list of colours in the xcolor package" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/b/b7/OLxcolorList.png" decoding="async" width="200" height="482" />
+</p>
+<h3><span class="mw-headline" id="Accessing_additional_named_colors">Accessing additional named colors</span></h3>
+<p>Additional named colors can be accessed via the following <code>xcolor</code> package options:
+</p>
+<ul>
+<li><code>dvipsnames</code>: loads 68 named colors (CMYK)</li>
+<li><code>svgnames</code>: loads  151 named colors (RGB)</li>
+<li><code>x11names</code>: loads  317 named colors (RGB)</li>
+</ul>
+<p>For example, if you write 
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[dvipsnames]</span><span class="nb">{</span>xcolor<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>you can access the following named colors:
+</p><p><img alt="colours loaded by dvipsnames option of xcolor package" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/e/ef/OLxcolorList2.png" decoding="async" width="800" height="457" />
+</p><p>Refer to the <a rel="nofollow" class="external text" href="http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf">xcolor package documentation</a> for tabulated lists of colors provided by the <code>svgnames</code> and <code>x11names</code> options.
+</p>
+<h3><span class="mw-headline" id="Example_usage">Example usage</span></h3>
+<p>The following example uses named colors loaded via the <code>dvipsnames</code> option.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[dvipsnames]</span><span class="nb">{</span>xcolor<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+This example shows how to use the <span class="k">\texttt</span><span class="nb">{</span>xcolor<span class="nb">}</span> package 
+to change the color of <span class="k">\LaTeX</span><span class="nb">{}</span> page elements.
+
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\color</span><span class="nb">{</span>ForestGreen<span class="nb">}</span>
+<span class="k">\item</span> First item
+<span class="k">\item</span> Second item
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+<span class="k">\noindent</span>
+<span class="nb">{</span><span class="k">\color</span><span class="nb">{</span>RubineRed<span class="nb">}</span> <span class="k">\rule</span><span class="nb">{</span><span class="k">\linewidth</span><span class="nb">}{</span>0.5mm<span class="nb">}}</span>
+
+The background color of text can also be <span class="k">\textcolor</span><span class="nb">{</span>red<span class="nb">}{</span>easily<span class="nb">}</span> set. For 
+instance, you can change use an <span class="k">\colorbox</span><span class="nb">{</span>BurntOrange<span class="nb">}{</span>orange background<span class="nb">}</span> and then continue typing.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Basic+xcolor+package+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bdvipsnames%5D%7Bxcolor%7D%0A%5Cbegin%7Bdocument%7D%0AThis+example+shows+how+to+use+the+%5Ctexttt%7Bxcolor%7D+package+%0Ato+change+the+color+of+%5CLaTeX%7B%7D+page+elements.%0A%0A%5Cbegin%7Bitemize%7D%0A%5Ccolor%7BForestGreen%7D%0A%5Citem+First+item%0A%5Citem+Second+item%0A%5Cend%7Bitemize%7D%0A%0A%5Cnoindent%0A%7B%5Ccolor%7BRubineRed%7D+%5Crule%7B%5Clinewidth%7D%7B0.5mm%7D%7D%0A%0AThe+background+color+of+text+can+also+be+%5Ctextcolor%7Bred%7D%7Beasily%7D+set.+For+%0Ainstance%2C+you+can+change+use+an+%5Ccolorbox%7BBurntOrange%7D%7Borange+background%7D+and+then+continue+typing.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code><strong>xcolor</strong></code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Demonstration of the xcolor package" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/54/OLV2xcolordemorev.png" decoding="async" title="Demonstration of the xcolor package" width="600" height="201" />
+</p><p>Two new commands are also used in the example:
+</p>
+<ul><li><code>\textcolor{red}{easily}</code>: Changes the color of inline text. This command takes two parameters, the color to use and the text whose color is changed. In the example the word <code>easily</code> is printed in <code>red</code>.</li></ul>
+<ul><li><code>\colorbox{BurntOrange}{orange background}</code>: Changes the background color of the text passed in as the second argument. In the example above, the words <code>orange background</code> are typeset on a background color of <code>BurntOrange</code>.</li></ul>
+<h2><span class="mw-headline" id="Loading_and_using_named_colors_in_the_color_package">Loading and using named colors in the <code>color</code> package</span></h2>
+<p>You can also use the <code>color</code> package and load named colors via its <code>usenames</code> and <code>dvipsnames</code> package options:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[usenames,dvipsnames]</span><span class="nb">{</span>color<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>The following code uses the <code>color</code> package to apply the same named colors used in the previous <code>xcolor</code> package example.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[usenames,dvipsnames]</span><span class="nb">{</span>color<span class="nb">}</span> <span class="c">%using the color package, not xcolor</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+This example shows how to use the <span class="k">\texttt</span><span class="nb">{</span><span class="k">\bfseries</span> color<span class="nb">}</span> package 
+to change the color of <span class="k">\LaTeX</span><span class="nb">{}</span> page elements.
+
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\color</span><span class="nb">{</span>ForestGreen<span class="nb">}</span>
+<span class="k">\item</span> First item
+<span class="k">\item</span> Second item
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+<span class="k">\noindent</span>
+<span class="nb">{</span><span class="k">\color</span><span class="nb">{</span>RubineRed<span class="nb">}</span> <span class="k">\rule</span><span class="nb">{</span><span class="k">\linewidth</span><span class="nb">}{</span>0.5mm<span class="nb">}}</span>
+
+The background color of text can also be <span class="k">\textcolor</span><span class="nb">{</span>red<span class="nb">}{</span>easily<span class="nb">}</span> set. For 
+instance, you can change use an <span class="k">\colorbox</span><span class="nb">{</span>BurntOrange<span class="nb">}{</span>orange background<span class="nb">}</span> and then continue typing.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Basic+color+package+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Busenames%2Cdvipsnames%5D%7Bcolor%7D+%25using+the+color+package%2C+not+xcolor%0A%5Cbegin%7Bdocument%7D%0AThis+example+shows+how+to+use+the+%5Ctexttt%7B%5Cbfseries+color%7D+package+%0Ato+change+the+color+of+%5CLaTeX%7B%7D+page+elements.%0A%0A%5Cbegin%7Bitemize%7D%0A%5Ccolor%7BForestGreen%7D%0A%5Citem+First+item%0A%5Citem+Second+item%0A%5Cend%7Bitemize%7D%0A%0A%5Cnoindent%0A%7B%5Ccolor%7BRubineRed%7D+%5Crule%7B%5Clinewidth%7D%7B0.5mm%7D%7D%0A%0AThe+background+color+of+text+can+also+be+%5Ctextcolor%7Bred%7D%7Beasily%7D+set.+For+%0Ainstance%2C+you+can+change+use+an+%5Ccolorbox%7BBurntOrange%7D%7Borange+background%7D+and+then+continue+typing.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code><strong>color</strong></code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the same output as the previous <code>xcolor</code> version:
+</p><p><img alt="Demonstration of the color package" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c5/OVLCOLORdemo3rev.png" decoding="async" title="Demonstration of the color package" width="600" height="202" />
+</p>
+<h2><span class="mw-headline" id="Drivers_and_color">Drivers and color</span></h2>
+<p>Use of color when typesetting text or math was not part of the original design of TeX; instead, use/application of color was delegated to external “drivers” which converted TeX’s original output file format (DVI) into PostScript or PDF. In order for color to work, driver-specific instructions had to be “injected” into TeX’s output by using a built-in TeX command called <code>\special</code> whose job is simply to allow code/data to pass through the typesetting process and become embedded into the output file. When the chosen driver (software) processed the typeset output it would detect the embedded code/data and act upon it to achieve whatever the user intended—such as the use of color. 
+</p><p>Times have changed, and PDF is now by far the most common output format used by TeX engines, long supplanting the use of legacy DVI drivers and creation of PostScript. Users also have a greater choice of TeX engine to use for typesetting their LaTeX documents, most notably pdfTeX, XeTeX or LuaTeX/LuaHBTeX, so it is still important to take account of differences in those TeX engines—ensuring the correct mechanisms are used to insert color data (PDF instructions) into their PDF files. To support and accommodate the legacy DVI output format and the wider environment of TeX engines and workflows in use, you can, if required, configure the <code>color</code> or <code>xcolor</code> packages to use a particular “driver” so that LaTeX will generate color data using using the appropriate method.
+</p>
+<h3><span class="mw-headline" id="Drivers_for_color_and_xcolor">Drivers for <code>color</code> and <code>xcolor</code></span></h3>
+<p>The <code>color</code> package provides out-of-the-box support for the following driver options:
+</p>
+<ul><li><code>dvipdfmx</code>, <code>dvips</code>, <code>dvisvgm</code>, <code>luatex</code>, <code>pdftex</code> and <code>xetex</code></li></ul>
+<p>There are other options as described in the <a rel="nofollow" class="external text" href="https://mirror.ox.ac.uk/sites/ctan.org/macros/latex/required/graphics/grfguide.pdf"><code>color</code> package documentation</a>.
+</p><p>The <code>xcolor</code> package provides the following driver options:
+</p>
+<ul><li><code>dvips</code>, <code>xdvi</code>, <code>dvipdf</code>, <code>dvipdfm</code>, <code>dvipdfmx</code>, <code>luatex</code>, <code>pdftex</code>, <code>dvipsone</code>, <code>dviwindo</code>, <code>emtex</code>, <code>dviwin</code>, <code>oztex</code>, <code>textures</code>, <code>pctexps</code>, <code>pctexwin</code>, <code>pctexhp</code>, <code>pctex32</code>, <code>truetex</code>, <code>tcidvi</code>, <code>vtex</code> and <code>xetex</code>.</li></ul>
+<h3><span class="mw-headline" id="Automatic_color_driver_detection">Automatic color driver detection</span></h3>
+<p>When typesetting your document LaTeX reads a configuration file called <code>color.cfg</code> which contains code that can determine if you are running pdfTeX, XeTeX or LuaTeX and automatically loads the appropriate driver (<code>.def</code> file) for you, so you don’t <em>need</em> to specify the driver package option for those engines.
+</p>
+<h3><span class="mw-headline" id="More_advanced_example_using_the_dvisvgm_driver_to_create_an_SVG_file">More advanced example using the <code>dvisvgm</code> driver to create an SVG file</span></h3>
+<p>The following example uses the <code>color</code> package with options that load named colors and the <code>dvisvgm</code> driver to output color definitions/data using SVG code:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[dvisvgm, usenames, dvipsnames]</span><span class="nb">{</span>color<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>Specifically, the output file typeset by Overleaf is converted to SVG using a program called <a rel="nofollow" class="external text" href="https://dvisvgm.de/"><code>dvisvgm</code></a>, which is part of TeX Live and available on our servers. To run <code>dvisvgm</code>, after the page is typeset, we use a <a rel="nofollow" class="external text" href="Articles/How_to_use_latexmkrc_with_Overleaf.html"><code>latexmkrc</code> file</a> which is created when you open the following code in Overleaf:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[dvisvgm, usenames, dvipsnames]</span><span class="nb">{</span>color<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>Creating SVG graphics<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Overleaf<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\maketitle</span>
+Hello, <span class="nb">{</span><span class="k">\color</span><span class="nb">{</span>Apricot<span class="nb">}</span>in Apricot<span class="nb">}</span> and now in <span class="nb">{</span><span class="k">\color</span><span class="nb">{</span>DarkOrchid<span class="nb">}</span> DarkOrchid<span class="nb">}</span> but perhaps it might look nicer if we use <span class="nb">{</span><span class="k">\color</span><span class="nb">{</span>JungleGreen<span class="nb">}</span>JungleGreen<span class="nb">}</span>---or may not?
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=latex_dvipdf&amp;snip_name[]=main.tex&amp;snip[]=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bdvisvgm%2C+usenames%2C+dvipsnames%5D%7Bcolor%7D%0A%5Ctitle%7BCreating+SVG+graphics%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cmaketitle%0AHello%2C+%7B%5Ccolor%7BApricot%7Din+Apricot%7D+and+now+in+%7B%5Ccolor%7BDarkOrchid%7D+DarkOrchid%7D+but+perhaps+it+might+look+nicer+if+we+use+%7B%5Ccolor%7BJungleGreen%7DJungleGreen%7D---or+may+not%3F%0A%5Cend%7Bdocument%7D&amp;snip_name[]=latexmkrc&amp;snip[]=END+%7B%0Asystem%28%22dvisvgm+-n+-o+mygraphic.svg+.%2Foutput.dvi%22%29%0A%7D&amp;main_document=main.tex"><i class="fa fa-share"></i> Open this example to create an SVG file</a>
+</p><p>Once Overleaf has finished compiling you can access the SVG graphic, called <code>mygraphic.svg</code>, by selecting <code>Logs and outputs</code> and choosing the <code>Other logs and files</code> dropdown list:
+</p><p><img alt="Accessing a generated file on Overleaf" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/45/AccessTheSVG2.png" decoding="async" width="600" height="366" />
+</p>
+<h2><span class="mw-headline" id="Creating_your_own_colors">Creating your own colors</span></h2>
+<p>It is possible to define your own colors, the manner in which the color is defined depends on the preferred color model. The following example uses 4 color models.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[dvipsnames]</span><span class="nb">{</span>xcolor<span class="nb">}</span>
+
+<span class="k">\definecolor</span><span class="nb">{</span>mypink1<span class="nb">}{</span>rgb<span class="nb">}{</span>0.858, 0.188, 0.478<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>mypink2<span class="nb">}{</span>RGB<span class="nb">}{</span>219, 48, 122<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>mypink3<span class="nb">}{</span>cmyk<span class="nb">}{</span>0, 0.7808, 0.4429, 0.1412<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>mygray<span class="nb">}{</span>gray<span class="nb">}{</span>0.6<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+User-defined colors with different color models:
+
+<span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\textcolor</span><span class="nb">{</span>mypink1<span class="nb">}{</span>Pink with rgb<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\textcolor</span><span class="nb">{</span>mypink2<span class="nb">}{</span>Pink with RGB<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\textcolor</span><span class="nb">{</span>mypink3<span class="nb">}{</span>Pink with cmyk<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\textcolor</span><span class="nb">{</span>mygray<span class="nb">}{</span>Gray with gray<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Example+of+user-defined+colours&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bdvipsnames%5D%7Bxcolor%7D%0A%0A%5Cdefinecolor%7Bmypink1%7D%7Brgb%7D%7B0.858%2C+0.188%2C+0.478%7D%0A%5Cdefinecolor%7Bmypink2%7D%7BRGB%7D%7B219%2C+48%2C+122%7D%0A%5Cdefinecolor%7Bmypink3%7D%7Bcmyk%7D%7B0%2C+0.7808%2C+0.4429%2C+0.1412%7D%0A%5Cdefinecolor%7Bmygray%7D%7Bgray%7D%7B0.6%7D%0A%0A%5Cbegin%7Bdocument%7D%0AUser-defined+colors+with+different+color+models%3A%0A%0A%5Cbegin%7Benumerate%7D%0A%5Citem+%5Ctextcolor%7Bmypink1%7D%7BPink+with+rgb%7D%0A%5Citem+%5Ctextcolor%7Bmypink2%7D%7BPink+with+RGB%7D%0A%5Citem+%5Ctextcolor%7Bmypink3%7D%7BPink+with+cmyk%7D%0A%5Citem+%5Ctextcolor%7Bmygray%7D%7BGray+with+gray%7D%0A%5Cend%7Benumerate%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="LaTeX example creating user-defined colours" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/0/0e/UserdefineColors.png" decoding="async" width="456" height="211" />
+</p><p>The command <code>\definecolor</code> takes three parameters: the name of the new color, the model, and the color definition. Roughly speaking, each number represent how much of each color you add to the mix that makes up the final color.
+</p>
+<ul><li><code><strong>rgb</strong></code>: Red, Green, Blue. Three comma-separated values between 0 and 1 define the components of the color.</li>
+<li><code><strong>RGB</strong></code>: The same as <code>rgb</code>, but the numbers are integers between 0 and 255.</li>
+<li><code><strong>cmyk</strong></code>: Cyan, Magenta, Yellow and blacK. Comma-separated list of four numbers between 0 and 1 that determine the color according to the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/CMYK_color_model">subtractive CMYK model</a> used by commercial printers.</li>
+<li><code><strong>gray</strong></code>: Grey scale. A single number between 0 and 1.</li></ul>
+<p>In the example, <code>mypink1</code>, <code>mypink2</code> and <code>mypink3</code> define the same color but for different models. You can actually see that the one defined by <code>cmyk</code> is slightly different.
+</p><p>Colors defined by either model can later be used within your document not only to set the color of the text, but for any other element that takes a color as parameter, for instance <a href="Tables%23Colouring_a_table_.28cells.2C_rows.2C_columns_and_lines.html" title="Tables">tables</a> (you must add the <code>table</code> option to <code>xcolor</code>), <a href="TikZ_package.html" title="TikZ package">graphic elements created with TikZ</a>, <a href="Pgfplots_package.html" title="Pgfplots package">plots</a>, <a href="Multiple_columns%23Inserting_vertical_rulers.html" title="Multiple columns">vertical rulers in multicolumn documents</a> and <a href="Code_listing%23Code_styles_and_colours.html" title="Code listing">code listings</a>.
+</p>
+<h3><span class="mw-headline" id="xcolor-only_color_models">xcolor-only color models</span></h3>
+<p>The <code>xcolor</code> package provides additional commands which provide support for more color models and friendly color mixing, as demonstrated in the following example: 
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[dvipsnames]</span><span class="nb">{</span>xcolor<span class="nb">}</span>
+<span class="k">\colorlet</span><span class="nb">{</span>LightRubineRed<span class="nb">}{</span>RubineRed!70<span class="nb">}</span>
+<span class="k">\colorlet</span><span class="nb">{</span>Mycolor1<span class="nb">}{</span>green!10!orange<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>Mycolor2<span class="nb">}{</span>HTML<span class="nb">}{</span>00F9DE<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+This document presents several examples showing how to use the <span class="k">\texttt</span><span class="nb">{</span>xcolor<span class="nb">}</span> package 
+to change the color of <span class="k">\LaTeX</span><span class="nb">{}</span> page elements.
+
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\textcolor</span><span class="nb">{</span>Mycolor1<span class="nb">}{</span>First item<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\textcolor</span><span class="nb">{</span>Mycolor2<span class="nb">}{</span>Second item<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+<span class="k">\noindent</span>
+<span class="nb">{</span><span class="k">\color</span><span class="nb">{</span>LightRubineRed<span class="nb">}</span> <span class="k">\rule</span><span class="nb">{</span><span class="k">\linewidth</span><span class="nb">}{</span>1mm<span class="nb">}}</span>
+
+<span class="k">\noindent</span>
+<span class="nb">{</span><span class="k">\color</span><span class="nb">{</span>RubineRed<span class="nb">}</span> <span class="k">\rule</span><span class="nb">{</span><span class="k">\linewidth</span><span class="nb">}{</span>1mm<span class="nb">}}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Custom+colours+with+xcolor&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bdvipsnames%5D%7Bxcolor%7D%0A%5Ccolorlet%7BLightRubineRed%7D%7BRubineRed%2170%7D%0A%5Ccolorlet%7BMycolor1%7D%7Bgreen%2110%21orange%7D%0A%5Cdefinecolor%7BMycolor2%7D%7BHTML%7D%7B00F9DE%7D%0A%5Cbegin%7Bdocument%7D%0AThis+document+presents+several+examples+showing+how+to+use+the+%5Ctexttt%7Bxcolor%7D+package+%0Ato+change+the+color+of+%5CLaTeX%7B%7D+page+elements.%0A%0A%5Cbegin%7Bitemize%7D%0A%5Citem+%5Ctextcolor%7BMycolor1%7D%7BFirst+item%7D%0A%5Citem+%5Ctextcolor%7BMycolor2%7D%7BSecond+item%7D%0A%5Cend%7Bitemize%7D%0A%0A%5Cnoindent%0A%7B%5Ccolor%7BLightRubineRed%7D+%5Crule%7B%5Clinewidth%7D%7B1mm%7D%7D%0A%0A%5Cnoindent%0A%7B%5Ccolor%7BRubineRed%7D+%5Crule%7B%5Clinewidth%7D%7B1mm%7D%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Custom colours produced by the xcolor package" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/37/XcolorCustomColors2.png" decoding="async" width="600" height="173" />
+</p><p>Three new colors are defined in this example, each one in a different manner.
+</p>
+<ul><li><code>\colorlet{LightRubineRed}{RubineRed!70}</code>: A new color named <code>LightRubineRed</code> is created, this color has 70% the intensity of the original <code>RubineRed</code> color. You can think of it as a mixture of 70% RubineRed and 30% white. Defining colors like this lets you derive different tints of a main color—common practice in corporate branding. In the example, you can see the original <code>RubineRed</code> and the new <code>LightRubineRed</code> used in two consecutive horizontal rules.</li>
+<li><code>\colorlet{Mycolor1}{green!10!orange}</code>: A color named <code>Mycolor1</code> is created with 10% green and 90% orange.</li>
+<li><code>\definecolor{Mycolor2}{HTML}{00F9DE}</code>: The color <code>Mycolor2</code> is created using the <code>HTML</code> model. colors in this model must be created with 6 hexadecimal digits, the characters A, B,C, D, E and F must be in upper-case.</li></ul>
+<p>The color models that only <code>xcolor</code> supports are: 
+</p>
+<ul><li><code>cmy</code>: cyan, magenta, yellow</li>
+<li><code>hsb</code>: hue, saturation, brightness</li>
+<li><code>HTML</code>: RRGGBB</li>
+<li><code>Gray</code>: Grayscale, a number between 1 and 15.</li>
+<li><code>wave</code>: Wavelength, a number between 363 and 814. The number represents the wavelength of light, in nanometres (nm)</li></ul>
+<h2><span class="mw-headline" id="Setting_the_page_background_color">Setting the page background color</span></h2>
+<p>The background color of the entire page can be easily changed with <code>\pagecolor</code>. The following code demonstrates this, using the text of an earlier example::
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[dvipsnames]</span><span class="nb">{</span>xcolor<span class="nb">}</span>
+<span class="k">\colorlet</span><span class="nb">{</span>LightRubineRed<span class="nb">}{</span>RubineRed!70<span class="nb">}</span>
+<span class="k">\colorlet</span><span class="nb">{</span>Mycolor1<span class="nb">}{</span>green!10!orange<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>Mycolor2<span class="nb">}{</span>HTML<span class="nb">}{</span>00F9DE<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\pagecolor</span><span class="nb">{</span>black<span class="nb">}</span>
+<span class="k">\color</span><span class="nb">{</span>white<span class="nb">}</span><span class="c">% set the default colour to white</span>
+This document presents several examples showing how to use the <span class="k">\texttt</span><span class="nb">{</span>xcolor<span class="nb">}</span> package 
+to change the color of <span class="k">\LaTeX</span><span class="nb">{}</span> page elements.
+
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\textcolor</span><span class="nb">{</span>Mycolor1<span class="nb">}{</span>First item<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\textcolor</span><span class="nb">{</span>Mycolor2<span class="nb">}{</span>Second item<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+<span class="k">\noindent</span>
+<span class="nb">{</span><span class="k">\color</span><span class="nb">{</span>LightRubineRed<span class="nb">}</span> <span class="k">\rule</span><span class="nb">{</span><span class="k">\linewidth</span><span class="nb">}{</span>1mm<span class="nb">}}</span>
+
+<span class="k">\noindent</span>
+<span class="nb">{</span><span class="k">\color</span><span class="nb">{</span>RubineRed<span class="nb">}</span> <span class="k">\rule</span><span class="nb">{</span><span class="k">\linewidth</span><span class="nb">}{</span>1mm<span class="nb">}}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Custom+colors+with+xcolor&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bdvipsnames%5D%7Bxcolor%7D%0A%5Ccolorlet%7BLightRubineRed%7D%7BRubineRed%2170%7D%0A%5Ccolorlet%7BMycolor1%7D%7Bgreen%2110%21orange%7D%0A%5Cdefinecolor%7BMycolor2%7D%7BHTML%7D%7B00F9DE%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cpagecolor%7Bblack%7D%0A%5Ccolor%7Bwhite%7D%25+set+the+default+colour+to+white%0AThis+document+presents+several+examples+showing+how+to+use+the+%5Ctexttt%7Bxcolor%7D+package+%0Ato+change+the+color+of+%5CLaTeX%7B%7D+page+elements.%0A%0A%5Cbegin%7Bitemize%7D%0A%5Citem+%5Ctextcolor%7BMycolor1%7D%7BFirst+item%7D%0A%5Citem+%5Ctextcolor%7BMycolor2%7D%7BSecond+item%7D%0A%5Cend%7Bitemize%7D%0A%0A%5Cnoindent%0A%7B%5Ccolor%7BLightRubineRed%7D+%5Crule%7B%5Clinewidth%7D%7B1mm%7D%7D%0A%0A%5Cnoindent%0A%7B%5Ccolor%7BRubineRed%7D+%5Crule%7B%5Clinewidth%7D%7B1mm%7D%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><a href="File_Pagecolorexample2.html" class="image"><img alt="Setting the page background color in LaTex" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c5/Pagecolorexample2.png" decoding="async" width="600" height="232" /></a>
+</p><p>The command <code>\pagecolor{black}</code> set the page color to <code>black</code>. This is a switch command, meaning it will take effect in the entire document unless another switch command is used to revert it. <code>\nopagecolor</code> will change the background back to normal.
+</p>
+<h2><span class="mw-headline" id="Additional_color_packages_for_LuaLaTeX">Additional color packages for LuaLaTeX</span></h2>
+<p>In addition to the standard <code>color</code> and <code>xcolor</code> packages, LuaLaTeX supports the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/luacolor?lang=en"><code>luacolor</code></a> and <a rel="nofollow" class="external text" href="https://ctan.org/pkg/lua-ul?lang=en"><code>lua-ul</code></a> packages—both are written specifically for use with LuaLaTeX and neither is compatible with pdfLaTeX or XeLaTeX.
+</p>
+<h3><span class="mw-headline" id="The_luacolor_package">The <code>luacolor</code> package</span></h3>
+<p>The <code>luacolor</code> package redefines some internals of the standard <code>color</code> package commands using techniques unique to LuaTeX-based TeX engines. 
+</p><p>Although <code>luacolor</code> automatically incorporates the <code>color</code> package, if you want to do either of the following:
+</p>
+<ul><li>use specific options of the <code>color</code> package, such as <code>\usepackage[usenames,dvipsnames]{color}</code>, or</li>
+<li>use the <code>xcolor</code> package</li></ul>
+<p>you need to load the <code>color</code> or <code>xcolor</code> package prior to <code>luacolor</code>. For example, you can load the <code>color</code> package using:
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[usenames,dvipsnames]</span><span class="nb">{</span>color<span class="nb">}</span> <span class="c">% example color package options, see the documentation</span>
+<span class="k">\usepackage</span><span class="nb">{</span>luacolor<span class="nb">}</span> <span class="c">% loaded after the color package</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>or load the <code>xcolor</code> package with:
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[dvipsnames]</span><span class="nb">{</span>xcolor<span class="nb">}</span> <span class="c">% example xcolor package option, see the documentation</span>
+<span class="k">\usepackage</span><span class="nb">{</span>luacolor<span class="nb">}</span> <span class="c">% loaded after the xcolor package</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>Consult the documentation of <a rel="nofollow" class="external text" href="http://mirrors.ctan.org/macros/latex/required/graphics/grfguide.pdf"><code>color</code></a> and <a rel="nofollow" class="external text" href="http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf"><code>xcolor</code></a> for details of package options.
+</p><p>By leveraging the capabilities of LuaLaTeX, <code>luacolor</code> enables more advanced applications of color; for example, colorizing individual glyphs within complex script languages or applying color to diacritical marks. <code>luacolor</code> also avoids kerning issues when applying color to single characters—see tex.stackexchange questions <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/questions/622544/kerning-when-coloring-single-letters">here</a> and <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/questions/567220/kerning-with-xcolor">here</a> for examples of that.
+</p>
+<h3><span class="mw-headline" id="The_lua-ul_package">The <code>lua-ul</code> package</span></h3>
+<p>This package is mentioned because it has color highlighting features. It applies the advanced capabilities of LuaTeX to provide underlining, strikethough, and highlighting using methods in which kerning is not affected, underlined text can use arbitrary commands, hyphenation works and ligatures are preserved.
+</p>
+<h3><span class="mw-headline" id="Example:_luacolor">Example: <code>luacolor</code></span></h3>
+<p>Here, we'll demonstrate using <code>luacolor</code> to colorize text typeset in Hindi and Arabic together with diacritics used on a Latin script (based on <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/questions/698933/color-breaks-diacritics-stacking">this example</a>). The following example uses the <a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">babel package</a> to configure LuaLaTeX to typeset Hindi and Arabic using fonts present on Overleaf. 
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+  
+<span class="c">% Prefer a small page width for the demo</span>
+<span class="k">\usepackage</span><span class="na">[paperwidth=15cm]</span><span class="nb">{</span>geometry<span class="nb">}</span>
+  
+<span class="c">% Use babel with Arabic, Hindi and English languages </span>
+<span class="c">% English is loaded last, making it the default language</span>
+<span class="k">\usepackage</span><span class="na">[hindi,english]</span><span class="nb">{</span>babel<span class="nb">}</span>
+<span class="k">\babelprovide</span><span class="na">[import=ar]</span><span class="nb">{</span>arabic<span class="nb">}</span>
+<span class="c">% Set Roman font for Arabic</span>
+<span class="k">\babelfont</span><span class="na">[arabic]</span><span class="nb">{</span>rm<span class="nb">}{</span>Scheherazade<span class="nb">}</span>
+  
+<span class="c">% Set Roman and sans serif fonts for English</span>
+<span class="k">\babelfont</span><span class="nb">{</span>rm<span class="nb">}{</span>Noto Serif<span class="nb">}</span>
+<span class="k">\babelfont</span><span class="nb">{</span>sf<span class="nb">}{</span>Noto Sans<span class="nb">}</span>
+  
+<span class="c">% Set up Roman and san serif fonts for Hindi</span>
+<span class="k">\babelfont</span><span class="na">[hindi]</span><span class="nb">{</span>rm<span class="nb">}</span>[Language=Default]<span class="nb">{</span>Noto Serif Devanagari<span class="nb">}</span>
+<span class="k">\babelfont</span><span class="na">[hindi]</span><span class="nb">{</span>sf<span class="nb">}</span>[Language=Default]<span class="nb">{</span>Noto Sans Devanagari<span class="nb">}</span>
+
+<span class="c">% Because we want to use the "dvipsnames" option to </span>
+<span class="c">% access additional named colors, we must load xcolor</span>
+<span class="c">% before luacolor (see the luacolor package documentation)</span>
+<span class="k">\usepackage</span><span class="na">[dvipsnames]</span><span class="nb">{</span>xcolor<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>luacolor<span class="nb">}</span>
+   
+<span class="c">% Create a convenience command to typeset Hindi</span>
+<span class="k">\newcommand\hinditext</span><span class="na">[1]</span><span class="nb">{</span><span class="k">\foreignlanguage</span><span class="nb">{</span>hindi<span class="nb">}{</span>#1<span class="nb">}}</span>
+
+<span class="c">% Create a convenience command to typeset Arabic</span>
+<span class="k">\newcommand\arabictext</span><span class="na">[1]</span><span class="nb">{</span><span class="k">\foreignlanguage</span><span class="nb">{</span>arabic<span class="nb">}{</span>#1<span class="nb">}}</span>
+
+<span class="k">\usepackage</span><span class="nb">{</span>hyperref<span class="nb">}</span>
+<span class="k">\hypersetup</span><span class="nb">{</span>
+colorlinks=true,
+urlcolor=cyan
+<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="c">% The Noto fonts benefit from a larger line spacing</span>
+<span class="k">\setlength</span><span class="nb">{</span><span class="k">\baselineskip</span><span class="nb">}{</span>14bp<span class="nb">}</span>
+  
+<span class="k">\section</span><span class="nb">{</span>Colorizing Hindi text<span class="nb">}</span>
+Google translates the Hindi word <span class="k">\textsf</span><span class="nb">{</span><span class="k">\hinditext</span><span class="nb">{</span>किंकर्तव्यविमूढ़<span class="nb">}}</span> as
+``bewildered''. By using the <span class="k">\texttt</span><span class="nb">{</span>luacolor<span class="nb">}</span> package it's possible to colorize glyphs within Hindi text; for example <span class="k">\hinditext</span><span class="nb">{</span>किंक<span class="k">\textcolor</span><span class="nb">{</span>purple<span class="nb">}{</span>र्तव्यव<span class="nb">}</span><span class="k">\textcolor</span><span class="nb">{</span>green<span class="nb">}{</span>िमूढ़<span class="nb">}}</span>. You can also add color to the whole word: <span class="k">\hinditext</span><span class="nb">{</span><span class="k">\textcolor</span><span class="nb">{</span>blue<span class="nb">}{</span>किंकर्तव्यविमूढ़<span class="nb">}}</span>.
+
+<span class="k">\section</span><span class="nb">{</span>Colorizing Arabic text<span class="nb">}</span>
+<span class="c">% Create a custom environment to</span>
+<span class="c">% typeset colored Arabic text</span>
+<span class="k">\newenvironment</span><span class="nb">{</span>colorarabic<span class="nb">}</span>
+<span class="nb">{</span><span class="c">% Typeset Arabic using a larger font </span>
+<span class="k">\fontsize</span><span class="nb">{</span>30<span class="nb">}{</span>30<span class="nb">}</span>
+<span class="c">% Set right-to-left paragraph and text directions</span>
+<span class="k">\pardir</span> TRT<span class="k">\textdir</span> TRT<span class="nb">}</span>
+<span class="nb">{}</span>
+
+Here is some colorized Arabic text:  <span class="k">\begin</span><span class="nb">{</span>colorarabic<span class="nb">}</span>
+<span class="k">\textcolor</span><span class="nb">{</span>red<span class="nb">}{</span><span class="k">\arabictext</span><span class="nb">{</span>هَذَا<span class="nb">}}</span> <span class="k">\arabictext</span><span class="nb">{</span>نَصٌّ عَرَب<span class="nb">}</span><span class="k">\textcolor</span><span class="nb">{</span>green<span class="nb">}{</span><span class="k">\arabictext</span><span class="nb">{</span>ِ<span class="nb">}}</span><span class="k">\arabictext</span><span class="nb">{</span>ي<span class="nb">}</span><span class="k">\textcolor</span><span class="nb">{</span>blue<span class="nb">}{</span><span class="k">\arabictext</span><span class="nb">{</span>ٌّ<span class="nb">}}</span>
+<span class="k">\end</span><span class="nb">{</span>colorarabic<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>Colorizing diacritics<span class="nb">}</span>
+This example is based on <span class="k">\href</span><span class="nb">{</span>https://tex.stackexchange.com/questions/698933/color-breaks-diacritics-stacking<span class="nb">}{</span>code from tex.stackexchange<span class="nb">}</span>.
+
+<span class="k">\vspace</span><span class="nb">{</span>12pt<span class="nb">}</span>
+<span class="k">\bgroup</span>
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\emptydiacritic</span><span class="nb">}{</span><span class="k">\char</span>"034F<span class="nb">}</span>
+<span class="k">\fontsize</span><span class="nb">{</span>60<span class="nb">}{</span>60<span class="nb">}</span><span class="k">\selectfont</span>
+á̀̐<span class="nb">{</span><span class="k">\color</span><span class="nb">{</span>blue<span class="nb">}</span>a<span class="k">\emptydiacritic\color</span><span class="nb">{</span>green<span class="nb">}</span>́<span class="k">\color</span><span class="nb">{</span>red<span class="nb">}</span>̀<span class="k">\color</span><span class="nb">{</span>magenta<span class="nb">}</span>̐
+<span class="k">\egroup</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex
+&amp;snip_name=Demonstrating+the+luacolor+package
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A++%0A%25+Prefer+a+small+page+width+for+the+demo%0A%5Cusepackage%5Bpaperwidth%3D15cm%5D%7Bgeometry%7D%0A++%0A%25+Use+babel+with+Arabic%2C+Hindi+and+English+languages+%0A%25+English+is+loaded+last%2C+making+it+the+default+language%0A%5Cusepackage%5Bhindi%2Cenglish%5D%7Bbabel%7D%0A%5Cbabelprovide%5Bimport%3Dar%5D%7Barabic%7D%0A%25+Set+Roman+font+for+Arabic%0A%5Cbabelfont%5Barabic%5D%7Brm%7D%7BScheherazade%7D%0A++%0A%25+Set+Roman+and+sans+serif+fonts+for+English%0A%5Cbabelfont%7Brm%7D%7BNoto+Serif%7D%0A%5Cbabelfont%7Bsf%7D%7BNoto+Sans%7D%0A++%0A%25+Set+up+Roman+and+san+serif+fonts+for+Hindi%0A%5Cbabelfont%5Bhindi%5D%7Brm%7D%5BLanguage%3DDefault%5D%7BNoto+Serif+Devanagari%7D%0A%5Cbabelfont%5Bhindi%5D%7Bsf%7D%5BLanguage%3DDefault%5D%7BNoto+Sans+Devanagari%7D%0A%0A%25+Because+we+want+to+use+the+%22dvipsnames%22+option+to+%0A%25+access+additional+named+colors%2C+we+must+load+xcolor%0A%25+before+luacolor+%28see+the+luacolor+package+documentation%29%0A%5Cusepackage%5Bdvipsnames%5D%7Bxcolor%7D%0A%5Cusepackage%7Bluacolor%7D%0A+++%0A%25+Create+a+convenience+command+to+typeset+Hindi%0A%5Cnewcommand%5Chinditext%5B1%5D%7B%5Cforeignlanguage%7Bhindi%7D%7B%231%7D%7D%0A%0A%25+Create+a+convenience+command+to+typeset+Arabic%0A%5Cnewcommand%5Carabictext%5B1%5D%7B%5Cforeignlanguage%7Barabic%7D%7B%231%7D%7D%0A%0A%5Cusepackage%7Bhyperref%7D%0A%5Chypersetup%7B%0Acolorlinks%3Dtrue%2C%0Aurlcolor%3Dcyan%0A%7D%0A%5Cbegin%7Bdocument%7D%0A%25+The+Noto+fonts+benefit+from+a+larger+line+spacing%0A%5Csetlength%7B%5Cbaselineskip%7D%7B14bp%7D%0A++%0A%5Csection%7BColorizing+Hindi+text%7D%0AGoogle+translates+the+Hindi+word+%5Ctextsf%7B%5Chinditext%7B%E0%A4%95%E0%A4%BF%E0%A4%82%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%BF%E0%A4%AE%E0%A5%82%E0%A4%A2%E0%A4%BC%7D%7D+as%0A%60%60bewildered%27%27.+By+using+the+%5Ctexttt%7Bluacolor%7D+package+it%27s+possible+to+colorize+glyphs+within+Hindi+text%3B+for+example+%5Chinditext%7B%E0%A4%95%E0%A4%BF%E0%A4%82%E0%A4%95%5Ctextcolor%7Bpurple%7D%7B%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%7D%5Ctextcolor%7Bgreen%7D%7B%E0%A4%BF%E0%A4%AE%E0%A5%82%E0%A4%A2%E0%A4%BC%7D%7D.+You+can+also+add+color+to+the+whole+word%3A+%5Chinditext%7B%5Ctextcolor%7Bblue%7D%7B%E0%A4%95%E0%A4%BF%E0%A4%82%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%BF%E0%A4%AE%E0%A5%82%E0%A4%A2%E0%A4%BC%7D%7D.%0A%0A%5Csection%7BColorizing+Arabic+text%7D%0A%25+Create+a+custom+environment+to%0A%25+typeset+colored+Arabic+text%0A%5Cnewenvironment%7Bcolorarabic%7D%0A%7B%25+Typeset+Arabic+using+a+larger+font+%0A%5Cfontsize%7B30%7D%7B30%7D%0A%25+Set+right-to-left+paragraph+and+text+directions%0A%5Cpardir+TRT%5Ctextdir+TRT%7D%0A%7B%7D%0A%0AHere+is+some+colorized+Arabic+text%3A++%5Cbegin%7Bcolorarabic%7D%0A%5Ctextcolor%7Bred%7D%7B%5Carabictext%7B%D9%87%D9%8E%D8%B0%D9%8E%D8%A7%7D%7D+%5Carabictext%7B%D9%86%D9%8E%D8%B5%D9%8C%D9%91+%D8%B9%D9%8E%D8%B1%D9%8E%D8%A8%7D%5Ctextcolor%7Bgreen%7D%7B%5Carabictext%7B%D9%90%7D%7D%5Carabictext%7B%D9%8A%7D%5Ctextcolor%7Bblue%7D%7B%5Carabictext%7B%D9%8C%D9%91%7D%7D%0A%5Cend%7Bcolorarabic%7D%0A%5Csection%7BColorizing+diacritics%7D%0AThis+example+is+based+on+%5Chref%7Bhttps%3A%2F%2Ftex.stackexchange.com%2Fquestions%2F698933%2Fcolor-breaks-diacritics-stacking%7D%7Bcode+from+tex.stackexchange%7D.%0A%0A%5Cvspace%7B12pt%7D%0A%5Cbgroup%0A%5Cnewcommand%7B%5Cemptydiacritic%7D%7B%5Cchar%22034F%7D%0A%5Cfontsize%7B60%7D%7B60%7D%5Cselectfont%0A%C3%A1%CC%80%CC%90%7B%5Ccolor%7Bblue%7Da%5Cemptydiacritic%5Ccolor%7Bgreen%7D%CC%81%5Ccolor%7Bred%7D%CC%80%5Ccolor%7Bmagenta%7D%CC%90%0A%5Cegroup%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this luacolor example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:</p>
+<p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/lSxgItJnwIlY9exJfB6Xv/bb5128b39b54b9f7c7a67b1161e34c1c/luacolorexample.svg" alt="sample output using the luacolor package" width="400px" />
+</p>
+<h3><span class="mw-headline" id="Example:_lua-ul">Example: <code>lua-ul</code></span></h3>
+<p>This example demonstrates the following <code>lua-ul</code> package commands:
+</p>
+<ul><li><code>\highLight[<em>color</em>]{<em>text to highlight</em>}</code> which applies the (optional) <code><em>color</em></code> to <code><em>text to highlight</em></code>. Note the capital <strong><code>L</code></strong> in the spelling of <code>\high<strong>L</strong>ight</code> command!</li>
+<li><code>\LuaULSetHighLightColor{<em>default color</em>}</code>: this sets the <code><em>default color</em></code> used by the <code>\highLight</code> command when the optional <code>[<em>color</em>]</code> is not specified.</li></ul>
+<p>Note: the <code>luacolor</code> package must also be loaded when using the <code>\highLight</code> command provided by the <code>lua-ul</code> package.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="c">% Prefer a small page width for the demo</span>
+<span class="k">\usepackage</span><span class="na">[paperwidth=12cm]</span><span class="nb">{</span>geometry<span class="nb">}</span>
+  
+<span class="k">\usepackage</span><span class="na">[dvipsnames]</span><span class="nb">{</span>xcolor<span class="nb">}</span> <span class="c">% To access some named colors used with \highLight</span>
+<span class="k">\usepackage</span><span class="nb">{</span>luacolor<span class="nb">}</span> <span class="c">% Required to use the lua-ul \highLight command </span>
+<span class="k">\usepackage</span><span class="nb">{</span>lua-ul<span class="nb">}</span> 
+  
+<span class="k">\usepackage</span><span class="nb">{</span>blindtext<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="c">% Use the Apricot color to highlight the text  </span>
+<span class="k">\highLight</span><span class="na">[Apricot]</span><span class="nb">{</span><span class="k">\blindtext</span><span class="nb">}</span> 
+
+<span class="c">% Use \LuaULSetHighLightColor to set default colors for </span>
+<span class="c">% the \highLight command</span>
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+    <span class="k">\item</span> <span class="k">\LuaULSetHighLightColor</span><span class="nb">{</span>CornflowerBlue<span class="nb">}</span> <span class="k">\highLight</span><span class="nb">{</span><span class="k">\blindtext</span><span class="na">[1]</span><span class="nb">}</span>.
+    <span class="k">\item</span> <span class="k">\LuaULSetHighLightColor</span><span class="nb">{</span>Goldenrod<span class="nb">}</span><span class="k">\highLight</span><span class="nb">{{</span><span class="s">\(</span><span class="nb">y</span><span class="o">=</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="s">\)</span><span class="nb">}}</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex&amp;snip_name=lua-ul+package+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%25+Prefer+a+small+page+width+for+the+demo%0A%5Cusepackage%5Bpaperwidth%3D12cm%5D%7Bgeometry%7D%0A++%0A%5Cusepackage%5Bdvipsnames%5D%7Bxcolor%7D+%25+To+access+some+named+colors+used+with+%5ChighLight%0A%5Cusepackage%7Bluacolor%7D+%25+Required+to+use+the+lua-ul+%5ChighLight+command+%0A%5Cusepackage%7Blua-ul%7D+%0A++%0A%5Cusepackage%7Bblindtext%7D%0A%5Cbegin%7Bdocument%7D%0A%25+Use+the+Apricot+color+to+highlight+the+text++%0A%5ChighLight%5BApricot%5D%7B%5Cblindtext%7D+%0A%0A%25+Use+%5CLuaULSetHighLightColor+to+set+default+colors+for+%0A%25+the+%5ChighLight+command%0A%5Cbegin%7Bitemize%7D%0A++++%5Citem+%5CLuaULSetHighLightColor%7BCornflowerBlue%7D+%5ChighLight%7B%5Cblindtext%5B1%5D%7D.%0A++++%5Citem+%5CLuaULSetHighLightColor%7BGoldenrod%7D%5ChighLight%7B%7B%5C%28y%3Df%28x%29%5C%29%7D%7D%0A%5Cend%7Bitemize%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>lua-ul</code> example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Highlighting text with the lua-ul package" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/16/Lua-ul_example.png" decoding="async" width="410" height="676" />
+</p>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span></h2>
+<p>For more information see:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://mirrors.ctan.org/macros/latex/required/graphics/grfguide.pdf">The <b>color</b> package documentation</a> (or <a rel="nofollow" class="external text" href="https://texdoc.org/serve/color/5">access via <code>texdoc.org</code></a>)</li>
+<li><a rel="nofollow" class="external text" href="http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf">The <b>xcolor</b> package documentation</a> (or <a rel="nofollow" class="external text" href="https://texdoc.org/serve/xcolor/0">access via <code>texdoc.org</code></a>)</li>
+<li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in LaTeX</a></li>
+<li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with XeLaTeX</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="Operators.html" title="Operators">Operators</a></li>
+<li><a href="Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="French.html" title="French">French</a></li>
+<li><a href="German.html" title="German">German</a></li>
+<li><a href="Greek.html" title="Greek">Greek</a></li>
+<li><a href="Italian.html" title="Italian">Italian</a></li>
+<li><a href="Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="Korean.html" title="Korean">Korean</a></li>
+<li><a href="Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="Russian.html" title="Russian">Russian</a></li>
+<li><a href="Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="Indices.html" title="Indices">Indices</a></li>
+<li><a href="Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="Counters.html" title="Counters">Counters</a></li>
+<li><a href="Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="Tutorials.html">Tutorials</a></li><li><a href="Inserting_Images.html">How to insert images</a></li><li><a href="Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Using_colors_in_LaTeX.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Using_colors_in_LaTeX" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==" src="../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="iv6ULHMvmGqc5A6Pg1Ilng==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Using_colors_in_LaTeX by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:54:39 GMT -->
+</html>

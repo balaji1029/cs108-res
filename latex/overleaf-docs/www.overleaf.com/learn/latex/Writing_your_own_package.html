@@ -1,0 +1,423 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Writing_your_own_package by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:56:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Writing your own package - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Writing your own package"><meta name="og:title" content="Writing your own package"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="Writing_your_own_package.html"><link rel="stylesheet" href="../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Writing_your_own_package.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Writing_your_own_package" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Writing_your_own_package" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Writing_your_own_package" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Writing_your_own_package" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Writing_your_own_package" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Writing_your_own_package" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Writing_your_own_package" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Writing_your_own_package" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Writing_your_own_package" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Writing_your_own_package" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Writing_your_own_package" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Writing_your_own_package" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Writing_your_own_package" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Writing_your_own_package" hreflang="ja"><link rel="preload" href="../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="Z3DOf4wl+wWPU0p/aIWHGA=="><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="p9YxcVbj-4cYwSbyKyvQtyjTXO7P9fTFosj0"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Writing_your_own_package&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Writing_your_own_package&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Writing your own package</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><p>Sometimes the best option to use your own commands and macros in a document is to write a new package from scratch. This article explains the main structure of a new package.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#General_structure"><span class="tocnumber">2</span> <span class="toctext">General structure</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Identification"><span class="tocnumber">2.1</span> <span class="toctext">Identification</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Preliminary_declarations"><span class="tocnumber">2.2</span> <span class="toctext">Preliminary declarations</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Options"><span class="tocnumber">2.3</span> <span class="toctext">Options</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#More_declarations"><span class="tocnumber">2.4</span> <span class="toctext">More declarations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Handling_errors"><span class="tocnumber">3</span> <span class="toctext">Handling errors</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Reference_guide"><span class="tocnumber">4</span> <span class="toctext">Reference guide</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Further_reading"><span class="tocnumber">5</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>The first thing to do before coding a new package is to determine whether you really need a new package or not. It's recommended to <a rel="nofollow" class="external text" href="http://www.ctan.org/ctan-portal/search/">search on CTAN (Comprehensive <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">T<span style="text-transform:uppercase;vertical-align:-0.5ex;margin-left:-0.1667em;margin-right:-0.125em">e</span>X</span> Archive Network)</a> and see if someone already created something similar to what you need.
+</p><p>Another important thing to have in mind is <a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">the difference between packages and classes</a>. Making the wrong choice can affect the flexibility of the final product.
+</p>
+<h2><span class="mw-headline" id="General_structure">General structure</span></h2>
+<p>The structure of all package files can be roughly described in the next four parts:
+</p>
+<ul><li><i><b>Identification</b></i>. The file declares itself as a package written with the <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X<span style="margin-left:0.15em">2</span><span style="font-style:italic;vertical-align:-0.35ex;line-height:0">ε</span></span> syntax.</li>
+<li><i><b>Preliminary declarations</b></i>. Here the external packages needed are imported. Also, in this part of the file the commands and definitions needed by the declared options are coded.</li>
+<li><i><b>Options</b></i>. The package declares and processes the options.</li>
+<li><i><b>More declarations</b></i>. The main body of the package. Almost everything a package does is defined here.</li></ul>
+<p>In the next subsections a more detailed description of the  structure and a working example, <i>examplepackage.sty</i>, will be presented.
+</p>
+<h3><span class="mw-headline" id="Identification">Identification</span></h3>
+<p>There are two simple commands that all packages must have:
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\NeedsTeXFormat</span><span class="nb">{</span>LaTeX2e<span class="nb">}</span>
+<span class="k">\ProvidesPackage</span><span class="nb">{</span>examplepackage<span class="nb">}</span>[2014/08/24 Example LaTeX package]
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>The command <code>\NeedsTeXFormat{LaTeX2e}</code> sets the <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> version for the package to work. Additionally, a date can be added within brackets to specify the minimal release date required.
+</p><p>The command <code>ProvidesPackage{examplepackage}[...]</code> identifies this package as <i>examplepackage</i> and, inside the brackets, the release date and some additional information is included. The date should be in the form YYYY/MM/DD
+</p><p><a rel="nofollow" class="external text" href="https://www.sharelatex.com/project/new/template?zipUrl=/project/53f11ec1eceb82a67658cb02/download/zip&amp;templateName=PackageExample&amp;compiler=pdflatex"><i class="fa fa-share"></i>  Open an example of how to write a package in Overleaf</a>
+</p>
+<h3><span class="mw-headline" id="Preliminary_declarations">Preliminary declarations</span></h3>
+<p>Most of the packages extend and customize existing ones, and also need some external packages to work. Below, some more code is added to the sample package "examplepackage.sty".
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\NeedsTeXFormat</span><span class="nb">{</span>LaTeX2e<span class="nb">}</span>
+<span class="k">\ProvidesPackage</span><span class="nb">{</span>examplepackage<span class="nb">}</span>[2014/08/21 Example package]
+
+<span class="k">\RequirePackage</span><span class="nb">{</span>imakeidx<span class="nb">}</span>
+<span class="k">\RequirePackage</span><span class="nb">{</span>xstring<span class="nb">}</span>
+<span class="k">\RequirePackage</span><span class="nb">{</span>xcolor<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>greycolour<span class="nb">}{</span>HTML<span class="nb">}{</span>525252<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>sharelatexcolour<span class="nb">}{</span>HTML<span class="nb">}{</span>882B21<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>mybluecolour<span class="nb">}{</span>HTML<span class="nb">}{</span>394773<span class="nb">}</span>
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\wordcolour</span><span class="nb">}{</span>greycolour<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>The commands in this part either initialize some parameters that latter will be used to manage the options, or import external files.
+</p><p>The command <code>\RequirePackage</code> is very similar to the well-known <code>\usepackage</code>, adding optional parameters within brackets will also work. The only difference is that the <code>\usepackage</code> can not be used before <code>\documentclass</code> command. It's strongly recommended to use <code>\RequirePackage</code> when writing new packages or classes.
+</p><p><a rel="nofollow" class="external text" href="https://www.sharelatex.com/project/new/template?zipUrl=/project/53f11ec1eceb82a67658cb02/download/zip&amp;templateName=PackageExample&amp;compiler=pdflatex"><i class="fa fa-share"></i>  Open an example of how to write a package in Overleaf</a>
+</p>
+<h3><span class="mw-headline" id="Options">Options</span></h3>
+<p>To allow some flexibility in the packages a few additional options are very useful. The next part in the file "examplepackage.sty" handles the parameters passed to the package-importing statement.
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\NeedsTeXFormat</span><span class="nb">{</span>LaTeX2e<span class="nb">}</span>
+<span class="k">\ProvidesPackage</span><span class="nb">{</span>examplepackage<span class="nb">}</span>[2014/08/21 Example package]
+
+<span class="k">\RequirePackage</span><span class="nb">{</span>imakeidx<span class="nb">}</span>
+<span class="k">\RequirePackage</span><span class="nb">{</span>xstring<span class="nb">}</span>
+<span class="k">\RequirePackage</span><span class="nb">{</span>xcolor<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>greycolour<span class="nb">}{</span>HTML<span class="nb">}{</span>525252<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>sharelatexcolour<span class="nb">}{</span>HTML<span class="nb">}{</span>882B21<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>mybluecolour<span class="nb">}{</span>HTML<span class="nb">}{</span>394773<span class="nb">}</span>
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\wordcolour</span><span class="nb">}{</span>greycolour<span class="nb">}</span>
+
+<span class="k">\DeclareOption</span><span class="nb">{</span>red<span class="nb">}{</span><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\wordcolour</span><span class="nb">}{</span>sharelatexcolour<span class="nb">}}</span>
+<span class="k">\DeclareOption</span><span class="nb">{</span>blue<span class="nb">}{</span><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\wordcolour</span><span class="nb">}{</span>mybluecolour<span class="nb">}}</span>
+<span class="k">\DeclareOption*</span><span class="nb">{</span><span class="k">\PackageWarning</span><span class="nb">{</span>examplepackage<span class="nb">}{</span>Unknown ‘<span class="k">\CurrentOption</span>’<span class="nb">}}</span>
+<span class="k">\ProcessOptions\relax</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>Below a description of the main commands that can handle the options passed to the package.
+</p><p>The command <code>\DeclareOption{}{}</code> handles a given option. It takes two parameters, the first one is the name of the option and the second one is the code to execute if the option is passed.
+</p><p>The command <code>\OptionNotUsed</code> will print a message in the compiler and the logs, the option won't be used. 
+</p><p>The command <code>\Declareoption*{}</code> handles every option not explicitly defined. It takes only one parameter, the code to execute when an unknown option is passed. In this case it will print a warning by means of the next command:
+</p><p><code>\PackageWarning{}{}</code>. See <a href="#Handling_errors">handling errors</a> for a description about what this command does.
+</p><p><code>\CurrentOption</code> stores the name of the package option being handled at a determined moment.
+</p><p>The command <code>\ProcessOptions\relax</code> executes the code fore each option and must be inserted after all the option-handling commands were typed. There's a starred version of this command that will execute the options in the exact order specified by the calling commands.
+</p><p>In the example, if the options <i>red</i> or <i>blue</i> are passed to the <code>\usepackage</code> command within the document, the command <code>\wordcolor</code> is redefined. Both colours and the default grey colour were defined in the <a href="#Preliminary_declaration">preliminary declarations</a> after importing the <i>xcolor</i> package.
+</p><p><a rel="nofollow" class="external text" href="https://www.sharelatex.com/project/new/template?zipUrl=/project/53f11ec1eceb82a67658cb02/download/zip&amp;templateName=PackageExample&amp;compiler=pdflatex"><i class="fa fa-share"></i>  Open an example of how to write a package in Overleaf</a>
+</p>
+<h3><span class="mw-headline" id="More_declarations">More declarations</span></h3>
+<p>In this part most of the commands will appear. In "examplepackage.sty". Below you can see the full package file.
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\NeedsTeXFormat</span><span class="nb">{</span>LaTeX2e<span class="nb">}</span>
+<span class="k">\ProvidesPackage</span><span class="nb">{</span>examplepackage<span class="nb">}</span>[2014/08/21 Example package]
+
+<span class="k">\RequirePackage</span><span class="nb">{</span>imakeidx<span class="nb">}</span>
+<span class="k">\RequirePackage</span><span class="nb">{</span>xstring<span class="nb">}</span>
+<span class="k">\RequirePackage</span><span class="nb">{</span>xcolor<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>greycolour<span class="nb">}{</span>HTML<span class="nb">}{</span>525252<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>sharelatexcolour<span class="nb">}{</span>HTML<span class="nb">}{</span>882B21<span class="nb">}</span>
+<span class="k">\definecolor</span><span class="nb">{</span>mybluecolour<span class="nb">}{</span>HTML<span class="nb">}{</span>394773<span class="nb">}</span>
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\wordcolour</span><span class="nb">}{</span>greycolour<span class="nb">}</span>
+
+<span class="k">\DeclareOption</span><span class="nb">{</span>red<span class="nb">}{</span><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\wordcolour</span><span class="nb">}{</span>sharelatexcolour<span class="nb">}}</span>
+<span class="k">\DeclareOption</span><span class="nb">{</span>blue<span class="nb">}{</span><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\wordcolour</span><span class="nb">}{</span>mybluecolour<span class="nb">}}</span>
+<span class="k">\DeclareOption*</span><span class="nb">{</span><span class="k">\PackageWarning</span><span class="nb">{</span>examplepackage<span class="nb">}{</span>Unknown ‘<span class="k">\CurrentOption</span>’<span class="nb">}}</span>
+<span class="k">\ProcessOptions\relax</span>
+
+<span class="c">%%Numbered environment</span>
+<span class="k">\newcounter</span><span class="nb">{</span>example<span class="nb">}</span>[section]
+<span class="k">\newenvironment</span><span class="nb">{</span>example<span class="nb">}</span>[1][]<span class="nb">{</span><span class="k">\refstepcounter</span><span class="nb">{</span>example<span class="nb">}</span><span class="k">\par\medskip</span>
+<span class="k">\noindent</span> <span class="k">\textbf</span><span class="nb">{</span>My~environment~<span class="k">\theexample</span>. #1<span class="nb">}</span> <span class="k">\rmfamily</span><span class="nb">}{</span><span class="k">\medskip</span><span class="nb">}</span>
+
+<span class="c">%%Important words are added to the index and printed in different colour</span>
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\important</span><span class="nb">}</span>[1]
+<span class="nb">{</span><span class="k">\IfSubStr</span><span class="nb">{</span>#1<span class="nb">}{</span>!<span class="nb">}</span>
+    <span class="nb">{</span><span class="k">\textcolor</span><span class="nb">{</span><span class="k">\wordcolour</span><span class="nb">}{</span><span class="k">\textbf</span><span class="nb">{</span><span class="k">\StrBefore</span><span class="nb">{</span>#1<span class="nb">}{</span>!<span class="nb">}</span>~<span class="k">\StrBehind</span><span class="nb">{</span>#1<span class="nb">}{</span>!<span class="nb">}}}</span><span class="k">\index</span><span class="nb">{</span>#1<span class="nb">}}</span>
+    <span class="nb">{</span><span class="k">\textcolor</span><span class="nb">{</span><span class="k">\wordcolour</span><span class="nb">}{</span><span class="k">\textbf</span><span class="nb">{</span>#1<span class="nb">}}</span><span class="k">\index</span><span class="nb">{</span>#1<span class="nb">}</span><span class="k">\kern</span>-1pt<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>This package defines the new environment <code>example</code>, and a new command <code>\important</code>, that prints the words in a special colour and adds them to the index.
+</p><p>To fully understand each command see the <a href="#Reference_guide">reference guide</a> and the links in the <a href="#Further_reading">further reading section</a>.
+</p><p>Below, a document that uses the package  <i>examplepackage.sty</i>.
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="nb">{</span>inputenc<span class="nb">}</span>
+
+<span class="k">\usepackage</span><span class="na">[red]</span><span class="nb">{</span>examplepackage<span class="nb">}</span>
+
+<span class="k">\makeindex</span>
+
+<span class="k">\title</span><span class="nb">{</span>Package Example<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Team Learn ShareLaTeX<span class="nb">}</span>
+<span class="k">\date</span><span class="nb">{</span> <span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\maketitle</span>
+
+<span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+In this document a new package is tested. This package allows special numbered
+environments
+
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+This text is inside a special environment, some boldface text is printed
+at the beginning and a new indentation is set.
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+
+Also, there's a special command for <span class="k">\important</span><span class="nb">{</span>important!words<span class="nb">}</span> that will be
+printed in a special <span class="k">\important</span><span class="nb">{</span>colour<span class="nb">}</span> depending on the parameter used in the
+<span class="k">\important</span><span class="nb">{</span>package<span class="nb">}</span> importation statement. Because it's <span class="k">\important</span><span class="nb">{</span>important<span class="nb">}</span>.
+
+<span class="k">\printindex</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<div class="output">
+<p><img alt="WrittingPackagesEx1.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/12/WrittingPackagesEx1.png" decoding="async" width="300" height="173" />
+</p>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>Notice the command
+</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[red]</span><span class="nb">{</span>examplepackage<span class="nb">}</span>
+</pre></div>
+<p><a rel="nofollow" class="external text" href="https://www.sharelatex.com/project/new/template?zipUrl=/project/53f11ec1eceb82a67658cb02/download/zip&amp;templateName=PackageExample&amp;compiler=pdflatex"><i class="fa fa-share"></i>  Open an example of how to write a package in Overleaf</a>
+</p>
+<h2><span class="mw-headline" id="Handling_errors">Handling errors</span></h2>
+<p>When it comes to develop new packages it's important to handle possible errors to let know the user that something went wrong. There are four main commands to report errors in the compiler.
+</p>
+<ul><li><code>\PackageError{<i>package-name</i>}{<i>error-text</i>}{<i>help-text</i>}</code>. Takes three parameters, each one inside braces:  the package name, the error text which is going to be displayed (the compilation process will be paused), and the help text that will be printed if the user press "h" when the compilation pauses because of the error.</li>
+<li><code>\PackageWarning{<i>package-name</i>}{<i>warning-text</i>}</code>. In this case the text is displayed but the compilation process won't stop. It will show the line number where the warning occurred.</li>
+<li><code>\PackageWarningNoLine{<i>package-name</i>}{<i>warning-text</i>}</code>. Works just like the previous command, but it won't show the line where the warning occurred.</li>
+<li><code>\PackageInfo{<i>package-name</i>}{<i>info-text</i>}</code>. In this case the information in the second parameter will only be printed in the transcript file, including the line number.</li></ul>
+<p><a rel="nofollow" class="external text" href="https://www.sharelatex.com/project/new/template?zipUrl=/project/53f11ec1eceb82a67658cb02/download/zip&amp;templateName=PackageExample&amp;compiler=pdflatex"><i class="fa fa-share"></i>  Open an example of how to write a package Overleaf</a>
+</p>
+<h2><span class="mw-headline" id="Reference_guide">Reference guide</span></h2>
+<p><b>List of commands commonly used in packages and classes</b>
+</p>
+<ul><li><code>\newcommand{<i>name</i>}{<i>definition</i>}</code>. Defines a <a href="Commands%23Defining_a_new_command.html" title="Commands">new command</a>, the first parameter is the name of the new command, the second parameter is what the command will do.</li>
+<li><code>\renewcommand{}{}</code>. The same as <code>\newcommand</code> but will overite an existing command.</li>
+<li><code>\providecommand{}{}</code>. Works just as <code>\newcommand</code> but if the command is already defined this one will be silently ignored.</li>
+<li><code>\CheckCommand{}{}</code>. The syntax is the same as <code>\newcommand</code>, but instead it will check whether the command exists and has the expected definition, <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> will show a warning if the command is now what <code>\CheckCommand</code> expected.</li>
+<li><code>\setlength{}{}</code>. Sets the length of the element passed as first parameter to the value written as second parameter.</li>
+<li><code>\mbox{}</code>. Creates a box that contains the elements written inside the braces.</li>
+<li><code>\fbox{}</code>. The same as <code>\mbox</code>, but a box is actually printed around the contents.</li></ul>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span></h2>
+<p>For more information see
+</p>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li>
+<li><a href="Commands.html" title="Commands">Commands</a> and <a href="Environments.html" title="Environments">Environments</a></li>
+<li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in LaTeX</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.latex-project.org/guides/clsguide.pdf"><span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X<span style="margin-left:0.15em">2</span><span style="font-style:italic;vertical-align:-0.35ex;line-height:0">ε</span></span> for package and package writers</a></li>
+<li><a rel="nofollow" class="external text" href="http://pgfplots.sourceforge.net/TeX-programming-notes.pdf">Notes on programming in tex</a></li>
+<li><a rel="nofollow" class="external text" href="https://tug.org/pracjourn/2005-4/hefferon/hefferon.pdf">Minutes in less than hours: Using <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> Resources</a></li>
+<li><a rel="nofollow" class="external text" href="http://ptgmedia.pearsoncmg.com/images/9780201362992/samplepages/0201362996.pdf">The <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> Companion. Second edition</a></li></ul>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="Operators.html" title="Operators">Operators</a></li>
+<li><a href="Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="French.html" title="French">French</a></li>
+<li><a href="German.html" title="German">German</a></li>
+<li><a href="Greek.html" title="Greek">Greek</a></li>
+<li><a href="Italian.html" title="Italian">Italian</a></li>
+<li><a href="Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="Korean.html" title="Korean">Korean</a></li>
+<li><a href="Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="Russian.html" title="Russian">Russian</a></li>
+<li><a href="Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="Indices.html" title="Indices">Indices</a></li>
+<li><a href="Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="Counters.html" title="Counters">Counters</a></li>
+<li><a href="Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="Tutorials.html">Tutorials</a></li><li><a href="Inserting_Images.html">How to insert images</a></li><li><a href="Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Writing_your_own_package.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Writing_your_own_package" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==" src="../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="Z3DOf4wl+wWPU0p/aIWHGA==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Writing_your_own_package by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:56:06 GMT -->
+</html>

@@ -1,0 +1,1115 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Headers_and_footers by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:54:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Headers and footers - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Headers and footers"><meta name="og:title" content="Headers and footers"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="Headers_and_footers.html"><link rel="stylesheet" href="../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Headers_and_footers.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Headers_and_footers" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Headers_and_footers" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Headers_and_footers" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Headers_and_footers" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Headers_and_footers" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Headers_and_footers" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Headers_and_footers" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Headers_and_footers" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Headers_and_footers" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Headers_and_footers" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Headers_and_footers" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Headers_and_footers" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Headers_and_footers" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Headers_and_footers" hreflang="ja"><link rel="preload" href="../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="mfOU85Id1inpNhXp2PAFjw=="><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="qdeS3lUH-KOflXiUYPCB5HnflWXjHinwFwLQ"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Headers_and_footers&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Headers_and_footers&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Headers and footers</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction_and_overview"><span class="tocnumber">1</span> <span class="toctext">Introduction and overview</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#LaTeX_document_classes"><span class="tocnumber">1.1</span> <span class="toctext">LaTeX document classes</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="#One-_or_two-sided_documents"><span class="tocnumber">1.1.1</span> <span class="toctext">One- or two-sided documents</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="#Default_⟨options⟩_of_document_classes"><span class="tocnumber">1.1.2</span> <span class="toctext">Default ⟨options⟩ of document classes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-5"><a href="#LaTeX_page_styles"><span class="tocnumber">1.2</span> <span class="toctext">LaTeX page styles</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Default_page_styles_of_standard_document_classes"><span class="tocnumber">1.2.1</span> <span class="toctext">Default page styles of standard document classes</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Setting_page_styles"><span class="tocnumber">1.2.2</span> <span class="toctext">Setting page styles</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#LaTeX_page_layout"><span class="tocnumber">1.3</span> <span class="toctext">LaTeX page layout</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Headers_and_footers_in_standard_LaTeX_document_classes_and_page_styles"><span class="tocnumber">1.4</span> <span class="toctext">Headers and footers in standard LaTeX document classes and page styles</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Default_article_class_headers_and_footers"><span class="tocnumber">1.4.1</span> <span class="toctext">Default article class headers and footers</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Default_report_class_headers_and_footers"><span class="tocnumber">1.4.2</span> <span class="toctext">Default report class headers and footers</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Default_book_class_headers_and_footers"><span class="tocnumber">1.4.3</span> <span class="toctext">Default book class headers and footers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="#Changing_headers_and_footers_for_“non_standard”_LaTeX_document_classes"><span class="tocnumber">1.5</span> <span class="toctext">Changing headers and footers for “non standard” LaTeX document classes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Using_the_fancyhdr_package"><span class="tocnumber">2</span> <span class="toctext">Using the fancyhdr package</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Structure_of_fancyhdr_headers_and_footers"><span class="tocnumber">2.1</span> <span class="toctext">Structure of fancyhdr headers and footers</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Introducing_the_commands"><span class="tocnumber">2.2</span> <span class="toctext">Introducing the commands</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#Commands_using_up_to_2_coordinates"><span class="tocnumber">2.2.1</span> <span class="toctext">Commands using up to 2 coordinates</span></a>
+<ul>
+<li class="toclevel-4 tocsection-18"><a href="#Double-sided_document_example"><span class="tocnumber">2.2.1.1</span> <span class="toctext">Double-sided document example</span></a>
+<ul>
+<li class="toclevel-5 tocsection-19"><a href="#Notes_on_the_commands_used"><span class="tocnumber">2.2.1.1.1</span> <span class="toctext">Notes on the commands used</span></a></li>
+</ul>
+</li>
+<li class="toclevel-4 tocsection-20"><a href="#One-sided_and_two-sided_documents"><span class="tocnumber">2.2.1.2</span> <span class="toctext">One-sided and two-sided documents</span></a>
+<ul>
+<li class="toclevel-5 tocsection-21"><a href="#Single-sided_document_examples"><span class="tocnumber">2.2.1.2.1</span> <span class="toctext">Single-sided document examples</span></a></li>
+</ul>
+</li>
+<li class="toclevel-4 tocsection-22"><a href="#Using_a_single_coordinate_in_a_two-sided_document:_omitting_E_and_O"><span class="tocnumber">2.2.1.3</span> <span class="toctext">Using a single coordinate in a two-sided document: omitting E and O</span></a>
+<ul>
+<li class="toclevel-5 tocsection-23"><a href="#Example"><span class="tocnumber">2.2.1.3.1</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-4 tocsection-24"><a href="#Using_a_single_coordinate_in_a_two-sided_document:_omitting_L,_C_and_R"><span class="tocnumber">2.2.1.4</span> <span class="toctext">Using a single coordinate in a two-sided document: omitting L, C and R</span></a>
+<ul>
+<li class="toclevel-5 tocsection-25"><a href="#Example_2"><span class="tocnumber">2.2.1.4.1</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-26"><a href="#\fancyhf:_using_up_to_3_coordinates"><span class="tocnumber">2.2.2</span> <span class="toctext">\fancyhf: using up to 3 coordinates</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-27"><a href="#Examples"><span class="tocnumber">2.3</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-3 tocsection-28"><a href="#Using_basic_rules_(lines)_in_headers_and_footers"><span class="tocnumber">2.3.1</span> <span class="toctext">Using basic rules (lines) in headers and footers</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="#Using_fancy_rules_in_headers"><span class="tocnumber">2.3.2</span> <span class="toctext">Using fancy rules in headers</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="#fancyhdr_warning:_\headheight_is_too_small"><span class="tocnumber">2.3.3</span> <span class="toctext">fancyhdr warning: \headheight is too small</span></a>
+<ul>
+<li class="toclevel-4 tocsection-31"><a href="#Notes_on_the_geometry_package"><span class="tocnumber">2.3.3.1</span> <span class="toctext">Notes on the geometry package</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-32"><a href="#Footers_containing_page_X_of_N"><span class="tocnumber">2.3.4</span> <span class="toctext">Footers containing page X of N</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="#Creating_completely_blank_pages:_no_headers_or_footers"><span class="tocnumber">2.3.5</span> <span class="toctext">Creating completely blank pages: no headers or footers</span></a>
+<ul>
+<li class="toclevel-4 tocsection-34"><a href="#Example_of_&quot;blank&quot;_pages_in_a_book_class_document"><span class="tocnumber">2.3.5.1</span> <span class="toctext">Example of "blank" pages in a book class document</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-35"><a href="#Changing_the_style_of_a_single_page"><span class="tocnumber">2.3.6</span> <span class="toctext">Changing the style of a single page</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="#Multi-line_headers_or_footers"><span class="tocnumber">2.3.7</span> <span class="toctext">Multi-line headers or footers</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction_and_overview">Introduction and overview</span></h2>
+<p>This article demonstrates how to modify document headers and footers using the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/fancyhdr?lang=en">fancyhdr package</a>.  Another option for customizing headers and footers, addressed in the companion article, <a href="Articles/How_does_LaTeX_typeset_headers_and_footers_.html" title="Articles/How does LaTeX typeset headers and footers?"><em>How does LaTeX typeset headers and footers?</em></a>, is to dig deeper into LaTeX code to define new page styles or redefine appropriate low-level commands.  
+</p><p>Here, we start with an overview of some basic LaTeX features which define default headers and footers used within a document:
+</p>
+<ul><li><a href="#Document_classes">document classes</a></li>
+<li><a href="#LaTeX_page_styles">LaTeX page styles</a></li></ul>
+<p>If you wish to skip the introductory material, jump to <a href="#Using_the_fancyhdr_package">the section on the <code>fancyhdr</code> package</a>. As noted, much more technical detail is contained in the companion article <a href="Articles/How_does_LaTeX_typeset_headers_and_footers_.html" title="Articles/How does LaTeX typeset headers and footers?"><em>How does LaTeX typeset headers and footers?</em></a> which explores and explains the low-level, mark-based, mechanisms used by TeX engines to create headers and footers—and why the <code>\mark</code> command is needed.
+</p>
+<h3><span class="mw-headline" id="LaTeX_document_classes">LaTeX document classes</span></h3>
+<p>Different types of LaTeX document are created using <em>document classes</em>; for example, LaTeX provides a number of standard classes:
+</p>
+<ul><li><code>book</code></li>
+<li><code>report</code></li>
+<li><code>article</code></li>
+<li><code>letter</code></li></ul>
+<p>which are used via the <code>\documentclass</code> command:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[⟨options⟩]</span><span class="nb">{</span>⟨class⟩<span class="nb">}</span>
+</pre></div></div></div>
+<p>where:
+</p>
+<ul><li><code>⟨class⟩</code> could be one of the standard types (<code>book</code>, <code>report</code>, <code>article</code>, <code>letter</code>) or one <a rel="nofollow" class="external text" href="https://www.ctan.org/topic/class">contributed by individuals and institutions</a>.</li>
+<li><code>⟨options⟩</code> are settings used to configure a particular instance of the document <code>⟨class⟩</code>. The available <code>⟨options⟩</code> depend on the <code>⟨class⟩</code> being used.</li></ul>
+<h4><span class="mw-headline" id="One-_or_two-sided_documents">One- or two-sided documents</span></h4>
+<p>If a LaTeX document class supports different layouts for left-facing pages (even page numbers) and right-facing pages (odd page numbers) the document’s headers and footers are usually different on left- and right-facing pages. Defaults for the standard document classes are: 
+</p>
+<ul><li><code>book</code>: two-sided</li>
+<li><code>article</code> and <code>report</code>: single-sided but can become two-sided by using the option <code>twoside</code>; for example:</li></ul>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[twoside]</span><span class="nb">{</span>article<span class="nb">}</span>
+</pre></div>
+</div></div>
+<p>or 
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[twoside]</span><span class="nb">{</span>report<span class="nb">}</span>
+</pre></div>
+</div></div>
+<h4><span id="Default_.E2.9F.A8options.E2.9F.A9_of_document_classes"></span><span class="mw-headline" id="Default_⟨options⟩_of_document_classes">Default <code>⟨options⟩</code> of document classes</span></h4>
+<p>LaTeX applies a set of default <code>⟨options⟩</code> to each of the standard document classes:
+</p>
+<ul><li><code>article</code>: default <code>⟨options⟩</code> are <code>letterpaper,10pt,oneside,onecolumn,final</code></li>
+<li><code>report</code>: default <code>⟨options⟩</code> are <code>letterpaper,10pt,oneside,onecolumn,final,openany</code></li>
+<li><code>book</code>: default <code>⟨options⟩</code> are <code>letterpaper,10pt,twoside,onecolumn,final,openright</code></li>
+<li><code>letter</code>: default <code>⟨options⟩</code> are <code>letterpaper,10pt,oneside,onecolumn,final</code></li></ul>
+<p>Document classes also provide commands which enable users to structure their documents into logical divisions such as parts, chapters, sections, subsections and so forth. As you might expect, the <code>book</code> class has a rich set of document structuring commands.
+</p>
+<h3><span class="mw-headline" id="LaTeX_page_styles">LaTeX page styles</span></h3>
+<p>In LaTeX, the default format of a document’s headers and footers are determined by the <em>page style</em> being used. Several predefined page styles are provided by LaTeX: 
+</p>
+<ul><li><code>empty</code>: no headers or footers on pages</li>
+<li><code>plain</code>: no page headers, footers consist of a centered page number</li>
+<li><code>headings</code>: no footers, headers contains class-specific information and page number</li>
+<li><code>myheadings</code>: no footers, headers contains page number and user-supplied information</li></ul>
+<h4><span class="mw-headline" id="Default_page_styles_of_standard_document_classes">Default page styles of standard document classes</span></h4>
+<p>Unless the user specifies otherwise, the standard document classes apply a default page style: 
+</p>
+<ul><li>the <code>article</code> and <code>report</code> classes use <code>plain</code></li>
+<li>the <code>book</code> class uses <code>headings</code></li></ul>
+<h4><span class="mw-headline" id="Setting_page_styles">Setting page styles</span></h4>
+<p>Core LaTeX provides two commands to change (set) the page style:
+</p>
+<ul><li><code>\pagestyle{⟨style⟩}</code>: sets the style of the current page, and all subsequent pages, to <code>⟨style⟩</code></li></ul>
+<ul><li><code>\thispagestyle{⟨style⟩}</code>: sets style of the current page only to <code>⟨style⟩</code></li></ul>
+<p>The style of page numbers is set with the command <code>\pagenumbering{⟨numberstyle⟩}</code>; for example, <code>\pagenumbering{roman}</code> typesets page numbers in lowercase Roman numerals: i, ii, iii...
+</p>
+<h3><span class="mw-headline" id="LaTeX_page_layout">LaTeX page layout</span></h3>
+<p>Because headers and footers form part of the overall page layout/design it can be helpful to understand a little more about LaTeX's model of page layout; the following Overleaf articles might be of interest:
+</p>
+<ul><li>for an introduction to LaTeX page layout, the Overleaf article <a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a> demonstrates how to use the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/geometry?lang=en"><strong><code>geometry</code></strong> package</a>;</li></ul>
+<ul><li>if you want more detail, we suggest the article <a href="Articles/A_visual_guide_to_LaTeX%e2%80%99s_page_layout_parameters.html" title="Articles/A visual guide to LaTeX’s page layout parameters">A visual guide to LaTeX’s page layout parameters</a>.</li></ul>
+<h3><span class="mw-headline" id="Headers_and_footers_in_standard_LaTeX_document_classes_and_page_styles">Headers and footers in standard LaTeX document classes and page styles</span></h3>
+<p>As noted, LaTeX provides several <a href="#LaTeX_page_styles">built-in page styles</a> used as defaults for the standard document classes. The following short examples demonstrate the default headers and footers produced by standard document classes using LaTeX's default <code>⟨options⟩</code> for each class.
+</p>
+<h4><span class="mw-headline" id="Default_article_class_headers_and_footers">Default <code>article</code> class headers and footers</span></h4>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="c">% Choose a conveniently small page size</span>
+<span class="k">\usepackage</span><span class="na">[paperheight=16cm,paperwidth=12cm,textwidth=10cm]</span><span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>lipsum<span class="nb">}</span><span class="c">% for some dummy text</span>
+<span class="k">\title</span><span class="nb">{</span>An article class example<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Overleaf<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\maketitle</span>
+
+<span class="k">\section</span><span class="nb">{</span>In the beginning...<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[2]</span>
+
+<span class="k">\section</span><span class="nb">{</span>Another section<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[1]</span>
+
+<span class="k">\section</span><span class="nb">{</span>Yet another<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[1]</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=An+article+class+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%25+Choose+a+conveniently+small+page+size%0A%5Cusepackage%5Bpaperheight%3D16cm%2Cpaperwidth%3D12cm%2Ctextwidth%3D10cm%5D%7Bgeometry%7D%0A%5Cusepackage%7Blipsum%7D%25+for+some+dummy+text%0A%5Ctitle%7BAn+article+class+example%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cmaketitle%0A%0A%5Csection%7BIn+the+beginning...%7D%0A%5Clipsum%5B2%5D%0A%0A%5Csection%7BAnother+section%7D%0A%5Clipsum%5B1%5D%0A%0A%5Csection%7BYet+another%7D%0A%5Clipsum%5B1%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <strong><code>article</code></strong> class example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt">  </p>
+<h4><span class="mw-headline" id="Default_report_class_headers_and_footers">Default <code>report</code> class headers and footers</span></h4>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>report<span class="nb">}</span>
+<span class="c">% Choose a conveniently small page size</span>
+<span class="k">\usepackage</span><span class="na">[paperheight=16cm,paperwidth=12cm,textwidth=10cm]</span><span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>lipsum<span class="nb">}</span><span class="c">% for some dummy text</span>
+<span class="k">\title</span><span class="nb">{</span>A report class example<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Overleaf<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\maketitle</span>
+<span class="k">\chapter</span><span class="nb">{</span>One<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>In the beginning...<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[2]</span>
+
+<span class="k">\section</span><span class="nb">{</span>Another section<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[1]</span>
+
+<span class="k">\section</span><span class="nb">{</span>Yet another<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[1]</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=A+report+class+example&amp;snip=%5Cdocumentclass%7Breport%7D%0A%25+Choose+a+conveniently+small+page+size%0A%5Cusepackage%5Bpaperheight%3D16cm%2Cpaperwidth%3D12cm%2Ctextwidth%3D10cm%5D%7Bgeometry%7D%0A%5Cusepackage%7Blipsum%7D%25+for+some+dummy+text%0A%5Ctitle%7BA+report+class+example%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cmaketitle%0A%5Cchapter%7BOne%7D%0A%5Csection%7BIn+the+beginning...%7D%0A%5Clipsum%5B2%5D%0A%0A%5Csection%7BAnother+section%7D%0A%5Clipsum%5B1%5D%0A%0A%5Csection%7BYet+another%7D%0A%5Clipsum%5B1%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <strong><code>report</code></strong> class example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt">  </p>
+<h4><span class="mw-headline" id="Default_book_class_headers_and_footers">Default <code>book</code> class headers and footers</span></h4>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>book<span class="nb">}</span>
+<span class="c">% Choose a conveniently small page size</span>
+<span class="k">\usepackage</span><span class="na">[paperheight=16cm,paperwidth=12cm,textwidth=10cm]</span><span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>lipsum<span class="nb">}</span><span class="c">% for some dummy text</span>
+<span class="k">\title</span><span class="nb">{</span>Memoirs of a <span class="k">\TeX</span><span class="nb">{}</span> user<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Overleaf<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\frontmatter</span>
+<span class="k">\maketitle</span>
+This is frontmatter which uses Roman numerals.
+
+<span class="k">\mainmatter</span>
+<span class="k">\chapter</span><span class="nb">{</span>Where do I start<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[4]</span>
+
+<span class="k">\section</span><span class="nb">{</span>In the beginning...<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[1]</span>
+
+<span class="k">\section</span><span class="nb">{</span>Yet another section<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[1]</span>
+
+<span class="k">\chapter</span><span class="nb">{</span>Things I remember<span class="nb">}</span>
+
+<span class="k">\section</span><span class="nb">{</span>Oh and a further section<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[1]</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=A+book+class+example&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%25+Choose+a+conveniently+small+page+size%0A%5Cusepackage%5Bpaperheight%3D16cm%2Cpaperwidth%3D12cm%2Ctextwidth%3D10cm%5D%7Bgeometry%7D%0A%5Cusepackage%7Blipsum%7D%25+for+some+dummy+text%0A%5Ctitle%7BMemoirs+of+a+%5CTeX%7B%7D+user%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cfrontmatter%0A%5Cmaketitle%0AThis+is+frontmatter+which+uses+Roman+numerals.%0A%0A%5Cmainmatter%0A%5Cchapter%7BWhere+do+I+start%7D%0A%5Clipsum%5B4%5D%0A%0A%5Csection%7BIn+the+beginning...%7D%0A%5Clipsum%5B1%5D%0A%0A%5Csection%7BYet+another+section%7D%0A%5Clipsum%5B1%5D%0A%0A%5Cchapter%7BThings+I+remember%7D%0A%0A%5Csection%7BOh+and+a+further+section%7D%0A%5Clipsum%5B1%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <strong><code>book</code></strong> class example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<h3><span id="Changing_headers_and_footers_for_.E2.80.9Cnon_standard.E2.80.9D_LaTeX_document_classes"></span><span class="mw-headline" id="Changing_headers_and_footers_for_“non_standard”_LaTeX_document_classes">Changing headers and footers for “non standard” LaTeX document classes</span></h3>
+<p>The packages/commands required to change headers and footers can vary according to the document class being used; for example, <a rel="nofollow" class="external text" href="https://texfaq.org/FAQ-fancyhdr#:~:text=The%20scrlayer%2Dscrpage%20package%20provides,and%20has%20several%20predefined%20styles">the TeX FAQ</a> notes use of the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/scrlayer-scrpage?lang=en">scrlayer-scrpage</a> package, rather than <a rel="nofollow" class="external text" href="https://ctan.org/pkg/fancyhdr?lang=en">fancyhdr</a>, for improved integration with the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/koma-script">KOMA-script document classes</a>. Additionally, the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/memoir?lang=en">memoir document class</a> contains its own features (user commands) to change headers and footers.
+</p>
+<h2><span class="mw-headline" id="Using_the_fancyhdr_package">Using the <code>fancyhdr</code> package</span></h2>
+<p>To load the <code>fancyhdr</code> package add the following line to your document preamble:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[⟨options⟩]</span><span class="nb">{</span>fancyhdr<span class="nb">}</span>
+</pre></div></div></div>
+<p>where <code>⟨options⟩</code> are explained in the <a rel="nofollow" class="external text" href="http://mirrors.ctan.org/macros/latex/contrib/fancyhdr/fancyhdr.pdf">package documentation</a>.
+</p>
+<h3><span class="mw-headline" id="Structure_of_fancyhdr_headers_and_footers"><span id="hfstructure"></span>Structure of <code>fancyhdr</code> headers and footers</span></h3>
+<p>The following diagram summarises the general structure of headers and footers defined by <code>fancyhdr</code> for a two-sided document: 
+</p>
+<ul><li>headers and footers can contain different content on left (even) and right (odd) pages</li>
+<li>headers and footers are structured into three “zones”
+<ul><li><strong>L</strong><em>eft</em></li>
+<li><strong>C</strong><em>entre</em></li>
+<li><strong>R</strong><em>ight</em></li></ul></li>
+<li>headers and footers can contain an optional rule (line)</li></ul>
+<p>In the <strong>L</strong> zone the content is typeset flush left; in the <strong>C</strong> zone it is centred and in the <strong>R</strong> zone it is typeset flush right.
+</p>
+<p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/UBfeMZtWEzcj5LWPnjHzo/c4620f0f4e7913049077f72364974e79/headersandfootersplain.svg" width="75%" alt="Diagram showing the structure of fancyhdr headers and footers" />
+
+</p>
+<p class="mw-empty-elt"></p><p class="mw-empty-elt"></p>
+<p>Commands provided by <code>fancyhdr</code> use single-letter abbreviations, called “coordinates”, to identify specific header and footer zones and page locations:
+</p>
+<ul><li><strong><code>O</code></strong> or <strong><code>E</code></strong>: to specify <strong><code>O</code></strong>dd or <strong><code>E</code></strong>ven pages</li>
+<li><strong><code>H</code></strong> or <strong><code>F</code></strong>: to indicate <strong><code>H</code></strong>eader or <strong><code>F</code></strong>ooter</li>
+<li><strong><code>L</code></strong>, <strong><code>C</code></strong> or <strong><code>R</code></strong>: for the <strong><code>L</code></strong>eft, <strong><code>C</code></strong>entre and <strong><code>R</code></strong>ight “zone” of the header or footer</li></ul>
+<h3><span class="mw-headline" id="Introducing_the_commands">Introducing the commands</span></h3>
+<p>This section discusses several <code>fancyhdr</code> commands used to define the content of headers and footers:
+</p>
+<ul><li><code>\fancyhead[<em>locations</em>]{<em>content</em>}</code></li>
+<li><code>\fancyfoot[<em>locations</em>]{<em>content</em>}</code></li>
+<li><code>\fancyhf[<em>locations</em>]{<em>content</em>}</code></li></ul>
+<p>Each of these commands uses “coordinates” to define header and footer <code><em>locations</em></code> where the <code><em>content</em></code> should appear. Depending on which command you use, (up to) 2 or (up to) 3 coordinates may be required to fully specify the desired <code><em>locations</em></code>.
+</p>
+<h4><span class="mw-headline" id="Commands_using_up_to_2_coordinates">Commands using up to 2 coordinates</span></h4>
+<p>The following commands require up to 2 coordinates to specify particular locations in a header or footer:
+</p>
+<ul><li><code>\fancyhead[<em>locations</em>]{<em>content</em>}</code>: assumes the <code><strong>H</strong></code>eader coordinate</li>
+<li><code>\fancyfoot[<em>locations</em>]{<em>content</em>}</code>: assumes the <code><strong>F</strong></code>ooter coordinate</li></ul>
+<p>where <code><em>locations</em></code> is an optional comma-separated list of positions, specified by 1 or 2 coordinates, in which to place <code><em>content</em></code>.
+</p>
+<h5><span class="mw-headline" id="Double-sided_document_example">Double-sided document example</span></h5>
+<p>The following example is taken from the <code>fancyhdr</code> documentation:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>book<span class="nb">}</span>
+<span class="k">\usepackage</span>[paperheight=16cm, paperwidth=12cm,<span class="c">% Set the height and width of the paper</span>
+includehead,
+nomarginpar,<span class="c">% We don't want any margin paragraphs</span>
+textwidth=10cm,<span class="c">% Set \textwidth to 10cm</span>
+headheight=10mm,<span class="c">% Set \headheight to 10mm</span>
+]<span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fancyhdr<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="c">% Set the page style to "fancy"...</span>
+<span class="k">\pagestyle</span><span class="nb">{</span>fancy<span class="nb">}</span>
+<span class="c">%... then configure it.</span>
+<span class="k">\fancyhead</span><span class="nb">{}</span> <span class="c">% clear all header fields</span>
+<span class="k">\fancyhead</span><span class="na">[RO,LE]</span><span class="nb">{</span><span class="k">\textbf</span><span class="nb">{</span>The performance of new graduates<span class="nb">}}</span>
+<span class="k">\fancyfoot</span><span class="nb">{}</span> <span class="c">% clear all footer fields</span>
+<span class="k">\fancyfoot</span><span class="na">[LE,RO]</span><span class="nb">{</span><span class="k">\thepage</span><span class="nb">}</span>
+<span class="k">\fancyfoot</span><span class="na">[LO,CE]</span><span class="nb">{</span>From: K. Grant<span class="nb">}</span>
+<span class="k">\fancyfoot</span><span class="na">[CO,RE]</span><span class="nb">{</span>To: Dean A. Smith<span class="nb">}</span>
+<span class="c">% Some content:</span>
+This is page 1.<span class="k">\newpage</span>
+This is page 2.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=fancyhdr+package+example&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%5Cusepackage%5Bpaperheight%3D16cm%2C+paperwidth%3D12cm%2C%25+Set+the+height+and+width+of+the+paper%0Aincludehead%2C%0Anomarginpar%2C%25+We+don%27t+want+any+margin+paragraphs%0Atextwidth%3D10cm%2C%25+Set+%5Ctextwidth+to+10cm%0Aheadheight%3D10mm%2C%25+Set+%5Cheadheight+to+10mm%0A%5D%7Bgeometry%7D%0A%5Cusepackage%7Bfancyhdr%7D%0A%5Cbegin%7Bdocument%7D%0A%25+Set+the+page+style+to+%22fancy%22...%0A%5Cpagestyle%7Bfancy%7D%0A%25...+then+configure+it.%0A%5Cfancyhead%7B%7D+%25+clear+all+header+fields%0A%5Cfancyhead%5BRO%2CLE%5D%7B%5Ctextbf%7BThe+performance+of+new+graduates%7D%7D%0A%5Cfancyfoot%7B%7D+%25+clear+all+footer+fields%0A%5Cfancyfoot%5BLE%2CRO%5D%7B%5Cthepage%7D%0A%5Cfancyfoot%5BLO%2CCE%5D%7BFrom%3A+K.+Grant%7D%0A%5Cfancyfoot%5BCO%2CRE%5D%7BTo%3A+Dean+A.+Smith%7D%0A%25+Some+content%3A%0AThis+is+page+1.%5Cnewpage%0AThis+is+page+2.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>fancyhdr</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>The following graphic shows the output produced by this example:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/5KJHKF1xqHveymE5ihJLGp/8f6e93351aa2cdf203c930897515dc76/FanctHdr0proc.svg" width="75%" alt="Double-sided document example created with LaTeX fancyhdr package" />
+
+</p>
+<h6><span class="mw-headline" id="Notes_on_the_commands_used">Notes on the commands used</span></h6>
+<ul><li><strong><code>\fancyhead{}</code></strong>: clears the settings for the headers</li>
+<li><strong><code>\fancyfoot{}</code></strong>: clears the settings for the footers</li>
+<li><strong><code>\fancyhead[RO,LE]{\textbf{The performance of new graduates}}</code></strong>: uses the header locations <strong><code>RO</code></strong> (<strong><code>R</code></strong>ight<strong><code>O</code></strong>dd) and  <strong><code>LE</code></strong> (<strong><code>L</code></strong>eft<strong><code>E</code></strong>ven) to place the content <code>\textbf{The performance of new graduates}</code></li>
+<li><strong><code>\fancyfoot[LE,RO]{\thepage}</code></strong>: uses the footer locations <strong><code>LE</code></strong> (<strong><code>L</code></strong>eft<strong><code>E</code></strong>ven) and <strong><code>RO</code></strong> (<strong><code>R</code></strong>ight<strong><code>O</code></strong>dd) to place the page number output by <code>\thepage</code></li>
+<li><strong><code>\fancyfoot[LO,CE]{From: K. Grant}</code></strong>: uses the footer locations <strong><code>LO</code></strong> (<strong><code>L</code></strong>eft<strong><code>O</code></strong>dd) and <strong><code>CE</code></strong> (<strong><code>C</code></strong>entre<strong><code>E</code></strong>ven) to place the content <code>From: K. Grant</code></li>
+<li><strong><code>\fancyfoot[CO,RE]{To: Dean A. Smith}</code></strong>:  uses the footer locations <strong><code>CO</code></strong> (<strong><code>C</code></strong>entre<strong><code>O</code></strong>dd) and <strong><code>RE</code></strong> (<strong><code>R</code></strong>ight<strong><code>E</code></strong>ven) to place the content <code>To: Dean A. Smith</code></li></ul>
+<h5><span class="mw-headline" id="One-sided_and_two-sided_documents">One-sided and two-sided documents</span></h5>
+<p>The <a href="#hfstructure">diagram above</a> shows the structure of headers and footers for a two-sided document, such as the <code>book</code> class, or <code>article</code>/<code>report</code> classes loaded using the option <code>twoside</code>. 
+</p>
+<h6><span class="mw-headline" id="Single-sided_document_examples">Single-sided document examples</span></h6>
+<p>For <em>single-sided</em> documents based on the <code>article</code> or <code>report</code> classes, all pages are, in effect, right-hand pages so the “coordinates” for <code><strong>E</strong></code>ven pages do not apply. We also don’t <em>need</em> to specify the <code><strong>O</strong></code> coordinate and can use a single <code><strong>L</strong></code>, <code><strong>C</strong></code> or <code><strong>R</strong></code> value:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span>[paperheight=16cm, paperwidth=12cm,<span class="c">% Set the height and width of the paper</span>
+includehead,
+nomarginpar,<span class="c">% We don't want any margin paragraphs</span>
+textwidth=10cm,<span class="c">% Set \textwidth to 10cm</span>
+headheight=10mm,<span class="c">% Set \headheight to 10mm</span>
+]<span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fancyhdr<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="c">% Set the page style to "fancy"...</span>
+<span class="k">\pagestyle</span><span class="nb">{</span>fancy<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>Single-sided document<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Overleaf<span class="nb">}</span>
+<span class="k">\date</span><span class="nb">{</span>August 2022<span class="nb">}</span>
+<span class="k">\fancyhf</span><span class="nb">{}</span> <span class="c">% clear existing header/footer entries</span>
+<span class="c">% We don't need to specify the O coordinate</span>
+<span class="k">\fancyhead</span><span class="na">[R]</span><span class="nb">{</span>Hello<span class="nb">}</span>
+<span class="k">\fancyfoot</span><span class="na">[L]</span><span class="nb">{</span><span class="k">\thepage</span><span class="nb">}</span>
+<span class="k">\maketitle</span>
+<span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+Some content.
+<span class="k">\newpage</span>
+<span class="k">\section</span><span class="nb">{</span>Continued...<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Single-sided+fancyhdr+package+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bpaperheight%3D16cm%2C+paperwidth%3D12cm%2C%25+Set+the+height+and+width+of+the+paper%0Aincludehead%2C%0Anomarginpar%2C%25+We+don%27t+want+any+margin+paragraphs%0Atextwidth%3D10cm%2C%25+Set+%5Ctextwidth+to+10cm%0Aheadheight%3D10mm%2C%25+Set+%5Cheadheight+to+10mm%0A%5D%7Bgeometry%7D%0A%5Cusepackage%7Bfancyhdr%7D%0A%5Cbegin%7Bdocument%7D%0A%25+Set+the+page+style+to+%22fancy%22...%0A%5Cpagestyle%7Bfancy%7D%0A%5Ctitle%7BSingle-sided+document%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cdate%7BAugust+2022%7D%0A%5Cfancyhf%7B%7D+%25+clear+existing+header%2Ffooter+entries%0A%25+We+don%27t+need+to+specify+the+O+coordinate%0A%5Cfancyhead%5BR%5D%7BHello%7D%0A%5Cfancyfoot%5BL%5D%7B%5Cthepage%7D%0A%5Cmaketitle%0A%5Csection%7BIntroduction%7D%0ASome+content.%0A%5Cnewpage%0A%5Csection%7BContinued...%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>fancyhdr</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<p>The <code>fancyhdr</code> package issues a warning if you try to specify headers or footers using the <code><strong>E</strong></code> coordinate within single-sided documents:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span>[paperheight=16cm, paperwidth=12cm,<span class="c">% Set the height and width of the paper</span>
+includehead,
+nomarginpar,<span class="c">% We don't want any margin paragraphs</span>
+textwidth=10cm,<span class="c">% Set \textwidth to 10cm</span>
+headheight=10mm,<span class="c">% Set \headheight to 10mm</span>
+]<span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fancyhdr<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="c">% Set the page style to "fancy"...</span>
+<span class="k">\pagestyle</span><span class="nb">{</span>fancy<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>Warning without twoside<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Overleaf<span class="nb">}</span>
+<span class="k">\date</span><span class="nb">{</span>July 2022<span class="nb">}</span>
+<span class="k">\fancyhead</span><span class="na">[E]</span><span class="nb">{</span>Hello<span class="nb">}</span><span class="c">% This triggers a warning!</span>
+<span class="k">\fancyfoot</span><span class="na">[E]</span><span class="nb">{</span><span class="k">\thepage</span><span class="nb">}</span><span class="c">% This triggers a warning!</span>
+<span class="k">\maketitle</span>
+<span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+Some content.
+<span class="k">\newpage</span>
+<span class="k">\section</span><span class="nb">{</span>Continued...<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=fancyhdr+package+warning+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bpaperheight%3D16cm%2C+paperwidth%3D12cm%2C%25+Set+the+height+and+width+of+the+paper%0Aincludehead%2C%0Anomarginpar%2C%25+We+don%27t+want+any+margin+paragraphs%0Atextwidth%3D10cm%2C%25+Set+%5Ctextwidth+to+10cm%0Aheadheight%3D10mm%2C%25+Set+%5Cheadheight+to+10mm%0A%5D%7Bgeometry%7D%0A%5Cusepackage%7Bfancyhdr%7D%0A%5Cbegin%7Bdocument%7D%0A%25+Set+the+page+style+to+%22fancy%22...%0A%5Cpagestyle%7Bfancy%7D%0A%5Ctitle%7BWarning+without+twoside%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cdate%7BJuly+2022%7D%0A%5Cfancyhead%5BE%5D%7BHello%7D%25+This+triggers+a+warning%21%0A%5Cfancyfoot%5BE%5D%7B%5Cthepage%7D%25+This+triggers+a+warning%21%0A%5Cmaketitle%0A%5Csection%7BIntroduction%7D%0ASome+content.%0A%5Cnewpage%0A%5Csection%7BContinued...%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <em><strong>erroneous</strong></em> <code>fancyhdr</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>As can be seen in this annotated screengrab:
+</p><p><img alt="An example warning from the fancyhdr package" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/2d/Fancyhdrwarning2.png" decoding="async" width="800" height="491" />
+</p><p>the example above produces the warnings: 
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Package fancyhdr Warning: <span class="k">\fancyhead</span>'s `E' option without twoside option is useless on input line 23.
+Package fancyhdr Warning: <span class="k">\fancyfoot</span>'s `E' option without twoside option is useless on input line 24.
+</pre></div>
+</div></div>
+<h5><span class="mw-headline" id="Using_a_single_coordinate_in_a_two-sided_document:_omitting_E_and_O">Using a single coordinate in a two-sided document: omitting <code>E</code> and <code>O</code></span></h5>
+<p>If you use <code>\fancyhead</code> or <code>\fancyfoot</code> in a two-sided document but omit the <strong><code>E</code></strong> and <strong><code>O</code></strong> from a location and use <em>only 1 coordinate</em>, <strong><code>L</code></strong>, <strong><code>C</code></strong> or <strong><code>R</code></strong>, the <code><em>content</em></code> will be placed in that location on <em>even and odd pages</em>.
+</p>
+<h6><span class="mw-headline" id="Example">Example</span></h6>
+<p>The following example demonstrates omitting <strong><code>E</code></strong> and <strong><code>O</code></strong> from <code><em>locations</em></code> specified in <code>\fancyhead</code> and \<code>fancyfoot</code>. It also uses the following commands:
+</p>
+<ul><li><code>\pagestyle{fancy}</code> to set the page style to one configured by <code>fancyhdr</code></li>
+<li><code>\fancyhead{}\fancyfoot{}</code> are used to clear all headers and footers (see also <code>\fancyhf{}</code>)</li></ul>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="c">% Set the page style to "fancy"...</span>
+<span class="k">\pagestyle</span><span class="nb">{</span>fancy<span class="nb">}</span>
+<span class="c">%... then configure it.</span>
+
+<span class="c">% Clear all headers and footers (see also \fancyhf{})</span>
+<span class="k">\fancyhead</span><span class="nb">{}</span><span class="k">\fancyfoot</span><span class="nb">{}</span>
+
+<span class="c">% Set the Centre header location but do not specify O or E</span>
+<span class="k">\fancyhead</span><span class="na">[C]</span><span class="nb">{</span>In the centre of the header on all pages: <span class="k">\thepage</span><span class="nb">}</span>
+
+<span class="c">% Set the Left footer location but do not specify O or E</span>
+<span class="k">\fancyfoot</span><span class="na">[L]</span><span class="nb">{</span>On the left of the footer on all pages: <span class="k">\thepage</span><span class="nb">}</span>
+
+<span class="c">% Some content:</span>
+This is page 1.<span class="k">\newpage</span>
+This is page 2.
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=fancyhdr+package+example
+&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%5Cusepackage%5Bpaperheight%3D16cm%2C+paperwidth%3D12cm%2C%25+Set+the+height+and+width+of+the+paper%0Aincludehead%2C%0Anomarginpar%2C%25+We+don%27t+want+any+margin+paragraphs%0Atextwidth%3D10cm%2C%25+Set+%5Ctextwidth+to+10cm%0Aheadheight%3D10mm%2C%25+Set+%5Cheadheight+to+10mm%0A%5D%7Bgeometry%7D%0A%5Cusepackage%7Bfancyhdr%7D%0A%5Cbegin%7Bdocument%7D%0A%25+Set+the+page+style+to+%22fancy%22...%0A%5Cpagestyle%7Bfancy%7D%0A%25...+then+configure+it.%0A%0A%25+Clear+all+headers+and+footers+%28see+also+%5Cfancyhf%7B%7D%29%0A%5Cfancyhead%7B%7D%5Cfancyfoot%7B%7D%0A%0A%25+Set+the+Centre+header+location+but+do+not+specify+O+or+E%0A%5Cfancyhead%5BC%5D%7BIn+the+centre+of+the+header+on+all+pages%3A+%5Cthepage%7D%0A%0A%25+Set+the+Left+footer+location+but+do+not+specify+O+or+E%0A%5Cfancyfoot%5BL%5D%7BOn+the+left+of+the+footer+on+all+pages%3A+%5Cthepage%7D%0A%0A%25+Some+content%3A%0AThis+is+page+1.%5Cnewpage%0AThis+is+page+2.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>fancyhdr</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>The following graphic is an annotated version of the output produced by this code:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/3bi1srOERoVUCQsQi5Ms2x/fed7e765cdbc5fb1f0fbfa29ad936262/FanctHdr1plain.svg" width="75%" alt="Using a single fancyhdr coordinate in a two-sided LaTeX document" />
+
+</p><p>As can be seen from this graphic, the following code
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\fancyhead</span><span class="na">[C]</span><span class="nb">{</span>In the centre of the header on all pages: <span class="k">\thepage</span><span class="nb">}</span>
+</pre></div></div></div>
+<p>sets the <strong><code>C</code></strong>entre header location but does not specify if it should appear on <strong><code>O</code></strong>dd or <strong><code>E</code></strong>ven pages. The omission of <strong><code>O</code></strong> and <strong><code>E</code></strong> coordinates results in the <strong><code>C</code></strong>entre zone header content appearing on odd and even pages.
+</p><p>In addition, this code fragment
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\fancyfoot</span><span class="na">[L]</span><span class="nb">{</span>On the left of the footer on all pages: <span class="k">\thepage</span><span class="nb">}</span>
+</pre></div></div></div>
+<p>sets the <strong><code>L</code></strong>eft footer location but does not specify if it should appear on odd or even pages. The omission of <strong><code>O</code></strong> and <strong><code>E</code></strong> coordinates results in the <strong><code>L</code></strong>eft zone content appearing in the left zone of the footer appearing on odd and even pages.
+</p>
+<h5><span id="Using_a_single_coordinate_in_a_two-sided_document:_omitting_L.2C_C_and_R"></span><span class="mw-headline" id="Using_a_single_coordinate_in_a_two-sided_document:_omitting_L,_C_and_R">Using a single coordinate in a two-sided document: omitting <code>L</code>, <code>C</code> and <code>R</code></span></h5>
+<p>If you omit <strong><code>L</code></strong>, <strong><code>C</code></strong> and <strong><code>R</code></strong> from a location in a two-sided document, and use <em>only 1 coordinate</em>, <strong><code>E</code></strong> or <strong><code>O</code></strong>, the <code><em>content</em></code> will be <em>placed in all three zones</em> on the even or odd page pages specified in the location.
+</p>
+<h6><span class="mw-headline" id="Example_2">Example</span></h6>
+<p>The following example sets the header and footer for odd and even pages but none of the <code><em>locations</em></code> in the <code>\fancyhead</code> and <code>\fancyfoot</code> commands specify the “zone”, <strong><code>L</code></strong>, <strong><code>C</code></strong> or <strong><code>R</code></strong>, in which the <code><em>content</em></code> should be placed. Note how the <code><em>content</em></code> is reproduced in all three zones.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="c">% Set the page style to "fancy"...</span>
+<span class="k">\pagestyle</span><span class="nb">{</span>fancy<span class="nb">}</span>
+<span class="c">%... then configure it.</span>
+
+<span class="c">% Clear all headers and footers (see also \fancyhf{})</span>
+<span class="k">\fancyhead</span><span class="nb">{}</span><span class="k">\fancyfoot</span><span class="nb">{}</span>
+
+<span class="c">% Set the header and footer for Even</span>
+<span class="c">% pages but omit the zone (L, C or R)</span>
+<span class="k">\fancyhead</span><span class="na">[E]</span><span class="nb">{</span>Header: even page <span class="k">\thepage</span><span class="nb">}</span>
+<span class="k">\fancyfoot</span><span class="na">[E]</span><span class="nb">{</span>Footer: even page <span class="k">\thepage</span><span class="nb">}</span>
+
+<span class="c">% Set the header and footer for Odd</span>
+<span class="c">% pages but omit the zone (L, C or R)</span>
+<span class="k">\fancyhead</span><span class="na">[O]</span><span class="nb">{</span>Header: odd page <span class="k">\thepage</span><span class="nb">}</span>
+<span class="k">\fancyfoot</span><span class="na">[O]</span><span class="nb">{</span>Footer: odd page <span class="k">\thepage</span><span class="nb">}</span>
+
+<span class="c">% Some content:</span>
+This is page 1.<span class="k">\newpage</span>
+This is page 2.
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=fancyhdr+package+example
+&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%5Cusepackage%5Bpaperheight%3D16cm%2C+paperwidth%3D12cm%2C%25+Set+the+height+and+width+of+the+paper%0Aincludehead%2C%0Anomarginpar%2C%25+We+don%27t+want+any+margin+paragraphs%0Atextwidth%3D10cm%2C%25+Set+%5Ctextwidth+to+10cm%0Aheadheight%3D10mm%2C%25+Set+%5Cheadheight+to+10mm%0A%5D%7Bgeometry%7D%0A%5Cusepackage%7Bfancyhdr%7D%0A%5Cbegin%7Bdocument%7D%0A%25+Set+the+page+style+to+%22fancy%22...%0A%5Cpagestyle%7Bfancy%7D%0A%25...+then+configure+it.%0A%0A%25+Clear+all+headers+and+footers+%28see+also+%5Cfancyhf%7B%7D%29%0A%5Cfancyhead%7B%7D%5Cfancyfoot%7B%7D%0A%0A%25+Set+the+header+and+footer+for+Even%0A%25+pages+but+omit+the+zone+%28L%2C+C+or+R%29%0A%5Cfancyhead%5BE%5D%7BHeader%3A+even+page+%5Cthepage%7D%0A%5Cfancyfoot%5BE%5D%7BFooter%3A+even+page+%5Cthepage%7D%0A%0A%25+Set+the+header+and+footer+for+Odd%0A%25+pages+but+omit+the+zone+%28L%2C+C+or+R%29%0A%5Cfancyhead%5BO%5D%7BHeader%3A+odd+page+%5Cthepage%7D%0A%5Cfancyfoot%5BO%5D%7BFooter%3A+odd+page+%5Cthepage%7D%0A%0A%25+Some+content%3A%0AThis+is+page+1.%5Cnewpage%0AThis+is+page+2.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>fancyhdr</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>The following graphic is an annotated version of the output produced by this code:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/Dd2mEMqnNWawjbFtAzw4X/d862c7ceea62a6926ad8807497c29ca5/FanctHdr2plain.svg" width="75%" />
+
+</p><p>The following code sets the header and footer for <strong><code>E</code></strong>ven pages but omits a zone coordinate (<strong><code>L</code></strong>, <strong><code>C</code></strong> or <strong><code>R</code></strong>): 
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\fancyhead</span><span class="na">[E]</span><span class="nb">{</span>Header: even page <span class="k">\thepage</span><span class="nb">}</span>
+<span class="k">\fancyfoot</span><span class="na">[E]</span><span class="nb">{</span>Footer: even page <span class="k">\thepage</span><span class="nb">}</span>
+</pre></div></div></div>
+<p>This results in:
+</p>
+<ul><li><strong>even-page headers</strong> contain <code>Header: even page \thepage</code> in all three header zones (<strong><code>L</code></strong>, <strong><code>C</code></strong> and <strong><code>R</code></strong>)</li>
+<li><strong>even-page footers</strong> contain <code>Footer: even page \thepage</code> in all three footer zones (<strong><code>L</code></strong>, <strong><code>C</code></strong> and <strong><code>R</code></strong>)</li></ul>
+<p>The following code sets the header and footer for <strong><code>O</code></strong>dd pages but also omits a zone coordinate (<strong><code>L</code></strong>, <strong><code>C</code></strong> or <strong><code>R</code></strong>):
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\fancyhead</span><span class="na">[O]</span><span class="nb">{</span>Header: odd page <span class="k">\thepage</span><span class="nb">}</span>
+<span class="k">\fancyfoot</span><span class="na">[O]</span><span class="nb">{</span>Footer: odd page <span class="k">\thepage</span><span class="nb">}</span>
+</pre></div></div></div>
+<p>This produces results similar to those for even pages:
+</p>
+<ul><li><strong>odd-page headers</strong> contain <code>Header: odd page \thepage</code> in all three header zones (<strong><code>L</code></strong>, <strong><code>C</code></strong> and <strong><code>R</code></strong>)</li>
+<li><strong>odd-page footers</strong> contain <code>Footer: odd page \thepage</code> in all three footer zones (<strong><code>L</code></strong>, <strong><code>C</code></strong> and <strong><code>R</code></strong>)</li></ul>
+<h4><span id=".5Cfancyhf:_using_up_to_3_coordinates"></span><span class="mw-headline" id="\fancyhf:_using_up_to_3_coordinates"><code>\fancyhf</code>: using up to 3 coordinates</span></h4>
+<p><code>\fancyhf</code> is a more general command which can be used to combine specifications for headers and footers. To do this it supports the coordinates <strong><code>H</code></strong> (for <strong><code>H</code></strong>eader) and <strong><code>F</code></strong> (for <strong><code>F</code></strong>ooter). The general form of the command is
+</p>
+<ul><li><code>\fancyhf[<em>locations</em>]{<em>content</em>}</code></li></ul>
+<p>where <code><em>locations</em></code> is a optional comma-separated list of locations, specified by 2 or 3 coordinates, to place <code><em>content</em></code>. 
+</p><p>Because this command can specify the content of headers <em>and</em> footers you need the third coordinate, <strong><code>H</code></strong> or <strong><code>F</code></strong> to fully specify the <code><em>locations</em></code>. For example, to use (refer to) the centre zone of footers on the left-hand (even) pages you would specify this as the three coordinates <strong><code>EFC</code></strong>:
+</p>
+<ul><li><strong><code>E</code></strong>ven-numbered pages</li>
+<li><strong><code>F</code></strong>ooter</li>
+<li><strong><code>C</code></strong>entre zone</li></ul>
+<p>Note that the order of the coordinates is not important: <strong><code>EFC</code></strong> produces the same result as <strong><code>FEC</code></strong> and so forth.
+</p><p>The following example uses <code>\fancyhf</code> to place content in the <strong><code>C</code></strong>entre zones of all headers and footers:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\pagestyle</span><span class="nb">{</span>fancy<span class="nb">}</span>
+<span class="k">\fancyhf</span><span class="nb">{}</span>
+<span class="k">\fancyhf</span><span class="na">[EHC]</span><span class="nb">{</span>Even+Header+Centre<span class="nb">}</span>
+<span class="k">\fancyhf</span><span class="na">[EFC]</span><span class="nb">{</span>Even+Footer+Centre<span class="nb">}</span>
+<span class="k">\fancyhf</span><span class="na">[OFC]</span><span class="nb">{</span>Odd+Footer+Centre<span class="nb">}</span>
+<span class="k">\fancyhf</span><span class="na">[OHC]</span><span class="nb">{</span>Odd+Header+Centre<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[1]</span><span class="k">\newpage\lipsum</span><span class="na">[1]</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Example+of+the+fancyhf+command&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%5Cusepackage%5Bpaperheight%3D16cm%2C+paperwidth%3D12cm%2C%25+Set+the+height+and+width+of+the+paper%0Aincludehead%2C%0Anomarginpar%2C%25+We+don%27t+want+any+margin+paragraphs%0Atextwidth%3D10cm%2C%25+Set+%5Ctextwidth+to+10cm%0Aheadheight%3D10mm%2C%25+Set+%5Cheadheight+to+10mm%0A%5D%7Bgeometry%7D%0A%5Cusepackage%7Blipsum%7D%0A%5Cusepackage%7Bfancyhdr%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cpagestyle%7Bfancy%7D%0A%5Cfancyhf%7B%7D%0A%5Cfancyhf%5BEHC%5D%7BEven%2BHeader%2BCentre%7D%0A%5Cfancyhf%5BEFC%5D%7BEven%2BFooter%2BCentre%7D%0A%5Cfancyhf%5BOFC%5D%7BOdd%2BFooter%2BCentre%7D%0A%5Cfancyhf%5BOHC%5D%7BOdd%2BHeader%2BCentre%7D%0A%5Clipsum%5B1%5D%5Cnewpage%5Clipsum%5B1%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>\fancyhf</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>The following graphic is an annotated version of the output produced by the previous example:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/5eHCLbj4Fd7LvB1f5V0v7O/128633a02623f6aa6908360d93341058/FanctHdr3plain.svg" width="75%" alt="An example using the fancyhdr \fancyhf command" />
+
+</p>
+<h3><span class="mw-headline" id="Examples">Examples</span></h3>
+<h4><span id="Using_basic_rules_.28lines.29_in_headers_and_footers"></span><span class="mw-headline" id="Using_basic_rules_(lines)_in_headers_and_footers">Using basic rules (lines) in headers and footers</span></h4>
+<p>The following rule-related commands are provided by version 4.x of <code>fancyhdr</code>:
+</p>
+<ul><li><strong><code>\headrulewidth</code></strong>: macro to define the thickness of a line under the header</li>
+<li><strong><code>\footrulewidth</code></strong>: macro to define the thickness of a line above the footer</li>
+<li><strong><code>\headruleskip</code></strong>: macro to define the distance between the line and the header text (only available since version 4.0)</li>
+<li><strong><code>\footruleskip</code></strong>: macro to define the distance between the line and the footer text</li>
+<li><strong><code>\headrule</code></strong> macro to completely redefine header rules (lines)</li>
+<li><strong><code>\footrule</code></strong> macro to completely redefine footer rules (lines)</li>
+<li><strong><code>\headwidth</code></strong> a length parameter that defines the total width of the headers and footers</li></ul>
+<p><strong>NOTES</strong>: 
+</p>
+<ul><li>the default value of <code>\headrulewidth</code> is <code>0.4pt</code> and default value of <code>\footrulewidth</code> is <code>0pt</code> so, by default, that rule is not shown in footers.</li>
+<li>you must use <code>\renewcommand</code> to change the width value stored by <code>\headrulewidth</code> or <code>\footrulewidth</code></li>
+<li>similarly, use <code>\renewcommand</code> to change the space between header or footer text, set by <code>\headruleskip</code> or <code>\footruleskip</code> respectively</li></ul>
+<p>For example: 
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\headrulewidth</span><span class="nb">}{</span>2pt<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\footrulewidth</span><span class="nb">}{</span>4pt<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\headruleskip</span><span class="nb">}{</span>10mm<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\footruleskip</span><span class="nb">}{</span>10pt<span class="nb">}</span>
+</pre></div>
+</div></div>
+<ul><li><strong>Note</strong>: It is <em>because</em> the following commands are <em>macros</em></li></ul>
+<ul><li><ul><li><code>\headrulewidth</code></li>
+<li><code>\footrulewidth</code></li>
+<li><code>\headruleskip</code></li>
+<li><code>\footruleskip</code></li></ul></li></ul>
+<p>that you <em>must</em> use <code>\renewcommand</code> to change values stored by these commands. The following code <em>will not work</em>:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\setlength</span><span class="nb">{</span><span class="k">\headrulewidth</span><span class="nb">}{</span>2pt<span class="nb">}</span><span class="c">% does not work</span>
+<span class="k">\setlength</span><span class="nb">{</span><span class="k">\headruleskip</span><span class="nb">}{</span>10mm<span class="nb">}</span><span class="c">% also will not work</span>
+</pre></div>
+</div></div>
+<p>The next example changes rule widths and shows how to modify the distance between rules (lines) and header and footer text—using <code>\headruleskip</code> and <code>\footruleskip</code>:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="c">% Set the page style to "fancy"...</span>
+<span class="k">\pagestyle</span><span class="nb">{</span>fancy<span class="nb">}</span>
+<span class="c">%... then configure it.</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\headruleskip</span><span class="nb">}{</span>10mm<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\footruleskip</span><span class="nb">}{</span>10pt<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\headrulewidth</span><span class="nb">}{</span>2pt<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\footrulewidth</span><span class="nb">}{</span>4pt<span class="nb">}</span>
+<span class="c">% Some content:</span>
+<span class="k">\chapter</span><span class="nb">{</span>Wrangling settings<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>Page 1<span class="nb">}</span>
+This is page 1.
+<span class="k">\newpage</span>
+<span class="k">\section</span><span class="nb">{</span>Page 2<span class="nb">}</span>
+This is page 2.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=fancyhdr+package+example&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%5Cusepackage%5Bpaperheight%3D16cm%2Cpaperwidth%3D12cm%2C%25+Set+the+height+and+width+of+the+paper%0Aincludehead%2C%0Anomarginpar%2C%25+We+don%27t+want+any+margin+paragraphs%0Atextwidth%3D10cm%2C%25+Set+%5Ctextwidth+to+10cm%0A%25+Set+%5Cheadheight+to+15mm+to+accommodate%0A%25+value+of+%5Cheadruleskip%0Aheadheight%3D15mm%2C%0A%5D%7Bgeometry%7D%0A%5Cusepackage%7Bfancyhdr%7D%0A%5Cbegin%7Bdocument%7D%0A%25+Set+the+page+style+to+%22fancy%22...%0A%5Cpagestyle%7Bfancy%7D%0A%25...+then+configure+it.%0A%5Crenewcommand%7B%5Cheadruleskip%7D%7B10mm%7D%0A%5Crenewcommand%7B%5Cfootruleskip%7D%7B10pt%7D%0A%5Crenewcommand%7B%5Cheadrulewidth%7D%7B2pt%7D%0A%5Crenewcommand%7B%5Cfootrulewidth%7D%7B4pt%7D%0A%25+Some+content%3A%0A%5Cchapter%7BWrangling+settings%7D%0A%5Csection%7BPage+1%7D%0AThis+is+page+1.%0A%5Cnewpage%0A%5Csection%7BPage+2%7D%0AThis+is+page+2.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>fancyhdr</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<h4><span class="mw-headline" id="Using_fancy_rules_in_headers">Using fancy rules in headers</span></h4>
+<p>The following example is derived from one contained in the <code>fancyhdr</code> package documentation which uses the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/fourier?lang=en"><code>fourier-orns</code> package</a>.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>book<span class="nb">}</span>
+<span class="k">\usepackage</span>[paperheight=16cm, paperwidth=12cm,<span class="c">% Set the height and width of the paper</span>
+includehead,
+nomarginpar,<span class="c">% We don't want any margin paragraphs</span>
+textwidth=10cm,<span class="c">% Set \textwidth to 10cm</span>
+headheight=14pt,<span class="c">% Set \headheight to 14pt to accommodate our fancy rule!</span>
+]<span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fourier-orns<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fancyhdr<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\headrule</span><span class="nb">}{</span><span class="c">%</span>
+<span class="k">\vspace</span><span class="nb">{</span>-8pt<span class="nb">}</span><span class="k">\hrulefill</span>
+<span class="k">\raisebox</span><span class="nb">{</span>-2.1pt<span class="nb">}{</span><span class="k">\quad\decofourleft\decotwo\decofourright\quad</span><span class="nb">}</span><span class="k">\hrulefill</span><span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>Decorative line<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Overleaf<span class="nb">}</span>
+<span class="k">\date</span><span class="nb">{</span>August 2022<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\pagestyle</span><span class="nb">{</span>fancy<span class="nb">}</span>
+<span class="k">\fancyhf</span><span class="nb">{}</span>
+<span class="k">\fancyhead</span><span class="na">[LE]</span><span class="nb">{</span><span class="k">\nouppercase</span><span class="nb">{</span><span class="k">\rightmark\hfill\leftmark</span><span class="nb">}}</span>
+<span class="k">\fancyhead</span><span class="na">[RO]</span><span class="nb">{</span><span class="k">\nouppercase</span><span class="nb">{</span><span class="k">\leftmark\hfill\rightmark</span><span class="nb">}}</span>
+<span class="k">\fancyfoot</span><span class="na">[LE,RO]</span><span class="nb">{</span><span class="k">\hfill\thepage\hfill</span><span class="nb">}</span>
+<span class="k">\chapter</span><span class="nb">{</span>Fancy rules!<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+This example is taken from the <span class="k">\texttt</span><span class="nb">{</span>fancyhdr<span class="nb">}</span> documentation.
+<span class="k">\newpage</span>
+<span class="k">\section</span><span class="nb">{</span>See the header<span class="nb">}</span>
+<span class="k">\newpage</span>
+<span class="k">\section</span><span class="nb">{</span>Yes, very neat!<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Drawing+fancy+rules+in+headers
+&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%5Cusepackage%5Bpaperheight%3D16cm%2C+paperwidth%3D12cm%2C%25+Set+the+height+and+width+of+the+paper%0Aincludehead%2C%0Anomarginpar%2C%25+We+don%27t+want+any+margin+paragraphs%0Atextwidth%3D10cm%2C%25+Set+%5Ctextwidth+to+10cm%0Aheadheight%3D14pt%2C%25+Set+%5Cheadheight+to+14pt+to+accommodate+our+fancy+rule%21%0A%5D%7Bgeometry%7D%0A%5Cusepackage%7Bfourier-orns%7D%0A%5Cusepackage%7Bfancyhdr%7D%0A%5Crenewcommand%7B%5Cheadrule%7D%7B%25%0A%5Cvspace%7B-8pt%7D%5Chrulefill%0A%5Craisebox%7B-2.1pt%7D%7B%5Cquad%5Cdecofourleft%5Cdecotwo%5Cdecofourright%5Cquad%7D%5Chrulefill%7D%0A%5Ctitle%7BDecorative+line%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cdate%7BAugust+2022%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cpagestyle%7Bfancy%7D%0A%5Cfancyhf%7B%7D%0A%5Cfancyhead%5BLE%5D%7B%5Cnouppercase%7B%5Crightmark%5Chfill%5Cleftmark%7D%7D%0A%5Cfancyhead%5BRO%5D%7B%5Cnouppercase%7B%5Cleftmark%5Chfill%5Crightmark%7D%7D%0A%5Cfancyfoot%5BLE%2CRO%5D%7B%5Chfill%5Cthepage%5Chfill%7D%0A%5Cchapter%7BFancy+rules%21%7D%0A%5Csection%7BIntroduction%7D%0AThis+example+is+taken+from+the+%5Ctexttt%7Bfancyhdr%7D+documentation.%0A%5Cnewpage%0A%5Csection%7BSee+the+header%7D%0A%5Cnewpage%0A%5Csection%7BYes%2C+very+neat%21%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output: 
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/6D6lYEhcZ90XkaYfgWYhge/3f2d8fb37beb7c749bf9025f50481f2f/FancyRules.svg" alt="An example of creating fancy rules in headers via the fourier-orns package" />
+
+</p>
+<ul><li>Notes on commands in this example
+<ul><li><strong><code>\headrule</code></strong>: a macro which defines how to draw the decorative line in the header. Here it is redefined to draw a line containing ornaments from the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/fourier?lang=en"><code>fourier-orns</code> package</a>.</li>
+<li><strong><code>\leftmark</code></strong> and <strong><code>\rightmark</code></strong>: these commands are used to obtain “mark data” inserted by LaTeX’s sectioning commands. For a more complete explanation of these commands we recommend the companion article <a href="Articles/How_does_LaTeX_typeset_headers_and_footers_.html" title="Articles/How does LaTeX typeset headers and footers?"><em>How does LaTeX typeset headers and footers?</em></a></li>
+<li><strong><code>\nouppercase</code></strong>: a command provided by the <code>fancyhdr</code> package to prevent header or footer text being typeset in uppercase, which is the default style for LaTeX headers and footers</li></ul></li></ul>
+<h4><span id="fancyhdr_warning:_.5Cheadheight_is_too_small"></span><span class="mw-headline" id="fancyhdr_warning:_\headheight_is_too_small"><code>fancyhdr</code> warning: <code>\headheight</code> is too small</span></h4>
+<p>If you receive the <code>fancyhdr</code> warning that <code>\headheight</code> is too small you <em>can</em> reset it to some value <code>height</code> by writing
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\setlength</span><span class="nb">{</span><span class="k">\headheight</span><span class="nb">}{</span>height<span class="nb">}</span>
+</pre></div></div></div>
+<p>but the <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/a/100408">recommended solution is to use the <code>geometry</code> package</a> and apply its <code>headheight=<em>height</em></code> option to set the value of <code>\headheight</code> to <code><em>height</em></code>.
+</p><p>The following example revisits our earlier book class example and resets <code>\headheight</code> to 2cm via <code>headheight=2cm</code>:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>book<span class="nb">}</span>
+<span class="k">\usepackage</span>[paperheight=16cm, paperwidth=12cm,<span class="c">% Set the height and width of the paper</span>
+includehead,<span class="c">% See below for an explanation</span>
+nomarginpar,<span class="c">% We don't want any margin paragraphs</span>
+textwidth=10cm,<span class="c">% Set \textwidth to 10cm</span>
+headheight=2cm,<span class="c">% Set \headheight to 2cm</span>
+showframe <span class="c">% Show the page layout</span>
+]<span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>Memoirs of a <span class="k">\TeX</span><span class="nb">{}</span> user<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Overleaf<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\frontmatter</span>
+<span class="k">\maketitle</span>
+This is frontmatter which uses Roman numerals.
+
+<span class="k">\mainmatter</span>
+<span class="k">\chapter</span><span class="nb">{</span>Where do I start<span class="nb">}</span>
+Chapter 1: A short chapter that ends on page 1.
+
+<span class="k">\chapter</span><span class="nb">{</span>Things I remember<span class="nb">}</span>
+Chapter 2: Starts on page 3, so <span class="k">\LaTeX</span><span class="nb">{}</span> inserts a ``blank'' page 2.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Setting+headheight+using+the+geometry+package&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%5Cusepackage%5Bpaperheight%3D16cm%2C+paperwidth%3D12cm%2C%25+Set+the+height+and+width+of+the+paper%0Aincludehead%2C%25+See+below+for+an+explanation%0Anomarginpar%2C%25+We+don%27t+want+any+margin+paragraphs%0Atextwidth%3D10cm%2C%25+Set+%5Ctextwidth+to+10cm%0Aheadheight%3D2cm%2C%25+Set+%5Cheadheight+to+2cm%0Ashowframe+%25+Show+the+page+layout%0A%5D%7Bgeometry%7D%0A%5Ctitle%7BMemoirs+of+a+%5CTeX%7B%7D+user%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cfrontmatter%0A%5Cmaketitle%0AThis+is+frontmatter+which+uses+Roman+numerals.%0A%0A%5Cmainmatter%0A%5Cchapter%7BWhere+do+I+start%7D%0AChapter+1%3A+A+short+chapter+that+ends+on+page+1.%0A%0A%5Cchapter%7BThings+I+remember%7D%0AChapter+2%3A+Starts+on+page+3%2C+so+%5CLaTeX%7B%7D+inserts+a+%60%60blank%27%27+page+2.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open in Overleaf: example to set <code>\headheight</code> using the geometry package</a>
+</p><p class="mw-empty-elt"></p>
+<h5><span class="mw-headline" id="Notes_on_the_geometry_package">Notes on the <code>geometry</code> package</span></h5>
+<p>The example above uses several options of the <code>geometry</code> package:
+</p>
+<ul><li><code>nomarginpar</code>: specifies that we don't want any margin paragraphs</li>
+<li><code>textwidth=10cm</code>: sets a value (10cm) for <code>\textwidth</code>, one of LaTeX’s <a href="Articles/A_visual_guide_to_LaTeX%e2%80%99s_page_layout_parameters.html" title="Articles/A visual guide to LaTeX’s page layout parameters">page layout parameters</a></li>
+<li><code>headheight=2cm</code>: sets a value (2mm) for <code>\headheight</code>, one of LaTeX’s <a href="Articles/A_visual_guide_to_LaTeX%e2%80%99s_page_layout_parameters.html" title="Articles/A visual guide to LaTeX’s page layout parameters">page layout parameters</a></li>
+<li><code>showframe</code>: draws the page layout</li></ul>
+<p>The <code>geometry</code> package also provides options which affect how it calculates certain values for LaTeX page layout parameters; for example:
+</p>
+<ul><li><code>includehead</code></li>
+<li><code>includefoot</code></li></ul>
+<p>Our example (above) used <code>includehead</code> to ensure that the height of the text area is directly affected by changing the value of <code>headheight</code>. The following diagram, copied from the <code>geometry</code> package documentation, demonstrates how the <code>includehead</code> and <code>includefoot</code> options affect calculation of the document’s text height:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/4tBX4uKXodY0iwibcqv39F/2332d213479039388c17b8494f79b85f/geometry.svg" width="100%" alt="Image from geometry package documentation showing how the includehead and includefoot options affect calculation of the document’s text height" />
+
+</p><p>Note that the <code>geometry</code> package refers to the height of the text area via the option <code>textheight</code> whereas LaTeX uses the similarly-named <a rel="nofollow" class="external text" href="Articles/A_visual_guide_to_LaTeX%e2%80%99s_page_layout_parameters%23Notes_on_the_page-layout_parameters_and_equations.html#Notes_on_the_page-layout_parameters_and_equations"><code>\textheight</code> page layout parameter</a>.
+</p>
+<h4><span class="mw-headline" id="Footers_containing_page_X_of_N">Footers containing page X of N</span></h4>
+<p>Source: edited version of code posted on tex.stackexchange: <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/a/282840">https://tex.stackexchange.com/a/282840</a>. 
+</p><p>This example creates a footer which displays the current page number and the total number of pages. It uses the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/lastpage?lang=en"><code>lastpage</code> package</a> together with a modified version of the <code>plain</code> page style implemented via the <code>\fancypagestyle</code> command provided by <code>fancyhdr</code>.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span>[paperheight=16cm, paperwidth=12cm,<span class="c">% Set the height and width of the paper</span>
+includehead,<span class="c">% See below for an explanation</span>
+nomarginpar,<span class="c">% We don't want any margin paragraphs</span>
+textwidth=10cm,<span class="c">% Set \textwidth to 10cm</span>
+headheight=16pt <span class="c">% Set \headheight to 16pt to avoid fancyhr warnings</span>
+]<span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>lastpage<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fancyhdr<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>lipsum<span class="nb">}</span> <span class="c">% just for mock text</span>
+<span class="k">\pagestyle</span><span class="nb">{</span>fancy<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\headrulewidth</span><span class="nb">}{</span>0pt<span class="nb">}</span>
+<span class="k">\fancyfoot</span><span class="na">[C]</span><span class="nb">{</span><span class="k">\thepage\ </span>of <span class="k">\pageref</span><span class="nb">{</span>LastPage<span class="nb">}}</span>
+<span class="k">\fancypagestyle</span><span class="nb">{</span>plain<span class="nb">}{</span><span class="c">%</span>
+  <span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\headrulewidth</span><span class="nb">}{</span>0pt<span class="nb">}</span><span class="c">%</span>
+  <span class="k">\fancyhf</span><span class="nb">{}</span><span class="c">%</span>
+  <span class="k">\fancyfoot</span><span class="na">[C]</span><span class="nb">{</span><span class="k">\thepage\ </span>of <span class="k">\pageref</span><span class="nb">{</span>LastPage<span class="nb">}}}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>Another fancyhdr demo<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span><span class="k">\texttt</span><span class="nb">{</span>tex.stackexchange<span class="nb">}</span> <span class="k">\textit</span><span class="nb">{</span>et al<span class="nb">}}</span>
+<span class="k">\maketitle</span>
+
+<span class="k">\lipsum</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Footers+with+page+X+of+Y
+&amp;snip=%5Cdocumentclass%5B12pt%5D%7Barticle%7D%0A%5Cusepackage%5Bpaperheight%3D16cm%2C+paperwidth%3D12cm%2C%25+Set+the+height+and+width+of+the+paper%0Aincludehead%2C%25+See+below+for+an+explanation%0Anomarginpar%2C%25+We+don%27t+want+any+margin+paragraphs%0Atextwidth%3D10cm%2C%25+Set+%5Ctextwidth+to+10cm%0Aheadheight%3D16pt+%25+Set+%5Cheadheight+to+16pt+to+avoid+fancyhr+warnings%0A%5D%7Bgeometry%7D%0A%5Cusepackage%7Blastpage%7D%0A%5Cusepackage%7Bfancyhdr%7D%0A%5Cusepackage%7Blipsum%7D+%25+just+for+mock+text%0A%5Cpagestyle%7Bfancy%7D%0A%5Crenewcommand%7B%5Cheadrulewidth%7D%7B0pt%7D%0A%5Cfancyfoot%5BC%5D%7B%5Cthepage%5C+of+%5Cpageref%7BLastPage%7D%7D%0A%5Cfancypagestyle%7Bplain%7D%7B%25%0A++%5Crenewcommand%7B%5Cheadrulewidth%7D%7B0pt%7D%25%0A++%5Cfancyhf%7B%7D%25%0A++%5Cfancyfoot%5BC%5D%7B%5Cthepage%5C+of+%5Cpageref%7BLastPage%7D%7D%7D%0A%5Cbegin%7Bdocument%7D%0A%5Ctitle%7BAnother+fancyhdr+demo%7D%0A%5Cauthor%7B%5Ctexttt%7Btex.stackexchange%7D+%5Ctextit%7Bet+al%7D%7D%0A%5Cmaketitle%0A%0A%5Clipsum%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<h4><span class="mw-headline" id="Creating_completely_blank_pages:_no_headers_or_footers">Creating completely blank pages: no headers or footers</span></h4>
+<p>As noted in the <a rel="nofollow" class="external text" href="http://mirrors.ctan.org/macros/latex/contrib/fancyhdr/fancyhdr.pdf"><code>fancyhdr</code> package documentation</a>, if you create a document using  
+</p>
+<ul><li>the <code>book</code> class <em>without</em> the <code>openany</code> option, or</li>
+<li>the <code>report</code> class with the <code>openright</code> option</li></ul>
+<p>any part (<code>\part{...}</code>) and chapter (<code>\chapter{...}</code>) pages will start on odd-numbered (right-hand) pages. 
+</p><p>Occasionally, LaTeX needs to insert a "blank" page to ensure the next chapter or part page starts on a right-hand page—but that "blank" page will still contain headers that many people consider to be unsightly.
+</p>
+<h5><span id="Example_of_.22blank.22_pages_in_a_book_class_document"></span><span class="mw-headline" id="Example_of_&quot;blank&quot;_pages_in_a_book_class_document">Example of "blank" pages in a <code>book</code> class document</span></h5>
+<p>The following <code>book</code> class example creates 5 pages including 2 right-hand facing chapter pages.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\frontmatter</span>
+<span class="k">\maketitle</span>
+This is frontmatter which uses Roman numerals.
+
+<span class="k">\mainmatter</span>
+<span class="k">\chapter</span><span class="nb">{</span>Where do I start<span class="nb">}</span>
+Chapter 1: A short chapter that ends on page 1.
+
+<span class="k">\chapter</span><span class="nb">{</span>Things I remember<span class="nb">}</span>
+Chapter 2: Starts on page 3, so <span class="k">\LaTeX</span><span class="nb">{}</span> inserts a ``blank'' page 2.
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Demonstrating+blank+pages&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%25+Choose+a+conveniently+small+page+size%0A%5Cusepackage%5Bpaperheight%3D16cm%2Cpaperwidth%3D12cm%2Ctextwidth%3D10cm%5D%7Bgeometry%7D%0A%5Ctitle%7BMemoirs+of+a+%5CTeX%7B%7D+user%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cfrontmatter%0A%5Cmaketitle%0AThis+is+frontmatter+which+uses+Roman+numerals.%0A%0A%5Cmainmatter%0A%5Cchapter%7BWhere+do+I+start%7D%0AChapter+1%3A+A+short+chapter+that+ends+on+page+1.%0A%0A%5Cchapter%7BThings+I+remember%7D%0AChapter+2%3A+Starts+on+page+3%2C+so+%5CLaTeX%7B%7D+inserts+a+%60%60blank%27%27+page+2.%0A%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>book</code> class example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+As shown in the following annotated graphic, chapter 2 starts on page 3 because LaTeX inserted page 2 which is nominally “blank” but contains an unsightly header. 
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/107L1qxt9Ptatm7E5cljJX/819b658e1fa2254ee904b127eed89fc1/chaptersandblanks.svg" width="75%" alt="Example of blank pages in a book class document" />
+
+</p><p>A variety of mechanisms—code and packages—can be used to ensure inserted pages, such as page 2 above, are completely blank. Here are some examples:
+</p>
+<ul><li>use the <code>emptypage</code> package by adding the following line to your document's preamble:</li></ul>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>emptypage<span class="nb">}</span>
+</pre></div>
+</div></div>
+<ul><li>manually insert a blank page at the end of chapter 1 so that chapter 2 will naturally start on a right-hand page, removing the need for LaTeX to force a new page. The following code is suggested in the <code>fancyhdr</code> package documentation:</li></ul>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\clearpage</span>
+<span class="k">\begingroup</span>
+<span class="k">\pagestyle</span><span class="nb">{</span>empty<span class="nb">}</span><span class="k">\cleardoublepage</span>
+<span class="k">\endgroup</span>
+</pre></div>
+</div></div>
+<ul><li>similarly, you can create a new page at the end of chapter 1 and set its style to empty using <code>\thispagestyle{empty}</code>:</li></ul>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newpage\thispagestyle</span><span class="nb">{</span>empty<span class="nb">}</span>
+</pre></div>
+</div></div>
+<p>For more information on, and examples of, using truly blank pages, consult the <a rel="nofollow" class="external text" href="https://texfaq.org/FAQ-reallyblank">TUG FAQ</a> or search for <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/questions/tagged/blank-page">questions tagged <code>blank-page</code> on TeX.stackechange</a>.
+</p>
+<ul><li><strong>TIP</strong>: The TeX FAQ has an entry titled <a rel="nofollow" class="external text" href="https://texfaq.org/FAQ-nopageno%7CHow">to get rid of page numbers </a> which contains some useful advice.</li></ul>
+<h4><span class="mw-headline" id="Changing_the_style_of_a_single_page">Changing the style of a single page</span></h4>
+<p>Sometimes is convenient to change the style of a specific page; for example, removing the header and footer from the current chapter page:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\maketitle</span>
+<span class="k">\chapter</span><span class="nb">{</span>Using different page styles<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[1]</span> <span class="c">% via \usepackage{lipsum}</span>
+<span class="k">\chapter</span><span class="nb">{</span>Sample Chapter<span class="nb">}</span>
+<span class="k">\thispagestyle</span><span class="nb">{</span>empty<span class="nb">}</span> <span class="c">% remove headers/footers from the chapter page</span>
+<span class="k">\lipsum</span><span class="na">[1]</span>
+<span class="k">\clearpage</span>
+<span class="k">\section</span><span class="nb">{</span>New section<span class="nb">}</span>
+<span class="k">\lipsum</span><span class="na">[1]</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Setting+the+style+of+a+single+page&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%5Cusepackage%7Blipsum%7D%0A%5Ctitle%7BChanging+the+style+of+a+single+page%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cmaketitle%0A%5Cchapter%7BUsing+different+page+styles%7D%0A%5Clipsum%5B1%5D+%25+via+%5Cusepackage%7Blipsum%7D%0A%5Cchapter%7BSample+Chapter%7D%0A%5Cthispagestyle%7Bempty%7D+%25+remove+headers%2Ffooters+from+the+chapter+page%0A%5Clipsum%5B1%5D%0A%5Cclearpage%0A%5Csection%7BNew+section%7D%0A%5Clipsum%5B1%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<h4><span class="mw-headline" id="Multi-line_headers_or_footers">Multi-line headers or footers</span></h4>
+<p>Headers and footers produced by <code>fancyhdr</code> can contain multiple lines. The following example is based on the <code>fancyhdr</code> documentation but expanded to include a multiline header. This example uses the <code>datetime2</code> package command <code>\DTMnow</code> to insert the date on which the draft document was typeset. The command <code>\\</code> is used to terminate the first line of the header.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>book<span class="nb">}</span>
+<span class="k">\usepackage</span>[paperheight=16cm, paperwidth=12cm,<span class="c">% Set the height and width of the paper</span>
+includehead,
+nomarginpar,<span class="c">% We don't want any margin paragraphs</span>
+textwidth=10cm,<span class="c">% Set \textwidth to 10cm</span>
+headheight=25pt,<span class="c">% Set \headheight to 25pt to accommodate the multiline header</span>
+]<span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fancyhdr<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>datetime2<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="c">% Set the page style to "fancy"...</span>
+<span class="k">\pagestyle</span><span class="nb">{</span>fancy<span class="nb">}</span>
+<span class="c">%... then configure it.</span>
+<span class="k">\fancyhead</span><span class="nb">{}</span> <span class="c">% clear all header fields</span>
+<span class="k">\fancyhead</span><span class="na">[RO,LE]</span><span class="nb">{</span><span class="k">\textbf</span><span class="nb">{</span>DRAFT<span class="nb">}</span> (Typeset <span class="k">\DTMnow</span>)<span class="k">\\\textbf</span><span class="nb">{</span>The performance of new graduates<span class="nb">}}</span>
+<span class="k">\fancyfoot</span><span class="nb">{}</span> <span class="c">% clear all footer fields</span>
+<span class="k">\fancyfoot</span><span class="na">[LE,RO]</span><span class="nb">{</span><span class="k">\thepage</span><span class="nb">}</span>
+<span class="k">\fancyfoot</span><span class="na">[LO,CE]</span><span class="nb">{</span>From: K. Grant<span class="nb">}</span>
+<span class="k">\fancyfoot</span><span class="na">[CO,RE]</span><span class="nb">{</span>To: Dean A. Smith<span class="nb">}</span>
+<span class="c">% Some content:</span>
+This is page 1.<span class="k">\newpage</span>
+This is page 2.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Multiline+header+fancyhdr+package+example
+&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%5Cusepackage%5Bpaperheight%3D16cm%2C+paperwidth%3D12cm%2C%25+Set+the+height+and+width+of+the+paper%0Aincludehead%2C%0Anomarginpar%2C%25+We+don%27t+want+any+margin+paragraphs%0Atextwidth%3D10cm%2C%25+Set+%5Ctextwidth+to+10cm%0Aheadheight%3D25pt%2C%25+Set+%5Cheadheight+to+25pt+to+accommodate+the+multiline+header%0A%5D%7Bgeometry%7D%0A%5Cusepackage%7Bfancyhdr%7D%0A%5Cusepackage%7Bdatetime2%7D%0A%5Cbegin%7Bdocument%7D%0A%25+Set+the+page+style+to+%22fancy%22...%0A%5Cpagestyle%7Bfancy%7D%0A%25...+then+configure+it.%0A%5Cfancyhead%7B%7D+%25+clear+all+header+fields%0A%5Cfancyhead%5BRO%2CLE%5D%7B%5Ctextbf%7BDRAFT%7D+%28Typeset+%5CDTMnow%29%5C%5C%5Ctextbf%7BThe+performance+of+new+graduates%7D%7D%0A%5Cfancyfoot%7B%7D+%25+clear+all+footer+fields%0A%5Cfancyfoot%5BLE%2CRO%5D%7B%5Cthepage%7D%0A%5Cfancyfoot%5BLO%2CCE%5D%7BFrom%3A+K.+Grant%7D%0A%5Cfancyfoot%5BCO%2CRE%5D%7BTo%3A+Dean+A.+Smith%7D%0A%25+Some+content%3A%0AThis+is+page+1.%5Cnewpage%0AThis+is+page+2.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>fancyhdr</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>The following graphic shows the output produced by this example:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/1gP65de1VY5Ma3yqfO0CzX/f66320464b691cdf475e4cfe97918edc/MultilineHeader-plain.svg" alt="An example of a multi-line header produced by fancyhdr" />
+
+</p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="Operators.html" title="Operators">Operators</a></li>
+<li><a href="Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="French.html" title="French">French</a></li>
+<li><a href="German.html" title="German">German</a></li>
+<li><a href="Greek.html" title="Greek">Greek</a></li>
+<li><a href="Italian.html" title="Italian">Italian</a></li>
+<li><a href="Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="Korean.html" title="Korean">Korean</a></li>
+<li><a href="Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="Russian.html" title="Russian">Russian</a></li>
+<li><a href="Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="Indices.html" title="Indices">Indices</a></li>
+<li><a href="Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="Counters.html" title="Counters">Counters</a></li>
+<li><a href="Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="Tutorials.html">Tutorials</a></li><li><a href="Inserting_Images.html">How to insert images</a></li><li><a href="Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Headers_and_footers.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Headers_and_footers" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==" src="../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="mfOU85Id1inpNhXp2PAFjw==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Headers_and_footers by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:54:09 GMT -->
+</html>

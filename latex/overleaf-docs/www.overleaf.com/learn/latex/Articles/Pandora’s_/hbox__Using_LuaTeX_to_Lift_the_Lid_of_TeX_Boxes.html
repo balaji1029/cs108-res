@@ -1,0 +1,452 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/Pandora%E2%80%99s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:03:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Pandora’s \hbox: Using LuaTeX to Lift the Lid of TeX Boxes - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Pandora’s \hbox: Using LuaTeX to Lift the Lid of TeX Boxes"><meta name="og:title" content="Pandora’s \hbox: Using LuaTeX to Lift the Lid of TeX Boxes"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="hbox__Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes.html"><link rel="stylesheet" href="../../../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="hbox__Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" hreflang="ja"><link rel="preload" href="../../../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="wudMOpKQy583pOWE0PawUQ=="><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="QCu6kaSQ-akXE_lSyGxFZ-aOsdGKoC5VoI58"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/Pandora%E2%80%99s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/Pandora%E2%80%99s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Pandora’s \hbox: Using LuaTeX to Lift the Lid of TeX Boxes</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Why_choose_LuaTeX?"><span class="tocnumber">2</span> <span class="toctext">Why choose LuaTeX?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#pdfTeX/XeTeX_vs_LuaTeX:_in_pictures"><span class="tocnumber">2.1</span> <span class="toctext">pdfTeX/XeTeX vs LuaTeX: in pictures</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#pdfTeX/XeTeX"><span class="tocnumber">2.1.1</span> <span class="toctext">pdfTeX/XeTeX</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#LuaTeX"><span class="tocnumber">2.1.2</span> <span class="toctext">LuaTeX</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Boxes_and_glue:_A_brief_reminder"><span class="tocnumber">3</span> <span class="toctext">Boxes and glue: A brief reminder</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#TeX_primitives_for_box_construction"><span class="tocnumber">3.1</span> <span class="toctext">TeX primitives for box construction</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Glue:_flexible_spacing"><span class="tocnumber">3.2</span> <span class="toctext">Glue: flexible spacing</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#An_\hbox_example"><span class="tocnumber">3.2.1</span> <span class="toctext">An \hbox example</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Back_to_LuateX"><span class="tocnumber">4</span> <span class="toctext">Back to LuateX</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#How_TeX_stores_boxes_in_memory:_an_analogy"><span class="tocnumber">4.1</span> <span class="toctext">How TeX stores boxes in memory: an analogy</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#How_TeX_stores_boxes_in_memory:_hlists_and_vlists"><span class="tocnumber">4.2</span> <span class="toctext">How TeX stores boxes in memory: hlists and vlists</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#An_simple_example_of_\directlua{...}_in_action"><span class="tocnumber">4.3</span> <span class="toctext">An simple example of \directlua{...} in action</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Putting_it_all_together:_An_Overleaf_project"><span class="tocnumber">5</span> <span class="toctext">Putting it all together: An Overleaf project</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#What_does_the_project_provide?"><span class="tocnumber">5.1</span> <span class="toctext">What does the project provide?</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Graphics_from_the_Overleaf_project:_A_brief_description"><span class="tocnumber">5.2</span> <span class="toctext">Graphics from the Overleaf project: A brief description</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#How_does_the_Overleaf_project_create_those_graphics?"><span class="tocnumber">5.3</span> <span class="toctext">How does the Overleaf project create those graphics?</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Project_examples"><span class="tocnumber">5.4</span> <span class="toctext">Project examples</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#\vbox_to_25pt{A}"><span class="tocnumber">5.4.1</span> <span class="toctext">\vbox to 25pt{A}</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#\vbox_to_25pt{\hbox{A}}"><span class="tocnumber">5.4.2</span> <span class="toctext">\vbox to 25pt{\hbox{A}}</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Simple_maths:_\hbox{$\displaystyle_\int_f(x)_dx$},_complex_box!"><span class="tocnumber">5.4.3</span> <span class="toctext">Simple maths: \hbox{$\displaystyle \int f(x) dx$}, complex box!</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Credits:_thanks_Patrick!"><span class="tocnumber">6</span> <span class="toctext">Credits: thanks Patrick!</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>Boxes and glue are two key concepts which provide the foundation for TeX’s typesetting model and capabilities. Building on the introductory material in a previous post, <a href="../Boxes_and_Glue__A_Brief%2c_but_Visual%2c_Introduction_Using_LuaTeX.html" title="Articles/Boxes and Glue: A Brief, but Visual, Introduction Using LuaTeX">Boxes and Glue: A Brief, but Visual, Introduction Using LuaTeX</a>, this extensively-illustrated article examines boxes and glue in more detail. We also present a new LuaTeX-based <a rel="nofollow" class="external text" href="https://www.overleaf.com/latex/examples/exploring-the-structure-of-tex-boxes-with-luatex/pwdrypmtdbgs">Overleaf project</a> that enables you to explore the deep inner structure of TeX boxes—providing insights which will help you to truly understand their behaviour. Creation of the Overleaf project was greatly facilitated by the work of Patrick Gundlach, so we offer <a href="#Credits:_thanks_Patrick!">our thanks to him</a>.</p>
+<h2><span id="Why_choose_LuaTeX.3F"></span><span class="mw-headline" id="Why_choose_LuaTeX?">Why choose LuaTeX?</span></h2>
+<p>Firstly, it is worth re-stating the difference between LuaTeX and LuaLaTeX:</p>
+<ul>
+<li>LuaTeX is the name of an executable TeX-based typesetting engine;</li>
+<li>LuaLaTeX refers to the use of the LaTeX macro package with the LuaTeX engine.</li>
+</ul> 
+<p>This distinction is extremely important because, in this article, we are exploiting the built-in capabilities of the LuaTeX engine itself, and not just leveraging the features/functionality of commands provided by the LaTeX macro package.</p>
+<p>Readers who are uncertain of the difference between a TeX engine and the LaTeX macro package may want to read one of our previously-published articles, <a href="../What%27s_in_a_Name__A_Guide_to_the_Many_Flavours_of_TeX.html" title="Articles/What's in a Name: A Guide to the Many Flavours of TeX">What's in a Name: A Guide to the Many Flavours of TeX</a>, which explains those differences in some detail. That same article also discusses “TeX” as a programming language and that TeX-based typesetting engines (e.g., pdfTeX, XeTeX and LuaTeX) not only vary in their features and functionality, but also have variations in the “flavour” of the TeX language they support. This brings us to our choice of LuaTeX. In addition to supporting a TeX-based programming language, LuaTeX also has the Lua scripting language embedded into into it—providing access to a simple, but very powerful, conventional programming language. Through Lua, and LuaTeX’s built-in functionality, you can explore and control the typesetting activities of LuaTeX in ways that no other TeX engine provides—and this includes the ability to probe the inner structures of TeX boxes; hence LuaTeX is the ideal (only) choice for this article and accompanying Overleaf project.</p>
+<h3><span id="pdfTeX.2FXeTeX_vs_LuaTeX:_in_pictures"></span><span class="mw-headline" id="pdfTeX/XeTeX_vs_LuaTeX:_in_pictures">pdfTeX/XeTeX vs LuaTeX: in pictures</span></h3>
+<p>The following <em>schematics</em> are intended to highlight an important comparison between the design of pdfTeX/XeTeX and LuaTeX. Both pdfTeX and XeTeX do, of course, allow users to write TeX code that can influence typesetting behaviour; however, the deeper internal structures contained within those TeX engines, and low-level data constructed during the typesetting process, are mostly inaccessible to user commands and macros. In that sense, they are <em>relatively</em> closed systems when compared to LuaTeX.</p>
+<h4><span id="pdfTeX.2FXeTeX"></span><span class="mw-headline" id="pdfTeX/XeTeX">pdfTeX/XeTeX</span></h4>
+<p>
+        <img src="https://www.filepicker.io/api/file/p3YPifEwSMCipQGKbPjf" />
+
+</p>
+<h4><span class="mw-headline" id="LuaTeX">LuaTeX</span></h4>
+<p>LuaTeX introduces a new primitive command called <code>\directlua{...}</code> through which you can write code that not only gives full access to the Lua language but also allows you to extend LuaTeX’s capabilities by writing plug-ins using languages such as C and C++. On Windows, such plugins are called <em>Dynamic Link Libraries</em> (.DLL); on Linux they are known as <em>Shared Object Libraries</em> (.so). However, LuaTeX’s real power is derived from a huge set of built-in Lua functions that provide access to the internals of LuaTeX—enabling extremely sophisticated control and programming of TeX-based typesetting. A set of such functions is known as an API (Application Programming Interface) and it is through LuaTeX’s API that you use Lua programs to communicate with its TeX-based typesetting engine and data structures.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/TY1TioaXSq6rIYAEvfkJ" />
+
+</p>
+<p>With LuaTeX’s <code>\directlua{...}</code> command you can, for example, access low-level internal TeX data structures hidden from view within other TeX engines. In addition, you can use Lua scripts to perform all sorts of programming calculations, string manipulation etc. and pass the results back to TeX: the possibilities are almost endless. However, this article is not intended to be a detailed exposition or tutorial on LuaTeX—though it is tempting to give examples which convey the incredible versatility of this astonishingly powerful TeX engine.</p>
+<h2><span class="mw-headline" id="Boxes_and_glue:_A_brief_reminder">Boxes and glue: A brief reminder</span></h2>
+<p>As introduced in the article <a rel="nofollow" class="external text" href="https://www.overleaf.com/blog/511-boxes-and-glue-a-brief-but-visual-introduction-using-luatex">Boxes and Glue: A Brief, but Visual, Introduction Using LuaTeX</a> boxes and glue are two key concepts that underpin TeX’s typesetting capabilities. The following diagram is offered as a very brief aide–mémoire on the behaviour of TeX’s horizontal and vertical box types. Note: horizontal boxes can, of course, contain text typeset in right-to-left languages, such as Arabic or Hebrew, which means the direction of box growth can be opposite to that shown for the horizontal box in the diagram below.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/tclg9ElRdCHQL30tRE3v" />
+
+</p>
+<h3><span class="mw-headline" id="TeX_primitives_for_box_construction">TeX primitives for box construction</span></h3>
+<p>Today, most people prepare their TeX documents using the LaTeX macro package which is designed to provide commands that insulate users from much of TeX’s low-level language—its so-called <em>primitives</em>—the core commands built into TeX engines (see the article <a href="../What%27s_in_a_Name__A_Guide_to_the_Many_Flavours_of_TeX.html" title="Articles/What's in a Name: A Guide to the Many Flavours of TeX">What's in a Name: A Guide to the Many Flavours of TeX</a> for a discussion of TeX primitives). The LaTeX macro collection provides a variety of macros for box creation and storage (saving) but if you strip away all the macro code you’ll find there are just 4 low-level primitive box-construction commands:</p>
+<p>For creating horizontal lists:</p>
+<ul><li>\hbox{...}</li></ul>
+<p>For creating and stacking vertical lists:</p>
+<ul>
+    <li>\vbox{...}</li>
+    <li>\vtop{...}</li>
+    <li>\vcenter{...}</li>
+</ul>
+<p>We won’t be explaining how to use all these box commands because there are plenty of examples and tutorials elsewhere on the web or in TeX/LaTeX books—but we will be taking a look into how boxes are represented and stored inside of TeX data structures.</p>
+<h3><span class="mw-headline" id="Glue:_flexible_spacing">Glue: flexible spacing</span></h3>
+<p>Glue is, in effect, a form of spacing used by TeX to space/position items horizontally or vertically. As a TeX user, we can instruct TeX to insert some glue that is of a fixed size or we can use glue that is flexible—having as much flexibility as we need, either to stretch or shrink depending on our requirements. One of TeX’s commands to create glue for horizontal spacing is called <code>\hskip</code> which takes the form</p> 
+<p><code><strong>\hskip</strong> &lt;natural width&gt; <strong>plus</strong> &lt;amount to stretch&gt; <strong>minus</strong> &lt;amount to shrink&gt;</code></p>
+<p><code><strong>plus</strong></code> and <code><strong>minus</strong></code> are TeX keywords but you don’t need to use them for every glue. If <code><strong>plus</strong></code> or <code><strong>minus</strong></code> are absent then the corresponding <code>&lt;amount to stretch&gt;</code> or <code>&lt;amount to shrink&gt;</code> is assumed to be zero. For example, <code>\hskip 3pt</code> inserts a fixed-width glue with no stretch or shrink component.</p>
+<p>For now, think of <code>&lt;amount to stretch&gt;</code> and <code>&lt;amount to shrink&gt;</code> as our <em>recommendations</em> to TeX because the exact amount of stretching or shrinking will be calculated by TeX.</p>
+<p>To help with these ideas, here is a diagram which represents glue as a spring. The <code>&lt;natural width&gt;</code> is the length of the spring when there is no tension (stretching) or compression (shrinking). The <code>&lt;amount to stretch&gt;</code> and <code>&lt;amount to shrink&gt;</code> are shown relative to the natural length of the spring.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/Ytp10OT3T46dHeE2CCzU" />
+
+</p>
+<h4><span id="An_.5Chbox_example"></span><span class="mw-headline" id="An_\hbox_example">An <code>\hbox</code> example</span></h4>
+<p>Suppose we want to create an <code>\hbox{...}</code> containing just the letters A, B, C and D and we need this box to be 100pt (100 TeX points) wide. In addition, it is safe to assume that the total width of those four characters is far less than 100pt, indicating that TeX need some way to fill up the remaining space within the box: we’ll use some glue to do that. However, because we do not know the exact amount of glue required to fill the box it is advisable to add some flexible glues and let TeX take care of calculating the amount of space those glues need to occupy. In the following code snippet, note the use of “%” to suppress interword spaces arising from the end-of-line characters.</p>
+<pre>\hbox to100pt{%
+A\hskip4pt plus3pt minus 2pt B%
+\hskip 0pt plus 2fil C%
+\hskip 0pt plus 2fill D%
+\hskip 0pt plus 3fill}</pre>
+<p>The resulting box looks like this (enlarged for clarity):</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/12p0R6ERsCrdFl3CXpOB" />
+
+</p><p><br />
+</p>
+<p>This <code>\hbox</code> is overlaid with dashed boxes (in red) to indicate the width of the characters (as TeX sees them). For typesetting purposes, characters are considered to be small boxes and the amount of glue required to fill this <code>\hbox</code>is determined (calculated) by taking into account the widths of each character.</p>
+<p>It turns out that TeX did not stretch or shrink the glue between A and B (set to 4pt) and there is no glue between B and C (set to 0pt). However, the glue between C and D and the glue between D and the end of the box have both stretched considerably because those glues have the most flexible stretch component—in effect, those glues absorbed all the stretching required to fill the box.</p>
+<h2><span class="mw-headline" id="Back_to_LuateX">Back to LuateX</span></h2>
+<p>So far we’ve explored boxes and glue and seen that LuaTeX allows access to internal TeX structures hidden from view with pdfTeX and XeTeX. It’s time for an example to make this more explicit but, firstly, we need to briefly acquaint ourselves with the way that TeX stores boxes in its memory—we’ll start with an analogy.</p>
+<h3><span class="mw-headline" id="How_TeX_stores_boxes_in_memory:_an_analogy">How TeX stores boxes in memory: an analogy</span></h3>
+<p>Suppose, for some reason, you needed to create a data model which describes a physical box. What data might you choose to provide such a description? One approach you could adopt is to split the information into two parts: data about the physical box itself and data which provides a list of the box contents. So, our simple model might look like this:</p>
+<ol>
+    <li>Data about the physical box (“metadata”):</li>
+<ul>
+    <li>width</li>
+    <li>height</li>
+    <li>depth</li>
+    <li>weight</li>
+        <li>colour</li>
+            <li>type (wooden, plastic, cardboard)</li>
+            
+</ul>
+<li>Data about box content: some form of list which describes the items that it contains—probably listed in no particular order. </li>
+</ol>
+<p>And there is a very close analogy with the way TeX stores boxes.</p>
+<h3><span class="mw-headline" id="How_TeX_stores_boxes_in_memory:_hlists_and_vlists">How TeX stores boxes in memory: hlists and vlists</span></h3>
+<p>Internally, TeX creates “containers” called <em>hlists</em> (horizontal lists) and <em>vlists</em> (vertical lists) which represent hboxes and vboxes respectively. These hlist/vlist objects provide a collection of “metadata” about the box, plus they provide access to the list of objects that the box actually contains—that list is called a <em>node list</em>. Unlike a physical box, where you can place objects inside it in any order, for TeX the order of box contents is extremely important—they are items to be typeset. If you have any programming or computer science background you won’t be surprised to learn that the objects within a TeX box are stored, and have their order of creation preserved, using a so-called <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Doubly_linked_list">doubly-linked list</a>. We won’t discuss linked lists any further detail because the web abounds with tutorials, examples and explanations.</p>
+<p>The concept of nodes and node lists is a fundamental aspect of how TeX works but for the purposes of this article we’ll give just a brief outline. Nodes are, in essence, a sort of “mini container” and (as of LuaTeX 1.04) there are some 50 different types of node: reflecting the inner data types and components that LuaTeX uses for typesetting. For example, there are nodes to represent: glyphs (arising from “characters”), glue, horizontal/vertical rules, penalties, “whatsits”, kerns and so forth. All typeset material will, eventually, become part of a huge node list and LuaTeX gives you direct access to those inner data structures. LuaTeX also lets you add, edit, amend or create node lists so that, for example, you can create boxes directly inside Lua code without having to use any TeX code at all. However, writing about that is for another day.</p>
+<h3><span id="An_simple_example_of_.5Cdirectlua.7B....7D_in_action"></span><span class="mw-headline" id="An_simple_example_of_\directlua{...}_in_action">An simple example of <code>\directlua{...}</code> in action</span></h3>
+<p>The following example creates an <code>\hbox</code> and saves it in box register 0. We then report the box’s width using traditional TeX code and obtain the same information using a second method via <code>\directlua{}</code>. Here, we run a small Lua script which accesses TeX’s internal box storage area to obtain the box’s width—of course, the two values are identical: 2412092sp (sp=scaled point: 65536sp = 1 TeX point). Ultimately, in this extremely simple example, the TeX code and Lua code both examine the same internal data structures to obtain the box’s width, but it is through the direct access route that LuaTeX opens the door to a wealth of information and control that is not available with other engines.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/oQG2AhEZSmaNzTYQfQVe" />
+
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\setbox</span>0=<span class="k">\hbox</span><span class="nb">{</span>A<span class="k">\hskip</span> 5pt B<span class="k">\hskip</span> 10pt C<span class="nb">}</span>
+<span class="k">\fontsize</span><span class="nb">{</span>18<span class="nb">}{</span>22<span class="nb">}</span><span class="k">\selectfont</span>
+<span class="k">\noindent</span> Using <span class="k">\TeX</span><span class="nb">{}</span> code, box 0 has width <span class="k">\number\wd</span>0<span class="k">\relax</span> <span class="k">\space</span> sp<span class="k">\par</span>
+<span class="k">\noindent</span> We can also use Lua and call one of Lua<span class="k">\TeX</span>'s functions to get the same
+information.<span class="k">\vskip</span>10mm
+<span class="k">\noindent</span> From Lua code, box 0 has width 
+<span class="k">\directlua</span><span class="nb">{</span>
+local boxwidth = tex.box[0].width
+tex.print(boxwidth.." sp")
+<span class="nb">}</span> which, of course, is identical to the value obtained from <span class="k">\TeX</span><span class="nb">{}</span> code.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<h2><span class="mw-headline" id="Putting_it_all_together:_An_Overleaf_project">Putting it all together: An <a rel="nofollow" class="external text" href="https://www.overleaf.com/latex/examples/exploring-the-structure-of-tex-boxes-with-luatex/pwdrypmtdbgs">Overleaf project</a></span></h2>
+<p>We’ve noted that, internally, TeX represents boxes as “containers” called hlists/vlists which store “metadata” about the box and provide access to the list of components from which the box is constructed. Using LuaTeX you can access the box “metadata” and the list of items contained in a TeX box: glyphs, glue, penalties, other boxes, and so forth. Using Lua scripts, it is possible to examine a box sitting in TeX’s memory and draw a detailed representation of what that box contains. A suitable representation of a TeX box and its content is achieved using <em>node graphs</em> and we have prepared an <a rel="nofollow" class="external text" href="https://www.overleaf.com/latex/examples/exploring-the-structure-of-tex-boxes-with-luatex/pwdrypmtdbgs">Overleaf project</a> which does that by leveraging an excellent Lua script written by Patrick Gundlach (see credits). We won’t describe the detailed processes required to examine boxes and generate node graphs—except to note that any program/script which processes TeX boxes has to be <em>recursive</em> because boxes can be nested: i.e., you can have hboxes within vboxes, within hboxes… combining all box types to a very deep level of nesting.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/1ZkEZ408S2SJ4CzzoJAx" />
+
+</p>
+<h3><span id="What_does_the_project_provide.3F"></span><span class="mw-headline" id="What_does_the_project_provide?">What does the project provide?</span></h3>
+<p>It implements just 1 command called <code>\dobox{box command}</code>, for example:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\dobox</span><span class="nb">{</span><span class="k">\hbox</span> to100pt<span class="nb">{</span><span class="c">%</span>
+A<span class="k">\hskip</span>4pt plus3pt minus 2pt
+B<span class="k">\hskip</span> 0pt plus 2fil
+C<span class="k">\hskip</span> 0pt plus 2fill
+D<span class="k">\hskip</span> 0pt plus 3fill<span class="nb">}}</span>
+</pre></div>
+<p>The <code>\dobox{...}</code> command performs a number of tasks:</p>
+<ol>
+<li>within your document it typesets the verbatim TeX code for your box;</li>
+<li>it generates an SVG graphic of the TeX box—you can embed this in a web page (as we have done within this blog post);</li>
+<li>it generates an SVG graphic of the node list—which you can also embed into web pages (as we have done within this blog post);</li>
+<li>it outputs a PDF graphic of the node list which is then imported into the main PDF document produced by the project.</li>
+</ol>
+<p>Node graphs can very quickly become extremely large due to the enormous amount of data that LuaTeX need to store in order to represent complex TeX boxes—such as the page currently being constructed, or typeset mathematics. For larger node lists, the imported PDF graphic may be clipped by your document’s page boundary—if you want to view a large node graph you can download a ZIP file of the project and extract the PDF graphic of interest. When you download the project's ZIP file make sure to choose  “Input and Output Files” from the drop-down option list:</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/FitKIWa6QNiwCxZwKLXX" />
+
+</p>
+<h3><span class="mw-headline" id="Graphics_from_the_Overleaf_project:_A_brief_description">Graphics from the Overleaf project: A brief description</span></h3>
+<p>Before we show some examples, it is worth making a few observations on the graphics produced by the Overleaf project—we’ll use the same <code>\hbox</code> example mentioned earlier in the article. Here it is wrapped up in the project’s <code>\dobox{...}</code> command:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\dobox</span><span class="nb">{</span><span class="k">\hbox</span> to100pt<span class="nb">{</span><span class="c">%</span>
+A<span class="k">\hskip</span>4pt plus3pt minus 2pt
+B<span class="k">\hskip</span> 0pt plus 2fil
+C<span class="k">\hskip</span> 0pt plus 2fill
+D<span class="k">\hskip</span> 0pt plus 3fill<span class="nb">}}</span>
+</pre></div>
+<p>Here is the <code>\hbox</code> produced by TeX—for clarity, the box has been scaled-up but the border is included in graphics produced by the Overleaf project.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/6SmMx8faRwC14stzwAiz" />
+</p>
+<p>Here is an <em>annotated</em> SVG diagram of the node list representing the above box—annotations were added to highlight the box “metadata” and the list of objects it contains: those annotations are not present in the graphics produced by the Overleaf project.</p>
+<p><a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/ZSwIylUR66eFYPMo0suX">
+        <img src="https://www.filepicker.io/api/file/ZSwIylUR66eFYPMo0suX" width="50%" />
+</a>
+</p>
+<p>If you look at the “metadata” section you might observe some unfamiliar parameters:</p>
+<ul>
+<li><code>glue_set</code></li>
+<li><code>glue_sign</code></li>
+<li><code>glue_order</code></li>
+</ul>
+<p>These parameters are the settings used by TeX to calculate how much the glue has to stretch or shrunk within this box and are just one example of data that you can easily obtain via LuaTeX but not with other TeX engines. Note that glue nodes contained within the box components <em>retain</em> the original glue values we typed in to create the box. This is essential because TeX provides the commands <code>\unhbox</code>, <code>\unvbox</code>, <code>\unhcopy</code>, <code>\unvcopy</code> which “unbox” the box’s contents and release them back into the input stream to once again take part in typesetting operations. It is only when TeX finally outputs (ships out) the box to a PDF or DVI file that <code>glue_set</code>, <code>glue_sign</code> and <code>glue_order</code> are applied to any glues contained in the box—to calculate the actual amount of stretching or shrinking required to position components within the box and then to generate appropriate PDF data or DVI opcodes.</p>
+<p>Another parameter listed in the “metadata” is <code>shift</code>: this is the value of box displacement resulting from applying TeX commands:</p>
+<ul>
+    <li><code>\raise</code>, <code>\lower</code> (applied to an <code>\hbox</code>);</li>
+    <li><code>\moveleft</code>, <code>\moveright</code> (applied to a <code>\vbox</code>).</li>
+</ul>
+<p>In our example, <code>shift</code> is 0pt because we did not displace the <code>\hbox</code> from its natural position.</p>
+<p>The <a rel="nofollow" class="external text" href="https://www.overleaf.com/latex/examples/exploring-the-structure-of-tex-boxes-with-luatex/pwdrypmtdbgs">Overleaf project</a> also outputs node graph diagrams in PDF format: here is a link to download a <a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/bezigXESC2FSasvjoh8A">PDF file version</a> of the node graph above.</p>
+<h3><span id="How_does_the_Overleaf_project_create_those_graphics.3F"></span><span class="mw-headline" id="How_does_the_Overleaf_project_create_those_graphics?">How does the Overleaf project create those graphics?</span></h3>
+<p>The Overleaf project leverages the ability to run software tools and utilities installed on Overleaf’s servers—see <a href="../Using_LuaTeX_to_run_tools_and_utilities_installed_on_Overleaf%e2%80%99s_servers.html" title="Articles/Using LuaTeX to run tools and utilities installed on Overleaf’s servers">this blog post</a> for more details and a sample project. To produce an SVG graphic representing a TeX box, the box’s TeX code is written out to a small file which is then typeset with pdfTeX to generate a DVI file—note that the pdfTeX program is executed by LuaTeX through the use of a few lines of Lua script. That DVI file is converted, on-the-fly, to SVG using the <code>dvisvgm</code> utility—which is shipped with the TeX Live distribution installed on Overleaf’s servers. <code>dvisvgm</code> is executed with command line option <code>-n</code> to ensure that any typeset text is converted to lines/curves so that correct rendering of the SVG file does not depend on TeX fonts being installed.</p>
+<p>To create the node graphs we use a Lua script called <code>hiviznodelist.lua</code> which is based on work by Patrick Gundlach. That script writes out a so-called <code>.gv</code> (Graphviz) file which is a text file containing a node graph described in the <code>dot</code> language. The <code>.gv</code> file is processed by a utility program called <code>dot</code> which outputs a node diagram in both PDF and SVG file formats.</p>
+<h3><span class="mw-headline" id="Project_examples">Project examples</span></h3>
+<p>Here are some additional examples with SVG graphics produced using the Overleaf project. Boxes containing a lot of text (e.g., in a \vbox), or complex mathematics, will produce enormous node graphs—if you explore the Overleaf project, it is advisable not to use unnecessarily complex boxes to demonstrate the features of interest to you.</p>
+<h4><span id=".5Cvbox_to_25pt.7BA.7D"></span><span class="mw-headline" id="\vbox_to_25pt{A}"><code>\vbox to 25pt{A}</code></span></h4>
+<p>This example demonstrates the effect of putting text directly into a <code>\vbox</code>: note that the node structure is quite complex, even for such a simple box. The reason for this complexity is that text placed directly into a <code>\vbox</code> causes TeX to undertake linebreaking. You can see that the <code>\vbox</code> is 345pt wide: the value of <code>\hsize</code> at the time this box was created.
+ 
+Also note that the character “A” is contained within an <code>hlist</code> that is also 345 points wide, and observe the large penalty (10000) together with <code>\parfillskip</code> and <code>\rightskip</code> glues at the end of the box contents. That penalty and the two glue items are inserted by TeX’s linebreaking activities. If you look at the <code>glue_set</code> value for the paragraph line (<code>hlist</code>) containing the letter “A” you will see it is extremely large (322.500000): why is that? It is because the paragraph line is 345pt wide but contains only a <code>\parindent</code> and the letter “A”: the remaining space has to be filled by the <code>\parfillskip</code> glue which has to stretch a considerable distance to fill the remaining space on the line.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/XRtX05BiSIaqRj6G0iuk" />
+
+</p><p><a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/pVtHsNGSQ4m09vBZuOpQ">
+        <img src="https://www.filepicker.io/api/file/pVtHsNGSQ4m09vBZuOpQ" width="600px" />
+</a>
+</p>
+<p><a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/nBS0uDs2QjqKCKljAm7r">Download PDF file</a></p>
+<h4><span id=".5Cvbox_to_25pt.7B.5Chbox.7BA.7D.7D"></span><span class="mw-headline" id="\vbox_to_25pt{\hbox{A}}"><code>\vbox to 25pt{\hbox{A}}</code></span></h4>
+<p>It is very instructive to compare this example to the previous one. Here, not only is the node graph considerably smaller, but the width of the <code>\vbox</code> is just 7.50002pt: the same width as the character “A”. The reason is that the “A” has been wrapped in an <code>\hbox</code> which prevents the <code>\vbox</code> triggering TeX to perform linebreaking—an important characteristic of boxes created with <code>\vbox</code>.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/YdNJHlMNQXWYEWGv8nz3" />
+
+</p><p><a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/LHepknjnRGOVEdghW4qH">
+        <img src="https://www.filepicker.io/api/file/LHepknjnRGOVEdghW4qH" />
+</a>
+</p>
+<p><a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/Yk3uCCQR5ao8Yd3TJCdE">Download PDF file</a></p>
+<h4><span id="Simple_maths:_.5Chbox.7B.24.5Cdisplaystyle_.5Cint_f.28x.29_dx.24.7D.2C_complex_box.21"></span><span class="mw-headline" id="Simple_maths:_\hbox{$\displaystyle_\int_f(x)_dx$},_complex_box!">Simple maths: <code>\hbox{$\displaystyle \int f(x) dx$}</code>, complex box!</span></h4>
+<p>This example demonstrates that even very simple typeset mathematics creates a detailed box structure: typesetting mathematics produces <em>extremely</em> complex data structures within TeX!</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/qPit8rKTTDuq18glCmmK" />
+
+</p><p><a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/oVFNNvCqT0eZP0qS2odk">
+        <img src="https://www.filepicker.io/api/file/oVFNNvCqT0eZP0qS2odk" width="600px" />
+</a>
+</p>
+<p><a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/D5TepsdaSdeYZvkuSEJt">Download PDF file</a></p>
+<h2><span id="Credits:_thanks_Patrick.21"></span><span class="mw-headline" id="Credits:_thanks_Patrick!">Credits: thanks Patrick!</span></h2>
+<p>Our thanks to <a rel="nofollow" class="external text" href="https://twitter.com/patrickgundlach">Patrick Gundlach</a> who has granted Overleaf permission to use and distribute a modified version of his Lua script, <code>viznodelist.lua</code>, which processes TeX boxes and outputs a file (in the <code>dot</code> language) that can be processed to draw a node graph. The Overleaf project contains a Lua script called <code>hiviznodelist.lua</code>—a renamed and modified version of Patrick’s original code, which is available on <a rel="nofollow" class="external text" href="http://gist.github.com/556247">Github</a>. Patrick has created an open-source LuaTeX-based typesetting system called <a rel="nofollow" class="external text" href="https://speedata.github.io/publisher/index.html">speedata Publisher</a> which you can download and use for free—commercial support options are also available.</p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../../Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../../Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../../Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../../Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../../Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../../Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../../Lists.html" title="Lists">Lists</a></li>
+<li><a href="../../Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../../Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../../Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../../Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../../Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../../Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../../Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../../Operators.html" title="Operators">Operators</a></li>
+<li><a href="../../Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../../Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../../Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../../List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../../Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../../Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../../Tables.html" title="Tables">Tables</a></li>
+<li><a href="../../Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../../Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../../Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../../TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../../Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../../Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../../Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../../Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../../Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../../Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../../Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../../Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../../Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../../Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../../International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../../Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../../Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../../Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../../French.html" title="French">French</a></li>
+<li><a href="../../German.html" title="German">German</a></li>
+<li><a href="../../Greek.html" title="Greek">Greek</a></li>
+<li><a href="../../Italian.html" title="Italian">Italian</a></li>
+<li><a href="../../Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../../Korean.html" title="Korean">Korean</a></li>
+<li><a href="../../Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../../Russian.html" title="Russian">Russian</a></li>
+<li><a href="../../Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../../Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../../Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../../Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../../Indices.html" title="Indices">Indices</a></li>
+<li><a href="../../Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../../Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../../Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../../Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../../Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../../Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../../Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../../Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="../How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../../Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../../Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../../Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../../Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../../Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../../Counters.html" title="Counters">Counters</a></li>
+<li><a href="../../Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../../Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../../Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../../Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../../Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../../Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../../Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../../XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../../Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../../Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../../Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../../Commands.html" title="Commands">Commands</a></li>
+<li><a href="../../Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../../Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../../Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../../Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../../Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../../Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../../Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../../CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../../Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../../Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../../Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../../Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../../Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../../Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../../Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../../Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../../Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../../Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="../../Tutorials.html">Tutorials</a></li><li><a href="../../Inserting_Images.html">How to insert images</a></li><li><a href="../../Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="hbox__Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Articles/Pandora’s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==" src="../../../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="wudMOpKQy583pOWE0PawUQ==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/Pandora%E2%80%99s_%5Chbox%3A_Using_LuaTeX_to_Lift_the_Lid_of_TeX_Boxes by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:03:03 GMT -->
+</html>

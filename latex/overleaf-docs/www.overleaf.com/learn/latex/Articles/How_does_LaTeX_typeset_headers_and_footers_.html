@@ -1,0 +1,776 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:10:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>How does LaTeX typeset headers and footers? - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="How does LaTeX typeset headers and footers?"><meta name="og:title" content="How does LaTeX typeset headers and footers?"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="How_does_LaTeX_typeset_headers_and_footers_.html"><link rel="stylesheet" href="../../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="How_does_LaTeX_typeset_headers_and_footers_.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" hreflang="ja"><link rel="preload" href="../../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="khEe53yU4qxY8FIY5R4CZg=="><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="vZ8qXINE-mi2PDywQVW8Uhs9SjGY5Z0UGWuU"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>How does LaTeX typeset headers and footers?</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Some_notes_on_storing_content:_TeX_nodes"><span class="tocnumber">2</span> <span class="toctext">Some notes on storing content: TeX nodes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Why_we’re_here:_understanding_mark_nodes"><span class="tocnumber">2.1</span> <span class="toctext">Why we’re here: understanding mark nodes</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#ε-TeX_adds_the_\marks_command"><span class="tocnumber">2.2</span> <span class="toctext">ε-TeX adds the \marks command</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Reasons_for_TeX’s_use_of_marks"><span class="tocnumber">3</span> <span class="toctext">Reasons for TeX’s use of marks</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Hypothetical_example:_how_to_get_the_wrong_headers"><span class="tocnumber">3.1</span> <span class="toctext">Hypothetical example: how to get the wrong headers</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#TeX’s_asynchronous_behaviour:_\mark_command_to_the_rescue"><span class="tocnumber">3.2</span> <span class="toctext">TeX’s asynchronous behaviour: \mark command to the rescue</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Pre-output_checks:_looking_for_mark_nodes"><span class="tocnumber">4</span> <span class="toctext">Pre-output checks: looking for mark nodes</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#LaTeX’s_classes:_page_styles_and_headers/footers"><span class="tocnumber">5</span> <span class="toctext">LaTeX’s classes: page styles and headers/footers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#More_on_page_styles"><span class="tocnumber">5.1</span> <span class="toctext">More on page styles</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#An_anatomy_of_header_and_footer_commands_based_on_page_style"><span class="tocnumber">5.2</span> <span class="toctext">An anatomy of header and footer commands based on page style</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#LaTeX’s_“model”_of_headers_and_footers"><span class="tocnumber">5.2.1</span> <span class="toctext">LaTeX’s “model” of headers and footers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-13"><a href="#Exploring_the_book_class"><span class="tocnumber">5.3</span> <span class="toctext">Exploring the book class</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#“Mark_commands”_and_“mark_data”"><span class="tocnumber">5.3.1</span> <span class="toctext">“Mark commands” and “mark data”</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#\markboth_and_\markright"><span class="tocnumber">5.3.2</span> <span class="toctext">\markboth and \markright</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Commands_for_the_output_routine"><span class="tocnumber">5.3.3</span> <span class="toctext">Commands for the output routine</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Examples_using_lower-level_LaTeX_commands"><span class="tocnumber">6</span> <span class="toctext">Examples using lower-level LaTeX commands</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Defining_a_minimal_page_style"><span class="tocnumber">6.1</span> <span class="toctext">Defining a minimal page style</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Changing_headers_for_the_book_class"><span class="tocnumber">6.2</span> <span class="toctext">Changing headers for the book class</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Using_ε-TeX’s_extended_marks_commands"><span class="tocnumber">6.3</span> <span class="toctext">Using ε-TeX’s extended marks commands</span></a>
+<ul>
+<li class="toclevel-3 tocsection-21"><a href="#Notes_on_ε-TeX"><span class="tocnumber">6.3.1</span> <span class="toctext">Notes on ε-TeX</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Example_using_marks_class_10"><span class="tocnumber">6.3.2</span> <span class="toctext">Example using marks class 10</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#A_worked_example_to_show_how_TeX_engines_determine_values_for_\botmark,_\topmark_and_\firstmark"><span class="tocnumber">7</span> <span class="toctext">A worked example to show how TeX engines determine values for \botmark, \topmark and \firstmark</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>If you are looking for a how-to guide on changing headers and footers please <a href="../Headers_and_footers.html" title="Headers and footers">visit our help page</a> because this article focuses on explaining low-level mechanisms used by TeX engines, and LaTeX, to produce headers and footers.
+</p>
+<ul><li><strong>Note (update)</strong>: This article explores the core LaTeX mark mechanism in use prior to June 2022, at which time a new and more versatile implementation of LaTeX’s mark handling was introduced. See <a rel="nofollow" class="external text" href="https://www.latex-project.org/help/documentation/ltmarks-doc.pdf">Overview of LaTeX’s new mark mechanism</a> for more details. For reasons of backward compatibility, LaTeX continues to support its legacy mark mechanism. Article material discussing the behavior of TeX engines is unaffected by these changes to LaTeX.</li></ul>
+<ul><li><strong>Note</strong>: the terms “LaTeX”, “TeX” and “TeX engine” are used throughout these discussions so it is helpful to understand their meaning—see the Overleaf article <a href="What%27s_in_a_Name__A_Guide_to_the_Many_Flavours_of_TeX.html" title="Articles/What's in a Name: A Guide to the Many Flavours of TeX">What’s in a Name: A Guide to the Many Flavours of TeX</a> for further information.</li></ul>
+<p>To provide useful background/context we start with an overview of some relevant low-level areas of TeX-based typesetting—including temporary (internal) content storage, page-breaking and construction. Discussions have been streamlined/simplified by considering a typeset page which contains a “body” of text plus some headers and footers. Page items such as figures (floats) and footnotes are not addressed because they involve a complex TeX mechanism called <em>insertions</em>, which is far outside the scope of this article.
+</p><p>We’ll start with the basic notion of <em>nodes</em>: the fundamental building blocks used by TeX engines for temporary (internal) content storage.
+</p>
+<h2><span class="mw-headline" id="Some_notes_on_storing_content:_TeX_nodes">Some notes on storing content: TeX nodes</span></h2>
+<p>As the underlying TeX engine processes your LaTeX code to produce typeset material—such as paragraphs, tables and mathematics—it needs to temporarily store that content within the memory of whichever TeX engine is being used to process your LaTeX code. To store typeset content TeX engines use a sequence of so-called <em>nodes</em>, which you can think of as variably-sized “chunks” of computer (device) memory, linked together to form a list (see this <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Linked_data_structure">Wikipedia article on linked data structures</a>).
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/g2A9lFMcbUkYow24DSqpd/fb508243c2217aa4c8fd1b825de945e3/HeadFootArticleFigr1-plain.svg" width="75%" alt="Schematic representation of how TeX engines store content using linked nodes" />
+
+</p><p>To represent the fundamental elements of TeX-based typesetting—such as characters, glue, boxes, penalties, kerns and <a href="#Why_we’re_here:_understanding_mark_nodes"><em>marks</em></a> (to name but a few)—TeX engines use different <em>types</em> of node. Some nodes, such as those for boxes, need to store more data compared to simpler node types such as character nodes; consequently, some nodes are larger than others—requiring more bytes to store them in memory. When reading about TeX you may encounter terms such as <em>character nodes</em>, <em>glue nodes</em>, <a href="#Why_we’re_here:_understanding_mark_nodes"><em>mark nodes</em></a> and so forth: you now know these are just names given to chunks of memory allocated to store data representing an element of TeX’s typesetting.
+</p>
+<h3><span id="Why_we.E2.80.99re_here:_understanding_mark_nodes"></span><span class="mw-headline" id="Why_we’re_here:_understanding_mark_nodes">Why we’re here: understanding <em>mark nodes</em></span></h3>
+<p>Of the many node types the one we need to discuss is called a <em>mark node</em> which is created by the <code>\mark</code> command: 
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\mark</span><span class="nb">{</span>stuff to store<span class="nb">}</span>
+</pre></div></div></div>
+<p>The <code>\mark</code> command does not directly produce any typeset content: its argument <code><em>stuff to store</em></code> is saved to memory for later use and a <em>mark node</em> is created to contain the memory location of <em>stuff to store</em>. As we’ll see, the <code>\mark</code> command was created <em>specifically</em> to assist with producing headers and footers. 
+</p><p>Mark nodes created by <code>\mark</code> commands are “embedded” into the page content ready for use during the final stages of page composition when the TeX engine is ready to add headers and footers to the typeset page (body). Typically, <code><em>stuff to store</em></code> will contain material such as page numbers and chapter or section titles/numbers—the building blocks of headers and footers.
+</p>
+<h3><span id=".CE.B5-TeX_adds_the_.5Cmarks_command"></span><span class="mw-headline" id="ε-TeX_adds_the_\marks_command">ε-TeX adds the <code>\marks</code> command</span></h3>
+<p><span id="etex"></span><a rel="nofollow" class="external text" href="https://texdoc.org/serve/e-TeX/0">Version 2 of ε-TeX</a>, an extension to Knuth’s original TeX, was published in 1998 and provides new capabilities together with enhancements to existing features. Today, most of ε-TeX’s enhancements have been incorporated into the mainstream TeX engines: pdfTeX, LuaTeX and XeTeX—see the <a href="../TeX_engine_command_line_options_for_pdfTeX%2c_XeTeX_and_LuaTeX.html" title="TeX engine command line options for pdfTeX, XeTeX and LuaTeX"><strong><code>-etex</code></strong> command line option of TeX engines</a> which enables use of ε-TeX extensions. 
+</p><p>Knuth’s original TeX software provides the \mark command which creates just 1 “class”, or “type” of mark node. Your document could include many \mark commands but they all create mark nodes of the same “type” or “class”—there’s no built-in mechanism to group or classify them. This restriction was removed by an ε-TeX enhancement: the \marks command which is supported by pdfTeX, LuaTeX and XeTeX:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\marks</span> n <span class="nb">{</span>stuff to store<span class="nb">}</span>
+</pre></div></div></div>
+<p>where <code>n</code> is an integer (<code>0</code> &lt;= <code>n</code> &lt; <code>32768</code>) that determines the mark node <em>class</em>. 
+</p><p>Notes:
+</p>
+<ul><li>writing <code>\marks 0</code> (i.e., <code>n</code>=<code>0</code>) is synonymous with using TeX’s original <code>\mark</code> command</li>
+<li>ε-TeX also introduced mark variables (<a href="#Pre-output_checks:_looking_for_mark_nodes">see later</a>) for each class (<code>n</code>) of mark: <code>\firstmarks n</code>, <code>\topmarks n</code> and <code>\botmarks n</code>. Selected classes of mark variables could be used to provide mark data for specific typesetting tasks.</li>
+<li>LuaTeX increased the maximum value of <code>n</code> to <code>65535</code>, enabling \(2^{16}\) mark classes</li></ul>
+<h2><span id="Reasons_for_TeX.E2.80.99s_use_of_marks"></span><span class="mw-headline" id="Reasons_for_TeX’s_use_of_marks">Reasons for TeX’s use of marks</span></h2>
+<p>To understand <em>why</em> (and how) TeX engines use the <code>\mark</code> (or <code>\marks</code>) command to produce headers and footers we need to appreciate some “quirks” of TeX engine mechanisms for constructing pages—finding page breaks and shipping out completed pages to a PDF file. In reality, those page-construction processes are complex but the core principles/concepts can be simplified to provide sufficient background explanations which aid our understanding of marks.
+</p><p>As a TeX engine completes typesetting individual content items such as paragraphs, tables or mathematics, it calls an internal routine (a function called <code>build_page(...)</code>) which tries to add those newly typeset items to the page currently being constructed in memory. When that new material is added to the page being built, TeX also checks whether that newly-added content has made the current page become “suitably full”. If the page is full TeX can create a <em>page break</em>—sending that page’s worth of content for final processing (“packaging”) and subsequent output to the PDF file.
+</p><p>One key feature of the final stage of page packaging (composition) is something called an <em>output routine</em> which is, in effect, a user-defined sequence of commands used to package-up the page of content to make it ready for sending to the PDF file. One example activity of  “packaging-up” is to add headers and footers, but there are numerous ways to use output routines—for example, see <a rel="nofollow" class="external text" href="https://tug.org/TUGboat/tb11-1/tb27salomon.pdf">this article in TUGboat</a>. Output routines are a fairly complex area of TeX so we won’t go into detail here: for present purposes just remember that the final stage of page composition involves using some user-defined sequence of commands (collectively called an <em>output routine</em>).
+</p><p>But let’s consider what could happen when TeX completes typesetting a lengthy paragraph of text, breaking it into a sequence of individual typeset lines. TeX will want to add that newly-typeset paragraph—line-by-line—to the page currently being built but, perhaps, only <em>some</em> of those lines can fit on the current page. Note by “page” we are referring to the main text area (page body) which <em>does not</em> include other page elements such as headers and footers which are added later (by the output routine). 
+</p><p>After several paragraph lines have been added to the current page, it could become “suitably full” and time for TeX to create a page break. However, we have some “leftover” material because only <em>part</em> of the paragraph made it to the current page: the “excess paragraph content” is saved for later, ready for creation of the <em>next</em> page. The following graphic illustrates this idea: part of the paragraph is on the <em>current</em> page and part is held back for the <em>next</em> page.
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/7jICMdvERhykvT5xjeF0w2/6ebb575460a28009d94e5c3aeecf5182/HeadFootArticleFig2r-plain.svg" alt="Schematic representation of a paragraph straddling a page break" />
+
+</p><p>This paragraph example demonstrates that a TeX engine will often process (typeset) pieces of content which cannot, <em>in their entirety</em>, fit on the current page—because that content reaches beyond the point at which a page break becomes necessary. Recall that TeX engines find linebreaks by inputting, then typesetting, <em>whole paragraphs</em> and, unlike some applications, do not adopt a line-by-line approach to typesetting paragraphs. In other words, TeX typesets the <em>entire</em> paragraph whether or not it fits on the current page (that’s worked out later). Incidentally, the principle of “typeset-in-full then add to the current page” holds true for other types of TeX content, including tables which are fully read-in from the .tex file and typeset in their entirety prior to any attempt at adding them to the current page.
+</p><p>For our paragraph example, the complete text of that paragraph, <em>including any commands within that text</em>, has been fully processed—meaning that TeX’s typesetting has reached a certain location in your <code>.tex</code> file. The “current internal state” of the TeX engine, such as the value of variables or stored parameter settings, will reflect the material, including any commands, processed up to the current location—the end of the paragraph.
+</p><p>Although the complete paragraph has been typeset, some of it cannot be accommodated by the current page, resulting in “excess paragraph content” being saved for the <em>next</em> page. Within the LaTeX code (text plus commands) which produced the “excess paragraph content”, the TeX engine <em>could</em> have called any number of commands and macros which changed values and variables stored internally by the TeX engine—i.e., made changes to TeX’s “current state”.
+</p><p>The following diagram illustrates an extremely important TeX “quirk”, one which impacts several aspects of TeX-based typesetting. Looking at the right-hand side of the diagram you see a representation of nodes comprising all the content currently stored in memory: the light grey area contains nodes forming the <em>current</em> page and the dark grey area is typeset content destined for the <em>next</em> page. This scenario reflects our paragraph example: the dark grey area represents the “excess paragraph content”: lines of text held back because they don’t fit on the current page.
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/1pjlADrnqW25lfL5TEHIRm/9e328ff973a5f92c33d43a457e1bcbb7/HeadFootArticleFig3r-plain.svg" alt="Schematic representation of the node location where TeX finds a page break, also showing content held back for the next page" />
+
+</p><p>Recall that once TeX has a “suitably full” page (body) it passes that content to something called an <em>output routine</em> which is a user-defined sequence of commands. Among other things, the output routine adds headers and footers to the page body, finalising the page in readiness for shipping it out to the PDF file. 
+</p><p>Our graphic (above) represents the instance TeX has chosen to make a page break at some particular node, such as <code>\baselineskip</code> glue between typeset lines, and is ready to begin packaging the current page using the output routine—a sequence of built-in commands and user-defined macros. <em>However</em>, in addition to content comprising the current page (stored in memory) TeX has already processed and stored (in memory) <em>additional material</em>, from your <code>.tex</code> file. That extra material extends <em>beyond the page break</em> and <em>could</em> have included commands which changed important page-related values or variables, affecting TeX’s “current internal state”— which includes values of internal parameters or data stored by macros. 
+</p><p>When TeX starts to package the current page, its “current internal state” is <em>not</em> defined by everything typeset up to the page-break location because TeX has already <em>gone past that point</em> in your file and processed additional material. If you consider the location in your file corresponding to where the page break takes place, and the location TeX has actually reached in your <code>.tex</code> file, the two corresponding internal states of TeX, including stored data and the value of variables, could be very different. The current state of TeX’s typesetting is usually ahead of where the page break occurs; i.e., TeX's typesetting activities <em>are not synchronised</em> with the process of outputting typeset pages via the output routine. 
+</p>
+<h3><span class="mw-headline" id="Hypothetical_example:_how_to_get_the_wrong_headers">Hypothetical example: how to get the wrong headers</span></h3>
+<p>The following diagram illustrates hypothetical commands <code>\myheader</code> and <code>\myfooter</code> used to store the desired text of headers and footers; for example, using basic definitions such as 
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newtoks\headertoks</span><span class="c">% a new token list variable for the header text</span>
+<span class="k">\newtoks\footertoks</span><span class="c">% a new token list variable for the footer text</span>
+<span class="c">% Use \global to ensure stored header or footer data is </span>
+<span class="c">% accessible everywhere, including commands in the </span>
+<span class="c">% output routine</span>
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\myheader</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\global\headertoks</span>=<span class="nb">{</span>#1<span class="nb">}}</span>
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\myfooter</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\global\footertoks</span>=<span class="nb">{</span>#1<span class="nb">}}</span>
+</pre></div></div></div>
+<p>in which <code>\headertoks</code> and <code>\footertoks</code> are token lists used to store the text of headers and footers.  
+</p><p>In addition, our hypothetical example also has an output routine which obtains the header and footer text from the current values of <code>\myheader</code> and <code>\myfooter</code>. As shown in the diagram, within the content destined for the current page, <code>\myheader</code> and <code>\myfooter</code> set the appropriate (correct) values. However, it would be possible for <code>\myheader</code> and/or <code>\myfooter</code> to be called within a paragraph which straddles a page break. Because TeX has to process the entire paragraph, <code>\myheader</code> and <code>\myfooter</code> would be called again to reset the header/footer text saved in “TeX’s internal state”, producing values which are not correct for the current page. When the output routine produces the header and footer they will contain text intended for the next page.
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/5eWzdNFCbwUKoTOFNzU2DL/9239bbeeea039346584e366f801499d3/HeadFootArticleFig4r-plain.svg" alt="Graphic depicting incorrect headers and footers produced if the output routine uses TeX macros only to retrieve header and footer text" />
+
+</p>
+<h3><span id="TeX.E2.80.99s_asynchronous_behaviour:_.5Cmark_command_to_the_rescue"></span><span class="mw-headline" id="TeX’s_asynchronous_behaviour:_\mark_command_to_the_rescue">TeX’s asynchronous behaviour: <code>\mark</code> command to the rescue</span></h3>
+<p>TeX’s typesetting (content construction) activities are <em>not synchronised</em> with the final process of outputting a typeset page via commands contained in the output routine. When it is time to output a page, the actual internal state of TeX is ahead of any state it might have had at the location of the page break—where it typeset the final piece of content on the current page being output. 
+</p><p>In <a rel="nofollow" class="external text" href="https://www.amazon.co.uk/TeXbook-Donald-Knuth/dp/0201134489">The TeXbook</a>, Donald Knuth, TeX’s creator, describes this situation as 
+</p>
+<blockquote><p>... TeX’s output routine lags behind its page-construction activities</p></blockquote>
+<p>Because of this unsynchronized relationship, “special facilities” in the form of the <em>marks mechanism</em>, applied through the <code>\mark</code> (or <code>\marks n</code>) command, are required to ensure headers and footers contain material relevant to the actual page being output. The <code>\mark</code> command embeds mark nodes into the page content, storing the memory location of content which can be used for the host page’s header and footer. 
+</p><p>The author of the well-known and respected book <a rel="nofollow" class="external text" href="https://www.eijkhout.net/tex/tex-by-topic.html">TeX by Topic</a> describes the <code>\mark</code> mechanism as 
+</p>
+<blockquote><p>... the main mechanism through which the output routine can obtain information about the contents of the currently broken-off page, in particular its top and bottom.</p></blockquote>
+<p>The <code>\mark</code> command is a mechanism designed to circumvent the asynchronous nature of TeX’s page-breaking and output routine algorithm.
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/9MzAOvcZa4lOjVYtIX8MG/bbe46a4ae4a42e476965b1016f20bded/HeadFootArticleFig5r-plain.svg" alt="Schematic representation of mark data (nodes) embedded in the page body content" />
+
+</p>
+<h2><span class="mw-headline" id="Pre-output_checks:_looking_for_mark_nodes">Pre-output checks: looking for mark nodes</span></h2>
+<p><span id="filtering"></span>After the TeX engine has determined the location of a page break, it calls an internal routine (called <code>fire_up()</code>) which does a lot of pre-processing prior to the output routine completing page composition and writing the finished page to the PDF file. An important part of those pre-processing steps is to set the value of three <em>global mark variables</em>: <code>\botmark</code>, <code>\topmark</code> and <code>\firstmark</code> which are used to provide data for constructing headers and footers. Of course, a page can contain multiple mark nodes but these are filtered to produce the three mark variables which act as follows:
+</p>
+<ul><li><strong><code>\botmark</code></strong> is the mark in effect at the current page break; i.e., the last mark seen on the <em>current</em> page</li>
+<li><strong><code>\topmark</code></strong> is the value of <code>\botmark</code> from the <em>previous</em> page</li>
+<li><strong><code>\firstmark</code></strong> is the first mark on the <em>current</em> page—the first mark between <code>\topmark</code> and <code>\botmark</code></li></ul>
+<p>The following schematic shows the basic principles of pre-processing the typeset page content to determine values for the three global mark variables <code>\botmark</code>, <code>\topmark</code> and <code>\firstmark</code>:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/6DTxqO3hIJzitApPF8plK7/f586ef50daad862a32717d4892f9efad/HeadFootArticleFig6r-plain.svg" alt="Schematic representation of basic principles used to determine values for the three global mark variables \botmark, \topmark and \firstmark" />
+
+</p><p>The next section uses some of the explanations provided above to outline how LaTeX typesets headers and footers.
+</p>
+<h2><span id="LaTeX.E2.80.99s_classes:_page_styles_and_headers.2Ffooters"></span><span class="mw-headline" id="LaTeX’s_classes:_page_styles_and_headers/footers">LaTeX’s classes: page styles and headers/footers</span></h2>
+<p>When you write <code>\documentclass{<em>class</em>}</code> where <code><em>class</em></code> might be <code>article</code>, <code>book</code>, <code>report</code> or <code>letter</code>, LaTeX loads a file named <code><em>class</em>.cls</code>; for example, <code>book.cls</code>, <code>article.cls</code> and so forth. Those <code>.cls</code> files contain LaTeX code to implement class-specific variations of various commands and features expected to be present in, and provided by, all document classes—the behaviours shared by all document classes. Examples might include class-specific page layout margins together with class-specific versions of commands, such as <code>\section</code>, <code>\subsection</code> and so forth.
+</p><p>Another important element of <code>.cls</code> files is class-specific implementation of standard page styles which define the headers and footers of documents produced using a particular class and page style. For example: 
+</p>
+<ul><li><strong><code>book.cls</code></strong> and <strong><code>article.cls</code></strong> each contain implementations of the page styles <code>headings</code> and <code>myheadings</code></li>
+<li><strong><code>letter.cls</code></strong> contains definitions for page styles <code>headings</code>, <code>empty</code>, <code>plain</code> and one called <code>firstpage</code></li>
+<li><strong><code>report.cls</code></strong> contains definitions for the page styles <code>headings</code> and <code>myheadings</code></li></ul>
+<p>Implementations of page styles often depend on the <code>twoside</code> option of <code>\documentclass</code>—whether the document is single- or double-sided—so that headers and footers are defined appropriately for left-facing (even) pages and right-facing (odd) pages. 
+</p><p>Document classes may rely on default definitions of the <code>plain</code> or <code>empty</code> page styles provided elsewhere in LaTeX—external to the <code>.cls</code> file being used.
+</p>
+<h3><span class="mw-headline" id="More_on_page_styles">More on page styles</span></h3>
+<p>When you change the style of a page using <code>\pagestyle{<em>somestyle</em>}</code> or <code>\thispagestyle{<em>somestyle</em>}</code> LaTeX expects to find an internal command named <code>ps@<em>somestyle</em></code>—usually provided by the document class <code>.cls</code> file or perhaps a package such as <code>fancyhdr</code>. Incidentally, by “internal command” we mean a command that is part of the LaTeX source code and whose name contains an <code>@</code> symbol, which ordinarily prevents casual use (due to its <a href="../Table_of_TeX_category_codes.html" title="Table of TeX category codes">category code</a>).
+</p><p>The definition of <code>\ps@<em>somestyle</em></code> is responsible for implementing the features/behaviours of that page style, which includes providing definitions of:
+</p>
+<ul><li>commands used during the final stages of page composition (to add headers and footers, see <a href="#Commands_for_the_output_routine">later in the article</a>):
+<ul><li><code>\@oddhead</code></li>
+<li><code>\@oddfoot</code></li>
+<li><code>\@evenhead</code></li>
+<li><code>\@evenfoot</code></li></ul></li></ul>
+<ul><li>commands to insert section-related mark data for use in generating document headers and footers which contain section titles, numbers and similar. For example, the <code>headings</code> page style (within <code>book.cls</code>) defines the following mark-producing commands:
+<ul><li><code>\chaptermark</code></li>
+<li><code>\sectionmark</code></li></ul></li></ul>
+<p>We will <a href="#“Mark_commands”_and_“mark_data”">further explore mark-generating commands</a>, such as <code>\chaptermark</code>, but just by way of example: when you write <code>\chapter{chapter title}</code> the <code>\chaptermark</code> command is also executed to insert chapter-related mark data for subsequent production of page headers.
+</p>
+<h3><span class="mw-headline" id="An_anatomy_of_header_and_footer_commands_based_on_page_style">An anatomy of header and footer commands based on page style</span></h3>
+<p>This section explores some of the core LaTeX commands/processes used to create headers and footers—drawing on explanations or concepts presented earlier in this article. 
+</p>
+<h4><span id="LaTeX.E2.80.99s_.E2.80.9Cmodel.E2.80.9D_of_headers_and_footers"></span><span class="mw-headline" id="LaTeX’s_“model”_of_headers_and_footers">LaTeX’s “model” of headers and footers</span></h4>
+<p>The content of LaTeX’s (default) headers and footers is based on a two-tier hierarchy of document sections: a “higher level” section containing multiple “lower level” sections. For the book and article classes this translates to:
+</p>
+<ul><li><code><strong>book</strong></code><strong> class</strong>: “higher level” sections are produced by <code>\chapter</code> commands and “lower level” sections via <code>\section</code>, reflecting chapters containing many sections.</li>
+<li><code><strong>article</strong></code><strong> class</strong> (assuming two-sided documents): “higher level” sections are produced using <code>\section</code> commands and “lower level” ones via <code>\subsection</code>, reflecting multiple subsections appearing within the same section.</li></ul>
+<p>LaTeX applies its “model” of headers and footers through its sectioning commands which “inject” mark nodes (via the <code>\mark</code> command) to store data relevant to the document section being created. For example, each time you write <code>\section{<em>some section title</em>}</code> a mark node will be created, containing data which reflects <code><em>some section title</em></code> and the section number. 
+</p><p>LaTeX uses a system of marks that contain data of the form <code>{left}{right}</code>, ultimately generated via <code>\mark</code> commands  
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\mark</span><span class="nb">{{</span>left<span class="nb">}{</span>right<span class="nb">}}</span>
+</pre></div></div></div>
+<p>encompassed within layers of macros designed to shield users from the lower-level details—which are explored in subsequent sections of this article.
+</p>
+<h3><span class="mw-headline" id="Exploring_the_book_class">Exploring the <code>book</code> class</span></h3>
+<p>When the <code>book.cls</code> file is loaded, one of its final actions is to execute <code>\pagestyle{headings}</code> which sets the default page style to <code>headings</code>, so we’ll look at that page style in more detail. 
+</p><p>As <a href="#More_on_page_styles">noted above</a>, the features/properties of the <code>headings</code> page style, as implemented by the <code>book</code> class, will be defined by the (internal) command <code>\ps@headings</code> contained in the file <code>book.cls</code>. The precise definition of <code>\ps@headings</code> depends on whether the document is single- or double-sided (default for the <code>book</code> class). 
+</p>
+<h4><span id=".E2.80.9CMark_commands.E2.80.9D_and_.E2.80.9Cmark_data.E2.80.9D"></span><span class="mw-headline" id="“Mark_commands”_and_“mark_data”">“Mark commands” and “mark data”</span></h4>
+<p>For two-sided documents produced by the <code>book</code> class, the definition of <code>\ps@headings</code> creates (defines) two “mark commands”: <code>\chaptermark</code> and <code>\sectionmark</code> which produce “mark data”, of the form <code>{left}{right}</code>, for use in headers and footers. Those mark commands reflect LaTeX’s model of headers and footers—based on the hierarchy of document sections:
+</p>
+<ul><li>the “higher level” section command  (here, <code>\chapter</code>) is used to provide “mark data” for left-facing (even-numbered) page headers. When you start a new chapter, by writing <code>\chapter{<em>chapter title</em>}</code>,  <code>\chaptermark</code> is called to create “mark data” which reflects that new chapter—containing its <code><em>chapter title</em></code> and number.</li>
+<li>the “lower level” section command (here, <code>\section</code>) is used to provide “mark data” for right-facing (odd-numbered) pages. When you write <code>\section{<em>section title</em>}</code> the <code>\sectionmark</code> command will be called to create “mark data” which reflects the new section—containing its <code><em>section title</em></code> and number. Any mark data provided by the previous <code>\chapter</code> is unaffected by any subsequent \section commands.</li></ul>
+<h4><span id=".5Cmarkboth_and_.5Cmarkright"></span><span class="mw-headline" id="\markboth_and_\markright"><code>\markboth</code> and <code>\markright</code></span></h4>
+<p>LaTeX’s section-specific mark commands, such as <code>\chaptermark</code> and <code>\sectionmark</code>, utilise two further commands called <code>\markboth</code> and <code>\markright</code> that provide the actual mark data for headers and footers. <code>\markboth</code> and/or <code>\markright</code> can include commands to style header or footer text, such as making it uppercase. 
+</p><p>For documents produced using <code>book</code> class defaults (double-sided, <code>headings</code> page style), the mark-generating commands work as follows: 
+</p>
+<ul><li><code>\chaptermark</code> generates mark data using <code>\markboth</code></li>
+<li><code>\sectionmark</code> generates mark data <code>\markright</code></li></ul>
+<p><code>\markboth</code> and <code>\markright</code> are macros which, ultimately, use the primitive (built-in, low-level) <code>\mark</code> command to actually insert marks generated from within sectioning commands.
+</p><p><code>\markboth</code> takes the form
+</p>
+<ul><li><strong><code>\markboth{left}{right}</code></strong>: inserts a mark (node) using <code>\mark{{left}{right}}</code> resulting in a mark node containing a pair of braced values <code>{left}{right}</code>.</li></ul>
+<p><code>\markright</code> takes the form
+</p>
+<ul><li><strong><code>\markright{newright}</code></strong>: inserts a mark (node) using <code>\mark{{currentleft}{newright}}</code>; i.e., it changes the current value of <code>right</code> to <code>newright</code> but the current value of <code>left</code> (i.e., <code>currentleft</code>) is unchanged, resulting in a mark node containing a pair of braced values <code>{currentleft}{newright}</code>.</li></ul>
+<p>The behaviour of <code>\markboth</code> and <code>\markright</code> support the two-tier section hierarchy, such as a document containing multiple sections within each chapter. 
+</p><p>By way of examples for the (two-sided) <code>book</code> document class (using the headings page style):
+</p>
+<ul><li><code>\chaptermark</code> uses <code>\markboth</code> to set:
+<ul><li>a <code>{left}</code> field which typesets CHAPTER &lt;number&gt;. &lt;chapter title&gt; in uppercase.</li>
+<li>a {right} field which is blank (<code>{}</code>)</li></ul></li>
+<li><code>\sectionmark</code> uses <code>\markright</code> to set the <code>{right}</code> mark field to typeset &lt;section number&gt;. &lt;section title&gt;, also in uppercase.</li></ul>
+<p>To understand why <code>\sectionmark</code> uses <code>\markright</code> we can observe that each new <code>\section</code> command should:
+</p>
+<ul><li>insert a new mark containing data for this <code>\section</code> (such as its title and number).</li>
+<li>but <em>not</em> affect mark data values for the current <code>\chapter</code> in which that particular <code>\section</code> command appears</li></ul>
+<p>For these reasons, the <code>\section</code> command calls <code>\sectionmark</code> which uses <code>\markright</code> to create a <code>\section</code>-related mark: it updates the <code>{right}</code> mark-data field but does not affect the current <code>{left}</code> mark-data field value which was set by the current <code>\chapter</code>.
+</p><p>Note: the LaTeX source code contains the advisory:
+</p>
+<blockquote><p>The marking commands work reasonably well for right marks ‘numbered within’ left marks—e.g., the left mark is changed by a \chapter command and the right mark is changed by a \section command. However, it does produce somewhat anomalous results if 2 \markboth’s occur on the same page.</p></blockquote>
+<h4><span class="mw-headline" id="Commands_for_the_output_routine">Commands for the output routine</span></h4>
+<p>The <code>\ps@headings</code> command implements definitions of the following commands 
+</p>
+<ul><li><code>\@oddhead</code></li>
+<li><code>\@oddfoot</code></li>
+<li><code>\@evenhead</code></li>
+<li><code>\@evenfoot</code></li></ul>
+<p>which are used by the output routine to add headers and footers during the final stage of page composition. For example, <code>book.cls</code> sets <code>\@oddfoot</code> and <code>\@evenfoot</code> to the value <code>\@empty</code>, which is defined as <code>\def\@empty{}</code>, thus <code>\ps@headings</code> produces empty footers on left- and right-facing pages:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\let\@</span>oddfoot<span class="k">\@</span>empty
+<span class="k">\let\@</span>evenfoot<span class="k">\@</span>empty
+</pre></div></div></div>
+<p>The headers are defined as:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\def\@</span>evenhead<span class="nb">{</span><span class="k">\thepage\hfil\slshape\leftmark</span><span class="nb">}</span><span class="c">%</span>
+<span class="k">\def\@</span>oddhead<span class="nb">{{</span><span class="k">\slshape\rightmark</span><span class="nb">}</span><span class="k">\hfil\thepage</span><span class="nb">}</span><span class="c">%</span>
+</pre></div></div></div>
+<p>where
+</p>
+<ul><li><code>\leftmark</code> extracts the <code>{left}</code> value from a <code>{left}{right}</code> mark pair</li>
+<li><code>\rightmark</code> extracts the <code>{right}</code> value from a <code>{left}{right}</code> mark pair</li>
+<li>\thepage outputs the current page number</li></ul>
+<p>In essence, these implementations of <code>\@evenhead</code> and <code>\@oddhead</code> produce the following results:
+</p>
+<ul><li><code>\@evenhead</code>: the page number appears on the left of the header and the content of <code>\leftmark</code>, styled with font command <code>\slshape</code>, is output at the right of the header—the intervening white space is provided by the very flexible <code>\hfil</code> glue.</li>
+<li><code>\@oddhead</code>: the content of <code>\rightmark</code>, styled with font command <code>\slshape</code>, appears at the left of the header and the current page number is output at the right of the header—again, the intervening white space is provided by <code>\hfil</code> glue.</li></ul>
+<p>However, a key question remains: <em>which</em> <code>{left}{right}</code> mark pair are used by <code>\leftmark</code> and <code>\rightmark</code>: in other words, from where do they obtain their mark-data values? 
+</p><p>As <a href="#filtering">noted above</a> but <a href="#explainfiltering">explained below</a>, during the final page-composition stages, any marks contained in the document pages are “filtered” and used to set the value of three global mark variables: <code>\botmark</code>, <code>\topmark</code> and <code>\firstmark</code>. Due to the <a href="#LaTeX’s_“model”_of_headers_and_footers">structure of LaTeX’s marks</a>, each of those 3 mark variables will eventually contain a value of <code>{left}{right}</code> for some pair of values <code>{left}</code> and <code>{right}</code> and it is these which provide the actual <code>{left}{right}</code> mark pair (fields) for <code>\leftmark</code> and <code>\rightmark</code>:
+</p>
+<ul><li><code>\leftmark</code> extracts the <code>left</code> value from the <code>{left}{right}</code> mark pair (fields) provided by <code>\botmark</code></li>
+<li><code>\rightmark</code> extracts the <code>right</code> value from the <code>{left}{right}</code> mark pair provided by <code>\firstmark</code></li></ul>
+<p>Note <code>\markboth</code> and <code>\markright</code> can contain commands to style the header and footer text—such as conversion to uppercase.
+</p>
+<h2><span class="mw-headline" id="Examples_using_lower-level_LaTeX_commands">Examples using lower-level LaTeX commands</span></h2>
+<p>The following examples demonstrate making changes to page styles or headers and footers by redefining some of the low-level (internal) LaTeX commands discussed in this article (ones which contain the @ symbol). We are not advocating this method for changing headers and footers, but it is available to those who need it (e.g., package authors). The preferred solution to changing headers and footers is using the  <a rel="nofollow" class="external text" href="https://ctan.org/pkg/fancyhdr?lang=en"><code>fancyhdr</code> package</a>, which is discussed in an <a href="../Headers_and_footers.html" title="Headers and footers">Overleaf help article</a>.
+</p>
+<h3><span class="mw-headline" id="Defining_a_minimal_page_style">Defining a minimal page style</span></h3>
+<p>The following example defines a new, extremely minimal, page style called <code>demostyle</code> which uses static text to define the headers and footers and does not rely on sectioning commands (<code>\chapter</code>, <code>\section</code> etc) to set the header and footer content. 
+</p><p>The example starts by changing the category code of the <code>@</code> character to 11 so that it can be used within macro names. The <code>\ps@demostyle</code> command implements our minimal page style by redefining the commands used (in the output routine) to produce the headers and footers: <code>\@oddhead</code>, <code>\@oddfoot</code>, <code>\@evenhead</code> and <code>\@evenfoot</code>. Note the <code>twoside</code> option in our <code>\documentclass</code> declaration—which uses the <code>article</code> class.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[twoside]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\catcode</span>`@=11
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\ps</span>@demostyle<span class="nb">}{</span><span class="c">%</span>
+<span class="k">\renewcommand\@</span>oddfoot<span class="nb">{</span><span class="k">\hfil</span> The odd-page footer<span class="k">\hfil</span><span class="nb">}</span><span class="c">%</span>
+<span class="k">\renewcommand\@</span>evenfoot<span class="nb">{</span><span class="k">\hfil</span> The even-page footer<span class="k">\hfil</span><span class="nb">}</span><span class="c">%</span>
+<span class="k">\renewcommand\@</span>evenhead<span class="nb">{</span><span class="k">\thepage\hfil</span> The even-page header<span class="nb">}</span><span class="c">%</span>
+<span class="k">\renewcommand\@</span>oddhead<span class="nb">{</span>The odd-page header<span class="k">\hfil\thepage</span><span class="nb">}}</span>
+<span class="k">\catcode</span>`@=12
+<span class="k">\title</span><span class="nb">{</span>Demonstrating a page style<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Overleaf<span class="nb">}</span>
+<span class="k">\date</span><span class="nb">{</span>August 2022<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\pagestyle</span><span class="nb">{</span>demostyle<span class="nb">}</span>
+<span class="k">\maketitle</span>
+<span class="k">\newpage</span>
+<span class="k">\section</span><span class="nb">{</span>Introduction<span class="nb">}</span>
+<span class="k">\newpage</span>
+<span class="k">\section</span><span class="nb">{</span>More material<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Creating+a+new+page+style&amp;snip=%5Cdocumentclass%5Btwoside%5D%7Barticle%7D%0A%5Ccatcode%60%40%3D11%0A%5Cnewcommand%7B%5Cps%40demostyle%7D%7B%25%0A%5Crenewcommand%5C%40oddfoot%7B%5Chfil+The+odd-page+footer%5Chfil%7D%25%0A%5Crenewcommand%5C%40evenfoot%7B%5Chfil+The+even-page+footer%5Chfil%7D%25%0A%5Crenewcommand%5C%40evenhead%7B%5Cthepage%5Chfil+The+even-page+header%7D%25%0A%5Crenewcommand%5C%40oddhead%7BThe+odd-page+header%5Chfil%5Cthepage%7D%7D%0A%5Ccatcode%60%40%3D12%0A%5Ctitle%7BDemonstrating+a+page+style%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cdate%7BAugust+2022%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cpagestyle%7Bdemostyle%7D%0A%5Cmaketitle%0A%5Cnewpage%0A%5Csection%7BIntroduction%7D%0A%5Cnewpage%0A%5Csection%7BMore+material%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="Changing_headers_for_the_book_class">Changing headers for the book class</span></h3>
+<p>The following example changes the headers for the book class by redefining <code>\@oddhead</code> and <code>\@evenhead</code> so that left- and right-facing page headers contain the current page number and chapter title. Note how the second <code>\chapter</code> command uses the optional short-form chapter title <code>[The short title]</code> which now provides the header text, instead of the long title.
+</p><p><code>\section</code> commands have no effect on header content because our header redefinitions use only <code>\leftmark</code> which obtains details of the current chapter. To access details of the current section we’d need to use <code>\rightmark</code> in the definition of <code>\@oddhead</code> and/or <code>\evenhead</code>.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>book<span class="nb">}</span>
+<span class="c">% NB: category code of '@' temporarily changed to 11</span>
+<span class="c">% to enable its use in command names</span>
+<span class="k">\catcode</span> `@=11
+<span class="c">% Let \@oddfoot and \evenfoot be equivalent to \@empty</span>
+<span class="c">% to make them blank (empty)</span>
+<span class="k">\let\@</span>oddfoot<span class="k">\empty\let\evenfoot\empty</span>
+<span class="c">% Redefine \@oddhead and \@evenhead</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\@</span>oddhead<span class="nb">}{</span><span class="k">\leftmark\hfil\thepage</span><span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\@</span>evenhead<span class="nb">}{</span><span class="k">\thepage\hfil\leftmark</span><span class="nb">}</span>
+<span class="k">\catcode</span> `@=12
+<span class="c">% Use a conveniently small page size</span>
+<span class="k">\usepackage</span><span class="na">[paperheight=16cm,paperwidth=12cm,textwidth=10cm]</span><span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>Memoirs of a <span class="k">\TeX</span><span class="nb">{}</span> user<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Overleaf<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\frontmatter</span>
+<span class="k">\maketitle</span>
+This is frontmatter which uses Roman numerals.
+<span class="k">\mainmatter</span>
+<span class="k">\chapter</span><span class="nb">{</span>Where do I start?<span class="nb">}</span>
+Chapter 1: A short chapter.
+<span class="k">\newpage</span>
+<span class="k">\section</span><span class="nb">{</span>In the beginning...<span class="nb">}</span>
+A section.
+<span class="k">\chapter</span><span class="na">[The short title]</span><span class="nb">{</span>A chapter with a very long title, making it unsuitable for headers<span class="nb">}</span>
+<span class="k">\newpage</span>
+<span class="k">\section</span><span class="nb">{</span>Another section<span class="nb">}</span>
+With little content.
+<span class="k">\newpage</span>
+<span class="k">\section</span><span class="nb">{</span>What, another section?<span class="nb">}</span>
+Also with little content.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Changing+headers+for+the+book+class
+&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%25+NB%3A+category+code+of+%27%40%27+temporarily+changed+to+11%0A%25+to+enable+its+use+in+command+names%0A%5Ccatcode+%60%40%3D11%0A%25+Let+%5C%40oddfoot+and+%5Cevenfoot+be+equivalent+to+%5C%40empty%0A%25+to+make+them+blank+%28empty%29%0A%5Clet%5C%40oddfoot%5Cempty%5Clet%5Cevenfoot%5Cempty%0A%25+Redefine+%5C%40oddhead+and+%5C%40evenhead%0A%5Crenewcommand%7B%5C%40oddhead%7D%7B%5Cleftmark%5Chfil%5Cthepage%7D%0A%5Crenewcommand%7B%5C%40evenhead%7D%7B%5Cthepage%5Chfil%5Cleftmark%7D%0A%5Ccatcode+%60%40%3D12%0A%25+Use+a+conveniently+small+page+size%0A%5Cusepackage%5Bpaperheight%3D16cm%2Cpaperwidth%3D12cm%2Ctextwidth%3D10cm%5D%7Bgeometry%7D%0A%5Ctitle%7BMemoirs+of+a+%5CTeX%7B%7D+user%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cfrontmatter%0A%5Cmaketitle%0AThis+is+frontmatter+which+uses+Roman+numerals.%0A%5Cmainmatter%0A%5Cchapter%7BWhere+do+I+start%3F%7D%0AChapter+1%3A+A+short+chapter.%0A%5Cnewpage%0A%5Csection%7BIn+the+beginning...%7D%0AA+section.%0A%5Cchapter%5BThe+short+title%5D%7BA+chapter+with+a+very+long+title%2C+making+it+unsuitable+for+headers%7D%0A%5Cnewpage%0A%5Csection%7BAnother+section%7D%0AWith+little+content.%0A%5Cnewpage%0A%5Csection%7BWhat%2C+another+section%3F%7D%0AAlso+with+little+content.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<h3><span id="Using_.CE.B5-TeX.E2.80.99s_extended_marks_commands"></span><span class="mw-headline" id="Using_ε-TeX’s_extended_marks_commands">Using ε-TeX’s extended marks commands</span></h3>
+<p>The <code>book</code> class uses the following definitions of <code>\@evenhead</code> and <code>\@oddhead</code> to produce headers:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\def\@</span>evenhead<span class="nb">{</span><span class="k">\thepage\hfil\slshape\leftmark</span><span class="nb">}</span>
+<span class="k">\def\@</span>oddhead<span class="nb">{{</span><span class="k">\slshape\rightmark</span><span class="nb">}</span><span class="k">\hfil\thepage</span><span class="nb">}</span>
+</pre></div></div></div>
+<p>where the commands <code>\leftmark</code> and <code>\rightmark</code> are defined as
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\def\leftmark</span><span class="nb">{</span><span class="k">\expandafter\@</span>leftmark<span class="k">\botmark\@</span>empty<span class="k">\@</span>empty<span class="nb">}</span>
+<span class="k">\def\rightmark</span><span class="nb">{</span><span class="k">\expandafter\@</span>rightmark<span class="k">\firstmark\@</span>empty<span class="k">\@</span>empty<span class="nb">}</span>
+</pre></div></div></div>
+<p>Using ε-TeX’s extended commands, and the equivalence between ε-TeX’s mark class 0 and the original TeX commands, we can:
+</p>
+<ul><li>rewrite <code>\leftmark</code> to replace <code>\botmark</code> with ε-TeX’s <code>\botmarks0</code> equivalent, and</li>
+<li>rewrite <code>\rightmark</code> to replace <code>\firstmark</code> with ε-TeX’s <code>\firstmarks0</code> equivalent</li></ul>
+<p>These redefinitions produce
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\leftmark</span><span class="nb">}{</span><span class="k">\expandafter\@</span>leftmark<span class="k">\botmarks</span>0<span class="k">\relax\@</span>empty<span class="k">\@</span>empty<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\rightmark</span><span class="nb">}{</span><span class="k">\expandafter\@</span>rightmark<span class="k">\firstmarks</span>0<span class="k">\relax\@</span>empty<span class="k">\@</span>empty<span class="nb">}</span>
+</pre></div></div></div>
+<p>Note the use of <code>\relax</code> to terminate TeX’s hunt for further digits—you can also replace <code>\relax</code> with a space to act as the terminator.
+</p><p>The following example produces output which is identical to the original definitions of <code>\leftmark</code> and <code>\rightmark</code>. 
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>book<span class="nb">}</span>
+<span class="c">% Redefine \leftmark and \rightmark to use </span>
+<span class="c">% \botmarks0 and \firstmarks0 respectively</span>
+<span class="c">% NB: category code of '@' temporarily changed to 11</span>
+<span class="c">% to enable its use in command names</span>
+<span class="k">\catcode</span> `@=11
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\leftmark</span><span class="nb">}{</span><span class="k">\expandafter\@</span>leftmark<span class="k">\botmarks</span>0<span class="k">\relax\@</span>empty<span class="k">\@</span>empty<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\rightmark</span><span class="nb">}{</span><span class="k">\expandafter\@</span>rightmark<span class="k">\firstmarks</span>0<span class="k">\relax\@</span>empty<span class="k">\@</span>empty<span class="nb">}</span>
+<span class="k">\catcode</span> `@=12
+<span class="c">% Use a conveniently small page size</span>
+<span class="k">\usepackage</span><span class="na">[paperheight=16cm,paperwidth=12cm,textwidth=10cm]</span><span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>Memoirs of a <span class="k">\TeX</span><span class="nb">{}</span> user<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Overleaf<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\frontmatter</span>
+<span class="k">\maketitle</span>
+This is frontmatter which uses Roman numerals.
+<span class="k">\mainmatter</span>
+<span class="k">\chapter</span><span class="nb">{</span>Where do I start?<span class="nb">}</span>
+Chapter 1: A short chapter.
+<span class="k">\newpage</span>
+<span class="k">\section</span><span class="nb">{</span>In the beginning...<span class="nb">}</span>
+A section.
+<span class="k">\newpage</span>
+Another section.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Using+%CE%B5-TeX%E2%80%99s+extended+marks+command
+&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%25+Redefine+%5Cleftmark+and+%5Crightmark+to+use+%0A%25+%5Cbotmarks0+and+%5Cfirstmarks0+respectively%0A%25+NB%3A+category+code+of+%27%40%27+temporarily+changed+to+11%0A%25+to+enable+its+use+in+command+names%0A%5Ccatcode+%60%40%3D11%0A%5Crenewcommand%7B%5Cleftmark%7D%7B%5Cexpandafter%5C%40leftmark%5Cbotmarks0%5Crelax%5C%40empty%5C%40empty%7D%0A%5Crenewcommand%7B%5Crightmark%7D%7B%5Cexpandafter%5C%40rightmark%5Cfirstmarks0%5Crelax%5C%40empty%5C%40empty%7D%0A%5Ccatcode+%60%40%3D12%0A%25+Use+a+conveniently+small+page+size%0A%5Cusepackage%5Bpaperheight%3D16cm%2Cpaperwidth%3D12cm%2Ctextwidth%3D10cm%5D%7Bgeometry%7D%0A%5Ctitle%7BMemoirs+of+a+%5CTeX%7B%7D+user%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cfrontmatter%0A%5Cmaketitle%0AThis+is+frontmatter+which+uses+Roman+numerals.%0A%5Cmainmatter%0A%5Cchapter%7BWhere+do+I+start%3F%7D%0AChapter+1%3A+A+short+chapter.%0A%5Cnewpage%0A%5Csection%7BIn+the+beginning...%7D%0AA+section.%0A%5Cnewpage%0AAnother+section.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<h4><span id="Notes_on_.CE.B5-TeX"></span><span class="mw-headline" id="Notes_on_ε-TeX">Notes on ε-TeX</span></h4>
+<p>As <a href="#etex">we noted above</a>, ε-TeX introduces the <code>\marks</code> command:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\marks</span> n <span class="nb">{</span>stuff to store<span class="nb">}</span>
+</pre></div></div></div>
+<p>which extends the original <code>\mark</code> feature of Knuth’s TeX engine and is available in all three mainstream TeX engines: pdfTeX, LuaTeX and XeTeX. 
+</p><p>ε-TeX’s implementation also introduces new global mark variables <code>\firstmarks n</code>, <code>\botmarks n</code> and <code>\topmarks n</code>: one for each class <code>n</code>. These class-based mark variables are determined <a href="#Pre-output_checks:_looking_for_mark_nodes">using the mechanisms outlined above</a>, and can all be used in the production of headers and footers.
+</p><p>You can use any of the \(2^{15}\) = 32768 mark classes, ranging from 0 to 32767, within redefinitions of <code>\leftmark</code> or <code>\rightmark</code>. That assumes you have provided (inserted) suitable mark data for your chosen mark class, <code>n</code>, via <code>\marks n{{left}{right}}</code>.
+</p><p>Note that LuaTeX provides \(2^{16}\) = 65536 mark classes, with <code>n</code> ranging from 0 to 65535. 
+</p>
+<h4><span class="mw-headline" id="Example_using_marks_class_10">Example using marks class 10</span></h4>
+<p>This example demonstrates using mark class 10 (chosen randomly) to create document headers. The sample document typesets 6 pages which contain the sequence of marks presented in the <a href="#A_worked_example_to_show_how_TeX_engines_determine_values_for_\botmark,_\topmark_and_\firstmark">worked example at the end of this article</a>. A study of that example will show why the TeX engine has selected a particular mark, \(\alpha\), \(\beta\), \(\gamma\) and \(\delta\), for use in each of the headers. 
+</p><p>We start by defining a convenience macro, <code>\domark</code>, which  uses <code>\marks 10</code> to insert mark data that follows the LaTeX <code>{left}{right}</code> convention:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\domark</span><span class="nb">}</span>[2]<span class="nb">{</span><span class="k">\marks</span> 10<span class="nb">{{</span>#1<span class="nb">}{</span>#2<span class="nb">}}}</span>
+</pre></div></div></div>
+<p>Marks of class 10 are made accessible to LaTeX's header and footer mechanism by redefining <code>\leftmark</code> and <code>\rightmark</code>—with a bit of extra info added in:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\leftmark</span><span class="nb">}{</span><span class="k">\expandafter\@</span>leftmark<span class="k">\botmarks</span>10 <span class="k">\@</span>empty<span class="k">\@</span>empty<span class="nb">{}</span> (via <span class="k">\texttt</span><span class="nb">{</span><span class="k">\string\botmarks</span>10<span class="nb">}</span>)<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\rightmark</span><span class="nb">}{</span><span class="k">\expandafter\@</span>rightmark<span class="k">\firstmarks</span>10 <span class="k">\@</span>empty<span class="k">\@</span>empty<span class="nb">{}</span> (via <span class="k">\texttt</span><span class="nb">{</span><span class="k">\string\firstmarks</span>10<span class="nb">}</span>)<span class="nb">}</span>
+</pre></div></div></div>
+<p>After inserting a number of (class 10) marks, the TeX engine (here, pdfTeX) obligingly creates global mark variables for class 10—<code>\botmarks10</code>, <code>\topmarks10</code> and <code>\firstsmarks10</code> which <code>\leftmark</code> and <code>\rightmark</code> use to produce the headers.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>book<span class="nb">}</span>
+<span class="c">% A short command to use marks with class 10</span>
+<span class="c">% and following LaTeX's mark structure {left}{right}</span>
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\domark</span><span class="nb">}</span>[2]<span class="nb">{</span><span class="k">\marks</span> 10<span class="nb">{{</span>#1<span class="nb">}{</span>#2<span class="nb">}}}</span>
+<span class="c">% Redefine \leftmark and \rightmark to use </span>
+<span class="c">% \botmarks10 and \firstmarks10 respectively</span>
+<span class="k">\catcode</span>`@=11
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\leftmark</span><span class="nb">}{</span><span class="k">\expandafter\@</span>leftmark<span class="k">\botmarks</span>10 <span class="k">\@</span>empty<span class="k">\@</span>empty<span class="nb">{}</span> (via <span class="k">\texttt</span><span class="nb">{</span><span class="k">\string\botmarks</span>10<span class="nb">}</span>)<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\rightmark</span><span class="nb">}{</span><span class="k">\expandafter\@</span>rightmark<span class="k">\firstmarks</span>10 <span class="k">\@</span>empty<span class="k">\@</span>empty<span class="nb">{}</span> (via <span class="k">\texttt</span><span class="nb">{</span><span class="k">\string\firstmarks</span>10<span class="nb">}</span>)<span class="nb">}</span>
+<span class="k">\catcode</span>`@=12
+<span class="k">\title</span><span class="nb">{</span>Demonstrating <span class="s">\(</span><span class="nv">\varepsilon</span><span class="s">\)</span>-<span class="k">\TeX</span>’s enhanced marks<span class="nb">}</span>
+<span class="k">\author</span><span class="nb">{</span>Overleaf<span class="nb">}</span>
+<span class="k">\date</span><span class="nb">{</span>August 2022<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+Page 1: No marks added so all mark variables remain in their initialized state: empty (NULL).
+
+<span class="k">\newpage</span>
+Page 2: <span class="s">$</span><span class="nv">\alpha</span><span class="s">$</span>-mark added to this page via
+
+<span class="k">\verb</span>|<span class="k">\domark</span><span class="nb">{</span><span class="s">$</span><span class="nv">\alpha</span><span class="s">$</span>-left<span class="nb">}{</span><span class="s">$</span><span class="nv">\alpha</span><span class="s">$</span>-right<span class="nb">}</span>|<span class="k">\domark</span><span class="nb">{</span><span class="s">$</span><span class="nv">\alpha</span><span class="s">$</span>-left<span class="nb">}{</span><span class="s">$</span><span class="nv">\alpha</span><span class="s">$</span>-right<span class="nb">}</span>
+
+<span class="k">\newpage</span>
+Page 3: No new marks added to this page.
+
+<span class="k">\newpage</span>
+Page 4: <span class="s">$</span><span class="nv">\beta</span><span class="s">$</span>-mark followed by <span class="s">$</span><span class="nv">\gamma</span><span class="s">$</span>-mark added to this page via
+
+<span class="k">\verb</span>|<span class="k">\domark</span><span class="nb">{</span><span class="s">$</span><span class="nv">\beta</span><span class="s">$</span>-left<span class="nb">}{</span><span class="s">$</span><span class="nv">\beta</span><span class="s">$</span>-right<span class="nb">}</span>|
+
+<span class="k">\verb</span>|<span class="k">\domark</span><span class="nb">{</span><span class="s">$</span><span class="nv">\gamma</span><span class="s">$</span>-left<span class="nb">}{</span><span class="s">$</span><span class="nv">\gamma</span><span class="s">$</span>-right<span class="nb">}</span>|.
+<span class="k">\domark</span><span class="nb">{</span><span class="s">$</span><span class="nv">\beta</span><span class="s">$</span>-left<span class="nb">}{</span><span class="s">$</span><span class="nv">\beta</span><span class="s">$</span>-right<span class="nb">}</span>
+<span class="k">\domark</span><span class="nb">{</span><span class="s">$</span><span class="nv">\gamma</span><span class="s">$</span>-left<span class="nb">}{</span><span class="s">$</span><span class="nv">\gamma</span><span class="s">$</span>-right<span class="nb">}</span>
+
+<span class="k">\newpage</span>
+Page 5: <span class="s">$</span><span class="nv">\delta</span><span class="s">$</span>-mark added to this page via
+
+<span class="k">\verb</span>|<span class="k">\domark</span><span class="nb">{</span><span class="s">$</span><span class="nv">\delta</span><span class="s">$</span>-left<span class="nb">}{</span><span class="s">$</span><span class="nv">\delta</span><span class="s">$</span>-right<span class="nb">}</span>|
+<span class="k">\domark</span><span class="nb">{</span><span class="s">$</span><span class="nv">\delta</span><span class="s">$</span>-left<span class="nb">}{</span><span class="s">$</span><span class="nv">\delta</span><span class="s">$</span>-right<span class="nb">}</span>
+
+<span class="k">\newpage</span>
+Page 6: No marks added to this page.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Using+e-TeX+global+marks+variables
+&amp;snip=%5Cdocumentclass%7Bbook%7D%0A%25+A+short+command+to+use+marks+with+class+10%0A%25+and+following+LaTeX%27s+mark+structure+%7Bleft%7D%7Bright%7D%0A%5Cnewcommand%7B%5Cdomark%7D%5B2%5D%7B%5Cmarks+10%7B%7B%231%7D%7B%232%7D%7D%7D%0A%25+Redefine+%5Cleftmark+and+%5Crightmark+to+use+%0A%25+%5Cbotmarks10+and+%5Cfirstmarks10+respectively%0A%5Ccatcode%60%40%3D11%0A%5Crenewcommand%7B%5Cleftmark%7D%7B%5Cexpandafter%5C%40leftmark%5Cbotmarks10+%5C%40empty%5C%40empty%7B%7D+%28via+%5Ctexttt%7B%5Cstring%5Cbotmarks10%7D%29%7D%0A%5Crenewcommand%7B%5Crightmark%7D%7B%5Cexpandafter%5C%40rightmark%5Cfirstmarks10+%5C%40empty%5C%40empty%7B%7D+%28via+%5Ctexttt%7B%5Cstring%5Cfirstmarks10%7D%29%7D%0A%5Ccatcode%60%40%3D12%0A%5Ctitle%7BDemonstrating+%5C%28%5Cvarepsilon%5C%29-%5CTeX%E2%80%99s+enhanced+marks%7D%0A%5Cauthor%7BOverleaf%7D%0A%5Cdate%7BAugust+2022%7D%0A%5Cbegin%7Bdocument%7D%0A%0APage+1%3A+No+marks+added+so+all+mark+variables+remain+in+their+initialized+state%3A+empty+%28NULL%29.%0A%0A%5Cnewpage%0APage+2%3A+%24%5Calpha%24-mark+added+to+this+page+via%0A%0A%5Cverb%7C%5Cdomark%7B%24%5Calpha%24-left%7D%7B%24%5Calpha%24-right%7D%7C%5Cdomark%7B%24%5Calpha%24-left%7D%7B%24%5Calpha%24-right%7D%0A%0A%5Cnewpage%0APage+3%3A+No+new+marks+added+to+this+page.%0A%0A%5Cnewpage%0APage+4%3A+%24%5Cbeta%24-mark+followed+by+%24%5Cgamma%24-mark+added+to+this+page+via%0A%0A%5Cverb%7C%5Cdomark%7B%24%5Cbeta%24-left%7D%7B%24%5Cbeta%24-right%7D%7C%0A%0A%5Cverb%7C%5Cdomark%7B%24%5Cgamma%24-left%7D%7B%24%5Cgamma%24-right%7D%7C.%0A%5Cdomark%7B%24%5Cbeta%24-left%7D%7B%24%5Cbeta%24-right%7D%0A%5Cdomark%7B%24%5Cgamma%24-left%7D%7B%24%5Cgamma%24-right%7D%0A%0A%5Cnewpage%0APage+5%3A+%24%5Cdelta%24-mark+added+to+this+page+via%0A%0A%5Cverb%7C%5Cdomark%7B%24%5Cdelta%24-left%7D%7B%24%5Cdelta%24-right%7D%7C%0A%5Cdomark%7B%24%5Cdelta%24-left%7D%7B%24%5Cdelta%24-right%7D%0A%0A%5Cnewpage%0APage+6%3A+No+marks+added+to+this+page.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>The following graphic shows the headers produced by this example:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/1wcLarMpM4y1vmexEt0DmU/78b87a5849949b8e996007cf9504c736/ETeXMarksExample-plainR.svg" width="75%" alt="Graphic showing the output from LaTeX code using Using ε-TeX’s extended marks commands" />
+
+</p>
+<ul><li><strong>Note</strong>: The header on page 1 is created at a time when all three mark variables for class 10—<code>\botmarks10</code>, <code>\topmarks10</code> and <code>\firstsmarks10</code>—are empty. The end result is that <code>\rightmark</code> (for page 1) inserts just the last header fragment: <code>(via \texttt{\string\firstmarks10})</code>, as shown in the graphic above.</li></ul>
+<h1><span id="A_worked_example_to_show_how_TeX_engines_determine_values_for_.5Cbotmark.2C_.5Ctopmark_and_.5Cfirstmark"></span><span class="mw-headline" id="A_worked_example_to_show_how_TeX_engines_determine_values_for_\botmark,_\topmark_and_\firstmark">A worked example to show how TeX engines determine values for <code>\botmark</code>, <code>\topmark</code> and <code>\firstmark</code></span></h1>
+<p><img alt="Db.gif" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/42/Db.gif" decoding="async" width="30" height="42" /><img alt="Db.gif" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/42/Db.gif" decoding="async" width="30" height="42" /> <span id="explainfiltering"></span>It feels appropriate to replicate Knuth’s use of double dangerous-bend signs (image courtesy of <a rel="nofollow" class="external text" href="http://www.truetex.com/db.htm">this website</a>) because the material is somewhat low-level and “peeks under the hood”—although we hope it may be of interest to intrepid readers wishing to understand a few more details. 
+</p><p>The following discussion is closely based on the last example on page 258 of <a rel="nofollow" class="external text" href="https://www.amazon.co.uk/TeXbook-Donald-Knuth/dp/0201134489">The TeXbook</a>. Here, we have edited and re-typeset that example for those without access to The TeXbook:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/xfdeIWydwsMC6OKbwuOfz/c6d162694f4f56c171c5b316e196dcef/texbookexample-1rplain.svg" width="75%" alt="An edited and  re-typeset version of an example from page 258 of the TeXbook" />
+
+</p><p>The table presented in this graphic is reproduced from one provided by Knuth but, like the original, there is no explanation of how it was derived. Here we’ll address that to provide additional details which show how those values of <code>\botmark</code>, <code>\topmark</code> and <code>\firstmark</code> were determined—obtaining these details required exploring the source code of a TeX engine!
+</p><p>The process of setting values for <code>\botmark</code>, <code>\topmark</code> and <code>\firstmark</code> can be summarised in 3 short pseudocode fragments as shown in the following diagram and subsequent explanations:
+</p>
+<ol><li>Pre-content check</li>
+<li>Content loop</li>
+<li>Post-content check</li></ol>
+<p>Note:
+</p>
+<ul><li>The tests in step 1 “Pre-content check” and step 3 “Post-content check” are performed once per page.</li>
+<li>Step 2 “Content loop” involves TeX scanning through the page content searching for mark nodes, and using them to set the mark-variable values as shown.</li></ul>
+<p><img src="https://images.ctfassets.net/nrgyaltdicpt/iwaMfJf8HrMrxjpDQi6eH/14ab668038274c24451c9330bb4fb638/texbookexample-2bplain.svg" width="75%" alt="Image showing pseudocode versions of code used to set values for the three global mark variables used by TeX engines" />
+</p><p>Each time TeX finds a suitable page break it sends the content of that page for final processing, performing these (three) mark-processing steps for every page in your document. The processing steps labelled 1, 2 and 3 are referenced in the final diagram within this section.
+</p><p>Note that:
+</p>
+<ul><li>before the first page has been processed, all three global mark variables <code>\botmark</code>, <code>\topmark</code> and <code>\firstmark</code> have been initialised to be empty (NULL).</li>
+<li>the final values of <code>\botmark</code>, <code>\topmark</code> and <code>\firstmark</code> determined at the end of the <em>previous</em> page become the (input) values for processing the <em>current</em> page—the one being processed.</li></ul>
+<p>The following code fragments are <strong><em>pseudocode</em></strong> derived (summarized) from actual TeX engine source code. The goal is to provide a concise code summary that helps to demonstrate the key principles involved.  
+</p><p><strong>Step 1: Pre-content check</strong><br />
+Before TeX looks through the actual content of the current page, it checks if the current <code>\botmark</code> value—i.e., resulting from the <em>previous</em> page—is empty (NULL): 
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>if(<span class="k">\botmark</span> != NULL)
+<span class="nb">{</span>
+   <span class="k">\topmark</span> = <span class="k">\botmark</span>;
+   <span class="k">\firstmark</span>= NULL;
+<span class="nb">}</span>
+</pre></div></div></div>
+<p>In this test, if <code>\botmark</code> (from the <em>previous</em> page) is <em>not</em> empty:
+</p>
+<ul><li><code>\topmark</code> for the <em>current</em> page is set to the <em>previous</em> page’s <code>\botmark</code> value</li>
+<li><code>\firstmark</code>, for the <em>current</em> page (being processed), is set to empty (NULL): start this page assuming there are no <code>\mark</code> nodes.</li></ul>
+<p>Note that this test is performed <em>once</em> for each page being processed.
+</p><p><strong>Step 2: Content loop</strong><br />
+Next, TeX loops over the page content; part of that loop includes looking for <code>\mark</code> nodes: 
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>if(type(node)==mark<span class="nb">_</span>node)
+<span class="nb">{</span>
+   if(<span class="k">\firstmark</span>==NULL)
+   <span class="nb">{</span>
+      <span class="k">\firstmark</span>=node(text);
+   <span class="nb">}</span>
+   <span class="k">\botmark</span>= node(text);
+<span class="nb">}</span>
+</pre></div></div></div>
+<p>This test is applied to every mark node located within (contained in) the current page. The previous test (Step 1, above) could have set <code>\firstmark</code> to empty so the very first mark found in the current page becomes the value of <code>\firstmark</code> and <code>\botmark</code>. Any <em>subsequent</em> <code>\mark</code> node detected whilst executing this loop will not change the value of <code>\firstmark</code>, because it is no longer empty (NULL), but <code>\botmark</code> is updated—because that is the purpose of <code>\botmark</code>: to store the last seen <code>\mark</code> node for this page.
+</p><p><strong>Step 3: Post-content check</strong>
+Once it has looped over the page content TeX applies the following, final, test which is also performed once per page:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>if((<span class="k">\topmark</span> != NULL)<span class="nb">&amp;&amp;</span>(<span class="k">\firstmark</span>==NULL))
+<span class="nb">{</span>
+	<span class="k">\firstmark</span>= <span class="k">\topmark</span>;
+<span class="nb">}</span>
+</pre></div></div></div>
+<ul><li>If <code>\topmark</code> is not empty (NULL) we know, from Step 1, that <code>\botmark</code> for the previous page was not empty (NULL).</li>
+<li>If <code>\firstmark</code> is still empty then we haven’t seen any <code>\mark</code> nodes because the test in Step 2 wasn’t triggered; consequently, <code>\firstmark</code> is set to the value of <code>\topmark</code> which is also the value of <code>\botmark</code> from the previous page.</li></ul>
+<p>After sequential application of these three steps for all 6 pages of our example, the values of <code>\botmark</code>, <code>\topmark</code> and <code>\firstmark</code> are derived using transitions shown in the diagram below where:
+</p>
+<ul><li>light blue rounded rectangles are the final mark variable values for each page</li>
+<li>light grey rounded squares represent interim values that arise during processing</li>
+<li>labelled arrows represent changes in marker variable values according to steps 1, 2 or 3 in the diagram above—or a value has not been changed by any of the steps; labelled “no change”.</li></ul>
+<p>The following diagram shows how the three fragments of pseudocode generate the final values of <code>\botmark</code>, <code>\topmark</code> and <code>\firstmark</code> listed in the table contained on page 258 of The TeXbook.
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/6sDWHHo07qGuo5bMugWHDo/9770a6794cabd4c9908d11d1a464523c/texbookexample-3rplain.svg" width="75%" alt="A transition diagram to accompany the example from page 258 of the TeXbook, showing internal transitions as the global mark variables are assigned their values" />
+
+</p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../Lists.html" title="Lists">Lists</a></li>
+<li><a href="../Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../Operators.html" title="Operators">Operators</a></li>
+<li><a href="../Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../Tables.html" title="Tables">Tables</a></li>
+<li><a href="../Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../French.html" title="French">French</a></li>
+<li><a href="../German.html" title="German">German</a></li>
+<li><a href="../Greek.html" title="Greek">Greek</a></li>
+<li><a href="../Italian.html" title="Italian">Italian</a></li>
+<li><a href="../Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../Korean.html" title="Korean">Korean</a></li>
+<li><a href="../Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../Russian.html" title="Russian">Russian</a></li>
+<li><a href="../Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../Indices.html" title="Indices">Indices</a></li>
+<li><a href="../Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../Counters.html" title="Counters">Counters</a></li>
+<li><a href="../Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../Commands.html" title="Commands">Commands</a></li>
+<li><a href="../Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="../Tutorials.html">Tutorials</a></li><li><a href="../Inserting_Images.html">How to insert images</a></li><li><a href="../Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="How_does_LaTeX_typeset_headers_and_footers_.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==" src="../../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="khEe53yU4qxY8FIY5R4CZg==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/How_does_LaTeX_typeset_headers_and_footers%3F by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:10:46 GMT -->
+</html>

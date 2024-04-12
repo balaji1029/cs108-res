@@ -1,0 +1,445 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:11:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>MLTeX EncTeX and SyncTeX TeX extensions - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="MLTeX EncTeX and SyncTeX TeX extensions"><meta name="og:title" content="MLTeX EncTeX and SyncTeX TeX extensions"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="MLTeX_EncTeX_and_SyncTeX_TeX_extensions.html"><link rel="stylesheet" href="../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="MLTeX_EncTeX_and_SyncTeX_TeX_extensions.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" hreflang="ja"><link rel="preload" href="../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="j4DHZhCGjf2hFtuu956ylw=="><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="9ogArZkT-dFPfUnhQDZm840Ctj9Pk_U_rBXg"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>MLTeX EncTeX and SyncTeX TeX extensions</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Some_background_details_on_TeX_extensions"><span class="tocnumber">1</span> <span class="toctext">Some background details on TeX extensions</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#MLTeX"><span class="tocnumber">2</span> <span class="toctext">MLTeX</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Activating_(enabling)_MLTeX"><span class="tocnumber">2.1</span> <span class="toctext">Activating (enabling) MLTeX</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#MLTeX_primitives"><span class="tocnumber">2.2</span> <span class="toctext">MLTeX primitives</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#EncTeX"><span class="tocnumber">3</span> <span class="toctext">EncTeX</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Activating_(enabling)_EncTeX"><span class="tocnumber">3.1</span> <span class="toctext">Activating (enabling) EncTeX</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#EncTeX_primitives"><span class="tocnumber">3.2</span> <span class="toctext">EncTeX primitives</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Further_information_on_EncTeX"><span class="tocnumber">3.3</span> <span class="toctext">Further information on EncTeX</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Activating_(enabling)_both_MLTeX_and_EncTeX"><span class="tocnumber">3.4</span> <span class="toctext">Activating (enabling) both MLTeX and EncTeX</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#SyncTeX"><span class="tocnumber">4</span> <span class="toctext">SyncTeX</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#What_does_SyncTeX_do?"><span class="tocnumber">4.1</span> <span class="toctext">What does SyncTeX do?</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Activating_(enabling)_SyncTeX"><span class="tocnumber">4.2</span> <span class="toctext">Activating (enabling) SyncTeX</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Using_SyncTeX_on_the_commandline"><span class="tocnumber">4.3</span> <span class="toctext">Using SyncTeX on the commandline</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Examples"><span class="tocnumber">4.3.1</span> <span class="toctext">Examples</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#SyncTeX’s_only_primitive"><span class="tocnumber">4.4</span> <span class="toctext">SyncTeX’s only primitive</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Further_information_on_SyncTeX"><span class="tocnumber">4.5</span> <span class="toctext">Further information on SyncTeX</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Some_background_details_on_TeX_extensions">Some background details on TeX extensions</span></h2>
+<p>TeX has a long history of development—now over 4 decades! During that time new “versions” of TeX have been developed—such as e-TeX, pdfTeX, XeTeX, LuaTeX and so forth. In addition to completely new engines, with a whole suite of extra features, there have been various <em>extensions</em> that typically focus on implementing a specific feature to enhance Knuth’s original software.</p>
+<p>With the advent of modern TeX engines, such as XeTeX and LuaTeX, the need for, and use of, some legacy TeX extensions has faded as the newer TeX engines bring powerful additional functionality—such as built-in support for UTF-8 encoded text. The purpose of this page is to provide a few notes on extensions, including MLTeX and EncTeX, you might still see referenced in a <a href="TeX_engine_command_line_options_for_pdfTeX%2c_XeTeX_and_LuaTeX.html" title="TeX engine command line options for pdfTeX, XeTeX and LuaTeX">TeX engine’s command line options</a>. MLTeX and EncTeX are both no longer developed but one very useful extension, SyncTeX, continues to be actively developed and is supported by Overleaf.</p>
+<h2><span class="mw-headline" id="MLTeX"><a rel="nofollow" class="external text" href="https://ctan.org/pkg/mltex">MLTeX</a></span></h2>
+<p><em>Multi-lingual TeX</em>, or MLTeX, was developed during the years 1992–5 as a modification of TeX to allow hyphenation of words with accented letters using ordinary Computer Modern (CM) fonts.</p> 
+<h3><span id="Activating_.28enabling.29_MLTeX"></span><span class="mw-headline" id="Activating_(enabling)_MLTeX">Activating (enabling) MLTeX</span></h3>
+<p>MLTeX is designed to work as part of a so-called <code>.fmt</code> (format file) which is, in effect, a precompiled binary version of a set of TeX macros. To create format files you put a TeX engine into its so-called <code>INI</code> mode, process the macro collection and then issue the <code>\dump</code> command to write out the <code>.fmt</code> file. See <a href="Articles/The_two_modes_of_TeX_engines__INI_mode_and_production_mode.html" title="Articles/The two modes of TeX engines: INI mode and production mode">this article</a> for a discussion of INI modes.</p> 
+<p>To enable MLTeX, <em>for those engines that support it</em>, such as pdfTeX, you would write</p>
+<div class="example">
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>pdftex -ini -mltex *pdfetex.ini
+</pre></div>
+</div>
+<p>where <code>pdfetex.ini</code> is a file contained in the TeX Live distribution.</p>
+<p><strong>Why the asterisk (<code>*</code>)?</strong> The asterisk puts pdfTeX into so-called “extended mode” which enables support of the e-TeX primitives. If you omit it and type <code>pdftex -ini -mltex pdfetex.ini</code> you will receive an error:</p>
+<div class="example">
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>This is pdfTeX, Version 3.14159265-2.6-1.40.19 (INITEX)
+ \write18 enabled.
+MLTeX v2.2 enabled
+(c:/texmf-dist/tex/plain/config/pdfetex.ini
+(c:/texmf-dist/tex/generic/tex-ini-files/pdftexconfig.tex)
+(c:/texmf-dist/tex/plain/etex/etex.src
+
+! e-TeX  fatal error: this file can be processed only in extended mode;
+  did you perhaps forget the asterisk?
+</pre></div>
+</div>
+<p><strong>Note</strong>: Instead of using an asterisk to enable “extended mode” you can use the <code>-etex</code> commandline option instead:</p>
+<div class="example">
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>pdftex -ini -etex -mltex pdfetex.ini
+</pre></div>
+</div>
+<p><strong>Note</strong>: Using the <code>-mltex</code> option on the command line with a <code>.fmt</code> file that was <em>not generated</em> with MLTeX enabled will <em>not</em> work: MLTeX has to be “activated” via an apprpriate format file.</p>
+<p>When you use the <code>-mltex</code> option during <code>.fmt</code> file creation, a boolean variable with a value of “true” is written into the <code>.fmt</code> file telling the TeX engine that the MLTeX extensions have been activated and should be made available to the user. If you don’t explicitly set the <code>-mltex</code> option then the corresponding variable will be “false”. If that variable’s value is detected as “false” (when that <code>.fmt</code> file is re-loaded during a TeX run) then trying to use the MLTeX extensions will result in an <code>Undefined command...</code> error—because the MLTeX primitives will not have been registered (loaded) and thus are not recognized.</p>
+<p>After running <code>pdftex -ini -mltex *pdfetex.ini</code> on the command line and you’ll see something similar to the following text, showing that MLTeX v2.2 is enabled:</p>
+<div class="example">
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>This is pdfTeX, Version 3.14159265-2.6-1.40.19 (INITEX)
+\write18 enabled.
+entering extended mode
+MLTeX v2.2 enabled
+....
+....
+....
+Beginning to dump on file pdfetex.fmt
+....
+No pages of output.
+Transcript written on pdfetex.log.
+</pre></div>
+</div>
+<p>This results in a <code>.fmt</code> file called <code>pdfetex.fmt</code> that enables you to use the MLTeX commands:</p>
+<div class="example">
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>pdftex -fmt=pdfetex &lt;yourfile.tex&gt;
+</pre></div>
+</div>
+<p>where <code>&lt;yourfile.tex&gt;</code> can make use of the MLTeX-specific primitives</p>
+<p>MLTeX was originally distributed as a separate change file, <a rel="nofollow" class="external text" href="http://tug.ctan.org/systems/generic/mltex/mltex.ch">mltex.ch</a>, that could be merged with Knuth’s master source code (<a rel="nofollow" class="external text" href="https://ctan.org/tex-archive/systems/knuth/dist/tex?lang=en"><code>tex.web</code></a>) to derive a new version of TeX, called MLTeX, which contained a number of new primitives. Today, the MLTeX code from <code>mltex.ch</code> is subsumed into the main <code>tex.ch</code> change file which is used to build nearly all TeX engines.</p>
+<h3><span class="mw-headline" id="MLTeX_primitives">MLTeX primitives</span></h3>
+<p>The following notes are mostly prepared and reproduced from the file <code>web2c.info</code> contained in the <a rel="nofollow" class="external text" href="https://tug.org/texlive/">TeX Live</a> distribution.</p>
+<ul>
+<li><strong><code>\charsubdef</code></strong>: Character substitution definitions. Declares how to construct an accented character
+glyph (not necessarily existing in the current font) using two character glyphs (that do exist).
+
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>\charsubdef COMPOSITE [=] ACCENT BASE
+</pre></div>
+<p>Each of COMPOSITE, ACCENT, and BASE are font glyph numbers, expressed in the usual TeX syntax: `\e symbolically, '145 for octal, "65 for hex, 101 for decimal. Thus it defines whether a character glyph code, either typed as a single character or using the <code>\char</code> primitive, will be mapped to a font glyph or to an <code>\accent</code> glyph construction.</p>
+<p>For example, if you assume glyph code 138 (decimal) for an e-circumflex and you are using the Computer Modern fonts, which have the circumflex accent in position 18 and lowercase ‘e’ in the usual ASCII position 101 decimal, you would use <code>\charsubdef</code> as follows:</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>\charsubdef 138 = 18 101
+</pre></div>
+</li>
+
+<li><strong><code>\charsubdefmax</code></strong>: Sets largest value in the <code>\charsubdef</code> list. For example:
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>\charsubdefmax=-1 % disable all substitutions
+\charsubdefmax=256 % enable all substitutions
+</pre></div>
+</li>
+<li><strong><code>\tracingcharsubdef</code></strong>: Tracing substitutions. To help diagnose problems with <code>\charsubdef</code>, MLTeX provides a primitive parameter, <code>\tracingcharsubdef</code>. If positive, every use of <code>\charsubdef</code> will be reported.  This can help track down when a character is redefined.</li>
+</ul>
+<h2><span class="mw-headline" id="EncTeX"><a rel="nofollow" class="external text" href="https://ctan.org/pkg/enctex?lang=en">EncTeX</a></span></h2>
+<p>EncTeX was developed during the years 1997–2004 as a TeX extension which provides flexible input/output reencoding through the addition of new primitives—for example, a means of trans­lat­ing in­put on the way into TeX. It al­lows, for ex­am­ple, trans­la­tion of multi­byte se­quences, such as UTF-8 en­cod­ing, for use in standard 8-bit TeX engines.</p>
+<h3><span id="Activating_.28enabling.29_EncTeX"></span><span class="mw-headline" id="Activating_(enabling)_EncTeX">Activating (enabling) EncTeX</span></h3>
+<p>As with MLTeX, EncTeX is also designed to work as part of a so-called <code>.fmt</code> (format file)–see <a href="#MLTEX">MLTeX</a>, above, for an explanation of format files/INI mode.</p> 
+<p>To enable EncTeX, <em>for those engines that support it</em>, such as pdfTeX, you would create an EncTeX-enabled format file by writing</p>
+<div class="example">
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>pdftex -ini -enc *pdfetex.ini
+</pre></div>
+</div>
+<p>where <code>pdfetex.ini</code> is a file contained in the TeX Live distribution.</p>
+<p><strong>Why the asterisk (<code>*</code>)?</strong> The asterisk puts pdfTeX into so-called “extended mode” which enables support of the e-TeX primitives. If you omit it and type <code>pdftex -ini -mltex pdfetex.ini</code> you will receive an error:</p>
+<div class="example">
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>This is pdfTeX, Version 3.14159265-2.6-1.40.19 (INITEX)
+ \write18 enabled.
+MLTeX v2.2 enabled
+(c:/texmf-dist/tex/plain/config/pdfetex.ini
+(c:/texmf-dist/tex/generic/tex-ini-files/pdftexconfig.tex)
+(c:/texmf-dist/tex/plain/etex/etex.src
+
+! e-TeX  fatal error: this file can be processed only in extended mode;
+  did you perhaps forget the asterisk?
+</pre></div>
+</div>
+<p><strong>Note</strong>: Instead of using an asterisk to enable “extended mode” you can use the <code>-etex</code> commandline option instead:</p>
+<div class="example">
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>pdftex -ini -etex -mltex pdfetex.ini
+</pre></div>
+</div>
+<p>The <code>-enc</code> command line option triggers the pdfTeX engine to enable EncTeX by writing some data into the resulting <code>pdfetex.fmt</code> format file.</p> 
+<p><strong>Note</strong>: Using the <code>-enc</code> option on the command line with a <code>.fmt</code> file that was <em>not generated</em> with EncTeX enabled will <em>not</em> work: EncTeX has to be “activated” via an appropriately-generated format file.</p>
+<h3><span class="mw-headline" id="EncTeX_primitives">EncTeX primitives</span></h3>
+<p>EncTeX adds 10 new primitive commands to a TeX engine:</p>
+<ul>
+<li>3 primitives in the initial release (1997):</li>
+<ul>
+<li><code>\xordcode</code></li>
+<li><code>\xchrcode</code></li>
+<li><code>\xprncode</code></li>
+</ul>
+<li>7 additional primitives (for UTF-8 support) in 2003:</li>
+<ul>
+<li><code>\mubyte</code></li>
+<li><code>\endmubyte</code></li>
+<li><code>\mubytein</code></li>
+<li><code>\mubyteout</code></li>
+<li><code>\mubytelog</code></li>
+<li><code>\specialout</code></li>
+<li><code>\noconvert</code></li>
+</ul>
+</ul>
+<p>The use and behaviour of these primitives is well documented in the <a rel="nofollow" class="external text" href="http://mirrors.ctan.org/systems/enctex/encdoc-e.pdf">EncTeX reference manual</a>, written by EncTeX’s author, Petr Olšák. To avoid unneccesary duplication here, interested readers are referred to that document.</p>
+<h3><span class="mw-headline" id="Further_information_on_EncTeX">Further information on EncTeX</span></h3>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://mirrors.ctan.org/systems/enctex/eurotex2003-enctex.pdf">Second version of EncTeX: UTF-8 support</a>: an article by EncTex’s author, Petr Olšák.</li>
+<li><a rel="nofollow" class="external text" href="http://mirrors.ctan.org/systems/enctex/encdoc-e.pdf">EncTeX reference manual</a> (in English).</li>
+</ul>
+<h3><span id="Activating_.28enabling.29_both_MLTeX_and_EncTeX"></span><span class="mw-headline" id="Activating_(enabling)_both_MLTeX_and_EncTeX">Activating (enabling) both MLTeX and EncTeX</span></h3>
+<p>To enable both MLTeX and EncTeX you would generate a suitable format file using a commandline such as</p>
+<div class="example">
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>pdftex -ini -enc -mltex *pdfetex.ini
+</pre></div>
+</div>
+<p>where <code>pdfetex.ini</code> is a file contained in the TeX Live distribution.</p>
+<p><strong>Why the asterisk (<code>*</code>)?</strong> The asterisk puts pdfTeX into so-called “extended mode” which enables support of the e-TeX primitives. If you omit it and type <code>pdftex -ini -enc -mltex pdfetex.ini</code> you will receive an error:</p>
+<div class="example">
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>This is pdfTeX, Version 3.14159265-2.6-1.40.19 (INITEX)
+ \write18 enabled.
+MLTeX v2.2 enabled
+(c:/texmf-dist/tex/plain/config/pdfetex.ini
+(c:/texmf-dist/tex/generic/tex-ini-files/pdftexconfig.tex)
+(c:/texmf-dist/tex/plain/etex/etex.src
+
+! e-TeX  fatal error: this file can be processed only in extended mode;
+  did you perhaps forget the asterisk?
+</pre></div>
+</div>
+<p><strong>Note</strong>: Instead of using an asterisk to enable “extended mode” you can use the <code>-etex</code> commandline option instead:</p>
+<div class="example">
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>pdftex -ini -etex -enc -mltex pdfetex.ini
+</pre></div>
+</div>
+<p>After running the above commandline you would see a message, such as the following, to inform you that MLTeX and EncTeX are both enabled:</p>
+<div class="example">
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>This is pdfTeX, Version 3.14159265-2.6-1.40.19 (INITEX)
+ \write18 enabled.
+entering extended mode
+MLTeX v2.2 enabled
+ encTeX v. Jun. 2004, reencoding enabled.
+....
+....
+....
+Beginning to dump on file pdfetex.fmt
+....
+No pages of output.
+Transcript written on pdfetex.log.
+</pre></div>
+</div>
+<p>and the <code>pdfetex.fmt</code> format file, enabling both MLTeX and EncTeX, would be produced.</p>
+<h2><span class="mw-headline" id="SyncTeX"><a rel="nofollow" class="external text" href="https://github.com/jlaurens/synctex/">SyncTeX</a></span></h2>
+<p>The SyncTeX extension has been available since 2008 and continues to be actively developed by its creator, Jérôme Laurens. It is widely used, including by Overleaf, and is supported by all TeX engines in use today.</p>
+<h3><span id="What_does_SyncTeX_do.3F"></span><span class="mw-headline" id="What_does_SyncTeX_do?">What does SyncTeX do?</span></h3>
+<p>When viewing a document typeset by TeX, perhaps for proofreading/checking prior to  submission to a publisher, you might spot an error and need to fix it in the TeX source code. However, finding the right location in the TeX file can be tricky, especally if it is a substantial document. Equally, you might want to go the other way: jump from a position in a TeX source file directly to the page location in the final typeset PDF. In both cases, there is a need to <em>synchronize</em> a particular location in a TeX file and its corresponding location within a display of its typeset results: and that’s what SyncTeX provides—a way to automatically link locations in TeX files with the page positions in typeset documents.</p>
+<p>If SyncTeX is enabled, it writes out a special file with extension <code>.synctex.gz</code> (gz compressed) or <code>.synctex</code> (uncompressed) depending on the <a href="#SYNOPTIONS">commandline options provided to SyncTeX</a>. SyncTeX-enabled text editors and (mostly) PDF viewers can use those files to perform the necessary synchronization between input (TeX code) and output (display of the typeset PDF). Clearly, this cannot just “happen” without the user’s text editor and PDF document viewer having appropriate functionality which enables communication of text file/PDF viewer locations—based on data contained in the <code>.synctex.gz</code> (or <code>.synctex</code>) file written-out by SyncTeX.</p>
+<p>In addition to functionality within the TeX engine—to generate <code>.synctex.gz</code> files—SyncTeX also provides a special <a rel="nofollow" class="external text" href="https://github.com/jlaurens/synctex/">parser</a> which reads <code>.synctex.gz</code> (or <code>.synctex</code>) files to extract the relevant page/line location information. Applications use that parser to provide support for SyncTeX.</p>
+<h3><span id="Activating_.28enabling.29_SyncTeX"></span><span class="mw-headline" id="Activating_(enabling)_SyncTeX">Activating (enabling) SyncTeX</span></h3>
+<p>SyncTeX-enabled TeX engines have two ways to activate/disable SyncTeX:</p>
+<ul>
+<li>a commandline option: <code>-synctex=NUMBER</code></li>
+<li>a command in the <code>.tex</code> file: the <code>\synctex</code> primitive</li>
+</ul>
+<h3><span class="mw-headline" id="Using_SyncTeX_on_the_commandline">Using SyncTeX on the commandline</span></h3>
+<p>You can use the <code>-synctex=NUMBER</code> option when you run a TeX engine that supports SyncTeX, such as pdfTeX.</p>
+<h4><span class="mw-headline" id="Examples">Examples</span></h4>
+<ul>
+<li>Enable SyncTeX: output <code>.synctex.gz</code> (gz compressed file):</li>
+
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>pdftex -synctex=1 myfile.tex
+</pre></div>
+<p>Produces <code>myfile.synctex.gz</code></p>
+<li>Enable SyncTeX: output <code>.synctex</code> (uncompressed file):</li>
+
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>pdftex -synctex=-1 myfile.tex
+</pre></div>
+<p>Produces <code>myfile.synctex</code></p>
+<li>Disable SyncTeX:</li>
+
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>pdftex -synctex=0 myfile.tex
+</pre></div>
+<p>No SyncTeX output is produced.</p>
+</ul>
+<h3><span id="SyncTeX.E2.80.99s_only_primitive"></span><span class="mw-headline" id="SyncTeX’s_only_primitive">SyncTeX’s only primitive</span></h3>
+<p>SyncTeX provides one primitive, <code>\synctex</code>, that users can add to their <code>.tex</code> file:</p>
+<ul>
+<li>Enable SyncTeX: <code>\synctex=1</code></li>
+<li>Disable SyncTeX: <code>\synctex=0</code></li>
+</ul>
+<h3><span class="mw-headline" id="Further_information_on_SyncTeX">Further information on SyncTeX</span></h3>
+<ul>
+     <li><a rel="nofollow" class="external text" href="http://www.tug.org/TUGboat/tb29-3/tb93laurens.pdf">A TUGBoat article by Jérôme Laurens</a>, SyncTeX’s author.</li>
+     <li>The <a rel="nofollow" class="external text" href="https://github.com/jlaurens/synctex">GitHub repository</a> of the SyncTeX parser.</li>
+</ul>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="Operators.html" title="Operators">Operators</a></li>
+<li><a href="Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="French.html" title="French">French</a></li>
+<li><a href="German.html" title="German">German</a></li>
+<li><a href="Greek.html" title="Greek">Greek</a></li>
+<li><a href="Italian.html" title="Italian">Italian</a></li>
+<li><a href="Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="Korean.html" title="Korean">Korean</a></li>
+<li><a href="Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="Russian.html" title="Russian">Russian</a></li>
+<li><a href="Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="Indices.html" title="Indices">Indices</a></li>
+<li><a href="Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="Counters.html" title="Counters">Counters</a></li>
+<li><a href="Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="Tutorials.html">Tutorials</a></li><li><a href="Inserting_Images.html">How to insert images</a></li><li><a href="Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="MLTeX_EncTeX_and_SyncTeX_TeX_extensions.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==" src="../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="j4DHZhCGjf2hFtuu956ylw==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/MLTeX_EncTeX_and_SyncTeX_TeX_extensions by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:11:18 GMT -->
+</html>

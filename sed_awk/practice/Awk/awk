@@ -1,0 +1,5 @@
+daabaaa BEGIN {\
+str = "daabaaa"\
+sub(/a*/, "c&c", str)\
+print str\
+}

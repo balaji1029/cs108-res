@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.overleaf.com	TRUE	/	FALSE	1999999999	__Host-GAPS	1:xDI1ji-pKl7EPKCgi7F4WlQNDOs1gg:R-ExuauuNt5JEYRJ
+www.overleaf.com	TRUE	/	FALSE	1999999999	Priority	HIGH
+.overleaf.com	TRUE	/	FALSE	1999999999	overleaf_session2	s%3AU-ulE_8QUD7nllKmBB8gO2pqws9r5JcN.Pem%2Fpdw92HM3haJoSNkj%2F9qVBrj382cgOUYjYGvAHfU
+www.overleaf.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+

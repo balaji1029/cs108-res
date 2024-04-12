@@ -1,0 +1,129 @@
+﻿#delete
+#note the original file is not deleted
+
+sed 'd' fruits
+sed '5d' fruits 
+sed '1,5d' fruits
+sed '/^$/d' fruits 
+sed '2,5!d' fruits 
+sed '/^ba*/,/[0-9]$/d' fruits
+
+
+#substitute
+#g: global replace all; I is case insensitive
+sed 's/wolf/fox/' bigfile
+#replace all the occurrences of the string in the line
+sed 's/wolf/fox/gI' bigfile
+#replaces the second occurrence of the word in a line
+sed 's/wolf/fox/2I' bigfile
+#replaces the third and more occurrence of the word in a line
+sed 's/wolf/fox/3gI' bigfile
+#replaces the string only on the third line. Note the file has blank lines also.
+sed '3 s/wolf/fox/' bigfile
+#replaces the string from 3rd till end last line. Note the file has blank lines also.
+sed '3,$ s/wolf/fox/' bigfile
+#replace in line starting with Later; notice regex patterns are put inside /  /
+sed '/^Later/ s/wolf/fox/gI' bigfile 
+#Complicated example; \b does word boundar match, [A-Z] matches uppercase; \1 is backreference
+echo "Welcome To The Course CS108" | sed 's/\(\b[A-Z]\)/\(\1\)/g'
+
+
+#print
+sed '1p' bigfile
+sed -n '1p' bigfile
+sed '/scream/p' bigfile
+sed -n '/scream/p' bigfile
+
+
+#append a (after line), insert i (before line), replace c
+sed '2a tomato' fruits 
+sed '$a tomato' fruits 
+sed '/mango/a is very sweet ' fruits 
+sed '2i tomato' fruits 
+sed '$i tomato' fruits 
+sed '/mango/i is very sweet ' fruits 
+sed '/mango/c aam ' fruits 
+sed '2c aam ' fruits 
+
+
+#quit
+sed '5q' fruits
+
+
+#write to file named out; +4 means write 4 more lines after match
+sed -n '1,3w out' fruits; cat out
+sed -n '/mango/,+4w out' fruits
+
+
+#Multiple commands
+sed 's/mango/aam/; s/banana/kela/;' fruits 
+sed -e 's/mango/aam/' -e 's/banana/kela/' fruits
+#some commands like append do not work properly with semicolons
+sed '1ajuice; 2d' fruits 
+sed -e 1ajuice -e 2d fruits 
+#order matters
+echo "please fix the light bulb!" | sed 's/light/tube/g; s/bulb/light/g'
+echo "please fix the light bulb!" | sed 's/bulb/light/g; s/light/tube/g'
+
+
+#backreferencing examples
+echo "AA BB CC" | sed 's/\([A-Z]\)\1/XX/g'
+sed 's/\([^ ]*\) \([^ ]*\)/\2 \1/' fruits
+sed 's/[0-9]\+/(&)/g' data.txt
+
+
+#sed code in file
+sed -f example.sed fruits
+
+
+#awk example; structure
+ls | awk 'BEGIN { print "List of jpg files:" } /\.jpg$/ { print } END { print "All done!" } '
+
+
+#variables, notice the ending  of files, tsv for tab seperated and csv for comma seperated
+#The comma in the print statement separates different items to be printed.
+awk '{print $0}' CS-108-list.tsv
+awk '{print $2, $1}' CS-108-list.tsv
+awk -F, '{print $1, $2}' CS-108-list.csv
+awk '{print NF, NR, $1, $NF}' CS-108-list.tsv
+awk 'BEGIN {FS=",";num=0} /H1/{num++;} END {print num}' CS-108-list.csv 
+awk 'BEGIN {FS=",";num=0} /H1$/{num++;} END {print num}' CS-108-list.csv 
+awk 'BEGIN {FS=",";num=0} /H16/{num++;} END {print num}' CS-108-list.csv 
+
+
+#arithmetic
+awk 'BEGIN { a = 50; b = 20; print "expression value = ", ( a + b * 5 + a / b) }'
+#nonsense calculation, but shows how variables can be used
+awk '{print NF * 2 + $1}' CS-108-list.tsv
+awk 'BEGIN {PI = 3.14159265; a = 60; result = cos(a * PI / 180.0); printf "The cosine of %f degrees is %f\n", a, result}'
+
+
+#Conditionals
+awk 'BEGIN { num = 11; if (num % 2 == 0) printf "%d is even number\n", num;  else printf "%d is odd number\n", num}'
+awk -F, '($1 > 170) {print $0}' CS-108-list.csv
+awk -f conditionals.awk CS-108-list.csv
+
+
+#loops
+# bigfile argument is just a dummy here, since awk expects a file argument;
+#or you can run it without bigfile, but have to type something in stdin to feed awk!
+awk -f loops.awk bigfile
+
+
+#Arrays
+awk -F, '{Grp[$8]++} END {for(g in Grp) print g, Grp[g]}' CS-108-list.csv
+# bigfile argument is just a dummy here, since awk expects a file argument
+awk -f arrays.awk bigfile
+
+
+#Built-in functions
+#strings
+awk 'BEGIN {str = "Hello, World!"; print "Length = ", length(str)}'
+awk 'BEGIN {str = "HELLO, World!"; print "Substring = ", substr(str,1,4), "\nLowercase = " , tolower(str)}'
+#system functions
+awk 'BEGIN { print "Number of seconds since the Epoch = " systime() }'
+awk 'BEGIN { system("clear"); ret = system("date"); print "Return value = " ret }'
+
+
+#combine sed and awk
+sed 's/,/ /g' CS-108-list.csv | awk '{print $2}'

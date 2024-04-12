@@ -1,0 +1,1427 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:57:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>An overview of technologies supporting the use of colour emoji fonts in LaTeX - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="An overview of technologies supporting the use of colour emoji fonts in LaTeX"><meta name="og:title" content="An overview of technologies supporting the use of colour emoji fonts in LaTeX"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX.html"><link rel="stylesheet" href="../../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" hreflang="ja"><link rel="preload" href="../../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="64JSadC0iR82KOKU2Hf1nQ=="><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="3jhgTEf4-WQdIiXzMY4oqPF-ZsfafMsT5hjs"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>An overview of technologies supporting the use of colour emoji fonts in LaTeX</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Which_topics_do_we_cover?"><span class="tocnumber">1.1</span> <span class="toctext">Which topics do we cover?</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Three_ways_to_typeset_color_emoji"><span class="tocnumber">1.2</span> <span class="toctext">Three ways to typeset color emoji</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Background_on_Unicode_and_emoji_characters"><span class="tocnumber">2</span> <span class="toctext">Background on Unicode and emoji characters</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Character_encodings"><span class="tocnumber">2.1</span> <span class="toctext">Character encodings</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Enter_Unicode"><span class="tocnumber">2.2</span> <span class="toctext">Enter Unicode</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#How_many_Unicode_characters?"><span class="tocnumber">2.3</span> <span class="toctext">How many Unicode characters?</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Unicode_planes"><span class="tocnumber">2.4</span> <span class="toctext">Unicode planes</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#The_rise_of_emoji"><span class="tocnumber">2.5</span> <span class="toctext">The rise of emoji</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Emoji_live_on_a_higher_plane"><span class="tocnumber">2.6</span> <span class="toctext">Emoji live on a higher plane</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Pasting_emoji_and_other_non-BMP_characters_into_Overleaf"><span class="tocnumber">2.6.1</span> <span class="toctext">Pasting emoji and other non-BMP characters into Overleaf</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Using_Unicode_code_points_(U+&lt;hexadecimal_value&gt;)_in_LuaLaTeX"><span class="tocnumber">2.7</span> <span class="toctext">Using Unicode code points (U+&lt;hexadecimal value&gt;) in LuaLaTeX</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#(optional_detail)_LuaTeX/LuaHBTeX:_\char_vs_\Uchar"><span class="tocnumber">2.7.1</span> <span class="toctext">(optional detail) LuaTeX/LuaHBTeX: \char vs \Uchar</span></a>
+<ul>
+<li class="toclevel-4 tocsection-14"><a href="#The_key_difference:_expansion"><span class="tocnumber">2.7.1.1</span> <span class="toctext">The key difference: expansion</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#Unicode_(encoding)_is_not_the_full_story"><span class="tocnumber">2.8</span> <span class="toctext">Unicode (encoding) is not the full story</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#Glyph_vs._character:_aren’t_they_the_same_thing?"><span class="tocnumber">2.8.1</span> <span class="toctext">Glyph vs. character: aren’t they the same thing?</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Unicode_emoji:_much_more_than_text_encoding"><span class="tocnumber">2.8.2</span> <span class="toctext">Unicode emoji: much more than text encoding</span></a>
+<ul>
+<li class="toclevel-4 tocsection-18"><a href="#Using_skin_tone_modifiers_in_LuaHBTeX"><span class="tocnumber">2.8.2.1</span> <span class="toctext">Using skin tone modifiers in LuaHBTeX</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-19"><a href="#UTF-8:_its_role_in_storing_Unicode_text"><span class="tocnumber">2.8.3</span> <span class="toctext">UTF-8: its role in storing Unicode text</span></a>
+<ul>
+<li class="toclevel-4 tocsection-20"><a href="#Some_UTF-8_examples"><span class="tocnumber">2.8.3.1</span> <span class="toctext">Some UTF-8 examples</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-21"><a href="#Special_characters_used_in_Unicode-base_emoji_text_processing"><span class="tocnumber">2.8.4</span> <span class="toctext">Special characters used in Unicode-base emoji text processing</span></a>
+<ul>
+<li class="toclevel-4 tocsection-22"><a href="#Two_non-printing_characters_to_know_about"><span class="tocnumber">2.8.4.1</span> <span class="toctext">Two non-printing characters to know about</span></a></li>
+<li class="toclevel-4 tocsection-23"><a href="#Example_use_of_zero_width_non-joiner"><span class="tocnumber">2.8.4.2</span> <span class="toctext">Example use of zero width non-joiner</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#The_concept_of_“text_shaping”"><span class="tocnumber">3</span> <span class="toctext">The concept of “text shaping”</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#Further_reading_on_text_shaping"><span class="tocnumber">3.1</span> <span class="toctext">Further reading on text shaping</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#TeXnical_note:_multiple_shaping_technologies_(models)"><span class="tocnumber">3.2</span> <span class="toctext">TeXnical note: multiple shaping technologies (models)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-27"><a href="#Example_using_the_Graphite_shaper"><span class="tocnumber">3.2.1</span> <span class="toctext">Example using the Graphite shaper</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-28"><a href="#Emoji_and_text_shaping"><span class="tocnumber">3.3</span> <span class="toctext">Emoji and text shaping</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Division_of_responsibility:_text-shaping_engine_+_OpenType_fonts"><span class="tocnumber">3.4</span> <span class="toctext">Division of responsibility: text-shaping engine + OpenType fonts</span></a>
+<ul>
+<li class="toclevel-3 tocsection-30"><a href="#What_is_a_list_of_glyphs?"><span class="tocnumber">3.4.1</span> <span class="toctext">What is a list of glyphs?</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#What_are_OpenType_fonts?"><span class="tocnumber">3.4.2</span> <span class="toctext">What are OpenType fonts?</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#Encoded_and_unencoded_“glyphs”"><span class="tocnumber">3.4.3</span> <span class="toctext">Encoded and unencoded “glyphs”</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-33"><a href="#OpenType_color_fonts"><span class="tocnumber">3.5</span> <span class="toctext">OpenType color fonts</span></a>
+<ul>
+<li class="toclevel-3 tocsection-34"><a href="#Four_flavors_of_OpenType_color_font"><span class="tocnumber">3.5.1</span> <span class="toctext">Four flavors of OpenType color font</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#The_buzz_about_HarfBuzz"><span class="tocnumber">3.5.2</span> <span class="toctext">The buzz about HarfBuzz</span></a>
+<ul>
+<li class="toclevel-4 tocsection-36"><a href="#Exploring_HarfBuzz"><span class="tocnumber">3.5.2.1</span> <span class="toctext">Exploring HarfBuzz</span></a></li>
+<li class="toclevel-4 tocsection-37"><a href="#Example:_how_to_use_hb-view"><span class="tocnumber">3.5.2.2</span> <span class="toctext">Example: how to use hb-view</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-38"><a href="#Text_shaping_and_TeX_engines"><span class="tocnumber">4</span> <span class="toctext">Text shaping and TeX engines</span></a>
+<ul>
+<li class="toclevel-2 tocsection-39"><a href="#XeTeX"><span class="tocnumber">4.1</span> <span class="toctext">XeTeX</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="#LuaTeX_and_LuaHBTeX"><span class="tocnumber">4.2</span> <span class="toctext">LuaTeX and LuaHBTeX</span></a>
+<ul>
+<li class="toclevel-3 tocsection-41"><a href="#luaotfload:_essential_for_using_OpenType_fonts_in_LuaTeX/LuaHBTeX"><span class="tocnumber">4.2.1</span> <span class="toctext">luaotfload: essential for using OpenType fonts in LuaTeX/LuaHBTeX</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-42"><a href="#LuaHBTeX:_new_options_for_text_shaping"><span class="tocnumber">4.3</span> <span class="toctext">LuaHBTeX: new options for text shaping</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="#luaotfload:_two_options_for_text_shaping_(when_to_use_HarfBuzz?)"><span class="tocnumber">4.4</span> <span class="toctext">luaotfload: two options for text shaping (when to use HarfBuzz?)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-44"><a href="#Sample_project:_Arabic_shaping"><span class="tocnumber">4.4.1</span> <span class="toctext">Sample project: Arabic shaping</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-45"><a href="#Choosing_the_“Renderer”_in_fontspec"><span class="tocnumber">4.5</span> <span class="toctext">Choosing the “Renderer” in fontspec</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-46"><a href="#TeX_engines,_HarfBuzz,_and_color_emoji"><span class="tocnumber">5</span> <span class="toctext">TeX engines, HarfBuzz, and color emoji</span></a>
+<ul>
+<li class="toclevel-2 tocsection-47"><a href="#XeTeX_and_OpenType_color_fonts"><span class="tocnumber">5.1</span> <span class="toctext">XeTeX and OpenType color fonts</span></a>
+<ul>
+<li class="toclevel-3 tocsection-48"><a href="#XeTeX_and_raster-based_OpenType_color_fonts"><span class="tocnumber">5.1.1</span> <span class="toctext">XeTeX and raster-based OpenType color fonts</span></a>
+<ul>
+<li class="toclevel-4 tocsection-49"><a href="#Plain_LuaHBTeX_example"><span class="tocnumber">5.1.1.1</span> <span class="toctext">Plain LuaHBTeX example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-50"><a href="#The_real_cause_of_XeTeX’s_failure"><span class="tocnumber">5.1.2</span> <span class="toctext">The real cause of  XeTeX’s failure</span></a>
+<ul>
+<li class="toclevel-4 tocsection-51"><a href="#TeXnical_note"><span class="tocnumber">5.1.2.1</span> <span class="toctext">TeXnical note</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-52"><a href="#XeTeX_and_vector-based_OpenType_color_fonts"><span class="tocnumber">5.1.3</span> <span class="toctext">XeTeX and vector-based OpenType color fonts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-53"><a href="#LuaHBTeX_and_OpenType_color_fonts"><span class="tocnumber">5.2</span> <span class="toctext">LuaHBTeX and OpenType color fonts</span></a>
+<ul>
+<li class="toclevel-3 tocsection-54"><a href="#Using_Microsoft_COLR/CPAL_color_fonts_with_LuaHBTeX"><span class="tocnumber">5.2.1</span> <span class="toctext">Using Microsoft COLR/CPAL color fonts with LuaHBTeX</span></a></li>
+<li class="toclevel-3 tocsection-55"><a href="#Using_SVG-based_OpenType_color_fonts_with_LuaHBTeX"><span class="tocnumber">5.2.2</span> <span class="toctext">Using SVG-based OpenType color fonts with LuaHBTeX</span></a>
+<ul>
+<li class="toclevel-4 tocsection-56"><a href="#Some_notes_of_caution"><span class="tocnumber">5.2.2.1</span> <span class="toctext">Some notes of caution</span></a></li>
+<li class="toclevel-4 tocsection-57"><a href="#Processing_SVG_glyph_data"><span class="tocnumber">5.2.2.2</span> <span class="toctext">Processing SVG glyph data</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-58"><a href="#Raster-based_OpenType_color_fonts"><span class="tocnumber">5.2.3</span> <span class="toctext">Raster-based OpenType color fonts</span></a>
+<ul>
+<li class="toclevel-4 tocsection-59"><a href="#Using_Google’s_CBDT/CBLC_OpenType_color_font_format_with_LuaHBTeX"><span class="tocnumber">5.2.3.1</span> <span class="toctext">Using Google’s CBDT/CBLC OpenType color font format with LuaHBTeX</span></a></li>
+<li class="toclevel-4 tocsection-60"><a href="#Using_Apple’s_sbix_OpenType_color_font_format_with_LuaHBTeX"><span class="tocnumber">5.2.3.2</span> <span class="toctext">Using Apple’s sbix OpenType color font format with LuaHBTeX</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-61"><a href="#Introduction_to_the_LuaHBTeX_HarfBuzz_API"><span class="tocnumber">6</span> <span class="toctext">Introduction to the LuaHBTeX HarfBuzz API</span></a>
+<ul>
+<li class="toclevel-2 tocsection-62"><a href="#First_steps:_load_the_luaharfbuzz_library_and_find_a_font"><span class="tocnumber">6.1</span> <span class="toctext">First steps: load the luaharfbuzz library and find a font</span></a>
+<ul>
+<li class="toclevel-3 tocsection-63"><a href="#HarfBuzz_font_and_HarfBuzz_face:_what_are_they?"><span class="tocnumber">6.1.1</span> <span class="toctext">HarfBuzz font and HarfBuzz face: what are they?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-64"><a href="#Using_font_glyphs_to_create_PNG_files"><span class="tocnumber">6.2</span> <span class="toctext">Using font glyphs to create PNG files</span></a></li>
+<li class="toclevel-2 tocsection-65"><a href="#Second_\directlua_chunk:_create_the_macro_\codestoemoji"><span class="tocnumber">6.3</span> <span class="toctext">Second \directlua chunk: create the macro \codestoemoji</span></a>
+<ul>
+<li class="toclevel-3 tocsection-66"><a href="#Understanding_the_definition_of_the_macro_\codestoemoji"><span class="tocnumber">6.3.1</span> <span class="toctext">Understanding the definition of the macro \codestoemoji</span></a>
+<ul>
+<li class="toclevel-4 tocsection-67"><a href="#Dealing_with_the_macro_parameter:_&quot;#1&quot;"><span class="tocnumber">6.3.1.1</span> <span class="toctext">Dealing with the macro parameter: "#1"</span></a></li>
+<li class="toclevel-4 tocsection-68"><a href="#\Uchar:_expansion_in_\directlua"><span class="tocnumber">6.3.1.2</span> <span class="toctext">\Uchar: expansion in \directlua</span></a>
+<ul>
+<li class="toclevel-5 tocsection-69"><a href="#Why_doesn’t_\char_work?"><span class="tocnumber">6.3.1.2.1</span> <span class="toctext">Why doesn’t \char work?</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-70"><a href="#Calling_the_HarfBuzz_shaping_function"><span class="tocnumber">6.3.2</span> <span class="toctext">Calling the HarfBuzz shaping function</span></a>
+<ul>
+<li class="toclevel-4 tocsection-71"><a href="#Setting_buffer_parameters"><span class="tocnumber">6.3.2.1</span> <span class="toctext">Setting buffer parameters</span></a></li>
+<li class="toclevel-4 tocsection-72"><a href="#Perform_shaping"><span class="tocnumber">6.3.2.2</span> <span class="toctext">Perform shaping</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-73"><a href="#Accessing_the_result:_getting_the_glyphs"><span class="tocnumber">6.3.3</span> <span class="toctext">Accessing the result: getting the glyphs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-74"><a href="#The_full_code_that_you_can_Open_in_Overleaf"><span class="tocnumber">6.4</span> <span class="toctext">The full code that you can Open in Overleaf</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-75"><a href="#Bonus_section:_Fun_with_emoji_math"><span class="tocnumber">7</span> <span class="toctext">Bonus section: Fun with emoji math</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>This article provides an overview of various <a href="#Which_topics_do_we_cover?">background topics</a> related to using OpenType color fonts for typesetting color emoji in LaTeX. We’ve tried to provide a wide range of materials, catering to a broad spectrum of interests and expertise. To keep the article manageable, our coverage of certain topics omits a lot of technical detail but we hope there’s sufficient material to orientate your exploration of typesetting color emoji in LaTeX.</p>
+<p><b>Update (July 2023)</b>: This article was first published in August 2021 and revised in July 2023 to update the section on <a href="#Using_SVG-based_OpenType_color_fonts_with_LuaHBTeX">Using SVG-based OpenType color fonts with LuaHBTeX</a>.
+</p>
+<h3><span id="Which_topics_do_we_cover.3F"></span><span class="mw-headline" id="Which_topics_do_we_cover?">Which topics do we cover?</span></h3>
+<p>This article covers the following general topics:</p>
+<ul>
+<li>Unicode: the standard which encodes emoji as characters and codifies their expected behavior in text-processing and typesetting applications.</li>
+<li>OpenType color fonts: specialized fonts that provide colorful representations of emoji characters displayed in your LaTeX document.</li>
+<li>Text shaping: introducing a key component of typesetting complex-script languages and emoji.</li>
+<li>HarfBuzz: the component of LuaHBTeX which enables advanced multilingual typesetting and the use of OpenType color fonts to typeset emoji in LaTeX.</li>
+<li>Different TeX engines: exploring their support for OpenType color fonts and selecting which TeX engine to use.</li>
+<li>LuaHBTeX’s HarfBuzz API: an introduction to the “magic” behind <a href="#The_concept_of_“text_shaping”">text shaping</a> in LuaHBTeX.</li>
+</ul>
+<h3><span class="mw-headline" id="Three_ways_to_typeset_color_emoji">Three ways to typeset color emoji</span></h3>
+<p>Color emoji can be typeset with LaTeX using three main methods:</p>
+<ol>
+<li>Using standard LaTeX graphics tools such as TikZ, MetaPost, or Asymptote to draw the emoji.</li>
+<li>Inserting emoji using pre-prepared emoji graphics stored in external files.</li>
+<li>Treating emoji as Unicode-encoded text and using <a href="#The_concept_of_“text_shaping”">text shaping</a> with <a href="#OpenType_color_fonts">OpenType color fonts</a> to typeset them.</li>
+</ol>
+<p>
+The practical options for including color emoji in your LaTeX document depend on the TeX engine being used to compile that document: i.e., whether you are using:
+</p>
+<ul>
+<li>pdfLaTeX: pdfTeX engine + LaTeX;
+</li><li>XeLaTeX: XeTeX engine + LaTeX;
+</li><li>LuaLaTeX: LuaHBTeX engine (starting with TeX Live 2020) + LaTeX.
+</li>
+</ul>
+<p>All three of these TeX engines can use LaTeX tools or packages to draw emoji or use <code>\includegraphics{...}</code> to insert emoji stored in external graphics files. Drawing or importing graphics are ideal techniques to typeset emoji when you need a solution that doesn’t depend on the TeX engine used to compile the LaTeX document.</p> 
+<p>However, if your workflow provides the flexibility to choose a particular TeX engine, and you would prefer to use OpenType color fonts and Unicode-based text processing, the newest version of LuaTeX, called LuaHBTeX, is what you need. Starting with TeX Live 2020, LuaHBTeX is used to compile LaTeX documents based on the LuaLaTeX format.</p>
+<h2><span class="mw-headline" id="Background_on_Unicode_and_emoji_characters">Background on Unicode and emoji characters</span></h2>
+<h3><span class="mw-headline" id="Character_encodings">Character encodings</span></h3>
+<p>Computers store, transmit, and process text using a sequence of numeric (integer) values that represent the text’s constituent <em>characters</em>. Reliable text processing needs producers and consumers of text to agree on which integer values should be used to represent individual characters within the text stream. In other words, what is that text’s <em>character</em> <em>encoding?</em> An encoding is the set of agreed integer values assigned to represent a certain set of characters: each character is represented by an integer value within the encoding being used. 
+</p>
+<h3><span class="mw-headline" id="Enter_Unicode">Enter Unicode</span></h3>
+<p>Historically, in the era of 8-bit text, many different character encodings were used, always raising the specter of <em>encoding mismatches</em>: producers and consumers of text mistakenly assuming different encodings, resulting in text-processing errors. Anyone who has worked with TeX/LaTeX for some years is likely to have encountered encoding mismatches between the input text and the fonts used to typeset a document. If the document fonts are configured to use an encoding different from that of the text, it likely results in missing or erroneous characters in the typeset PDF. </p>
+<p>These historic encoding problems can be resolved using an international standard that encodes all the world’s characters: Unicode. The Unicode standard is not static but is periodically updated to include additional characters and scripts (writing systems) within its encoding scheme. There’s a <a rel="nofollow" class="external text" href="http://www.unicode.org/pending/proposals.html">formal review process for proposing new characters</a> with a specific <a rel="nofollow" class="external text" href="https://www.unicode.org/emoji/proposals.html">scheme for new emoji characters</a>.</p>
+<h3><span id="How_many_Unicode_characters.3F"></span><span class="mw-headline" id="How_many_Unicode_characters?">How many Unicode characters?</span></h3>
+<p>Unicode encodes a theoretical maximum of 1,114,112 characters. Each of the 1,114,112 integer values is called a <em>code point</em>: the integer value assigned to identify each character. However, for various technical reasons only <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Unicode#Architecture_and_terminology">1,112,064 code points</a> can be assigned to actual characters: 2048 code points are non-assignable and forbidden for use within Unicode-compliant text.</p>
+<p>At the time of writing (the first version of this article), Version 13 of the Unicode standard had allocated a total of 143,859 code points to actual characters, including <a rel="nofollow" class="external text" href="https://www.unicode.org/L2/L2020/20114r-family-emoji-explor.pdf">3304 characters now encoded as emoji</a> (see page 2 of that document). The growth in number of characters encoded by Unicode is nicely documented in the article <a rel="nofollow" class="external text" href="https://www.babelstone.co.uk/Unicode/HowMany.html">How many Unicode characters are there?</a> and in a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Unicode#Versions">Wikipedia entry</a>. </p>
+<h3><span class="mw-headline" id="Unicode_planes">Unicode planes</span></h3>
+<p>The entire collection of 1,114,112 Unicode code points is grouped into 17 so-called Planes: Plane 0 to Plane 16, each one containing 65536 code-point values, yielding a total of \(17\times2^{16} = 1,114,112\) characters. Plane 0, called the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane">Basic Multilingual Plane</a>, encodes the most commonly used characters. Planes 1–16 are called <a rel="nofollow" class="external text" href="http://unicode.org/glossary/#supplementary_planes">Supplementary Planes</a>.</p>
+<h3><span class="mw-headline" id="The_rise_of_emoji">The rise of emoji</span></h3>
+<p>New characters arise through changing modes of human communications, and mobile phone technology gave rise to one such set of characters: emoji, which evolved in Japan during the late 1990s. It’s not surprising that the <a rel="nofollow" class="external text" href="https://unicode.org/faq/emoji_dingbats.html">Unicode FAQ on Emoji</a> notes</p>
+<blockquote>
+<p>“The word emoji comes from the Japanese <a rel="nofollow" class="external text" href="http://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%E7%B5%B5">絵</a> (e ≅ picture) + <a rel="nofollow" class="external text" href="http://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=%E6%96%87">文字</a> (moji ≅ written character).” 
+</p>
+</blockquote>
+<p>Readers interested in the background and historical development of emoji may find interest in this <a rel="nofollow" class="external text" href="https://unicode.org/reports/tr51/#Introduction">Unicode introduction</a> or the article <a rel="nofollow" class="external text" href="https://firstmonday.org/ojs/index.php/fm/article/view/9381">I second that emoji: The standards, structures, and social production of emoji</a>.</p>
+<p>It wasn’t until 2010, with the release of <a rel="nofollow" class="external text" href="https://www.unicode.org/versions/Unicode6.0.0/">version 6.0 of the Unicode Standard</a>, that many emoji were formally recognized as <em>characters </em>in their own right. Unicode 13.0 encoded <a rel="nofollow" class="external text" href="https://www.unicode.org/L2/L2020/20114r-family-emoji-explor.pdf">3304 characters as emoji</a> (see page 2 of that document), with Unicode 13.1 listing <a rel="nofollow" class="external text" href="https://unicode.org/emoji/charts/emoji-counts.html">lists 3521 emoji</a>.</p>
+<h3><span class="mw-headline" id="Emoji_live_on_a_higher_plane">Emoji live on a higher plane</span></h3>
+<p>Unicode assigned many emoji characters to code points outside the Basic Multilingual Plane (BMP), encoded <a rel="nofollow" class="external text" href="https://en.wikibooks.org/wiki/Unicode/Character_reference/1F000-1FFFF">in Plane 1</a> with code points in the range 1F000–1FFFF—which has an important consequence for anyone wishing to <em>copy and paste</em> emoji characters into the Overleaf editors (Code Editor or Visual Editor). Overleaf’s text editors can only handle characters within the Basic Multilingual Plane, although we hope future upgrades will introduce support for non-BMP characters. Note that this limitation affects only non-BMP characters within text pasted into files destined to be edited via the Overleaf editors. There are other ways to access emoji characters:</p>
+<ul>
+<li>Using the primitive commands <code>\char"&lt;code point&gt;</code> or <code>\Uchar"&lt;code point&gt;</code> (see <a href="#(optional_detail)_LuaTeX/LuaHBTeX:_\char_vs_\Uchar">this section</a> of the article).
+</li><li>Using input text files containing emoji characters in UTF-8 format.</li>
+<li>Using LaTeX commands (macros) which insert emoji characters.</li>
+</ul>
+<h4><span class="mw-headline" id="Pasting_emoji_and_other_non-BMP_characters_into_Overleaf">Pasting emoji and other non-BMP characters into Overleaf</span></h4>
+<p>If you paste an emoji character, for example, 😀, into the Overleaf Code Editor, it will, at present, be converted to the characters ��.</p>
+<p><img alt="Error due to copy + paste non-BMP characters into Overleaf editors" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/4a/EmojiSmileyPaste.jpg" decoding="async" width="600" height="395" /></p>
+<p>The � character has Unicode code point FFFD and its official name is the REPLACEMENT CHARACTER and is used to “<a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Specials_(Unicode_block)">replace an unknown, unrecognized or unrepresentable character</a>”.</p>
+<h3><span id="Using_Unicode_code_points_.28U.2B.3Chexadecimal_value.3E.29_in_LuaLaTeX"></span><span class="mw-headline" id="Using_Unicode_code_points_(U+&lt;hexadecimal_value&gt;)_in_LuaLaTeX">Using Unicode code points <code>(U+&lt;hexadecimal value&gt;)</code> in LuaLaTeX</span></h3>
+<p>The Unicode documentation represents code point values using the notation <code>U+&lt;hexadecimal value&gt;</code>—such as <code>U+1F600</code>, where <code>1F600</code> is the <code>&lt;hexadecimal value&gt;</code> of the Unicode code point for the 😀 emoji character. To use these code point values in LuaLaTeX, you delete the <code>U+</code> and write <code>\char"&lt;hexadecimal value&gt;</code> or <code>\Uchar"&lt;hexadecimal value&gt;</code>.  The <code>"</code> character tells a TeX engine that the number provided is specified in hexadecimal. For example, to use the 😀 emoji, you would write <code>\char"1F600</code> or <code>\Uchar"1F600</code>—using a font capable of typesetting it.</p>
+<p>A minimal LuaLaTeX example using <code>\char</code> and <code>\Uchar</code> to typeset the 😀 emoji character might be:
+
+</p><p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newfontfamily\emojifont</span><span class="na">[Renderer=Harfbuzz]</span><span class="nb">{</span>NotoColorEmoji.ttf<span class="nb">}</span>
+<span class="c">%Use \emojifont in a group to keep its effects local</span>
+<span class="nb">{</span><span class="k">\emojifont</span> 
+<span class="k">\Uchar</span>"1F600
+<span class="k">\char</span>"1F600<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex&amp;snip_name=Test+using+LuaLaTeX&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bfontspec%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewfontfamily%5Cemojifont%5BRenderer%3DHarfbuzz%5D%7BNotoColorEmoji.ttf%7D%0A%25Use+%5Cemojifont+in+a+group+to+keep+its+effects+local%0A%7B%5Cemojifont+%0A%5CUchar%221F600%0A%5Cchar%221F600%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this LuaLaTeX example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<h5><span id=".28optional_detail.29_LuaTeX.2FLuaHBTeX:_.5Cchar_vs_.5CUchar"></span><span class="mw-headline" id="(optional_detail)_LuaTeX/LuaHBTeX:_\char_vs_\Uchar">(optional detail) LuaTeX/LuaHBTeX: <code>\char</code> vs <code>\Uchar</code></span></h5>
+<p>In addition to the conventional <code>\char&lt;character code&gt;</code> command for typesetting a specific <code>&lt;character code&gt;</code>, using the current font, the LuaTeX, LuaHBTeX and XeTeX engines also provide the <code>\Uchar&lt;character code&gt;</code> command. From a user’s perspective, the result of <code>\char</code> and <code>\Uchar</code> look the same, but there is a subtle difference in how these commands work, as we note below.</p> 
+<h6><span class="mw-headline" id="The_key_difference:_expansion">The key difference: <em>expansion</em></span></h6>
+<p><code>\Uchar</code> is a so-called <a rel="nofollow" class="external text" href="How_does_/expandafter_work__The_meaning_of_expansion.html#Expansion:_A_general_term_for_a_set_of_operations">expandable command</a> whereas <code>\char</code> is not expandable. When a <code>\char&lt;character code&gt;</code> or <code>\Uchar&lt;character code&gt;</code> command is being “executed”—i.e., the command is not being stored as part of a macro or other token list—the following actions take place inside the TeX engine:
+</p>
+<ul>
+<li><strong><code>\char&lt;character code&gt;</code></strong> instructs the TeX engine to immediately insert a character token, representing <code>&lt;character code&gt;</code>, into whatever piece of content it is currently typesetting.</li>
+<li>In contrast, <strong><code>\Uchar&lt;character code&gt;</code></strong> has two distinct processing steps:</li>
+<ol>
+<li>The <code>\Uchar&lt;character code&gt;</code> command is <em>expanded</em>, and the <code>&lt;character code&gt;</code> is converted to a temporary token list containing a single <a rel="nofollow" class="external text" href="How_does_/expandafter_work__An_introduction_to_TeX_tokens.html#TeX_Tokens_101_.28and_notions_of_expansion.29">character token</a> which represents the <code>&lt;character code&gt;</code>.</li> 
+<li>That single-character token list is now <em>made available</em> to the TeX engine as the source of its next input. In effect, the TeX engine “temporarily shifts its gaze” to use that single-token list as the location of its next input item (token). By default, the TeX engine simply goes back to read (input) that token and typeset the corresponding character, reproducing the behavior of the <code>\char</code> command. <strong>However</strong>, because that <code>&lt;character code&gt;</code> was not immediately typeset, but temporarily <em>stored</em> (saved) as a single token, primitive TeX commands or LaTeX macros can make use of (absorb) that token—it does not have to be typeset straight away but can be used in further processing as required.</li>
+</ol>
+</ul>
+<p>In effect, <code>\char&lt;character code&gt;</code> says “typeset this <code>&lt;character code&gt;</code> now,” whereas <code>\Uchar&lt;character code&gt;</code> has a form of “delayed action” by creating a stored character token and making it available as the next input item (a token). That token can either be used (absorbed) by TeX commands and macros or re-read by the TeX engine and typeset.</p>
+<h3><span id="Unicode_.28encoding.29_is_not_the_full_story"></span><span class="mw-headline" id="Unicode_(encoding)_is_not_the_full_story">Unicode (encoding) is not the full story</span></h3>
+<p>The ability to use emoji characters within Unicode-encoded text is only part of the emoji success story. The surge in emoji usage was also enabled by developments in <a rel="nofollow" class="external text" href="https://learn.microsoft.com/en-us/typography/opentype/">OpenType font technology</a>—fonts whose glyph data (character designs) can contain <a rel="nofollow" class="external text" href="https://learn.microsoft.com/en-us/typography/opentype/spec/colr">color data</a>: so-called <a href="#OpenType_color_fonts">OpenType color fonts</a>.</p>
+<p>Apart from suitable fonts, the use of color emoji requires additional software components whose tasks include:</p>
+<ul>
+<li>pre-processing (“<a href="#The_concept_of_“text_shaping”">shaping</a>”) Unicode-encoded text, <em>preparing</em> it for display using a particular font;</li>
+<li><em>rendering and display </em>of a font’s colorful emoji <em>glyphs</em> onto a device’s screen.</li>
+</ul>
+<h4><span id="Glyph_vs._character:_aren.E2.80.99t_they_the_same_thing.3F"></span><span class="mw-headline" id="Glyph_vs._character:_aren’t_they_the_same_thing?">Glyph vs. character: aren’t they the same thing?</span></h4>
+<p>The terms “glyph” and “character” are often used as if they were interchangeable—referring to the same basic concept—but there is a subtle, although important, difference in their meaning.</p>
+<p>Unicode <a rel="nofollow" class="external text" href="http://www.unicode.org/glossary/#character">defines the term “character”</a> as:</p>
+<blockquote>
+<p>“The smallest component of written language that has semantic value; refers to the abstract meaning and/or shape, rather than a specific shape… ”
+</p>
+</blockquote>
+<p>In contrast, a “glyph” is a <em>specific</em> <em>shape</em> (design) for the <em>visual representation </em>of a<em> </em>particular <em>character</em>.</p>
+<p>The character vs. glyph issue is readily observed when emoji-laden text is viewed on various software systems/platforms, such as reading the same text on your iOS- or Android-based mobile phone or Windows desktop computer. Whichever device or platform is used, the underlying text (sequence of characters) would contain the same Unicode-encoded <em>emoji</em> <em>characters</em>. It is device-specific capabilities involved in <em>pre-processing</em> that text then <em>rendering</em> and <em>display</em> of the results, perhaps using device-specific fonts, which produces different glyphs (character designs) to represent the same emoji characters.</p><p class="mw-empty-elt"> 
+
+</p><p>Unicode’s <a rel="nofollow" class="external text" href="https://unicode.org/emoji/charts/full-emoji-list.html">Full Emoji List</a> provides sample images representing each Unicode emoji character—demonstrating various glyphs used by different technology vendors. Not only do font designers adopt their own particular designs (glyphs) to represent emoji characters, but individual fonts also vary in the number of emoji characters they support (contain glyphs for) and may or may not contain more advanced features of emoji-text processing included in the Unicode emoji specifications.</p>
+<p>The notion and concept of characters, their semantics and encoding, form the basis for the world of Unicode: it deals with characters. The design and visual representation of individual characters, as glyphs, belong to font technologies and the craft of font design.</p>
+<h4><span class="mw-headline" id="Unicode_emoji:_much_more_than_text_encoding">Unicode emoji: <em>much</em> more than text encoding</span></h4>
+<p>Unicode’s core role is to provide a global encoding standard that defines which integer value, called a <em>code point, </em>should be used to represent each character, including emoji, within a stream of Unicode-encoded text.  </p>
+<p>Unicode’s specification for emoji also defines <em>processing behaviors</em> for certain <em>sequences</em> of emoji characters appearing within a stream of Unicode-encoded text. Defined sequences of emoji characters can be “merged” through a process called <a href="#The_concept_of_“text_shaping”">text shaping</a> to produce a single resultant (“composite”) emoji glyph—that single glyph would be used by the device's operating system to represent the original character sequence present in the text. </p><p>Unicode’s Technical Report on <a rel="nofollow" class="external text" href="https://unicode.org/reports/tr51/">Unicode Emoji</a> documents the rich set of features available to software wishing to provide Unicode-compliant processing of emoji characters. As an example, Unicode defines (encodes) characters called <a rel="nofollow" class="external text" href="http://www.unicode.org/reports/tr51/#Emoji_Modifiers_Table">emoji modifiers</a> that can be used to generate <i>variations</i> of “base” emoji characters, such as variations in <a rel="nofollow" class="external text" href="http://www.unicode.org/reports/tr51/#Diversity">skin tone based on the Fitzpatrick scale</a>. Note that the set of base emoji characters and the applicable modifiers are defined as part of the overall <a rel="nofollow" class="external text" href="http://www.unicode.org/reports/tr51">Unicode emoji standard</a>.</p>
+<p>The Unicode page <a rel="nofollow" class="external text" href="http://unicode.org/emoji/charts/emoji-sequences.html">Emoji Sequences</a> provides a chart of the sequences currently provided by the Unicode specification. Place a mouse pointer over any of the emoji glyph images to see a small pop-up tooltip telling you the underlying Unicode emoji character sequence which produces that glyph:</p>
+<p><img alt="EmojiSequenceChart.png" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/1b/EmojiSequenceChart.png" decoding="async" width="800" height="427" />
+</p>
+<p>For example, the emoji glyph:</p>
+<p><img alt="HandMediumSkinTone.png" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/2c/HandMediumSkinTone.png" decoding="async" width="100" height="100" />
+</p>
+<p>is listed in the <a rel="nofollow" class="external text" href="http://unicode.org/emoji/charts/emoji-sequences.html#modifier_sequences">modifier sequences section</a> and is produced by the two-character sequence U+1F44B U+1F3FD. Those component characters are:</p>
+<p>U+1F44B:<img alt="UnicodeWavingHandDefault.png" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/a/a7/UnicodeWavingHandDefault.png" decoding="async" width="72" height="72" /> (WAVING HAND)</p>
+<p>U+1F3FD:<img alt="FitzPatrick3.png" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/f/f0/FitzPatrick3.png" decoding="async" width="72" height="66" /> (EMOJI MODIFIER FITZPATRICK TYPE-4)</p>
+<h6><span class="mw-headline" id="Using_skin_tone_modifiers_in_LuaHBTeX">Using skin tone modifiers in LuaHBTeX</span></h6>
+<p>The following example uses LuaHBTeX to demonstrate the use of emoji modifiers:</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newfontfamily\emojifont</span><span class="na">[Renderer=HarfBuzz,SizeFeatures={Size=20}]</span><span class="nb">{</span>NotoColorEmoji.ttf<span class="nb">}</span>
+Isolated waving hand: <span class="nb">{</span><span class="k">\emojifont\Uchar</span>"1F44B<span class="nb">}</span><span class="k">\par</span>
+Isolated modifier: <span class="nb">{</span><span class="k">\emojifont\Uchar</span>"1F3FD<span class="nb">}</span><span class="k">\par</span> 
+Combined result: <span class="nb">{</span><span class="k">\emojifont\Uchar</span>"1F44B<span class="k">\Uchar</span>"1F3FD<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex&amp;snip_name=Emoji+modifiers+using+LuaLaTeX&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bfontspec%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewfontfamily%5Cemojifont%5BRenderer%3DHarfBuzz%2CSizeFeatures%3D%7BSize%3D20%7D%5D%7BNotoColorEmoji.ttf%7D%0AIsolated+waving+hand%3A+%7B%5Cemojifont%5CUchar%221F44B%7D%5Cpar%0AIsolated+modifier%3A+%7B%5Cemojifont%5CUchar%221F3FD%7D%5Cpar+%0ACombined+result%3A+%7B%5Cemojifont%5CUchar%221F44B%5CUchar%221F3FD%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this LuaLaTeX emoji modifiers example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="ModifiersInLuaHBTeX.png" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/9/99/ModifiersInLuaHBTeX.png" decoding="async" width="400" height="246" />
+</p>
+<h4><span class="mw-headline" id="UTF-8:_its_role_in_storing_Unicode_text">UTF-8: its role in storing Unicode text</span></h4>
+<p>Any text or code you type or paste into Overleaf’s Code Editor (or Visual editor) will be stored in UTF-8 format, so we’ll briefly review what UTF-8 actually means. UTF stands for Unicode Transformation Format, and UTF-8’s role in storing or transmitting Unicode-encoded text is indicated by the phrase “Transformation <em>Format</em>.” </p>
+<p>Unicode’s code-point values range from 0 to a maximum of 1,114,111, so it’s impossible to represent all Unicode character values using a single 8-bit byte, which can only store up to 256 different values: 0 to 255. However, it is possible to represent any Unicode code point integer using a <em>consecutive sequence </em>of byte-sized values—which is the principle behind UTF-8.</p>
+<p>UFT-8 provides a “recipe” to <em>transform</em> (i.e., to “encode” or “convert”) a Unicode integer code point value into a unique sequence of 1 to 4 consecutive byte-sized integers: the number of consecutive bytes required depends on the value of the code point integer. Consequently, you may read of UTF-8 storing Unicode characters as <em>multibyte sequences</em> because a single Unicode character (code point integer) is represented in UTF-8 as a sequence of 1 to 4 consecutive bytes.</p>
+<p>Naturally, text stored in UTF-8 can be converted back to its original sequence of integer Unicode code point values—that’s what XeTeX or LuaTeX/LuaHBTeX have to do when reading a LaTeX input file stored in UTF-8 format. Those TeX engines need to know the input Unicode code point (character) values before they can to typeset the text. Note that pdfTeX does not have a built-in UTF-8 decoding capability so it has to rely on TeX macros to process (decode) input text formatted in UTF-8.</p>
+<h5><span class="mw-headline" id="Some_UTF-8_examples">Some UTF-8 examples</span></h5>
+<ul>
+<li>The Arabic character ش (“sheen”) has Unicode code point 0634 in hexadecimal (base 16) or 1588 in decimal (base 10). In UTF-8 ش is represented as 2 (hexadecimal) values D8 and B4, so the character ش would be stored as the two consecutive bytes D8B4 within UTF-8 encoded text.</li>
+<li>The emoji character 😀 has Unicode code point 1F600 in hexadecimal (base 16) or 128512 in decimal (base 10). In UTF-8 😀 is represented as 4 (hexadecimal) values F0, 9F, 98 and 80, so the character 😀 would be stored as the 4 consecutive bytes F09F9880 within a UTF-8 text file.</li>
+</ul>
+<h4><span class="mw-headline" id="Special_characters_used_in_Unicode-base_emoji_text_processing">Special characters used in Unicode-base emoji text processing</span></h4>
+<p>Not every character encoded within Unicode is intended for visual presentation via the glyphs within a font: some encoded characters are designated as <em>non-printing characters</em> whose purpose is to assist specialized text-processing functions (within supporting software). Different software applications provide varying levels of support for the non-printing characters encoded into Unicode, so the outcome will depend on the software environment—applications and fonts—being used.</p>
+<h5><span class="mw-headline" id="Two_non-printing_characters_to_know_about">Two non-printing characters to know about</span></h5>
+<ul>
+<li><strong>Zero width joiner (ZWJ)</strong>, code point 200D (hexadecimal), is, as its name suggests, designed to trigger the “joining behavior” of input characters—but only if those input characters <em>possess</em> a defined joining behavior.</li>
+<li><strong>Zero width non-joiner (ZWNJ)</strong>, code point 200C (hexadecimal), is designed to <em>prevent</em> the “joining behavior” that input characters might otherwise exhibit. For example, you can use the ZWNJ to prevent the joining behavior of consecutive Arabic characters that would normally be processed (shaped) into their joining forms.</li>
+</ul>
+<p>Unicode has published a list of <a rel="nofollow" class="external text" href="https://unicode.org/emoji/charts/emoji-zwj-sequences.html">Recommended Emoji ZWJ Sequences</a> which use a U+200D ZERO WIDTH JOINER (ZWJ) to combine emoji character sequences into a single composite emoji glyph—if it is available within the font(s) being used.</p>
+<h5><span class="mw-headline" id="Example_use_of_zero_width_non-joiner">Example use of zero width non-joiner</span></h5>
+<p>The following minimal code fragment uses the Scheherazade OpenType font, included in TeX Live, to define a LaTeX font called <code>\arabicfont</code> that we can use to typeset some Arabic. The line
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">{</span><span class="k">\arabicfont</span> Non-joining:<span class="k">\textdir</span> TRT<span class="k">\Uchar</span>"0644<span class="k">\Uchar</span>"200C<span class="k">\Uchar</span>"0627<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>uses a zero width non-joiner character, via <code>\Uchar"200C</code>, to prevent the normal joining behavior of the two Arabic letters ل (lam) and ا (alef). Note the use of <code>\textdir TRT</code> to set the text direction as right-to-left:</p>  
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newfontfamily\arabicfont</span><span class="na">[Script=Arabic,Renderer=Harfbuzz,SizeFeatures={Size=40}]</span><span class="nb">{</span>Scheherazade<span class="nb">}</span>
+<span class="nb">{</span><span class="k">\arabicfont</span> Joining:<span class="k">\textdir</span> TRT<span class="k">\Uchar</span>"0644<span class="k">\Uchar</span>"0627<span class="nb">}</span><span class="k">\par</span>
+<span class="nb">{</span><span class="k">\arabicfont</span> Non-joining:<span class="k">\textdir</span> TRT<span class="k">\Uchar</span>"0644<span class="k">\Uchar</span>"200C<span class="k">\Uchar</span>"0627<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex&amp;snip_name=Zero+width+non-joiner+using+LuaLaTeX&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bfontspec%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewfontfamily%5Carabicfont%5BScript%3DArabic%2CRenderer%3DHarfbuzz%2CSizeFeatures%3D%7BSize%3D40%7D%5D%7BScheherazade%7D%0A%7B%5Carabicfont+Joining%3A%5Ctextdir+TRT%5CUchar%220644%5CUchar%220627%7D%5Cpar%0A%7B%5Carabicfont+Non-joining%3A%5Ctextdir+TRT%5CUchar%220644%5CUchar%22200C%5CUchar%220627%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this LuaLaTeX example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="NonJoiner.png" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/0/09/NonJoiner.png" decoding="async" width="400" height="137" />
+</p>
+<h2><span id="The_concept_of_.E2.80.9Ctext_shaping.E2.80.9D"></span><span class="mw-headline" id="The_concept_of_“text_shaping”">The concept of “text shaping”</span></h2>
+<p>Let’s start with a visual example using an Urdu translation of the word “educational.” Text of the Urdu translation might be typed on a keyboard, or touchscreen device, and would be created as a simple linear sequence of Unicode Arabic characters. However, when that text is typeset, or displayed on a device screen in the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Nastaliq">Nastaliq style</a>, the result is a complex two-dimensional arrangement of glyphs.</p>
+<p>Using our Urdu example, the following graphic compares the linear input of Unicode Arabic <em>characters</em> to the output typeset in Nastaliq style, comprising a two-dimensional arrangement of <em>glyphs</em> present in the (free) font <a rel="nofollow" class="external text" href="https://software.sil.org/awami/download/">Awami Nastaliq</a>:</p>
+<p>
+
+<img src="https://images.ctfassets.net/nrgyaltdicpt/4pvNn0CGmcbLt6I9CvIhHd/225a14cbb4d0039bba0fa75bfbf767ae/DemoShaping-plain.svg" width="600px" />
+
+</p>
+<p>The process of “translating” input characters to a set of correctly-positioned output glyphs is called <em>text shaping</em>, and is a vital component of processing text prior to its display or typesetting. Our example used text in the Urdu language (Arabic script) because the result of shaping is clearly evident, in contrast to languages using the Latin script, such as English where shaping is much less pronounced—such as the production of simple ligatures.</p>
+<p>Text shaping is essential when using scripts (writing systems) such as <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Arabic">Arabic</a>, <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Hebrew_language">Hebrew</a>, <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Devanagari">Devanagari</a> or <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Malayalam">Malayalam</a>, just four examples of so-called <em>complex scripts</em>. To ensure correct presentation of text in those scripts, and the languages which use them, the shaping process needs to carefully address any shaping rules and nuances present in the particular script and language combination. For example, some languages require multiple input characters to generate a particular output glyph, or there might be complex requirements for careful positioning of diacritical marks, and inter-glyph rearrangements to ensure individual glyphs are positioned correctly (relative to each other).</p>
+<p>In general, shaping a piece of text requires several pieces of information:</p>
+<ul>
+<li>The writing system or <em>script</em> in which the text is written.</li>
+<li>The specific <em>language</em> being used. Individual scripts may be used for multiple languages, with each script–language combination having their own shaping subtleties/nuances.</li>
+<li>The writing <em>direction</em> of the text—such as right-to-left or left-to-right.</li>
+<li>A <em>font</em> which provides the glyphs needed to represent the shaped text and, optionally, contains additional “shaping rules” which guide the text-shaping process.</li>
+</ul>
+<p>The requirements of text shaping, particularly for complex scripts and their associated languages, can be extremely detailed and nuanced, indicating the need for specialized software which can apply potentially very complex text-shaping “rules”. Not surprisingly, such software exists and is referred to as a <em>text-shaping engine</em>; the one we will discuss is called <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/HarfBuzz">Harfbuzz</a>, whose documentation is worth reading—for example <a rel="nofollow" class="external text" href="https://harfbuzz.github.io/why-do-i-need-a-shaping-engine.html">Why do I need a shaping engine?</a>.</p>
+<h5><span class="mw-headline" id="Further_reading_on_text_shaping">Further reading on text shaping</span></h5>
+<p>These short introductions are highly recommended:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://harfbuzz.github.io/what-is-harfbuzz.html#what-is-text-shaping">What is text shaping?</a></li>
+<li><a rel="nofollow" class="external text" href="https://harfbuzz.github.io/why-do-i-need-a-shaping-engine.html">Why do I need a shaping engine?</a></li></ul>
+<h5><span id="TeXnical_note:_multiple_shaping_technologies_.28models.29"></span><span class="mw-headline" id="TeXnical_note:_multiple_shaping_technologies_(models)">TeXnical note: multiple shaping technologies (models)</span></h5>
+<p>The HarfBuzz text-shaping engine supports several "shaping technologies" that differ in how they implement the shaping process—each implementation is referred to as a <em>shaper</em>, including within <code>luaotfload</code> documentation. The main focus of this article is OpenType shaping but an alternative, free-to-use, technology is <a rel="nofollow" class="external text" href="https://scripts.sil.org/cms/scripts/page.php?site_id=projects&amp;item_id=graphite_aboutOT">Graphite</a>, developed by <a rel="nofollow" class="external text" href="https://www.sil.org/">SIL International</a>. Another shaping model supported by HarfBuzz is <a rel="nofollow" class="external text" href="https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6AATIntro.html">Apple Advanced Typography (AAT)</a>—fonts supporting AAT are generally used on Apple technology platforms.
+</p>
+<h6><span class="mw-headline" id="Example_using_the_Graphite_shaper">Example using the Graphite shaper</span></h6>
+<p>The following example typesets some Urdu text using a font called <a rel="nofollow" class="external text" href="https://software.sil.org/awami/download/">Awami Nastaliq</a>, which supports Graphite shaping and is available on Overleaf. Awami Nastaliq is created by <a rel="nofollow" class="external text" href="https://www.sil.org/">SIL International</a>, the organization responsible for developing Graphite technology.</p>
+<p>The following example demonstrates the advanced shaping capability of Graphite-based fonts—note how the <code>luaotfload</code> font declaration selects Graphite shaping using <code>shaper=graphite2</code>.</p>
+<p class="mw-empty-elt"></p><p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>luaotfload<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\font\urdutest</span>=<span class="nb">{</span>file:AwamiNastaliq-Regular.ttf:mode=harf;shaper=graphite2<span class="nb">}</span> at 100bp
+<span class="c">% Technology</span>
+<span class="k">\pardir</span> TRT<span class="k">\textdir</span> TRT <span class="k">\urdutest</span> ٹیکنالوجی
+
+<span class="k">\vskip</span> 75bp
+
+<span class="c">% Educational</span>
+<span class="k">\pardir</span> TRT<span class="k">\textdir</span> TRT <span class="k">\urdutest</span> تعلیمی
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex&amp;snip_name=Typesetting+Urdu+using+the+Graphite+shaper&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bluaotfload%7D%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cfont%5Curdutest%3D%7Bfile%3AAwamiNastaliq-Regular.ttf%3Amode%3Dharf%3Bshaper%3Dgraphite2%7D+at+100bp%0A%25+Technology%0A%5Cpardir+TRT%5Ctextdir+TRT+%5Curdutest+%D9%B9%DB%8C%DA%A9%D9%86%D8%A7%D9%84%D9%88%D8%AC%DB%8C%0A%0A%5Cvskip+75bp%0A%0A%25+Educational%0A%5Cpardir+TRT%5Ctextdir+TRT+%5Curdutest+%D8%AA%D8%B9%D9%84%DB%8C%D9%85%DB%8C%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<p>This example produces the following output:</p>
+<p>
+
+<img src="https://images.ctfassets.net/nrgyaltdicpt/9A7Vx8KNJ0Ej7x7QYe7sq/ef788bcf01df78590ba5ae0e786970c3/GraphitrDemoShaping-plain.svg" width="300px" />
+
+</p>
+<h4><span class="mw-headline" id="Emoji_and_text_shaping">Emoji and text shaping</span></h4>
+<p>Text shaping has been introduced using examples from a complex-script language, Urdu. However, it may be a surprise to learn that rendering the correct emoji glyph(s) requires text shaping being applied to Unicode text containing sequences of emoji characters—<a rel="nofollow" class="external text" href="https://github.com/harfbuzz/harfbuzz/issues/2428#issuecomment-639108677">as noted by the lead developer of HarfBuzz</a>:
+
+</p><blockquote>
+<p>...shaping emoji with HarfBuzz is completely in scope and actually necessary to get family emoji, skin color, etc.
+</p>
+</blockquote>
+<p>We will look at examples of this. </p>
+<h3><span id="Division_of_responsibility:_text-shaping_engine_.2B_OpenType_fonts"></span><span class="mw-headline" id="Division_of_responsibility:_text-shaping_engine_+_OpenType_fonts">Division of responsibility: text-shaping engine + OpenType fonts</span></h3>
+<p>In practice, text-shaping is a “joint operation,” or division of labor, between the logic and rules built into the text-shaping engine and additional shaping rules and data built into the font(s) being used—from now on we cover OpenType-based shaping <em>only</em>.</p>
+<p>To perform shaping, the text-shaping engine is typically supplied with some Unicode text, a specified script and language, possibly a writing direction, and, most importantly, an OpenType font for use during the shaping process—the font will provide the output: a set of glyphs and positioning data. If requested, the shaping engine can apply additional rules (<a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/List_of_typographic_features#OpenType_typographic_features">OpenType features</a>) contained in the OpenType font being used—which rules to apply are usually user-selectable from the list of features supported by the font.</p>
+<p>The outcome of the shaping process is a <em>list of glyphs</em> contained in the OpenType font, together with <em>inter-glyph</em> positioning data. That positioning data relates to <em>relative placement of the shaped glyphs</em>; it does not refer to absolute positioning within the typeset page or other media/content such as a web page, Tweet, etc. The rendering software (typesetting engine, web browser, etc.) uses the inter-glyph positioning information to ensure glyphs are correctly positioned relative to one another after they are assembled and incorporated into the final output.</p>
+<h4><span id="What_is_a_list_of_glyphs.3F"></span><span class="mw-headline" id="What_is_a_list_of_glyphs?">What is a list of glyphs?</span></h4>
+<p>Internally, each glyph within an OpenType font is assigned a numeric identifier, an integer value called the glyph index—also called the glyph identifier or GID. After completing its shaping task, the text-shaping engine will return its results as a <em>list of glyph identifiers </em>plus <em>positioning data</em> for those glyphs.</p><p class="mw-empty-elt">
+
+</p><p>Individual glyphs within OpenType fonts are assigned indexes (identifiers) by the font’s creator, making it a highly font-specific and arbitrary value—it could also vary between versions of a particular font. You should never assume that the same GID value will apply to “similar” glyphs in different fonts; it almost certainly won’t. If you have a list of glyph identifiers provided by a shaping engine, you can only use them to access glyphs in the font from which they were obtained.</p>
+<h4><span id="What_are_OpenType_fonts.3F"></span><span class="mw-headline" id="What_are_OpenType_fonts?">What are OpenType fonts?</span></h4>
+<p>The web is <em>awash</em> with explanations and details of OpenType fonts, so we’ll restrict ourselves to a short description. The <a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/typography/opentype/spec/">OpenType specification</a> is a complex document designed for developers, but, in essence, it defines a file format, or container, for font data. An OpenType font contains data that describes the glyph shapes, together with information on the script(s) and language(s) supported, metadata about the font, and various “tables” which define  <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/List_of_typographic_features#OpenType_typographic_features">typographic features</a> supported by the font. </p>
+<p>A text-shaping engine can usually be instructed to selectively apply (use) a font’s features during the shaping process, applying specific typographical effects (“rules”) which select the appropriate set of glyphs contained in the font. The chosen font will need to support, and provide the glyphs for, any features the text-shaping engine is asked to apply.</p>
+<h4><span id="Encoded_and_unencoded_.E2.80.9Cglyphs.E2.80.9D"></span><span class="mw-headline" id="Encoded_and_unencoded_“glyphs”">Encoded and unencoded “glyphs”</span></h4>
+<p>OpenType fonts include a data table called <a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/typography/opentype/spec/cmap">cmap</a> (Character to Glyph Index Mapping) which maps the set of Unicode characters, supported by the font, to the corresponding glyph index in that font. The following video provides a brief glimpse into the cmap table contained in a font called <code>lmmono10-regiular.otf</code> (included in TeX Live).
+
+
+</p><div style="max-width:800px">
+<video controls width="100%" height="100%" src="https://videos.ctfassets.net/nrgyaltdicpt/2537Y9gOUMWgd0t1guqt0X/482c53a9d8112ecae3d622aa7e00eef8/openType_cmap.mp4" type="video/mp4">
+</video>
+</div>
+
+
+<p>However, fonts typically contain many glyphs which do not represent a specific Unicode character and are not included as part of that cmap table. Consequently, the set of glyphs present within an OpenType font can be divided into two main sets:</p>
+<ul>
+<li>encoded glyphs that represent Unicode characters;</li> 
+<li>unencoded glyphs that do not represent Unicode characters.</li>
+</ul>
+<p>Encoded glyphs can be accessed by including the appropriate Unicode character in the text—but what about unencoded glyphs, how are they used/accessed? Those glyphs are typically used to provide the output of text-shaping operations, including the application of font features to produce specific visual/typographic effects.</p>
+<h3><span class="mw-headline" id="OpenType_color_fonts">OpenType color fonts</span></h3>
+<p>Emoji characters are expected to display/render in full color—black and white emoji don’t quite provide the “full emoji experience.” However, at the time of Unicode’s initial encoding of emoji, the <a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/typography/opentype/spec/">OpenType font specification</a> did not have any suitable provision for embedding <em>colorful</em>-glyph data within OpenType fonts. This “gap” in OpenType prompted leading technology/platform vendors to look for solutions, and the ensuing “race” resulted in <a rel="nofollow" class="external text" href="https://www.fontlab.com/news/color-font-format-proposals/">various proposals to extend OpenType</a> to support OpenType color fonts—not just for displaying color emoji characters (glyphs) but rendering any glyph in color.</p>
+<h4><span class="mw-headline" id="Four_flavors_of_OpenType_color_font">Four flavors of OpenType color font</span></h4>
+<p><a rel="nofollow" class="external text" href="https://www.fontlab.com/news/color-font-format-proposals/">Adobe, Microsoft, Google, and Apple each submitted proposals</a> to extend OpenType to support full-color OpenType fonts and, ultimately, four proposals were adopted and included in the formal OpenType specification. For convenience, we can loosely group those four variants into vector-based and raster-based—but, as shown in this <a rel="nofollow" class="external text" href="https://github.com/simoncozens/test-fonts">GitHub repository</a>, the OpenType specification is sufficiently flexible to support OpenType color font files which combine those four base technologies.</p>
+<ul><li><strong>Vector-based OpenType fonts:</strong></li>
+
+<ul>
+<li><strong>Microsoft</strong>: glyph shapes are described using a form of layered color vectors  (<a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/typography/opentype/spec/colr">COLR</a> and <a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/typography/opentype/spec/cpal">CPAL</a> tables).</li>
+<li><a rel="nofollow" class="external text" href="https://www.w3.org/2013/10/SVG_in_OpenType/"><strong>Adobe and Mozilla</strong></a> (<a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/typography/opentype/spec/svg">SVG table</a>): glyphs shapes are drawn using SVG, which supports glyphs constructed from vectors <em>and raster images</em>. See also <a rel="nofollow" class="external text" href="https://helpx.adobe.com/fonts/user-guide.html/fonts/using/ot-svg-color-fonts.ug.html">Adobe’s user guide on SVG fonts</a>.</li>
+</ul>
+<li><strong>Raster-based OpenType fonts:</strong></li>
+<ul>
+<li><strong>Google</strong>: glyphs are represented by color PNG images embedded in the font (<a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/typography/opentype/spec/cbdt">CBDT</a> and <a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/typography/opentype/spec/cblc">CBLC</a> tables).</li> 
+<li><strong>Apple</strong>: glyphs also are represented by color images embedded in the font. In addition to PNG, Apple’s mechanism (<a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/typography/opentype/spec/colr">sbix table</a>) also supports JPEG and TIFF.</li>
+</ul>
+</ul><p>
+As a consequence, operating systems and application software supporting OpenType color fonts need to deal with today’s mixed-technology landscape. Furthermore, you should be aware that individual OpenType color fonts—and <em>versions</em> of the same font—will:</p><p class="mw-empty-elt"></p>
+<ul>
+<li>have different coverage of the full set of <a rel="nofollow" class="external text" href="https://unicode.org/emoji/charts/emoji-list.html">Unicode emoji characters</a>—i.e., how many emoji characters the font provides glyphs for;</li>
+<li>use different glyph designs to represent individual emoji characters;</li> 
+<li>vary in the features they provide to support more advanced uses of the Unicode standards, such as <a rel="nofollow" class="external text" href="https://unicode.org/reports/tr51/#Emoji_Modifiers_Table">emoji modifiers</a>, and other emoji text-processing capabilities described in <a rel="nofollow" class="external text" href="https://unicode.org/reports/tr51/">Unicode Technical Standard #51: Unicode Emoji</a>.</li>
+</ul>
+<h4><span class="mw-headline" id="The_buzz_about_HarfBuzz">The buzz about HarfBuzz</span></h4>
+<p>We’ve alluded to the need for a <em>text-shaping engine</em>: software that takes some input Unicode text, written using a specific script and language combination, and, using a designated font, shapes that text into a sequence of glyphs, together with positioning data, which can be used to typeset the original input text.</p>
+<p><a rel="nofollow" class="external text" href="https://harfbuzz.github.io/">HarfBuzz</a> is one such text-shaping engine: it is <a rel="nofollow" class="external text" href="https://github.com/harfbuzz/harfbuzz">an open source code library</a> and the product of more than a decade of research and development—and still being actively developed and deployed as part of many software products. HarfBuzz itself does not perform “typesetting” but provides “text-shaping services” to software that chooses to integrate it, including XeTeX, LuaHBTeX, <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/HarfBuzz">Adobe PhotoShop and Adobe InDesign</a>.</p>
+<p>By incorporating HarfBuzz, TeX engines can take advantage of its advanced text-shaping capabilities to provide very sophisticated multilingual typesetting, particularly for complex scripts such as Arabic, Hebrew, Devanagari and many others. Note, too, that HarfBuzz is used to process and shape Unicode emoji text characters, which we’ll explore in more detail.</p>
+<p>The following graphic summarises the role played by HarfBuzz when integrated with software, such as XeTeX or LuaHBTeX, during typesetting text in a complex script, such as Arabic:</p>
+<p class="mw-empty-elt">
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/1qIGJv1aWY2u8NwTu7uAQL/df6d9081c672f003086309e6cafd5649/harfbuzz-plain.svg" alt="An overview of Arabic text shaping with HarfBuzz" style="width:800px;padding:20px" /> 
+</div></div>
+
+<p class="mw-empty-elt"></p>
+<h5><span class="mw-headline" id="Exploring_HarfBuzz">Exploring HarfBuzz</span></h5>
+<p>Anyone interested to learn more about HarfBuzz and the OpenType shaping services it provides to XeTeX and LuaHBTeX can <a rel="nofollow" class="external text" href="https://github.com/harfbuzz/harfbuzz/releases">download a binary distribution of HarfBuzz</a> which contains the HarfBuzz library (for programmers) and command line utilities <code>hb-view</code> and <code>hb-shape</code>. 
+
+</p><h5><span class="mw-headline" id="Example:_how_to_use_hb-view">Example: how to use <code>hb-view</code></span></h5>
+<p>Create a new file in your favorite UTF-8 enabled text editor and copy/paste the following six emoji characters 👋👋🏻👋🏼👋🏽👋🏾👋🏿 into that text file, then save out in UTF-8 format to a file called, say, <code>emoji.txt</code>.</p>
+<p>Note that your text editor might display (fall-back) black-and-white versions of the emoji because it isn't able (programmed to) render color glyphs. Once those 6 emoji are saved, the file <code>emoji.txt</code> should contain UTF-8 data for the following sequence of Unicode emoji characters—we have separated emoji modifiers with commas for <em>ease of reading only</em>:</p>
+<ul>
+<li><code>1F44B</code> to produce 👋</li>
+<li><code>1F44B</code>, <code>1F3FB</code> to produce 👋🏻</li>
+<li><code>1F44B</code>, <code>1F3FC</code> to produce 👋🏼</li>
+<li><code>1F44B</code>, <code>1F3FD</code> to produce 👋🏽</li>
+<li><code>1F44B</code>, <code>1F3FE</code> to produce 👋🏾</li>
+<li><code>1F44B</code>, <code>1F3FF</code> to produce 👋🏿</li>
+</ul>
+<p>There should be a total of <strong>11</strong> Unicode characters, each generating 4 bytes of UTF-8 data, so the resulting <code>emoji.txt</code> file should be 44 bytes long, excluding any end-of-line markers used at the end of the line containing the emoji.</p>
+<p>The <code>hb-view</code> utility can use the file <code>emoji.txt</code>, together with a suitable OpenType color font of your choice, such as <code>NotoColorEmoji.ttf</code>, to generate an SVG file of HarfBuzz’s shaped output. The following command-line example, which must be <strong>typed on one line</strong> in your terminal, will generate the SVG file <code>emoji.svg</code>:</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>hb-view --font-size=20 --output-file="emoji.svg" 
+--output-format=svg --text-file=emoji.txt
+--font-file=NotoColorEmoji.ttf
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>On successful execution, the file <code>emoji.svg</code>, generated by <code>hb-view</code>, can be opened by Inkscape and should look something like this:</p>
+<p><img alt="Hbvieemoji.png" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/8/88/Hbvieemoji.png" decoding="async" width="600" height="302" /></p>
+<p><code>hb-view</code> can be used to explore HarfBuzz shaping for any suitable Unicode text file and OpenType font—it is certainly not limited to use with emoji! Type</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>hb-view --help-all
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>to see the wealth of command-line options for this powerful and handy utility. Happy Shaping!</p>
+<h2><span class="mw-headline" id="Text_shaping_and_TeX_engines">Text shaping and TeX engines</span></h2>
+<p>Here, we’ll review the text-shaping capabilities of XeTeX and the LuaTeX family of TeX engines.</p>
+<h3><span class="mw-headline" id="XeTeX">XeTeX</span></h3>
+<p>XeTeX was developed in the early 2000s and pioneered several innovations in TeX-based typesetting, most notably <em>built-in</em> support for:</p>
+<ul>
+<li>reading Unicode text in UTF-8 format;</li> 
+<li>using OpenType fonts;</li> 
+<li>text-shaping for multilingual typesetting;</li>
+<li>OpenType-based math typesetting.</li>
+</ul>
+<p>XeTeX’s ability to easily and conveniently typeset complex-script languages is due to its built-in text-shaping capabilities—originally based on the, now deprecated, <a rel="nofollow" class="external text" href="http://userguide.icu-project.org/layoutengine">ICU LayoutEngine</a>. Thanks to work by Khaled Hosny, XeTeX switched to using HarfBuzz for text shaping, as noted in an announcement from <a rel="nofollow" class="external text" href="https://tug.org/pipermail/xetex/2013-March/024118.html">March 2013</a>. For anyone wishing to typeset multilingual text, XeTeX is usually cited as the TeX engine of choice—but now there is another option, LuaHBTeX, which we’ll explore.</p>
+<h3><span class="mw-headline" id="LuaTeX_and_LuaHBTeX">LuaTeX and LuaHBTeX</span></h3>
+<p>Development of LuaTeX started around 2005 but followed a design philosophy quite different to XeTeX, which incorporated new features <em>directly into</em> the XeTeX software. In contrast to XeTeX, LuaTeX’s developers opted to “...provide a minimal set of tools and no solutions.” (see <a rel="nofollow" class="external text" href="https://www.pragma-ade.com/general/manuals/luatex.pdf">Reference Manual for LuaTeX</a>). Rather than providing a suite of additional features <em>built into</em> LuaTeX-based engines, the internal mechanisms of LuaTeX engines are opened-up so that developers and skilled users can leverage the integrated Lua scripting language to build their own solutions.</p>
+<p>For example, unlike XeTeX, the LuaTeX engine cannot <em>directly</em> use OpenType fonts; instead, OpenType fonts have to be loaded and “prepared for use” through font-loading functions written in Lua code. Those font-loading functions are referred to as <em>callback</em> functions: Lua code that LuaTeX will call (“execute”) when a request is made to load a font.</p>
+<p>In addition, the LuaTeX engine does not provide any <em>built-in</em> text-shaping capabilities—those too have to be provided by external code which the LuaTeX engine can call upon to provide it with text-shaping services. Again, this contrasts with the XeTeX engine, which incorporated text-shaping capabilities within the core software.</p>
+<h4><span id="luaotfload:_essential_for_using_OpenType_fonts_in_LuaTeX.2FLuaHBTeX"></span><span class="mw-headline" id="luaotfload:_essential_for_using_OpenType_fonts_in_LuaTeX/LuaHBTeX"><code>luaotfload</code>: essential for using OpenType fonts in LuaTeX/LuaHBTeX</span></h4>
+<p>LuaTeX’s callback mechanism for font loading provides a great deal of flexibility, albeit at the “cost” of additional programming. Fortunately for users of LuaLaTeX, the TeX community has developed a package called <code>luaotfload</code>, which forms part of the <a rel="nofollow" class="external text" href="https://www.tug.org/texlive/">annual release of TeX Live</a> and is, of course, available to Overleaf users.</p> 
+<p><code>luaotfload</code> is <a rel="nofollow" class="external text" href="https://ctan.org/pkg/luaotfload?lang=en">available on CTAN</a> and has a <a rel="nofollow" class="external text" href="https://github.com/latex3/luaotfload">development repository on GitHub</a> where you can follow the latest developments and <a rel="nofollow" class="external text" href="https://github.com/latex3/luaotfload/releases">new releases</a>.</p>
+<p><code>luaotfload</code> can be loaded directly into a LaTeX document preamble via</p> 
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>luaotfload<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>Note that <code>luaotfload</code> is the name of a LaTeX <em>package</em>, meaning it has the file name <code>luaotfload.sty</code>. If you wanted to use <code>luaotfload</code> with plain TeX, you can do so by adding the line</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\input</span> luaotfload.sty
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>to your plain TeX document.</p>
+<p>Normally, users of LuaLaTeX—i.e., those who typeset LaTeX using LuaTeX/LuaHBTeX—do not need to engage directly with <code>luaotfload</code> because the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/fontspec"><code>fontspec</code> package</a> will load the <code>luaotfload</code> package for you, taking care of many low-level details through user-level commands provided by the <code>fontspec</code> package.</p>
+<h3><span class="mw-headline" id="LuaHBTeX:_new_options_for_text_shaping">LuaHBTeX: new options for text shaping</span></h3>
+<p><code>luaotfload</code> is a mature and powerful Lua library which provides LuaTeX’s handling of OpenType fonts—together with the provision of text-shaping services for a range of languages and scripts. Originally, the text-shaping functions of <code>luaotfload</code> were implemented in pure Lua code, but the release of TeX Live 2020 brought another mainstream option for text-shaping—a new LuaTeX-based engine called LuaHBTeX.</p>
+<p>The “HB” in LuaHBTeX stands for HarfBuzz—in essence, LuaHBTeX is the original LuaTeX engine <em>plus</em> an integrated HarfBuzz text-shaping engine. In keeping with the design philosophy of LuaTeX, the availability of HarfBuzz does not <em>automatically</em> ensure text will be shaped by LuaHBTeX: HarfBuzz is another tool which can be used to build text-shaping solutions.</p>
+<p>LuaHBTeX’s integration of HarfBuzz is <a href="#Introduction_to_the_LuaHBTeX_HarfBuzz_API">programmable via Lua code</a>, which has enabled <code>luaotfload</code>’s developers to add HarfBuzz-based text-shaping solutions. Consequently, <a rel="nofollow" class="external text" href="https://github.com/latex3/luaotfload/releases/tag/v3.1">starting with version 3.1, released on 5 November 2019</a>, <code>luaotfload</code> was enhanced to take advantage of HarfBuzz—making HarfBuzz’s text-shaping capabilities easy to access for the general user.</p>
+<p>Readers interested in the technical details of HarfBuzz integration with LuaTeX can read this <a rel="nofollow" class="external text" href="https://www.tug.org/TUGboat/tb40-1/tb124hosny-harfbuzz.pdf">paper by Khaled Hosny</a>.</p>
+<h3><span id="luaotfload:_two_options_for_text_shaping_.28when_to_use_HarfBuzz.3F.29"></span><span class="mw-headline" id="luaotfload:_two_options_for_text_shaping_(when_to_use_HarfBuzz?)"><code>luaotfload</code>: two options for text shaping (when to use HarfBuzz?)</span></h3>
+<p>Users of LuaLaTeX now have two options for text shaping:</p>
+<ul>
+
+<li><code>luaotfload</code>’s original (node-based) implementation of text shaping, written purely in Lua;</li> 
+<li><code>luaotfload</code>’s HarfBuzz-based shaping—accessed by Lua code which calls HarfBuzz’s text-shaping functions.</li>
+</ul>
+<p><code>luaotfload</code> provides access to these two shaping systems via its “<code>mode</code>” parameter—though most users will use the equivalent <code>fontspec</code> “<code>Renderer</code>” option rather than directly use lower-level functions of <code>luaotfload</code>.</p>
+<p>Each of <code>luaotfload</code>’s text-shaping solutions have their strengths and (current) weaknesses but which one should you use, and when? Here is some points to consider:</p>
+<ul>
+
+<li><code>luaotfload</code>’s native node-based processing can be memory intensive, particularly for large CJK OpenType fonts. Using HarfBuzz for shaping CJK text can yield improvements in speed and reductions in memory usage.</li> 
+
+<li>Use HarfBuzz for complex scripts because it “...improves greatly the rendering of indic and Arabic scripts and is highly recommended for such scripts.” (see <code>luaotfload</code> manual).</li>
+
+<li>HarfBuzz’s integration into <code>luaotfload</code> is still relatively new and undergoing further development . At the time of writing (July 2021), it is advisable to use luaotfload’s built-in shaping (setting <code>mode=node</code>) for your main document fonts, particularly if your document uses the Latin script. See this <a rel="nofollow" class="external text" href="https://github.com/latex3/luaotfload/issues/175#issue-801120377">GitHub issue</a>, which summarizes the issues and discussions. If you want to experiment, you can use <code>luaotfload</code> to load a font file and create two LaTeX fonts: one which uses HarfBuzz-based shaping and the other using Lua-based shaping. Overleaf created a <a href="#Sample_project:_Arabic_shaping">sample project</a>, which demonstrates this.</li> 
+
+<li>Don’t use HarfBuzz for handling mathematical fonts. As discussed by developers on tex.stackexchange, HarfBuzz is <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/questions/544881/does-luahbtex-with-harfbuzz-renderer-completely-supports-math-formating">not designed to handle fonts for mathematical typesetting</a> so don’t use it for that purpose.</li>
+
+</ul>
+<h5><span class="mw-headline" id="Sample_project:_Arabic_shaping">Sample project: Arabic shaping</span></h5>
+<p>Here is an Overleaf project that uses several high-quality Arabic typefaces to compare <code>luaotfload</code>’s node-based text-shaping services (<code>mode=node</code>) with those of HarfBuzz (<code>mode=harf</code>): 
+
+</p><ul><li><a rel="nofollow" class="external text" href="https://www.overleaf.com/latex/examples/complex-script-shaping-using-luaotfload-and-harfbuzz/gfssprnhfddn">https://www.overleaf.com/latex/examples/complex-script-shaping-using-luaotfload-and-harfbuzz/gfssprnhfddn</a></li></ul>
+
+<p>This project includes output shown in the following image:</p>
+<p class="mw-empty-elt">
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/4UO5TAQi2n4j9WjvFd60YH/f158c0ffe0ef36a8f814e1d88ccacfc8/ArabicDemo--plain.svg" alt="Typesetting Arabic" style="width:800px;padding:60px" /> 
+</div></div>
+ 
+<p class="mw-empty-elt"></p>
+<h3><span id="Choosing_the_.E2.80.9CRenderer.E2.80.9D_in_fontspec"></span><span class="mw-headline" id="Choosing_the_“Renderer”_in_fontspec">Choosing the “Renderer” in <code>fontspec</code></span></h3>
+<p>As noted in its <a rel="nofollow" class="external text" href="https://mirror.ox.ac.uk/sites/ctan.org/macros/unicodetex/latex/fontspec/fontspec.pdf">documentation</a>, <code>fontspec</code> “...allows users of either XeTeX or LuaTeX to load OpenType fonts in a LaTeX document”. If you use the LuaTeX or LuaHBTeX engines, <code>fontspec</code> will load the <code>luaotfload</code> library for you and, in addition, provide a suite of convenient user-level commands which alleviate the need to engage with <code>luaotfload</code>’s low-level functionality.</p>
+<p>So how do you choose between HarfBuzz’s shaping or the built-in shaping provided by <code>luaotfload</code>? The answer is contained in the excellent <a rel="nofollow" class="external text" href="https://mirror.ox.ac.uk/sites/ctan.org/macros/unicodetex/latex/fontspec/fontspec.pdf"><code>fontspec</code> documentation</a>, specifically Part VI: LuaTeX-only font features. <code>fontspec</code> provides a setting called <code>Renderer</code> which can be set when the font is defined via <code>fontspec</code>. <code>Renderer</code> controls low-level processing of the font. The two options of interest are </p>
+<ul>
+
+<li><code>Renderer = Node</code>: the default “mode” for typesetting OpenType fonts—this uses <code>luaotfload</code>’s text-shaping functions implemented purely in Lua. 
+
+</li><li><code>Renderer = Harfbuzz</code>: this “mode” defines/loads the font for use with the HarfBuzz text-shaping engine. <code>luaotfload</code> uses LuaHBTeX’s API to call functions in HarfBuzz. 
+</li>
+</ul>
+<p>
+For more information see the <a rel="nofollow" class="external text" href="https://mirror.ox.ac.uk/sites/ctan.org/macros/unicodetex/latex/fontspec/fontspec.pdf"><code>fontspec</code> documentation</a>.
+</p>
+<h2><span id="TeX_engines.2C_HarfBuzz.2C_and_color_emoji"></span><span class="mw-headline" id="TeX_engines,_HarfBuzz,_and_color_emoji">TeX engines, HarfBuzz, and color emoji</span></h2>
+<p>Although XeTeX and LuaHBTeX both integrate HarfBuzz, they provide different levels of support for some of HarfBuzz’s more advanced features—most notably loading and using OpenType color fonts.</p>
+<h3><span class="mw-headline" id="XeTeX_and_OpenType_color_fonts">XeTeX and OpenType color fonts</span></h3>
+<p>As noted, there are two categories of OpenType color font based on the data format used to store the font glyphs: vector-based and raster-based.</p>
+<h4><span class="mw-headline" id="XeTeX_and_raster-based_OpenType_color_fonts">XeTeX and raster-based OpenType color fonts</span></h4>
+<p>XeTeX cannot load raster-based OpenType color fonts—such as Google’s <a rel="nofollow" class="external text" href="https://www.google.com/get/noto/help/emoji/">Noto Color Emoji</a> shipped with TeX Live 2020. For example, if you try to load Noto Color Emoji (NotoColorEmoji.ttf) XeLaTeX will fail with a potentially misleading error claiming that Noto Color Emoji “cannot be found”. The following LaTeX code, typeset using XeLaTeX, <em>does not work</em>:</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newfontfamily\emojifont</span><span class="nb">{</span>NotoColorEmoji.ttf<span class="nb">}</span>
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\smiley</span><span class="nb">}{{</span><span class="k">\emojifont\char</span>"1F600<span class="nb">}}</span>
+<span class="k">\smiley</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=xelatex&amp;snip_name=XeTeX+failure&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bfontspec%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewfontfamily%5Cemojifont%7BNotoColorEmoji.ttf%7D%0A%5Cnewcommand%7B%5Csmiley%7D%7B%7B%5Cemojifont%5Cchar%221F600%7D%7D%0A%5Csmiley%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this XeLaTeX code in Overleaf (it <strong><em>does not</em></strong> work).</a>
+</p><p class="mw-empty-elt"></p>
+<p>It fails with the error:</p>
+<pre>! Package fontspec Error: The font "NotoColorEmoji" cannot be found.
+</pre>
+<p>Similarly, a simple Plain TeX example processed by XeTeX also fails </p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\font\emojifont</span>="[NotoColorEmoji.ttf]" at 12pt
+<span class="k">\emojifont</span> <span class="k">\char</span>"1F600
+<span class="k">\bye</span>
+</pre></div>
+</div>
+</div>
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=latex_dvipdf&amp;snip_name[]=main.tex&amp;snip[]=%25%5Ctitle%7Bdummy+title%7D%0A%5Cfont%5Cemojifont%3D%22%5BNotoColorEmoji.ttf%5D%22+at+12pt%0A%5Cemojifont+%5Cchar%221F600%0A%5Cbye&amp;snip_name[]=readme&amp;snip[]=This+project+uses+a+latexmkrc+file+to+run+xetex+not+xelatex&amp;snip_name[]=latexmkrc&amp;snip[]=%24latex+%3D+%27xetex%25O+%25S%27%3B+%23+to+use+the+xetex+engine&amp;main_document=main.tex"><i class="fa fa-share"></i> Open this Plain TeX (XeTeX) example in Overleaf (it <strong><em>does not</em></strong> work).</a>
+</p>
+<p>The Plain TeX example reports a similar, but different, error message:</p>
+<pre>! Font \emojifont=[NotoColorEmoji.ttf] at 12.0pt not loadable: Metric (TFM) fil
+e or installed font not found.
+l.1 \font\emojifont="[NotoColorEmoji.ttf]" at 12pt
+
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font&lt;same font id&gt;=&lt;substitute font name&gt;'.
+</pre>
+<h6><span class="mw-headline" id="Plain_LuaHBTeX_example">Plain <code>LuaHBTeX</code> example</span></h6>
+<p>For comparison, here’s a minimal Plain TeX example compiled with LuaHBTeX</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\input</span> luaotfload.sty
+<span class="k">\font\emojifont</span>=NotoColorEmoji.ttf:mode=harf at 12pt
+<span class="k">\emojifont</span> <span class="k">\Uchar</span>"1F600
+<span class="k">\bye</span>
+</pre></div>
+</div>
+</div>
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=latex_dvipdf&amp;snip_name[]=main.tex&amp;snip[]=%25%5Ctitle%7BPlain+TeX+with+LuaHBTeX%7D%0A%5Cinput+luaotfload.sty%0A%5Cfont%5Cemojifont%3DNotoColorEmoji.ttf%3Amode%3Dharf+at+12pt%0A%5Cemojifont+%5CUchar%221F600%0A%5Cbye&amp;snip_name[]=readme&amp;snip[]=This+project+uses+a+latexmkrc+file+to+run+luahbtex+not+lualatex&amp;snip_name[]=latexmkrc&amp;snip[]=%24latex+%3D+%27luahbtex+%25O+%25S%27%3B+%23+to+use+the+luahbtex+engine&amp;main_document=main.tex"><i class="fa fa-share"></i> Open this Plain TeX (LuaHBTeX) example in Overleaf (it compiles successfully).</a>
+</p>
+<h4><span id="The_real_cause_of_XeTeX.E2.80.99s_failure"></span><span class="mw-headline" id="The_real_cause_of_XeTeX’s_failure">The real cause of  XeTeX’s failure</span></h4>
+<p>The error messages provided by XeTeX partially obscure the actual cause of the problem: OpenType color fonts, particularly raster-based variants, are <em>not</em> supported by XeTeX. In reality, XeTeX (Kpathsea) can <em>find</em> the Noto Color Emoji font, but XeTeX cannot fully <em>load</em> that font and is unable to initialize internal font-data tables required to use that font for typesetting. Internally, XeTeX <em>starts</em> the process of loading the font and tests it for “scalability” (using FreeType’s “definition” of “scalability”), but that test fails, and XeTeX issues a standard, arguably misleading, TeX engine error message.</p>
+<h5><span class="mw-headline" id="TeXnical_note">TeXnical note</span></h5>
+<p>XeTeX’s processing of NotoColorEmoji.ttf was investigated by compiling a debug version of the XeTeX executable. The Eclipse IDE was used to set a breakpoint on the XeTeX function <code>creatFontFromFile(filename, index, pointsize)</code>, then step through the code to observe subsequent processing.</p>
+<h4><span class="mw-headline" id="XeTeX_and_vector-based_OpenType_color_fonts">XeTeX and vector-based OpenType color fonts</span></h4>
+<p>XeTeX can <em>load</em> vector-based OpenType color fonts but will not produce color emoji in the resulting PDF—if XeTeX produces one at all. Unlike LuaTeX, LuaHBTeX and pdfTeX, XeTeX doesn’t <em>directly</em> output typeset documents in PDF format. Instead, XeTeX outputs an intermediate <code>.xdv</code> (e<strong>x</strong>tended <strong>dv</strong>i) file format that is converted to PDF by a utility called <code>xdvipdfmx</code>. At the time of writing, <code>xdvipdfmx</code> is unable to embed the appropriate color emoji glyph data into the PDF, so, at best, you’ll see monochrome emoji—the “fallback” result—in the PDF, or perhaps nothing at all, depending on the font used.</p>
+<p>Here is a XeLaTeX example which uses the OpenType color font <a rel="nofollow" class="external text" href="https://ctan.org/tex-archive/fonts/twemoji-colr">TwemojiMozilla.ttf</a>, available in TeX Live. TwemojiMozilla.ttf uses Microsoft’s COLR/CPAL vector format for storing color glyphs and is shipped with TeX Live 2020. In this example, XeTeX is able to load the font, generate an <code>.xdv</code> and PDF file, but the emoji glyph is not present in the typeset PDF:</p>
+<p class="mw-empty-elt">
+</p><p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newfontfamily\emojifont</span><span class="nb">{</span>TwemojiMozilla.ttf<span class="nb">}</span>
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\smiley</span><span class="nb">}{{</span><span class="k">\emojifont\char</span>"1F600<span class="nb">}}</span>
+Here is a smiley: <span class="k">\smiley</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=xelatex&amp;snip_name=XeTeX+failure&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bfontspec%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewfontfamily%5Cemojifont%7BTwemojiMozilla.ttf%7D%0A%5Cnewcommand%7B%5Csmiley%7D%7B%7B%5Cemojifont%5Cchar%221F600%7D%7D%0AHere+is+a+smiley%3A+%5Csmiley%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this XeLaTeX code in Overleaf (it FAILS to work).</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<p>In contrast, the code above works with LuaLaTeX if define <code>\emojifont</code> using the <code>fontspec</code> setting <code>[Renderer=HarfBuzz]</code>:</p>
+<p class="mw-empty-elt"></p><p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newfontfamily\emojifont</span><span class="nb">{</span>TwemojiMozilla.ttf<span class="nb">}</span>[Renderer=HarfBuzz]
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\smiley</span><span class="nb">}{{</span><span class="k">\emojifont\char</span>"1F600<span class="nb">}}</span>
+Here is a smiley: <span class="k">\smiley</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex&amp;snip_name=LuaLaTeX+emoji+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bfontspec%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewfontfamily%5Cemojifont%7BTwemojiMozilla.ttf%7D%5BRenderer%3DHarfBuzz%5D%0A%5Cnewcommand%7B%5Csmiley%7D%7B%7B%5Cemojifont%5Cchar%221F600%7D%7D%0AHere+is+a+smiley%3A+%5Csmiley%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this LuaLaTeX code in Overleaf (it works).</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="LuaHBTeX_and_OpenType_color_fonts">LuaHBTeX and OpenType color fonts</span></h3>
+<p>Through its integrated HarfBuzz shaping engine and the <code>luaoftload</code> library, LuaHBTeX provides support for all four varieties of OpenType color font. Users of LuaLaTeX can take full advantage of Unicode-based processing of text containing emoji characters or simply embellish their documents with highly colorful text using OpenType color fonts.</p> 
+<p>As noted earlier, the four variants of OpenType color font can be classified into two groups: </p>
+<ul><li>those containing glyphs in raster-image formats, such as PNG;</li>
+<li>others that use vector-based formats of SVG or Microsoft’s COLR/CPAL mechanism.</li></ul>
+<p>Vector-based glyph formats have the advantage of scalability: producing crisp glyph graphics at any point size.</p> 
+<h5><span id="Using_Microsoft_COLR.2FCPAL_color_fonts_with_LuaHBTeX"></span><span class="mw-headline" id="Using_Microsoft_COLR/CPAL_color_fonts_with_LuaHBTeX">Using Microsoft COLR/CPAL color fonts with LuaHBTeX</span></h5>
+<p>If you want to use a vector format for your OpenType color emoji fonts, check out the font <a rel="nofollow" class="external text" href="https://ctan.org/tex-archive/fonts/twemoji-colr?lang=en">TwemojiMozilla.ttf</a>, which is based on Microsoft’s COLR/CPAL format. TwemojiMozilla.ttf is included with TeX Live, but you can obtain the latest version from its <a rel="nofollow" class="external text" href="https://github.com/mozilla/twemoji-colr/releases">GitHub repository</a> and upload it into your Overleaf project.
+</p><p>
+Here’s a small, <code>fontspec</code>-based, example using <code>Renderer=Harfbuzz</code>, which typesets a large (vector) emoji duck:</p><p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>Duck demo<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newfontfamily\emojifont</span><span class="na">[Renderer=Harfbuzz,SizeFeatures={Size=400}]</span><span class="nb">{</span>TwemojiMozilla.ttf<span class="nb">}</span>
+<span class="k">\emojifont\Uchar</span>"1F986
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex&amp;snip_name=Typesetting+an+emoji+duck&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bfontspec%7D%0A%5Ctitle%7BDuck+demo%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewfontfamily%5Cemojifont%5BRenderer%3DHarfbuzz%2CSizeFeatures%3D%7BSize%3D400%7D%5D%7BTwemojiMozilla.ttf%7D%0A%5Cemojifont%5CUchar%221F986%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this LuaLaTeX example to typeset a vector duck.</a>
+</p><p class="mw-empty-elt"></p>
+<p>Here’s the (vector) duck produced by the example above:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/IMtI4c8PuhYbQSXorCl0m/877e0b48fb16573ae380cad6516753f8/vectorduck.svg" />
+
+</p>
+<h4><span class="mw-headline" id="Using_SVG-based_OpenType_color_fonts_with_LuaHBTeX">Using SVG-based OpenType color fonts with LuaHBTeX</span></h4>
+<p>At the time of writing this article update (July 2023), there is little formal documentation on using SVG-flavour OpenType color fonts with LuaLaTeX. Some <a rel="nofollow" class="external text" href="https://github.com/latex3/luaotfload/issues/96">comments made in online discussions</a> suggest using <code>fontspec</code>’s <code>RawFeature</code>, as shown in the pseudo-code below. Replace <code><i>your SVG font file name here</i></code> with the name of an SVG-based font file that is accessible to your LaTeX code:</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newfontfamily\emoji</span><span class="na">[RawFeature={+svg},SizeFeatures={Size=20}]</span><span class="nb">{</span>your SVG font file name here<span class="nb">}</span>
+<span class="k">\emoji</span> Your emoji here...
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>If you omit <code>fontspec</code> and load <code>luaotfload</code> directly, you may need to declare and specify a font in the following way—our experiments indicate that you need to omit the <code>mode=harf</code> option for this to work:</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\font\emoji</span>=[your SVG font file name here]:+svg;
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<h6><span class="mw-headline" id="Some_notes_of_caution">Some notes of caution</span></h6>
+<p>Readers interested to use SVG-flavour OpenType color fonts should note:
+</p>
+<ul><li>SVG-flavour OpenType fonts containing a large number of glyphs can be <a href="#Processing_SVG_glyph_data">computationally expensive for LuaLaTeX</a> to process, potentially resulting in <a href="https://www.overleaf.com/learn/how-to/Fixing_and_avoiding_compile_timeouts" class="mw-redirect" title="Kb/Fixing and avoiding compile timeouts">Overleaf timeouts</a>.</li>
+<li>LuaLaTeX's support for these fonts could be <a rel="nofollow" class="external text" href="https://github.com/latex3/luaotfload/issues/96#issuecomment-530317399">considered as experimental</a>: results may vary according to the TeX Live release used by your project; consequently, it is advisable to experiment and proceed with caution.</li></ul>
+<h6><span class="mw-headline" id="Processing_SVG_glyph_data">Processing SVG glyph data</span></h6>
+<p>SVG enables designers to produce complex and colorful designs representing a font's glyphs—subject to some SVG restrictions <a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/typography/opentype/spec/svg">documented in the OpenType specification</a>. However, TeX engines, including LuaHBTeX, cannot directly import (use) SVG files or data—such as the SVG data used to describe glyph shapes within SVG-flavour OpenType color fonts. A glyph’s SVG data must be converted to PDF format because LuaHBTeX can use that to typeset the glyph and produce the final PDF document. That SVG-to-PDF conversion is handled by Lua code within <code>luaoftload</code>: each glyph’s SVG data is extracted from the font file, saved to a temporary <code>.svg</code> file and converted to PDF using Inkscape via its command line. Extracting the SVG data and converting it to PDF incurs some processing overhead, resulting in potentially lengthy document-compilation times—particularly documents using large SVG fonts containing thousands of emoji glyphs.</p>
+<h4><span class="mw-headline" id="Raster-based_OpenType_color_fonts">Raster-based OpenType color fonts</span></h4>
+<h5><span id="Using_Google.E2.80.99s_CBDT.2FCBLC_OpenType_color_font_format_with_LuaHBTeX"></span><span class="mw-headline" id="Using_Google’s_CBDT/CBLC_OpenType_color_font_format_with_LuaHBTeX">Using Google’s CBDT/CBLC OpenType color font format with LuaHBTeX</span></h5>
+<p><a rel="nofollow" class="external text" href="https://fonts.google.com/noto/specimen/Noto+Color+Emoji">Noto Color Emoji</a> is an OpenType color font included with TeX Live, making it easy to use in an Overleaf project. Because Noto Color Emoji uses PNG format graphics to represent emoji glyphs, we can use it to typeset a large (raster) duck emoji—as demonstrated by following example. Note again that the <code>fontspec</code> font declaration (<code>\emojifont</code>)  uses <code>Renderer=Harfbuzz</code>.</p>
+<p class="mw-empty-elt"></p><p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<span class="k">\title</span><span class="nb">{</span>Duck demo<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newfontfamily\emojifont</span><span class="na">[Renderer=Harfbuzz,SizeFeatures={Size=400}]</span><span class="nb">{</span>NotoColorEmoji.ttf<span class="nb">}</span>
+<span class="k">\emojifont\Uchar</span>"1F986
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex&amp;snip_name=Typesetting+a+large+raster+duck&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bfontspec%7D%0A%5Ctitle%7BDuck+demo%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewfontfamily%5Cemojifont%5BRenderer%3DHarfbuzz%2CSizeFeatures%3D%7BSize%3D400%7D%5D%7BNotoColorEmoji.ttf%7D%0A%5Cemojifont%5CUchar%221F986%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this LuaLaTeX example to typeset a raster duck.</a>
+</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt"></p>
+<p>Here’s the raster duck produced by the example above:</p>
+<p><img alt="A raster duck emoji typeset by LaTeX" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/4f/Rasterduck.png" decoding="async" width="400" height="447" /></p>
+<p>If you try to use <code>NotoColorEmoji.ttf</code> but omit <code>[Renderer=Harfbuzz]</code> from the <code>fontspec</code> declaration, LuaHBTeX will fail and issue an error message when it tries to write out the PDF file:</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>! error:  (file /usr/local/texlive/2020/texmf-dist/fonts/truetype/google/noto-em
+oji/NotoColorEmoji.ttf) (ttf): loca table not found
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>The reason for this error in the <a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/typography/opentype/spec/loca">loca table</a> is <a rel="nofollow" class="external text" href="https://github.com/latex3/luaotfload/issues/98#issuecomment-531610153">explained on GitHub</a>.</p>
+<h5><span id="Using_Apple.E2.80.99s_sbix_OpenType_color_font_format_with_LuaHBTeX"></span><span class="mw-headline" id="Using_Apple’s_sbix_OpenType_color_font_format_with_LuaHBTeX">Using Apple’s sbix OpenType color font format with LuaHBTeX</span></h5>
+<p>Offline tests demonstrate that LuaHBTeX supports the <code>sbix</code> variant of OpenType color font but, as of writing this article, we have been unable to locate a suitably licensed <code>sbix</code>-variant color emoji font to demonstrate typesetting a duck. Please <a rel="nofollow" class="external text" href="https://www.overleaf.com/contact">contact us</a> if you know of one, and we’ll quackly update this article to use it.</p>
+<h2><span class="mw-headline" id="Introduction_to_the_LuaHBTeX_HarfBuzz_API">Introduction to the LuaHBTeX HarfBuzz API</span></h2>
+<p><img alt="Db.gif" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/42/Db.gif" decoding="async" width="30" height="42" /><img alt="Db.gif" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/42/Db.gif" decoding="async" width="30" height="42" />
+</p>
+<p>Text shaping, particularly for complex-script languages, and even emoji, is an inherently difficult task so, unsurprisingly, HarfBuzz is a sophisticated library which can be tricky to work with—unless you are already familiar with text-shaping operations. In this final section, we look at LuaHBTeX’s integration of HarfBuzz and how to access it via Lua code within <code>\directlua</code>.</p> 
+<p>Our example uses fairly basic code to demonstrate the LuaHBTeX HarfBuzz API. It is somewhat contrived, not production-level quality, nor very practical because its only purpose is to introduce some core ideas. We have split the Lua code into two <code>\directlua</code> chunks: the first loads the <code>luaharfbuzz</code> library and creates some global variables that we’ll use within our second <code>\directlua</code> chunk, where we define a macro called <code>\codestoemoji</code>.</p>
+<p>It feels appropriate to replicate Knuth’s use of double dangerous-bend signs (image courtesy of <a rel="nofollow" class="external text" href="http://www.truetex.com/db.htm">this site</a>) because the content is somewhat low-level and “peeks under the hood”—although we hope it may be of interest to the more intrepid reader. LuaHBTeX’s integration of HarfBuzz is derived from the <a rel="nofollow" class="external text" href="https://github.com/ufyTeX/luaharfbuzz/wiki#projects-using-luaharfbuzz">luaharfbuzz project on GitHub</a> where you can find an <a rel="nofollow" class="external text" href="https://github.com/ufyTeX/luaharfbuzz/wiki">introduction to the project</a> together with a <a rel="nofollow" class="external text" href="http://ufytex.github.io/luaharfbuzz/">listing of the luaharfbuzz API</a>.</p><p class="mw-empty-elt">   
+
+</p><h3><span class="mw-headline" id="First_steps:_load_the_luaharfbuzz_library_and_find_a_font">First steps: load the <code>luaharfbuzz</code> library and find a font</span></h3>
+<p>To use LuaHBTeX’s HarfBuzz API we first need to load the library (module) called <code>luaharfbuzz</code>, built into LuaHBTeX, and save the returned table in a (global) variable we’ll call <code>hblib</code>:</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>hblib=require("luaharfbuzz")
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>Next, we need to locate a suitable emoji OpenType color font: we’ll use Noto Color Emoji—note we’re being very lazy and not doing any error-checking in case we don’t find it! To find it, we’ll use the <code>kpse</code> (Kpathsea) library, which is also part of LuaTeX/LuaHBTeX:</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>pathtofontfile=kpse.find<span class="nb">_</span>file("NotoColorEmoji.ttf","truetype fonts")
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>Now that we have access to the HarfBuzz library, via our variable <code>hblib</code>, and the path to a suitable font (<code>pathtofontfile</code>), we can start to use <code>hblib</code>. To start with, we’ll create a HarfBuzz font and HarfBuzz face for use in the second <code>\directlua</code> code chunk where we define our macro.</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="c">%Create HarfBuzz face and HarfBuzz font from Noto Color Emoji</span>
+hbface = hblib.Face.new(pathtofontfile)
+hbfont = hblib.Font.new(hbface)
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<h4><span id="HarfBuzz_font_and_HarfBuzz_face:_what_are_they.3F"></span><span class="mw-headline" id="HarfBuzz_font_and_HarfBuzz_face:_what_are_they?">HarfBuzz font and HarfBuzz face: what are they?</span></h4>
+<p>A <a rel="nofollow" class="external text" href="https://harfbuzz.github.io/fonts-and-faces.html">HarfBuzz face object</a> represents a typeface loaded from a font file, but without specific parameters (such as size) being set. A <a rel="nofollow" class="external text" href="https://harfbuzz.github.io/fonts-and-faces.html">HarfBuzz font object</a> represents a <em>specific instance</em> of a HarfBuzz face; consequently, different HarfBuzz font objects can be derived from a single HarfBuzz face: each HarfBuzz font can have its properties, such as size, set to different values. A HarfBuzz face is a higher level of abstraction than a HarfBuzz font.</p>
+<h3><span class="mw-headline" id="Using_font_glyphs_to_create_PNG_files">Using font glyphs to create PNG files</span></h3>
+<p>The final part of our first <code>\directlua</code> chunk is a function called <code>writePNGglyph(hbfontobject, glyphID)</code> which we use to demonstrate that some OpenType color fonts, such as Noto Color Emoji, use PNG graphics to represent the emoji glyphs it contains.</p> 
+<p>This function uses LuaHBTeX’s HarfBuzz API to extract PNG data from glyphs and write that data to a <code>.png</code> file named <code>Graphics&lt;glyphID&gt;.png</code>. The name of that <code>.png</code> file is returned for use by <code>\includegraphics</code> to embed PNG glyph images in our typeset PDF.</p>
+<p>With the <code>writePNGglyph(hbfontobject, glyphID)</code> in place, our first <code>\directlua</code> code chunk looks like this:</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\directlua</span><span class="nb">{</span>
+
+<span class="c">% Load the luaharfbuzz library from LuaHBTeX</span>
+hblib=require("luaharfbuzz")
+
+<span class="c">% Locate the Noto Color Emoji font on Overleaf’s server</span>
+pathtofontfile=kpse.find<span class="nb">_</span>file("NotoColorEmoji.ttf","truetype fonts")
+
+<span class="c">% Create HarfBuzz face and HarfBuzz font from Noto Color Emoji</span>
+hbface = hblib.Face.new(pathtofontfile)
+hbfont = hblib.Font.new(hbface)
+
+<span class="c">% This function accepts a font and a glyph ID:</span>
+<span class="c">% it extracts the glyphs' PNG data and writes</span>
+<span class="c">% it out to a .png file</span>
+ 
+function writePNGglyph(hbfontobject, glyphID)
+
+    <span class="c">% Get glyph PNG data</span>
+    local pngblob=hbfontobject:ot<span class="nb">_</span>color<span class="nb">_</span>glyph<span class="nb">_</span>get<span class="nb">_</span>png(glyphID) 
+    local pngdata=pngblob:get<span class="nb">_</span>data()
+
+    <span class="c">% Construct a file name for our .png file</span>
+    local fname="Glyph"..glyphID..".png" 
+
+    <span class="c">% Write the .png file and return the file name</span>
+    local output = assert(io.open(fname, "wb"))
+    output:write(pngdata)
+    output:close()
+    
+    <span class="c">% Return the file name for \includegraphics to use </span>
+    return fname 
+end
+<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<h3><span id="Second_.5Cdirectlua_chunk:_create_the_macro_.5Ccodestoemoji"></span><span class="mw-headline" id="Second_\directlua_chunk:_create_the_macro_\codestoemoji">Second <code>\directlua</code> chunk: create the macro <code>\codestoemoji</code></span></h3>
+<p>The goal is to define a macro <code>\codestoemoji</code> that we can call with a piece of text containing emoji character codes we want HarfBuzz to shape. Specifically, we’ll use <code>\Uchar&lt;character code&gt;</code> to represent each emoji character; for example:
+</p><p class="mw-empty-elt">  
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\codestoemoji</span><span class="nb">{</span><span class="k">\Uchar</span>"1F3F4<span class="k">\Uchar</span>"E0067<span class="k">\Uchar</span>"E0062<span class="k">\Uchar</span>"E0065<span class="k">\Uchar</span>"E006E<span class="k">\Uchar</span>"E0067<span class="k">\Uchar</span>"E007F<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>A lot is going on within the definition of <code>\codestoemoji</code> which we’ll explain below, but the definition looks like this:</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newcommand</span><span class="nb">{</span><span class="k">\codestoemoji</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="c">%</span>
+<span class="k">\directlua</span><span class="nb">{</span>
+
+local str="#1"
+local hbbuffer = hblib.Buffer.new()
+hbbuffer:add<span class="nb">_</span>utf8(str)
+
+hbbuffer:set<span class="nb">_</span>direction(hblib.Direction.new("ltr"))
+local res = hblib.shape<span class="nb">_</span>full(hbfont, hbbuffer, <span class="nb">{}</span>,<span class="nb">{}</span>)
+
+if (res) then
+    local hbglyphs=hbbuffer:get<span class="nb">_</span>glyphs()
+    <span class="c">% The glyphs table, hbglyphs, is 1-based</span>
+    local i = 1
+    while hbglyphs[i] <span class="k">\noexpand</span>~= nil do
+        local glyph = hbglyphs[i]
+        i = i + 1
+        local fname=writePNGglyph(hbfont, glyph.codepoint)
+        <span class="c">% Reduce the size of our imported PNG images</span>
+        local s = 0.75
+        local scal="[scale="..tostring(s).."]"
+        tex.print([[<span class="k">\noexpand\includegraphics</span>]]..scal..[[<span class="nb">{</span>]]..fname..[[<span class="nb">}</span>]])
+     end
+end
+<span class="nb">}}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<h4><span id="Understanding_the_definition_of_the_macro_.5Ccodestoemoji"></span><span class="mw-headline" id="Understanding_the_definition_of_the_macro_\codestoemoji">Understanding the definition of the macro <code>\codestoemoji</code></span></h4>
+<p>The <code>\codestoemoji</code> macro is mostly Lua code contained within <code>\directlua</code>, so if you would like to know more about <em>how</em> <code>\directlua</code> works, check out the Overleaf article 
+<a rel="nofollow" class="external text" href="An_Introduction_to_LuaTeX_(Part_2)__Understanding_/directlua.html">Understanding <code>\directlua</code></a>. It explains how LuaTeX and LuaHBTeX process <code>\directlua</code> when TeX/LaTeX commands are included in the Lua code and, in particular, the need to use <code>\noexpand</code> and <code>\unexpanded</code>.</p>
+<h5><span id="Dealing_with_the_macro_parameter:_.22.231.22"></span><span class="mw-headline" id="Dealing_with_the_macro_parameter:_&quot;#1&quot;">Dealing with the macro parameter: "#1"</span></h5>
+<p>The macro starts with these three lines:</p> 
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>local str="#1"
+local hbbuffer = hblib.Buffer.new()
+hbbuffer:add<span class="nb">_</span>utf8(str)
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>which perform the following tasks:</p>
+<ul>
+<li><code>local str="#1"</code>: this creates a Lua string from input passed in by the macro;</li>
+<li><code>local hbbuffer = hblib.Buffer.new()</code>: this uses the HarfBuzz API to create a buffer to hold the text we want HarfBuzz to shape;</li>
+<li><code>hbbuffer:add_utf8(str)</code>: this adds a UTF-8 format string, created from our macro’s input, into the HarfBuzz buffer.</li>
+</ul>
+<p>The first line of code</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>local str="#1"
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>appears quite straightforward but its operation involves quite some complexity, which is worth exploring in a little more detail.</p> 
+<p>If we consider the third line of code</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>hbbuffer:add<span class="nb">_</span>utf8(str)
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>we see it uses our <code>str</code> variable to provide the HarfBuzz buffer with a Unicode string formatted in UTF-8. For that to work, the variable <code>str</code> must itself contain Unicode text formatted as UTF-8; so the question arises: <em>how</em> did LuaHBTeX “convert” the macro argument <code>"#1"</code>, containing <code>\Uchar</code> commands, to the Lua string variable <code>str</code> containing UTF-8 text for HarfBuzz?</p> 
+<p>If we look at our intended use of the <code>\codestoemoji</code> macro:</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\codestoemoji</span><span class="nb">{</span><span class="k">\Uchar</span>"1F3F4<span class="k">\Uchar</span>"E0067<span class="k">\Uchar</span>"E0062<span class="k">\Uchar</span>"E0065<span class="k">\Uchar</span>"E006E<span class="k">\Uchar</span>"E0067<span class="k">\Uchar</span>"E007F<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>the input, such as <code>\Uchar"1F3F4\Uchar"E0067\Uchar"E0062\Uchar"E0065...</code>, does not look anything like a sequence of emoji characters encoded in UTF-8. Furthermore, HarfBuzz knows nothing about TeX commands. Somehow, the raw TeX input comprising <code>\Uchar</code> commands is transformed to Unicode characters encoded in UTF-8 that HarfBuzz can use, but <em>how</em>?</p> 
+<p>The answer lies in the behavior of the <code>\Uchar</code> command: attempting to call <code>\codestoemoji</code> using <code>\char</code> instead of <code>\Uchar</code> will fail, but <em>why</em>?</p>
+<h5><span id=".5CUchar:_expansion_in_.5Cdirectlua"></span><span class="mw-headline" id="\Uchar:_expansion_in_\directlua"><code>\Uchar</code>: expansion in <code>\directlua</code></span></h5>
+<p>When the <code>\codestoemoji</code> macro is called, the <code>\directlua</code> command, stored within the macro’s definition, has to prepare Lua code for sending to LuaHBTeX’s built-in Lua interpreter. Part of that code-preparation process is the expansion of any TeX/LaTeX commands present in the original Lua code in the macro’s definition, together with the expansion of any macro arguments provided by the user. That expansion process yields a token list which is subsequently converted back to text, generating the Lua code for passing to the Lua interpreter. For convenience, we reproduce a diagram from the Overleaf article 
+<a rel="nofollow" class="external text" href="An_Introduction_to_LuaTeX_(Part_2)__Understanding_/directlua.html">Understanding <code>\directlua</code></a>:</p> 
+<p class="mw-empty-elt">
+
+</p><div class="example"><div class="output">
+<img src="https://images.ctfassets.net/nrgyaltdicpt/5QsRpvmj70dKsLqJsTGUNn/cc15fbd8117a02cee32af048f5c2c2df/processing_code--full--plain.svg" alt="The mechanics of \directlua" style="width:800px;padding:20px" /> 
+</div></div>
+ 
+<p class="mw-empty-elt"></p>
+<p>The macro <code>\codestoemoji</code> is intended to be called using <code>\Uchar</code> commands and, <a href="#The_key_difference:_expansion">as noted earlier in the article</a>, <code>\Uchar</code> is an expandable command whose expansion generates a character token. Within the processing activities of <code>\directlua</code>, LuaHBTeX expands each <code>\Uchar&lt;character code&gt;</code> command where it <em>removes</em> each  <code>\Uchar&lt;character code&gt;</code> from the input and <em>replaces</em> it with the corresponding expansion value: a character token representing the <code>&lt;character code&gt;</code>.</p> 
+<p>In the final stage of processing, the initial token list generated by <code>\directlua</code> is converted <em>back to text</em> to become the Lua code destined for the Lua interpreter (see diagram above). All character tokens produced by the expansion of <code>\Uchar</code> are also <em>converted back to text</em>: that conversion of character tokens to text generates the UTF-8 representations of the original <code>&lt;character code&gt;</code> values.</p> 
+<p>In our example, by the time the Lua code is generated and ready for the Lua interpreter, the macro input for "#1" has been converted to a sequence of UTF-8 text: the <code>str</code> variable is now a UTF-8 text string which can be safely added to the HarfBuzz buffer.</p>
+<h6><span id="Why_doesn.E2.80.99t_.5Cchar_work.3F"></span><span class="mw-headline" id="Why_doesn’t_\char_work?">Why doesn’t <code>\char</code> work?</span></h6>
+<p>The straight answer is because <code>\char</code> is <em>not</em> an expandable command. Unlike <code>\Uchar</code> commands, <code>\char</code> commands <em>are not removed</em> from the input during <code>\directlua</code>’s initial processing to generate a token list, they “pass through” to become incorporated into the token list being constructed by <code>\directlua</code>. For example, if the argument to <code>\codestoemoji</code> contained <code>\char"1F3F4</code> LuaHBTeX would convert that to a sequence of tokens and store them as part of the total token list being generated.</p>
+<p>In the next stage of processing, converting the tokens back into text, the resulting Lua code would contain the <em>literal string</em> <code>\char"1F3F4</code> within the text used to define our variable <code>str</code>. When the content of <code>str</code> is added to the HarfBuzz buffer, it will not contain a UTF-8 encoded sequence representing the emoji character "1F3F4, it would contain the literal string <code>\char"1F3F4</code>, which HarfBuzz will try to shape and, for our purposes, would not produce an emoji glyph. Incidentally, the string <code>\char"1F3F4</code> would also generate Lua syntax errors unless it was created as a “long-bracket string”—see <a rel="nofollow" class="external text" href="An_Introduction_to_LuaTeX_(Part_2)__Understanding_/directlua.html#What_are_.E2.80.9CLua_escape_sequences.E2.80.9D.3F">What are Lua escape sequences</a> for background on that issue.</p>
+<p>If we try to use <code>\codestoemoji</code> with a <code>\char</code> command, like this:</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\codestoemoji</span><span class="nb">{</span><span class="k">\char</span>"1F3F4<span class="k">\Uchar</span>"E0067<span class="k">\Uchar</span>"E0062<span class="k">\Uchar</span>"E0065<span class="k">\Uchar</span>"E006E<span class="k">\Uchar</span>"E0067<span class="k">\Uchar</span>"E007F<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>LuaHBTeX will fail and report a syntax error something like this:</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>[<span class="k">\directlua</span>]:1: invalid escape sequence near '"<span class="k">\c</span>'.
+<span class="k">\codestoemoji</span> ...ing <span class="k">\includegraphics</span> <span class="nb">}</span>.<span class="nb">}</span>]]) end <span class="nb">}</span>
+                                                  
+l.75 ...r"E0065<span class="k">\Uchar</span>"E006E<span class="k">\Uchar</span>"E0067<span class="k">\Uchar</span>"E007F<span class="nb">}</span>
+                                                  
+The lua interpreter ran into a problem, so the
+remainder of this lua chunk will be ignored.
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<h4><span class="mw-headline" id="Calling_the_HarfBuzz_shaping_function">Calling the HarfBuzz shaping function</span></h4>
+<h6><span class="mw-headline" id="Setting_buffer_parameters">Setting buffer parameters</span></h6>
+<p>HarfBuzz sometimes requires additional information about the text it is being asked to shape. You can provide that information by configuring your <code>&lt;buffer variable&gt;</code> using <em>buffer methods</em>, such as:</p> 
+<ul>
+<li><code>&lt;buffer variable&gt;:set_direction(<em>HarfBuzz direction</em>)</code>;</li>
+<li><code>&lt;buffer variable&gt;:set_language(<em>HarfBuzz language</em>)</code>;</li>
+<li><code>&lt;buffer variable&gt;:set_script(<em>HarfBuzz script</em>)</code>.</li>
+</ul>
+<p>For example, we need to inform HarfBuzz that the direction of our emoji text will be left-to-right. To do that, we use the <code>set_direction()</code> method on our <code>&lt;buffer variable&gt;</code> (called <code>hbbuffer</code>) by writing:</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>hbbuffer:set<span class="nb">_</span>direction(hblib.Direction.new("ltr"))
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>where <code>hblib.Direction.new("ltr")</code> creates a “direction object” suitable for passing to the HarfBuzz engine via Lua.
+
+</p><h5><span class="mw-headline" id="Perform_shaping">Perform shaping</span></h5><p>
+After the buffer is suitably initialized, we can ask HarfBuzz to do the actual shaping via the function <code>shape_full()</code>. In our example we write:</p><p class="mw-empty-elt"></p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>local res = hblib.shape<span class="nb">_</span>full(hbfont, hbbuffer, <span class="nb">{}</span>,<span class="nb">{}</span>)
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>The 3rd and 4th parameters of the <code>shape_full()</code> function need to be Lua tables—we have used empty tables “<code>{}</code>” for both parameters. The general form of <code>shape_full()</code> is:</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>shape<span class="nb">_</span>full(Harfbuzz font, Harfbuzz buffer, <span class="nb">{</span>font features<span class="nb">}</span>, <span class="nb">{</span>"shaper"<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<ul>
+<li><strong><code>{"shaper"}</code></strong>: Does not usually need to be set but the options are <code>{"ot"}</code> or <code>{"graphite2"}</code>. More information on the concept of a “shaper” can be found in <a rel="nofollow" class="external text" href="https://harfbuzz.github.io/shaping-and-shape-plans.html">the HarfBuzz documentation</a>—note this documents the low-level C API, not the Lua-based <code>luaharfbuzz</code> binding (implementation).</li>
+<li><strong><code>{font features}</code></strong>: This is a table listing the <a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/typography/opentype/spec/featurelist">OpenType features</a>—supported by the font—that you want to HarfBuzz to apply during shaping.</li> 
+</ul>
+<p>Any font feature you want to use needs to be created using a <code>luaharfbuzz</code> library function</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>library<span class="nb">_</span>instance.Feature.new(feature<span class="nb">_</span>string)
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>where</p> 
+<ul>
+<li><code>library_instance</code> is your <code>luaharfbuzz</code> library instance variable (<code>hblib</code> in our example);</li>
+<li><code>feature_string</code> uses a <a rel="nofollow" class="external text" href="https://github.com/ufytex/luaharfbuzz/wiki/Feature-Strings">syntax to define features</a>. Examples of this are <code>+smcp</code> to activate small capitals or <code>-kern</code> to disable kerning.</li>
+</ul>
+<p>For example:</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>local dosmcp = hblib.Feature.new("+smcp")
+local nokern = hblib.Feature.new("-kern")
+<span class="c">% Use your font features like this</span>
+local res = hblib.shape<span class="nb">_</span>full(hbfont, hbbuffer, <span class="nb">{</span>dosmcp,nokern<span class="nb">}</span>,<span class="nb">{}</span>)
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<h4><span class="mw-headline" id="Accessing_the_result:_getting_the_glyphs">Accessing the result: getting the glyphs</span></h4>
+<p>And finally, if the shaping operation is successful, the shaped glyphs are returned in the buffer variable <code>hbbuffer</code> we created earlier in the code.</p>
+<p>We access the glyphs via the buffer method <code>get_glyphs()</code> and use a loop to get each individual glyph. Note that the Lua table holding the glyphs, <code>hbglyphs</code> in our example, is indexed starting at 1, not 0.</p>
+<p>Each glyph’s <em>glyph identifier</em> (confusingly called <code>codepoint</code>), and the HarfBuzz font (<code>hbfont</code>), is passed to the <code>writePNGglyph()</code> function which creates a PNG file using the font’s raster image representation of that glyph.</p><p class="mw-empty-elt"> 
+
+</p><p><code>writePNGglyph()</code> writes out a PNG file and returns the PNG file name, which is used to import the (scaled) PNG file into our LaTeX document via <code>\includegraphics[scale=0.75]{&lt;fname&gt;}</code>. Note how we can use <code>\includegraphics</code> directly within the Lua code. </p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>if (res) then
+    local hbglyphs=hbbuffer:get<span class="nb">_</span>glyphs()
+    <span class="c">% The glyphs table, hbglyphs, is 1-based</span>
+    local i = 1
+    while hbglyphs[i] <span class="k">\noexpand</span>~= nil do
+        local glyph = hbglyphs[i]
+        i = i + 1
+        local fname=writePNGglyph(hbfont, glyph.codepoint)
+        <span class="c">% Reduce the size of our imported PNG images</span>
+        local s = 0.75
+        local scal="[scale="..tostring(s).."]"
+        tex.print([[<span class="k">\noexpand\includegraphics</span>]]..scal..[[<span class="nb">{</span>]]..fname..[[<span class="nb">}</span>]])
+     end
+end
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt">
+
+</p><h3><span class="mw-headline" id="The_full_code_that_you_can_Open_in_Overleaf">The full code that you can Open in Overleaf</span></h3>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\directlua</span><span class="nb">{</span>
+
+<span class="c">% Load the luaharfbuzz library from LuaHBTeX</span>
+hblib=require("luaharfbuzz")
+
+<span class="c">% Locate the Noto Color Emoji font on Overleaf's server</span>
+pathtofontfile=kpse.find<span class="nb">_</span>file("NotoColorEmoji.ttf","truetype fonts")
+
+<span class="c">% Create HarfBuzz face and HarfBuzz font from Noto Color Emoji</span>
+hbface = hblib.Face.new(pathtofontfile)
+hbfont = hblib.Font.new(hbface)
+
+<span class="c">% This function accepts a font and a glyph ID:</span>
+<span class="c">% it extracts the glyphs's PNG data and writes</span>
+<span class="c">% it out to a .png file</span>
+ 
+function writePNGglyph(hbfontobject, glyphID)
+
+    <span class="c">% Get glyph PNG data</span>
+    local pngblob=hbfontobject:ot<span class="nb">_</span>color<span class="nb">_</span>glyph<span class="nb">_</span>get<span class="nb">_</span>png(glyphID) 
+    local pngdata=pngblob:get<span class="nb">_</span>data()
+
+    <span class="c">% Construct a file name for our .png file</span>
+    local fname="Glyph"..glyphID..".png" 
+
+    <span class="c">% Write the .png file and return the file name</span>
+    local output = assert(io.open(fname, "wb"))
+    output:write(pngdata)
+    output:close()
+    
+    <span class="c">% Return the file name for \includegraphics to use </span>
+    return fname 
+end
+<span class="nb">}</span>
+
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\codestoemoji</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="c">%</span>
+<span class="k">\directlua</span><span class="nb">{</span>
+
+local str="#1"
+local hbbuffer = hblib.Buffer.new()
+hbbuffer:add<span class="nb">_</span>utf8(str)
+
+hbbuffer:set<span class="nb">_</span>direction(hblib.Direction.new("ltr"))
+local res = hblib.shape<span class="nb">_</span>full(hbfont, hbbuffer, <span class="nb">{}</span>,<span class="nb">{}</span>)
+
+if (res) then
+    local hbglyphs=hbbuffer:get<span class="nb">_</span>glyphs()
+    <span class="c">% The glyphs table, hbglyphs, is 1-based.</span>
+    local i = 1
+    while hbglyphs[i] <span class="k">\noexpand</span>~= nil do
+        local glyph = hbglyphs[i]
+        i = i + 1
+        local fname=writePNGglyph(hbfont, glyph.codepoint)
+        <span class="c">% Reduce the size of our imported PNG images</span>
+        local s = 0.75
+        local scal="[scale="..tostring(s).."]"
+        tex.print([[<span class="k">\noexpand\includegraphics</span>]]..scal..[[<span class="nb">{</span>]]..fname..[[<span class="nb">}</span>]])
+     end
+end
+<span class="nb">}}</span>
+
+A duck: <span class="k">\codestoemoji</span><span class="nb">{</span><span class="k">\Uchar</span>"1F986<span class="nb">}</span>
+
+A flag: <span class="k">\codestoemoji</span><span class="nb">{</span><span class="k">\Uchar</span>"1F3F4<span class="k">\Uchar</span>"E0067<span class="k">\Uchar</span>"E0062<span class="k">\Uchar</span>"E0065<span class="k">\Uchar</span>"E006E<span class="k">\Uchar</span>"E0067<span class="k">\Uchar</span>"E007F<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex
+&amp;snip_name=Demonstrating+the+luaharfbuzz+API
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bgraphicx%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cdirectlua%7B%0A%0A%25+Load+the+luaharfbuzz+library+from+LuaHBTeX%0Ahblib%3Drequire%28%22luaharfbuzz%22%29%0A%0A%25+Locate+the+Noto+Color+Emoji+font+on+Overleaf%27s+server%0Apathtofontfile%3Dkpse.find_file%28%22NotoColorEmoji.ttf%22%2C%22truetype+fonts%22%29%0A%0A%25+Create+HarfBuzz+face+and+HarfBuzz+font+from+Noto+Color+Emoji%0Ahbface+%3D+hblib.Face.new%28pathtofontfile%29%0Ahbfont+%3D+hblib.Font.new%28hbface%29%0A%0A%25+This+function+accepts+a+font+and+a+glyph+ID%3A%0A%25+it+extracts+the+glyphs%27s+PNG+data+and+writes%0A%25+it+out+to+a+.png+file%0A+%0Afunction+writePNGglyph%28hbfontobject%2C+glyphID%29%0A%0A++++%25+Get+glyph+PNG+data%0A++++local+pngblob%3Dhbfontobject%3Aot_color_glyph_get_png%28glyphID%29+%0A++++local+pngdata%3Dpngblob%3Aget_data%28%29%0A%0A++++%25+Construct+a+file+name+for+our+.png+file%0A++++local+fname%3D%22Glyph%22..glyphID..%22.png%22+%0A%0A++++%25+Write+the+.png+file+and+return+the+file+name%0A++++local+output+%3D+assert%28io.open%28fname%2C+%22wb%22%29%29%0A++++output%3Awrite%28pngdata%29%0A++++output%3Aclose%28%29%0A++++%0A++++%25+Return+the+file+name+for+%5Cincludegraphics+to+use+%0A++++return+fname+%0Aend%0A%7D%0A%0A%5Cnewcommand%7B%5Ccodestoemoji%7D%5B1%5D%7B%25%0A%5Cdirectlua%7B%0A%0Alocal+str%3D%22%231%22%0Alocal+hbbuffer+%3D+hblib.Buffer.new%28%29%0Ahbbuffer%3Aadd_utf8%28str%29%0A%0Ahbbuffer%3Aset_direction%28hblib.Direction.new%28%22ltr%22%29%29%0Alocal+res+%3D+hblib.shape_full%28hbfont%2C+hbbuffer%2C+%7B%7D%2C%7B%7D%29%0A%0Aif+%28res%29+then%0A++++local+hbglyphs%3Dhbbuffer%3Aget_glyphs%28%29%0A++++%25+The+glyphs+table%2C+hbglyphs%2C+is+1-based.%0A++++local+i+%3D+1%0A++++while+hbglyphs%5Bi%5D+%5Cnoexpand%7E%3D+nil+do%0A++++++++local+glyph+%3D+hbglyphs%5Bi%5D%0A++++++++i+%3D+i+%2B+1%0A++++++++local+fname%3DwritePNGglyph%28hbfont%2C+glyph.codepoint%29%0A++++++++%25+Reduce+the+size+of+our+imported+PNG+images%0A++++++++local+s+%3D+0.75%0A++++++++local+scal%3D%22%5Bscale%3D%22..tostring%28s%29..%22%5D%22%0A++++++++tex.print%28%5B%5B%5Cnoexpand%5Cincludegraphics%5D%5D..scal..%5B%5B%7B%5D%5D..fname..%5B%5B%7D%5D%5D%29%0A+++++end%0Aend%0A%7D%7D%0A%0AA+duck%3A+%5Ccodestoemoji%7B%5CUchar%221F986%7D%0A%0AA+flag%3A+%5Ccodestoemoji%7B%5CUchar%221F3F4%5CUchar%22E0067%5CUchar%22E0062%5CUchar%22E0065%5CUchar%22E006E%5CUchar%22E0067%5CUchar%22E007F%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this luaharfbuzz API example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Harfbuzzexample.png" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/d/d1/Harfbuzzexample.png" decoding="async" width="400" height="480" />
+</p>
+<h2><span class="mw-headline" id="Bonus_section:_Fun_with_emoji_math">Bonus section: Fun with emoji math</span></h2>
+<p>To end on a light-hearted note, a member of the Overleaf team used the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/emoji?lang=en"><code>emoji</code> LaTeX package</a> to create a fun example:</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>emoji<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>unicode-math,fontspec<span class="nb">}</span>
+<span class="k">\setmainfont</span><span class="nb">{</span>STIX<span class="nb">}</span>
+<span class="k">\setmathfont</span><span class="nb">{</span>STIX Two Math<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\emomath</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\text</span><span class="nb">{</span><span class="k">\emoji</span><span class="nb">{</span>#1<span class="nb">}}}</span>
+<span class="sb">\[</span><span class="nb"></span>
+<span class="nb">e^{</span><span class="nv">\emomath</span><span class="nb">{droplet} </span><span class="nv">\ln\emomath</span><span class="nb">{smile}}</span><span class="o">=</span><span class="nv">\emomath</span><span class="nb">{sweat</span><span class="o">-</span><span class="nb">smile}</span>
+<span class="s">\]</span>
+<span class="sb">\[</span><span class="nb"></span>
+<span class="nb">e^{</span><span class="nv">\emomath</span><span class="nb">{eye}</span><span class="nv">\emomath</span><span class="nb">{pie}}</span><span class="o">=-</span><span class="m">1</span><span class="nb"></span>
+<span class="s">\]</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex&amp;snip_name=Fun+with+emoji+math&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bemoji%7D%0A%5Cusepackage%7Bunicode-math%2Cfontspec%7D%0A%5Csetmainfont%7BSTIX%7D%0A%5Csetmathfont%7BSTIX+Two+Math%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewcommand%7B%5Cemomath%7D%5B1%5D%7B%5Ctext%7B%5Cemoji%7B%231%7D%7D%7D%0A%5C%5B%0Ae%5E%7B%5Cemomath%7Bdroplet%7D+%5Cln%5Cemomath%7Bsmile%7D%7D%3D%5Cemomath%7Bsweat-smile%7D%0A%5C%5D%0A%5C%5B%0Ae%5E%7B%5Cemomath%7Beye%7D%5Cemomath%7Bpie%7D%7D%3D-1%0A%5C%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this fun example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:</p>
+<p><img alt="Emojimath2.png" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/7/7f/Emojimath2.png" decoding="async" width="400" height="301" />
+</p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../Lists.html" title="Lists">Lists</a></li>
+<li><a href="../Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../Operators.html" title="Operators">Operators</a></li>
+<li><a href="../Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../Tables.html" title="Tables">Tables</a></li>
+<li><a href="../Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../French.html" title="French">French</a></li>
+<li><a href="../German.html" title="German">German</a></li>
+<li><a href="../Greek.html" title="Greek">Greek</a></li>
+<li><a href="../Italian.html" title="Italian">Italian</a></li>
+<li><a href="../Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../Korean.html" title="Korean">Korean</a></li>
+<li><a href="../Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../Russian.html" title="Russian">Russian</a></li>
+<li><a href="../Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../Indices.html" title="Indices">Indices</a></li>
+<li><a href="../Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../Counters.html" title="Counters">Counters</a></li>
+<li><a href="../Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../Commands.html" title="Commands">Commands</a></li>
+<li><a href="../Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="../Tutorials.html">Tutorials</a></li><li><a href="../Inserting_Images.html">How to insert images</a></li><li><a href="../Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==" src="../../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="64JSadC0iR82KOKU2Hf1nQ==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:57:23 GMT -->
+</html>

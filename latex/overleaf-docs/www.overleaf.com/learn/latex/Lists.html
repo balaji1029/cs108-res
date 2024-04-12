@@ -1,0 +1,1097 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Lists by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:27:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Lists - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Lists"><meta name="og:title" content="Lists"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="Lists.html"><link rel="stylesheet" href="../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Lists.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Lists" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Lists" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Lists" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Lists" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Lists" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Lists" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Lists" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Lists" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Lists" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Lists" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Lists" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Lists" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Lists" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Lists" hreflang="ja"><link rel="preload" href="../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="80PQE3W4fquLHS50jpz9+g=="><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="JSoWCWOh-uMSGjL4-w-KtUOnbsqoFtJcIDgI"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="https://www.overleaf.com/" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Lists&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Lists&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Lists</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Three_ways_to_insert_lists_in_Overleaf"><span class="tocnumber">1</span> <span class="toctext">Three ways to insert lists in Overleaf</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Introduction"><span class="tocnumber">2</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Examples_of_basic_lists"><span class="tocnumber">3</span> <span class="toctext">Examples of basic lists</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#The_itemize_environment_for_bulleted_(unordered)_lists"><span class="tocnumber">3.1</span> <span class="toctext">The itemize environment for bulleted (unordered) lists</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#The_enumerate_environment_for_numbered_(ordered)_lists"><span class="tocnumber">3.2</span> <span class="toctext">The enumerate environment for numbered (ordered) lists</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#The_description_environment"><span class="tocnumber">3.3</span> <span class="toctext">The description environment</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Changing_the_label_of_individual_entries"><span class="tocnumber">4</span> <span class="toctext">Changing the label of individual entries</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Nested_lists"><span class="tocnumber">5</span> <span class="toctext">Nested lists</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Nested_lists:_label_style"><span class="tocnumber">5.1</span> <span class="toctext">Nested lists: label style</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Nested_enumerate_lists:_number_format"><span class="tocnumber">5.1.1</span> <span class="toctext">Nested enumerate lists: number format</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Nested_itemize_lists:_bullet_style"><span class="tocnumber">5.1.2</span> <span class="toctext">Nested itemize lists: bullet style</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Customizing_lists"><span class="tocnumber">6</span> <span class="toctext">Customizing lists</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Customizing_lists:_changing_labels"><span class="tocnumber">6.1</span> <span class="toctext">Customizing lists: changing labels</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Standard_label-generation_commands"><span class="tocnumber">6.1.1</span> <span class="toctext">Standard label-generation commands</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Counter_variables_for_enumerate"><span class="tocnumber">6.1.2</span> <span class="toctext">Counter variables for enumerate</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Examples:_customizing_labels_of_enumerate_lists"><span class="tocnumber">6.1.3</span> <span class="toctext">Examples: customizing labels of enumerate lists</span></a>
+<ul>
+<li class="toclevel-4 tocsection-17"><a href="#Practical_example"><span class="tocnumber">6.1.3.1</span> <span class="toctext">Practical example</span></a></li>
+<li class="toclevel-4 tocsection-18"><a href="#Printing_counter_variables"><span class="tocnumber">6.1.3.2</span> <span class="toctext">Printing counter variables</span></a></li>
+<li class="toclevel-4 tocsection-19"><a href="#Non-practical_(fun)_example"><span class="tocnumber">6.1.3.3</span> <span class="toctext">Non-practical (fun) example</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-20"><a href="#Customizing_lists:_changing_the_layout"><span class="tocnumber">6.2</span> <span class="toctext">Customizing lists: changing the layout</span></a>
+<ul>
+<li class="toclevel-3 tocsection-21"><a href="#LaTeX_list_parameters"><span class="tocnumber">6.2.1</span> <span class="toctext">LaTeX list parameters</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Creating_a_custom_list_using_the_list_environment"><span class="tocnumber">6.2.2</span> <span class="toctext">Creating a custom list using the list environment</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-23"><a href="#Using_the_enumitem_package_to_modify_and_create_lists"><span class="tocnumber">6.3</span> <span class="toctext">Using the enumitem package to modify and create lists</span></a>
+<ul>
+<li class="toclevel-3 tocsection-24"><a href="#enumitem_package_option_shortlabels"><span class="tocnumber">6.3.1</span> <span class="toctext">enumitem package option shortlabels</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#Modifying_a_standard_list"><span class="tocnumber">6.3.2</span> <span class="toctext">Modifying a standard list</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#Creating_a_new_list_with_enumitem"><span class="tocnumber">6.3.3</span> <span class="toctext">Creating a new list with enumitem</span></a>
+<ul>
+<li class="toclevel-4 tocsection-27"><a href="#Using_\setlist_to_configure_a_custom_list_created_with_enumitem"><span class="tocnumber">6.3.3.1</span> <span class="toctext">Using \setlist to configure a custom list created with enumitem</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-28"><a href="#Lists_for_lawyers:_nesting_lists_to_an_arbitrary_depth"><span class="tocnumber">6.3.4</span> <span class="toctext">Lists for lawyers: nesting lists to an arbitrary depth</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="#Custom_bullets_using_the_enumitem_package_and_MetaPost"><span class="tocnumber">6.3.5</span> <span class="toctext">Custom bullets using the enumitem package and MetaPost</span></a>
+<ul>
+<li class="toclevel-4 tocsection-30"><a href="#Example_1:_auto-sizing_bullet_points"><span class="tocnumber">6.3.5.1</span> <span class="toctext">Example 1: auto-sizing bullet points</span></a></li>
+<li class="toclevel-4 tocsection-31"><a href="#Example_2:_funky_custom_bullets"><span class="tocnumber">6.3.5.2</span> <span class="toctext">Example 2: funky custom bullets</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#Other_features_of_the_enumitem_package"><span class="tocnumber">7</span> <span class="toctext">Other features of the enumitem package</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Three_ways_to_insert_lists_in_Overleaf">Three ways to insert lists in Overleaf</span></h2>
+<p>Overleaf provides 3 ways to create lists using LaTeX:
+</p>
+<ol><li>Use <b>Insert Bulleted List</b> (<img alt="Image of the menu icon for insert a bulleted list in Overleaf" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c0/BulListIcon.png" decoding="async" width="22" height="18" />) or <b>Insert Numbered List</b> (<img alt="Image of the menu icon for insert a numbered list in Overleaf" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/12/NumListIcon.png" decoding="async" width="20" height="19" />) on the editor toolbar to insert lists into <b>Visual Editor</b> or <b>Code Editor</b>.</li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/How_to_paste_formatted_content_into_Overleaf#pasteformattedlist">Paste a formatted list into <b>Visual Editor</b></a>.</li>
+<li>Write your own LaTeX code using <b>Code Editor</b>.</li></ol>
+<p>Options 1 and 2 are designed to automatically generate the LaTeX code necessary for typesetting lists. However, for those who want to write their own LaTeX code, option 3 might be the preferred choice. It offers the greatest flexibility and is the primary focus of this article.
+</p>
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>This article provides an introduction to typesetting, and customizing, various types of list in LaTeX:
+</p>
+<ul><li>the <code>itemize</code> environment for creating a bulleted (unordered) list</li>
+<li>the <code>enumerate</code> environment for creating a numbered (ordered) list</li>
+<li>the <code>description</code> environment for creating a list of descriptions</li></ul>
+<p>Typesetting lists is a large topic because LaTeX lists are <em>extremely</em> configurable, enabling creation of an enormous variety of list types and structures. We’ll survey and demonstrate some methods you can use to <a href="#Customizing_lists">configure and customize your lists</a>.
+</p>
+<h2><span class="mw-headline" id="Examples_of_basic_lists">Examples of basic lists</span></h2>
+<h3><span id="The_itemize_environment_for_bulleted_.28unordered.29_lists"></span><span class="mw-headline" id="The_itemize_environment_for_bulleted_(unordered)_lists">The <code>itemize</code> environment for bulleted (unordered) lists</span></h3>
+<p>Unordered (bulleted) lists are produced by the <code>itemize</code> environment, where each list entry starts by using the <code>\item</code> command, which also generates the bullet symbol. 
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Lists are easy to create:
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+  <span class="k">\item</span> List entries start with the <span class="k">\verb</span>|<span class="k">\item</span>| command.
+  <span class="k">\item</span> Individual entries are indicated with a black dot, a so-called bullet.
+  <span class="k">\item</span> The text in the entries may be of any length.
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Basic+unordered+list+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0ALists+are+easy+to+create%3A%0A%5Cbegin%7Bitemize%7D%0A++%5Citem+List+entries+start+with+the+%5Cverb%7C%5Citem%7C+command.%0A++%5Citem+Individual+entries+are+indicated+with+a+black+dot%2C+a+so-called+bullet.%0A++%5Citem+The+text+in+the+entries+may+be+of+any+length.%0A%5Cend%7Bitemize%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="List1bOLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/57/List1bOLV2.png" decoding="async" width="600" height="141" />
+</p>
+<h3><span id="The_enumerate_environment_for_numbered_.28ordered.29_lists"></span><span class="mw-headline" id="The_enumerate_environment_for_numbered_(ordered)_lists">The <code>enumerate</code> environment for numbered (ordered) lists</span></h3>
+<p>Numbered (ordered) lists have the same syntax but use the <code>enumerate</code> environment: each entry must be preceded by the control sequence <code>\item</code>, which will automatically generate  numbers to label the item. These numbers start at 1 with every use of the <code>enumerate</code> environment—note that this, default, LaTeX numbering behaviour can be changed/controlled via the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/enumitem"><code>enumitem</code> package</a>. 
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Numbered (ordered) lists are easy to create:
+<span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+  <span class="k">\item</span> Items are numbered automatically.
+  <span class="k">\item</span> The numbers start at 1 with each use of the <span class="k">\texttt</span><span class="nb">{</span>enumerate<span class="nb">}</span> environment.
+  <span class="k">\item</span> Another entry in the list
+<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Basic+ordered+list+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0ANumbered+%28ordered%29+lists+are+easy+to+create%3A%0A%5Cbegin%7Benumerate%7D%0A++%5Citem+Items+are+numbered+automatically.%0A++%5Citem+The+numbers+start+at+1+with+each+use+of+the+%5Ctexttt%7Benumerate%7D+environment.%0A++%5Citem+Another+entry+in+the+list%0A%5Cend%7Benumerate%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="List2OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/0/07/List2OLV2.png" decoding="async" width="600" height="139" />
+</p>
+<h3><span class="mw-headline" id="The_description_environment">The <code>description</code> environment</span></h3>
+<p>The following example demonstrates the <code>description</code> environment. The (optional) label for each entry is enclosed in square brackets after the <code>\item</code> command:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\item</span><span class="na">[label text]</span> Text of your description goes here...
+</pre></div>
+</div>
+</div>
+<p>We also use the <code>blindtext</code> package to generate some dummy English text in the third entry. To obtain English we need to use the <code>babel</code> package with the language option <code>[english]</code>:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[english]</span><span class="nb">{</span>babel<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>Here is the example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[english]</span><span class="nb">{</span>babel<span class="nb">}</span> <span class="c">% To obtain English text with the blindtext package</span>
+<span class="k">\usepackage</span><span class="nb">{</span>blindtext<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>description<span class="nb">}</span>
+   <span class="k">\item</span> This is an entry <span class="k">\textit</span><span class="nb">{</span>without<span class="nb">}</span> a label.
+   <span class="k">\item</span><span class="na">[Something short]</span> A short one-line description.
+   <span class="k">\item</span><span class="na">[Something long]</span> A much longer description. <span class="k">\blindtext</span><span class="na">[1]</span>
+<span class="k">\end</span><span class="nb">{</span>description<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Basic+description+list+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Benglish%5D%7Bbabel%7D+%25+To+obtain+English+text+with+the+blindtext+package%0A%5Cusepackage%7Bblindtext%7D%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cbegin%7Bdescription%7D%0A+++%5Citem+This+is+an+entry+%5Ctextit%7Bwithout%7D+a+label.%0A+++%5Citem%5BSomething+short%5D+A+short+one-line+description.%0A+++%5Citem%5BSomething+long%5D+A+much+longer+description.+%5Cblindtext%5B1%5D%0A%5Cend%7Bdescription%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Descriptionlist2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/e/e3/Descriptionlist2.png" decoding="async" width="600" height="253" />
+</p>
+<h2><span class="mw-headline" id="Changing_the_label_of_individual_entries">Changing the label of individual entries</span></h2>
+<p>As shown in the <code>description</code> environment example, the <code>\item</code> command takes an optional parameter, in square brackets. You can use this feature within <code>itemize</code> and <code>enumerate</code> environments to change the default label of individual entries in your list:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\item</span><span class="na">[label text]</span> Text of your entry goes here...
+</pre></div>
+</div>
+</div>
+<p>The <code>label text</code> will be used to produce the label for this entry.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Change the labels using <span class="k">\verb</span>|<span class="k">\item</span><span class="na">[label text]</span>| in an <span class="k">\texttt</span><span class="nb">{</span>itemize<span class="nb">}</span> environment
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+  <span class="k">\item</span> This is my first point
+  <span class="k">\item</span> Another point I want to make 
+  <span class="k">\item</span><span class="na">[!]</span> A point to exclaim something!
+  <span class="k">\item</span><span class="na">[$\blacksquare$]</span> Make the point fair and square.
+  <span class="k">\item</span><span class="na">[NOTE]</span> This entry has no bullet
+  <span class="k">\item</span><span class="na">[]</span> A blank label?
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+<span class="k">\vspace</span><span class="nb">{</span>10pt<span class="nb">}</span>
+
+Change the labels using <span class="k">\verb</span>|<span class="k">\item</span><span class="na">[label text]</span>| in an <span class="k">\texttt</span><span class="nb">{</span>enumerate<span class="nb">}</span> environment
+<span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+  <span class="k">\item</span> This is my first point
+  <span class="k">\item</span> Another point I want to make 
+  <span class="k">\item</span><span class="na">[!]</span> A point to exclaim something!
+  <span class="k">\item</span><span class="na">[$\blacksquare$]</span> Make the point fair and square.
+  <span class="k">\item</span><span class="na">[NOTE]</span> This entry has no bullet
+  <span class="k">\item</span><span class="na">[]</span> A blank label?
+<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Changing+list+labels
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bamssymb%7D%25+to+access+%24%5Cblacksquare%24%0A%5Cbegin%7Bdocument%7D%0AChange+the+labels+using+%5Cverb%7C%5Citem%5Blabel+text%5D%7C+in+an+%5Ctexttt%7Bitemize%7D+environment%0A%5Cbegin%7Bitemize%7D%0A++%5Citem+This+is+my+first+point%0A++%5Citem+Another+point+I+want+to+make+%0A++%5Citem%5B%21%5D+A+point+to+exclaim+something%21%0A++%5Citem%5B%24%5Cblacksquare%24%5D+Make+the+point+fair+and+square.%0A++%5Citem%5BNOTE%5D+This+entry+has+no+bullet%0A++%5Citem%5B%5D+A+blank+label%3F%0A%5Cend%7Bitemize%7D%0A%0A%5Cvspace%7B10pt%7D%0A%0AChange+the+labels+using+%5Cverb%7C%5Citem%5Blabel+text%5D%7C+in+an+%5Ctexttt%7Benumerate%7D+environment%0A%5Cbegin%7Benumerate%7D%0A++%5Citem+This+is+my+first+point%0A++%5Citem+Another+point+I+want+to+make+%0A++%5Citem%5B%21%5D+A+point+to+exclaim+something%21%0A++%5Citem%5B%24%5Cblacksquare%24%5D+Make+the+point+fair+and+square.%0A++%5Citem%5BNOTE%5D+This+entry+has+no+bullet%0A++%5Citem%5B%5D+A+blank+label%3F%0A%5Cend%7Benumerate%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="ChangeBullets.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/b/b7/ChangeBullets.png" decoding="async" width="600" height="475" />
+</p>
+<h2><span class="mw-headline" id="Nested_lists">Nested lists</span></h2>
+<p>In LaTeX you can insert a list inside another list. The above list types may be included within one another, either mixed or of one type, to a depth of 4 levels.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+   <span class="k">\item</span> The labels consists of sequential numbers
+   <span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+     <span class="k">\item</span> The individual entries are indicated with a black dot, a so-called bullet
+     <span class="k">\item</span> The text in the entries may be of any length
+     <span class="k">\begin</span><span class="nb">{</span>description<span class="nb">}</span>
+     <span class="k">\item</span><span class="na">[Note:]</span> I would like to describe something here
+     <span class="k">\item</span><span class="na">[Caveat!]</span> And give a warning here
+     <span class="k">\end</span><span class="nb">{</span>description<span class="nb">}</span>
+   <span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+   <span class="k">\item</span> The numbers starts at 1 with each use of the <span class="k">\texttt</span><span class="nb">{</span>enumerate<span class="nb">}</span> environment
+<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Basic+nested+list+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Benumerate%7D%0A+++%5Citem+The+labels+consists+of+sequential+numbers%0A+++%5Cbegin%7Bitemize%7D%0A+++++%5Citem+The+individual+entries+are+indicated+with+a+black+dot%2C+a+so-called+bullet%0A+++++%5Citem+The+text+in+the+entries+may+be+of+any+length%0A+++++%5Cbegin%7Bdescription%7D%0A+++++%5Citem%5BNote%3A%5D+I+would+like+to+describe+something+here%0A+++++%5Citem%5BCaveat%21%5D+And+give+a+warning+here%0A+++++%5Cend%7Bdescription%7D%0A+++%5Cend%7Bitemize%7D%0A+++%5Citem+The+numbers+starts+at+1+with+each+use+of+the+%5Ctexttt%7Benumerate%7D+environment%0A%5Cend%7Benumerate%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="List3bOLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/22/List3bOLV2.png" decoding="async" width="600" height="199" />
+</p>
+<h3><span class="mw-headline" id="Nested_lists:_label_style">Nested lists: label style</span></h3>
+<p>The label style of nested list entries changes according to its depth in the list. For nested <code>itemize</code> lists the bullet type changes; for <code>enumerate</code> lists the number format changes with increasing depth of entry. Both are limited to a depth of 4 levels.
+</p>
+<h4><span class="mw-headline" id="Nested_enumerate_lists:_number_format">Nested <code>enumerate</code> lists: number format</span></h4>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+   <span class="k">\item</span> First level item
+   <span class="k">\item</span> First level item
+   <span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+     <span class="k">\item</span> Second level item
+     <span class="k">\item</span> Second level item
+     <span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+       <span class="k">\item</span> Third level item
+       <span class="k">\item</span> Third level item
+       <span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+         <span class="k">\item</span> Fourth level item
+         <span class="k">\item</span> Fourth level item
+       <span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+     <span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+   <span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+ <span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Basic+nested+ordered+list+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Benumerate%7D%0A+++%5Citem+First+level+item%0A+++%5Citem+First+level+item%0A+++%5Cbegin%7Benumerate%7D%0A+++++%5Citem+Second+level+item%0A+++++%5Citem+Second+level+item%0A+++++%5Cbegin%7Benumerate%7D%0A+++++++%5Citem+Third+level+item%0A+++++++%5Citem+Third+level+item%0A+++++++%5Cbegin%7Benumerate%7D%0A+++++++++%5Citem+Fourth+level+item%0A+++++++++%5Citem+Fourth+level+item%0A+++++++%5Cend%7Benumerate%7D%0A+++++%5Cend%7Benumerate%7D%0A+++%5Cend%7Benumerate%7D%0A+%5Cend%7Benumerate%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="List4OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/7/73/List4OLV2.png" decoding="async" width="300" height="248" />
+</p>
+<h4><span class="mw-headline" id="Nested_itemize_lists:_bullet_style">Nested <code>itemize</code> lists: bullet style</span></h4>
+<p>The bullet style changes depending on the depth of the nested lists:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+   <span class="k">\item</span> First level item
+   <span class="k">\item</span> First level item
+   <span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+     <span class="k">\item</span> Second level item
+     <span class="k">\item</span> Second level item
+     <span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+       <span class="k">\item</span> Third level item
+       <span class="k">\item</span> Third level item
+       <span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+         <span class="k">\item</span> Fourth level item
+         <span class="k">\item</span> Fourth level item
+       <span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+     <span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+   <span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+ <span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Basic+nested+ordered+list+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bitemize%7D%0A+++%5Citem+First+level+item%0A+++%5Citem+First+level+item%0A+++%5Cbegin%7Bitemize%7D%0A+++++%5Citem+Second+level+item%0A+++++%5Citem+Second+level+item%0A+++++%5Cbegin%7Bitemize%7D%0A+++++++%5Citem+Third+level+item%0A+++++++%5Citem+Third+level+item%0A+++++++%5Cbegin%7Bitemize%7D%0A+++++++++%5Citem+Fourth+level+item%0A+++++++++%5Citem+Fourth+level+item%0A+++++++%5Cend%7Bitemize%7D%0A+++++%5Cend%7Bitemize%7D%0A+++%5Cend%7Bitemize%7D%0A+%5Cend%7Bitemize%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="List5OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/48/List5OLV2.png" decoding="async" width="300" height="253" />
+</p>
+<h2><span class="mw-headline" id="Customizing_lists">Customizing lists</span></h2>
+<p>LaTeX’s lists are <em>highly</em> configurable, providing plenty of scope for the creation of many different types of customized list. You can either make direct modifications to LaTeX’s standard list types or, <em>preferably</em>, use the highly versatile <a rel="nofollow" class="external text" href="https://ctan.org/pkg/enumitem">enumitem package</a> to do it for you. 
+</p><p>CTAN hosts a number of <a rel="nofollow" class="external text" href="https://ctan.org/topic/list">list-related packages</a> which may be worth investigating if you have particular customization requirements. In addition, tex.stackexchange provides a wealth of <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/questions/tagged/lists">list-related questions</a> with answers that provide useful insights and great examples!
+</p><p>We’ll start with some examples which modify list labels then move on to customization of list layouts.
+</p>
+<h3><span class="mw-headline" id="Customizing_lists:_changing_labels">Customizing lists: changing labels</span></h3>
+<p>Firstly, we show how to change list labelling without using the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/enumitem">enumitem package</a>. 
+</p>
+<h4><span class="mw-headline" id="Standard_label-generation_commands">Standard label-generation commands</span></h4>
+<p>Custom lists can be produced by using the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/enumitem">enumitem</a> package or direct modification of the standard lists. Here, we’ll give a summary of some standard LaTeX commands, counter variables and list parameters that you may need to be aware of.
+</p><p>The following table shows the LaTeX commands used for label-generation at each level of the <code>itemize</code> and <code>enumerate</code> list environments:
+</p><p class="mw-empty-elt">
+</p><div>
+   <table>
+        <colgroup>
+            <col span="1" style="width:20%"></col>
+            <col span="1" style="width:40%"></col>
+            <col span="1" style="width:40%"></col>
+        </colgroup>
+      <tbody>
+            <tr>
+                <td><strong>Level</strong></td>
+                <td><strong><code>enumerate</code></strong> label commands</td>
+                <td><strong><code>itemize</code></strong> label commands</td>
+            </tr>
+            <tr>
+                 <td>Level 1</td>
+                 <td><code>\labelenumi</code></td>
+                 <td><code>\labelitemi</code></td>
+            </tr>
+            <tr>
+                 <td>Level 2</td>
+                 <td><code>\labelenumii</code></td>
+                 <td><code>\labelitemii</code></td>
+            </tr>
+            <tr>
+                 <td>Level 3</td>
+                 <td><code>\labelenumiii</code></td>
+                 <td><code>\labelitemiii</code></td>
+            </tr>
+            <tr>
+                 <td>Level 4</td>
+                 <td><code>\labelenumiv</code></td>
+                 <td><code>\labelitemiv</code></td>
+            </tr>
+       </tbody>
+    </table>
+</div> 
+
+<p class="mw-empty-elt"></p>
+<h4><span class="mw-headline" id="Counter_variables_for_enumerate">Counter variables for enumerate</span></h4>
+<p>The <code>enumerate</code> list environment also uses four <em>counter</em> variables which keep track of the current label value for each level:
+</p><p class="mw-empty-elt">
+</p><div>
+   <table>
+      <tbody>
+            <tr>
+                <td><strong>Level</strong></td>
+                <td><strong><code>enumerate</code></strong> counter variable</td>
+            </tr>
+            <tr>
+                 <td>Level 1</td>
+                 <td><code>enumi</code></td>
+            </tr>
+            <tr>
+                 <td>Level 2</td>
+                 <td><code>enumii</code></td>
+            </tr>
+            <tr>
+                 <td>Level 3</td>
+                 <td><code>enumiii</code></td>
+            </tr>
+            <tr>
+                 <td>Level 4</td>
+                 <td><code>enumiv</code></td>
+            </tr>
+       </tbody>
+    </table>
+</div> 
+
+<p class="mw-empty-elt"></p>
+<h4><span class="mw-headline" id="Examples:_customizing_labels_of_enumerate_lists">Examples: customizing labels of <code>enumerate</code> lists</span></h4>
+<p>You can configure LaTeX’s standard labelling by using <code>\renewcommand</code> to redefine the label-generating commands and, for the <code>enumerate</code> environment, you can also use the appropriate counter variable. 
+</p><p>Here are some examples which do this without using the <code>enumitem</code> package.
+</p>
+<h5><span class="mw-headline" id="Practical_example">Practical example</span></h5>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\labelenumii</span><span class="nb">}{</span><span class="k">\arabic</span><span class="nb">{</span>enumi<span class="nb">}</span>.<span class="k">\arabic</span><span class="nb">{</span>enumii<span class="nb">}}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\labelenumiii</span><span class="nb">}{</span><span class="k">\arabic</span><span class="nb">{</span>enumi<span class="nb">}</span>.<span class="k">\arabic</span><span class="nb">{</span>enumii<span class="nb">}</span>.<span class="k">\arabic</span><span class="nb">{</span>enumiii<span class="nb">}}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\labelenumiv</span><span class="nb">}{</span><span class="k">\arabic</span><span class="nb">{</span>enumi<span class="nb">}</span>.<span class="k">\arabic</span><span class="nb">{</span>enumii<span class="nb">}</span>.<span class="k">\arabic</span><span class="nb">{</span>enumiii<span class="nb">}</span>.<span class="k">\arabic</span><span class="nb">{</span>enumiv<span class="nb">}}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+<span class="k">\item</span> One
+<span class="k">\item</span> Two
+<span class="k">\item</span> Three
+<span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+    <span class="k">\item</span> Three point one
+    <span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+    <span class="k">\item</span> Three point one, point one
+        <span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+        <span class="k">\item</span> Three point one, point one, point one
+        <span class="k">\item</span> Three point one, point one, point two
+        <span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+    <span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+<span class="k">\item</span> Four
+<span class="k">\item</span> Five
+<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Configuring+list+layout&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Crenewcommand%7B%5Clabelenumii%7D%7B%5Carabic%7Benumi%7D.%5Carabic%7Benumii%7D%7D%0A%5Crenewcommand%7B%5Clabelenumiii%7D%7B%5Carabic%7Benumi%7D.%5Carabic%7Benumii%7D.%5Carabic%7Benumiii%7D%7D%0A%5Crenewcommand%7B%5Clabelenumiv%7D%7B%5Carabic%7Benumi%7D.%5Carabic%7Benumii%7D.%5Carabic%7Benumiii%7D.%5Carabic%7Benumiv%7D%7D%0A%0A%5Cbegin%7Benumerate%7D%0A%5Citem+One%0A%5Citem+Two%0A%5Citem+Three%0A%5Cbegin%7Benumerate%7D%0A++++%5Citem+Three+point+one%0A++++%5Cbegin%7Benumerate%7D%0A++++%5Citem+Three+point+one%2C+point+one%0A++++++++%5Cbegin%7Benumerate%7D%0A++++++++%5Citem+Three+point+one%2C+point+one%2C+point+one%0A++++++++%5Citem+Three+point+one%2C+point+one%2C+point+two%0A++++++++%5Cend%7Benumerate%7D%0A++++%5Cend%7Benumerate%7D%0A%5Cend%7Benumerate%7D%0A%5Citem+Four%0A%5Citem+Five%0A%5Cend%7Benumerate%7D%0A%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="List9OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c9/List9OLV2.png" decoding="async" width="400" height="257" />
+</p>
+<h5><span class="mw-headline" id="Printing_counter_variables">Printing counter variables</span></h5>
+<p>In the previous example, the command <code>\arabic</code> was used to typeset the current value of various label <em>counter variables</em>. Note that “Arabic numerals”, and use of the command <code>\arabic</code>, refers to the digits 0 to 9: see this <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Arabic_numerals">Arabic numerals article on Wikipedia</a> for further background.
+</p><p>In general, a <em>counter variable</em> can be printed in various formats by using one of the following 5 commands:
+</p>
+<ul><li><code>\arabic{<em>counter variable</em>}</code></li>
+<li><code>\roman{<em>counter variable</em>}</code></li>
+<li><code>\Roman{<em>counter variable</em>}</code></li>
+<li><code>\Alph{<em>counter variable</em>}</code></li>
+<li><code>\alph{<em>counter variable</em>}</code></li></ul>
+<p>For example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>verbatim<span class="nb">}</span>
+<span class="k">\newcounter</span><span class="nb">{</span>foo<span class="nb">}</span>
+<span class="k">\setcounter</span><span class="nb">{</span>foo<span class="nb">}{</span>5<span class="nb">}</span>    
+<span class="k">\end</span><span class="nb">{</span>verbatim<span class="nb">}</span>
+<span class="k">\newcounter</span><span class="nb">{</span>foo<span class="nb">}</span>
+<span class="k">\setcounter</span><span class="nb">{</span>foo<span class="nb">}{</span>5<span class="nb">}</span> 
+
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\arabic</span><span class="nb">{</span>foo<span class="nb">}</span>| produces <span class="k">\arabic</span><span class="nb">{</span>foo<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\roman</span><span class="nb">{</span>foo<span class="nb">}</span>| produces <span class="k">\roman</span><span class="nb">{</span>foo<span class="nb">}</span> 
+<span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\Roman</span><span class="nb">{</span>foo<span class="nb">}</span>| produces <span class="k">\Roman</span><span class="nb">{</span>foo<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\Alph</span><span class="nb">{</span>foo<span class="nb">}</span>| produces <span class="k">\Alph</span><span class="nb">{</span>foo<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\alph</span><span class="nb">{</span>foo<span class="nb">}</span>| produces <span class="k">\alph</span><span class="nb">{</span>foo<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Configuring+list+layout&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bverbatim%7D%0A%5Cnewcounter%7Bfoo%7D%0A%5Csetcounter%7Bfoo%7D%7B5%7D++++%0A%5Cend%7Bverbatim%7D%0A%5Cnewcounter%7Bfoo%7D%0A%5Csetcounter%7Bfoo%7D%7B5%7D+%0A%0A%5Cbegin%7Bitemize%7D%0A%5Citem+%5Cverb%7C%5Carabic%7Bfoo%7D%7C+produces+%5Carabic%7Bfoo%7D%0A%5Citem+%5Cverb%7C%5Croman%7Bfoo%7D%7C+produces+%5Croman%7Bfoo%7D+%0A%5Citem+%5Cverb%7C%5CRoman%7Bfoo%7D%7C+produces+%5CRoman%7Bfoo%7D%0A%5Citem+%5Cverb%7C%5CAlph%7Bfoo%7D%7C+produces+%5CAlph%7Bfoo%7D%0A%5Citem+%5Cverb%7C%5Calph%7Bfoo%7D%7C+produces+%5Calph%7Bfoo%7D%0A%5Cend%7Bitemize%7D%0A%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="List8OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/0/0a/List8OLV2.png" decoding="async" width="300" height="263" />
+</p>
+<h5><span id="Non-practical_.28fun.29_example"></span><span class="mw-headline" id="Non-practical_(fun)_example">Non-practical (fun) example</span></h5>
+<p>This example typesets emoji using an OpenType colour font so it will <em>only work in LuaLaTeX</em>. See the Overleaf article <a href="Articles/An_overview_of_technologies_supporting_the_use_of_colour_emoji_fonts_in_LaTeX.html" title="Articles/An overview of technologies supporting the use of colour emoji fonts in LaTeX">An overview of technologies supporting the use of colour emoji fonts in LaTeX</a> for more information on typesetting emoji.
+</p><p>Although this a just a fun example, using LuaLaTeX, it demonstrates customizing all four label-generation commands, and using the label-counter variables, to create some unusual labelling... Click the “Open in Overleaf” link to see the full code.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\labelenumi</span><span class="nb">}{</span><span class="k">\duck</span><span class="nb">{</span>enumi<span class="nb">}}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\labelenumii</span><span class="nb">}{</span><span class="k">\duck</span><span class="nb">{</span>enumi<span class="nb">}</span>.<span class="k">\duckegg</span><span class="nb">{</span>enumii<span class="nb">}}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\labelenumiii</span><span class="nb">}{</span><span class="k">\duck</span><span class="nb">{</span>enumi<span class="nb">}</span>.<span class="k">\duckegg</span><span class="nb">{</span>enumii<span class="nb">}</span>.<span class="k">\duckegg</span><span class="nb">{</span>enumiii<span class="nb">}}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\labelenumiv</span><span class="nb">}{</span><span class="k">\duck</span><span class="nb">{</span>enumi<span class="nb">}</span>.<span class="k">\duckegg</span><span class="nb">{</span>enumii<span class="nb">}</span>.<span class="k">\duckegg</span><span class="nb">{</span>enumiii<span class="nb">}</span>.<span class="k">\duckchick</span><span class="nb">{</span>enumiv<span class="nb">}}</span> 
+
+<span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+<span class="k">\item</span> A duck
+<span class="k">\item</span> More ducks
+<span class="k">\item</span> A flurry of ducks
+<span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+    <span class="k">\item</span> Ducks and eggs
+    <span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+    <span class="k">\item</span> Do I see... 
+    <span class="k">\item</span> Ducks and pre-ducks 
+       <span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+       <span class="k">\item</span> Awww...
+       <span class="k">\item</span> So cute!
+       <span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+    <span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+<span class="k">\item</span> Back to ducks
+<span class="k">\item</span> Again
+<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex
+&amp;snip_name=Fun+example+of+configuring+a+list
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bfontspec%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewfontfamily%5Cemojifont%5BRenderer%3DHarfbuzz%2CSizeFeatures%3D%7BSize%3D6%7D%5D%7BNotoColorEmoji.ttf%7D%0A%0A%5Cnewcount%5Cduckcount%0A%5Cnewcount%5Ceggcount%0A%5Cnewcount%5Cchickcount%0A%0A%5Cdef%5Cduck%231%7B%25%0A%5Cduckcount%3D%5Cvalue%7B%231%7D%25%0A%5Cloop%7B%5Cemojifont%5CUchar%221F986%7D%25%0A%5Cadvance%5Cduckcount+by+-1%0A%5Cunless%5Cifnum%5Cduckcount%3D0+%0A%5Crepeat%7D%0A%0A%5Cdef%5Cduckegg%231%7B%25%0A%5Ceggcount%3D%5Cvalue%7B%231%7D%25%0A%5Cloop%7B%5Cemojifont%5CUchar%221F95A%7D%25%0A%5Cadvance%5Ceggcount+by+-1%0A%5Cunless%5Cifnum%5Ceggcount%3D0+%0A%5Crepeat%7D%0A%0A%5Cdef%5Cduckchick%231%7B%25%0A%5Cchickcount%3D%5Cvalue%7B%231%7D%25%0A%5Cloop%7B%5Cemojifont%5CUchar%221F424%7D%25%0A%5Cadvance%5Cchickcount+by+-1%0A%5Cunless%5Cifnum%5Cchickcount%3D0+%0A%5Crepeat%7D%0A%5Crenewcommand%7B%5Clabelenumi%7D%7B%5Cduck%7Benumi%7D%7D%0A%5Crenewcommand%7B%5Clabelenumii%7D%7B%5Cduck%7Benumi%7D.%5Cduckegg%7Benumii%7D%7D%0A%5Crenewcommand%7B%5Clabelenumiii%7D%7B%5Cduck%7Benumi%7D.%5Cduckegg%7Benumii%7D.%5Cduckegg%7Benumiii%7D%7D%0A%5Crenewcommand%7B%5Clabelenumiv%7D%7B%5Cduck%7Benumi%7D.%5Cduckegg%7Benumii%7D.%5Cduckegg%7Benumiii%7D.%5Cduckchick%7Benumiv%7D%7D+%0A%0A%5Cbegin%7Benumerate%7D%0A%5Citem+A+duck%0A%5Citem+More+ducks%0A%5Citem+A+flurry+of+ducks%0A%5Cbegin%7Benumerate%7D%0A++++%5Citem+Ducks+and+eggs%0A++++%5Cbegin%7Benumerate%7D%0A++++%5Citem+Do+I+see...+%0A++++%5Citem+Ducks+and+pre-ducks+%0A+++++++%5Cbegin%7Benumerate%7D%0A+++++++%5Citem+Awww...%0A+++++++%5Citem+So+cute%21%0A+++++++%5Cend%7Benumerate%7D%0A++++%5Cend%7Benumerate%7D%0A%5Cend%7Benumerate%7D%0A%5Citem+Back+to+ducks%0A%5Citem+Again%0A%5Cend%7Benumerate%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> To see the <strong><em>full code</em></strong>, open this LuaLaTeX example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output 
+</p><p><img alt="Ducklist.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/27/Ducklist.png" decoding="async" width="400" height="383" />
+</p>
+<h3><span class="mw-headline" id="Customizing_lists:_changing_the_layout">Customizing lists: changing the layout</span></h3>
+<p>In addition to customizing labels, it is possible to modify list spacing and layout, but first we need to know the various LaTeX parameters which determine typesetting and layout of lists. 
+</p>
+<h4><span class="mw-headline" id="LaTeX_list_parameters">LaTeX list parameters</span></h4>
+<p>You can use the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/layouts?lang=en">layouts package</a> to generate a diagram which displays the LaTeX list parameters:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>layouts<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
+<span class="k">\listdiagram</span>
+<span class="k">\caption</span><span class="nb">{</span>The <span class="k">\LaTeX</span><span class="nb">{}</span> parameters which define typesetting and layout of lists.<span class="nb">}</span> 
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Using+the+layout+package+to+view+list+structures&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Blayouts%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bfigure%7D%0A%5Clistdiagram%0A%5Ccaption%7BThe+%5CLaTeX%7B%7D+parameters+which+define+typesetting+and+layout+of+lists.%7D+%0A%5Cend%7Bfigure%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p>
+<p>
+
+<img src="https://images.ctfassets.net/nrgyaltdicpt/67uSeKS7soJ7j4yHs0IpDQ/319c15cf752ff6958ef6f1d509bf288e/LaTeX_list_parameters-plain.svg" width="75%" />
+
+</p>
+<p>The meaning of these parameters is described in <a rel="nofollow" class="external text" href="https://tug.org/texinfohtml/latex2e.html#list">the list section of the LaTeX2e unofficial reference manual</a> so we won’t reproduce it here.
+</p>
+<h4><span class="mw-headline" id="Creating_a_custom_list_using_the_list_environment">Creating a custom list using the <code>list</code> environment</span></h4>
+<p>LaTeX provides the generic <code>list</code> environment which provides a framework for creating your own list type(s). Using the information contained in the diagram above, the following example is a slightly modified version of one contained in the  <a rel="nofollow" class="external text" href="https://tug.org/texinfohtml/latex2e.html#list">list section</a> of the <a rel="nofollow" class="external text" href="https://tug.org/texinfohtml/latex2e.html">LaTeX2e unofficial reference manual</a>
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newcounter</span><span class="nb">{</span>boxlblcounter<span class="nb">}</span>  
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\makeboxlabel</span><span class="nb">}</span>[1]<span class="nb">{</span><span class="k">\fbox</span><span class="nb">{</span>#1.<span class="nb">}</span><span class="k">\hfill</span><span class="nb">}</span><span class="c">% \hfill fills the label box</span>
+<span class="k">\newenvironment</span><span class="nb">{</span>boxlabel<span class="nb">}</span>
+  <span class="nb">{</span><span class="k">\begin</span><span class="nb">{</span>list<span class="nb">}</span>
+    <span class="nb">{</span><span class="k">\arabic</span><span class="nb">{</span>boxlblcounter<span class="nb">}}</span>
+    <span class="nb">{</span><span class="k">\usecounter</span><span class="nb">{</span>boxlblcounter<span class="nb">}</span>
+     <span class="k">\setlength</span><span class="nb">{</span><span class="k">\labelwidth</span><span class="nb">}{</span>3em<span class="nb">}</span>
+     <span class="k">\setlength</span><span class="nb">{</span><span class="k">\labelsep</span><span class="nb">}{</span>0em<span class="nb">}</span>
+     <span class="k">\setlength</span><span class="nb">{</span><span class="k">\itemsep</span><span class="nb">}{</span>2pt<span class="nb">}</span>
+     <span class="k">\setlength</span><span class="nb">{</span><span class="k">\leftmargin</span><span class="nb">}{</span>1.5cm<span class="nb">}</span>
+     <span class="k">\setlength</span><span class="nb">{</span><span class="k">\rightmargin</span><span class="nb">}{</span>2cm<span class="nb">}</span>
+     <span class="k">\setlength</span><span class="nb">{</span><span class="k">\itemindent</span><span class="nb">}{</span>0em<span class="nb">}</span> 
+     <span class="k">\let\makelabel</span>=<span class="k">\makeboxlabel</span>
+    <span class="nb">}</span>
+  <span class="nb">}</span>
+<span class="nb">{</span><span class="k">\end</span><span class="nb">{</span>list<span class="nb">}}</span>
+
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\randomtext</span><span class="nb">}{</span>Hello, here is some text without a meaning. Hello, here is some text without a meaning. Hello, here is some text without a meaning.<span class="nb">}</span>
+
+<span class="k">\noindent\randomtext</span>
+
+<span class="k">\begin</span><span class="nb">{</span>boxlabel<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\randomtext</span>
+<span class="k">\item</span> <span class="k">\randomtext</span>
+<span class="k">\item</span> <span class="k">\randomtext</span>
+<span class="k">\end</span><span class="nb">{</span>boxlabel<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Using+the+list+environment
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewcounter%7Bboxlblcounter%7D++%0A%5Cnewcommand%7B%5Cmakeboxlabel%7D%5B1%5D%7B%5Cfbox%7B%231.%7D%5Chfill%7D%25+%5Chfill+fills+the+label+box%0A%5Cnewenvironment%7Bboxlabel%7D%0A++%7B%5Cbegin%7Blist%7D%0A++++%7B%5Carabic%7Bboxlblcounter%7D%7D%0A++++%7B%5Cusecounter%7Bboxlblcounter%7D%0A+++++%5Csetlength%7B%5Clabelwidth%7D%7B3em%7D%0A+++++%5Csetlength%7B%5Clabelsep%7D%7B0em%7D%0A+++++%5Csetlength%7B%5Citemsep%7D%7B2pt%7D%0A+++++%5Csetlength%7B%5Cleftmargin%7D%7B1.5cm%7D%0A+++++%5Csetlength%7B%5Crightmargin%7D%7B2cm%7D%0A+++++%5Csetlength%7B%5Citemindent%7D%7B0em%7D+%0A+++++%5Clet%5Cmakelabel%3D%5Cmakeboxlabel%0A++++%7D%0A++%7D%0A%7B%5Cend%7Blist%7D%7D%0A%0A%5Cnewcommand%7B%5Crandomtext%7D%7BHello%2C+here+is+some+text+without+a+meaning.+Hello%2C+here+is+some+text+without+a+meaning.+Hello%2C+here+is+some+text+without+a+meaning.%7D%0A%0A%5Cnoindent%5Crandomtext%0A%0A%5Cbegin%7Bboxlabel%7D%0A%5Citem+%5Crandomtext%0A%5Citem+%5Crandomtext%0A%5Citem+%5Crandomtext%0A%5Cend%7Bboxlabel%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Listenvironmemt2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/5f/Listenvironmemt2.png" decoding="async" width="600" height="265" />
+</p>
+<h3><span class="mw-headline" id="Using_the_enumitem_package_to_modify_and_create_lists">Using the <code>enumitem</code> package to modify and create lists</span></h3>
+<p>The <a rel="nofollow" class="external text" href="https://ctan.org/pkg/enumitem?lang=en"><code>enumitem</code> package</a> is the recommended method for modifying standard LaTeX lists or creating your own custom list formats. <code>enumitem</code> provides a <em>wealth</em> of features so we can’t cover all of them but we can provide a few basic examples to help get you get started. Anyone wishing to explore this versatile package in more depth is <em>strongly</em> encouraged to browse tex.stackexchange for <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/questions/tagged/enumitem">questions, answers (and examples) relating to the <code>enumitem</code> package</a>, and to read the <a rel="nofollow" class="external text" href="http://mirrors.ctan.org/macros/latex/contrib/enumitem/enumitem.pdf">package documentation</a>.
+</p>
+<h4><span class="mw-headline" id="enumitem_package_option_shortlabels"><code>enumitem</code> package option <code>shortlabels</code></span></h4>
+<p>The <code>enumitem</code> provides an optional configuration parameter called <code>shortlabels</code> which you use via
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[shortlabels]</span><span class="nb">{</span>enumitem<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>The <code>shortlabels</code> option mimics the behaviour of the <code>enumerate</code> package, providing a concise method for defining the numbering scheme of enumerate environments. See the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/enumerate?lang=en"><code>enumerate</code> package documentation</a> for further information.
+</p>
+<h4><span class="mw-headline" id="Modifying_a_standard_list">Modifying a standard list</span></h4>
+<p>With reference to the <a href="#LaTeX_list_parameters">LaTeX parameters diagram</a> we can use <code>enumitem</code> to easily customize a standard LaTeX list, such as <code>itemize</code>:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>enumitem<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\randomtext</span><span class="nb">}{</span>Hello, here is some text without a meaning. Hello, here is some text without a meaning.<span class="nb">}</span>
+
+<span class="k">\section*</span><span class="nb">{</span>Using LaTeX's default settings for <span class="k">\texttt</span><span class="nb">{</span>itemize<span class="nb">}}</span>
+
+<span class="k">\randomtext</span>
+
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\randomtext</span>
+   <span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+      <span class="k">\item</span> <span class="k">\randomtext</span>
+        <span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+        <span class="k">\item</span> <span class="k">\randomtext</span>
+        <span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+   <span class="k">\item</span> <span class="k">\randomtext</span>
+   <span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\randomtext</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+<span class="k">\section*</span><span class="nb">{</span>Using a custom <span class="k">\texttt</span><span class="nb">{</span>itemize<span class="nb">}</span> via <span class="k">\texttt</span><span class="nb">{</span>enumitem<span class="nb">}}</span>
+
+<span class="k">\subsection*</span><span class="nb">{</span>Note the effect of left and right margin settings<span class="nb">}</span>
+
+<span class="k">\randomtext</span>
+
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>[leftmargin=30pt, rightmargin=2cm]
+<span class="k">\item</span> <span class="k">\randomtext</span>
+   <span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+      <span class="k">\item</span> <span class="k">\randomtext</span>
+        <span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+        <span class="k">\item</span> <span class="k">\randomtext</span>
+        <span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+   <span class="k">\item</span> <span class="k">\randomtext</span>
+   <span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\randomtext</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Modifying+a+LaTeX+list+with+enumitem
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Benumitem%7D%0A%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cnewcommand%7B%5Crandomtext%7D%7BHello%2C+here+is+some+text+without+a+meaning.+Hello%2C+here+is+some+text+without+a+meaning.%7D%0A%0A%5Csection%2A%7BUsing+LaTeX%27s+default+settings+for+%5Ctexttt%7Bitemize%7D%7D%0A%0A%5Crandomtext%0A%0A%5Cbegin%7Bitemize%7D%0A%5Citem+%5Crandomtext%0A+++%5Cbegin%7Bitemize%7D%0A++++++%5Citem+%5Crandomtext%0A++++++++%5Cbegin%7Bitemize%7D%0A++++++++%5Citem+%5Crandomtext%0A++++++++%5Cend%7Bitemize%7D%0A+++%5Citem+%5Crandomtext%0A+++%5Cend%7Bitemize%7D%0A%5Citem+%5Crandomtext%0A%5Cend%7Bitemize%7D%0A%0A%5Csection%2A%7BUsing+a+custom+%5Ctexttt%7Bitemize%7D+via+%5Ctexttt%7Benumitem%7D%7D%0A%0A%5Csubsection%2A%7BNote+the+effect+of+left+and+right+margin+settings%7D%0A%0A%5Crandomtext%0A%0A%5Cbegin%7Bitemize%7D%5Bleftmargin%3D30pt%2C+rightmargin%3D2cm%5D%0A%5Citem+%5Crandomtext%0A+++%5Cbegin%7Bitemize%7D%0A++++++%5Citem+%5Crandomtext%0A++++++++%5Cbegin%7Bitemize%7D%0A++++++++%5Citem+%5Crandomtext%0A++++++++%5Cend%7Bitemize%7D%0A+++%5Citem+%5Crandomtext%0A+++%5Cend%7Bitemize%7D%0A%5Citem+%5Crandomtext%0A%5Cend%7Bitemize%7D%0A%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>enumitem</code> example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Tweakitemize2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/5f/Tweakitemize2.png" decoding="async" width="600" height="751" />
+</p>
+<h4><span class="mw-headline" id="Creating_a_new_list_with_enumitem">Creating a new list with <code>enumitem</code></span></h4>
+<p>To create a new list type with <code>enumitem</code> you use the <code>\newlist</code> command which requires 3 arguments:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newlist</span><span class="nb">{</span>name<span class="nb">}{</span>list-type<span class="nb">}{</span>max-depth<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<ul>
+<li><strong><code>name</code></strong>: the name of your list, to be used as an environment:
+<pre>\begin{name}
+...
+\end{name}
+</pre>
+</li>
+<li><strong><code>list-type</code></strong> this has to be one of the standard LaTeX list types:</li>
+<ul>
+<li><code>enumerate</code></li>
+<li><code>itemize</code></li>
+<li><code>description</code></li>
+</ul>
+<li><span id="maxdepth"></span><strong><code>max-depth</code></strong>: the maximum depth to which this list will be nested. <strong>NOTE</strong> for lists which exceed LaTeX’s default nesting limit of 4, you must also issue the command <code>\setlistdepth{<em>integer</em>}</code> where <code><em>integer</em></code> is the maximum nesting depth you intend to use. See the <a href="#Lists_for_lawyers:_nesting_lists_to_an_arbitrary_depth">Lists for lawyers</a> example for a demonstration of that.</li>
+</ul>
+<p>After you have created the new list you can configure it with the <code>\setlist</code> command.
+</p>
+<h5><span id="Using_.5Csetlist_to_configure_a_custom_list_created_with_enumitem"></span><span class="mw-headline" id="Using_\setlist_to_configure_a_custom_list_created_with_enumitem">Using <code>\setlist</code> to configure a custom list created with <code>enumitem</code></span></h5>
+<p>In this example we’ll create a new list called <code>myitems</code> which is based on <code>enumerate</code>. We’ll set <a href="#maxdepth"><code><strong>max-depth</strong></code></a> to 3: 
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newlist</span><span class="nb">{</span>myitems<span class="nb">}{</span>enumerate<span class="nb">}{</span>3<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>A minimum requirement is using the <code>\setlist</code> command to define labels for this custom list. One way to do that, for enumerate-based lists, is to use the counter variables created by the <code>enumitem</code> package—those counter variables use the <code><strong>name</strong></code> of your list: <code>myitems</code> in our example.
+</p><p>Here is how we use the corresponding counter variables within our label configuration:
+</p>
+<ul><li><code>myitems<strong>i</strong></code> for the level 1 entries</li>
+<li><code>myitems<strong>ii</strong></code> for the level 2 entries</li>
+<li><code>myitems<strong>iii</strong></code> for the level 3 entries</li></ul>
+<p>If we had more than 3 levels, the corresponding counter variables would be called <code>myitems<strong>iv</strong></code> (level 4), <code>myitems<strong>v</strong></code> (level 5) and so forth, continuing the use of lower-case Roman numerals.
+</p><p>In addition to the labels, we’ll also set some values for <code>leftmargin</code> and <code>rightmargin</code> (see the <a href="#LaTeX_list_parameters">LaTeX parameters diagram</a>).
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>enumitem<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\randomtext</span><span class="nb">}{</span>Hello, here is some text without a meaning. Hello, here is some text without a meaning.<span class="nb">}</span>
+
+<span class="k">\newcommand</span><span class="nb">{</span><span class="k">\shortrandomtext</span><span class="nb">}{</span>Hello, here is some text.<span class="nb">}</span>
+<span class="c">% Create a custom list based on enumerate</span>
+<span class="c">% It is called "myitems"</span>
+<span class="c">% We'll create a list that is 3 levels deep</span>
+<span class="k">\newlist</span><span class="nb">{</span>myitems<span class="nb">}{</span>enumerate<span class="nb">}{</span>3<span class="nb">}</span>
+
+<span class="c">% Configure the behaviour of level 1 entries</span>
+<span class="c">% NOTE: we use the list counter "myitemsi"</span>
+<span class="k">\setlist</span><span class="na">[myitems, 1]</span>
+<span class="nb">{</span>label=<span class="k">\arabic</span><span class="nb">{</span>myitemsi<span class="nb">}</span>., <span class="c">%1., 2., 3., ...</span>
+leftmargin=<span class="k">\parindent</span>,
+rightmargin=10pt
+<span class="nb">}</span>
+
+<span class="c">% Configure the behaviour of level 2 entries</span>
+<span class="c">% NOTE: we use the list counter "myitemsii"</span>
+<span class="k">\setlist</span><span class="na">[myitems, 2]</span>
+<span class="nb">{</span>label=<span class="k">\arabic</span><span class="nb">{</span>myitemsi<span class="nb">}</span>.<span class="k">\arabic</span><span class="nb">{</span>myitemsii<span class="nb">}</span>, <span class="c">%1.1, 1.2, 1.3...</span>
+leftmargin=15pt,
+rightmargin=15pt<span class="nb">}</span>
+
+<span class="c">% Configure the behaviour of level 3 entries</span>
+<span class="c">% NOTE: we use the list counter "myitemsiii"</span>
+<span class="k">\setlist</span><span class="na">[myitems, 3]</span>
+<span class="c">% Use a label of 1.1:&lt;kern&gt;(a), 1.1:&lt;kern&gt;(b) etc  </span>
+<span class="nb">{</span>label=<span class="k">\arabic</span><span class="nb">{</span>myitemsi<span class="nb">}</span>.<span class="k">\arabic</span><span class="nb">{</span>myitemsii<span class="nb">}</span>:<span class="k">\kern</span>1.5pt(<span class="k">\alph</span><span class="nb">{</span>myitemsiii<span class="nb">}</span>),
+leftmargin=30pt,
+rightmargin=30pt<span class="nb">}</span>
+
+<span class="k">\randomtext</span>
+<span class="k">\begin</span><span class="nb">{</span>myitems<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\randomtext</span>
+    <span class="k">\begin</span><span class="nb">{</span>myitems<span class="nb">}</span>
+    <span class="k">\item</span> <span class="k">\randomtext</span>
+        <span class="k">\begin</span><span class="nb">{</span>myitems<span class="nb">}</span>
+        <span class="k">\item</span> <span class="k">\randomtext</span>
+        <span class="k">\item</span> <span class="k">\randomtext</span>
+        <span class="k">\end</span><span class="nb">{</span>myitems<span class="nb">}</span>
+    <span class="k">\item</span> <span class="k">\shortrandomtext</span>
+    <span class="k">\item</span> <span class="k">\shortrandomtext</span>
+    <span class="k">\end</span><span class="nb">{</span>myitems<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\randomtext</span>
+<span class="k">\end</span><span class="nb">{</span>myitems<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Create+a+custom+list+with+enumitem
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Benumitem%7D%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cnewcommand%7B%5Crandomtext%7D%7BHello%2C+here+is+some+text+without+a+meaning.+Hello%2C+here+is+some+text+without+a+meaning.%7D%0A%0A%5Cnewcommand%7B%5Cshortrandomtext%7D%7BHello%2C+here+is+some+text.%7D%0A%25+Create+a+custom+list+based+on+enumerate%0A%25+It+is+called+%22myitems%22%0A%25+We%27ll+create+a+list+that+is+3+levels+deep%0A%5Cnewlist%7Bmyitems%7D%7Benumerate%7D%7B3%7D%0A%0A%25+Configure+the+behaviour+of+level+1+entries%0A%25+NOTE%3A+we+use+the+list+counter+%22myitemsi%22%0A%5Csetlist%5Bmyitems%2C+1%5D%0A%7Blabel%3D%5Carabic%7Bmyitemsi%7D.%2C+%251.%2C+2.%2C+3.%2C+...%0Aleftmargin%3D%5Cparindent%2C%0Arightmargin%3D10pt%0A%7D%0A%0A%25+Configure+the+behaviour+of+level+2+entries%0A%25+NOTE%3A+we+use+the+list+counter+%22myitemsii%22%0A%5Csetlist%5Bmyitems%2C+2%5D%0A%7Blabel%3D%5Carabic%7Bmyitemsi%7D.%5Carabic%7Bmyitemsii%7D%2C+%251.1%2C+1.2%2C+1.3...%0Aleftmargin%3D15pt%2C%0Arightmargin%3D15pt%7D%0A%0A%25+Configure+the+behaviour+of+level+3+entries%0A%25+NOTE%3A+we+use+the+list+counter+%22myitemsiii%22%0A%5Csetlist%5Bmyitems%2C+3%5D%0A%25+Use+a+label+of+1.1%3A%3Ckern%3E%28a%29%2C+1.1%3A%3Ckern%3E%28b%29+etc++%0A%7Blabel%3D%5Carabic%7Bmyitemsi%7D.%5Carabic%7Bmyitemsii%7D%3A%5Ckern1.5pt%28%5Calph%7Bmyitemsiii%7D%29%2C%0Aleftmargin%3D30pt%2C%0Arightmargin%3D30pt%7D%0A%0A%5Crandomtext%0A%5Cbegin%7Bmyitems%7D%0A%5Citem+%5Crandomtext%0A++++%5Cbegin%7Bmyitems%7D%0A++++%5Citem+%5Crandomtext%0A++++++++%5Cbegin%7Bmyitems%7D%0A++++++++%5Citem+%5Crandomtext%0A++++++++%5Citem+%5Crandomtext%0A++++++++%5Cend%7Bmyitems%7D%0A++++%5Citem+%5Cshortrandomtext%0A++++%5Citem+%5Cshortrandomtext%0A++++%5Cend%7Bmyitems%7D%0A%5Citem+%5Crandomtext%0A%5Cend%7Bmyitems%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>enumitem</code> example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="CustomItemizeList.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/f/f3/CustomItemizeList.png" decoding="async" width="800" height="474" />
+</p>
+<h4><span class="mw-headline" id="Lists_for_lawyers:_nesting_lists_to_an_arbitrary_depth">Lists for lawyers: nesting lists to an arbitrary depth</span></h4>
+<p>The <code>enumitem</code> package lets you create lists which can be nested to an arbitrary depth, removing LaTeX’s limit of 4. Anyone preparing contracts with complex (deeply nested) clause structures might benefit from this, although the nested code does look a little intimidating...
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>enumitem<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\newlist</span><span class="nb">{</span>contract<span class="nb">}{</span>enumerate<span class="nb">}{</span>10<span class="nb">}</span>
+<span class="k">\setlist</span><span class="na">[contract]</span><span class="nb">{</span>label*=<span class="k">\arabic*</span>.<span class="nb">}</span>
+<span class="k">\setlistdepth</span><span class="nb">{</span>10<span class="nb">}</span> 
+
+<span class="k">\section*</span><span class="nb">{</span>Custom list nested to 10 levels deep!<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>contract<span class="nb">}</span>
+<span class="k">\item</span> Level 1
+ <span class="k">\begin</span><span class="nb">{</span>contract<span class="nb">}</span>
+ <span class="k">\item</span> Level 2
+   <span class="k">\begin</span><span class="nb">{</span>contract<span class="nb">}</span>
+   <span class="k">\item</span> Level 3
+     <span class="k">\begin</span><span class="nb">{</span>contract<span class="nb">}</span>
+     <span class="k">\item</span> Level 4
+       <span class="k">\begin</span><span class="nb">{</span>contract<span class="nb">}</span>
+       <span class="k">\item</span> Level 5
+        <span class="k">\begin</span><span class="nb">{</span>contract<span class="nb">}</span>
+        <span class="k">\item</span> Level 6
+         <span class="k">\begin</span><span class="nb">{</span>contract<span class="nb">}</span>
+         <span class="k">\item</span> Level 7
+          <span class="k">\begin</span><span class="nb">{</span>contract<span class="nb">}</span>
+          <span class="k">\item</span> Level 8
+           <span class="k">\begin</span><span class="nb">{</span>contract<span class="nb">}</span>
+           <span class="k">\item</span> Level 9
+            <span class="k">\begin</span><span class="nb">{</span>contract<span class="nb">}</span>
+            <span class="k">\item</span> Level 10
+          <span class="k">\end</span><span class="nb">{</span>contract<span class="nb">}</span>
+         <span class="k">\end</span><span class="nb">{</span>contract<span class="nb">}</span>
+        <span class="k">\end</span><span class="nb">{</span>contract<span class="nb">}</span>
+       <span class="k">\end</span><span class="nb">{</span>contract<span class="nb">}</span>
+      <span class="k">\end</span><span class="nb">{</span>contract<span class="nb">}</span>
+     <span class="k">\end</span><span class="nb">{</span>contract<span class="nb">}</span>
+    <span class="k">\end</span><span class="nb">{</span>contract<span class="nb">}</span>
+   <span class="k">\end</span><span class="nb">{</span>contract<span class="nb">}</span>
+  <span class="k">\end</span><span class="nb">{</span>contract<span class="nb">}</span>
+ <span class="k">\end</span><span class="nb">{</span>contract<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Using+the+enumitem+package+to+create+deeply+nested+lists
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Benumitem%7D%0A%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cnewlist%7Bcontract%7D%7Benumerate%7D%7B10%7D%0A%5Csetlist%5Bcontract%5D%7Blabel%2A%3D%5Carabic%2A.%7D%0A%5Csetlistdepth%7B10%7D+%0A%0A%5Csection%2A%7BCustom+list+nested+to+10+levels+deep%21%7D%0A%0A%5Cbegin%7Bcontract%7D%0A%5Citem+Level+1%0A+%5Cbegin%7Bcontract%7D%0A+%5Citem+Level+2%0A+++%5Cbegin%7Bcontract%7D%0A+++%5Citem+Level+3%0A+++++%5Cbegin%7Bcontract%7D%0A+++++%5Citem+Level+4%0A+++++++%5Cbegin%7Bcontract%7D%0A+++++++%5Citem+Level+5%0A++++++++%5Cbegin%7Bcontract%7D%0A++++++++%5Citem+Level+6%0A+++++++++%5Cbegin%7Bcontract%7D%0A+++++++++%5Citem+Level+7%0A++++++++++%5Cbegin%7Bcontract%7D%0A++++++++++%5Citem+Level+8%0A+++++++++++%5Cbegin%7Bcontract%7D%0A+++++++++++%5Citem+Level+9%0A++++++++++++%5Cbegin%7Bcontract%7D%0A++++++++++++%5Citem+Level+10%0A++++++++++%5Cend%7Bcontract%7D%0A+++++++++%5Cend%7Bcontract%7D%0A++++++++%5Cend%7Bcontract%7D%0A+++++++%5Cend%7Bcontract%7D%0A++++++%5Cend%7Bcontract%7D%0A+++++%5Cend%7Bcontract%7D%0A++++%5Cend%7Bcontract%7D%0A+++%5Cend%7Bcontract%7D%0A++%5Cend%7Bcontract%7D%0A+%5Cend%7Bcontract%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>enumitem</code> example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="10levels.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c0/10levels.png" decoding="async" width="600" height="389" />
+</p>
+<h4><span class="mw-headline" id="Custom_bullets_using_the_enumitem_package_and_MetaPost">Custom bullets using the <code>enumitem</code> package and MetaPost</span></h4>
+<p>The following examples only work with LuaLaTeX and are designed to give a suggestion of some possibilities—of course, substitute MetaPost with your preferred drawing application/tool! 
+</p><p>These examples use the <code>luamplib</code> package and also demonstrate expandable commands, such as <code>\the</code> and <code>\directlua</code>,  can be used within the MetaPost code.
+</p>
+<h5><span class="mw-headline" id="Example_1:_auto-sizing_bullet_points">Example 1: auto-sizing bullet points</span></h5>
+<p>This example produces bullet points that reduce in size as the list depth increases. Click on the “Open in Overleaf” link to run the example and view the full code.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="c">% Declare a new itemize-based list via enumitem</span>
+<span class="k">\newlist</span><span class="nb">{</span>myEnumerate<span class="nb">}{</span>itemize<span class="nb">}{</span>6<span class="nb">}</span>
+
+<span class="c">% The nosep option removes all vertical spacing</span>
+<span class="c">% the label=\protect\mpbullet causes all bullets to be </span>
+<span class="c">% drawn by a macro that uses MetaPost code. \protect</span>
+<span class="c">% is required as noted in the enumitem manual </span>
+
+<span class="k">\setlist</span><span class="na">[myEnumerate]</span><span class="nb">{</span>nosep,label=<span class="k">\protect\mpbullet</span><span class="nb">}</span>
+<span class="k">\setlistdepth</span><span class="nb">{</span>6<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>myEnumerate<span class="nb">}</span>
+<span class="k">\item</span> Level 1
+  <span class="k">\begin</span><span class="nb">{</span>myEnumerate<span class="nb">}</span>
+   <span class="k">\item</span> Level 2
+    <span class="k">\begin</span><span class="nb">{</span>myEnumerate<span class="nb">}</span>
+     <span class="k">\item</span> Level 3
+      <span class="k">\begin</span><span class="nb">{</span>myEnumerate<span class="nb">}</span>
+       <span class="k">\item</span> Level 4
+        <span class="k">\begin</span><span class="nb">{</span>myEnumerate<span class="nb">}</span>
+         <span class="k">\item</span> Level 5
+          <span class="k">\begin</span><span class="nb">{</span>myEnumerate<span class="nb">}</span>
+           <span class="k">\item</span> Level 6
+           <span class="k">\end</span><span class="nb">{</span>myEnumerate<span class="nb">}</span>
+        <span class="k">\end</span><span class="nb">{</span>myEnumerate<span class="nb">}</span>
+       <span class="k">\end</span><span class="nb">{</span>myEnumerate<span class="nb">}</span>
+    <span class="k">\end</span><span class="nb">{</span>myEnumerate<span class="nb">}</span>
+   <span class="k">\end</span><span class="nb">{</span>myEnumerate<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>myEnumerate<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex
+&amp;snip_name=Using+MetaPost+with+the+enumitem+package
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bluamplib%7D%0A%5Cusepackage%7Benumitem%7D%0A%5Ceverymplib%7Bbeginfig%280%29%3B%7D%0A%5Ceveryendmplib%7Bendfig%3B%7D%0A%0A%5Cbegin%7Bdocument%7D%0A%0AThis+list+configuration+example+uses+MetaPost+code+that+contains+Lua+code+via+%5Cverb%7C%5Cdirectlua%7C.+Bullets+are+created+by+MetaPost+code%2C+size+is+calculated+from+the+depth+of+the+entry.%0A%0A%25+It+is+convenient+to+use+%5Clet%5Cmpdepth%5C%40listdepth%3A+makes+it+%0A%25+easier+to+use+in+MetaPost+code%0A%0A%5Ccatcode%60%40%3D11%0A%5Clet%5Cmpdepth%5C%40listdepth%0A%5Ccatcode%60%40%3D12%0A%0A%5Cnewcommand%7B%5Cmpbullet%7D%7B%25%0A%5Cbegin%7Bmplibcode%7D%25%0Adraw+%280%2C0%29..%280%2C-%5Cdirectlua%7Btex.print%28%5Cthe%5Cmpdepth%2F2%29%7D%29+withpen+pencircle+scaled+2pt+withcolor+white%3B%0Adrawdot%280%2C0%29+withpen+pencircle+scaled+%5Cdirectlua%7Btex.print%285%2Fmath.sqrt%28%5Cthe%5Cmpdepth%29%29%7Dbp%3B%0A%5Cend%7Bmplibcode%7D%7D%0A%25+Declare+a+new+itemize-based+list+via+enumitem%0A%5Cnewlist%7BmyEnumerate%7D%7Bitemize%7D%7B6%7D%0A%0A%25+The+nosep+option+removes+all+vertical+spacing%0A%25+the+label%3D%5Cprotect%5Cmpbullet+causes+all+bullets+to+be+%0A%25+drawn+by+a+macro+that+uses+MetaPost+code.+%5Cprotect%0A%25+is+required+as+noted+in+the+enumitem+manual+%0A%0A%5Csetlist%5BmyEnumerate%5D%7Bnosep%2Clabel%3D%5Cprotect%5Cmpbullet%7D%0A%5Csetlistdepth%7B6%7D%0A%0A%5Cbegin%7BmyEnumerate%7D%0A%5Citem+Level+1%0A++%5Cbegin%7BmyEnumerate%7D%0A+++%5Citem+Level+2%0A++++%5Cbegin%7BmyEnumerate%7D%0A+++++%5Citem+Level+3%0A++++++%5Cbegin%7BmyEnumerate%7D%0A+++++++%5Citem+Level+4%0A++++++++%5Cbegin%7BmyEnumerate%7D%0A+++++++++%5Citem+Level+5%0A++++++++++%5Cbegin%7BmyEnumerate%7D%0A+++++++++++%5Citem+Level+6%0A+++++++++++%5Cend%7BmyEnumerate%7D%0A++++++++%5Cend%7BmyEnumerate%7D%0A+++++++%5Cend%7BmyEnumerate%7D%0A++++%5Cend%7BmyEnumerate%7D%0A+++%5Cend%7BmyEnumerate%7D%0A%5Cend%7BmyEnumerate%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> To see the <strong><em>full code</em></strong>, open this LuaLaTeX example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Autosize.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/11/Autosize.png" decoding="async" width="800" height="252" />
+</p>
+<h5><span class="mw-headline" id="Example_2:_funky_custom_bullets">Example 2: funky custom bullets</span></h5>
+<p>This example was inspired by an <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/a/313337">example on tex.stackexchange</a> which Overleaf has modified to create custom bullets using MetaPost code. Click on the “Open in Overleaf” link to run the example and view the full code.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newlist</span><span class="nb">{</span>todolist<span class="nb">}{</span>itemize<span class="nb">}{</span>2<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+  <span class="k">\item</span> Start thinking about what we hope to achieve
+  <span class="k">\begin</span><span class="nb">{</span>todolist<span class="nb">}</span>
+  <span class="k">\item</span><span class="na">[\mpdot]</span> Identify objectives
+  <span class="k">\item</span><span class="na">[\mpyingyang]</span> Balance environmental impact 
+  <span class="k">\item</span><span class="na">[\mpsquare{0}{5}{0}]</span> Implement plans
+    <span class="k">\begin</span><span class="nb">{</span>todolist<span class="nb">}</span>
+    <span class="k">\item</span><span class="na">[\mpsquare{-0.5}{4}{0}]</span> Stage 1 plans
+    <span class="k">\item</span><span class="na">[\mpsquare{-0.5}{4}{-20}]</span> Stage 2 plans
+    <span class="k">\item</span><span class="na">[\mpsquare{-0.5}{4}{-40}]</span> Stage 3 plans
+    <span class="k">\item</span><span class="na">[\mpsquare{-0.5}{4}{-60}]</span> Stage 4 plans
+    <span class="k">\end</span><span class="nb">{</span>todolist<span class="nb">}</span>
+  <span class="k">\end</span><span class="nb">{</span>todolist<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=lualatex
+&amp;snip_name=Second+example+using+MetaPost+with+the+enumitem+package
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Benumitem%7D%0A%5Cusepackage%7Bluamplib%7D%0A%5Ceverymplib%7Bbeginfig%280%29%3B%7D%0A%5Ceveryendmplib%7Bendfig%3B%7D%0A%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cnewcommand%7B%5Cmpyingyang%7D%7B%25%0A%5Clower1.5pt%5Chbox%7B%5Cbegin%7Bmplibcode%7D%25%0Apath+p%3B%0Ap%3A%3D%28-1%2C0%29..%280%2C-1%29..%281%2C0%29%3B%0Afill+%28p%7Bup%7D..%7Bdown%7D%280%2C0%29%7Bdown%7D..%7Bup%7Dcycle%29+scaled+0.15cm%3B%0Adraw+%28p..%280%2C1%29..cycle%29+scaled+0.15cm+%3B%0A%5Cend%7Bmplibcode%7D%7D%25%0A%7D%25%0A%5Cnewcommand%7B%5Cmpdot%7D%7B%25%0A%5Clower1.5pt%5Chbox%7B%5Cbegin%7Bmplibcode%7D%25%0Adrawdot%280%2C0%29+withpen+pencircle+scaled+2bp%3B%0Adraw+fullcircle+scaled+0.2cm%3B%0Adraw+fullcircle+scaled+0.3cm%3B%0A%5Cend%7Bmplibcode%7D%7D%25%0A%7D%25%0A%5Cnewcommand%7B%5Cmpsquare%7D%5B3%5D%7B%25%0A%5Clower%231pt%5Chbox%7B%5Cbegin%7Bmplibcode%7D%25%0Adraw+unitsquare+rotated+%233+scaled+%232pt%3B%0A%5Cend%7Bmplibcode%7D%25%0A%7D%7D%25%0A%5Cnewlist%7Btodolist%7D%7Bitemize%7D%7B2%7D%0A%0A%5Cbegin%7Bitemize%7D%0A++%5Citem+Start+thinking+about+what+we+hope+to+achieve%0A++%5Cbegin%7Btodolist%7D%0A++%5Citem%5B%5Cmpdot%5D+Identify+objectives%0A++%5Citem%5B%5Cmpyingyang%5D+Balance+environmental+impact+%0A++%5Citem%5B%5Cmpsquare%7B0%7D%7B5%7D%7B0%7D%5D+Implement+plans%0A++++%5Cbegin%7Btodolist%7D%0A++++%5Citem%5B%5Cmpsquare%7B-0.5%7D%7B4%7D%7B0%7D%5D+Stage+1+plans%0A++++%5Citem%5B%5Cmpsquare%7B-0.5%7D%7B4%7D%7B-20%7D%5D+Stage+2+plans%0A++++%5Citem%5B%5Cmpsquare%7B-0.5%7D%7B4%7D%7B-40%7D%5D+Stage+3+plans%0A++++%5Citem%5B%5Cmpsquare%7B-0.5%7D%7B4%7D%7B-60%7D%5D+Stage+4+plans%0A++++%5Cend%7Btodolist%7D%0A++%5Cend%7Btodolist%7D%0A%5Cend%7Bitemize%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> To see the <strong><em>full code</em></strong>, open this LuaLaTeX example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="CustomBullets2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/f/fa/CustomBullets2.png" decoding="async" width="600" height="347" />
+</p>
+<h2><span class="mw-headline" id="Other_features_of_the_enumitem_package">Other features of the <code>enumitem</code> package</span></h2>
+<p>As noted, the <code>enumitem</code> package is extremely versatile and provides numerous features for using and customizing lists. For example, features we have not covered include:
+</p>
+<ul><li>referencing list entries: for example, see this <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/questions/524822/help-for-formatting-the-ref-of-nested-enumerate">tex.stackexchane question and example</a></li>
+<li>controlling <code>enumerate</code> list numbering:
+<ul><li>set the starting number of the first item</li>
+<li>continue numbering of different <code>enumerate</code> lists</li></ul></li></ul>
+<p>And many more! Browse <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/questions/tagged/enumitem">tex.stackexchange to find many great examples</a> of what you can do via <code>enumitem</code>—and, of course, <a rel="nofollow" class="external text" href="https://ctan.org/pkg/enumitem">read the package documentation</a>.
+</p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="Operators.html" title="Operators">Operators</a></li>
+<li><a href="Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="French.html" title="French">French</a></li>
+<li><a href="German.html" title="German">German</a></li>
+<li><a href="Greek.html" title="Greek">Greek</a></li>
+<li><a href="Italian.html" title="Italian">Italian</a></li>
+<li><a href="Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="Korean.html" title="Korean">Korean</a></li>
+<li><a href="Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="Russian.html" title="Russian">Russian</a></li>
+<li><a href="Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="Indices.html" title="Indices">Indices</a></li>
+<li><a href="Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="Counters.html" title="Counters">Counters</a></li>
+<li><a href="Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="https://www.overleaf.com/" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="Tutorials.html">Tutorials</a></li><li><a href="Inserting_Images.html">How to insert images</a></li><li><a href="Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Lists.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Lists" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Lists" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Lists" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Lists" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Lists" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Lists" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Lists" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Lists" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Lists" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Lists" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Lists" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Lists" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Lists" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Lists" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==" src="../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="80PQE3W4fquLHS50jpz9+g==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Lists by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:27:07 GMT -->
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:03:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>How to write in Markdown on Overleaf - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="How to write in Markdown on Overleaf"><meta name="og:title" content="How to write in Markdown on Overleaf"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="How_to_write_in_Markdown_on_Overleaf.html"><link rel="stylesheet" href="../../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="How_to_write_in_Markdown_on_Overleaf.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" hreflang="ja"><link rel="preload" href="../../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="y3an29WpW2ZwDMq/RWkL8A=="><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="Kk6wJQA6-wxCJhikQK-lNMZk7Nb8TTmNeAFU"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>How to write in Markdown on Overleaf</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><p><strong>Post-publication update </strong> (added 13 May, 2017): We are grateful to Vít Novotný, the author/maintainer of the <code>markdown</code> package, for writing to us with some helpful feedback concerning the original article. We are pleased to publish this updated version which takes note of, and includes, his advice and suggestions.</p>
+<h3><span id="Huh.2C_what.3F"></span><span class="mw-headline" id="Huh,_what?">Huh, what?</span></h3>
+<p><a rel="nofollow" class="external text" href="https://kirkstrobeck.github.io/whatismarkdown.com/">Markdown</a> is a lightweight markup language (get it? 😉) that lets you write up something in plain text with some <em>very</em> simple rules, and then transform it to formatted outputs, e.g. HTML. It's very popular among software developers and programmers, exactly because of its simplicity (and might I add, perfect for note-taking too!).</p>
+<p>For example, to write a quick shopping list:</p>
+<pre># Grocery list
+*Remember* to grab as much as we can during upcoming [sales](http://acme-marg.com)!
+## Food
+- baked beans
+- spaghetti
+## Stationery 
+- writing pad
+- pencils
+</pre>
+<p>And you'll get as HTML output, using a tool such as <a rel="nofollow" class="external text" href="http://pandoc.org/">pandoc</a>:</p>
+<div class="mw-highlight mw-highlight-lang-html mw-content-ltr" dir="ltr"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">"grocerylist"</span><span class="p">&gt;</span>Grocery list<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Remember<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> to grab as much as we can during upcoming <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"http://acme-marg.com"</span><span class="p">&gt;</span>sales<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">"food"</span><span class="p">&gt;</span>Food<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>baked beans<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>spaghetti<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">"stationery"</span><span class="p">&gt;</span>Stationery<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>writing pad<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>pencils<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+<p>Nice and simple! You can find other syntax for Markdown <a rel="nofollow" class="external text" href="https://daringfireball.net/projects/markdown/syntax">here</a>.</p>
+<h3><span id="So_what_does_this_mean_for_me.3F"></span><span class="mw-headline" id="So_what_does_this_mean_for_me?">So what does this mean for me?</span></h3>
+<p>Many LaTeX users are satisfied with their beautiful LaTeX-typeset documents, but can't help feeling a twinge of envy at Markdown users—because, well, LaTeX markup <em>can</em> get rather verbose at times. Yes, lists, we're looking at <em>you</em>...</p>
+<p>The good news is that the fantastic new <a rel="nofollow" class="external text" href="https://ctan.org/pkg/markdown"><code>markdown</code> LaTeX package</a> allows you to write markdown syntax in your LaTeX documents (i.e. simpler inputs) and still get beautifully typeset PDFs! All you need to do is load the <code>markdown</code> package in your document, and enclose your Markdown material within a <code>markdown</code> environment:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>markdown<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>markdown<span class="nb">}</span>
+# Grocery list
+
+*Remember* to grab as much as we can during upcoming [sales](http://acme-marg.com)!
+
+## Food
+
+- baked beans
+- spaghetti
+
+## Stationery 
+
+- writing pad
+- pencils
+<span class="k">\end</span><span class="nb">{</span>markdown<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+<p>Or if you prefer to put your Markdown material in a <code>*.md</code> file:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>markdown<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\markdownInput</span><span class="nb">{</span>example.md<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+<p>Neat! This will most likely make developer-types very happy because they can now just copy across their <code>.md</code> documentation!</p>
+<h3><span id="Can_I_still_use_LaTeX_commands_if_I_write_Markdown.3F"></span><span class="mw-headline" id="Can_I_still_use_LaTeX_commands_if_I_write_Markdown?">Can I still use LaTeX commands if I write Markdown?</span></h3>
+<p>Yes, you can still use LaTeX commands in your Markdown material! Just pass the <code>hybrid</code> option to <code>markdown</code>:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[hybrid]</span><span class="nb">{</span>markdown<span class="nb">}</span>
+...
+- writing pad (the kind with the big <span class="s">$</span><span class="nb">E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="s">$</span> on the cover)
+</pre></div>
+<h3><span id="How_can_I_use_literal_characters_such_as_.27.23.27_and_.27_.27_.28underscores.29.3F"></span><span class="mw-headline" id="How_can_I_use_literal_characters_such_as_'#'_and_'_'_(underscores)?">How can I use literal characters such as '#' and '_' (underscores)?</span></h3>
+<h4><span id="Typing_a_.27.23.27"></span><span class="mw-headline" id="Typing_a_'#'">Typing a '#'</span></h4>
+<p>You cannot type the '#' character <em>inside the <code>markdown</code> environment</em>. Not even <code>\#</code> will work. You need to define a command like <code>\newcommand{\texthash}{\#}</code>, and then use <code>\texthash</code> in your <code>markdown</code> environment. Similarly for underscores, especially when there are more then one on the same line, e.g. <code>$y = m_1 + n_2$</code>. Sometimes it can be easier to end the current <code>markdown</code> environment and write problematic lines in ordinary LaTeX mode, and then start another <code>markdown</code> environment.</p>
+<h4><span id="Typing_.27_.27_.28underscore.29_and_.27.60.27.28backtick.29"></span><span class="mw-headline" id="Typing_'_'_(underscore)_and_'`'(backtick)">Typing '_' (underscore) and '`'(backtick)</span></h4>
+<p><strong>Update</strong> (added on 13 May, 2017): Since <code>markdown</code> version 2.5 you can set <code>underscores = false</code> and <code>codeSpans =
+false</code> to disable underscores and backticks. This makes it possible to write math subscripts and quotation marks in hybrid mode without
+escaping. We have asterisks for emphasis, so the only thing truly lost are inline code examples. Thanks Vít for the tip!</p>
+<h4><span class="mw-headline" id="Environments_to_avoid...">Environments to avoid...</span></h4>
+<p>And while you can use backticks to write inline-verbatim, or indent the line with four spaces for a verbatim block, don't use <code>lstlisting</code> nor <code>minted</code> LaTeX environments within <code>markdown</code> environments. Just don't.</p>
+<h4><span class="mw-headline" id="Using_HTML_in_a_markdown_environment">Using HTML in a <code>markdown</code> environment</span></h4>
+<p>And no, you can’t use HTML inside the LaTeX <code>markdown</code> environment (even though this is a common thing to do in usual Markdown). Sorry.</p>
+<p><strong>Update</strong> (added on 13 May, 2017): As of <code>markdown</code> v2.3, there's an <code>html</code> option that will not display HTML tags verbatim if they're present in your markdown material, though it won't actually format the tag contents either—i.e. <code>&lt;strong&gt;Hello!&lt;/strong&gt;</code> will just display Hello! in normal weight. But HTML entities like <code>&amp;copy;</code> will be rendered as ©. Thanks to Vít for pointing this out.</p>
+<h3><span class="mw-headline" id="Suggested_markdown_package_options">Suggested <code>markdown</code> package options</span></h3>
+<p>One set of <code>markdown</code> package options you may find useful is:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[footnotes,definitionLists,hashEnumerators,smartEllipses,hybrid]</span><span class="nb">{</span>markdown<span class="nb">}</span>
+</pre></div>
+<p>Those options enable the use of</p>
+<ul>
+<li>footnote markdown syntax (like <code>[^1]</code>);</li> 
+<li>definition lists and <code>#</code> for numbered lists;</li> 
+<li>"proper" ellipses (…).</li>
+</ul>
+<p>Here's a <a rel="nofollow" class="external text" href="https://www.overleaf.com/latex/examples/using-markdown-in-latex-documents/whdrnpcpnwrm">complete example</a> in the Overleaf gallery, and here's <a rel="nofollow" class="external text" href="https://www.overleaf.com/articles/how-to-write-using-rich-text-format-and-markdown-in-latex-and-overleaf/dbqrxvftzskw">another one</a>.</p>
+<h3><span id="Hyperlinks_and_footnotes:_how.3F"></span><span class="mw-headline" id="Hyperlinks_and_footnotes:_how?">Hyperlinks and footnotes: how?</span></h3>
+<p>In the Overleaf example the hyperlink is a footnote. How do I get it to be a hyperref-hyperlink?</p>
+<p><code>markdown</code> is customisable, so you can define how you'd like different elements to be rendered. Adding these to your preamble will do exactly that:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\markdownSetup</span><span class="nb">{</span>renderers=<span class="nb">{</span>
+  link = <span class="nb">{</span><span class="k">\href</span><span class="nb">{</span>#2<span class="nb">}{</span>#1<span class="nb">}}</span>
+<span class="nb">}}</span>
+</pre></div>
+<p><strong>Update</strong> (added 13 May, 2017): <code>rendererPrototypes</code> was used in the initial version. Normal users are recommended to use <code>renderers</code> for their own definitions, as  <code>rendererPrototypes</code> is there for package creators to provide defaults. If you modify <code>rendererPrototypes</code>, you run the risk that another package may override your settings. Thanks to Vít for pointing this out!</p>
+<h3><span id="Including_images_.28updated_8_November_2022.29"></span><span class="mw-headline" id="Including_images_(updated_8_November_2022)">Including images (updated 8 November 2022)</span></h3>
+<ul><li><strong>Note</strong>: The next example uses a graphics file (<code>example-image.pdf</code>) provided by the <code>mwe</code> package. Those graphics files are distributed by TeX Live and thus stored on Overleaf's servers, making them available as image placeholders, such as the example below.</li></ul>
+<p>Images can be included in markdown by writing markup of the following format:
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>![alt-text](file-name "image caption")
+</pre></div>
+</div>
+</div>
+<p class="mw-empty-elt"></p> 
+<p>Hopefully, the parameter names <code>alt-text</code>, <code>file-name</code> and <code>"image caption"</code> describe what they do. Here is an example to demonstrate them:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[hybrid]</span><span class="nb">{</span>markdown<span class="nb">}</span>
+<span class="c">% The mwe package provides example images. Loading it is</span>
+<span class="c">% not essential because those images are in LaTeX's search path. </span>
+<span class="c">% Here, we load it for clarity in this example.</span>
+<span class="k">\usepackage</span><span class="nb">{</span>mwe<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>markdown<span class="nb">}</span>
+This example shows how to import a graphics file. Here we are using an
+example image provided by the `mwe` package.
+
+<span class="c">% Use \setkeys{Gin} if you need to change an image's display size</span>
+
+<span class="k">\setkeys</span><span class="nb">{</span>Gin<span class="nb">}{</span>width=.5<span class="k">\linewidth</span><span class="nb">}</span>
+![This is alt text to describe my image.](example-image.jpg "An example image provided by the <span class="k">\texttt</span><span class="nb">{</span>mwe<span class="nb">}</span> package.")
+<span class="k">\end</span><span class="nb">{</span>markdown<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Using+images+in+markdown&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bhybrid%5D%7Bmarkdown%7D%0A%25+The+mwe+package+provides+example+images.+Loading+it+is%0A%25+not+essential+because+those+images+are+in+LaTeX%27s+search+path.+%0A%25+Here%2C+we+load+it+for+clarity+in+this+example.%0A%5Cusepackage%7Bmwe%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bmarkdown%7D%0AThis+example+shows+how+to+import+a+graphics+file.+Here+we+are+using+an%0Aexample+image+provided+by+the+%60mwe%60+package.%0A%0A%25+Use+%5Csetkeys%7BGin%7D+if+you+need+to+change+an+image%27s+display+size%0A%0A%5Csetkeys%7BGin%7D%7Bwidth%3D.5%5Clinewidth%7D%0A%21%5BThis+is+alt+text+to+describe+my+image.%5D%28example-image.jpg+%22An+example+image+provided+by+the+%5Ctexttt%7Bmwe%7D+package.%22%29%0A%5Cend%7Bmarkdown%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example on Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Showing how to import images in markdown" src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/e/ec/MarkdownExampl5.png" decoding="async" width="600" height="366" />
+</p>
+<h4><span class="mw-headline" id="Note_on_the_image_width">Note on the image width</span></h4>
+<p>Like most packages, <code>markdown</code> loads other packages, including <a rel="nofollow" class="external text" href="https://ctan.org/pkg/keyval?lang=en"><code>keyval</code></a> and <a rel="nofollow" class="external text" href="https://ctan.org/pkg/graphicx?lang=en"><code>graphicx</code></a>, to make use of the commands and features they provide. Here, the image width is set using the <code>\setkeys</code> command, which is provided by <code>keyvals</code>. <code>Gin</code> is a "family" of keys defined by the <code>graphicx</code> package.
+</p>
+<ul><li><strong>Note</strong>: Because a LaTeX command, here <code>\setkeys</code>, is used <em>within</em> the <code>markdown</code> environment, the <code>hybrid</code> option of the markdown package is required.</li></ul>
+<h4><span id="Changing_float_placement_identifiers_.28more_advanced.29"></span><span class="mw-headline" id="Changing_float_placement_identifiers_(more_advanced)">Changing float placement identifiers (more advanced)</span></h4>
+<p>The markdown syntax for figure inclusion doesn't let you directly specify the float placement identifiers, but you can adjust them by redefining how the figure is rendered:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\markdownSetup</span><span class="nb">{</span>renderers=<span class="nb">{</span>
+  image = <span class="nb">{</span><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[hbt!]
+    <span class="k">\centering</span>
+    <span class="k">\includegraphics</span><span class="nb">{</span>#3<span class="nb">}</span><span class="c">%</span>
+    <span class="k">\ifx\empty</span>#4<span class="k">\empty\else</span>
+    <span class="k">\caption</span><span class="nb">{</span>#4<span class="nb">}</span><span class="c">%</span>
+    <span class="k">\fi</span>
+    <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}}</span>
+<span class="nb">}}</span>
+</pre></div>
+<p>For more information refer to the <a rel="nofollow" class="external text" href="https://mirror.apps.cam.ac.uk/pub/tex-archive/macros/generic/markdown/markdown.html">markdown documentation</a>.
+</p>
+<h3><span id="Can_you_create_tables_using_markdown_in_LaTeX.3F_.F0.9F.98.80"></span><span class="mw-headline" id="Can_you_create_tables_using_markdown_in_LaTeX?_😀">Can you create tables using markdown in LaTeX? 😀</span></h3>
+<p>Unfortunately, no. Tables are supported in <a rel="nofollow" class="external text" href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a> only, and the LaTeX <code>markdown</code> package has no support for it at present.</p>
+<p><strong>Update</strong> (added on 13 May, 2017): Based on a tip from Vít, it's possible to use the
+<code>contentBlocks</code> syntax extension since version 2.4, or tweak the <code>inputFencedCode</code> renderer, to quickly turn some CSV-style text to a table.</p>
+<h3><span id="More_markdown_package_goodies....3F"></span><span class="mw-headline" id="More_markdown_package_goodies...?">More <code>markdown</code> package goodies...?</span></h3>
+<p>As mentioned earlier, it's a cool way for note-taking, and when combined with some nice LaTeX document classes or package setups, lets you have a beautiful notebook at the end of a lecture itself. For example, you could use it with the <a rel="nofollow" class="external text" href="https://www.overleaf.com/gallery/tagged/tufte">Tufte classes</a>:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>tufte-handout<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[footnotes,definitionLists,hashEnumerators,smartEllipses, hybrid]</span><span class="nb">{</span>markdown<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\markdownInput</span><span class="nb">{</span>PHY303-lecture-12Nov2016.md<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+<p>And the short-and-simple syntax that makes writing lists much more convenient means we now have a <em>really quick</em> way of writing <a rel="nofollow" class="external text" href="https://www.overleaf.com/latex/examples/writing-beamer-slides-with-markdown/dnrwnjrpjjhw">Beamer presentations</a> and <a rel="nofollow" class="external text" href="https://www.overleaf.com/latex/examples/writing-beamer-slides-with-markdown/dnrwnjrpjjhw">posters</a>!</p>
+<p>Have fun!</p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../Lists.html" title="Lists">Lists</a></li>
+<li><a href="../Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../Operators.html" title="Operators">Operators</a></li>
+<li><a href="../Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../Tables.html" title="Tables">Tables</a></li>
+<li><a href="../Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../French.html" title="French">French</a></li>
+<li><a href="../German.html" title="German">German</a></li>
+<li><a href="../Greek.html" title="Greek">Greek</a></li>
+<li><a href="../Italian.html" title="Italian">Italian</a></li>
+<li><a href="../Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../Korean.html" title="Korean">Korean</a></li>
+<li><a href="../Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../Russian.html" title="Russian">Russian</a></li>
+<li><a href="../Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../Indices.html" title="Indices">Indices</a></li>
+<li><a href="../Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../Counters.html" title="Counters">Counters</a></li>
+<li><a href="../Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../Commands.html" title="Commands">Commands</a></li>
+<li><a href="../Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="../Tutorials.html">Tutorials</a></li><li><a href="../Inserting_Images.html">How to insert images</a></li><li><a href="../Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="How_to_write_in_Markdown_on_Overleaf.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==" src="../../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="y3an29WpW2ZwDMq/RWkL8A==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/How_to_write_in_Markdown_on_Overleaf by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:03:04 GMT -->
+</html>

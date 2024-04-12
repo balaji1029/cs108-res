@@ -1,0 +1,747 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:56:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Typesetting exams in LaTeX - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Typesetting exams in LaTeX"><meta name="og:title" content="Typesetting exams in LaTeX"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="Typesetting_exams_in_LaTeX.html"><link rel="stylesheet" href="../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Typesetting_exams_in_LaTeX.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" hreflang="ja"><link rel="preload" href="../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="8WoK24LGmjWxLKnrWvQn6Q=="><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="ORxpJYJu-eqqb-T_8B3Jg-S2Jitoz6kOIp8c"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Typesetting_exams_in_LaTeX&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Typesetting_exams_in_LaTeX&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Typesetting exams in LaTeX</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Basic_example"><span class="tocnumber">2</span> <span class="toctext">Basic example</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Creating_new_questions"><span class="tocnumber">3</span> <span class="toctext">Creating new questions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Spacing"><span class="tocnumber">3.1</span> <span class="toctext">Spacing</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Subparts"><span class="tocnumber">3.2</span> <span class="toctext">Subparts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Multiple_choice_questions"><span class="tocnumber">4</span> <span class="toctext">Multiple choice questions</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Grading"><span class="tocnumber">5</span> <span class="toctext">Grading</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Points_in_each_question"><span class="tocnumber">5.1</span> <span class="toctext">Points in each question</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Counting_points_and_half_points"><span class="tocnumber">5.2</span> <span class="toctext">Counting points and half points</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Bonus_points"><span class="tocnumber">5.3</span> <span class="toctext">Bonus points</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Grading_table"><span class="tocnumber">5.4</span> <span class="toctext">Grading table</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Overleaf_exam_project_example"><span class="tocnumber">6</span> <span class="toctext">Overleaf exam project example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Other_languages"><span class="tocnumber">6.1</span> <span class="toctext">Other languages</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Reference_guide"><span class="tocnumber">7</span> <span class="toctext">Reference guide</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Placing_and_formatting_the_points_mark_for_questions"><span class="tocnumber">7.1</span> <span class="toctext">Placing and formatting the points mark for questions</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Changing_default_names_in_Grade_Tables"><span class="tocnumber">7.2</span> <span class="toctext">Changing default names in Grade Tables</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Further_reading"><span class="tocnumber">8</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>The LaTeX class <code>exam.cls</code> makes it straightforward create exam papers and typeset questions. It sets a 1in margin in all paper sizes and provides special commands to write and compute grades. To use the <code>exam</code> class you must put the line
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>exam<span class="nb">}</span>
+</pre></div>
+</div></div>
+<p>at the start of your <code>.tex</code> file. This will enable the package's exam-related commands, and set the page format to allow margins for corrections.
+</p>
+<h2><span class="mw-headline" id="Basic_example">Basic example</span></h2>
+<p>Let's start with a basic working example of the <code>exam</code> class. 
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>exam<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\fbox</span><span class="nb">{</span><span class="k">\fbox</span><span class="nb">{</span><span class="k">\parbox</span><span class="nb">{</span>5.5in<span class="nb">}{</span><span class="k">\centering</span>
+Answer the questions in the spaces provided. If you run out of room
+for an answer, continue on the back of the page.<span class="nb">}}}</span>
+<span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+
+<span class="k">\vspace</span><span class="nb">{</span>5mm<span class="nb">}</span>
+<span class="k">\makebox</span><span class="na">[0.75\textwidth]</span><span class="nb">{</span>Name and section:<span class="k">\enspace\hrulefill</span><span class="nb">}</span>
+
+<span class="k">\vspace</span><span class="nb">{</span>5mm<span class="nb">}</span>
+<span class="k">\makebox</span><span class="na">[0.75\textwidth]</span><span class="nb">{</span>Instructor’s name:<span class="k">\enspace\hrulefill</span><span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>questions<span class="nb">}</span>
+<span class="k">\question</span> Is it true that <span class="s">\(</span><span class="nb">x^n </span><span class="o">+</span><span class="nb"> y^n </span><span class="o">=</span><span class="nb"> z^n</span><span class="s">\)</span> if <span class="s">\(</span><span class="nb">x,y,z</span><span class="s">\)</span> and <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> are
+positive integers?. Explain.
+
+<span class="k">\question</span> Prove that the real part of all non-trivial zeros of the function
+<span class="s">\(</span><span class="nv">\zeta</span><span class="o">(</span><span class="nb">z</span><span class="o">)</span><span class="s">\)</span> is <span class="s">\(</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}</span><span class="s">\)</span>
+
+<span class="k">\question</span> Compute <span class="sb">\[</span><span class="nv">\int</span><span class="nb">_{</span><span class="m">0</span><span class="nb">}^{</span><span class="nv">\infty</span><span class="nb">} </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\sin</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{x}</span><span class="s">\]</span>
+<span class="k">\end</span><span class="nb">{</span>questions<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Basic+exam+class+example
+&amp;snip=%5Cdocumentclass%7Bexam%7D%0A%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cbegin%7Bcenter%7D%0A%5Cfbox%7B%5Cfbox%7B%5Cparbox%7B5.5in%7D%7B%5Ccentering%0AAnswer+the+questions+in+the+spaces+provided.+If+you+run+out+of+room%0Afor+an+answer%2C+continue+on+the+back+of+the+page.%7D%7D%7D%0A%5Cend%7Bcenter%7D%0A%0A%5Cvspace%7B5mm%7D%0A%5Cmakebox%5B0.75%5Ctextwidth%5D%7BName+and+section%3A%5Censpace%5Chrulefill%7D%0A%0A%5Cvspace%7B5mm%7D%0A%5Cmakebox%5B0.75%5Ctextwidth%5D%7BInstructor%E2%80%99s+name%3A%5Censpace%5Chrulefill%7D%0A%0A%5Cbegin%7Bquestions%7D%0A%5Cquestion+Is+it+true+that+%5C%28x%5En+%2B+y%5En+%3D+z%5En%5C%29+if+%5C%28x%2Cy%2Cz%5C%29+and+%5C%28n%5C%29+are%0Apositive+integers%3F.+Explain.%0A%0A%5Cquestion+Prove+that+the+real+part+of+all+non-trivial+zeros+of+the+function%0A%5C%28%5Czeta%28z%29%5C%29+is+%5C%28%5Cfrac%7B1%7D%7B2%7D%5C%29%0A%0A%5Cquestion+Compute+%5C%5B%5Cint_%7B0%7D%5E%7B%5Cinfty%7D+%5Cfrac%7B%5Csin%28x%29%7D%7Bx%7D%5C%5D%0A%5Cend%7Bquestions%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><img alt="ExamEx1OLV2b.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/40/ExamEx1OLV2b.png" decoding="async" width="600" height="258" />
+</p><p>The syntax of the <code>questions</code> environment is very similar to that of the  <code>itemize</code> and <code>enumerate</code> environments. Each question is typed by putting the command <code>\question</code> before it.
+</p><p>The other commands in this example are not specific to the <code>exam</code> class, but may be useful to create a quick header for your exam.
+</p>
+<h2><span class="mw-headline" id="Creating_new_questions">Creating new questions</span></h2>
+<p>In the previous section, a basic example showing how to create question was presented. Questions can be further customized, and this section explains how.
+</p>
+<h3><span class="mw-headline" id="Spacing">Spacing</span></h3>
+<p>If the students are required to answer the exam in the space provided, that space can be manually set or evenly distributed. See the example below:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>questions<span class="nb">}</span>
+
+<span class="k">\question</span> Is it true that <span class="s">\(</span><span class="nb">x^n </span><span class="o">+</span><span class="nb"> y^n </span><span class="o">=</span><span class="nb"> z^n</span><span class="s">\)</span> if <span class="s">\(</span><span class="nb">x,y,z</span><span class="s">\)</span> and <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> are positive integers?. Explain.
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\question</span> Prove that the real part of all non-trivial zeros of the function <span class="s">\(</span><span class="nv">\zeta</span><span class="o">(</span><span class="nb">z</span><span class="o">)</span><span class="s">\)</span> is <span class="s">\(</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}</span><span class="s">\)</span>
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\question</span> Compute <span class="sb">\[</span><span class="nv">\int</span><span class="nb">_{</span><span class="m">0</span><span class="nb">}^{</span><span class="nv">\infty</span><span class="nb">} </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\sin</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{x}</span><span class="s">\]</span>
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\end</span><span class="nb">{</span>questions<span class="nb">}</span>
+<span class="k">\clearpage</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=
+&amp;snip_name=Providing+space+for+exam+questions
+&amp;snip=%5Cdocumentclass%7Bexam%7D%0A%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cbegin%7Bcenter%7D%0A%5Cfbox%7B%5Cfbox%7B%5Cparbox%7B5.5in%7D%7B%5Ccentering%0AAnswer+the+questions+in+the+spaces+provided.+If+you+run+out+of+room%0Afor+an+answer%2C+continue+on+the+back+of+the+page.%7D%7D%7D%0A%5Cend%7Bcenter%7D%0A%0A%5Cvspace%7B5mm%7D%0A%5Cmakebox%5B0.75%5Ctextwidth%5D%7BName+and+section%3A%5Censpace%5Chrulefill%7D%0A%0A%5Cvspace%7B5mm%7D%0A%5Cmakebox%5B0.75%5Ctextwidth%5D%7BInstructor%E2%80%99s+name%3A%5Censpace%5Chrulefill%7D%0A%5Cbegin%7Bquestions%7D%0A%0A%5Cquestion+Is+it+true+that+%5C%28x%5En+%2B+y%5En+%3D+z%5En%5C%29+if+%5C%28x%2Cy%2Cz%5C%29+and+%5C%28n%5C%29+are+positive+integers%3F.+Explain.%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cquestion+Prove+that+the+real+part+of+all+non-trivial+zeros+of+the+function+%5C%28%5Czeta%28z%29%5C%29+is+%5C%28%5Cfrac%7B1%7D%7B2%7D%5C%29%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cquestion+Compute+%5C%5B%5Cint_%7B0%7D%5E%7B%5Cinfty%7D+%5Cfrac%7B%5Csin%28x%29%7D%7Bx%7D%5C%5D%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cend%7Bquestions%7D%0A%5Cclearpage%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example on Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link: 
+</p><p><img alt="ExamEx2OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/7/73/ExamEx2OLV2.png" decoding="async" width="500" height="668" />
+</p><p>In this example the command <code>\vspace{\stretch{1}}</code> after each question equally distributes the available space. 
+</p><p>The command <code>\clearpage</code> inserts a page break point to continue typing questions in a new page.
+</p><p>If you want to manually assign the space to each question, use the command <code>\vspace{}</code> and in between the braces write the units of space you need. For instance, <code>\vspace{1in}</code> inserts a 1-inch vertical space. Check the documentation about <a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a> for a list of available units.
+</p>
+<h3><span class="mw-headline" id="Subparts">Subparts</span></h3>
+<p>If your questions have several parts focused on some subtopics you can use the environments <code>parts</code>, <code>subparts</code>, <code>subsubparts</code> and the corresponding commands <code>\part</code>, <code>\subpart</code> and <code>\subsubpart</code>. See the next example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>questions<span class="nb">}</span>
+<span class="k">\question</span> Given the equation <span class="s">\(</span><span class="nb">x^n </span><span class="o">+</span><span class="nb"> y^n </span><span class="o">=</span><span class="nb"> z^n</span><span class="s">\)</span> for <span class="s">\(</span><span class="nb">x,y,z</span><span class="s">\)</span> and <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> positive
+integers. 
+<span class="k">\begin</span><span class="nb">{</span>parts<span class="nb">}</span>
+<span class="k">\part</span> For what values of <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> is the statement in the previous question true?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\part</span> For <span class="s">\(</span><span class="nb">n</span><span class="o">=</span><span class="m">2</span><span class="s">\)</span> there's a theorem with a special name. What's that name?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\part</span> What famous mathematician had an elegant proof for this theorem but
+there was not enough space in the margin to write it down?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>subparts<span class="nb">}</span>
+<span class="k">\subpart</span> Who actually proved the theorem?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+<span class="k">\subpart</span> How long did actually take to solve this problem?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+<span class="k">\end</span><span class="nb">{</span>subparts<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>parts<span class="nb">}</span>
+
+<span class="k">\question</span> Prove that the real part of all non-trivial zeros of the function 
+<span class="s">\(</span><span class="nv">\zeta</span><span class="o">(</span><span class="nb">z</span><span class="o">)</span><span class="s">\)</span> is <span class="s">\(</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}</span><span class="s">\)</span>
+...
+
+<span class="k">\end</span><span class="nb">{</span>questions<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=
+&amp;snip_name=Multipart+exam+questions
+&amp;snip=%5Cdocumentclass%7Bexam%7D%0A%5Cbegin%7Bdocument%7D%0A%0A%5Cbegin%7Bcenter%7D%0A%5Cfbox%7B%5Cfbox%7B%5Cparbox%7B5.5in%7D%7B%5Ccentering%0AAnswer+the+questions+in+the+spaces+provided.+If+you+run+out+of+room%0Afor+an+answer%2C+continue+on+the+back+of+the+page.%7D%7D%7D%0A%5Cend%7Bcenter%7D%0A%0A%5Cvspace%7B5mm%7D%0A%5Cmakebox%5B0.75%5Ctextwidth%5D%7BName+and+section%3A%5Censpace%5Chrulefill%7D%0A%0A%5Cvspace%7B5mm%7D%0A%5Cmakebox%5B0.75%5Ctextwidth%5D%7BInstructor%E2%80%99s+name%3A%5Censpace%5Chrulefill%7D%0A%5Cbegin%7Bquestions%7D%0A%5Cquestion+Given+the+equation+%5C%28x%5En+%2B+y%5En+%3D+z%5En%5C%29+for+%5C%28x%2Cy%2Cz%5C%29+and+%5C%28n%5C%29+positive%0Aintegers.+%0A%5Cbegin%7Bparts%7D%0A%5Cpart+For+what+values+of+%5C%28n%5C%29+is+the+statement+in+the+previous+question+true%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cpart+For+%5C%28n%3D2%5C%29+there%27s+a+theorem+with+a+special+name.+What%27s+that+name%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cpart+What+famous+mathematician+had+an+elegant+proof+for+this+theorem+but%0Athere+was+not+enough+space+in+the+margin+to+write+it+down%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cbegin%7Bsubparts%7D%0A%5Csubpart+Who+actually+proved+the+theorem%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%5Csubpart+How+long+did+actually+take+to+solve+this+problem%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%5Cend%7Bsubparts%7D%0A%0A%5Cend%7Bparts%7D%0A%0A%5Cquestion+Prove+that+the+real+part+of+all+non-trivial+zeros+of+the+function+%0A%5C%28%5Czeta%28z%29%5C%29+is+%5C%28%5Cfrac%7B1%7D%7B2%7D%5C%29%0A...%0A%0A%5Cend%7Bquestions%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example on Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link:
+</p><p><img alt="ExamEx3OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/21/ExamEx3OLV2.png" decoding="async" width="500" height="669" />
+</p><p>The environments <code>parts</code> and <code>subparts</code> provide question-like nested lists. Just like in questions you can set manually the vertical spacing.
+</p>
+<h2><span class="mw-headline" id="Multiple_choice_questions">Multiple choice questions</span></h2>
+<p>There are four environments to create multiple choice questions.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>questions<span class="nb">}</span>
+<span class="k">\question</span> Which of these famous physicists invented time?
+
+<span class="k">\begin</span><span class="nb">{</span>oneparchoices<span class="nb">}</span>
+ <span class="k">\choice</span> Stephen Hawking 
+ <span class="k">\choice</span> Albert Einstein
+ <span class="k">\choice</span> Emmy Noether
+ <span class="k">\choice</span> This makes no sense
+<span class="k">\end</span><span class="nb">{</span>oneparchoices<span class="nb">}</span>
+    
+<span class="k">\question</span> Which of these famous physicists published a paper on Brownian Motion?
+
+<span class="k">\begin</span><span class="nb">{</span>checkboxes<span class="nb">}</span>
+ <span class="k">\choice</span> Stephen Hawking 
+ <span class="k">\choice</span> Albert Einstein
+ <span class="k">\choice</span> Emmy Noether
+ <span class="k">\choice</span> I don't know
+<span class="k">\end</span><span class="nb">{</span>checkboxes<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>questions<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=&amp;snip_name=Multiple+choice+exam+example&amp;snip=%5Cdocumentclass%7Bexam%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bquestions%7D%0A%5Cquestion+Which+of+these+famous+physicists+invented+time%3F%0A%0A%5Cbegin%7Boneparchoices%7D%0A+%5Cchoice+Stephen+Hawking+%0A+%5Cchoice+Albert+Einstein%0A+%5Cchoice+Emmy+Noether%0A+%5Cchoice+This+makes+no+sense%0A%5Cend%7Boneparchoices%7D%0A++++%0A%5Cquestion+Which+of+these+famous+physicists+published+a+paper+on+Brownian+Motion%3F%0A%0A%5Cbegin%7Bcheckboxes%7D%0A+%5Cchoice+Stephen+Hawking+%0A+%5Cchoice+Albert+Einstein%0A+%5Cchoice+Emmy+Noether%0A+%5Cchoice+I+don%27t+know%0A%5Cend%7Bcheckboxes%7D%0A%5Cend%7Bquestions%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link:
+</p><p><img alt="ExamMulti.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/f/fc/ExamMulti.png" decoding="async" width="600" height="167" />
+</p><p>In this example, two different environments are used to list the possible choices for multiple-choice questions.
+</p>
+<ul><li>The environment <code>oneparchoices</code> labels the choices with upper case letters and prints them horizontally. If you want the choices to be printed in a list-like format, the environment <code>choices</code> is the right choice.</li></ul>
+<ul><li>The environment <code>checkboxes</code> prints check boxes before each choice. If you need the choices to be printed horizontally use the environment <code>oneparcheckboxes</code> instead.</li></ul>
+<h2><span class="mw-headline" id="Grading">Grading</span></h2>
+<p>Another important feature of the <code>exam</code> class is that it provides commands to make grading the exams easier.
+</p>
+<h3><span class="mw-headline" id="Points_in_each_question">Points in each question</span></h3>
+<p>You can add a parameter to each <code>\question</code> or <code>\part</code> to print the number of points you attain by correctly answering it. The additional parameter, inside brackets, after a question or a part represents the number of points assigned to it. You can change the appearance and the place where the points are printed, see the <a href="#Reference_guide">reference guide</a> for additional commands.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>questions<span class="nb">}</span>
+<span class="k">\question</span> Given the equation <span class="s">\(</span><span class="nb">x^n </span><span class="o">+</span><span class="nb"> y^n </span><span class="o">=</span><span class="nb"> z^n</span><span class="s">\)</span> for <span class="s">\(</span><span class="nb">x,y,z</span><span class="s">\)</span> and <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> positive
+integers. 
+<span class="k">\begin</span><span class="nb">{</span>parts<span class="nb">}</span>
+<span class="k">\part</span><span class="na">[10]</span> For what values of <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> is the statement in the previous question true?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\part</span><span class="na">[10]</span> For <span class="s">\(</span><span class="nb">n</span><span class="o">=</span><span class="m">2</span><span class="s">\)</span> there's a theorem with a special name. What's that name?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\part</span><span class="na">[10]</span> What famous mathematician had an elegant proof for this theorem but there was
+not enough space in the margin to write it down?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\end</span><span class="nb">{</span>parts<span class="nb">}</span>
+
+<span class="k">\question</span><span class="na">[20]</span> Compute <span class="sb">\[</span><span class="nv">\int</span><span class="nb">_{</span><span class="m">0</span><span class="nb">}^{</span><span class="nv">\infty</span><span class="nb">} </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\sin</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{x}</span><span class="s">\]</span>
+
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+<span class="k">\end</span><span class="nb">{</span>questions<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=&amp;snip_name=Adding+points+to+exam+questions&amp;snip=%5Cdocumentclass%7Bexam%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bquestions%7D%0A%5Cquestion+Given+the+equation+%5C%28x%5En+%2B+y%5En+%3D+z%5En%5C%29+for+%5C%28x%2Cy%2Cz%5C%29+and+%5C%28n%5C%29+positive%0Aintegers.+%0A%5Cbegin%7Bparts%7D%0A%5Cpart%5B10%5D+For+what+values+of+%5C%28n%5C%29+is+the+statement+in+the+previous+question+true%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cpart%5B10%5D+For+%5C%28n%3D2%5C%29+there%27s+a+theorem+with+a+special+name.+What%27s+that+name%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cpart%5B10%5D+What+famous+mathematician+had+an+elegant+proof+for+this+theorem+but+there+was%0Anot+enough+space+in+the+margin+to+write+it+down%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cend%7Bparts%7D%0A%0A%5Cquestion%5B20%5D+Compute+%5C%5B%5Cint_%7B0%7D%5E%7B%5Cinfty%7D+%5Cfrac%7B%5Csin%28x%29%7D%7Bx%7D%5C%5D%0A%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%5Cend%7Bquestions%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link:
+</p><p><img alt="ExamEx4OLV2b.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/30/ExamEx4OLV2b.png" decoding="async" width="600" height="642" />
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Counting_points_and_half_points">Counting points and half points</span></h3>
+<p>Sometimes it's convenient to include half points as value for parts of a questions. You can do this and then print then the value of the whole question. See the example below:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="na">[addpoints]</span><span class="nb">{</span>exam<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>questions<span class="nb">}</span>
+<span class="k">\question</span> Given the equation <span class="s">\(</span><span class="nb">x^n </span><span class="o">+</span><span class="nb"> y^n </span><span class="o">=</span><span class="nb"> z^n</span><span class="s">\)</span> for <span class="s">\(</span><span class="nb">x,y,z</span><span class="s">\)</span> and <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> positive
+integers. 
+<span class="k">\begin</span><span class="nb">{</span>parts<span class="nb">}</span>
+<span class="k">\part</span><span class="na">[5]</span> For what values of <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> is the statement in the previous question true?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\part</span><span class="na">[2 \half]</span> For <span class="s">\(</span><span class="nb">n</span><span class="o">=</span><span class="m">2</span><span class="s">\)</span> there's a theorem with a special name. What's that name?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\part</span><span class="na">[2 \half]</span> What famous mathematician had an elegant proof for this theorem but there was
+not enough space in the margin to write it down?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\end</span><span class="nb">{</span>parts<span class="nb">}</span>
+
+<span class="k">\droptotalpoints</span>
+
+<span class="k">\question</span><span class="na">[20]</span> Compute <span class="sb">\[</span><span class="nv">\int</span><span class="nb">_{</span><span class="m">0</span><span class="nb">}^{</span><span class="nv">\infty</span><span class="nb">} </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\sin</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{x}</span><span class="s">\]</span>
+<span class="k">\end</span><span class="nb">{</span>questions<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=
+&amp;snip_name=exam+package+counting+points+and+half+points
+&amp;snip=%5Cdocumentclass%5Baddpoints%5D%7Bexam%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bquestions%7D%0A%5Cquestion+Given+the+equation+%5C%28x%5En+%2B+y%5En+%3D+z%5En%5C%29+for+%5C%28x%2Cy%2Cz%5C%29+and+%5C%28n%5C%29+positive%0Aintegers.+%0A%5Cbegin%7Bparts%7D%0A%5Cpart%5B5%5D+For+what+values+of+%5C%28n%5C%29+is+the+statement+in+the+previous+question+true%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cpart%5B2+%5Chalf%5D+For+%5C%28n%3D2%5C%29+there%27s+a+theorem+with+a+special+name.+What%27s+that+name%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cpart%5B2+%5Chalf%5D+What+famous+mathematician+had+an+elegant+proof+for+this+theorem+but+there+was%0Anot+enough+space+in+the+margin+to+write+it+down%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cend%7Bparts%7D%0A%0A%5Cdroptotalpoints%0A%0A%5Cquestion%5B20%5D+Compute+%5C%5B%5Cint_%7B0%7D%5E%7B%5Cinfty%7D+%5Cfrac%7B%5Csin%28x%29%7D%7Bx%7D%5C%5D%0A%5Cend%7Bquestions%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link:
+</p><p><img alt="ExamCountPointsOLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/5b/ExamCountPointsOLV2.png" decoding="async" width="600" height="743" />
+</p><p>The command <code>\half</code> adds half points to a question. The command <code>\droptotalpoints</code> prints the total number of points for the last question. For this last command to work you must add the option <code>[addpoints]</code> to the document class statement.
+</p>
+<h3><span class="mw-headline" id="Bonus_points">Bonus points</span></h3>
+<p>It is possible to add bonus questions, this extra points will later show up in the <a href="#grading_table">grading table</a>. Adding bonus questions and parts is actually as simple as creating regular questions and parts.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>questions<span class="nb">}</span>
+
+<span class="k">\question</span> Given the equation <span class="s">\(</span><span class="nb">x^n </span><span class="o">+</span><span class="nb"> y^n </span><span class="o">=</span><span class="nb"> z^n</span><span class="s">\)</span> for <span class="s">\(</span><span class="nb">x,y,z</span><span class="s">\)</span> and <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> positive
+integers. 
+<span class="k">\begin</span><span class="nb">{</span>parts<span class="nb">}</span>
+<span class="k">\part</span><span class="na">[5]</span> For what values of <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> is the statement in the previous question true?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\part</span><span class="na">[2 \half]</span> For <span class="s">\(</span><span class="nb">n</span><span class="o">=</span><span class="m">2</span><span class="s">\)</span> there's a theorem with a special name. What's that name?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\bonuspart</span><span class="na">[2 \half]</span> What famous mathematician had an elegant proof for this theorem but there was
+not enough space in the margin to write it down?
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\end</span><span class="nb">{</span>parts<span class="nb">}</span>
+
+<span class="k">\droptotalpoints</span>
+
+<span class="k">\question</span><span class="na">[20]</span> Compute <span class="sb">\[</span><span class="nv">\int</span><span class="nb">_{</span><span class="m">0</span><span class="nb">}^{</span><span class="nv">\infty</span><span class="nb">} </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\sin</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{x}</span><span class="s">\]</span>
+
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\bonusquestion</span><span class="na">[30]</span> Prove that the real part of all non-trivial zeros of the function 
+<span class="s">\(</span><span class="nv">\zeta</span><span class="o">(</span><span class="nb">z</span><span class="o">)</span><span class="s">\)</span> is <span class="s">\(</span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}</span><span class="s">\)</span>
+<span class="k">\vspace</span><span class="nb">{</span><span class="k">\stretch</span><span class="nb">{</span>1<span class="nb">}}</span>
+
+<span class="k">\end</span><span class="nb">{</span>questions<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=
+&amp;snip_name=exam+package+and+bonus+points
+&amp;snip=%5Cdocumentclass%5Baddpoints%5D%7Bexam%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Bquestions%7D%0A%0A%5Cquestion+Given+the+equation+%5C%28x%5En+%2B+y%5En+%3D+z%5En%5C%29+for+%5C%28x%2Cy%2Cz%5C%29+and+%5C%28n%5C%29+positive%0Aintegers.+%0A%5Cbegin%7Bparts%7D%0A%5Cpart%5B5%5D+For+what+values+of+%5C%28n%5C%29+is+the+statement+in+the+previous+question+true%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cpart%5B2+%5Chalf%5D+For+%5C%28n%3D2%5C%29+there%27s+a+theorem+with+a+special+name.+What%27s+that+name%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cbonuspart%5B2+%5Chalf%5D+What+famous+mathematician+had+an+elegant+proof+for+this+theorem+but+there+was%0Anot+enough+space+in+the+margin+to+write+it+down%3F%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cend%7Bparts%7D%0A%0A%5Cdroptotalpoints%0A%0A%5Cquestion%5B20%5D+Compute+%5C%5B%5Cint_%7B0%7D%5E%7B%5Cinfty%7D+%5Cfrac%7B%5Csin%28x%29%7D%7Bx%7D%5C%5D%0A%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cbonusquestion%5B30%5D+Prove+that+the+real+part+of+all+non-trivial+zeros+of+the+function+%0A%5C%28%5Czeta%28z%29%5C%29+is+%5C%28%5Cfrac%7B1%7D%7B2%7D%5C%29%0A%5Cvspace%7B%5Cstretch%7B1%7D%7D%0A%0A%5Cend%7Bquestions%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link:
+</p><p><img alt="ExamEx6OLV2file.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/8/8e/ExamEx6OLV2file.png" decoding="async" width="600" height="361" />
+</p><p>The commands <code>\bonusquestion</code> and <code>\bonuspart</code> print <code>(bonus)</code> next to the point value of the question.
+</p>
+<h3><span class="mw-headline" id="Grading_table">Grading table</span></h3>
+<p>A table that show the points of each question can be printed with a special command.
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>center<span class="nb">}</span>
+<span class="k">\combinedgradetable</span><span class="na">[h][questions]</span>
+<span class="k">\end</span><span class="nb">{</span>center<span class="nb">}</span>
+</pre></div>
+</div>
+<div class="output">
+<p><img alt="ExamEx7.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/b/b6/ExamEx7.png" decoding="async" width="300" height="147" />
+</p>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>There are three commands to print a table of grades:
+</p>
+<dl><dt><code>\gradetable</code></dt>
+<dd>Prints a table with the grades corresponding to regular questions. If there are bonus questions those are not included.</dd></dl>
+<dl><dt><code>\bonusgradetable</code></dt>
+<dd>Prints a table with the grades corresponding to the bonus questions only</dd></dl>
+<dl><dt><code>\combinedgradetable</code></dt>
+<dd>Prints a table with both, regular and bonus questions.</dd></dl>
+<p>These commands take two extra parameters, each parameter inside brackets.
+</p>
+<ul><li>The first one can be <code>[h]</code> for a horizontal table or <code>[v]</code> for a vertical table.</li>
+<li>The second one sets how the table is indexed: <code>[questions]</code> to index the points by question and <code>[pages]</code> to list the points by page number.</li></ul>
+<h2><span class="mw-headline" id="Overleaf_exam_project_example">Overleaf <code>exam</code> project example</span></h2>
+<p>The above examples have been combined to create a basic project template that you can use as a starting point for your work. You can create a new project by clicking/selecting the following link:
+<a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/20093?id=68314645&amp;templateName=Example+project+using+the+exam+class&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2020.1&amp;mainFile="><i class="fa fa-share"></i> Open an Overleaf <code>exam</code> project example</a>
+.
+</p>
+<h3><span class="mw-headline" id="Other_languages">Other languages</span></h3>
+<p>There is no support for languages other than English in the <code>exam</code> class. Nevertheless, it's easy to translate the default words for those in your local language. The project above contains a commented-out code 
+snippet that shows how to translate some document elements into Spanish.
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[spanish]</span><span class="nb">{</span>babel<span class="nb">}</span>
+
+<span class="k">\pointpoints</span><span class="nb">{</span>punto<span class="nb">}{</span>puntos<span class="nb">}</span>
+<span class="k">\bonuspointpoints</span><span class="nb">{</span>punto extra<span class="nb">}{</span>puntos extra<span class="nb">}</span>
+
+<span class="k">\totalformat</span><span class="nb">{</span>Pregunta <span class="k">\thequestion</span>: <span class="k">\totalpoints</span> puntos<span class="nb">}</span>
+
+<span class="k">\chqword</span><span class="nb">{</span>Pregunta<span class="nb">}</span>
+<span class="k">\chpgword</span><span class="nb">{</span>Página<span class="nb">}</span>
+<span class="k">\chpword</span><span class="nb">{</span>Puntos<span class="nb">}</span>
+<span class="k">\chbpword</span><span class="nb">{</span>Puntos extra<span class="nb">}</span>
+<span class="k">\chsword</span><span class="nb">{</span>Puntos obtenidos<span class="nb">}</span>
+<span class="k">\chtword</span><span class="nb">{</span>Total<span class="nb">}</span>
+
+...
+</pre></div>
+</div>
+<div class="output">
+<p><img alt="ExamEx8.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/b/ba/ExamEx8.png" decoding="async" width="600" height="480" />
+</p>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p><br />
+The rest of the document would be exactly the same shown in previous examples. The commands typed here change the default words in the <code>exam</code> class.
+</p>
+<dl><dt><code>\pointpoints{punto}{puntos}</code></dt>
+<dd>Changes the words <i>point</i> and <i>points</i> for the words <i>punto</i> and <i>puntos</i> in regular questions and parts.</dd></dl>
+<dl><dt><code>\bonuspointpoints{punto extra}{puntos extra}</code></dt>
+<dd>Writes <i>punto extra</i> and <i>puntos extras</i> instead of <i>bonus point</i> and <i>bonus points</i> in bonus questions and bonus parts.</dd></dl>
+<dl><dt><code>\totalformat{Pregunta \thequestion: \totalpoints puntos}</code></dt>
+<dd>Changes the text printed by <code>\droptotalpoints</code>. In the example it prints <i>Pregunta 1: 7 1/2 puntos</i>.</dd></dl>
+<dl><dt><code>\chqword{Pregunta}</code></dt>
+<dd>Changes the word <i>Question</i> for the word <i>Pregunta</i> in the <a href="#grading_table">grading table table</a>. The rest of the commands change the other words in that table, <code>chpgword</code> for <i>Page</i>, <code>\chpword</code> for <i>Points</i>, <code>\chbpword</code> for <i>Bonus points</i>, <code>\chsword</code> for <i>Score</i> and <code>\chtword</code> for <i>Total</i>. These commands may change depending on the type of table your are creating, see the <a href="#Reference_guide">reference guide</a> for the commands needed in other tables.</dd></dl>
+<h2><span class="mw-headline" id="Reference_guide">Reference guide</span></h2>
+<h3><span class="mw-headline" id="Placing_and_formatting_the_points_mark_for_questions">Placing and formatting the points mark for questions</span></h3>
+<p>These commands can be typed in the preamble to change the format of the whole document or right before a question to change the format from that question down to the next formatting command or the end of the document.
+</p>
+<ul><li><code>\poinstinmargin</code> (or <code>\pointsinleftmargin</code>) will cause the point values to be printed in the left margin.</li></ul>
+<ul><li><code>\pointsinrightmargin</code> will cause the point values to be printed in the right margin.</li></ul>
+<ul><li><code>\nopointsinmargin</code> (or <code>\nopointsinrightmargin</code>) will revert to the default situation.</li></ul>
+<ul><li><code>\bracketedpoints</code> will use brackets instead of parentheses around the point values.</li></ul>
+<ul><li><code>\boxedpoints</code> draws a box around the point values.</li></ul>
+<p>Here is an example using <code>\pointsinmargin</code> and <code>\pointsinrightmargin</code>:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Here we'll use <span class="k">\verb</span>|<span class="k">\pointsinmargin</span>|
+<span class="k">\begin</span><span class="nb">{</span>questions<span class="nb">}</span>
+<span class="k">\pointsinmargin</span>
+<span class="k">\question</span> Given the equation <span class="s">\(</span><span class="nb">x^n </span><span class="o">+</span><span class="nb"> y^n </span><span class="o">=</span><span class="nb"> z^n</span><span class="s">\)</span> for <span class="s">\(</span><span class="nb">x,y,z</span><span class="s">\)</span> and <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> positive
+integers. 
+<span class="k">\begin</span><span class="nb">{</span>parts<span class="nb">}</span>
+<span class="k">\part</span><span class="na">[5]</span> For what values of <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> is the statement in the previous question true?
+<span class="k">\vspace</span><span class="nb">{</span>40pt<span class="nb">}</span>
+
+<span class="k">\part</span><span class="na">[2 \half]</span> For <span class="s">\(</span><span class="nb">n</span><span class="o">=</span><span class="m">2</span><span class="s">\)</span> there's a theorem with a special name. What's that name?
+<span class="k">\vspace</span><span class="nb">{</span>40pt<span class="nb">}</span>
+
+<span class="k">\part</span><span class="na">[2 \half]</span> What famous mathematician had an elegant proof for this theorem but there was
+not enough space in the margin to write it down?
+
+<span class="k">\vspace</span><span class="nb">{</span>40pt<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>parts<span class="nb">}</span>
+
+Now we'll use <span class="k">\verb</span>|<span class="k">\pointsinrightmargin</span>|
+
+<span class="k">\pointsinrightmargin</span>
+<span class="k">\question</span> Given the equation <span class="s">\(</span><span class="nb">x^n </span><span class="o">+</span><span class="nb"> y^n </span><span class="o">=</span><span class="nb"> z^n</span><span class="s">\)</span> for <span class="s">\(</span><span class="nb">x,y,z</span><span class="s">\)</span> and <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> positive
+integers. 
+<span class="k">\begin</span><span class="nb">{</span>parts<span class="nb">}</span>
+<span class="k">\part</span><span class="na">[5]</span> For what values of <span class="s">\(</span><span class="nb">n</span><span class="s">\)</span> is the statement in the previous question true?
+<span class="k">\vspace</span><span class="nb">{</span>40pt<span class="nb">}</span>
+
+<span class="k">\part</span><span class="na">[2 \half]</span> For <span class="s">\(</span><span class="nb">n</span><span class="o">=</span><span class="m">2</span><span class="s">\)</span> there's a theorem with a special name. What's that name?
+<span class="k">\vspace</span><span class="nb">{</span>40pt<span class="nb">}</span>
+
+<span class="k">\part</span><span class="na">[2 \half]</span> What famous mathematician had an elegant proof for this theorem but there was
+not enough space in the margin to write it down?
+integers. 
+<span class="k">\end</span><span class="nb">{</span>parts<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>questions<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=exam+class+with+point+in+margins
+&amp;snip=%5Cdocumentclass%5Baddpoints%5D%7Bexam%7D%0A%5Cusepackage%5Ba4paper%2C+total%3D%7B6in%2C+8in%7D%5D%7Bgeometry%7D%0A%5Cbegin%7Bdocument%7D%0AHere+we%27ll+use+%5Cverb%7C%5Cpointsinmargin%7C%0A%5Cbegin%7Bquestions%7D%0A%5Cpointsinmargin%0A%5Cquestion+Given+the+equation+%5C%28x%5En+%2B+y%5En+%3D+z%5En%5C%29+for+%5C%28x%2Cy%2Cz%5C%29+and+%5C%28n%5C%29+positive%0Aintegers.+%0A%5Cbegin%7Bparts%7D%0A%5Cpart%5B5%5D+For+what+values+of+%5C%28n%5C%29+is+the+statement+in+the+previous+question+true%3F%0A%5Cvspace%7B40pt%7D%0A%0A%5Cpart%5B2+%5Chalf%5D+For+%5C%28n%3D2%5C%29+there%27s+a+theorem+with+a+special+name.+What%27s+that+name%3F%0A%5Cvspace%7B40pt%7D%0A%0A%5Cpart%5B2+%5Chalf%5D+What+famous+mathematician+had+an+elegant+proof+for+this+theorem+but+there+was%0Anot+enough+space+in+the+margin+to+write+it+down%3F%0A%0A%5Cvspace%7B40pt%7D%0A%5Cend%7Bparts%7D%0A%0ANow+we%27ll+use+%5Cverb%7C%5Cpointsinrightmargin%7C%0A%0A%5Cpointsinrightmargin%0A%5Cquestion+Given+the+equation+%5C%28x%5En+%2B+y%5En+%3D+z%5En%5C%29+for+%5C%28x%2Cy%2Cz%5C%29+and+%5C%28n%5C%29+positive%0Aintegers.+%0A%5Cbegin%7Bparts%7D%0A%5Cpart%5B5%5D+For+what+values+of+%5C%28n%5C%29+is+the+statement+in+the+previous+question+true%3F%0A%5Cvspace%7B40pt%7D%0A%0A%5Cpart%5B2+%5Chalf%5D+For+%5C%28n%3D2%5C%29+there%27s+a+theorem+with+a+special+name.+What%27s+that+name%3F%0A%5Cvspace%7B40pt%7D%0A%0A%5Cpart%5B2+%5Chalf%5D+What+famous+mathematician+had+an+elegant+proof+for+this+theorem+but+there+was%0Anot+enough+space+in+the+margin+to+write+it+down%3F%0Aintegers.+%0A%5Cend%7Bparts%7D%0A%5Cend%7Bquestions%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>The following image shows the output of the code above:
+</p><p><img alt="Examclassmargins.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/29/Examclassmargins.png" decoding="async" width="800" height="609" />
+</p>
+<h3><span class="mw-headline" id="Changing_default_names_in_Grade_Tables">Changing default names in Grade Tables</span></h3>
+<p>The commands depend on the format and the information displayed on the table. The <b>h</b> and <b>v</b> within each command mean horizontal or vertical orientation. If the command is preceded by a <b>b</b> means it changes the format in a bonus table, if the command is preceded by a <b>c</b> means it works on combined tables. For instance, to change the word "Score" in a vertical oriented bonus table for the words "Points Awarded" you should use <code>\bvsword{Points Awarded}</code>. 
+</p><p>Below a table with the default values is shown.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th></th>
+<th><b>horizontal</b></th>
+<th><b>vertical</b>
+</th></tr>
+<tr>
+<td><b>grades table</b>
+</td>
+<td>
+<p><code>\hqword{Question:}
+</code></p><p><code>\hpgword{Page:}
+</code></p><p><code>\hpword{Points:}
+</code></p><p><code>\hsword{Score:}
+</code></p><p><code>\htword{Total} 
+</code>
+</p>
+</td>
+<td>
+<p><code>\vqword{Question}
+</code></p><p><code>\vpgword{Page}
+</code></p><p><code>\vpword{Points}
+</code></p><p><code>\vsword{Score}
+</code></p><p><code>\vtword{Total:}</code>
+</p>
+</td></tr>
+<tr>
+<td><b>bonus points table</b>
+</td>
+<td>
+<p><code>\bhqword{Question:}
+</code></p><p><code>\bhpgword{Page:}
+</code></p><p><code>\bhpword{Bonus Points:}
+</code></p><p><code>\bhsword{Score:}
+</code></p><p><code>\bhtword{Total} </code>
+</p>
+</td>
+<td>
+<p><code>\bvqword{Question}
+</code></p><p><code>\bvpgword{Page}
+</code></p><p><code>\bvpword{Bonus Points}
+</code></p><p><code>\bvsword{Score}
+</code></p><p><code>\bvtword{Total:}</code>
+</p>
+</td></tr>
+<tr>
+<td><b>combined table</b>
+</td>
+<td>
+<p><code>\chqword{Question:}
+</code></p><p><code>\chpgword{Page:}
+</code></p><p><code>\chpword{Points:}
+</code></p><p><code>\chbpword{Bonus Points:}
+</code></p><p><code>\chsword{Score:}
+</code></p><p><code>\chtword{Total} </code>
+</p>
+</td>
+<td>
+<p><code>\cvqword{Question}
+</code></p><p><code>\cvpgword{Page}
+</code></p><p><code>\cvpword{Points}
+</code></p><p><code>\cvbpword{Bonus Points}
+</code></p><p><code>\cvsword{Score}
+</code></p><p><code>\cvtword{Total:}</code>
+</p>
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span></h2>
+<p>For more information see:
+</p>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating a document in LaTeX</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning Equations</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning images and tables</a></li>
+<li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a rel="nofollow" class="external text" href="https://mirror.ox.ac.uk/sites/ctan.org/macros/latex/contrib/exam/examdoc.pdf">The <b>exam</b> class documentation</a>.</li></ul>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="Operators.html" title="Operators">Operators</a></li>
+<li><a href="Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="French.html" title="French">French</a></li>
+<li><a href="German.html" title="German">German</a></li>
+<li><a href="Greek.html" title="Greek">Greek</a></li>
+<li><a href="Italian.html" title="Italian">Italian</a></li>
+<li><a href="Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="Korean.html" title="Korean">Korean</a></li>
+<li><a href="Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="Russian.html" title="Russian">Russian</a></li>
+<li><a href="Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="Indices.html" title="Indices">Indices</a></li>
+<li><a href="Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="Counters.html" title="Counters">Counters</a></li>
+<li><a href="Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="Tutorials.html">Tutorials</a></li><li><a href="Inserting_Images.html">How to insert images</a></li><li><a href="Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Typesetting_exams_in_LaTeX.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==" src="../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="8WoK24LGmjWxLKnrWvQn6Q==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Typesetting_exams_in_LaTeX by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:56:03 GMT -->
+</html>

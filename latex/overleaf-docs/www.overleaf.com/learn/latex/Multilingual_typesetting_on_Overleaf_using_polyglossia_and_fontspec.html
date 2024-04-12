@@ -1,0 +1,510 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:37:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Multilingual typesetting on Overleaf using polyglossia and fontspec - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Multilingual typesetting on Overleaf using polyglossia and fontspec"><meta name="og:title" content="Multilingual typesetting on Overleaf using polyglossia and fontspec"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html"><link rel="stylesheet" href="../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" hreflang="ja"><link rel="preload" href="../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="Kx7gK0D2FxyhtHXBAJxvbw=="><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="tQD3jrAd-fSxwobVg3xsEnSTQkk85qybSEKU"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="https://www.overleaf.com/" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Multilingual typesetting on Overleaf using polyglossia and fontspec</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><p class="mw-empty-elt">
+</p><h2>Introduction</h2>
+<p>This article provides an overview of typesetting multilingual documents on Overleaf using the XeLaTeX (or LuaLaTeX) compiler in conjunction with the <code>fontspec</code> and <code>polyglossia</code> LaTeX packages.</p>
+
+<p>For many, if not most, users their default choice of TeX engine is <code>pdfTeX</code>, which, unlike XeTeX and LuaTeX, does not have a built-in capability to read <a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a> encoded text files. Using pdfTeX makes typesetting certain languages in LaTeX very complicated, especially those that do not use a Latin-based script. Some packages—such as <a href="Arabic.html"><code>inputenc</code>, <code>fontenc</code> and </a><a href="Arabic.html"><code>arabtex</code></a>—provide support to pdfTeX for typesetting non-Latin languages and scripts, but not all glyphs and characters may be supported or rendered correctly in the output PDF, even if you’ve used the <code>utf8</code> or <code>utf8x</code> option with <code>inputenc</code>.</p>
+
+<p>For an in-depth discussion of UTF-8, Unicode encoding and the XeTeX/LuaTeX engines, the Overleaf article <a href="Articles/Unicode%2c_UTF-8_and_multilingual_text__An_introduction.html">Unicode, UTF-8 and multilingual text: An introduction</a> is a fascinating read.</p>
+
+<h2>Enter XeTeX and LuaTeX</h2>
+<p>The XeTeX and LuaTeX engines can directly read/process UTF-8 encoded text; consequently, they offer native support for Unicode—they can also <a href="XeLaTeX.html">work with TrueType and OpenType fonts</a> directly. These properties make them a natural choice for typesetting multilingual or non-Latin documents in LaTeX, producing outputs like these:</p>
+<p><img width="500px" src="../../../images.ctfassets.net/nrgyaltdicpt/YwYexcfSPD10jYga8XcWM/ef6136c620e032179e9d731e19bd724a/sample1.png" /> <img width="500px" src="../../../images.ctfassets.net/nrgyaltdicpt/3O5A7RzoRXAKKkSaB1auhN/01b7d6d89bad727e04376eb90fa80cd8/sample2.png" /> <img width="500px" src="../../../images.ctfassets.net/nrgyaltdicpt/Tid4hqLr2ATsHbKf0RJYt/dacab1eb815d4bfa071de140d90547a5/multilingual-tq.png" /></p>
+<p>These examples can be found in the Overleaf Gallery: <a href="https://www.overleaf.com/latex/examples/how-to-write-multilingual-text-with-different-scripts-in-latex/wfdxqhcyyjxz">How to Write Multilingual Text with Different Scripts in LaTeX on Overleaf</a> and <a href="https://www.overleaf.com/latex/templates/multilingual-thank-you/wjmrnnqkstyf">Multilingual "Thank-You"</a>.</p>
+
+<p>If you’re looking to typeset Chinese, Japanese and Korean, have a look at these articles:</p>
+<ul>
+<li><a href="Chinese.html">Chinese</a></li>
+<li><a href="Japanese.html">Japanese</a></li>
+<li><a href="Korean.html">Korean</a></li>
+</ul>
+
+<p>Xe(La)TeX is still useful for these languages, but more specialised TeX engines are available, specifically <a href="TeX_primitives_listed_by_CJK_TeX_engine.html">designed for typesetting CJK languages</a>—such as <a href="https://ctan.org/pkg/ptex?lang=en">pTeX</a> for typesetting Japanese.</p>
+
+<p>Note that if your cursor seems to be misbehaving whilst editing text in certain languages on Overleaf, you may want to click on the Overleaf <strong>Menu</strong> button (situated above the project file list) and change the “Font Family” option. You could also try <a href="https://www.howtogeek.com/208552/how-to-change-the-default-fonts-in-your-web-browser/">changing your browser’s monospaced font preferences</a> or using Overleaf’s Rich Text view instead. However, at the time of writing, the Source and Rich Text views may not (yet) fully support right-to-left text editing at the level of functionality we are aiming to achieve.</p>
+
+<h2>Changing the project’s compiler</h2>
+<p>The <code>fontspec</code> and <code>polyglossia</code> packages require the XeLaTeX or LuaLaTeX compiler, so you’ll need to set up your Overleaf project to use either of those compilers. Detailed instructions can be found in our article <a href="Choosing_a_LaTeX_Compiler.html">Choosing a LaTeX Compiler</a> but here is a brief video clip showing how to set the compiler for your project:</p>
+
+<p class="mw-empty-elt"></p><div style="max-width:800px">
+ 
+<video controls width="100%" src="https://videos.ctfassets.net/nrgyaltdicpt/2HDpWlJuNR50hknbpxfQdu/93cdc17ef2c6c77249a1c7c76b34a817/choosingcompiler.mp4" type="video/mp4">
+</video>
+
+</div><p class="mw-empty-elt"></p>
+
+<p>Once you’re compiling with XeLaTeX or LuaLaTeX, you can (should) remove the <code>inputenc</code> and <code>fontenc</code> packages from your .tex file’s preamble because these Unicode-capable engines will assume input (text) files are UTF-8 encoded. Incidentally, all text files uploaded to Overleaf are converted to UTF-8 so you should usually use <code>utf8</code> with <code>inputenc</code> when working with the pdfLaTeX and LaTeX compilers on Overleaf.</p>
+
+<h2>If your entire document involves just one language</h2>
+<p>When using the <code>fontspec</code> package you might get away with only setting up a main (serif) font, a sans-serif font and probably a monospaced font designed to support the language you are typesetting—there’s a catch, but we’ll revisit that later in the article. For example, if your entire document is in Greek, with some English words, you can simply write</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<span class="k">\setmainfont</span><span class="na">[Script=Greek]</span><span class="nb">{</span>GFS Artemisia<span class="nb">}</span>
+<span class="k">\setsansfont</span><span class="na">[Script=Greek]</span><span class="nb">{</span>GFS Neohellenic<span class="nb">}</span>
+<span class="k">\setmonofont</span><span class="na">[Script=Greek]</span><span class="nb">{</span>Noto Mono<span class="nb">}</span>
+. . .
+Το Lorem Ipsum είναι <span class="k">\textsf</span><span class="nb">{</span>απλά<span class="nb">}</span> ένα κείμενο χωρίς νόημα
+για τους επαγγελματίες της <span class="k">\texttt</span><span class="nb">{</span>τυπογραφίας<span class="nb">}</span> και στοιχειοθεσίας.
+</pre></div>
+<p class="mw-empty-elt">
+</p><p>You can choose fonts from a <a href="https://www.overleaf.com/help/193">list of available TrueType and OpenType fonts</a>. The <code>Ligatures=TeX</code> option is added automatically for <code>\setmainfont</code> and <code>\setsansfont</code>, so you don’t have to add that yourself. (<code>\setromanfont</code> is an alias of <code>\setmainfont</code>.)</p>
+
+<p>The LaTeX code above produces the following output:</p>
+<p><img src="../../../images.ctfassets.net/nrgyaltdicpt/24x1U8prR9yjoiV5KS4Dpz/dc7bb432f9c0b2944b0617a2fad2a359/only-greek.png" /></p>
+
+<h2 id="french-english-russian-thai">Multiple languages/scripts in the same document: Introducing polyglossia</h2>
+<p>If your document contains non-trivial amounts of text in multiple languages, the <code>polyglossia</code> package is helpful to help take care of language-specific typesetting conventions and hyphenation.</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>fontspec<span class="nb">}</span>
+<span class="k">\setmainfont</span><span class="nb">{</span>FreeSerif<span class="nb">}</span>
+<span class="k">\setsansfont</span><span class="nb">{</span>FreeSans<span class="nb">}</span>
+<span class="k">\setmonofont</span><span class="nb">{</span>FreeMono<span class="nb">}</span>
+
+<span class="k">\usepackage</span><span class="nb">{</span>polyglossia<span class="nb">}</span>
+<span class="k">\setdefaultlanguage</span><span class="nb">{</span>french<span class="nb">}</span>
+<span class="k">\setotherlanguages</span><span class="nb">{</span>english,russian,thai<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>abstract<span class="nb">}</span>
+Le Lorem Ipsum est simplement du faux texte employé dans 
+la composition et la mise en page avant impression.
+<span class="k">\end</span><span class="nb">{</span>abstract<span class="nb">}</span>
+
+Merci. <span class="k">\textenglish</span><span class="nb">{</span>Thank you.<span class="nb">}</span> <span class="k">\textrussian</span><span class="nb">{</span>Спасибо.<span class="nb">}</span> Et plus de
+texte en français!
+
+Le Lorem Ipsum est le faux texte standard ...
+
+<span class="k">\begin</span><span class="nb">{</span>english<span class="nb">}</span>
+Lorem Ipsum is simply dummy text ...
+<span class="k">\end</span><span class="nb">{</span>english<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>russian<span class="nb">}</span>
+Lorem Ipsum - это текст-`<span class="k">\textsf</span><span class="nb">{</span>рыба<span class="nb">}</span>', часто используемый в 
+<span class="k">\texttt</span><span class="nb">{</span>печати<span class="nb">}</span> и вэб-дизайне. ...
+<span class="k">\end</span><span class="nb">{</span>russian<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>thai<span class="nb">}</span>
+<span class="k">\XeTeXlinebreaklocale</span> "th<span class="nb">_</span>TH"
+<span class="k">\textenglish</span><span class="nb">{</span>Lorem Ipsum<span class="nb">}</span> คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์
+<span class="k">\end</span><span class="nb">{</span>thai<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+</p><p><img src="../../../images.ctfassets.net/nrgyaltdicpt/6oVjVQKiJydw1DlB5et3qx/00f619df64fa29b461aed656dc160fe8/latin-cyrillic-thai.png" /></p>
+<p><code>polyglossia</code> lets you set the main language of the document with <code>\setdefaultlanguage</code> (default is English) and (possibly multiple) ‘other’ languages with <code>\setotherlanguages</code>. (<code>\setmainlanguage</code> is an alias of <code>\setdefaultlanguage</code>.) If you expect to be using just one other foreign language you can use the singular <code>\setotherlanguage</code>. The language names are the same as those used by <code>babel</code>.</p>
+
+<p>We’ve prepared a small example of a (primarily) French document which also contains some English, Russian and Thai text. We’ve decided to use the FreeSerif, FreeSans and FreeMono typefaces.</p>
+
+<p>Because the document’s main language is <code>french</code>, the <code>abstract</code> environment automatically produces the heading ‘Résumé’. Notice how, at the end of the first paragraph, the exclamation mark is typeset using the French-spacing typesetting convention: it is set apart from ‘français’ even though it follows immediately after the word <code>français</code> in the source code.</p>
+
+<p>In the main text, short English, Cyrillic and Thai text snippets can be included in a paragraph of French text with <code>\textenglish{Thank you}</code>, <code>\textrussian{Спасибо}</code> and <code>\textthai{ขอบคุณ}</code>. Generally, you can use <code>\textLANGUAGE{...}</code> to typeset text in any <code>LANGUAGE</code> that has been declared by <code>\setdefaultlanguage</code> and <code>\setotherlanguages</code>. Because the document’s main (serif) font is FreeSerif, and FreeSerif contains glyphs for Latin, Cyrillic and Thai (and more!) scripts, <code>fontspec</code> and <code>polyglossia</code> can use it to render all these texts into the output PDF.</p>
+
+<p>For longer paragraphs of text in foreign/other languages, it is recommended to use <code>\begin{LANGUAGE}</code>...<code>\end{LANGUAGE}</code>, e.g. <code>\begin{russian}</code>...<code>\end{russian}</code>, <code>\begin{thai}</code>...<code>\end{thai}</code>. In the case of Arabic you can’t use <code>\begin{arabic}</code>...<code>\end{arabic}</code>; you’ll have to write <code>\begin{Arabic}</code>...<code>\end{Arabic}</code> instead, while <code>\textarabic{...}</code> is still valid.</p>
+
+<p>Some considerations may be needed for certain languages: for instance, within the <code>thai</code> environment, the words <code>Lorem Ipsum</code> need to be wrapped in a <code>\textenglish{...}</code> (or <code>\textfrench{...}</code>) command to ensure they are rendered using the Latin-script glyphs.</p>
+
+<p>At this point you might ask: If FreeSerif is so versatile and contains glyphs for Russian and Thai anyway, why would we still need to use <code>\textrussian</code>, <code>\begin{english}</code>...<code>\end{english}</code> etc? Wouldn’t that be redundant? Let’s see what happens when we remove the <code>\begin{english}</code>...<code>\end{english}</code> and <code>\begin{russian}</code>...<code>\end{russian}</code> environments:</p>
+
+<p><img src="../../../images.ctfassets.net/nrgyaltdicpt/5uJEFZAyuLXhRzKZOE9CWG/dd7bce15cacd3a4b99bf81e388e6b7cc/wrong-hyphenation.png" /></p>
+
+<p>Certainly, the Latin and Cyrillic glyphs are all rendered in the output PDF, but note that some words are now hyphenated incorrectly: ‘unk-nown’ and ‘unchan-ged’—and стандартной isn’t hyphenated at all. Without the language-switching environments, the compiler thinks these text items are still in the French language and attempts to typeset them using French conventions. The compiler tries to apply French hyphenation rules which, naturally, produce incorrect results. This is why typography and typesetting is so much more than just font design and selection: they are very language- and culture-specific disciplines.</p>
+
+<p>Revisiting our first Greek example, we now see why it is a good idea to load <code>polyglossia</code> and use <code>\setdefaultlanguage{greek}</code>: to ensure the document is typeset following Greek conventions.</p>
+
+<h2 id="rtl">Mixing right-to-left (RTL) and left-to-right (LTR) languages</h2>
+<p>You need to be careful when typesetting a mixture of right-to-left (RTL) scripts, such as Arabic or Hebrew, and left-to-right (LTR) scripts in the same document. Consider the following small Arabic document with an English word, using Amiri as the main font:</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>polyglossia<span class="nb">}</span>
+<span class="k">\setdefaultlanguage</span><span class="nb">{</span>arabic<span class="nb">}</span>
+<span class="k">\setmainfont</span><span class="nb">{</span>Amiri<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+ما هو differentiation
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+</p><p>which produces:</p>
+<p><img src="../../../images.ctfassets.net/nrgyaltdicpt/1K1IXyuUfyWFUCQC5ftZNm/1b32c9608991a1ddee0469a6ad1bc990/bidi-english-wrong.png" /></p>
+
+<p>The text is automatically set right-to-left, starting on the right-hand edge of the page. The word “differentiation” itself is typeset correctly as left-to-right text–but wait, <em>no it’s not</em>! It’s rendered as “dffirentiation” in the output! What’s going on?</p>
+
+<p>The Amiri font does have glyphs for Latin alphabets but here the text <code>differentiation</code> is not marked as English: the compiler treats <code>differentiation</code> as right-to-left text, as if it were a sequence of Arabic characters. During typesetting, the original sequence <code>iff</code> is processed as <code>ffi</code> (i.e., as RTL text) and Amiri’s <a href="https://en.wikipedia.org/wiki/Typographic_ligature">ligature</a> glyph for “ffi” is typeset. Marking the word with <code>\textenglish{...}</code> ensures it is  interpreted correctly as left-to-right text.</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\setmainfont</span><span class="nb">{</span>Amiri<span class="nb">}</span>
+<span class="k">\setotherlanguage</span><span class="nb">{</span>english<span class="nb">}</span>
+<span class="k">\newfontfamily\englishfont</span><span class="nb">{</span>TeX Gyre Termes<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+ما هو <span class="k">\textenglish</span><span class="nb">{</span>differentiation<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+</p><p><img src="../../../images.ctfassets.net/nrgyaltdicpt/3AWTmrC2PHN0tu69oGeOvs/dae187b766f8edd1357025e375268b08/bidi-english-right.png" /></p>
+
+<p><strong>Note:</strong> If you’re used to the <code>babel</code> package commands you’ll be happy to hear that the commands <code>\selectlanguage</code>, <code>\foreignlanguage</code> and the environment <code>otherlanguage</code> are also supported by <code>polyglossia</code>.</p>
+
+<h2>Language-specific options</h2>
+<p>Some languages support additional options for customisation; for example, <code>greek</code> accepts a <code>variant=ancient</code>, <code>mono</code> or <code>poly</code> option for ancient, monotonic or polytonic Greek; <code>hindi</code> can be configured with <code>numerals=western</code> or <code>devanagari</code>.  See the <a href="http://texdoc.net/pkg/polyglossia">polyglossia package documentation</a> for details.</p>
+
+<p>These can be specified when loading the language:</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\setdefaultlanguage</span><span class="na">[variant=poly]</span><span class="nb">{</span>greek<span class="nb">}</span>
+<span class="k">\setotherlanguage</span><span class="na">[numerals=western]</span><span class="nb">{</span>hindi<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+</p><p>or later at anytime:</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\setkeys</span><span class="nb">{</span>greek<span class="nb">}{</span>variant=ancient<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+</p><p>or even locally for a specific environment:</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>greek<span class="nb">}</span>[variant=ancient]
+...
+<span class="k">\end</span><span class="nb">{</span>greek<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+
+</p><h2 id="lang-font">Specifying fonts for specific languages</h2>
+<p>You can specify the font used for different languages. Suppose you’d like to typeset all English text (contained in our previous example) in italics; you could write:</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newfontfamily\englishfont</span><span class="nb">{</span>FreeSerif Italic<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+</p><p><img src="../../../images.ctfassets.net/nrgyaltdicpt/54QZQqGii5yNM7FO2uGZCb/614f8d89f552fd76ca0ad0cbc9d2059a/english-italic.png" /></p>
+<p>You can of course use something even more flamboyant:</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newfontfamily\englishfont</span><span class="nb">{</span>Chancery Uralic<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+</p><p><img src="../../../images.ctfassets.net/nrgyaltdicpt/6YGQDB7ZwsuyAhkSZfQra7/582ca6cc533b85c4bbce96bfbe0c58e3/english-cursive.png" /></p>
+<p>This mechanism of setting fonts for different languages or scripts is especially important when you use a main font that <em>does not</em> have glyphs for all scripts or languages in your document. Suppose we now decide to use Caladea as the main document font:</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\setmainfont</span><span class="nb">{</span>Caladea<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+</p><p>Upon compilation we would see the following error:</p>
+<div class="example">
+
+<p class="mw-empty-elt"></p>
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Package polyglossia Error: The current roman font
+does not contain the Cyrillic script!
+
+(polyglossia)                Please define
+\cyrillicfont with \newfontfamily.
+
+See the polyglossia package documentation for
+explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...
+
+l.15 \select@language {russian}
+
+Package polyglossia Error: The current roman font
+does not contain the Thai script!
+
+(polyglossia)                Please define
+\thaifont with \newfontfamily.
+
+See the polyglossia package documentation for
+explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...
+
+l.23 \select@language {thai}
+...
+</pre></div>
+<p class="mw-empty-elt">
+</p></div>
+
+<p>We are now obligated to specify which fonts to use for Cyrillic and Thai scripts. Again, you can refer to the <a href="https://www.overleaf.com/help/193">list of available TrueType and OpenType fonts</a> on Overleaf.</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newfontfamily\cyrillicfont</span><span class="na">[Script=Cyrillic]</span><span class="nb">{</span>Charis SIL<span class="nb">}</span>
+<span class="k">\newfontfamily\thaifont</span><span class="na">[Script=Thai]</span><span class="nb">{</span>Garuda<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+
+</p><p><img src="../../../images.ctfassets.net/nrgyaltdicpt/39w9oCI6nN24PAzzH4Txba/a3d9242ff432eacf31c6c94e63812698/custom-fonts.png" /></p>
+
+<p><strong>Note</strong>: it is outside the scope of this article to address issues relating to choices of aesthetically-pleasing and typographically-compatible font combinations.</p>
+
+<p>Notice that we’ve defined <code>\cyrillicfont</code> instead of <code>\russianfont</code>, i.e. we defined a font for the Cyrillic <em>script</em> rather than the Russian <em>language</em>. The advantage of defining <code>\cyrillicfont</code> is that if, for example, <code>serbian</code> is also a defined language in your project, then <code>\textserbian</code> would automatically use the defined <code>\cyrillicfont</code>. If you had defined only <code>\russianfont</code>, then using <code>\textserbian</code> would again complain about “the current roman font does not contain the Cyrillic script” and you would need to define <code>\cyrillicfont</code> anyway — <em>unless</em> you <em>did</em> mean to use a different font for Serbian text!</p>
+
+<p id="devnag">Another similar scenario is the Devanagari <em>script</em>, which is used for the Hindi and Sanskrit <em>languages</em>; or the Arabic script used for Arabic and Farsi (Persian).</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\setdefaultlanguage</span><span class="nb">{</span>english<span class="nb">}</span>
+<span class="k">\setotherlanguages</span><span class="nb">{</span>hindi,sanskrit<span class="nb">}</span>
+<span class="k">\newfontfamily\devanagarifont</span><span class="na">[Script=Devanagari]</span><span class="nb">{</span>Lohit Devanagari<span class="nb">}</span>
+...
+Hindi: <span class="k">\texthindi</span><span class="nb">{</span>हिन्दी<span class="nb">}</span>
+Sanskrit: <span class="k">\textsanskrit</span><span class="nb">{</span>संस्कृतम्<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+</p><p><img src="../../../images.ctfassets.net/nrgyaltdicpt/4YZJY37I3i6BFkAmEHva0N/906849dc4425b31ada4cb2e7ca0278a3/devanagari.png" /></p>
+
+<p>When using <code>\newfontfamily</code> it is necessary to specify the <code>Script</code>,  otherwise some glyphs may be rendered incorrectly; for example, if we had written only <code>\newfontfamily\thaifont{Garuda}</code> the typeset result may be wrong (left image below)—the correct output is produced by adding <code>[Script=Thai]</code>.</p>
+<p> Wrong: <img src="../../../images.ctfassets.net/nrgyaltdicpt/7miVUbpxQ3aLSj8hUNLRgU/e713e9f3b989ef470a360a48bb4398f0/thai-wrong.png" style="width:4em" /> Correct: <img src="../../../images.ctfassets.net/nrgyaltdicpt/431aJiGZAaZfI55X4qWyqd/af524f5cb31250f9f3fb3f4870f67842/thai-right.png" style="width:4em" /></p>
+
+<h2 id="lang-font-fam">Defining other font families</h2>
+<p>Let’s have a look at another example, this time with Hebrew:</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>polyglossia<span class="nb">}</span>
+<span class="k">\setdefaultlanguage</span><span class="na">[numerals=hebrew]</span><span class="nb">{</span>hebrew<span class="nb">}</span>
+<span class="k">\setotherlanguage</span><span class="nb">{</span>english<span class="nb">}</span>
+<span class="k">\newfontfamily\hebrewfont</span><span class="na">[Script=Hebrew]</span><span class="nb">{</span>Hadasim CLM<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>מבוא<span class="nb">}</span>
+זוהי עובדה מבוססת שדעתו של הקורא תהיה מוסחת עלידי טקטס קריא כאשר הוא יביט בפריסתו.  -
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+</p><p><img src="../../../images.ctfassets.net/nrgyaltdicpt/7at7BZR3TDAjtoWj87YPXf/c33b7495ec4d9e44a0b121997a21aa86/hebrew-allserif.png" /></p>
+<p>So far so good. Now suppose we were using a template originally created for an English document, which sets section headers in sans serif type using the <code>titlesec</code> package:</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\RequirePackage</span><span class="nb">{</span>titlesec<span class="nb">}</span>
+<span class="k">\titleformat</span><span class="nb">{</span><span class="k">\section</span><span class="nb">}{</span><span class="k">\Large\sffamily\bfseries</span><span class="nb">}{</span><span class="k">\thesection</span><span class="nb">}{</span>1em<span class="nb">}{}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>polyglossia<span class="nb">}</span>
+<span class="k">\setdefaultlanguage</span><span class="na">[numerals=hebrew]</span><span class="nb">{</span>hebrew<span class="nb">}</span>
+...
+</pre></div>
+<p class="mw-empty-elt">
+</p><p>We are confronted with the error message:</p>
+<div class="example">
+
+<p class="mw-empty-elt"></p>
+<div class="code mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Package polyglossia Error: The current roman font
+does not contain the Hebrew script!
+
+(polyglossia)                Please define
+\hebrewfont with \newfontfamily.
+
+See the polyglossia package documentation for
+explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...
+
+l.27 \section{מבוא}
+</pre></div>
+<p class="mw-empty-elt">
+</p></div>
+
+<p>This is a bit confusing: didn’t we already define <code>\hebrewfont</code> to be Hadasim CLM? Well, it’s really because we <em>haven’t specified a sans serif font for Hebrew</em>. Let’s remedy this by adding a definition for <code>\hebrewfontsf</code>:</p>
+
+<p class="mw-empty-elt"></p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newfontfamily\hebrewfontsf</span><span class="na">[Script=Hebrew]</span><span class="nb">{</span>Miriam CLM<span class="nb">}</span>
+</pre></div>
+<p class="mw-empty-elt">
+</p><p>And now we have the output:</p>
+<p><img src="../../../images.ctfassets.net/nrgyaltdicpt/5yR4NIS54LgeYHm0tc89PU/590ddc3bf34b74534ad54f35dc43e2e1/hebrew-serif-sans.png" /></p>
+<p>Should the need arise, we could also define a monospaced font to use with <code>\hebrewfonttt</code>.</p>
+
+<h2>Acknowledgements</h2>
+<p>All lorem ipsum snippets, in various languages, are from <a href="https://lipsum.com/"><code>https://lipsum.com</code></a>.
+
+</p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="Operators.html" title="Operators">Operators</a></li>
+<li><a href="Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="French.html" title="French">French</a></li>
+<li><a href="German.html" title="German">German</a></li>
+<li><a href="Greek.html" title="Greek">Greek</a></li>
+<li><a href="Italian.html" title="Italian">Italian</a></li>
+<li><a href="Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="Korean.html" title="Korean">Korean</a></li>
+<li><a href="Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="Russian.html" title="Russian">Russian</a></li>
+<li><a href="Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="Indices.html" title="Indices">Indices</a></li>
+<li><a href="Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="Counters.html" title="Counters">Counters</a></li>
+<li><a href="Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="https://www.overleaf.com/" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="Tutorials.html">Tutorials</a></li><li><a href="Inserting_Images.html">How to insert images</a></li><li><a href="Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==" src="../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="Kx7gK0D2FxyhtHXBAJxvbw==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:37:14 GMT -->
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:01:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>What is a &quot;TeX token&quot;? - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="What is a &quot;TeX token&quot;?"><meta name="og:title" content="What is a &quot;TeX token&quot;?"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="What_is_a__TeX_token__.html"><link rel="stylesheet" href="../../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="What_is_a__TeX_token__.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" hreflang="ja"><link rel="preload" href="../../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="EBlFxMlJc0YzRwtIsI5E7w=="><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="3jHQ5PTY-dKKiv3_aNb8CWfks5VdoOWPDeVI"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/What_is_a_%22TeX_token%22%3F&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/What_is_a_%22TeX_token%22%3F&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>What is a &quot;TeX token&quot;?</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Motivation_for_a_series_on_TeX_tokens_and_related_concepts"><span class="tocnumber">1</span> <span class="toctext">Motivation for a series on TeX tokens and related concepts</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Introduction:_what_is_our_aim?"><span class="tocnumber">2</span> <span class="toctext">Introduction: what is our aim?</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#But_first:_primitives_and_command_codes"><span class="tocnumber">3</span> <span class="toctext">But first: primitives and command codes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Command_modifiers:_two_types"><span class="tocnumber">3.1</span> <span class="toctext">Command modifiers: two types</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Type_1_command_modifiers_(an_example)"><span class="tocnumber">3.1.1</span> <span class="toctext">Type 1 command modifiers (an example)</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Type_2_command_modifiers_(a_brief_explanation)"><span class="tocnumber">3.1.2</span> <span class="toctext">Type 2 command modifiers (a brief explanation)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Command_codes:_expandable_and_non-expandable"><span class="tocnumber">3.2</span> <span class="toctext">Command codes: expandable and non-expandable</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#The_journey_from_input_text_to_TeX_tokens"><span class="tocnumber">4</span> <span class="toctext">The journey from input text to TeX tokens</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Making_a_hash_of_it"><span class="tocnumber">5</span> <span class="toctext">Making a hash of it</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Consulting_the_equivalents_table"><span class="tocnumber">5.1</span> <span class="toctext">Consulting the equivalents table</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#A_note_on_grouping:_the_need_to_save_and_restore_information"><span class="tocnumber">5.1.1</span> <span class="toctext">A note on grouping: the need to save and restore information</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#The_equivalents_table:_by_analogy"><span class="tocnumber">5.2</span> <span class="toctext">The equivalents table: by analogy</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#What_does_the_equivalents_table_say_for_def?"><span class="tocnumber">5.3</span> <span class="toctext">What does the equivalents table say for def?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#TeX_tokens_for_commands"><span class="tocnumber">6</span> <span class="toctext">TeX tokens for commands</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#TeX_tokens_for_characters"><span class="tocnumber">7</span> <span class="toctext">TeX tokens for characters</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Token_lists_containing_characters"><span class="tocnumber">7.1</span> <span class="toctext">Token lists containing characters</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Motivation_for_a_series_on_TeX_tokens_and_related_concepts">Motivation for a series on TeX tokens and related concepts</span></h2>
+<p>The motivation, and methodology used, to produce a series of articles on TeX tokens and related concepts is discussed in this article <a rel="nofollow" class="external text" href="https://www.overleaf.com/blog/521-a-new-series-of-articles-tex-tokens-and-related-concepts-but-why-and-how">A New Series of Articles: TeX Tokens and Related Concepts—But Why (and How)?</a> As noted in that article, throughout this series we are basing our discussions and explanations on insights gained through a custom build of Knuth’s original TeX program—using it to produce a series of articles that aims to provide simple descriptions and easy-to-follow explanations of key TeX concepts.
+</p>
+<h2><span id="Introduction:_what_is_our_aim.3F"></span><span class="mw-headline" id="Introduction:_what_is_our_aim?">Introduction: what is our aim?</span></h2>
+<p>In this article we find out exactly what a TeX token is by tracing the processing journey from characters in the input file to the actual creation of TeX tokens. In practice, it is quite complex so we have reduced the process down to its core essentials, striving to make it easy to follow and understand whilst preserving technical accuracy. 
+</p><p>We start by introducing some important internal TeX concepts: <i>primitives</i>, <em>command codes</em> and <em>command modifiers</em>. From there, we use a very simple macro example to see exactly how TeX processes the command <code>\def</code> and the resulting token that TeX creates to represent that command. 
+</p><p>We conclude with a brief look at how TeX creates tokens to represent characters and how a character’s <code>\catcode</code> does indeed become permanently attached to a character token—something often mentioned in books about TeX but here we see exactly how that is achieved.
+</p><p>The following graphic shows the journey we will summarize—from input text to TeX tokens:
+</p>
+<div class="center"><div class="floatnone"><img alt="The journey from TeX input to TeX token." src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/4a/Textoken.png" decoding="async" title="The journey from TeX input to TeX token." width="400" height="396" /></div></div>
+<h2><span class="mw-headline" id="But_first:_primitives_and_command_codes">But first: primitives and command codes</span></h2>
+<p>Every TeX engine (Knuthian TeX, pdfTeX, XeTeX, LuaTeX) understands a number of built-in commands: the so-called <em>primitives</em>—the fundamental building-block commands that underpin TeX’s programmability. They are called “primitive” because, unlike user-defined macros, they are not constructed from other commands and cannot be further reduced to simpler instructions. For Knuth’s TeX there are approximately 320 primitives—although we should note that other TeX engines such as pdfTeX, XeTeX and LuaTeX have all added new commands to Knuth’s original program and will contain primitives that are not present in Knuth’s TeX software.
+</p><p>Internally, TeX assigns a numeric <em>command code</em> to all commands—whether they are user-defined macros or built-in primitives. These command codes are not accessible to the TeX user, they are simply part of the internal mechanics of TeX’s processing but it is useful to know about them for later discussion of TeX tokens. 
+</p><p>Groups of commands that have related functionalty share the same command code. For example, the <code>\def</code>, <code>\gdef</code>, <code>\edef</code> and <code>\xdef</code> primitives all are used to define macros and share the command code of 97 (in Knuth’s TeX). Clearly, those 4 macro-definition commands each create macros in a slightly different way; consequently, during processing, TeX needs a way to distinguish between them. 
+</p><p>A command code on its own (such as 97) cannot tell you which macro-creation command is under consideration; so, as you might expect, each TeX command is assigned an additional piece of information called its <em>command modifier</em> (see examples below).
+</p>
+<h3><span class="mw-headline" id="Command_modifiers:_two_types">Command modifiers: two types</span></h3><p>
+Command modifiers fall into two categories which we’ll refer to as “Type 1” and “Type 2”—TeX does not use this terminology, it’s just convenient to do so here:</p><ul><li><strong>Type 1</strong>: Simple integer values that TeX can, if required, use to distinguish between commands sharing the same command code.</li><li><strong>Type 2</strong>: An integer value that is a numeric location in TeX’s memory telling TeX where it needs to go to lookup information for that command. For example, this applies to user-defined commands (macros) where the command modifier tells TeX where the macro definition is stored in memory.</li></ul>
+<h4><span id="Type_1_command_modifiers_.28an_example.29"></span><span class="mw-headline" id="Type_1_command_modifiers_(an_example)">Type 1 command modifiers (an example)</span></h4>
+<p>As noted, in Knuth’s TeX the four primitive commands for defining macros: <code>\def</code>, <code>\gdef</code>, <code>\edef</code>, <code>\xdef</code> all share the command code of 97: they are differentiated through their command modifiers, which are listed in the following table:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th style="vertical-align:top;text-align:left">Command</th>
+<th>Command<br />code</th>
+<th>Command<br />modifier
+</th></tr>
+<tr>
+<td><code>\def</code>
+</td>
+<td style="text-align:center">97
+</td>
+<td style="text-align:center">0
+</td></tr>
+<tr>
+<td><code>\gdef</code>
+</td>
+<td style="text-align:center">97
+</td>
+<td style="text-align:center">1
+</td></tr>
+<tr>
+<td><code>\edef</code>
+</td>
+<td style="text-align:center">97
+</td>
+<td style="text-align:center">2
+</td></tr>
+<tr>
+<td><code>\xdef</code>
+</td>
+<td style="text-align:center">97
+</td>
+<td style="text-align:center">3
+</td></tr></tbody></table>
+<p>By way of a second example, Knuth decided to implement  the commands <code>\openout</code>, <code>\write</code>, <code>\closeout</code>, <code>\special</code>, <code>\immediate</code> and <code>\setlanguage</code> as “extensions” to TeX, purely to show how you can add new primitives to TeX. In this case, those commands don’t really share “similar functionality” except that Knuth decided to group them together for purposes of explaining how to extend TeX. Those 6 commands are classified as “extensions” and grouped together with the command code value of 59 but each one has an appropriate  command modifier to differentiate it from the others:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th style="vertical-align:top;text-align:left">Command</th>
+<th>Command<br />code</th>
+<th>Command<br />modifier
+</th></tr>
+<tr>
+<td><code>\openout</code>
+</td>
+<td style="text-align:center">59
+</td>
+<td style="text-align:center">0
+</td></tr>
+<tr>
+<td><code>\write</code>
+</td>
+<td style="text-align:center">59
+</td>
+<td style="text-align:center">1
+</td></tr>
+<tr>
+<td><code>\closeout</code>
+</td>
+<td style="text-align:center">59
+</td>
+<td style="text-align:center">2
+</td></tr>
+<tr>
+<td><code>\special</code>
+</td>
+<td style="text-align:center">59
+</td>
+<td style="text-align:center">3
+</td></tr>
+<tr>
+<td><code>\immediate</code>
+</td>
+<td style="text-align:center">59
+</td>
+<td style="text-align:center">4
+</td></tr>
+<tr>
+<td><code>\setlanguage</code>
+</td>
+<td style="text-align:center">59
+</td>
+<td style="text-align:center">5
+</td></tr></tbody></table>
+<h4><span id="Type_2_command_modifiers_.28a_brief_explanation.29"></span><span class="mw-headline" id="Type_2_command_modifiers_(a_brief_explanation)">Type 2 command modifiers (a brief explanation)</span></h4>
+<p>Although all command modifiers are integers, Type 2 modifiers need a little more explanation. These command modifiers are referred to in TeX as “pointers” because they point to a location in memory where TeX can find additional information for that command. This may sound a little vague but the way TeX uses these pointers to lookup information is quite varied and a fuller explanation would distract from the core aim of this article. One example may help: macros. When a macro command is defined TeX will need to store the replacement text somewhere in memory. As we’ll see below, user-defined macros have command codes between 111 and 114 with a command modifier that is a pointer into memory telling TeX where its replacement text (the macro definition) is stored.
+</p>
+<h3><span class="mw-headline" id="Command_codes:_expandable_and_non-expandable">Command codes: expandable and non-expandable</span></h3>
+<p>In Knuth’s source code to TeX the command codes vary from 0 to 120—note that some codes within that range are purely for specialist internal use and are not assigned to commands which are accessible to the user. It’s worth noting that other TeX engines such as pdfTeX, XeTeX and LuaTeX have all added new commands to Knuth’s original set and will contain more primitives, and corresponding command codes; however, the principles outlined here are core to all TeX-based engines derived from Knuth’s source code.
+</p><p>
+The collection of command codes is split into two main sets:</p><ul><li><em>non-expandable commands</em>: have command codes less than or equal to 100;</li><li><em>expandable commands</em>: have command codes greater than 100, up to a maximum value of 120. The range 101 to 120 includes user-defined macros plus commands such as <code>\csname</code>, <code>\expandafter</code> and <code>\the</code>.</li></ul>
+<p>Non-expandable commands typically carry out assignment of a value to an internal parameter or directly produce material that can be typeset. Expandable commands typically “inject” a stream of tokens into TeX’s current processing activity or modify the order of token processing.
+</p><p>As noted above, all macros (user-defined commands) are given command codes between 111 and 114: the different values reflect whether the macro was defined as <code>\long</code>, <code>\outer</code>, both or neither. Here is an example:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th style="vertical-align:top;text-align:left">Macro type
+</th>
+<th style="vertical-align:top;text-align:left">Example
+</th>
+<th style="vertical-align:top;text-align:left">Comment
+</th></tr>
+<tr>
+<td>Non-long, non-outer
+</td>
+<td><code>\def\ohyeah{....}</code>
+</td>
+<td><code>\ohyeah</code> command code=111
+</td></tr>
+<tr>
+<td>Long, non-outer
+</td>
+<td><code>\long\def\ohyeah{....}</code>
+</td>
+<td><code>\ohyeah</code> command code=112
+</td></tr>
+<tr>
+<td>Non-long, outer
+</td>
+<td><code>\outer\def\ohyeah{....}</code>
+</td>
+<td><code>\ohyeah</code> command code=113
+</td></tr>
+<tr>
+<td>Long outer
+</td>
+<td><code>\long\outer\def\ohyeah{....}</code>
+</td>
+<td><code>\ohyeah</code> command code=114
+</td></tr></tbody></table>
+<p>As a reminder on command modifiers, when a macro is defined TeX will store the macro’s definition in some location in memory: that location (a pointer) will become the command modifier for the macro command which will be stored with a command of 111 to 114 depending on how it was defined. The actual name assigned to a user-defined macro does not really matter: after processing of the input they’ll all be assigned a command code varying from 111–114 and, ultimately, all commands that TeX reads from your input, whether they are primitives or user-defined macros, are eventually converted into a numeric representation called a <em>token</em>.
+</p>
+<h2><span class="mw-headline" id="The_journey_from_input_text_to_TeX_tokens">The journey from input text to TeX tokens</span></h2>
+<p>In this section we’ll use a very simple macro example to see exactly how TeX processes the command <code>\def</code> to create a token which represents the <code>\def</code> command. The detailed processing activity of TeX can be extremely complex so we are not using macro parameters or delimiters because that would add complexity and distract from our journey.
+</p><p>Suppose that your TeX input file contains the following line:
+</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\def\ohyeah</span><span class="nb">{</span>Overleaf is cool!<span class="nb">}</span>
+</pre></div>
+<p>As TeX begins to process this line of input it checks the <code>\catcode</code> of each character and sees the first character is <code>\</code> (first character of <code>\def</code>). It detects (looks it up in an internal table) that <code>\</code> has <code>\catcode</code> 0 which means it introduces the start of a <em>control sequence</em>. Of course, you can redefine any character to have <code>\catcode</code> 0 but we’ll assume that conventional definitions of plain TeX or LaTeX are being used.
+</p><p>
+Strictly speaking, the term <em>control sequence</em> has two sub-categories: <em>control word</em> and <em>control symbol</em>:</p><ul><li><em>control word</em>: a sequence of characters with <code>\catcode</code> letter (11); </li><li><em>control symbol</em>: a single character whose <code>\catcode</code> is <em>not</em> letter (11).</li></ul>
+<p>At this point, the <code>\</code> character has done its job and is now finished with. On detecting an escape character, TeX’s response is to start reading all subsequent characters in the input with a view to detecting a control word or a control symbol.
+</p><p>After the initial <code>\</code>, TeX immediately detects the <code>d</code>: a character whose <code>\catcode</code> is 11 which tells TeX that it has found the first letter of a <em>control word</em>. It continues scanning subsequent characters until it finally detects a character that <em>does not</em> have <code>\catcode</code> letter (11). All subsequent characters (after the initial <code>\</code>) with <code>\catcode</code> 11 (letter) are considered to form the name of a control word: i.e., the name of a command—maybe a macro or a primitive but TeX, as yet, has no idea which type of command it is. At this point is is simply a string of characters.
+</p><p>So, in our example TeX happily scans along, checking each character, until it reaches the initial <code>\</code> of <code>\ohyeah</code> which also has <code>\catcode</code> 0. TeX recognizes that it has scanned too far and politely returns that <code>\</code> back into the text stream so that it becomes the next character to be seen during further scanning of the text.
+At this point, TeX has identified a string (<code>def</code>) which it knows form the text of a control word comprising three characters, each with <code>\catcode</code> 11 (<code>d</code>, <code>e</code> and <code>f</code>). What TeX now needs to do is find out what <code>def</code> means: what does it to do? As you may have guessed, TeX needs to find the command code and command identifier for <code>def</code> so that it can work out what to do with this  command.
+</p>
+<h2><span class="mw-headline" id="Making_a_hash_of_it">Making a hash of it</span></h2>
+<p>Having detected a control word (<code>def</code>), the first thing that TeX does is to “convert” the string of characters (<code>def</code> in our example) into an integer number by using something called a hashing function. We don’t need to be too concerned with the details, an outline will suffice. In essence, TeX looks at every character in the control word it has just detected and uses the ASCII code value (or Unicode value for XeTeX/LuaTeX) of each character to calculate a number called a hash value: it is just a simple integer.
+</p><p>As part of this hash calculation process TeX will also check to see if the string of characters in the newly-detected control word is already known to it. 
+The human-readable text of all commands, whether they are primitives or user-defined macros, are stored away within an internal storage area called the <em>string pool</em>. TeX has to do this because it might need to output the human-readable name of a command—for example, when TeX needs to report an error and provide the name of the offending command. For example, our macro <code>\def\ohyeah{Overleaf is cool!}</code> is defining a new command called <code>\ohyeah</code> and TeX will (at a later stage) not only need to calculate a hash value for <code>ohyeah</code> (<em>without</em> the initial <code>\</code> character) but also store the text string (human readable) form in case it needs to use it for error reporting (or other tasks).
+</p><p>If you want more detail about TeX’s string handling processes I have written about this on my <a rel="nofollow" class="external text" href="http://www.readytext.co.uk/?p=3590">personal blog site</a>.
+</p><p>The end result is that the string of characters representing the command <code>def</code> is turned into the numeric value of 1218 (that is the actual value calculated by TeX). At this point the individual characters <code>d</code>, <code>e</code> and <code>f</code> are no longer part of the main story—they’ve been read from the input and have done their job: from now on it’s all about integers and <em>tokens</em>—we will soon see what a token actually is! Internally, TeX refers to these hash value numbers as the <em>current control sequence</em> but in the source code that term is shortened to a variable called <code>curcs</code>. TeX’s source code is full of very short, often rather cryptic, variable names.
+</p><p>But what does TeX <em>actually do</em> with this freshly-minted integer value of 1218? How does TeX find out that the original string <code>def</code>, now represented by the integer 1218, actually refers to an instruction to define a macro? The answer is that TeX has a sort of internal “filing cabinet” where it stores the current meaning and value of every command it curently knows about—whether that command is a user-defined macro or a built-in primitive. The reason TeX went to the trouble of converting <code>def</code> into the hash value of 1218 (now stored in the variable called <code>curcs</code>) is to use it for looking-up the <em>meaning</em> of <code>def</code>. TeX will, of course, repeat this hash calculation exercise for all control words it detects in the input—though, of course, different control words yield different integer values from the hashing function: that’s the whole idea.
+</p><p>TeX’s internal “filing cabinet” is called the <em>equivalents table</em> and is the topic of the next section.
+</p>
+<h3><span class="mw-headline" id="Consulting_the_equivalents_table">Consulting the <em>equivalents table</em></span></h3><p>
+Just to recap, let’s see what we’ve learned so far:</p><ul><li><code>\</code> introduces the start of a control sequence (either a <em>control symbol</em> or a <em>control word</em>).</li><li>If the first character after the <code>\</code> has <code>\catcode</code> 11 (letter) then it is the start of a <em>control word</em>.</li><li>For <em>control words</em> TeX scans to check for all subsequent input characters that have <code>\catcode</code> 11 and will  stop scanning as soon as it finds the first character that does <em>not</em> have a <code>\catcode</code> of 11.</li><li>The string of input characters (following the <code>\</code>) which have <code>\catcode</code> 11 are considered to be a <em>control word</em> that the user has typed: a command asking TeX to “do something”.</li><li>To begin the process of “doing something” TeX converts the string of characters in the control word into an integer. It does this using a so-called hashing function which outputs an integer.</li><li>The integer (calculated hash value) is referred to as the <em>current control sequence</em>, but TeX gives it the shorter name of <code>curcs</code>.</li><li>In our example, the control word <code>def</code> is converted into the value 1218—which is stored in a variable called <code>curcs</code>: i.e., <code>curcs=1218</code>.</li></ul>
+<p>TeX now needs to find out what the newly detected <em>current control sequence</em> actually means—what does TeX do with it?
+</p>
+<h4><span class="mw-headline" id="A_note_on_grouping:_the_need_to_save_and_restore_information">A note on grouping: the need to save and restore information</span></h4>
+<p>Here, we will take a little detour to remind ourselves that TeX has the ability to save and restore information: i.e., it has some form of in-built “memory”.
+</p><p>Anyone who has written even the simplest macro should be aware of TeX’s grouping mechanism—for example, using <code>\def</code> to create macros within a group. Unless you apply the <code>\global</code> prefix to <code>\def</code>-created macros defined within a group, the value or meaning of that macro only persists within that group (and those below it): its definition is lost when the group is finished. For example, if you define a simple macro inside a group, like this:
+</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">{</span><span class="k">\def\foo</span><span class="nb">{</span>Hello<span class="nb">}}</span>
+</pre></div>
+<p>and try to use <code>\foo</code> outside the group
+</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">{</span><span class="k">\def\foo</span><span class="nb">{</span>Hello<span class="nb">}}</span><span class="c">% \foo defined within a group (note: no use of \global) </span>
+<span class="k">\foo</span> <span class="c">%&lt;--- no longer defined, now undefined</span>
+</pre></div>
+<p>then we get the beloved error: <code>Undefined control sequence</code>. <code>\foo</code> only has meaning inside the group (and its sub groups) in which it was defined. Furthermore, when you redefine a macro inside a group the new value can be lost when the group ends and the previous meaning (which existed outside the group) is restored.
+</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\def\foo</span><span class="nb">{</span>Goodbye<span class="nb">}</span> 
+<span class="k">\foo\par</span><span class="c">% Outputs Goodbye </span>
+<span class="nb">{</span><span class="k">\def\foo</span><span class="nb">{</span>Hello<span class="nb">}</span><span class="c">% Redefined inside a group: </span>
+<span class="nb">{</span>Inside 2nd level group: <span class="k">\foo\par</span><span class="nb">}}</span><span class="c">% Used inside 2nd level group: \foo outputs Hello </span>
+Outside group old value restored: <span class="k">\foo\par</span><span class="c">% Outputs Goodbye</span>
+</pre></div>
+<p>The purpose of these simple examples is to point to TeX having some sort of “storage mechanism” or “memory” which saves/restores the “meaning” of commands—and, of course, it does. We hinted at this in the previous section: that “storage mechanism” or “filing cabinet” is a large internal table called the <em>equivalents table</em>. It is in there that TeX stores the current meaning or values of all the commands it currently knows about—the built-in primitives and user-defined macros.
+</p>
+<h3><span class="mw-headline" id="The_equivalents_table:_by_analogy">The equivalents table: by analogy</span></h3>
+<p>To explain the equivalents table we’ll proceed by analogy. We’ll continue to use the notion of a filing cabinet with thousands of small drawers, each one labelled with a unique integer. At this stage in the processing TeX says, in effect:
+</p><p>“OK, I have this integer value of 1218 that I just calculated and saved in a variable  called <code>curcs</code>. I now need to find out what it means: to do that I'll go and look in drawer number 1218 of my filing cabinet to see what it says in there.”
+</p><p>TeX uses 1218 to locate the correct drawer and there it finds a small note which contains three pieces of information whose names are those used in TeX’s source code:
+</p>
+<ul><li><strong><code>eq_level:</code></strong> the level of grouping at which this entry was defined (level 1 = globally defined). We saw the effects of grouping in action above: here in the equivalents table is where that grouping level information is stored;</li><li><strong><code>eq_type:</code></strong> the command code for this entry;</li><li><strong><code>equiv:</code></strong> current “value” of this entry—it can be a simple integer such as the command modifier mentioned above, or a pointer to an area in memory; for example, the memory location for the collection of tokens representing a macro definition.</li></ul>
+<p>So, our hash value of 1218 (saved in the variable <code>curcs</code>) has, in effect, been used as the <em>key</em> to access a drawer that contains the current meaning and value of the command we originally typed in as the string of letters <code>\def</code>.
+</p><p>Within the source code of the TeX program, the <code>eq_type</code> for any command is stored using a variable called <code>curcmd</code> and the value of <code>equiv</code> is stored in a variable called <code>curchr</code>.
+</p>
+<h3><span id="What_does_the_equivalents_table_say_for_def.3F"></span><span class="mw-headline" id="What_does_the_equivalents_table_say_for_def?">What does the equivalents table say for <code>def</code>?</span></h3><p>
+As noted, the hash value calculated for any command is saved in a variable called <code>curcs</code>; hence for <code>def</code> we have <code>curcs=1218</code>. On looking at location 1218 in the equivalents table, TeX will find the following information:</p><ul><li><code>curcmd</code>=97. This is the command code for <code>\def</code>;</li><li><code>curchr</code>=0. This is the command modifier for <code>\def</code>.</li></ul>
+<p><code>\def</code> is a primitive (built-in) TeX command and unless it has been redefined somewhere, the third and final piece of information should be <code>eq_level=1</code> indicating that the meaning of <code>\def</code> is defined globally and not restricted to some lower level of grouping. Internally, the value of <code>eq_level</code> attached to a command plays an extremely important role within TeX’s grouping mechanism but we won’t consider this any further.
+</p><p>The following graphic summarizes the explanation we have worked through:
+</p>
+<div class="center"><div class="floatnone"><img alt="The journey from TeX input to TeX token." src="../../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/4a/Textoken.png" decoding="async" title="The journey from TeX input to TeX token." width="400" height="396" /></div></div>
+<h2><span class="mw-headline" id="TeX_tokens_for_commands">TeX tokens for commands</span></h2>
+<p>Having waded through the explanations above, the actual calculation of TeX tokens for control sequences turns out to be really very simple. TeX uses the value of <code>curcs</code> (1218) from the hash function to create a simple integer that it calls a <em>token</em>. The calculation to generate a token from the value of <code>curcs</code> is:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">curtok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4095</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">curcs</span><span class="w"></span>
+</pre></div>
+<p>TeX stores the value of the current token (most recently calculated) in a variable called <code>curtok</code>.
+</p><p>So, in conclusion, the TeX token representing the <code>\def</code> command is <code>4095 + 1218 = 5313</code>.
+And that’s it for TeX tokens which represent command sequences: they are simply an integer number that is calculated from a hash table value plus 4095.
+</p>
+<h2><span class="mw-headline" id="TeX_tokens_for_characters">TeX tokens for characters</span></h2>
+<p>When TeX needs to create a token representing a character it uses the following, equally simple, calculation:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">curtok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span><span class="o">*</span><span class="n">catcode</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">ASCII</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">character</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+<p>Note that slightly different calculations are used for Unicode-aware engines such as LuaTeX.
+</p><p>For example, the TeX token representing a space character with <code>\catcode</code> 10 and ASCII value 32 is:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="mi">256</span><span class="o">*</span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2592</span><span class="w"></span>
+</pre></div>
+<h3><span class="mw-headline" id="Token_lists_containing_characters">Token lists containing characters</span></h3>
+<p>When you create a simple token list with, for example,
+</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\toks</span>100=<span class="nb">{</span>Hello<span class="nb">}</span>
+</pre></div><p>
+TeX will create the following list of tokens and store them away in memory for later use:</p><ul><li>H→ 256 × 11 + 72 = 2888</li><li>e→ 256 × 11 + 101 = 2917</li><li>l→ 256 × 11 +108 = 2924</li><li>l→ 256 × 11 +108 = 2924</li><li>o→256 × 11 + 111 = 2927</li></ul>
+<p>Deep inside TeX’s memory the token register 100 will provide access to the storage location of “Hello”, saved as 5 token values: 2888, 2917, 2924, 2924, 2927. Note that these tokens combine each character’s ASCII code and the value of its <code>\catcode</code><em></em>at point they are turned into tokens (tokenized). Once characters have been converted to character tokens, the <code>\catcode</code> value attached to them is permanent and is stored within the tokens for later use when the user says, for example, <code>\the\toks100</code>.
+</p><p>As noted, a character token is calculated from <code>256*catcode + (ASCII value)</code> whereas a control sequence token is calculated from <code>4095 + curcs</code> where <code>curcs</code> is the hash value of the control word (text string of a user-typed command) detected in the input by TeX. It is worth noting that character tokens are always less than 4095. Hence TeX can easily determine if a particular token represents a control sequence (a command) or a character and then work out which control sequence or character and <code>\catcode</code> pair is in encoded into that token.
+</p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../Lists.html" title="Lists">Lists</a></li>
+<li><a href="../Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../Operators.html" title="Operators">Operators</a></li>
+<li><a href="../Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../Tables.html" title="Tables">Tables</a></li>
+<li><a href="../Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../French.html" title="French">French</a></li>
+<li><a href="../German.html" title="German">German</a></li>
+<li><a href="../Greek.html" title="Greek">Greek</a></li>
+<li><a href="../Italian.html" title="Italian">Italian</a></li>
+<li><a href="../Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../Korean.html" title="Korean">Korean</a></li>
+<li><a href="../Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../Russian.html" title="Russian">Russian</a></li>
+<li><a href="../Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../Indices.html" title="Indices">Indices</a></li>
+<li><a href="../Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../Counters.html" title="Counters">Counters</a></li>
+<li><a href="../Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../Commands.html" title="Commands">Commands</a></li>
+<li><a href="../Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="../Tutorials.html">Tutorials</a></li><li><a href="../Inserting_Images.html">How to insert images</a></li><li><a href="../Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="What_is_a__TeX_token__.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==" src="../../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="EBlFxMlJc0YzRwtIsI5E7w==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/What_is_a_%22TeX_token%22%3F by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:01:50 GMT -->
+</html>

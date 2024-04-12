@@ -1,0 +1,914 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:10:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Counters - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Counters"><meta name="og:title" content="Counters"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="Counters%23Accessing_and_printing_counter_values.html"><link rel="stylesheet" href="../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Counters%23Accessing_and_printing_counter_values.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" hreflang="ja"><link rel="preload" href="../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="qwYmVt5lLPKV//dAqMDUgw=="><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="rtx2sDpW-Xtb-LjyJjiP4cs__lyY6DwKWjTA"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Counters%23Accessing_and_printing_counter_values&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Counters%23Accessing_and_printing_counter_values&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Counters</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction_to_LaTeX_counters"><span class="tocnumber">1</span> <span class="toctext">Introduction to LaTeX counters</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#LaTeX_commands_for_working_with_counters"><span class="tocnumber">2</span> <span class="toctext">LaTeX commands for working with counters</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Creating_and_incrementing_counters"><span class="tocnumber">2.1</span> <span class="toctext">Creating and incrementing counters</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#\newcounter{somecounter}[anothercounter]"><span class="tocnumber">2.1.1</span> <span class="toctext">\newcounter{somecounter}[anothercounter]</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#\setcounter{somecounter}{number}"><span class="tocnumber">2.1.2</span> <span class="toctext">\setcounter{somecounter}{number}</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#\addtocounter{somecounter}{number}"><span class="tocnumber">2.1.3</span> <span class="toctext">\addtocounter{somecounter}{number}</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#\stepcounter{somecounter}"><span class="tocnumber">2.1.4</span> <span class="toctext">\stepcounter{somecounter}</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#\refstepcounter{somecounter}"><span class="tocnumber">2.1.5</span> <span class="toctext">\refstepcounter{somecounter}</span></a>
+<ul>
+<li class="toclevel-4 tocsection-9"><a href="#Example_using_\refstepcounter"><span class="tocnumber">2.1.5.1</span> <span class="toctext">Example using \refstepcounter</span></a></li>
+<li class="toclevel-4 tocsection-10"><a href="#Code_summary"><span class="tocnumber">2.1.5.2</span> <span class="toctext">Code summary</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Accessing_and_printing_counter_values"><span class="tocnumber">2.2</span> <span class="toctext">Accessing and printing counter values</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#\arabic{somecounter}"><span class="tocnumber">2.2.1</span> <span class="toctext">\arabic{somecounter}</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#\roman{somecounter}"><span class="tocnumber">2.2.2</span> <span class="toctext">\roman{somecounter}</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#\Roman{somecounter}_2"><span class="tocnumber">2.2.3</span> <span class="toctext">\Roman{somecounter}</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#\alph{somecounter}"><span class="tocnumber">2.2.4</span> <span class="toctext">\alph{somecounter}</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#\Alph{somecounter}_2"><span class="tocnumber">2.2.5</span> <span class="toctext">\Alph{somecounter}</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#\fnsymbol{somecounter}"><span class="tocnumber">2.2.6</span> <span class="toctext">\fnsymbol{somecounter}</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Example_of_printing_counter_values"><span class="tocnumber">2.2.7</span> <span class="toctext">Example of printing counter values</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#\value{somecounter}"><span class="tocnumber">2.2.8</span> <span class="toctext">\value{somecounter}</span></a>
+<ul>
+<li class="toclevel-4 tocsection-20"><a href="#(Optional)_background_notes_on_the_\value_command"><span class="tocnumber">2.2.8.1</span> <span class="toctext">(Optional) background notes on the \value command</span></a></li>
+<li class="toclevel-4 tocsection-21"><a href="#Example"><span class="tocnumber">2.2.8.2</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-22"><a href="#Other_counter_commands"><span class="tocnumber">2.3</span> <span class="toctext">Other counter commands</span></a>
+<ul>
+<li class="toclevel-3 tocsection-23"><a href="#\counterwithin{somecounter}{anothercounter}"><span class="tocnumber">2.3.1</span> <span class="toctext">\counterwithin{somecounter}{anothercounter}</span></a>
+<ul>
+<li class="toclevel-4 tocsection-24"><a href="#Example_of_\counterwithin_and_\counterwithin*"><span class="tocnumber">2.3.1.1</span> <span class="toctext">Example of \counterwithin and \counterwithin*</span></a></li>
+<li class="toclevel-4 tocsection-25"><a href="#Code_summary_2"><span class="tocnumber">2.3.1.2</span> <span class="toctext">Code summary</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-26"><a href="#\counterwithout{somecounter}{anothercounter}"><span class="tocnumber">2.3.2</span> <span class="toctext">\counterwithout{somecounter}{anothercounter}</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="#Example_2"><span class="tocnumber">3</span> <span class="toctext">Example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="#enumerate"><span class="tocnumber">3.1</span> <span class="toctext">enumerate</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#Default_counters_in_LaTeX"><span class="tocnumber">4</span> <span class="toctext">Default counters in LaTeX</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#Further_reading"><span class="tocnumber">5</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction_to_LaTeX_counters">Introduction to LaTeX counters</span></h2>
+<p>LaTeX-based typesetting is a specialized form of programming: you are using a typesetting language (LaTeX commands) to provide “instructions” which result in an output: the compiled LaTeX document in the form of a PDF file. As with any programming endeavour, it’s likely that you will need LaTeX to temporarily store integer values for later re-use in your document (code)—you might want to:
+</p>
+<ul><li>typeset those stored integers in your document</li>
+<li>provide automatic numbering of certain elements of your document</li>
+<li>use them as variables to control conditional code (or loops)</li>
+<li>change and update their values by incrementing/decrementing using some fixed value</li>
+<li>reset them to completely different values</li></ul>
+<p>Such integer-processing activities are extremely common in “regular” programming languages such as Javascript, C, Lua or any other language of your choice where you typically declare (create a name for) a variable (to contain an integer) and then assign a value to it. The LaTeX typesetting language provides similar capabilities, albeit implemented in a quite different way, as we’ll explore below.
+</p><p>In essence, a LaTeX counter is the name of a “LaTeX variable” used to store integer values which can be used for the actives listed above, and much else besides. LaTeX itself uses numerous internal counters which provide numbering of pages, sections, tables, figures, bulleted/numbered lists etc. This article explains how to access and modify those counters and how to create and use new ones.
+</p>
+<h2><span class="mw-headline" id="LaTeX_commands_for_working_with_counters">LaTeX commands for working with counters</span></h2>
+<p>Here is a list of LaTeX’s counter commands linked to its description in the following sections.
+</p><p>Creating and incrementing counters:
+</p>
+<ul><li><a href="#\newcounter{somecounter}[anothercounter]"><code>\newcounter{somecounter}[anothercounter]</code></a></li>
+<li><a href="#\setcounter{somecounter}{number}"><code>\setcounter{somecounter}{number}</code></a></li>
+<li><a href="#\addtocounter{somecounter}{number}"><code>\addtocounter{somecounter}{number}</code></a></li>
+<li><a href="#\stepcounter{somecounter}"><code>\stepcounter{somecounter}</code></a></li>
+<li><a href="#\refstepcounter{somecounter}"><code>\refstepcounter{somecounter}</code></a></li></ul>
+<p>Accessing and printing counter values:
+</p>
+<ul><li><a href="#\arabic{somecounter}"><code>\arabic{somecounter}</code></a></li>
+<li><a href="#\roman{somecounter}"><code>\roman{somecounter}</code></a></li>
+<li><a href="#RomanOutput"><code>\Roman{somecounter}</code></a></li>
+<li><a href="#\alph{somecounter}"><code>\alph{somecounter}</code></a></li>
+<li><a href="#AlphOutput"><code>\Alph{somecounter}</code></a></li>
+<li><a href="#\fnsymbol{somecounter}"><code>\fnsymbol{somecounter}</code></a></li>
+<li><a href="#\value{somecounter}"><code>\value{somecounter}</code></a></li></ul>
+<p>Other counter commands:
+</p>
+<ul><li><a href="#\counterwithin{somecounter}{anothercounter}"><code>\counterwithin{somecounter}{anothercounter}</code></a></li>
+<li><a href="#\counterwithout{somecounter}{anothercounter}"><code>\counterwithout{somecounter}{anothercounter}</code></a></li></ul>
+<h3><span class="mw-headline" id="Creating_and_incrementing_counters">Creating and incrementing counters</span></h3>
+<h4><span id=".5Cnewcounter.7Bsomecounter.7D.5Banothercounter.5D"></span><span class="mw-headline" id="\newcounter{somecounter}[anothercounter]"><strong><code>\newcounter{<em>somecounter</em>}[<em>anothercounter</em>]</code></strong></span></h4>
+<p>Used to define a new counter. The second argument, enclosed in <code>[]</code>, is optional but when used it defines <code><em>somecounter</em></code> as a new counter which is reset when <code><em>anothercounter</em></code> is stepped. <code>\newcounter</code> is often used in its simpler form <code>\newcounter{<em>somecounter</em>}</code> which creates <code><em>somecounter</em></code> and initializes it to contain 0.
+</p>
+<ul><li><strong>Note</strong>: For each counter created by the <code>\newcounter</code> command, it <em>also</em> defines a command that can be used to typeset the counter’s value. For example, <code>\newcounter{<em>mycounter</em>}</code> defines a command called <code>\the<em>mycounter</em></code>. An example is shown in the following LaTeX code fragment which you can open in Overleaf, as a fully-formed document, using the link provided:</li></ul>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newcounter</span><span class="nb">{</span>mycounter<span class="nb">}</span>
+<span class="k">\setcounter</span><span class="nb">{</span>mycounter<span class="nb">}{</span>42<span class="nb">}</span>
+You can now write <span class="k">\verb</span>|<span class="k">\themycounter</span>| to obtain <span class="k">\themycounter</span>.
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Using+newcounter&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewcounter%7Bmycounter%7D%0A%5Csetcounter%7Bmycounter%7D%7B42%7D%0AYou+can+now+write+%5Cverb%7C%5Cthemycounter%7C+to+obtain+%5Cthemycounter.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this LaTeX fragment in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces \(\text{You can now write }\verb|\themycounter|\text{ to obtain 42.}\)
+</p>
+<ul><li><strong>Note</strong>: If <code><em>mycounter</em></code> has already been defined LaTeX will issue the error <code>c@mycounter already defined</code>, as demonstrated by the following example you can open in Overleaf.</li></ul>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newcounter</span><span class="nb">{</span>mycounter<span class="nb">}</span>
+...lots of code... but we forget and write <span class="k">\verb</span>|<span class="k">\newcounter</span><span class="nb">{</span>mycounter<span class="nb">}</span>| again
+<span class="k">\newcounter</span><span class="nb">{</span>mycounter<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Using+newcounter&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewcounter%7Bmycounter%7D%0A...lots+of+code...+but+we+forget+and+write+%5Cverb%7C%5Cnewcounter%7Bmycounter%7D%7C+again%0A%5Cnewcounter%7Bmycounter%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <strong><em>error-generating code</em></strong> in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+</p>
+<h4><span id=".5Csetcounter.7Bsomecounter.7D.7Bnumber.7D"></span><span class="mw-headline" id="\setcounter{somecounter}{number}"><strong><code>\setcounter{<em>somecounter</em>}{<em>number</em>}</code></strong></span></h4>
+<p>Sets <code><em>somecounter</em></code> to contain the value <code><em>number</em></code>. 
+</p>
+<ul><li><strong>Note</strong>: <code><em>number</em></code> can be positive or negative.</li></ul>
+<p>An example is shown in the following LaTeX code fragment which you can open in Overleaf, as a fully-formed document, using the link provided:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\noindent</span> Create a new counter <span class="k">\texttt</span><span class="nb">{</span>myvar<span class="nb">}</span> and assign it the value <span class="k">\texttt</span><span class="nb">{</span>42<span class="nb">}</span>.
+<span class="k">\vspace</span><span class="nb">{</span>10pt<span class="nb">}</span>
+
+<span class="k">\newcounter</span><span class="nb">{</span>myvar<span class="nb">}</span>
+<span class="k">\setcounter</span><span class="nb">{</span>myvar<span class="nb">}{</span>42<span class="nb">}</span> 
+
+<span class="k">\noindent</span> Writing <span class="k">\verb</span>|<span class="k">\themymar</span>| typesets <span class="k">\texttt</span><span class="nb">{</span><span class="k">\themyvar</span><span class="nb">}</span>.
+<span class="k">\vspace</span><span class="nb">{</span>10pt<span class="nb">}</span>
+
+<span class="k">\noindent</span> Next, we'll change <span class="k">\texttt</span><span class="nb">{</span>myvar<span class="nb">}</span> to <span class="k">\texttt</span><span class="nb">{</span>-42<span class="nb">}</span>, writing <span class="k">\verb</span>|<span class="k">\setcounter</span><span class="nb">{</span>myvar<span class="nb">}{</span>-42<span class="nb">}</span>|
+<span class="k">\setcounter</span><span class="nb">{</span>myvar<span class="nb">}{</span>-42<span class="nb">}</span>. Now, writing <span class="k">\verb</span>|<span class="k">\themyvar</span>| outputs <span class="k">\texttt</span><span class="nb">{</span><span class="k">\themyvar</span><span class="nb">}</span>.
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Using+newcounter&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnoindent+Create+a+new+counter+%5Ctexttt%7Bmyvar%7D+and+assign+it+the+value+%5Ctexttt%7B42%7D.%0A%5Cvspace%7B10pt%7D%0A%0A%5Cnewcounter%7Bmyvar%7D%0A%5Csetcounter%7Bmyvar%7D%7B42%7D+%0A%0A%5Cnoindent+Writing+%5Cverb%7C%5Cthemymar%7C+typesets+%5Ctexttt%7B%5Cthemyvar%7D.%0A%5Cvspace%7B10pt%7D%0A%0A%5Cnoindent+Next%2C+we%27ll+change+%5Ctexttt%7Bmyvar%7D+to+%5Ctexttt%7B-42%7D%2C+writing+%5Cverb%7C%5Csetcounter%7Bmyvar%7D%7B-42%7D%7C%0A%5Csetcounter%7Bmyvar%7D%7B-42%7D.+Now%2C+writing+%5Cverb%7C%5Cthemyvar%7C+outputs+%5Ctexttt%7B%5Cthemyvar%7D.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this LaTeX fragment in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+</p>
+<h4><span id=".5Caddtocounter.7Bsomecounter.7D.7Bnumber.7D"></span><span class="mw-headline" id="\addtocounter{somecounter}{number}"><strong><code>\addtocounter{<em>somecounter</em>}{<em>number</em>}</code></strong></span></h4>
+<p>Increases the counter <code><em>somecounter</em></code> by amount <code><em>number</em></code>. 
+</p>
+<ul><li><strong>Note</strong>: <code><em>number</em></code> can be positive, to increase the counter value, or negative to decrease it. For example:</li></ul>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\addtocounter</span><span class="nb">{</span>somecounter<span class="nb">}{</span>-1<span class="nb">}</span> <span class="c">% decreases somecounter by 1</span>
+</pre></div>
+</div></div>
+<p>An example is shown in the following LaTeX code fragment which you can open in Overleaf, as a fully-formed document, using the link provided:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\noindent</span> Create a new counter <span class="k">\texttt</span><span class="nb">{</span>myvar<span class="nb">}</span> and assign it the value <span class="k">\texttt</span><span class="nb">{</span>42<span class="nb">}</span>.
+<span class="k">\vspace</span><span class="nb">{</span>10pt<span class="nb">}</span>
+
+<span class="k">\newcounter</span><span class="nb">{</span>myvar<span class="nb">}</span>
+<span class="k">\setcounter</span><span class="nb">{</span>myvar<span class="nb">}{</span>42<span class="nb">}</span> 
+
+<span class="k">\noindent</span> Writing <span class="k">\verb</span>|<span class="k">\themymar</span>| typesets <span class="k">\texttt</span><span class="nb">{</span><span class="k">\themyvar</span><span class="nb">}</span>.
+<span class="k">\vspace</span><span class="nb">{</span>10pt<span class="nb">}</span>
+
+<span class="k">\noindent</span> Next, we’ll change <span class="k">\texttt</span><span class="nb">{</span>myvar<span class="nb">}</span> to <span class="k">\texttt</span><span class="nb">{</span>142<span class="nb">}</span> by writing <span class="k">\verb</span>|<span class="k">\addtocounter</span><span class="nb">{</span>myvar<span class="nb">}{</span>100<span class="nb">}</span>|<span class="k">\addtocounter</span><span class="nb">{</span>myvar<span class="nb">}{</span>100<span class="nb">}</span>. Now, writing <span class="k">\verb</span>|<span class="k">\themyvar</span>| outputs <span class="k">\texttt</span><span class="nb">{</span><span class="k">\themyvar</span><span class="nb">}</span>.
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Using+addtocounter&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnoindent+Create+a+new+counter+%5Ctexttt%7Bmyvar%7D+and+assign+it+the+value+%5Ctexttt%7B42%7D.%0A%5Cvspace%7B10pt%7D%0A%0A%5Cnewcounter%7Bmyvar%7D%0A%5Csetcounter%7Bmyvar%7D%7B42%7D+%0A%0A%5Cnoindent+Writing+%5Cverb%7C%5Cthemymar%7C+typesets+%5Ctexttt%7B%5Cthemyvar%7D.%0A%5Cvspace%7B10pt%7D%0A%0A%5Cnoindent+Next%2C+we%E2%80%99ll+change+%5Ctexttt%7Bmyvar%7D+to+%5Ctexttt%7B142%7D+by+writing+%5Cverb%7C%5Caddtocounter%7Bmyvar%7D%7B100%7D%7C%5Caddtocounter%7Bmyvar%7D%7B100%7D.+Now%2C+writing+%5Cverb%7C%5Cthemyvar%7C+outputs+%5Ctexttt%7B%5Cthemyvar%7D.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this LaTeX fragment in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+</p>
+<h4><span id=".5Cstepcounter.7Bsomecounter.7D"></span><span class="mw-headline" id="\stepcounter{somecounter}"><strong><code>\stepcounter{<em>somecounter</em>}</code></strong></span></h4>
+<p>Increments <code><em>somecounter</em></code> by 1. An example is shown in the following LaTeX code fragment which you can open in Overleaf, as a fully-formed document, using the link provided:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>If we create a new counter by writing <span class="k">\verb</span>|<span class="k">\newcounter</span><span class="nb">{</span>mycounter<span class="nb">}</span>|
+<span class="k">\newcounter</span><span class="nb">{</span>mycounter<span class="nb">}</span> then the counter <span class="k">\texttt</span><span class="nb">{</span>mycounter<span class="nb">}</span> is created and 
+initialized to zero, as you can see if you write <span class="k">\verb</span>|<span class="k">\themycounter</span>|:
+<span class="k">\texttt</span><span class="nb">{</span>mycounter<span class="nb">}</span> currently stores: <span class="k">\themycounter</span>. 
+
+If we now write <span class="k">\verb</span>|<span class="k">\stepcounter</span><span class="nb">{</span>mycounter<span class="nb">}</span>|<span class="k">\stepcounter</span><span class="nb">{</span>mycounter<span class="nb">}</span> then 
+<span class="k">\verb</span>|<span class="k">\themycounter</span>| now contains the value <span class="k">\themycounter</span>.
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Using+stepcounter&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0AIf+we+create+a+new+counter+by+writing+%5Cverb%7C%5Cnewcounter%7Bmycounter%7D%7C%0A%5Cnewcounter%7Bmycounter%7D+then+the+counter+%5Ctexttt%7Bmycounter%7D+is+created+and+%0Ainitialized+to+zero%2C+as+you+can+see+if+you+write+%5Cverb%7C%5Cthemycounter%7C%3A%0A%5Ctexttt%7Bmycounter%7D+currently+stores%3A+%5Cthemycounter.+%0A%0AIf+we+now+write+%5Cverb%7C%5Cstepcounter%7Bmycounter%7D%7C%5Cstepcounter%7Bmycounter%7D+then+%0A%5Cverb%7C%5Cthemycounter%7C+now+contains+the+value+%5Cthemycounter.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this LaTeX fragment in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+</p>
+<h4><span id=".5Crefstepcounter.7Bsomecounter.7D"></span><span class="mw-headline" id="\refstepcounter{somecounter}"><strong><code>\refstepcounter{<em>somecounter</em>}</code></strong></span></h4>
+<p>Increases <code><em>somecounter</em></code> by 1 and makes it visible for the referencing mechanism, also setting the value so that you can use <code>\label</code> afterwards.
+</p>
+<h5><span id="Example_using_.5Crefstepcounter"></span><span class="mw-headline" id="Example_using_\refstepcounter">Example using <code>\refstepcounter</code></span></h5>
+<p>The following example uses <code>\refstepcounter</code> to create a new counter for an <code>example</code> environment and uses <code>\label</code> and <code>\ref</code> to illustrate referencing using the <code>example</code> counter variable.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+
+<span class="k">\newcounter</span><span class="nb">{</span>example<span class="nb">}</span>[section]
+<span class="k">\newenvironment</span><span class="nb">{</span>example<span class="nb">}</span>[1][]<span class="nb">{</span><span class="k">\refstepcounter</span><span class="nb">{</span>example<span class="nb">}</span><span class="k">\par\medskip</span>
+   <span class="k">\noindent\textbf</span><span class="nb">{</span>Example~<span class="k">\theexample</span>. #1<span class="nb">}</span> <span class="k">\rmfamily</span><span class="nb">}{</span><span class="k">\medskip</span><span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>Three examples<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+Create a label in this first example <span class="k">\verb</span>|<span class="k">\label</span><span class="nb">{</span>ex:1<span class="nb">}</span>|<span class="k">\label</span><span class="nb">{</span>ex:1<span class="nb">}</span>. This is the first example. The <span class="k">\texttt</span><span class="nb">{</span>example<span class="nb">}</span> counter will be reset at the start of each new each document <span class="k">\verb</span>|<span class="k">\section</span>|.
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+And here's another numbered example. Create a second <span class="k">\verb</span>|<span class="k">\label</span><span class="nb">{</span>ex:2<span class="nb">}</span>|<span class="k">\label</span><span class="nb">{</span>ex:2<span class="nb">}</span> to later reference this one. In Example <span class="k">\ref</span><span class="nb">{</span>ex:1<span class="nb">}</span> we read... something. 
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+And here's another numbered example: use <span class="k">\verb</span>|<span class="k">\theexample</span>| to typeset the number currently assigned to the <span class="k">\texttt</span><span class="nb">{</span>example<span class="nb">}</span> counter: it is  <span class="k">\theexample</span>.
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+
+<span class="k">\section</span><span class="nb">{</span>Another section<span class="nb">}</span>
+We've just started a new section meaning that the  <span class="k">\texttt</span><span class="nb">{</span>example<span class="nb">}</span> counter has been set to <span class="k">\theexample</span>.  
+We'll reference examples from the previous section (Examples <span class="k">\ref</span><span class="nb">{</span>ex:1<span class="nb">}</span> and <span class="k">\ref</span><span class="nb">{</span>ex:2<span class="nb">}</span>).  This is a dummy section with no purpose whatsoever but to contain text. The <span class="k">\texttt</span><span class="nb">{</span>section<span class="nb">}</span> counter for this section can be typeset using <span class="k">\verb</span>|<span class="k">\thesection</span>|: it is  currently assigned the value of <span class="k">\thesection</span>.
+
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+This is the first example in this section: the <span class="k">\texttt</span><span class="nb">{</span>example<span class="nb">}</span> counter has been stepped and now set to <span class="k">\theexample</span>. 
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=An+example+using+refstepcounter
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%0A%5Cnewcounter%7Bexample%7D%5Bsection%5D%0A%5Cnewenvironment%7Bexample%7D%5B1%5D%5B%5D%7B%5Crefstepcounter%7Bexample%7D%5Cpar%5Cmedskip%0A+++%5Cnoindent%5Ctextbf%7BExample%7E%5Ctheexample.+%231%7D+%5Crmfamily%7D%7B%5Cmedskip%7D%0A%0A%5Cbegin%7Bdocument%7D%0A%5Csection%7BThree+examples%7D%0A%5Cbegin%7Bexample%7D%0ACreate+a+label+in+this+first+example+%5Cverb%7C%5Clabel%7Bex%3A1%7D%7C%5Clabel%7Bex%3A1%7D.+This+is+the+first+example.+The+%5Ctexttt%7Bexample%7D+counter+will+be+reset+at+the+start+of+each+new+each+document+%5Cverb%7C%5Csection%7C.%0A%5Cend%7Bexample%7D%0A%0A%5Cbegin%7Bexample%7D%0AAnd+here%27s+another+numbered+example.+Create+a+second+%5Cverb%7C%5Clabel%7Bex%3A2%7D%7C%5Clabel%7Bex%3A2%7D+to+later+reference+this+one.+In+Example+%5Cref%7Bex%3A1%7D+we+read...+something.+%0A%5Cend%7Bexample%7D%0A%0A%5Cbegin%7Bexample%7D%0AAnd+here%27s+another+numbered+example%3A+use+%5Cverb%7C%5Ctheexample%7C+to+typeset+the+number+currently+assigned+to+the+%5Ctexttt%7Bexample%7D+counter%3A+it+is++%5Ctheexample.%0A%5Cend%7Bexample%7D%0A%0A%5Csection%7BAnother+section%7D%0AWe%27ve+just+started+a+new+section+meaning+that+the++%5Ctexttt%7Bexample%7D+counter+has+been+set+to+%5Ctheexample.++%0AWe%27ll+reference+examples+from+the+previous+section+%28Examples+%5Cref%7Bex%3A1%7D+and+%5Cref%7Bex%3A2%7D%29.++This+is+a+dummy+section+with+no+purpose+whatsoever+but+to+contain+text.+The+%5Ctexttt%7Bsection%7D+counter+for+this+section+can+be+typeset+using+%5Cverb%7C%5Cthesection%7C%3A+it+is++currently+assigned+the+value+of+%5Cthesection.%0A%0A%5Cbegin%7Bexample%7D%0AThis+is+the+first+example+in+this+section%3A+the+%5Ctexttt%7Bexample%7D+counter+has+been+stepped+and+now+set+to+%5Ctheexample.+%0A%5Cend%7Bexample%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>\refstepcounter</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+</p>
+<h5><span class="mw-headline" id="Code_summary">Code summary</span></h5>
+<p>In this example, the new environment <code>example</code> is defined, this environment has 3 counting-specific commands:
+</p>
+<ul><li><code>\newcounter{example}[section]</code>: Creates a new counter called <code>example</code> that will be reset to 0 every time the <code>section</code> counter is increased. You can put any other counter instead of <code>section</code> or omit the parameter if you don’t want your counter to be automatically reset.</li></ul>
+<ul><li><code>\refstepcounter{example}</code>: Increases the <code>example</code> counter by 1 and makes it visible for the referencing mechanism, so that you can use <code>\label</code> afterwards.</li></ul>
+<ul><li><code>\theexample</code>: Prints the current value of the counter <code>example</code>.</li></ul>
+<p>For further information on user-defined environments see <a href="Environments%23Defining_a_new_environment.html" title="Environments">the article about defining new environments</a>
+</p>
+<h3><span class="mw-headline" id="Accessing_and_printing_counter_values">Accessing and printing counter values</span></h3>
+<p>The following discussions are based on the LaTeX defaults prior to any customization applied by packages loaded by the user.
+</p>
+<h4><span id=".5Carabic.7Bsomecounter.7D"></span><span class="mw-headline" id="\arabic{somecounter}"><strong><code>\arabic{<em>somecounter</em>}</code></strong></span></h4>
+<p>Output the representation of <code><em>somecounter</em></code> as Arabic numerals: 1, 2, 3...
+</p>
+<h4><span id=".5Croman.7Bsomecounter.7D"></span><span class="mw-headline" id="\roman{somecounter}"><strong><code>\roman{<em>somecounter</em>}</code></strong></span></h4>
+<p>Output the representation of <code><em>somecounter</em></code> as a lower-case Roman numeral: i, ii, iii...
+</p>
+<ul><li><strong>Note</strong>: If <code><em>somecounter</em></code> \(\leq\) <code>0</code> no output is produced. In addition, converting <em>extremely</em> large integer values to lower-case Roman numerals can take a long time to complete—and produces a lengthy sequence of <code>m</code> characters (representing the number <code>1000</code>).</li></ul>
+<ul><li><strong>TIP</strong>: If you are interested in the algorithm TeX uses to convert Arabic numbers to Roman numerals you can read about it this article on <a rel="nofollow" class="external text" href="https://www.hanshq.net/roman-numerals.html#tex">Algorithms for Roman Numerals</a>.</li></ul>
+<h4><span id=".5CRoman.7Bsomecounter.7D_2"></span><span class="mw-headline" id="\Roman{somecounter}_2"><strong><code>\Roman{<em>somecounter</em>}</code></strong><span id="RomanOutput"></span></span></h4>
+<p>Output the representation of <code><em>somecounter</em></code> as an upper-case Roman numeral: I, II, III...
+</p>
+<ul><li><strong>Note</strong>: If <code><em>somecounter</em></code> \(\leq\) <code>0</code> no output is produced. In addition, converting <em>extremely</em> large integer values to upper-case Roman numerals can take a long time to complete—and produces a lengthy sequence of <code>M</code> characters (representing the number <code>1000</code>).</li></ul>
+<ul><li><strong>TIP</strong>: If you are interested in the algorithm TeX uses to convert Arabic numbers to Roman numerals you can read about it this article on <a rel="nofollow" class="external text" href="https://www.hanshq.net/roman-numerals.html#tex">Algorithms for Roman Numerals</a>.</li></ul>
+<h4><span id=".5Calph.7Bsomecounter.7D"></span><span class="mw-headline" id="\alph{somecounter}"><strong><code>\alph{<em>somecounter</em>}</code></strong></span></h4>
+<p>Output the representation of <code><em>somecounter</em></code> as a lower-case letter where a=1, b=2, c=3...
+</p>
+<ul><li><strong>Note</strong>: <code><em>somecounter</em></code> must be in the range <code>1</code> \(\leq\) <code><em>somecounter</em></code> \(\leq\) <code>26</code>, otherwise it will trigger the error <code>! LaTeX Error: Counter too large.</code></li></ul>
+<h4><span id=".5CAlph.7Bsomecounter.7D_2"></span><span class="mw-headline" id="\Alph{somecounter}_2"><strong><code>\Alph{<em>somecounter</em>}</code></strong><span id="AlphOutput"></span></span></h4>
+<p>Output the representation of <code><em>somecounter</em></code> as an upper-case letter where A=1, B=2, C=3...
+</p>
+<ul><li><strong>Note</strong>: <code><em>somecounter</em></code> must be in the range <code>1</code> \(\leq\) <code><em>somecounter</em></code> \(\leq\) <code>26</code>, otherwise it will trigger the error <code>! LaTeX Error: Counter too large.</code></li></ul>
+<h4><span id=".5Cfnsymbol.7Bsomecounter.7D"></span><span class="mw-headline" id="\fnsymbol{somecounter}"><strong><code>\fnsymbol{<em>somecounter</em>}</code></strong></span></h4>
+<p>Output the representation of <code><em>somecounter</em></code> as a footnote symbol where 1 =∗, 2 =†...
+</p>
+<ul><li><strong>Note</strong>: <code><em>somecounter</em></code> must be in the range <code>1</code> \(\leq\) <code><em>somecounter</em></code> \(\leq\) <code>9</code>, otherwise it will trigger the error <code>! LaTeX Error: Counter too large.</code></li></ul>
+<p class="mw-empty-elt">
+</p><div>
+   <table>
+      <tbody>
+            <tr>
+                <td>Value of <code><em>somecounter</em></code></td>
+                <td>Character typeset by <code>\fnsymbol</code></td>
+            </tr>
+            <tr>
+                 <td>1</td>
+                 <td>*</td>
+            </tr>
+            <tr>
+                 <td>2</td>
+                 <td>†</td>
+            </tr>
+            <tr>
+                 <td>3</td>
+                 <td>‡</td>
+            </tr>
+            <tr>
+                 <td>4</td>
+                 <td>§</td>
+            </tr>
+            <tr>
+                 <td>5</td>
+                 <td>¶</td>
+            </tr>
+            <tr>
+                 <td>6</td>
+                 <td>∥</td>
+            </tr>
+            <tr>
+                 <td>7</td>
+                 <td>∗∗</td>
+            </tr>
+            <tr>
+                 <td>8</td>
+                 <td>††</td>
+            </tr>
+            <tr>
+                 <td>9</td>
+                 <td>‡‡</td>
+            </tr>
+       </tbody>
+    </table>
+</div> 
+
+<p class="mw-empty-elt"></p>
+<h4><span class="mw-headline" id="Example_of_printing_counter_values">Example of printing counter values</span></h4>
+<p>The following example demonstrates use of the commands <code>\arabic{<em>somecounter</em>}</code>, <code>\roman{<em>somecounter</em>}</code>, <code>\Roman{<em>somecounter</em>}</code>, <code>\alph{<em>somecounter</em>}</code>, <code>\Alph{<em>somecounter</em>}</code>, and <code>\fnsymbol{<em>somecounter</em>}</code>.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newcounter</span><span class="nb">{</span>somecounter<span class="nb">}</span>
+<span class="k">\setcounter</span><span class="nb">{</span>somecounter<span class="nb">}{</span>9<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+    <span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\arabic</span><span class="nb">{</span>somecounter<span class="nb">}</span>| typesets the <span class="k">\texttt</span><span class="nb">{</span>somecounter<span class="nb">}</span> value of  <span class="k">\thesomecounter</span><span class="nb">{}</span> as <span class="k">\arabic</span><span class="nb">{</span>somecounter<span class="nb">}</span> 
+    <span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\roman</span><span class="nb">{</span>somecounter<span class="nb">}</span>| typesets the <span class="k">\texttt</span><span class="nb">{</span>somecounter<span class="nb">}</span> value of  <span class="k">\thesomecounter</span><span class="nb">{}</span> as  <span class="k">\roman</span><span class="nb">{</span>somecounter<span class="nb">}</span>
+    <span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\Roman</span><span class="nb">{</span>somecounter<span class="nb">}</span>| typesets the <span class="k">\texttt</span><span class="nb">{</span>somecounter<span class="nb">}</span> value of  <span class="k">\thesomecounter</span><span class="nb">{}</span> as  <span class="k">\Roman</span><span class="nb">{</span>somecounter<span class="nb">}</span>
+    <span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\alph</span><span class="nb">{</span>somecounter<span class="nb">}</span>| typesets the <span class="k">\texttt</span><span class="nb">{</span>somecounter<span class="nb">}</span> value of  <span class="k">\thesomecounter</span><span class="nb">{}</span> as  <span class="k">\alph</span><span class="nb">{</span>somecounter<span class="nb">}</span>
+   <span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\Alph</span><span class="nb">{</span>somecounter<span class="nb">}</span>| typesets the <span class="k">\texttt</span><span class="nb">{</span>somecounter<span class="nb">}</span> value of  <span class="k">\thesomecounter</span><span class="nb">{}</span> as  <span class="k">\Alph</span><span class="nb">{</span>somecounter<span class="nb">}</span>
+    <span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\fnsymbol</span><span class="nb">{</span>somecounter<span class="nb">}</span>| typesets the <span class="k">\texttt</span><span class="nb">{</span>somecounter<span class="nb">}</span> value of  <span class="k">\thesomecounter</span><span class="nb">{}</span> as  <span class="k">\fnsymbol</span><span class="nb">{</span>somecounter<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Converting+counter+values
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewcounter%7Bsomecounter%7D%0A%5Csetcounter%7Bsomecounter%7D%7B9%7D%0A%5Cbegin%7Bitemize%7D%0A++++%5Citem+%5Cverb%7C%5Carabic%7Bsomecounter%7D%7C+typesets+the+%5Ctexttt%7Bsomecounter%7D+value+of++%5Cthesomecounter%7B%7D+as+%5Carabic%7Bsomecounter%7D+%0A++++%5Citem+%5Cverb%7C%5Croman%7Bsomecounter%7D%7C+typesets+the+%5Ctexttt%7Bsomecounter%7D+value+of++%5Cthesomecounter%7B%7D+as++%5Croman%7Bsomecounter%7D%0A++++%5Citem+%5Cverb%7C%5CRoman%7Bsomecounter%7D%7C+typesets+the+%5Ctexttt%7Bsomecounter%7D+value+of++%5Cthesomecounter%7B%7D+as++%5CRoman%7Bsomecounter%7D%0A++++%5Citem+%5Cverb%7C%5Calph%7Bsomecounter%7D%7C+typesets+the+%5Ctexttt%7Bsomecounter%7D+value+of++%5Cthesomecounter%7B%7D+as++%5Calph%7Bsomecounter%7D%0A+++%5Citem+%5Cverb%7C%5CAlph%7Bsomecounter%7D%7C+typesets+the+%5Ctexttt%7Bsomecounter%7D+value+of++%5Cthesomecounter%7B%7D+as++%5CAlph%7Bsomecounter%7D%0A++++%5Citem+%5Cverb%7C%5Cfnsymbol%7Bsomecounter%7D%7C+typesets+the+%5Ctexttt%7Bsomecounter%7D+value+of++%5Cthesomecounter%7B%7D+as++%5Cfnsymbol%7Bsomecounter%7D%0A%5Cend%7Bitemize%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this LaTeX fragment in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following Output:
+</p><p><img alt="Example of converting counters in LaTeX" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/f/f9/OLcounters3.png" decoding="async" width="600" height="220" />
+</p>
+<h4><span id=".5Cvalue.7Bsomecounter.7D"></span><span class="mw-headline" id="\value{somecounter}"><strong><code>\value{<em>somecounter</em>}</code></strong></span></h4>
+<p>This purpose of command, as described in the LaTeX source code, is “For accessing the value of the counter as a TeX number”: i.e., you use <code>\value{somecounter}</code> for situations where LaTeX is expecting to process a numeric value.
+</p>
+<h5><span id=".28Optional.29_background_notes_on_the_.5Cvalue_command"></span><span class="mw-headline" id="(Optional)_background_notes_on_the_\value_command">(Optional) background notes on the <code>\value</code> command</span></h5>
+<p>It’s tempting to think the command <code>\value{<em>somecounter</em>}</code> will <em>directly</em> typeset the value of <code><em>somecounter</em></code>, but this is not the case. It is intended for use within other commands to access the value of the counter as a TeX number, as opposed to the command <code>\thesomecounter</code> which produces the printed representation of <code><em>somecounter</em></code>. 
+</p><p>Within the LaTeX source code, <code>\value</code> is defined as: 
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\def\value</span>#1<span class="nb">{</span><span class="k">\csname</span> c@#1<span class="k">\endcsname</span><span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>Consequently, <code>\value{<em>somecounter</em>}</code> creates an instance of the LaTeX-internal control sequence <code>\c@somecounter</code> which contains the value of the counter <code><em>somecounter</em></code>. 
+</p>
+<h5><span class="mw-headline" id="Example">Example</span></h5>
+<p>The following example shows one basic use-case of <code>\value</code>.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\noindent</span> Start by declaring two new counters:
+<span class="k">\begin</span><span class="nb">{</span>verbatim<span class="nb">}</span>
+<span class="k">\newcounter</span><span class="nb">{</span>first<span class="nb">}</span>
+<span class="k">\newcounter</span><span class="nb">{</span>second<span class="nb">}</span>    
+<span class="k">\end</span><span class="nb">{</span>verbatim<span class="nb">}</span>
+
+<span class="k">\newcounter</span><span class="nb">{</span>first<span class="nb">}</span>
+<span class="k">\newcounter</span><span class="nb">{</span>second<span class="nb">}</span>
+
+<span class="k">\noindent</span> Sometime later in your code you set their values:
+<span class="k">\begin</span><span class="nb">{</span>verbatim<span class="nb">}</span>
+<span class="k">\setcounter</span><span class="nb">{</span>first<span class="nb">}{</span>100<span class="nb">}</span>
+<span class="k">\setcounter</span><span class="nb">{</span>second<span class="nb">}{</span>50<span class="nb">}</span>    
+<span class="k">\end</span><span class="nb">{</span>verbatim<span class="nb">}</span>
+
+<span class="k">\setcounter</span><span class="nb">{</span>first<span class="nb">}{</span>100<span class="nb">}</span>
+<span class="k">\setcounter</span><span class="nb">{</span>second<span class="nb">}{</span>50<span class="nb">}</span>  
+<span class="k">\noindent</span> Then you write more <span class="k">\LaTeX</span><span class="nb">{}</span> code...<span class="k">\vspace</span><span class="nb">{</span>10pt<span class="nb">}</span>
+
+<span class="k">\noindent</span> At some point we might want to add the value of counter <span class="k">\texttt</span><span class="nb">{</span>second<span class="nb">}</span> to counter <span class="k">\texttt</span><span class="nb">{</span>first<span class="nb">}</span>. One way to do that is using <span class="k">\verb</span>|<span class="k">\value</span>| to obtain the <span class="k">\textit</span><span class="nb">{</span>current<span class="nb">}</span> value stored in the <span class="k">\texttt</span><span class="nb">{</span>second<span class="nb">}</span> counter:
+
+<span class="k">\begin</span><span class="nb">{</span>verbatim<span class="nb">}</span>
+<span class="k">\addtocounter</span><span class="nb">{</span>first<span class="nb">}{</span><span class="k">\value</span><span class="nb">{</span>second<span class="nb">}}</span>
+<span class="k">\end</span><span class="nb">{</span>verbatim<span class="nb">}</span>
+
+<span class="k">\addtocounter</span><span class="nb">{</span>first<span class="nb">}{</span><span class="k">\value</span><span class="nb">{</span>second<span class="nb">}}</span><span class="k">\noindent</span> The value of <span class="k">\texttt</span><span class="nb">{</span>first<span class="nb">}</span> can be output by <span class="k">\verb</span>|<span class="k">\thefirst</span>|: <span class="k">\thefirst</span>. We can also write <span class="k">\verb</span>|<span class="k">\the\value</span><span class="nb">{</span>first<span class="nb">}</span>| which also typesets <span class="k">\the\value</span><span class="nb">{</span>first<span class="nb">}</span>. However,  writing <span class="k">\verb</span>|<span class="k">\value</span><span class="nb">{</span>first<span class="nb">}</span>| will generate the error <span class="k">\texttt</span><span class="nb">{</span>Missing number, treated as zero<span class="nb">}</span> because <span class="k">\LaTeX</span><span class="nb">{}</span> then tries to execute the internal command <span class="k">\verb</span>|<span class="k">\c</span>@first|. Uncomment the following line to generate the error:
+<span class="k">\begin</span><span class="nb">{</span>verbatim<span class="nb">}</span>
+<span class="c">%\value{first}</span>
+<span class="k">\end</span><span class="nb">{</span>verbatim<span class="nb">}</span>
+<span class="c">%\value{first}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Using+the+value+command
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnoindent+Start+by+declaring+two+new+counters%3A%0A%5Cbegin%7Bverbatim%7D%0A%5Cnewcounter%7Bfirst%7D%0A%5Cnewcounter%7Bsecond%7D++++%0A%5Cend%7Bverbatim%7D%0A%0A%5Cnewcounter%7Bfirst%7D%0A%5Cnewcounter%7Bsecond%7D%0A%0A%5Cnoindent+Sometime+later+in+your+code+you+set+their+values%3A%0A%5Cbegin%7Bverbatim%7D%0A%5Csetcounter%7Bfirst%7D%7B100%7D%0A%5Csetcounter%7Bsecond%7D%7B50%7D++++%0A%5Cend%7Bverbatim%7D%0A%0A%5Csetcounter%7Bfirst%7D%7B100%7D%0A%5Csetcounter%7Bsecond%7D%7B50%7D++%0A%5Cnoindent+Then+you+write+more+%5CLaTeX%7B%7D+code...%5Cvspace%7B10pt%7D%0A%0A%5Cnoindent+At+some+point+we+might+want+to+add+the+value+of+counter+%5Ctexttt%7Bsecond%7D+to+counter+%5Ctexttt%7Bfirst%7D.+One+way+to+do+that+is+using+%5Cverb%7C%5Cvalue%7C+to+obtain+the+%5Ctextit%7Bcurrent%7D+value+stored+in+the+%5Ctexttt%7Bsecond%7D+counter%3A%0A%0A%5Cbegin%7Bverbatim%7D%0A%5Caddtocounter%7Bfirst%7D%7B%5Cvalue%7Bsecond%7D%7D%0A%5Cend%7Bverbatim%7D%0A%0A%5Caddtocounter%7Bfirst%7D%7B%5Cvalue%7Bsecond%7D%7D%5Cnoindent+The+value+of+%5Ctexttt%7Bfirst%7D+can+be+output+by+%5Cverb%7C%5Cthefirst%7C%3A+%5Cthefirst.+We+can+also+write+%5Cverb%7C%5Cthe%5Cvalue%7Bfirst%7D%7C+which+also+typesets+%5Cthe%5Cvalue%7Bfirst%7D.+However%2C++writing+%5Cverb%7C%5Cvalue%7Bfirst%7D%7C+will+generate+the+error+%5Ctexttt%7BMissing+number%2C+treated+as+zero%7D+because+%5CLaTeX%7B%7D+then+tries+to+execute+the+internal+command+%5Cverb%7C%5Cc%40first%7C.+Uncomment+the+following+line+to+generate+the+error%3A%0A%5Cbegin%7Bverbatim%7D%0A%25%5Cvalue%7Bfirst%7D%0A%5Cend%7Bverbatim%7D%0A%25%5Cvalue%7Bfirst%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this code fragment in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Example using the \value command" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/3c/OLcounters4.png" decoding="async" width="600" height="469" />
+</p>
+<h3><span class="mw-headline" id="Other_counter_commands">Other counter commands</span></h3>
+<p>Here we describe the commands <code>\counterwithin</code> and <code>\counterwithout</code> which originated in the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/chngcntr"><code>chngcntr</code> package</a> but have now been integrated into LaTeX itself—see <a rel="nofollow" class="external text" href="https://www.latex-project.org/news/latex2e-news/ltnews28.pdf">LaTeX News, April 2018</a>. The <code>chngcntr</code> <a rel="nofollow" class="external text" href="https://mirror.ox.ac.uk/sites/ctan.org/macros/latex/contrib/chngcntr/chngcntr.pdf">package documentation</a> makes the following comments which help to understand the purpose of these commands: 
+</p><p>On <code>\counterwithin</code>:
+</p>
+<blockquote>
+<p>It is sometimes desirable to change a counter that has been defined by <code>\newcounter{&lt;ctr&gt;}</code> to act as though it had been defined as <code>\newcounter{&lt;ctr&gt;}[&lt;within&gt;]</code>. The package provides the command <code>\counterwithin{&lt;ctr&gt;}{&lt;within&gt;}</code> that accomplishes this.
+</p>
+</blockquote>
+<p>On <code>\counterwithout</code>:
+</p>
+<blockquote>
+<p>Likewise, the command <code>\counterwithout{&lt;ctr&gt;}{&lt;within&gt;}</code> changes a counter that has been created by <code>\newcounter{&lt;ctr&gt;}[&lt;within&gt;]</code> to act as though it had been created by <code>\newcounter{&lt;ctr&gt;}</code>.
+</p>
+</blockquote>
+<p>In essence, these two commands provide a method to link (<code>\counterwithin</code>) or unlink (<code>\counterwithout</code>) two counters after they have been defined.
+</p>
+<h5><span id=".5Ccounterwithin.7Bsomecounter.7D.7Banothercounter.7D"></span><span class="mw-headline" id="\counterwithin{somecounter}{anothercounter}"><strong><code>\counterwithin{<em>somecounter</em>}{<em>anothercounter</em>}</code></strong></span></h5>
+<p>Resets <code><em>somecounter</em></code> to 0 whenever <code><em>anothercounter</em></code> is stepped, a mechanism which links the two counters. In addition to creating a link, this command redefines what is typeset by <code>\the<em>somecounter</em></code>: instead of outputting the value of counter <code><em>somecounter</em></code> it produces <code>&lt;value of anothercounter&gt;<strong>.</strong>&lt;value of somecounter&gt;</code>. The starred form (<code>\counterwithin*{somecounter}{anothercounter}</code>) does not redefine the print-format  of <code><em>somecounter</em></code>, as the following example demonstrates—select the link below the code to open it in Overleaf: 
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>A short example<span class="nb">}</span>
+<span class="k">\newcounter</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\counterwithin</span><span class="nb">{</span>example<span class="nb">}{</span>section<span class="nb">}</span>
+<span class="k">\newcounter</span><span class="nb">{</span>exampletwo<span class="nb">}</span>
+<span class="k">\counterwithin*</span><span class="nb">{</span>exampletwo<span class="nb">}{</span>section<span class="nb">}</span>
+<span class="k">\setcounter</span><span class="nb">{</span>example<span class="nb">}{</span>100<span class="nb">}</span>
+<span class="k">\setcounter</span><span class="nb">{</span>exampletwo<span class="nb">}{</span>100<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\theexample</span>| typesets <span class="k">\theexample</span>
+<span class="k">\item</span> <span class="k">\verb</span>|<span class="k">\theexampletwo</span>| typesets <span class="k">\theexampletwo</span>
+<span class="k">\end</span><span class="nb">{</span>itemize<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=&amp;snip_name=Example+of+starred+version+of+counterwithin&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Csection%7BA+short+example%7D%0A%5Cnewcounter%7Bexample%7D%0A%5Ccounterwithin%7Bexample%7D%7Bsection%7D%0A%5Cnewcounter%7Bexampletwo%7D%0A%5Ccounterwithin%2A%7Bexampletwo%7D%7Bsection%7D%0A%5Csetcounter%7Bexample%7D%7B100%7D%0A%5Csetcounter%7Bexampletwo%7D%7B100%7D%0A%5Cbegin%7Bitemize%7D%0A%5Citem+%5Cverb%7C%5Ctheexample%7C+typesets+%5Ctheexample%0A%5Citem+%5Cverb%7C%5Ctheexampletwo%7C+typesets+%5Ctheexampletwo%0A%5Cend%7Bitemize%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>\counterwithin</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Using the \counterwithin command" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/16/OLcounters6.png" decoding="async" width="300" height="110" />
+<br />
+</p><p>You can use <code>\counterwithin</code> with standard counters provided by LaTeX, such as:
+</p>
+<ul><li><code>section</code>: used by <code>\section</code> command</li>
+<li><code>equation</code> used  by the <code>equation</code> environment</li></ul>
+<p>or with counters you have created. 
+</p>
+<h6><span id="Example_of_.5Ccounterwithin_and_.5Ccounterwithin.2A"></span><span class="mw-headline" id="Example_of_\counterwithin_and_\counterwithin*">Example of <code>\counterwithin</code> and <code>\counterwithin*</code></span></h6>
+<p>The following code provides a more complete example of using <code>\counterwithin</code> and <code>\counterwithin*</code>; select the link below the code to open it in Overleaf:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\counterwithin</span><span class="nb">{</span>equation<span class="nb">}{</span>section<span class="nb">}</span>
+<span class="k">\newcounter</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\counterwithin*</span><span class="nb">{</span>example<span class="nb">}{</span>section<span class="nb">}</span>
+<span class="k">\newenvironment</span><span class="nb">{</span>example<span class="nb">}</span>[1][]<span class="nb">{</span><span class="c">%</span>
+<span class="k">\stepcounter</span><span class="nb">{</span>example<span class="nb">}</span><span class="c">%</span>
+<span class="k">\par\vspace</span><span class="nb">{</span>5pt<span class="nb">}</span><span class="k">\noindent</span>
+<span class="k">\fbox</span><span class="nb">{</span><span class="k">\textbf</span><span class="nb">{</span>Example~<span class="k">\thesection</span>.<span class="k">\theexample</span><span class="nb">}}</span><span class="c">%</span>
+<span class="k">\hrulefill\par\vspace</span><span class="nb">{</span>10pt<span class="nb">}</span><span class="k">\noindent\rmfamily</span><span class="nb">}</span><span class="c">%</span>
+<span class="nb">{</span><span class="k">\par\noindent\hrulefill\vrule</span> width10pt height2pt depth2pt<span class="k">\par</span><span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>First equation<span class="nb">}</span>
+Some introductory text...
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f(x)=<span class="k">\frac</span><span class="nb">{</span>x<span class="nb">}{</span>1+x<span class="nb">^</span>2<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+
+<span class="k">\subsection</span><span class="nb">{</span>More detail<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+Here we discuss
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f(x)=<span class="k">\frac</span><span class="nb">{</span>x+1<span class="nb">}{</span>x-1<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+... but don't say anything
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+
+<span class="k">\subsubsection</span><span class="nb">{</span>Even more detail<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f(x)=<span class="k">\frac</span><span class="nb">{</span>x<span class="nb">^</span>2<span class="nb">}{</span>1+x<span class="nb">^</span>3<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f(x+<span class="k">\delta</span> x)=<span class="k">\frac</span><span class="nb">{</span>(x+<span class="k">\delta</span> x)<span class="nb">^</span>2<span class="nb">}{</span>1+(x+<span class="k">\delta</span> x)<span class="nb">^</span>3<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+
+<span class="k">\section</span><span class="nb">{</span>Third equation<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+The following function...
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f<span class="nb">_</span>1(x)=<span class="k">\frac</span><span class="nb">{</span>x+1<span class="nb">}{</span>x-1<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+..is a function
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f<span class="nb">_</span>2(x)=<span class="k">\frac</span><span class="nb">{</span>x<span class="nb">^</span>2<span class="nb">}{</span>1+x<span class="nb">^</span>3<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f<span class="nb">_</span>3(x)=<span class="k">\frac</span><span class="nb">{</span>3+ x<span class="nb">^</span>2<span class="nb">}{</span>1-x<span class="nb">^</span>3<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Example+of+using+counterwithin
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Ccounterwithin%7Bequation%7D%7Bsection%7D%0A%5Cnewcounter%7Bexample%7D%0A%5Ccounterwithin%2A%7Bexample%7D%7Bsection%7D%0A%5Cnewenvironment%7Bexample%7D%5B1%5D%5B%5D%7B%25%0A%5Cstepcounter%7Bexample%7D%25%0A%5Cpar%5Cvspace%7B5pt%7D%5Cnoindent%0A%5Cfbox%7B%5Ctextbf%7BExample%7E%5Cthesection.%5Ctheexample%7D%7D%25%0A%5Chrulefill%5Cpar%5Cvspace%7B10pt%7D%5Cnoindent%5Crmfamily%7D%25%0A%7B%5Cpar%5Cnoindent%5Chrulefill%5Cvrule+width10pt+height2pt+depth2pt%5Cpar%7D%0A%5Cbegin%7Bdocument%7D%0A%5Csection%7BFirst+equation%7D%0ASome+introductory+text...%0A%5Cbegin%7Bexample%7D%0A%5Cbegin%7Bequation%7D%0A++++f%28x%29%3D%5Cfrac%7Bx%7D%7B1%2Bx%5E2%7D%0A%5Cend%7Bequation%7D%0A%5Cend%7Bexample%7D%0A%0A%5Csubsection%7BMore+detail%7D%0A%5Cbegin%7Bexample%7D%0AHere+we+discuss%0A%5Cbegin%7Bequation%7D%0A++++f%28x%29%3D%5Cfrac%7Bx%2B1%7D%7Bx-1%7D%0A%5Cend%7Bequation%7D%0A...+but+don%27t+say+anything%0A%5Cend%7Bexample%7D%0A%0A%5Csubsubsection%7BEven+more+detail%7D%0A%5Cbegin%7Bexample%7D%0A%5Cbegin%7Bequation%7D%0A++++f%28x%29%3D%5Cfrac%7Bx%5E2%7D%7B1%2Bx%5E3%7D%0A%5Cend%7Bequation%7D%0A%5Cbegin%7Bequation%7D%0A++++f%28x%2B%5Cdelta+x%29%3D%5Cfrac%7B%28x%2B%5Cdelta+x%29%5E2%7D%7B1%2B%28x%2B%5Cdelta+x%29%5E3%7D%0A%5Cend%7Bequation%7D%0A%5Cend%7Bexample%7D%0A%0A%5Csection%7BThird+equation%7D%0A%5Cbegin%7Bexample%7D%0AThe+following+function...%0A%5Cbegin%7Bequation%7D%0A++++f_1%28x%29%3D%5Cfrac%7Bx%2B1%7D%7Bx-1%7D%0A%5Cend%7Bequation%7D%0A..is+a+function%0A%5Cbegin%7Bequation%7D%0A++++f_2%28x%29%3D%5Cfrac%7Bx%5E2%7D%7B1%2Bx%5E3%7D%0A%5Cend%7Bequation%7D%0A%5Cbegin%7Bequation%7D%0A++++f_3%28x%29%3D%5Cfrac%7B3%2B+x%5E2%7D%7B1-x%5E3%7D%0A%5Cend%7Bequation%7D%0A%5Cend%7Bexample%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>\counterwithin</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Using the \counterwithin command" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/8/81/OLcounters5.png" decoding="async" width="600" height="888" />
+</p>
+<h6><span class="mw-headline" id="Code_summary_2">Code summary</span></h6>
+<ul><li><code>\newcounter{example}</code>: This creates a new counter for use in our environment, also called <code>example</code></li>
+<li><code>\counterwithin*{example}{section}</code>: This links our <code>example</code> counter with the <code>section</code> counter used within the <code>\section</code> command: each time we issue a <code>\section</code> command the <code>example</code> counter is reset to zero. Note that we used the starred version <code>\counterwithin*</code> to avoid redefinition of <code>\theexample</code></li>
+<li>Next, we create a new environment also called <code>example</code>. Within that environment we use <code>\stepcounter{example}</code> to increment the environment’s counter. Note too we write <code>\textbf{Example~\thesection.\theexample}</code> to output <strong>Example </strong><code>&lt;section number&gt;.&lt;example number&gt;</code></li></ul>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\newenvironment</span><span class="nb">{</span>example<span class="nb">}</span>[1][]<span class="nb">{</span><span class="c">%</span>
+<span class="k">\stepcounter</span><span class="nb">{</span>example<span class="nb">}</span><span class="c">%</span>
+<span class="k">\par\vspace</span><span class="nb">{</span>5pt<span class="nb">}</span><span class="k">\noindent</span>
+<span class="k">\fbox</span><span class="nb">{</span><span class="k">\textbf</span><span class="nb">{</span>Example~<span class="k">\thesection</span>.<span class="k">\theexample</span><span class="nb">}}</span><span class="c">%</span>
+<span class="k">\hrulefill\par\vspace</span><span class="nb">{</span>10pt<span class="nb">}</span><span class="k">\noindent\rmfamily</span><span class="nb">}</span><span class="c">%</span>
+<span class="nb">{</span><span class="k">\par\noindent\hrulefill\vrule</span> width10pt height2pt depth2pt<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<h5><span id=".5Ccounterwithout.7Bsomecounter.7D.7Banothercounter.7D"></span><span class="mw-headline" id="\counterwithout{somecounter}{anothercounter}"><strong><code>\counterwithout{<em>somecounter</em>}{<em>anothercounter</em>}</code></strong></span></h5>
+<p><code>\counterwithout{<em>somecounter</em>}{<em>anothercounter</em>}</code> removes the link between <code><em>somecounter</em></code> and <code><em>anothercounter</em></code> so that they are independent. For any pair of counters, you can switch between using <code>\counterwithout</code> and <code>\counterwithin</code>, as the following example shows for the <code>example</code> and <code>section</code> counters—you can open this example in Overleaf using the link provided below the code.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\section</span><span class="nb">{</span>First equation<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f(x)=<span class="k">\frac</span><span class="nb">{</span>x<span class="nb">}{</span>1+x<span class="nb">^</span>2<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+
+<span class="k">\subsection</span><span class="nb">{</span>Second equation<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f(x)=<span class="k">\frac</span><span class="nb">{</span>x+1<span class="nb">}{</span>x-1<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\vspace</span><span class="nb">{</span>6pt<span class="nb">}</span><span class="k">\noindent</span> Note how the <span class="k">\texttt</span><span class="nb">{</span>example<span class="nb">}</span> counter is reset at the start Section <span class="k">\ref</span><span class="nb">{</span>sec:n0<span class="nb">}</span>. 
+<span class="k">\section</span><span class="nb">{</span>Third equation<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>sec:n0<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f(x)=<span class="k">\frac</span><span class="nb">{</span>x+1<span class="nb">}{</span>x-1<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\vspace</span><span class="nb">{</span>6pt<span class="nb">}</span><span class="k">\noindent</span> Here, we wrote <span class="k">\verb</span>|<span class="k">\counterwithout</span><span class="nb">{</span>example<span class="nb">}{</span>section<span class="nb">}</span>| so that <span class="k">\texttt</span><span class="nb">{</span>example<span class="nb">}</span> is no longer reset at the start of a section. In Sections <span class="k">\ref</span><span class="nb">{</span>sec:n1<span class="nb">}</span> and <span class="k">\ref</span><span class="nb">{</span>sec:n2<span class="nb">}</span> the <span class="k">\texttt</span><span class="nb">{</span>example<span class="nb">}</span> counter keeps increasing. <span class="k">\counterwithout</span><span class="nb">{</span>example<span class="nb">}{</span>section<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>Fourth equation<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>sec:n1<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f(x)=<span class="k">\frac</span><span class="nb">{</span>x<span class="nb">^</span>2+x<span class="nb">^</span>3<span class="nb">}{</span>1+x<span class="nb">^</span>3<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>Fifth equation<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>sec:n2<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>example<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f(x,k)=<span class="k">\frac</span><span class="nb">{</span>x<span class="nb">^</span>2-x<span class="nb">^</span>k<span class="nb">}{</span>1+x<span class="nb">^</span>3<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>example<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=Example+of+using+counterwithout
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Ccounterwithin%7Bequation%7D%7Bsection%7D%0A%5Cnewcounter%7Bexample%7D%0A%5Ccounterwithin%2A%7Bexample%7D%7Bsection%7D%0A%5Cnewenvironment%7Bexample%7D%5B1%5D%5B%5D%7B%25%0A%5Cstepcounter%7Bexample%7D%25%0A%5Cpar%5Cvspace%7B3pt%7D%5Cnoindent%0A%5Cfbox%7B%5Ctextbf%7BExample%7E%5Cthesection.%5Ctheexample%7D%7D%25%0A%5Chrulefill%5Cpar%5Cvspace%7B3pt%7D%5Cnoindent%5Crmfamily%7D%25%0A%7B%5Cpar%5Cnoindent%5Chrulefill%5Cvrule+width10pt+height2pt+depth2pt%5Cpar%7D%0A%5Cbegin%7Bdocument%7D%0A%5Csection%7BFirst+equation%7D%0A%5Cbegin%7Bexample%7D%0A%5Cbegin%7Bequation%7D%0A++++f%28x%29%3D%5Cfrac%7Bx%7D%7B1%2Bx%5E2%7D%0A%5Cend%7Bequation%7D%0A%5Cend%7Bexample%7D%0A%0A%5Csubsection%7BSecond+equation%7D%0A%5Cbegin%7Bexample%7D%0A%5Cbegin%7Bequation%7D%0A++++f%28x%29%3D%5Cfrac%7Bx%2B1%7D%7Bx-1%7D%0A%5Cend%7Bequation%7D%0A%5Cend%7Bexample%7D%0A%5Cvspace%7B6pt%7D%5Cnoindent+Note+how+the+%5Ctexttt%7Bexample%7D+counter+is+reset+at+the+start+Section+%5Cref%7Bsec%3An0%7D.+%0A%5Csection%7BThird+equation%7D%0A%5Clabel%7Bsec%3An0%7D%0A%5Cbegin%7Bexample%7D%0A%5Cbegin%7Bequation%7D%0A++++f%28x%29%3D%5Cfrac%7Bx%2B1%7D%7Bx-1%7D%0A%5Cend%7Bequation%7D%0A%5Cend%7Bexample%7D%0A%5Cvspace%7B6pt%7D%5Cnoindent+Here%2C+we+wrote+%5Cverb%7C%5Ccounterwithout%7Bexample%7D%7Bsection%7D%7C+so+that+%5Ctexttt%7Bexample%7D+is+no+longer+reset+at+the+start+of+a+section.+In+Sections+%5Cref%7Bsec%3An1%7D+and+%5Cref%7Bsec%3An2%7D+the+%5Ctexttt%7Bexample%7D+counter+keeps+increasing.+%5Ccounterwithout%7Bexample%7D%7Bsection%7D%0A%5Csection%7BFourth+equation%7D%0A%5Clabel%7Bsec%3An1%7D%0A%5Cbegin%7Bexample%7D%0A%5Cbegin%7Bequation%7D%0A++++f%28x%29%3D%5Cfrac%7Bx%5E2%2Bx%5E3%7D%7B1%2Bx%5E3%7D%0A%5Cend%7Bequation%7D%0A%5Cend%7Bexample%7D%0A%5Csection%7BFifth+equation%7D%0A%5Clabel%7Bsec%3An2%7D%0A%5Cbegin%7Bexample%7D%0A%5Cbegin%7Bequation%7D%0A++++f%28x%2Ck%29%3D%5Cfrac%7Bx%5E2-x%5Ek%7D%7B1%2Bx%5E3%7D%0A%5Cend%7Bequation%7D%0A%5Cend%7Bexample%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>\counterwithout</code> example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Using the counterwithout command" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/8/80/OLcounters7b.png" decoding="async" width="600" height="889" />
+</p>
+<h2><span class="mw-headline" id="Example_2">Example</span></h2>
+<h3><span class="mw-headline" id="enumerate"><code>enumerate</code></span></h3>
+<p>The <code>enumerate</code> list environment uses four <em>counter</em> variables which keep track of the current label value for each level:
+</p><p class="mw-empty-elt">
+</p><div>
+   <table>
+      <tbody>
+            <tr>
+                <td><strong>Level</strong></td>
+                <td><strong><code>enumerate</code></strong> counter variable</td>
+            </tr>
+            <tr>
+                 <td>Level 1</td>
+                 <td><code>enumi</code></td>
+            </tr>
+            <tr>
+                 <td>Level 2</td>
+                 <td><code>enumii</code></td>
+            </tr>
+            <tr>
+                 <td>Level 3</td>
+                 <td><code>enumiii</code></td>
+            </tr>
+            <tr>
+                 <td>Level 4</td>
+                 <td><code>enumiv</code></td>
+            </tr>
+       </tbody>
+    </table>
+</div> 
+
+<p class="mw-empty-elt"></p><p>These counters can be changed using the <code>\setcounter</code> command. See the example below—which is not necessarily the best solution (see the <a href="Lists.html" title="Lists">Overleaf lists</a> article for more information):
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>This example shows one way to change the numbering of a list; here, changing the value of the <span class="k">\texttt</span><span class="nb">{</span>enumi<span class="nb">}</span> counter to start the list numbering at 4 (it is incremented by the <span class="k">\verb</span>|<span class="k">\item</span>| command):
+
+<span class="k">\begin</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+<span class="k">\setcounter</span><span class="nb">{</span>enumi<span class="nb">}{</span>3<span class="nb">}</span>
+<span class="k">\item</span> Something.
+<span class="k">\item</span> Something else.
+<span class="k">\item</span> Another element.
+<span class="k">\item</span> The last item in the list.
+<span class="k">\end</span><span class="nb">{</span>enumerate<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Modifying+an+enumerate+counter&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cbegin%7Bdocument%7D%0A%5Csection%7BIntroduction%7D%0AThis+example+shows+one+way+to+change+the+numbering+of+a+list%3B+here%2C+changing+the+value+of+the+%5Ctexttt%7Benumi%7D+counter+to+start+the+list+numbering+at+4+%28it+is+incremented+by+the+%5Cverb%7C%5Citem%7C+command%29%3A%0A%0A%5Cbegin%7Benumerate%7D%0A%5Csetcounter%7Benumi%7D%7B3%7D%0A%5Citem+Something.%0A%5Citem+Something+else.%0A%5Citem+Another+element.%0A%5Citem+The+last+item+in+the+list.%0A%5Cend%7Benumerate%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p><img alt="Modifying an enumerate counter" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/39/OLcounters8.png" decoding="async" width="600" height="248" />
+</p>
+<h2><span class="mw-headline" id="Default_counters_in_LaTeX">Default counters in LaTeX</span></h2>
+<table class="wikitable">
+<tbody><tr>
+<th>Usage
+</th>
+<th>Name
+</th></tr>
+<tr>
+<td>For document structure
+</td>
+<td>
+<ul><li>part</li>
+<li>chapter</li>
+<li>section</li>
+<li>subsection</li>
+<li>subsubsection</li>
+<li>paragraph</li>
+<li>subparagraph</li>
+<li>page</li></ul>
+</td></tr>
+<tr>
+<td>For floats
+</td>
+<td>
+<ul><li>equation</li>
+<li>figure</li>
+<li>table</li></ul>
+</td></tr>
+<tr>
+<td>For footnotes
+</td>
+<td>
+<ul><li>footnote</li>
+<li>mpfootnote</li></ul>
+</td></tr>
+<tr>
+<td>For the <code>enumerate</code> environment
+</td>
+<td>
+<ul><li>enumi</li>
+<li>enumii</li>
+<li>enumiii</li>
+<li>enumiv</li></ul>
+</td></tr>
+</tbody></table>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span></h2>
+<p>For more information see:
+</p>
+<ul><li><a href="Environments.html" title="Environments">Environments</a></li>
+<li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" class="mw-redirect" title="Typing exams in LaTeX">Typing exams in LaTeX</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ctan.org/tex-archive/info/lshort/">The not so short introduction to <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X<span style="margin-left:0.15em">2</span><span style="font-style:italic;vertical-align:-0.35ex;line-height:0">ε</span></span></a></li></ul>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="Operators.html" title="Operators">Operators</a></li>
+<li><a href="Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="French.html" title="French">French</a></li>
+<li><a href="German.html" title="German">German</a></li>
+<li><a href="Greek.html" title="Greek">Greek</a></li>
+<li><a href="Italian.html" title="Italian">Italian</a></li>
+<li><a href="Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="Korean.html" title="Korean">Korean</a></li>
+<li><a href="Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="Russian.html" title="Russian">Russian</a></li>
+<li><a href="Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="Indices.html" title="Indices">Indices</a></li>
+<li><a href="Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="Counters.html" title="Counters">Counters</a></li>
+<li><a href="Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="Tutorials.html">Tutorials</a></li><li><a href="Inserting_Images.html">How to insert images</a></li><li><a href="Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Counters%23Accessing_and_printing_counter_values.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==" src="../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="qwYmVt5lLPKV//dAqMDUgw==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:10:47 GMT -->
+</html>

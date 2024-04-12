@@ -1,0 +1,368 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX%E2%80%99s_page_layout_parameters by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:02:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>A visual guide to LaTeX’s page layout parameters - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="A visual guide to LaTeX’s page layout parameters"><meta name="og:title" content="A visual guide to LaTeX’s page layout parameters"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="A_visual_guide_to_LaTeX%e2%80%99s_page_layout_parameters.html"><link rel="stylesheet" href="../../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="A_visual_guide_to_LaTeX%e2%80%99s_page_layout_parameters.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" hreflang="ja"><link rel="preload" href="../../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="LrRfFWjmXXfXQixkgkvhew=="><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="AyE2IUOc-l5qdG6k26-mHWnC6677Y0PP9L-A"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/A_visual_guide_to_LaTeX%E2%80%99s_page_layout_parameters&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/A_visual_guide_to_LaTeX%E2%80%99s_page_layout_parameters&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>A visual guide to LaTeX’s page layout parameters</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Update:_September_2021"><span class="tocnumber">1</span> <span class="toctext">Update: September 2021</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Introduction"><span class="tocnumber">2</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Short_notes_on_pdfTeX_and_LuaTeX/LuaHBTeX"><span class="tocnumber">2.1</span> <span class="toctext">Short notes on pdfTeX and LuaTeX/LuaHBTeX</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#LuaTeX/LuaHBTeX"><span class="tocnumber">2.1.1</span> <span class="toctext">LuaTeX/LuaHBTeX</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#What_is_our_objective?"><span class="tocnumber">3</span> <span class="toctext">What is our objective?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Quick_reminder:_How_do_you_set_the_paper_size?"><span class="tocnumber">3.1</span> <span class="toctext">Quick reminder: How do you set the paper size?</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#An_aside:_LuaTeX"><span class="tocnumber">3.1.1</span> <span class="toctext">An aside: LuaTeX</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Resources_in_this_post"><span class="tocnumber">4</span> <span class="toctext">Resources in this post</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#How_to_use_this_article’s_resources"><span class="tocnumber">4.1</span> <span class="toctext">How to use this article’s resources</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Step_1:_View_or_download_(in_PDF)_the_Google_Slides"><span class="tocnumber">4.1.1</span> <span class="toctext">Step 1: View or download (in PDF) the Google Slides</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Step_2_(optional):_Download_and_study_the_page-layout_diagrams"><span class="tocnumber">4.1.2</span> <span class="toctext">Step 2 (optional): Download and study the page-layout diagrams</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Notes_on_the_page-layout_parameters_and_equations"><span class="tocnumber">4.2</span> <span class="toctext">Notes on the page-layout parameters and equations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Article_resources"><span class="tocnumber">5</span> <span class="toctext">Article resources</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Google_Slides:_With_animations"><span class="tocnumber">5.1</span> <span class="toctext">Google Slides: With animations</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Google_Slides:_Without_animations"><span class="tocnumber">5.2</span> <span class="toctext">Google Slides: Without animations</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Google_Slides:_Converted_to_PDF"><span class="tocnumber">5.3</span> <span class="toctext">Google Slides: Converted to PDF</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Download_page-layout_diagrams"><span class="tocnumber">5.4</span> <span class="toctext">Download page-layout diagrams</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#In_conclusion"><span class="tocnumber">6</span> <span class="toctext">In conclusion</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Update:_September_2021">Update: September 2021</span></h2>
+<p>Some 4 years after it was first published, this article has been edited, renamed and republished to reduce its size and re-focus the scope of topics covered. The article originally included a LuaTeX-based LaTeX template which relied on old Overleaf V1 features. That template is now obsolete and no longer available.
+</p><p><strong>Note</strong>: If you don’t need, or want, to understand finer details of LaTeX page layout, the Overleaf article <a href="../Page_size_and_margins.html" title="Page size and margins">Page size and margins</a> explains the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/geometry?lang=en"><code>geometry</code> package</a> and is likely to be of more interest.
+</p>
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>Have you ever struggled to configure a book layout with LaTeX—setting the paper size, book page size (trim size) and margins? It can be tricky, even though there are many packages to assist with this task—including the excellent <code>geometry</code> package. (La)TeX uses nearly a dozen values to fully specify the page layout for publications that have different margins for left- and right-hand pages:</p>
+<ul>
+<li><code>\hoffset</code>, <code>\voffset</code>,  <code>\oddsidemargin</code>,  <code>\topmargin</code>, <code>\headheight</code>, <code>\headsep</code>, <code>\textheight</code>, <code>\textwidth</code>, <code>\marginparsep</code>, <code>\marginparwidth</code>, <code>\footskip</code>
+</li>
+</ul>
+<p>Typically, these parameters are set through commands provided by packages or templates—such as those distributed by book publishers. However, at times you might want to understand what is going on “behind the scenes”—perhaps you need a greater degree of control for a particular type of document you want to create.</p>
+<p>In this post we explore the relationship between LaTeX’s model of the page and the conventional model used within the world of print and design. Using a set of <a href="#Google_Slides:_With_animations">Google Slides</a>, which contain detailed page-layout illustrations, we show, step-by-step, how to formulate some very simple equations which provide a link between LaTeX’s layout  model and a typical specification that might be produced by a book designer or print-on-demand company. Using those equations you can, if you wish, directly calculate values for LaTeX’s parameters to implement your preferred book layout.
+
+</p><h3><span id="Short_notes_on_pdfTeX_and_LuaTeX.2FLuaHBTeX"></span><span class="mw-headline" id="Short_notes_on_pdfTeX_and_LuaTeX/LuaHBTeX">Short notes on pdfTeX and LuaTeX/LuaHBTeX</span></h3>
+<p>Note that in addition to the <code>\hoffset</code> and <code>\voffset</code> parameters listed above, pdfTeX also uses the parameters <code>\pdfhorigin</code> and <code>\pdfvorigin</code>. Traditionally, TeX engines output <code>.dvi</code> files which were converted to PostScript or PDF by software which assumed the page origin was at located at 1 inch (25.4mm) from the left of the page and 1 inch (25.4mm) from the top of the page. The values of the <code>\hoffset</code> and <code>\voffset</code> parameters are <em>relative</em> to that (1 inch, 1 inch) position. The pdfTeX parameters are slightly different insofar that they are relative to the top-left corner, i.e., at (0mm, 0mm). So, for example, if you set <code>\pdfhorigin=30mm</code> it is equivalent to setting <code>\hoffset</code> to <code>30–25.4</code>=<code>4.6mm</code> because <code>\hoffset</code> is relative to a position that is already <code>25.4mm</code> from the left of the page. Equally, an <code>\hoffset</code> value of <code>0mm</code> is equivalent to <code>\pdfhorigin=25.4mm</code>. In the following discussions/diagrams we will use the parameters <code>\hoffset</code> and <code>\voffset</code>.
+</p>
+<h4><span id="LuaTeX.2FLuaHBTeX"></span><span class="mw-headline" id="LuaTeX/LuaHBTeX">LuaTeX/LuaHBTeX</span></h4>
+<p>LuaTeX/LuaHBTeX also <em>indirectly</em> support <code>\pdfhorigin</code> and <code>\pdfvorigin</code> but, for compatibility with pdfTeX, those commands must be defined as follows (see Section 3 of <a rel="nofollow" class="external text" href="https://www.pragma-ade.com/general/manuals/luatex.pdf">The LuaTeX Referemce Manual</a>):
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\edef\pdfhorigin</span><span class="nb">{</span><span class="k">\pdfvariable</span> horigin<span class="nb">}</span>
+<span class="k">\edef\pdfvorigin</span><span class="nb">{</span><span class="k">\pdfvariable</span> vorigin<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<h2><span id="What_is_our_objective.3F"></span><span class="mw-headline" id="What_is_our_objective?">What is our objective?</span></h2>
+<p>The theme of this article, and the purpose of the resources we have provided, is based on the following objectives:</p>
+<ol>
+<li>We want to implement a layout specification provided by, for example, a book designer or publisher who does not use or support LaTeX—or perhaps we need to follow a specification provided by a print-on-demand company.
+</li>
+<li>We want to use the traditional book measurements (paper size, trim size and page margins) contained within the designer’s specification and convert them into parameters and values that LaTeX understands and can use to replicate the designer’s layout.
+</li>
+<li>We want our book page to be horizontally and vertically centred on the paper size we have chosen— i.e., centred within the area of the PDF pages created by LaTeX. We also want to choose an arbitrary paper size and not be restricted to a few standard options (A4, US Letter and so forth).
+</li>
+</ol>
+<h3><span id="Quick_reminder:_How_do_you_set_the_paper_size.3F"></span><span class="mw-headline" id="Quick_reminder:_How_do_you_set_the_paper_size?">Quick reminder: How do you set the <em>paper</em> size?</span></h3>
+<p>LuaTeX, XeTeX and pdfTeX provide two commands that let you control the “paper size” of the PDF document they produce:</p>
+<ul>
+<li><code>\pdfpagewidth</code></li>
+<li><code>\pdfpageheight</code></li>
+</ul>
+<p>Knowing that these commands represent the size of our paper we can now draw a diagram to show what we are trying to achieve:</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/f608dlsHRuGVHJU63Wuh" />
+
+</p>
+<p>Note that ΔX and ΔY are the values needed to centre the book page on the paper area—they are discussed in the <a href="#Google_Slides:_With_animations">Google Slides</a>. From the diagram above you can see:</p>
+<ul>
+<li>ΔX=½(\pdfpagewidth − book-page-width)</li>
+<li>ΔY=½(\pdfpageheight − book-page-height)
+</li>
+</ul>
+<p>The above diagram is also included in the <a href="#Google_Slides:_With_animations">Google Slides</a> and is used as the starting point for arriving at the page-layout equations.</p>
+<h4><span class="mw-headline" id="An_aside:_LuaTeX">An aside: LuaTeX</span></h4>
+<p>LuaTeX no longer <em>directly</em> supports <code>\pdfpagewidth</code> or <code>\pdfpageheight</code> but now uses two new primitives called <code>\pagewidth</code> and <code>\pageheight</code>. Backwards compatibility can be achieved through <code>\let\pdfpagewidth\pagewidth</code> and <code>\let\pdfpageheight\pageheight</code>. Interested readers can find more details in <a rel="nofollow" class="external text" href="https://www.latex-project.org/news/latex2e-news/ltnews24.pdf">LaTeX News (Issue 24, February 2016)</a> and, of course, the <a rel="nofollow" class="external text" href="http://www.luatex.org/documentation.html">official LuaTeX documentation</a>.</p>
+<h2><span class="mw-headline" id="Resources_in_this_post">Resources in this post</span></h2>
+<p>Here at Overleaf we like to try out new ideas so, in this post, we have included a range of resources which we hope will be useful:</p>
+<ul>
+<li>
+<strong>Two sets of <a href="#Google_Slides:_With_animations">Google Slides</a></strong>: These slide sets contain identical content but one has animations and the other does not (some people prefer to view slides that don’t contain any animation). You can also download them in <a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/7Okr2kx6QAWPo3w7mt6K">PDF format</a>. The slides provide a very brief introduction to the basics of book page layout and explore the relationship between LaTeX’s page model and the one used in conventional print and design. The last few slides show how to arrive at simple equations which can be used to use convert a set of traditional measurements (page width/height and margins) into equivalent LaTeX parameter values to reproduce your book’s layout in LaTeX.
+</li>
+<li><strong>Page-layout diagrams</strong>: The <a href="#Google_Slides:_With_animations">Google Slides</a> contain detailed page-layout diagrams which are used to formulate some simple equations to calculate various LaTeX parameters. If you would like to study those illustrations in more detail we’ve provided <a href="#Download_page-layout_diagrams">PDF versions</a> for you to download.</li>
+</ul>
+<h3><span id="How_to_use_this_article.E2.80.99s_resources"></span><span class="mw-headline" id="How_to_use_this_article’s_resources">How to use this article’s resources</span></h3>
+<p>The readership of this article is likely to have a spectrum of experience in using LaTeX so we felt it was preferable to provide a range of resources for readers to choose from—based on your personal experience, interests or preferences. We hope these resources are useful and meet the needs and interests of Overleaf’s LaTeX community.</p>
+<p>There’s no defined order in which to use these resources but our suggestion would be as follows:</p>
+<ol>
+<li>view the <a href="#Google_Slides:_With_animations">Google Slides</a>;</li>
+<li>(optional): download and study the <a href="#Download_page-layout_diagrams">page layout diagrams</a>;
+</li>
+</ol>
+<h4><span id="Step_1:_View_or_download_.28in_PDF.29_the_Google_Slides"></span><span class="mw-headline" id="Step_1:_View_or_download_(in_PDF)_the_Google_Slides">Step 1: View or download (in PDF) the <a href="#Google_Slides:_With_animations">Google Slides</a></span></h4>
+<p>The final slide (shown below) summarizes the equations formulated during the presentation.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/tKcKxGWcQyS8Yy4pXVsu" width="600px" />
+
+</p>
+<p>For the convenience of readers we provide three options for viewing the slides:</p>
+<ol>
+<li>slides <a href="#Google_Slides:_With_animations">with animations</a>;</li>
+<li>slides <a href="#Google_Slides:_Without_animations">without animations</a>;</li>
+<li>slides in <a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/7Okr2kx6QAWPo3w7mt6K">PDF format</a> for offline viewing or printing. 
+</li></ol>
+<h4><span id="Step_2_.28optional.29:_Download_and_study_the_page-layout_diagrams"></span><span class="mw-headline" id="Step_2_(optional):_Download_and_study_the_page-layout_diagrams">Step 2 (optional): Download and study the page-layout diagrams</span></h4>
+<p>If you would like to explore the page-layout diagrams in more detail, there is a link at the <a href="#Download_page-layout_diagrams">end of this article</a> to download a PDF file which contains a double-page spread (facing pages) version of the diagrams contained in the <a href="#Google_Slides:_With_animations">Google Slides</a>.</p>
+<h3><span class="mw-headline" id="Notes_on_the_page-layout_parameters_and_equations">Notes on the page-layout parameters and equations</span></h3>
+<p>If you look at the equations presented in the <a href="#Google_Slides:_With_animations">Google Slides</a> you might observe they contain many variables; consequently, there are multiple ways to use the equations depending on which LaTeX parameter values you want to calculate and which ones you’d like to set yourself. Let’s take a look at one of the graphics (and relevant equations) contained in the <a href="#Google_Slides:_With_animations">Google Slides</a>:</p>
+<p>
+        <img src="https://images.ctfassets.net/nrgyaltdicpt/5mM6WpgzLO0dRyAgfZdFIa/d2a20adec2670573d1f79ec262815d43/LHpage-plain.svg" width="500px" />
+
+</p>
+<p>Clearly, you need to decide which LaTeX parameter values you want to calculate and which ones you will provide as the starting point. One way to proceed is as follows:</p>
+<ol>
+<li>Set <code>\hoffset</code> and <code>\voffset</code> to <code>0mm</code> (with <code>\pdfhorigin=1in</code> and <code>\pdfvorigin=1in</code>, if necessary)</li>
+<li>Use values for the following LaTeX parameters which affect the book page <em>width</em>:</li>
+<ul>
+<li><code>\marginparsep</code></li>
+<li><code>\marginparwidth</code></li>
+</ul>
+<li>Set preferred values for the following LaTeX parameters which affect the book page <em>height</em>:</li>
+<ul><li><code>\headheight </code></li>
+<li><code>\headsep </code></li>
+<li><code>\footskip </code></li>
+</ul>
+<li>Set values for your preferred paper size together with the desired width and height of the book page, plus the four book margin values you would like to use. 
+</li><li>Calculate the following LaTeX values to implement your book layout (centred on the paper size you selected):</li>
+<ul>
+<li><code>\evensidemargin</code>, <code>\oddsidemargin</code>, <code>\textwidth</code>, <code>\textheight</code>and <code>\topmargin</code></li>
+</ul>
+</ol>
+<h2><span class="mw-headline" id="Article_resources">Article resources</span></h2>
+<p>Here we list a number of resources that we have prepared to help you better understand the LaTeX page-layout parameters. The <a href="#Google_Slides:_With_animations">Google Slides</a> provide details of the simple equations that you can, if you wish, use directly to calculate parameter values to suit the needs of any document.</p>
+<h3><span class="mw-headline" id="Google_Slides:_With_animations">Google Slides: With animations</span></h3>
+<p><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSTZiCWqckmPGdqisRh9wTflZrmWdofwpReQAkSbuW2tTBothzSy86TzwMUtfomKtqSbVwNypifdUgY/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="600" height="468" allowfullscreen="true"></iframe>
+
+</p>
+<h3><span class="mw-headline" id="Google_Slides:_Without_animations">Google Slides: Without animations</span></h3>
+<p>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ_gH_Wg0Q0HdhcuyGXPplPsAUkaYbi_at_tnFLKk8q_woe22eFNPjehAF_PLvEgEV_33-qNskIYvlL/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="600" height="468" allowfullscreen="true"></iframe>
+
+</p>
+<h3><span class="mw-headline" id="Google_Slides:_Converted_to_PDF">Google Slides: Converted to PDF</span></h3>
+<p>If you prefer to view the slides as a PDF document, or wish to print them out, you can download the slides in <a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/7Okr2kx6QAWPo3w7mt6K">PDF format</a>.</p>
+<h3><span class="mw-headline" id="Download_page-layout_diagrams">Download page-layout diagrams</span></h3>
+<p>If you want to study the page-layout diagrams in more detail, here is a double-page spread (i.e., facing pages) in <a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/X2O1aJM1Rca68mmYm4PT">PDF format</a>.</p>
+<h2><span class="mw-headline" id="In_conclusion">In conclusion</span></h2>
+<p>We hope this article is useful and has provided some useful background information for exploring page layout using LaTeX. As always, we are delighted to hear from readers so do please <a rel="nofollow" class="external text" href="https://www.overleaf.com/contact">contact us</a> with your comments and feedback.</p>
+<p>Happy (La)TeXing!</p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../Lists.html" title="Lists">Lists</a></li>
+<li><a href="../Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../Operators.html" title="Operators">Operators</a></li>
+<li><a href="../Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../Tables.html" title="Tables">Tables</a></li>
+<li><a href="../Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../French.html" title="French">French</a></li>
+<li><a href="../German.html" title="German">German</a></li>
+<li><a href="../Greek.html" title="Greek">Greek</a></li>
+<li><a href="../Italian.html" title="Italian">Italian</a></li>
+<li><a href="../Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../Korean.html" title="Korean">Korean</a></li>
+<li><a href="../Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../Russian.html" title="Russian">Russian</a></li>
+<li><a href="../Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../Indices.html" title="Indices">Indices</a></li>
+<li><a href="../Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../Counters.html" title="Counters">Counters</a></li>
+<li><a href="../Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../Commands.html" title="Commands">Commands</a></li>
+<li><a href="../Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="../Tutorials.html">Tutorials</a></li><li><a href="../Inserting_Images.html">How to insert images</a></li><li><a href="../Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="A_visual_guide_to_LaTeX%e2%80%99s_page_layout_parameters.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX’s_page_layout_parameters" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==" src="../../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="LrRfFWjmXXfXQixkgkvhew==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/A_visual_guide_to_LaTeX%E2%80%99s_page_layout_parameters by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:02:47 GMT -->
+</html>

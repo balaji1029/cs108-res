@@ -1,0 +1,574 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:03:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>TeX Tables: How TeX Calculates Spanned Column Widths - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="TeX Tables: How TeX Calculates Spanned Column Widths"><meta name="og:title" content="TeX Tables: How TeX Calculates Spanned Column Widths"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="TeX_Tables__How_TeX_Calculates_Spanned_Column_Widths.html"><link rel="stylesheet" href="../../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="TeX_Tables__How_TeX_Calculates_Spanned_Column_Widths.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" hreflang="ja"><link rel="preload" href="../../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="3zMU4eP9FyVR0E55wQBAJQ=="><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="JCQcrlAS-3e81kEJgpAEgN_RxyDng3AuCbb0"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>TeX Tables: How TeX Calculates Spanned Column Widths</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#The_goal_of_this_article"><span class="tocnumber">1</span> <span class="toctext">The goal of this article</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Using_\(\mathrm\TeX\)_not_\(\mathrm\LaTeX\)"><span class="tocnumber">1.1</span> <span class="toctext">Using \(\mathrm\TeX\) not \(\mathrm\LaTeX\)</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Yes,_tables_are_complex"><span class="tocnumber">1.2</span> <span class="toctext">Yes, tables are complex</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Spanning_columns:_\omit,_\span_and_\multispan"><span class="tocnumber">1.3</span> <span class="toctext">Spanning columns: \omit, \span and \multispan</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Introducing_our_“reference”_table"><span class="tocnumber">2</span> <span class="toctext">Introducing our “reference” table</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#A_brief_note_on_table_widths"><span class="tocnumber">2.1</span> <span class="toctext">A brief note on table widths</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#No_automatic_line-breaking_in_table_entries"><span class="tocnumber">2.2</span> <span class="toctext">No automatic line-breaking in table entries</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Not_allowed:_\halign{...}_inside_\hbox{...}"><span class="tocnumber">2.3</span> <span class="toctext">Not allowed: \halign{...} inside \hbox{...}</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#An_explanation_of_this_error"><span class="tocnumber">2.3.1</span> <span class="toctext">An explanation of this error</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Examples_of_tables_with_spanned_columns"><span class="tocnumber">3</span> <span class="toctext">Examples of tables with spanned columns</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Example_table_1"><span class="tocnumber">3.1</span> <span class="toctext">Example table 1</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Observations"><span class="tocnumber">3.1.1</span> <span class="toctext">Observations</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Example_table_2"><span class="tocnumber">4</span> <span class="toctext">Example table 2</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Observations_2"><span class="tocnumber">4.1</span> <span class="toctext">Observations</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Example_table_3"><span class="tocnumber">4.2</span> <span class="toctext">Example table 3</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#Observations_3"><span class="tocnumber">4.2.1</span> <span class="toctext">Observations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-17"><a href="#Example_table_4"><span class="tocnumber">4.3</span> <span class="toctext">Example table 4</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="#Observations_4"><span class="tocnumber">4.3.1</span> <span class="toctext">Observations</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#A_pattern_emerges"><span class="tocnumber">4.3.2</span> <span class="toctext">A pattern emerges</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#The_width_of_column_3:_An_algorithm_emerges?"><span class="tocnumber">4.3.3</span> <span class="toctext">The width of column 3: An algorithm emerges?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="#Example_table_5"><span class="tocnumber">4.4</span> <span class="toctext">Example table 5</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Example_table_6:_Slightly_more_complicated"><span class="tocnumber">4.5</span> <span class="toctext">Example table 6: Slightly more complicated</span></a>
+<ul>
+<li class="toclevel-3 tocsection-23"><a href="#Example_table_6(a)"><span class="tocnumber">4.5.1</span> <span class="toctext">Example table 6(a)</span></a>
+<ul>
+<li class="toclevel-4 tocsection-24"><a href="#Observations_5"><span class="tocnumber">4.5.1.1</span> <span class="toctext">Observations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-25"><a href="#Example_table_6(b)"><span class="tocnumber">4.5.2</span> <span class="toctext">Example table 6(b)</span></a>
+<ul>
+<li class="toclevel-4 tocsection-26"><a href="#Observations_6"><span class="tocnumber">4.5.2.1</span> <span class="toctext">Observations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-27"><a href="#Example_table_6(c)"><span class="tocnumber">4.5.3</span> <span class="toctext">Example table 6(c)</span></a>
+<ul>
+<li class="toclevel-4 tocsection-28"><a href="#Observation"><span class="tocnumber">4.5.3.1</span> <span class="toctext">Observation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-29"><a href="#What_is_\(\mathrm\TeX\)_doing?"><span class="tocnumber">4.5.4</span> <span class="toctext">What is \(\mathrm\TeX\) doing?</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-30"><a href="#Bringing_back_some_complexity"><span class="tocnumber">5</span> <span class="toctext">Bringing back some complexity</span></a>
+<ul>
+<li class="toclevel-2 tocsection-31"><a href="#\tabskip_glue_and_spanned_column_widths"><span class="tocnumber">5.1</span> <span class="toctext">\tabskip glue and spanned column widths</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#How_does_\tabskip_glue_affect_spanned_column_widths?"><span class="tocnumber">5.2</span> <span class="toctext">How does \tabskip glue affect spanned column widths?</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#Original_reference_table:_\tabskip=0pt"><span class="tocnumber">5.3</span> <span class="toctext">Original reference table: \tabskip=0pt</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#Modified_reference_table:_\tabskip=20pt"><span class="tocnumber">5.4</span> <span class="toctext">Modified reference table: \tabskip=20pt</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-35"><a href="#The_essence_of_\(\mathrm\TeX\)’s_algorithm"><span class="tocnumber">6</span> <span class="toctext">The essence of \(\mathrm\TeX\)’s algorithm</span></a>
+<ul>
+<li class="toclevel-2 tocsection-36"><a href="#Final_table_example:_last_columns_in_a_spanned_range"><span class="tocnumber">6.1</span> <span class="toctext">Final table example: last columns in a spanned range</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#A_walkthrough_of_\(\mathrm\TeX\)’s_algorithm"><span class="tocnumber">6.2</span> <span class="toctext">A walkthrough of \(\mathrm\TeX\)’s algorithm</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-38"><a href="#Colophon:_Using_Overleaf_to_produce_tables_as_SVG_graphics"><span class="tocnumber">7</span> <span class="toctext">Colophon: Using Overleaf to produce tables as SVG graphics</span></a>
+<ul>
+<li class="toclevel-2 tocsection-39"><a href="#So..._how_was_it_done?"><span class="tocnumber">7.1</span> <span class="toctext">So... how was it done?</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="The_goal_of_this_article">The goal of this article</span></h2>
+<p>In this article we explore how \(\mathrm\TeX\) calculates table column widths when tables contain entries (e.g., table headings) that span multiple columns (e.g., using the \(\mathrm\TeX\) primitives <code>\omit</code> and <code>\span</code>). Using a basic <a href="#reference_table">“reference” table</a> as a starting point, we create a range of examples—derived from that reference table—by amending various entries to create spanned columns. By examining the effect of those alterations we can start to develop an understanding of the underlying algorithm that \(\mathrm\TeX\) uses to calculate the width of spanned columns.</p>
+<h3><span id="Using_.5C.28.5Cmathrm.5CTeX.5C.29_not_.5C.28.5Cmathrm.5CLaTeX.5C.29"></span><span class="mw-headline" id="Using_\(\mathrm\TeX\)_not_\(\mathrm\LaTeX\)">Using \(\mathrm\TeX\) not \(\mathrm\LaTeX\)</span></h3>
+<p>To examine and explain <em>how</em> \(\mathrm\TeX\) decides the widths of spanned columns it is necessary to eschew any of the marvellous \(\mathrm\LaTeX\) table packages and revert back to fundamental, low-level (primitive), table-creation commands: in particular, <code>\halign{...}</code>, <code>\span</code> and <code>\omit</code>. <a rel="nofollow" class="external text" href="https://ctan.org/topic/table">Existing \(\mathrm\TeX\)/\(\mathrm\LaTeX\) table packages</a> are of course essential productivity tools and provide a wealth of extremely useful functionality which enables users to quickly produce a vast range of tabular material using \(\mathrm\LaTeX\). Those packages provide essential “macro scaffolding” constructed around \(\mathrm\TeX\)’s low-level behaviour and their developers provide very welcome abstractions and layers of insulation which take care of the underlying complexities. Many of those packages are truly incredible feats of complex \(\mathrm\TeX\) programming: we should all be grateful that they exist to shield us from having to use raw \(\mathrm\TeX\)!</p>  
+<p>The actual algorithm that \(\mathrm\TeX\) uses to calculate spanned column widths is explained on page 245 of the <a rel="nofollow" class="external text" href="https://www.amazon.co.uk/TeXbook-Donald-E-Knuth/dp/0201134489">\(\mathrm\TeX\text{book}\)</a> and, with further details, in Section 801 (page 336) of the printed book containing \(\mathrm\TeX\)’s source code <a rel="nofollow" class="external text" href="https://www.amazon.co.uk/Computers-Typesetting-Tex-Program-TEX/dp/0201134373">\(\mathrm\TeX\text{: The Program}\)</a>. However, for many people (myself included) Knuth’s explanations are, on occasion, rather compact and succinct and, at times, they can be difficult to follow in detail: illustrated examples are always very helpful.</p>
+<h3><span id="Yes.2C_tables_are_complex"></span><span class="mw-headline" id="Yes,_tables_are_complex">Yes, tables <em>are</em> complex</span></h3>
+<p>In section 768 (page 322) of the book <a rel="nofollow" class="external text" href="https://www.amazon.co.uk/Computers-Typesetting-Tex-Program-TEX/dp/0201134373">\(\mathrm\TeX\text{: The Program}\)</a>, Knuth makes an interesting comment: </p>
+<blockquote><p>“It’s sort of a miracle whenever <code>\halign</code> and <code>\valign</code> work, because they cut across so many of the control structures of \(\mathrm\TeX\).”</p></blockquote>
+<p>In addition, Volume IV of the four-volume book series <a rel="nofollow" class="external text" href="https://www.amazon.co.uk/Tex-Practice-Set-Stephan-Bechtolsheim/dp/038797296X/ref=sr_1_11?s=books&amp;ie=UTF8&amp;qid=1504256043&amp;sr=1-11&amp;keywords=TeX+in+Practice">\(\mathrm\TeX\text{ in Practice}\)</a> dedicates no fewer than 180 pages (pp199–379) to creating tables in \(\mathrm\TeX\) via <code>\halign</code> and <code>\valign</code>.</p> 
+<p>So, it is safe to observe that \(\mathrm\TeX\) tables are indeed “rather tricky”.</p>
+<h3><span id="Spanning_columns:_.5Comit.2C_.5Cspan_and_.5Cmultispan"></span><span class="mw-headline" id="Spanning_columns:_\omit,_\span_and_\multispan">Spanning columns: <code>\omit</code>, <code>\span</code> and <code>\multispan</code></span></h3>
+<p>As noted, to explore \(\mathrm\TeX\)’s column-width calculations we need to use “raw” \(\mathrm\TeX\); what this means is a combination of primitive commands and one \(\text{Plain }\mathrm\TeX\) macro called <code>\multispan</code>. Although we won’t be using these commands to directly illustrate our example tables (i.e, fully explaining all the \(\mathrm\TeX\) code), it is worth including a brief note explain them:</p>
+<ul>
+<li><code>\halign</code>: One of two \(\mathrm\TeX\) primitives (commands) for creating tables. The other is <code>\valign</code> but that is not as widely used and will not be discussed in this article.</li>
+<li><code>\omit</code>: A \(\mathrm\TeX\) primitive (command) that instructs \(\mathrm\TeX\) to ignore a table entry’s preamble template.</li>
+<li><code>\span</code>: A \(\mathrm\TeX\) primitive (command) used to combine two adjacent table entries.</li>
+<li><code>\multispan{n}</code>: A plain \(\mathrm\TeX\) macro to span <code>n</code> columns.</li> 
+</ul>
+<p>In essence, to span columns \(\mathrm\TeX\) ignores the appropriate number of table preamble templates and combines the required number of table entries into a single entry. <code>\multispan{n}</code> works by expanding to the sequence of <code>\omit</code> and <code>\span</code> tokens needed to span <code>n</code> columns. For example, <code>\multispan{3}</code> expands to <code>\omit\span\omit\span\omit</code>.</p>
+<h2><span id="Introducing_our_.E2.80.9Creference.E2.80.9D_table"></span><span class="mw-headline" id="Introducing_our_“reference”_table">Introducing our “reference” <span id="reference_table"></span>table</span></h2>
+<p>Here is our reference table followed by an annotated version which explains the elements used in its construction:</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/zuaLGfCJSNeBtHWOVzVf" />
+
+</p>
+<p>By amending our reference table we will observe what happens to the table’s width, and the width of individual columns, as we add entries that span various columns. This reference table was produced in raw \(\mathrm\TeX\) using the <code>\halign{...}</code> primitive together with a number of custom macros required to typeset the tables—we won’t discuss those macros because they are not essential to understanding the examples and explanations.</p>
+<p>Here is an annotated version of our reference table to explain its features:</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/rc305MnKThVg89Xlct5h" />
+
+</p>
+<p>Our first set of example tables, and initial reference table, have all set <code>\tabskip=0pt</code> so that \(\mathrm\TeX\) does not add any space between our columns: in effect, they all touch each other. The reason for doing this is to simplify the initial discussion and ensuing calculations—later in the article we re-introduce non-zero <code>\tabskip</code> glue to examine its effect on calculating spanned column widths.</p> 
+<p>As noted in the annotations, we have added a small amount of white space (5pt) at the start of all non-spanning table entries (except the first row). That 5pt of white space forms part of the total width of all non-spanning entries (except the first row) and was added just to make the table look a little less cluttered.</p>
+<h3><span class="mw-headline" id="A_brief_note_on_table_widths">A brief note on table widths</span></h3>
+<p>The <code>\halign{...}</code> command has three forms:</p>
+<ul>
+<li><code>\halign{...}</code>: set the table to whatever width \(\mathrm\TeX\) calculates, based on the size of the entries (and <code>\tabskip</code> glue);</li>
+<li><code>\halign to <em>width</em> {...}</code>: instruct \(\mathrm\TeX\) to typeset the table to a specified <code><em>width</em></code>;</li>
+<li><code>\halign spread <em>amount</em>{...}</code>: adjust the calculated width by <code><em>amount</em></code>.</li>
+</ul>
+<p>When \(\mathrm\TeX\) typesets a table using <code>\halign{...}</code> it has to read the entire table into memory to perform the various calculations required to typeset it. Consequently, unless you have specified the width by using <code>\halign to <em>width</em> {...}</code> you cannot know the final width until \(\mathrm\TeX\) has finished processing (typesetting) it. One way to obtain the width of a table produced by <code>\halign{...}</code> is to first typeset the table inside a <code>\vbox{...}</code> (e.g., <code>\setbox0=\vbox{\halign{...}}</code>) and then, for example, use <code>\the\wd0</code> to obtain the width.</p> 
+<h3><span class="mw-headline" id="No_automatic_line-breaking_in_table_entries">No automatic line-breaking in table entries</span></h3>
+<p>It is important to note that when \(\mathrm\TeX\) is typesetting a table created with <code>\halign{...}</code> any text within table entries is not automatically subjected to line-breaking: table entries are typeset in <em>restricted horizontal mode</em>—just like an <code>\hbox</code>. To enable line-breaking, a table entry’s text needs to be enclosed inside a <code>\vbox{...}</code> together with using an appropriate
+value for <code>\hsize</code> within that <code>\vbox{...}</code>. Note, however, that text within a <code>\noalign{...}</code> command (a \(\mathrm\TeX\) primitive) used in an <code>\halign{...}</code> is subject to \(\mathrm\TeX\)’s line-breaking. In effect, and as its name suggests, <code>\noalign{...}</code> allows \(\mathrm\TeX\) to “escape” from the <code>\halign{...}</code> and place material between the rows of the table—typically to produce horizontal rules between table rows.</p> 
+<h3><span id="Not_allowed:_.5Chalign.7B....7D_inside_.5Chbox.7B....7D"></span><span class="mw-headline" id="Not_allowed:_\halign{...}_inside_\hbox{...}">Not allowed: <code>\halign{...}</code> inside <code>\hbox{...}</code></span></h3>
+<p>You cannot <em>directly</em> typeset an <code>\halign{...}</code> inside an <code>\hbox{...}</code>. Attempting to use <code>\hbox{\halign{...}}</code> will generate a rather confusing error:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>! Missing <span class="nb">}</span> inserted.
+&lt;inserted text&gt;
+                <span class="nb">}</span>
+&lt;to be read again&gt;
+                   <span class="k">\halign</span>
+l.1 <span class="k">\hbox</span><span class="nb">{</span><span class="k">\halign</span>
+</pre></div>
+<h4><span class="mw-headline" id="An_explanation_of_this_error">An explanation of this error</span></h4>
+<p>Due to the enclosing <code>\hbox{...}</code> \(\mathrm\TeX\) is in <em>restricted horizontal mode</em>; it then detects <code>\halign{...}</code> which is a <em>vertical mode</em> command. For example, if you use <code>\halign{...}</code> within a paragraph, \(\mathrm\TeX\) will terminate the paragraph, process the <code>\halign{...}</code> and then carry on with the rest of the paragraph.</p>
+<p>When used inside an <code>\hbox{...}</code>, the <code>\halign{...}</code> triggers \(\mathrm\TeX\) to try to escape back to vertical mode by attempting to force closure of the current group: \(\mathrm\TeX\) reports a “<code>! Missing }</code>” and issues an error because it thinks you’ve made a mistake in your use of grouping. Although a right-hand brace (<code>}</code>) may not be missing from your \(\mathrm\TeX\) code, the error message is a symptom of the <code>\hbox{...}</code> “getting in the way” and \(\mathrm\TeX\) taking its “best guess” at the appropriate course of action to resolve the problem.</p>
+<h2><span class="mw-headline" id="Examples_of_tables_with_spanned_columns">Examples of tables with spanned columns</span></h2>
+<p>The following sequence of table graphics provide a range of examples to demonstrate the effect of spanning table columns: indicating that lengthy table entries can have unexpected results on the width of certain columns—and, consequently, on the width of the table itself. The question we are going to address is what does \(\mathrm\TeX\) do when a particular table entry spans a number of columns but it is “too wide to fit”. As noted above, \(\mathrm\TeX\) does indeed apply a specific algorithm to this problem of calculating column widths: the following examples are designed to help develop a “feel” for the workings of that algorithm.</p>
+<h3><span class="mw-headline" id="Example_table_1">Example table 1</span></h3>
+<p>In this example we use <code>\multispan{2}</code> to span columns 1 and 2 with an entry whose text is <strong>A table heading</strong>:</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/jSotyDwhRZygZ6ICRvil" />
+
+</p>
+<h4><span class="mw-headline" id="Observations">Observations</span></h4>
+<ul>
+<li>The width of this table is the same as the <a href="#reference_table">reference table</a>: \(327.71722\text{pt}\).</li>
+<li>The width of the entry that spans columns 1 and 2 is \(81.04953\text{pt}\) which is less than the total width of the entries in the columns it spans: \(52.56676\text{pt} + 57.06679\text{pt} = 109.63355\text{pt}\)</li>
+</ul>
+<h2><span class="mw-headline" id="Example_table_2">Example table 2</span></h2>
+<p>As in <a href="#Example_table_1">Example table 1</a>, this example also uses <code>\multispan{2}</code> to span columns 1 and 2 but here we use a longer entry whose text is <strong>A slightly longer table heading</strong>.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/UBl3qLgNRf6r4679FwjB" />
+
+</p>
+<h4><span class="mw-headline" id="Observations_2">Observations</span></h4>
+<p>If you compare this example to our <a href="#reference_table">reference table</a> we can see the following:</p>
+<ul>
+<li>The width of this table has increased from \(327.71722\text{pt}\) to \(374.37032\text{pt}\): a total of \(46.6531\text{pt}\).</li>
+<li>The width of the entry that spans columns 1 and 2 (\(156.28664\text{pt}\)) is greater than the total width of the entries in the columns it spans: \(52.56676\text{pt} + 57.06679\text{pt} = 109.63355\text{pt}\). That difference is \(156.28664\text{pt}-109.63355\text{pt} = 46.6531\text{pt}\) which is the same amount by which the table width has increased.</li>
+<li>\(\mathrm\TeX\) has adjusted the width of column 2 to provide the additional space required. Later we will see how \(\mathrm\TeX\) calculates the amount by which column 2 has to increase.</li>
+<li>Column 1 is unaffected: its width has not been affected by the entry that spans columns 1 and 2.</li>
+</ul>
+<h3><span class="mw-headline" id="Example_table_3">Example table 3</span></h3>
+<p>In this example we use <code>\multispan{3}</code> to span columns 1 to 3 with an entry whose text is the same as <a href="#Example_table_2">Example table 2</a>: <strong>A slightly longer table heading</strong>.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/q9rgVkCQ66uJET3Vj4fv" />
+
+</p>
+<h4><span class="mw-headline" id="Observations_3">Observations</span></h4>
+<ul>
+<li>The width of this table is the same as the <a href="#reference_table">reference table</a>: \(327.71722\text{pt}\).</li>
+<li>The width of the entry that spans columns 1 to 3 (\(156.28664\text{pt}\)) is less than the total width of the entries in the three columns it spans: \(52.56676\text{pt} + 57.06679\text{pt} + 59.03899\text{pt} = 168.67254\text{pt}\).</li>
+<li>None of the column widths have been affected by the entry spanning columns 1 to 3.</li>
+</ul>
+<p>Are you starting to see a pattern emerging?</p>
+<h3><span class="mw-headline" id="Example_table_4">Example table 4</span></h3>
+<p>As with <a href="#Example_table_3">Example table 3</a>, here we use <code>\multispan{3}</code> to span columns 1 to 3 but this time with an entry whose text is considerably longer: <strong>A considerably longer table heading that extends a long way</strong>.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/ves0DAvLRcye3Rotl0Cm" />
+
+</p>
+<h4><span class="mw-headline" id="Observations_4">Observations</span></h4>
+<ul>
+<li>Compared to the <a href="#reference_table">reference table</a>, the width of this table has increased from \(327.71722\text{pt}\) to \(465.95685\text{pt}\): an increase of \(138.23963\text{pt}\).</li>
+<li>The width of the entry that spans columns 1 to 3 is \(306.91216\text{pt}\).</li> 
+<li>The total width of the entries in the three spanned columns is \(52.56676\text{pt} + 57.06679\text{pt} + 59.03899\text{pt} = 168.67254\text{pt}\).</li>
+<li>The difference in width between the long spanning entry and the entries in columns 1 to 3 is \(306.91216\text{pt}-168.67254\text{pt}=138.23962\text{pt}\). The same amount (to 4 decimal places!) by which the table width has increased.</li>
+<li>Only column 3 has had its width increased: neither column 1 or column 2 are affected.</li>
+</ul>
+<h4><span class="mw-headline" id="A_pattern_emerges">A pattern emerges</span></h4>
+<p>If we look at <a href="#Example_table_2">Example table 2</a> and <a href="#Example_table_4">Example table 4</a> we can see that in both cases it is the <strong>last column in the span</strong> which had its width increased to make space for the long entry which spanned the columns:</p> 
+<ul>
+<li>In <a href="#Example_table_2">Example table 2</a>: The long entry spanned columns 1 and 2. Column 2 became “stretched”.</li>
+<li>In <a href="#Example_table_4">Example table 4</a>: The long entry spanned columns 1 to 3. Column 3 became “stretched”.</li>
+</ul>
+<h4><span id="The_width_of_column_3:_An_algorithm_emerges.3F"></span><span class="mw-headline" id="The_width_of_column_3:_An_algorithm_emerges?">The width of column 3: An algorithm emerges?</span></h4>
+<p>The following calculations give a clearer indication of what \(\mathrm\TeX\) is doing. Here is what we know:</p>
+<ul>
+<li>The width of the long entry spanning columns 1 to 3 is \(306.91216\text{pt}\).</li> 
+<li>The total width of the entries in columns 1 and 2 is \(52.56676\text{pt} + 57.06679\text{pt} = 109.63355\text{pt}\).</li>
+</ul>
+<p>What is the difference between those values? It is \(306.91216\text{pt}-109.63355\text{pt} = 197.2786\text{pt}\) and this is the width used for column 3: it arises directly from the algorithm used by \(\mathrm\TeX\).</p>
+<h3><span class="mw-headline" id="Example_table_5">Example table 5</span></h3>
+<p>Before we get to a more complicated example, here is one more “simple” example. This table contains the same lengthy entry as <a href="#Example_table_4">Example table 4</a>: <strong>A considerably longer table heading that extends a long way</strong>; however, this time we use <code>\multispan{6}</code> which allows that entry to span the entire table. As you can see, the resulting table still has the same width as our <a href="#reference_table">reference table</a> (\(327.71722\text{pt}\)) meaning that no columns have been affected by this very long entry. Clearly, this is because the width of the entry (\(306.91216\text{pt}\)) is less than the total width of all the entries it is spanning: \(327.71722\text{pt}\); i.e., the width of the table.  </p>
+<p>
+        <img src="https://www.filepicker.io/api/file/kNIMdHFvQqi52xkACWmC" />
+
+</p>
+<h3><span class="mw-headline" id="Example_table_6:_Slightly_more_complicated">Example table 6: Slightly more complicated</span></h3>
+<p>Here, we look at a series of three example tables (6(a)–6(c)) to show the effect of two different entries which both span into column 5. <a href="#Example_table_6(a)">Example table 6(a)</a> and <a href="#Example_table_6(b)">Example table 6(b)</a> each show a table containing a single entry that spans several columns up to column 5. <a href="#Example_table_6(c)">Example table 6(c)</a> combines both spanning entries into a single table and asks the question: which entry  actually determines the width of column 5, and why? The answer takes us to the essence of the algorithm used by \(\mathrm\TeX\).</p>
+<h4><span id="Example_table_6.28a.29"></span><span class="mw-headline" id="Example_table_6(a)">Example table 6(a)</span></h4>
+<p>
+        <img src="https://www.filepicker.io/api/file/tpWv7NNoS0iWtB3ZgtYH" />
+
+</p>
+<h5><span class="mw-headline" id="Observations_5">Observations</span></h5>
+<ul>
+<li>Compared to the <a href="#reference_table">reference table</a>, the width of this table has increased from \(327.71722\text{pt}\) to \(371.11153\text{pt}\): an increase of \(43.39431\text{pt}\).</li>
+<li>The width of the entry that spans columns 3 to 5 is \(215.06683\text{pt}\).</li>
+<li>The total width of the entries in columns 3 to 5 is \(59.03899\text{pt} + 52.98344\text{pt} + 59.6501\text{pt} = 171.67253\text{pt}\).</li>
+<li>The difference in width between the entries spanned in columns 3 to 5 and the width of the spanning entry is \(215.06683\text{pt}-171.67253\text{pt}=43.3943\text{pt}\): the exact amount (to 4 decimal places!) by which the width of the table has increased .</li>
+</ul>
+<h4><span id="Example_table_6.28b.29"></span><span class="mw-headline" id="Example_table_6(b)">Example table 6(b)</span></h4>
+<p>
+        <img src="https://www.filepicker.io/api/file/mBdfw2hvQIKWxfS6x36P" />
+
+</p>
+<h5><span class="mw-headline" id="Observations_6">Observations</span></h5>
+<ul>
+<li>
+Compared to the <a href="#reference_table">reference table</a>, the width of this table has increased from \(327.71722\text{pt}\) to \(353.3233\text{pt}\): an increase of \(25.60608\text{pt}\).
+</li>
+<li>
+The width of the entry that spans columns 1 to 5 is \(306.91216\text{pt}\).</li>
+<li>
+The total width of the entries in columns 1 to 5 is \(52.56676\text{pt} + 57.06679\text{pt} + 59.03899\text{pt} + 52.98344\text{pt} + 59.6501\text{pt} = 281.30608\text{pt}\).
+</li>
+<li>
+The difference in width between the entries spanned in columns 1 to 5 and the width of the spanning entry is \(306.91216\text{pt}-281.30608\text{pt}=25.60608\text{pt}\): <strong>note</strong> this is <em>less</em> than the value calculated for <a href="#Example_table_6(a)">Example 6(a)</a>, which was \(43.3943\text{pt}\).
+</li>
+</ul>
+<h4><span id="Example_table_6.28c.29"></span><span class="mw-headline" id="Example_table_6(c)">Example table 6(c)</span></h4>
+<p>Here, we combine the entries in example tables <a href="#Example_table_6(a)">6(a)</a> and <a href="#Example_table_6(b)">6(b)</a> into a single table: what happens?</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/T3QXrk7uQOWlbaj4Kjxs" />
+
+</p>
+<h5><span class="mw-headline" id="Observation">Observation</span></h5>
+<ul>
+<li>
+Compared to the <a href="#reference_table">reference table</a>, the width of this table has increased from \(327.71722\text{pt}\) to \(371.11153\text{pt}\): an increase of \(43.39431\text{pt}\). We note this is exactly the same as <a href="#Example_table_6(a)">Example table 6(a)</a>.
+</li>
+</ul>
+<h4><span id="What_is_.5C.28.5Cmathrm.5CTeX.5C.29_doing.3F"></span><span class="mw-headline" id="What_is_\(\mathrm\TeX\)_doing?">What is \(\mathrm\TeX\) doing?</span></h4>
+<p>To understand the results of \(\mathrm\TeX\)’s algorithm and decision-making processes we note that this entry</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/yyLLinv0SOmqJUg7jPIE" />
+
+</p>
+<p>extends beyond the entries being spanned by \(25.60608\text{pt}\); however, this entry</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/J4SNr8FlRZ6JmarMg4ol" />
+
+</p>
+<p>extends even further beyond the entries being spanned: by \(43.3943\text{pt}\). Hence that entry “wins the race” and column 5 has its width increased by the <strong>maximum</strong> of these two values (\(43.3943\text{pt}\)). The width of column 5 now becomes \(59.6501\text{pt} + 43.3943\text{pt} = 103.0444\text{pt}\) to accommodate the entry which spans columns 3 to 5. Our description of the exact “sequence of events” is simplified slightly but the outcome is as we have described.</p>
+<h2><span class="mw-headline" id="Bringing_back_some_complexity">Bringing back some complexity</span></h2>
+<p>To minimize the complexity of our discussions (thus far) we’ve used relatively simple examples to demonstrate the principles of \(\mathrm\TeX\)’s algorithm; in particular, we set <code>\tabskip=0pt</code>. In practice, “real world” tables are likely to have many entries that span a range of columns and, of course, will have non-zero values for the <code>\tabskip</code> glue—a topic we’ll now revisit.</p> 
+<h3><span id=".5Ctabskip_glue_and_spanned_column_widths"></span><span class="mw-headline" id="\tabskip_glue_and_spanned_column_widths"><code>\tabskip</code> glue and spanned column widths</span></h3>
+<p>Table design often requires the addition of white space between columns and, of course, \(\mathrm\TeX\) has this facility through a primitive command called <code>\tabskip</code>. This command can be used to put fixed or flexible glue (spacing):</p>
+<ul>
+<li>before a table (i.e., to the left of column 1);</li>
+<li>
+between one or more columns;</li>
+<li>after the table (i.e., to the right of the last column).</li>
+</ul>
+<p>Here an example to remind ourselves:</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/kB0i5DTNTPC6FRBhJWoD" />
+
+</p>
+<h3><span id="How_does_.5Ctabskip_glue_affect_spanned_column_widths.3F"></span><span class="mw-headline" id="How_does_\tabskip_glue_affect_spanned_column_widths?">How does <code>\tabskip</code> glue affect spanned column widths?</span></h3>
+<p>The presence of non-zero <code>\tabskip</code> glue between columns provides additional space that spanned entries can “absorb” before \(\mathrm\TeX\) needs to think about increasing the width of the last column in a span.</p> 
+<p>In our next example we will use two tables to compare the results of spanning two columns. The only difference between the tables is the use of <code>\tabskip</code> glue.</p> 
+<ul>
+<li>The first example uses our original “reference” table which, if you recall, has set <code>\tabskip=0pt</code>.</li>
+<li>The second example uses a modified version of our <a href="#reference_table">reference table</a> (annotated above) which has <code>\tabskip=10pt</code> before and after the table but, more importantly, it has set <code>\tabskip=20pt</code> between the columns.
+</li>
+</ul>
+<p>Within the <em>modified</em> reference table the two spanned columns have no effect on the column widths (and table width) but they do affect the width of column 2 (and table width) in the <em>original</em> <a href="#reference_table">reference table</a>.</p>
+<h3><span id="Original_reference_table:_.5Ctabskip.3D0pt"></span><span class="mw-headline" id="Original_reference_table:_\tabskip=0pt">Original <a href="#reference_table">reference table</a>: <code>\tabskip=0pt</code></span></h3>
+<p>Here, we show our original <a href="#reference_table">reference table</a> together with a second table (derived from our original <a href="#reference_table">reference table</a>) which has an entry “<strong>Test a longer table heading</strong>” spanning columns 1 and 2, Quite clearly, column 2 (of the second table in the diagram) and thus the whole table, are both affected by the spanned columns.</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/g1KMiZKrRKirvV2Wmw5z" />
+
+</p>
+<h3><span id="Modified_reference_table:_.5Ctabskip.3D20pt"></span><span class="mw-headline" id="Modified_reference_table:_\tabskip=20pt">Modified reference table: <code>\tabskip=20pt</code></span></h3>
+<p>Here, we show our modified reference table together with a second table (derived from our modified reference table) which also has an entry “<strong>Test a longer table heading</strong>” spanning columns 1 and 2, Quite clearly, within the second table in the diagram,  neither the width of column 2 or the table is affected by the spanned columns. In this case, the presence of <code>\tabskip</code> glue (<code>20pt</code>) between the columns has helped to “absorb” the space required by the text in the  entry spanning colums 1 and 2:</p>
+<p>
+        <img src="https://www.filepicker.io/api/file/uuyRn5JxRGe1Xv4uzVyq" />
+
+</p>
+<h2><span id="The_essence_of_.5C.28.5Cmathrm.5CTeX.5C.29.E2.80.99s_algorithm"></span><span class="mw-headline" id="The_essence_of_\(\mathrm\TeX\)’s_algorithm">The essence of \(\mathrm\TeX\)’s algorithm</span></h2>
+<p>Hopefully, the range of examples provided above have helped develop a “sense” of what \(\mathrm\TeX\) does to accommodate spanned entries and how \(\mathrm\TeX\) will, if necessary, adjust the width of the <strong>last</strong> column within each range of spanned columns. In addition to the width of entries within individual columns being spanned, the presence of non-zero <code>\tabskip</code> glue is an important factor that \(\mathrm\TeX\) takes into consideration when deciding whether it needs to adjust any column widths. The key point to remember is that \(\mathrm\TeX\)’s goal is to calculate a suitable width for the <strong>last column</strong> within each range of spanned columns.</p>
+<h3><span class="mw-headline" id="Final_table_example:_last_columns_in_a_spanned_range">Final table example: last columns in a spanned range</span></h3>
+<p>In this final example we once again use our modified reference table (with <code>\tabskip</code> glues values discussed above) to derive another table which contains various columns spanned by rules—we have used rules to make the spans easier to see.</p>
+<p>The two tables have been carefully aligned to show that, in the upper table, no columns prior to column 5 have been affected by the spanned columns. The darker green area to the left of the diagram shows that columns 1 to 4 of both tables still align perfectly. On the right is a lighter-green shaded area showing that only columns 5 and 6 have been affected by the spanned entries. </p>
+<p>In the upper table, the spans are as follows:</p>
+<ul>
+<li>columns 1 to 5: spanned by a \(400\text{pt}\) rule;</li>
+<li>columns 3 to 5: spanned by a \(200\text{pt}\) rule;</li>
+<li>columns 4 to 6: spanned by a \(250\text{pt}\) rule.</li>
+</ul>
+<p>
+        <img src="https://www.filepicker.io/api/file/MTS2mZ1TSjyBPCgABekd" />
+
+</p>
+<p>Once again, the explanation is that within a series of spanned columns, only the width of the final column is adjusted (if required): intervening columns are not affected and here that means columns 1 to 4—although, of course, the width of columns 1 to 4 (and intervening <code>\tabskip</code> glue) is taken into consideration when calculating the adjusted widths of columns 5 and 6.</p>
+<h3><span id="A_walkthrough_of_.5C.28.5Cmathrm.5CTeX.5C.29.E2.80.99s_algorithm"></span><span class="mw-headline" id="A_walkthrough_of_\(\mathrm\TeX\)’s_algorithm">A walkthrough of \(\mathrm\TeX\)’s algorithm</span></h3>
+<p>We’ll conclude with a <em>simplified</em> walkthrough of “\(\mathrm\TeX\)’s thought processes” as it works out the widths of columns in spanned entries. Describing \(\mathrm\TeX\)’s algorithms is not always straightforward so we’ll adopt some “simplifying artistic licence” to provide an overview of what is happening. Readers interested in all the messy details are referred to Section 801 (page 336) of the printed book containing \(\mathrm\TeX\)’s source code <a rel="nofollow" class="external text" href="https://www.amazon.co.uk/Computers-Typesetting-Tex-Program-TEX/dp/0201134373">\(\mathrm\TeX\text{: The Program}\)</a>.</p>
+<p>Real-world tables are often created with many uses of the <code>\span</code> primitive (e.g., inside \(\mathrm\LaTeX\) packages) to construct multiple instances of spanned columns within the table. To manage this, the data structures (deep inside \(\mathrm\TeX\)) maintain information (so-called <em>span nodes</em>) which tell \(\mathrm\TeX\) about the links (spans) between table entries/columns. Clearly, \(\mathrm\TeX\) has to apply its algorithms in a systematic way and will need to process the entire table to make its final calculations—to determine all column widths, the total width of the table and, if required, the amount by which flexible glues used in the table have to stretch or shrink. It is not really surprising that \(\mathrm\TeX\) cannot tell you the final table width until it has completely processed the <code>\halign{...}</code> command—it really has a lot of work to do!</p>
+<p>The starting point for column-width calculations is column 1 because, of course, nothing can span from the left of (and <em>across/into</em>) column 1. \(\mathrm\TeX\) starts out by determining the width of column 1 by determining which entry that has the maximum <em>natural width</em>. Let’s call that maximum width \(w_1\)and if there are entries that span from column 1 to column 2 let’s call the width of that entry \(w_{12}\) (width from 1 to 2). In addition, we’ll denote the <code>\tabskip</code> glue between columns 1 and 2 as  \(t_{1}\)—note that we are only considering the <em>natural width</em> of that <code>\tabskip</code> glue and, for now, ignoring any stretch or shrink components it might possess. Also, let the maximum natural width of all non-spanning entries in column 2 be \(w_2\).</p>
+<p>The key point to note is that \(\mathrm\TeX\) is trying to calculate the width of column 2 by considering only those entries where the span <em>starts</em> with column 1 and <em>ends</em> at column 2. The key consideration for \(\mathrm\TeX\) is the test \(\max(w_{2}, w_{12} -  (w_1+ t_1))\)—there might be multiple entries spanning columns 1 and 2: some may be narrow (small \(w_{12}\)), others very wide (large  \(w_{12}\)) so \(\mathrm\TeX\) is looking for the one that has the greatest effect (hence the \(\max(\text{...})\)). Here, the value of \(w_{12} -(w_1+ t_1)\) is the amount by which an entry spanning columns 1 and 2 “spills over” from column 1 into column 2: note that \(\mathrm\TeX\) is using the width of column 1 <strong>and</strong> the <code>\tabskip</code> glue (\(t_{1}\)) between columns 1 and 2. Once \(\mathrm\TeX\) has determined whether any spans from column 1 to 2 do affect the width of column 2 it sets the width of column 2 to the maximum value it has determined (using the test described). \(\mathrm\TeX\) continues to work its way through all the other columns, performing similar tests.</p> 
+<p>And finally, just for completeness, here we quote the essence of \(\mathrm\TeX\)’s algorithm for calculating column widths (taken from Knuth’s source code documentation of \(\mathrm\TeX\)):</p>
+<p>Let \(w_{ij}\) be the maximum of the natural widths of all entries that span columns \(i\) through \(j\), inclusive. The final column widths are defined by the formula</p>
+<p>\( 
+\begin{equation*}
+w_j=\max_{1\leq i\leq j}\biggl(w_{ij}-\sum_{i\leq k&lt; j}(t_k+w_k)\biggr)
+\end{equation*}
+\)
+</p>
+<p>where \(t_k\) is the natural width of the tabskip glue between columns \(k\) and \(k+1\).</p>
+<h2><span class="mw-headline" id="Colophon:_Using_Overleaf_to_produce_tables_as_SVG_graphics">Colophon: Using Overleaf to produce tables as SVG graphics</span></h2>
+<p>All \(\mathrm\TeX\) tables presented in this article are Scalable Vector Graphics (SVG) files produced on the Overleaf platform. The annotations (arrows and green boxes) were added by opening the SVG graphic in Inkscape—note, however, that the text of the annotations was typeset in \(\mathrm\TeX\) as additional text to accompany the table: only the arrows and green backgrounds were added in Inkscape. If you are interested to know how this was achieved, read on.</p>
+<p>Overleaf’s servers use the \(\mathrm\TeX \text{ Live}\) distribution which, in addition to \(\mathrm\TeX\)-based typesetting engines, provides a wealth of very useful \(\mathrm\TeX\)-related software tools and utilities. Among those is one called <a rel="nofollow" class="external text" href="https://dvisvgm.de/"><code>dvisvgm</code></a> which, as its name suggests, converts \(\mathrm\TeX\)’s traditional DVI (<strong>D</strong>e<strong>V</strong>ice <strong>I</strong>ndependent) output file format into SVG. Among its many <a rel="nofollow" class="external text" href="https://dvisvgm.de/Manpage/">command-line options</a> <code>dvisvgm</code> provides an option (<code>-n</code> or <code>--no-fonts</code>) that will instruct it to convert all text into <em>paths</em> which means that the text in SVG graphics is drawn using lines and curves rather than actual fonts and glyphs. This may increase the file size of the resulting SVG graphic but it ensures that the SVG graphics are extremely portable and almost certain to work well on any device.</p>
+<h3><span id="So..._how_was_it_done.3F"></span><span class="mw-headline" id="So..._how_was_it_done?">So... how was it done?</span></h3>
+<p>In a <a rel="nofollow" class="external text" href="https://www.overleaf.com/blog/510-using-luatex-to-run-tools-and-utilities-installed-on-overleafs-servers">previous article</a> I discussed how you can use \(\text{Lua}\mathrm\TeX\) to run the various software tools and utilities installed on Overleaf’s servers—it is an extremely easy and convenient technique. That technique was used to generate SVG graphics of typeset \(\mathrm\TeX\) tables, as follows. From within the main \(\mathrm\TeX\) document file, the code to typeset each table (created using using <code>\halign</code>) was written to a <code>.tex</code> file. This was achieved by enclosing the table code within a pair of commands which I called <code>\beginscoop</code> and <code>\endscoop</code>. There are likely to be many other ways to achieve the desired results but here are the macro definitions that I used:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\def\cc</span><span class="nb">{</span><span class="k">\catcode</span>`<span class="k">\#</span>=12<span class="k">\relax</span><span class="nb">}</span>
+<span class="k">\long\def\scoop</span>#1<span class="k">\endscoop</span><span class="nb">{</span><span class="k">\global\fulltoks</span>=<span class="nb">{</span>#1<span class="nb">}</span><span class="k">\egroup</span><span class="nb">}</span>
+<span class="k">\def\beginscoop</span><span class="nb">{</span><span class="k">\global\advance\numfigs</span> by1<span class="k">\relax\bgroup\cc\scoop</span><span class="nb">}</span>
+</pre></div>
+<p>You use them like this:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\beginscoop</span>
+<span class="k">\halign</span><span class="nb">{</span>...<span class="nb">}</span>
+<span class="k">\endscoop</span>
+</pre></div>
+<p>Note that the <code>\endscoop</code> token merely serves to delimit the parameter of the <code>\scoop</code> macro: \(\mathrm\TeX\) effectively discards the <code>\endscoop</code> token so we don’t actually need to define it (e.g., by <code>\def\endscoop{...}</code>).</p>
+<p>The \(\mathrm\TeX\) code contained in the <code>\halign{...}</code> is saved into a <code>toks</code> register called <code>\fulltoks</code>. One tricky point I came across (with \(\text{Lua}\mathrm\TeX\)) was needing to prevent <code>#</code> characters within the <code>\halign{...}</code> preamble from being “doubled” to <code>##</code> when written out to a <code>.tex</code> file. To avoid this I had to temporarily set the <code>\catcode</code>of <code>#</code> characters to 12 prior to saving the \(\mathrm\TeX\) code (tokens) in the <code>\fulltoks</code> token register.</p>
+<p>The next step is to write the tokens contained in <code>\fulltoks</code> as a \(\mathrm\TeX\) file—because I was using \(\text{Lua}\mathrm\TeX\) this proved to be <em>extremely</em> easy thanks to \(\text{Lua}\mathrm\TeX\)’s wonderful Lua API. In brief, I wrote a macro called <code>\writefile{...}</code> which takes as its parameter the name of a token register whose tokens you want to write out to a file (e.g., <code>\writefile{fulltoks}</code>). Within the <code>\writefile{...}</code> macro I used the Lua API to get a textual representation of the <code>\fulltoks</code> token register:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\def\writefile</span>#1<span class="nb">{</span><span class="c">%</span>
+<span class="k">\directlua</span><span class="nb">{</span>
+...
+...
+ local p=tex.toks["#1"] 
+...
+...
+<span class="nb">}}</span>
+</pre></div>
+<p>Here is a screenshot showing a little more of the <code>\writefile{...}</code> command:</p>
+<p><a rel="nofollow" class="external text" href="https://www.filepicker.io/api/file/ngeDmgRStGWvG044RE1A">
+        <img src="https://www.filepicker.io/api/file/ngeDmgRStGWvG044RE1A" />
+</a>
+</p>
+<p>The Lua language and the Lua API provided by \(\text{Lua}\mathrm\TeX\) can often simplify \(\mathrm\TeX\) programming tasks and it is because of these useful and powerful features that I have used \(\text{Lua}\mathrm\TeX\) since ~2009—and remain a huge fan of this truly marvellous \(\mathrm\TeX\) engine. OK, the \(\text{Lua}\mathrm\TeX\) advert now concludes.</p>
+<p>Having so easily obtained the \(\mathrm\TeX\) code stored in <code>\fulltoks</code> it is written out to a file together with some additional code to make it into a correctly formed \(\mathrm\LaTeX\) file. The next steps are:</p>
+<ol>
+<li>Process the <code>.tex</code> file containing our table with \(\text{pdf}\mathrm\LaTeX\) (in DVI mode) so that it typesets the table and generates a <code>.dvi</code> file for <code>dvisvgm</code> to process. Yes, you can use \(\text{Lua}\mathrm\TeX\) to run \(\text{pdf}\mathrm\LaTeX\)—once again I used the method discussed in a <a href="Using_LuaTeX_to_run_tools_and_utilities_installed_on_Overleaf%e2%80%99s_servers.html" title="Articles/Using LuaTeX to run tools and utilities installed on Overleaf’s servers">previous article</a>.</li>
+<li>And finally, run <code>dvisvgm</code> to process the <code>.dvi</code> file to generate an SVG graphic of the typeset \(\mathrm\TeX\) table.</li>
+<li>To obtain the actual SVG graphics you can download a ZIP file from Overleaf—making sure to select the <strong>Input and Output Files</strong> option.</li>
+</ol>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../Lists.html" title="Lists">Lists</a></li>
+<li><a href="../Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../Operators.html" title="Operators">Operators</a></li>
+<li><a href="../Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../Tables.html" title="Tables">Tables</a></li>
+<li><a href="../Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../French.html" title="French">French</a></li>
+<li><a href="../German.html" title="German">German</a></li>
+<li><a href="../Greek.html" title="Greek">Greek</a></li>
+<li><a href="../Italian.html" title="Italian">Italian</a></li>
+<li><a href="../Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../Korean.html" title="Korean">Korean</a></li>
+<li><a href="../Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../Russian.html" title="Russian">Russian</a></li>
+<li><a href="../Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../Indices.html" title="Indices">Indices</a></li>
+<li><a href="../Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../Counters.html" title="Counters">Counters</a></li>
+<li><a href="../Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../Commands.html" title="Commands">Commands</a></li>
+<li><a href="../Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="../Tutorials.html">Tutorials</a></li><li><a href="../Inserting_Images.html">How to insert images</a></li><li><a href="../Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="TeX_Tables__How_TeX_Calculates_Spanned_Column_Widths.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==" src="../../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="3zMU4eP9FyVR0E55wQBAJQ==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/TeX_Tables%3A_How_TeX_Calculates_Spanned_Column_Widths by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:03:04 GMT -->
+</html>

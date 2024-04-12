@@ -1,0 +1,599 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Bibliography_management_with_bibtex by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:43:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Bibliography management with bibtex - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Bibliography management with bibtex"><meta name="og:title" content="Bibliography management with bibtex"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="Bibliography_management_with_bibtex.html"><link rel="stylesheet" href="../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Bibliography_management_with_bibtex.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Bibliography_management_with_bibtex" hreflang="ja"><link rel="preload" href="../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="bJhIVf4svs8wnpRoknGfWQ=="><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="9MjDIz3A-4x3nx1pLw2L2ZcGN0oRLRLbtdUA"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Bibliography_management_with_bibtex&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Bibliography_management_with_bibtex&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Bibliography management with bibtex</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Advisory_note"><span class="tocnumber">1</span> <span class="toctext">Advisory note</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Introduction"><span class="tocnumber">2</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Bibliography:_just_a_list_of_\bibitems"><span class="tocnumber">3</span> <span class="toctext">Bibliography: just a list of \bibitems</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#A_note_on_compilation_times"><span class="tocnumber">3.1</span> <span class="toctext">A note on compilation times</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Enter_\(\mathrm{Bib\TeX}\)"><span class="tocnumber">4</span> <span class="toctext">Enter \(\mathrm{Bib\TeX}\)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Some_notes_on_using_\(\mathrm{Bib\TeX}\)_and_.bib_files"><span class="tocnumber">4.1</span> <span class="toctext">Some notes on using \(\mathrm{Bib\TeX}\) and .bib files</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Taking_another_look_at_.bib_files"><span class="tocnumber">5</span> <span class="toctext">Taking another look at .bib files</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Multiple_authors_in_\(\mathrm{Bib\TeX}\)"><span class="tocnumber">5.1</span> <span class="toctext"><span>Multiple authors in \(\mathrm{Bib\TeX}\)</span></span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Multiple-word_last_names"><span class="tocnumber">5.2</span> <span class="toctext">Multiple-word last names</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#I_tried_to_use_%_to_comment_out_some_lines_or_entries_in_my_.bib_file,_but_I_got_lots_of_error_messages_instead?"><span class="tocnumber">5.3</span> <span class="toctext">I tried to use % to comment out some lines or entries in my .bib file, but I got lots of error messages instead?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#How/where_do_I_actually_get_those_.bib_files?"><span class="tocnumber">6</span> <span class="toctext">How/where do I actually get those .bib files?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Edit_the_.bib_file_as_plain_text"><span class="tocnumber">6.1</span> <span class="toctext">Edit the .bib file as plain text</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Help_from_GUI-based_.bib_editors"><span class="tocnumber">6.2</span> <span class="toctext">Help from GUI-based .bib editors</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Export_from_reference_library_services"><span class="tocnumber">6.3</span> <span class="toctext">Export from reference library services</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#I’ve_already_got_a_reference_list_in_a_Microsoft_Word/HTML/PDF_file;_can_I_somehow_reuse_the_data_without_re-typing_everything?"><span class="tocnumber">6.4</span> <span class="toctext">I’ve already got a reference list in a Microsoft Word/HTML/PDF file; can I somehow reuse the data without re-typing everything?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Summary_and_further_reading"><span class="tocnumber">7</span> <span class="toctext">Summary and further reading</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Further_reading"><span class="tocnumber">7.1</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Advisory_note">Advisory note</span></h2>
+<p>If you are starting from scratch we recommend using <a href="Bibliography_management_in_LaTeX.html" title="Bibliography management in LaTeX">biblatex</a> because that package provides localization in several languages, it’s actively developed and makes bibliography management easier and more flexible.
+</p>
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>Many <a rel="nofollow" class="external text" href="https://www.overleaf.com/latex/learn/free-online-introduction-to-latex-part-2">tutorials</a> have been written about what \(\mathrm{Bib\TeX}\) is and <a rel="nofollow" class="external text" href="https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex">how to use it</a>. However, based on our experience of providing support to Overleaf’s users, it’s still one of the topics that many newcomers to \(\mathrm{\LaTeX}\) find complicated—especially when things don’t go quite right; for example: citations aren’t appearing; problems with authors’ names; not sorted to a required order; URLs not displayed in the references list, and so forth.</p>
+<p>In this article we’ll pull together all the threads relating to citations, references and bibliographies, as well as how Overleaf and related tools can help users manage these.</p>
+<p>We’ll start with a quick recap of how \(\mathrm{Bib\TeX}\) and bibliography database (<code>.bib</code>) files work and look at some ways to prepare <code>.bib</code> files. This is, of course, running the risk of repeating some of the material contained in many online tutorials, but future articles will expand our coverage to include bibliography styles and <code>biblatex</code>—the alternative package and bibliography processor.</p>
+<h2><span id="Bibliography:_just_a_list_of_.5Cbibitems"></span><span class="mw-headline" id="Bibliography:_just_a_list_of_\bibitems">Bibliography: just a list of <code>\bibitems</code></span></h2>
+<p>Let’s first take a quick look “under the hood” to see what a \(\mathrm{\LaTeX}\) reference list is comprised of—please <em>don’t</em> start coding your reference list like this because later in this article we’ll look at other, more convenient, ways to do this.</p>
+<p>A reference list really just a <code>thebibliography</code> list of <code>\bibitems</code>:</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>thebibliography<span class="nb">}{</span>9<span class="nb">}</span>
+<span class="k">\bibitem</span><span class="nb">{</span>texbook<span class="nb">}</span>
+Donald E. Knuth (1986) <span class="k">\emph</span><span class="nb">{</span>The <span class="k">\TeX</span><span class="nb">{}</span> Book<span class="nb">}</span>, Addison-Wesley Professional.
+
+<span class="k">\bibitem</span><span class="nb">{</span>lamport94<span class="nb">}</span>
+Leslie Lamport (1994) <span class="k">\emph</span><span class="nb">{</span><span class="k">\LaTeX</span>: a document preparation system<span class="nb">}</span>, Addison
+Wesley, Massachusetts, 2nd ed.
+<span class="k">\end</span><span class="nb">{</span>thebibliography<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>By default, this <code>thebibliography</code> environment is a numbered list with labels <code>[1]</code>, <code>[2]</code> and so forth. If the document class used is <code>article</code>, <code>\begin{thebibliography}</code> automatically inserts a numberless section heading with <code>\refname</code> (default value: <strong>References</strong>). If the document class is <code>book</code> or report, then a numberless chapter heading with <code>\bibname</code> (default value: <strong>Bibliography</strong>) is inserted instead. Each <code>\bibitem</code> takes a <em>cite key</em> as its parameter, which you can use with <code>\cite</code> commands, followed by information about the reference entry itself. So if you now write</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\LaTeX</span><span class="nb">{}</span> <span class="k">\cite</span><span class="nb">{</span>lamport94<span class="nb">}</span> is a set of macros built atop <span class="k">\TeX</span><span class="nb">{}</span> <span class="k">\cite</span><span class="nb">{</span>texbook<span class="nb">}</span>.
+</pre></div>
+</div>
+</div>
+<p>together with the <code>thebibliography</code> block from before, this is what gets rendered into your PDF when you run a \(\mathrm{\LaTeX}\) processor (i.e. any of <code>latex</code>, <code>pdflatex</code>, <code>xelatex</code> or <code>lualatex</code>) on your source file:</p>
+<p><img alt="Citing entries from a thebibliography list" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/3a/Bibitem-short.png" decoding="async" width="800" height="322" />
+</p>
+<p><strong>Figure 1:</strong> Citing entries from a <code>thebibliography</code> list.</p>
+<p>Notice how each <code>\bibitem</code> is automatically numbered, and how <code>\cite</code> then inserts the corresponding numerical label.</p>
+<p><code>\begin{thebibliography}</code> takes a numerical argument: the widest label expected in the list. In this example we only have two entries, so <code>9</code> is enough. If you have more than ten entries, though, you may notice that the numerical labels in the list start to get misaligned:</p>
+<p><img alt="thebibliography with a label that’s too short" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/8/88/Bibitem-cramped.png" decoding="async" width="800" height="217" />
+</p>
+<p><strong>Figure 2:</strong> <code>thebibliography</code> with a label that’s too short.</p>
+<p>We’ll have to make it <code>\begin{thebibliography}{99}</code> instead, so that the longest label is wide enough to accommodate the longer labels, like this:</p>
+<p><img alt="thebibliography with a longer label width" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/54/Bibitem-longerlabel.png" decoding="async" width="800" height="204" />
+</p>
+<p><strong>Figure 3:</strong> <code>thebibliography</code> with a longer label width.</p>
+<p>If you compile this example code snippet on a local computer you may notice that after the <em>first</em> time you run <code>pdflatex</code> (or another \(\mathrm{\LaTeX}\) processor), the reference list appears in the PDF as expected, but the <code>\cite</code> commands just show up as question marks <strong>[?]</strong>.</p>
+<p>This is because after the first \(\mathrm{\LaTeX}\) run the cite keys from each <code>\bibitem</code> (<code>texbook</code>, <code>lamport94</code>) are written to the <code>.aux</code> file and are not yet available for reading by the <code>\cite</code> commands. Only on the second run of <code>pdflatex</code> are the <code>\cite</code> commands able to look up each cite key from the <code>.aux</code> file and insert the corresponding labels (<code>[1]</code>, <code>[2]</code>) into the output.</p>
+<p>On Overleaf, though, you don’t have to worry about re-running <code>pdflatex</code> yourself. This is because Overleaf uses the <a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/How_does_Overleaf_compile_my_project%3F"><code>latexmk</code> build tool</a>, which automatically re-runs <code>pdflatex</code> (and some other processors) for the requisite number of times needed to resolve <code>\cite</code> outputs. This also accounts for other cross-referencing commands, such as <code>\ref</code> and <code>\tableofcontents</code>.</p>
+<h3><span class="mw-headline" id="A_note_on_compilation_times">A note on compilation times</span></h3>
+<p>Processing \(\mathrm{\LaTeX}\) reference lists or other forms of cross-referencing, such as indexes, requires multiple runs of software—including the \(\mathrm{\TeX}\) engine (e.g., <code>pdflatex</code>) and associated programs such as \(\mathrm{Bib\TeX}\), <code>makeindex</code>, etc. As mentioned above, Overleaf handles all of these mulitple runs automatically, so you don’t have to worry about them. As a consequence, when the preview on Overleaf is refreshing for documents with bibliographies (or other cross-referencing), or for documents with large image files (as discussed separately <a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Optimising_very_large_image_files">here</a>), these essential compilation steps may sometimes make the preview refresh appear to take longer than on your own machine. We do, of course, aim to keep it as short as possible! If you feel your document is taking longer to compile than you’d expect, here are some <a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F">further tips</a> that may help.</p>
+<h2><span id="Enter_.5C.28.5Cmathrm.7BBib.5CTeX.7D.5C.29"></span><span class="mw-headline" id="Enter_\(\mathrm{Bib\TeX}\)">Enter \(\mathrm{Bib\TeX}\)</span></h2>
+<p>There are, of course, some inconveniences with manually preparing the <code>thebibliography</code> list:</p>
+<ul class="text-list">
+<li>It’s up to you to accurately format each <code>\bibitem</code> based on the reference style you’re asked to use—which bits should be in bold or italic? Should the year come immediately after the authors, or at the end of the entry? Given names first, or last names first?</li>
+
+<li>If you’re writing for a reference style which requires the reference list to be sorted by the last names of first authors, you’ll need to sort the <code>\bibitem</code>s yourself.</li>
+<li>For different manuscripts or documents that use different reference styles you’ll need to rewrite the <code>\bibitem</code> for each reference.</li>
+</ul>
+<p>This is where \(\mathrm{Bib\TeX}\) and <em>bibliography database files</em> (<code>.bib</code> files) are extremely useful, and this is the recommended approach to manage citations and references in most journals and theses. The <code>biblatex</code> approach, which is slightly different and gaining popularity, also requires a <code>.bib</code> file but we’ll talk about <code>biblatex</code> in a future post.</p>
+<p>Instead of formatting cited reference entries in a <code>thebibliography</code> list, we maintain a bibliography database file (let’s name it <code>refs.bib</code> for our example) which contains <em>format-independent</em> information about our references. So our <code>refs.bib</code> file may look like this:</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>@book<span class="nb">{</span>texbook,
+  author = <span class="nb">{</span>Donald E. Knuth<span class="nb">}</span>,
+  year = <span class="nb">{</span>1986<span class="nb">}</span>,
+  title = <span class="nb">{</span>The <span class="nb">{</span><span class="k">\TeX</span><span class="nb">}</span> Book<span class="nb">}</span>,
+  publisher = <span class="nb">{</span>Addison-Wesley Professional<span class="nb">}</span>
+<span class="nb">}</span>
+
+@book<span class="nb">{</span>latex:companion,
+  author = <span class="nb">{</span>Frank Mittelbach and Michel Gossens
+            and Johannes Braams and David Carlisle
+            and Chris Rowley<span class="nb">}</span>,
+  year = <span class="nb">{</span>2004<span class="nb">}</span>,
+  title = <span class="nb">{</span>The <span class="nb">{</span><span class="k">\LaTeX</span><span class="nb">}</span> Companion<span class="nb">}</span>,
+  publisher = <span class="nb">{</span>Addison-Wesley Professional<span class="nb">}</span>,
+  edition = <span class="nb">{</span>2<span class="nb">}</span>
+<span class="nb">}</span>
+
+@book<span class="nb">{</span>latex2e,
+  author = <span class="nb">{</span>Leslie Lamport<span class="nb">}</span>,
+  year = <span class="nb">{</span>1994<span class="nb">}</span>,
+  title = <span class="nb">{{</span><span class="k">\LaTeX</span><span class="nb">}</span>: a Document Preparation System<span class="nb">}</span>,
+  publisher = <span class="nb">{</span>Addison Wesley<span class="nb">}</span>,
+  address = <span class="nb">{</span>Massachusetts<span class="nb">}</span>,
+  edition = <span class="nb">{</span>2<span class="nb">}</span>
+<span class="nb">}</span>
+
+@article<span class="nb">{</span>knuth:1984,
+  title=<span class="nb">{</span>Literate Programming<span class="nb">}</span>,
+  author=<span class="nb">{</span>Donald E. Knuth<span class="nb">}</span>,
+  journal=<span class="nb">{</span>The Computer Journal<span class="nb">}</span>,
+  volume=<span class="nb">{</span>27<span class="nb">}</span>,
+  number=<span class="nb">{</span>2<span class="nb">}</span>,
+  pages=<span class="nb">{</span>97--111<span class="nb">}</span>,
+  year=<span class="nb">{</span>1984<span class="nb">}</span>,
+  publisher=<span class="nb">{</span>Oxford University Press<span class="nb">}</span>
+<span class="nb">}</span>
+
+@inproceedings<span class="nb">{</span>lesk:1977,
+  title=<span class="nb">{</span>Computer Typesetting of Technical Journals on <span class="nb">{</span>UNIX<span class="nb">}}</span>,
+  author=<span class="nb">{</span>Michael Lesk and Brian Kernighan<span class="nb">}</span>,
+  booktitle=<span class="nb">{</span>Proceedings of American Federation of
+             Information Processing Societies: 1977
+             National Computer Conference<span class="nb">}</span>,
+  pages=<span class="nb">{</span>879--888<span class="nb">}</span>,
+  year=<span class="nb">{</span>1977<span class="nb">}</span>,
+  address=<span class="nb">{</span>Dallas, Texas<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>You can find more information about other \(\mathrm{Bib\TeX}\) reference entry types and fields <a rel="nofollow" class="external text" href="https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX">here</a>—there’s a huge table showing which fields are supported for which entry types. We’ll talk more about how to prepare <code>.bib</code> files in a later section.</p>
+<p>Now we can use <code>\cite</code> with the cite keys as before, but now we <em>replace</em> <code>thebibliography</code> with a <code>\bibliographystyle{...}</code> to choose the reference style, as well as <code>\bibliography{...}</code> to point \(\mathrm{Bib\TeX}\) at the <code>.bib</code> file where the cited references should be looked-up.</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\LaTeX</span><span class="nb">{}</span> <span class="k">\cite</span><span class="nb">{</span>latex2e<span class="nb">}</span> is a set of macros built atop <span class="k">\TeX</span><span class="nb">{}</span> <span class="k">\cite</span><span class="nb">{</span>texbook<span class="nb">}</span>.
+<span class="k">\bibliographystyle</span><span class="nb">{</span>plain<span class="nb">}</span> <span class="c">% We choose the "plain" reference style</span>
+<span class="k">\bibliography</span><span class="nb">{</span>refs<span class="nb">}</span> <span class="c">% Entries are in the refs.bib file</span>
+</pre></div>
+</div>
+</div>
+<p>This is processed with the following sequence of commands, assuming our \(\mathrm{\LaTeX}\) document is in a file named <code>main.tex</code> (and that we are using <code>pdflatex</code>):</p>
+<ol>
+<li><code>pdflatex main</code></li>
+<li><code>bibtex main</code></li>
+<li><code>pdflatex main</code></li>
+<li><code>pdflatex main</code></li>
+</ol>
+<p>and we get the following output:</p>
+<p><img alt="BibTeX output with plain bibliography style" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/3c/Bibtex-plain.png" decoding="async" width="800" height="347" />
+</p>
+<p><strong>Figure 4:</strong> \(\mathrm{Bib\TeX}\) output using the <code>plain</code> bibliography style.</p>
+<p>Whoah! What’s going on here and why are all those (repeated) processes required? Well, here’s what happens.</p>
+<ol class="text-list">
+<li><p>During the <em>first</em> <code>pdflatex</code> run, all <code>pdflatex</code> sees is a <code>\bibliographystyle{...}</code> and a <code>\bibliography{...}</code> from <code>main.tex</code>. It doesn’t know what all the <code>\cite{...}</code> commands are about! Consequently, within the output PDF, all the <code>\cite{...}</code> commands are simply rendered as [?], and no reference list appears, for now. But <code>pdflatex</code> writes information about the bibliography style and <code>.bib</code> file, as well as all occurrences of <code>\cite{...}</code>, to the file <code>main.aux</code>.</p>
+</li>
+<li>
+<p>It’s actually <code>main.aux</code> that \(\mathrm{Bib\TeX}\) is interested in! It notes the <code>.bib</code> file indicated by <code>\bibliography{...}</code>, then looks up all the entries with keys that match the <code>\cite{...}</code> commands used in the <code>.tex</code> file. \(\mathrm{Bib\TeX}\) then uses the style specified with <code>\bibliographystyle{...}</code> to format the cited entries, and writes a formatted <code>thebibliography</code> list into the file <code>main.bbl</code>. The production of the <code>.bbl</code> file is all that’s achieved in this step; no changes are made to the output PDF.
+</p>
+</li>
+
+<li>
+<p>When <code>pdflatex</code> is run again, it now sees that a <code>main.bbl</code> file is available! So it inserts the contents of <code>main.bbl</code> i.e. the <code>\begin{thebibliography}....\end{thebibliography}</code> into the \(\mathrm{\LaTeX}\) source, where <code>\bibliography{...}</code> is. After this step, the reference list appears in the output PDF formatted according to the chosen <code>\bibliographystyle{...}</code>, but the in-text citations are still [?].
+</p>
+</li>
+
+<li>
+<p><code>pdflatex</code> is run again, and this time the <code>\cite{...}</code> commands are replaced with the corresponding numerical labels in the output PDF!</p>
+</li>
+</ol>
+<p>As before, the <a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/How_does_Overleaf_compile_my_project%3F"><code>latexmk</code> build tool</a> takes care of triggering and re-running <code>pdflatex</code> and <code>bibtex</code> as necessary, so you don’t have to worry about this bit.</p>
+<h3><span id="Some_notes_on_using_.5C.28.5Cmathrm.7BBib.5CTeX.7D.5C.29_and_.bib_files"></span><span class="mw-headline" id="Some_notes_on_using_\(\mathrm{Bib\TeX}\)_and_.bib_files">Some notes on using \(\mathrm{Bib\TeX}\) and <code>.bib</code> files</span></h3>
+<p>A few further things to note about using \(\mathrm{Bib\TeX}\) and <code>.bib files</code>:</p>
+<ul>
+<li>You may have noticed that although <code>refs.bib</code> contained five \(\mathrm{Bib\TeX}\) reference entries, only two are included in the reference list in the output PDF. This is an important point about \(\mathrm{Bib\TeX}\): the <code>.bib</code> file’s role is to store bibliographic records, and only entries that have been cited (via <code>\cite{...}</code>) in the <code>.tex</code> files will appear in the reference list. This is similar to how only cited items from an EndNote database will be displayed in the reference list in a Microsoft Word document. If you <em>do</em> want to include all entries—to be displayed but without actually citing all of them—you can write <code>\nocite{*}</code>. This also means you can reuse the same <code>.bib</code> file for all your \(\mathrm{\LaTeX}\) projects: entries that are not cited in a particular manuscript or report will be excluded from the reference list in that document.</li>
+
+<li>\(\mathrm{Bib\TeX}\) requires one <code>\bibliographystyle{...}</code> and one <code>\bibliography{...}</code> to function correctly—in future posts we’ll see how to create multiple bibliographies in the same document. If you keep getting “undefined citation” warnings, check that you have indeed included those two commands, and that the names are spelled correctly. File extensions are not usually required, but bear in mind that <em>file names are case sensitive</em> on some operating systems—including on Overleaf! Therefore, if you typed <code>\bibliographystyle{IEEetran}</code> (note the typo: “e”) instead of <code>\bibliographystyle{IEEEtran}</code>, or wrote <code>\bibliography{refs}</code> when the actual file name is <code>Refs.bib</code>, you’ll get the dreaded <strong>[?]</strong> as citations.
+</li>
+
+<li>In the same vein, treat your cite keys as case-sensitive, always. Use the exact same case or spelling in your <code>\cite{...}</code> as in your <code>.bib</code> file.</li>
+
+<li>The order of references in the <code>.bib</code> file does not have any effect on how the reference list is ordered in the output PDF: <em>the sorting order of the reference list is determined by the</em> <code>\bibliographystyle{...}</code>. For example, some readers might have noticed that, within my earlier example, the first citation in the text <code>latex2e</code> is numbered [2], while the second citation in the text (<code>texbook</code>) is numbered [1]! Have \(\mathrm{\LaTeX}\) and \(\mathrm{Bib\TeX}\) lost the plot? Not at all: this is actually because the <code>plain</code> style sorts the reference list by alphabetical order of the first author’s <em>last name</em>. If you prefer a scheme where the numerical citation labels are numbered sequentially throughout the text, you’ll have to choose a bibliography style which implements this. For example, if instead we had used <code>\bibliographystyle{IEEEtran}</code> for that example, we’d get the following output. Notice also how the formatting of each cited item in the reference list has automatically updated to suit the IEEE’s style:
+</li>
+</ul>
+<p><img alt="IEEEtran bibliography style output" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c5/Bibtex-IEEEtran.png" decoding="async" width="800" height="373" />
+</p>
+<p><strong>Figure 5:</strong> <code>IEEEtran</code> bibliography style output.</p>
+<p>We’ll talk more about different bibliography styles, including author–year citation schemes, in a future article. For now, let’s turn our attention to <code>.bib</code> file contents, and how we can make the task of preparing <code>.bib</code> files a bit easier.
+</p>
+<h2><span class="mw-headline" id="Taking_another_look_at_.bib_files">Taking another look at <code>.bib</code> files</span></h2>
+<p>As you may have noticed earlier, a <code>.bib</code> file contains \(\mathrm{Bib\TeX}\) bibliography entries that start with an <em>entry type</em> prefixed with an <code>@</code>. Each entry has a some key–value \(\mathrm{Bib\TeX}\) <em>fields</em>, placed within a pair of braces (<code>{...}</code>). The <em>cite key</em> is the first piece of information given within these braces, and every field in the entry <em>must be separated by a comma</em>:
+</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>@article<span class="nb">{</span>knuth:1984,
+  title=<span class="nb">{</span>Literate Programming<span class="nb">}</span>,
+  author=<span class="nb">{</span>Donald E. Knuth<span class="nb">}</span>,
+  journal=<span class="nb">{</span>The Computer Journal<span class="nb">}</span>,
+  volume=<span class="nb">{</span>27<span class="nb">}</span>,
+  number=<span class="nb">{</span>2<span class="nb">}</span>,
+  pages=<span class="nb">{</span>97--111<span class="nb">}</span>,
+  year=<span class="nb">{</span>1984<span class="nb">}</span>,
+  publisher=<span class="nb">{</span>Oxford University Press<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>As a general rule, <em>every</em> bibliography entry should have an <code>author</code>, <code>year</code> and <code>title</code> field, no matter what the type is. There are about <a rel="nofollow" class="external text" href="https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX">a dozen entry types</a> although some bibliography styles may recognise/define more; however, it is likely that you will most frequently use the following entry types:</p>
+<ul>
+<li><code>@article</code> for journal articles (see example above).</li>
+<li><code>@inproceedings</code> for conference proceeding articles:</li>
+</ul>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>@inproceedings<span class="nb">{</span>FosterEtAl:2003,
+  author = <span class="nb">{</span>George Foster and Simona Gandrabur and Philippe Langlais and Pierre
+    Plamondon and Graham Russell and Michel Simard<span class="nb">}</span>,
+  title = <span class="nb">{</span>Statistical Machine Translation: Rapid Development with Limited Resources<span class="nb">}</span>,
+  booktitle = <span class="nb">{</span>Proceedings of <span class="nb">{</span>MT Summit IX<span class="nb">}}</span>,
+  year = <span class="nb">{</span>2003<span class="nb">}</span>,
+  pages = <span class="nb">{</span>110--119<span class="nb">}</span>,
+  address = <span class="nb">{</span>New Orleans, USA<span class="nb">}</span>,
+<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<ul class="text-list">
+<li><code>@book</code> for books (see examples above).</li>
+<li><code>@phdthesis</code>, <code>@masterthesis</code> for dissertations and theses:</li>
+</ul>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>@phdthesis<span class="nb">{</span>Alsolami:2012,
+    title    = <span class="nb">{</span>An examination of keystroke dynamics
+                for continuous user authentication<span class="nb">}</span>,
+    school   = <span class="nb">{</span>Queensland University of Technology<span class="nb">}</span>,
+    author   = <span class="nb">{</span>Eesa Alsolami<span class="nb">}</span>,
+    year     = <span class="nb">{</span>2012<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<ul class="text-list">
+<li><code>@inbook</code> is for a book chapter where <em>the entire book</em> was written by the same author(s): the chapter of interest is identified by a chapter number:</li>
+</ul>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>@inbook<span class="nb">{</span>peyret2012:ch7,
+  title=<span class="nb">{</span>Computational Methods for Fluid Flow<span class="nb">}</span>,
+  edition=<span class="nb">{</span>2<span class="nb">}</span>,
+  author=<span class="nb">{</span>Peyret, Roger and Taylor, Thomas D<span class="nb">}</span>,
+  year=<span class="nb">{</span>1983<span class="nb">}</span>,
+  publisher=<span class="nb">{</span>Springer-Verlag<span class="nb">}</span>,
+  address=<span class="nb">{</span>New York<span class="nb">}</span>,
+  chapter=<span class="nb">{</span>7, 14<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<ul class="text-list">
+<li><code>@incollection</code> is for a contributed chapter in a book, so would have its own <code>author</code> and <code>title</code>. The actual title of the entire book is given in the <code>booktitle</code> field; it is likely that an <code>editor</code> field will also be present:</li>
+</ul>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>@incollection<span class="nb">{</span>Mihalcea:2006,
+  author = <span class="nb">{</span>Rada Mihalcea<span class="nb">}</span>,
+  title = <span class="nb">{</span>Knowledge-Based Methods for <span class="nb">{</span>WSD<span class="nb">}}</span>,
+  booktitle = <span class="nb">{</span>Word Sense Disambiguation: Algorithms
+               and Applications<span class="nb">}</span>,
+  publisher = <span class="nb">{</span>Springer<span class="nb">}</span>,
+  year = <span class="nb">{</span>2006<span class="nb">}</span>,
+  editor = <span class="nb">{</span>Eneko Agirre and Philip Edmonds<span class="nb">}</span>,
+  pages = <span class="nb">{</span>107--132<span class="nb">}</span>,
+  address = <span class="nb">{</span>Dordrecht, the Netherlands<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<ul class="text-list">
+<li><code>@misc</code> is for whatever doesn’t quite fit any other entry type. It can be especially useful for web pages—by writing note = \url{http://...} or url = {http://...}:
+<ul>
+  
+<li>you will often find it useful to add <code>\usepackage{url}</code> or <code>\usepackage{hyperref}</code> in your <code>.tex</code> files’ preamble (for more robust handling of URLs);</li>
+
+<li>not all bibliography styles support the <code>url</code> field: <code>plain</code> doesn’t, but <code>IEEEtran</code> does. All styles support <code>note</code>. More on this in a future post;</li>
+
+<li>you should be mindful that even web pages and <code>@misc</code> entries should have an <code>author</code>, a <code>year</code> and a <code>title</code> field:
+</li>
+</ul>
+</li>
+</ul>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>@misc<span class="nb">{</span>web:lang:stats,
+  author = <span class="nb">{</span>W3Techs<span class="nb">}</span>,
+  title = <span class="nb">{</span>Usage Statistics of Content Languages
+           for Websites<span class="nb">}</span>,
+  year = <span class="nb">{</span>2017<span class="nb">}</span>,
+  note = <span class="nb">{</span>Last accessed 16 September 2017<span class="nb">}</span>,
+  url = <span class="nb">{</span>http://w3techs.com/technologies/overview/content<span class="nb">_</span>language/all<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<h3><span id="Multiple_authors_in_.5C.28.5Cmathrm.7BBib.5CTeX.7D.5C.29"></span><span class="mw-headline" id="Multiple_authors_in_\(\mathrm{Bib\TeX}\)"><span id="Multiple_authors">Multiple authors in \(\mathrm{Bib\TeX}\)</span></span></h3>
+<p>In a <code>.bib</code> file, commas are only used to separate the last name from the first name of an author—if the last name is written first. Individual author names are separated by <code>and</code>. So these are correct:</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>author = <span class="nb">{</span>Jane Doe and John Goodenough and Foo Bar<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>or</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>author = <span class="nb">{</span>Doe, Jane and Goodenough, John and Bar, Foo<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>But <em>none of the following will work correctly</em>—you’ll get weird output, or even error messages from \(\mathrm{Bib\TeX}\)! So take extra care if you are copying author names from a paper or from a web page.</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>author = <span class="nb">{</span>Jand Doe, John Goodneough, Foo Bar<span class="nb">}</span>
+author = <span class="nb">{</span>Jand Doe, John Goodneough and Foo Bar<span class="nb">}</span>
+author = <span class="nb">{</span>Jand Doe, John Goodneough, and Foo Bar<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<h3><span class="mw-headline" id="Multiple-word_last_names">Multiple-word last names</span></h3>
+<p>If an author’s last name is made up of multiple words separated by spaces, or if it’s actually an organisation, place an extra pair of braces around the last name so that \(\mathrm{Bib\TeX}\) will recognise the grouped words as the last name:</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>author = <span class="nb">{{</span>World Health Organisation<span class="nb">}}</span>
+author = <span class="nb">{</span>Geert <span class="nb">{</span>Van der Plas<span class="nb">}</span> and John Doe<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p>Alternatively, you can use the <code>Lastname, Firstname</code> format; some users find that clearer and more readable:</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>author = <span class="nb">{</span>Van der Plas, Geert and Doe, John<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Remember:</strong> Whether the first or last name appears first  in the output (“John Doe” vs “Doe, John”), or whether the first name is automatically abbreviated “J. Doe” or “Doe, J.” vs “John Doe” “J. Doe”), all such details are controlled by the <code>\bibliographystyle</code>.</p>
+<h3><span id="I_tried_to_use_.25_to_comment_out_some_lines_or_entries_in_my_.bib_file.2C_but_I_got_lots_of_error_messages_instead.3F"></span><span class="mw-headline" id="I_tried_to_use_%_to_comment_out_some_lines_or_entries_in_my_.bib_file,_but_I_got_lots_of_error_messages_instead?">I tried to use <code>%</code> to comment out some lines or entries in my <code>.bib</code> file, but I got lots of error messages instead?</span></h3>
+<p><code>%</code> is actually not a comment character in <code>.bib</code> files! So, inserting a <code>%</code> in <code>.bib</code> files not only fails to comment out the line, it also causes some \(\mathrm{Bib\TeX}\) errors. To get \(\mathrm{Bib\TeX}\) to ignore a particular field we just need to rename the field to something that \(\mathrm{Bib\TeX}\) doesn’t recognise. For example, if you want to keep a <code>date</code> field around but prefer that it’s ignored (perhaps because you want \(\mathrm{Bib\TeX}\) to use the <code>year</code> field instead) write <code>Tdate = {...}</code> or the more human-readable <code>IGNOREdate = {...}</code>.</p>
+<p>To get \(\mathrm{Bib\TeX}\) to ignore an entire <em>entry</em> you can remove the <code>@</code> before the entry type. A valid reference entry always starts with a <code>@</code> followed by the entry type; without the <code>@</code> character \(\mathrm{Bib\TeX}\) skips the lines until it encounters another <code>@</code>.</p>
+<h2><span id="How.2Fwhere_do_I_actually_get_those_.bib_files.3F"></span><span class="mw-headline" id="How/where_do_I_actually_get_those_.bib_files?">How/where do I actually <em>get</em> those <code>.bib</code> files?</span></h2>
+<h3><span class="mw-headline" id="Edit_the_.bib_file_as_plain_text">Edit the <code>.bib</code> file as plain text</span></h3>
+<p>Because <code>.bib</code> files are plain text you can certainly write them by hand—once you’re familiar with \(\mathrm{Bib\TeX}\)’s required syntax. Just make sure that you save it with a <code>.bib</code> extension, and that your editor doesn’t surreptitiously add a <code>.txt</code> or some other suffix. On Overleaf you can click on the “Files…” link at the top of the file list panel, and then on “Add blank file” to create a fresh <code>.bib</code> file to work on.</p>
+<blockquote>
+<p><strong>Pro tip:</strong> Did you know that Google Scholar search results can be exported to a \(\mathrm{Bib\TeX}\) entry? Click on the “Cite” link below each search result, and then on the “\(\mathrm{Bib\TeX}\)” option search. You can then copy the \(\mathrm{Bib\TeX}\) entry generated. Here’s a <a rel="nofollow" class="external text" href="Questions/How_to_include_a_bibliography_using_bibtex.html">video</a> that demonstrates the process. Note that you should always double-check the fields presented in the entry, as the automatically populated information isn’t always comprehensive or accurate!</p>
+</blockquote>
+<h3><span class="mw-headline" id="Help_from_GUI-based_.bib_editors">Help from GUI-based <code>.bib</code> editors</span></h3>
+<p>Many users prefer to use a dedicated \(\mathrm{Bib\TeX}\) bibliography database editor/manager, such as <a rel="nofollow" class="external text" href="http://www.jabref.org/">JabRef</a> or <a rel="nofollow" class="external text" href="http://bibdesk.sourceforge.net/">BibDesk</a> to maintain, edit and add entries to their <code>.bib</code> files. Using a GUI can indeed help reduce syntax and spelling errors whilst creating bibliography entries in a \(\mathrm{Bib\TeX}\) file. If you prefer, you can prepare your <code>.bib</code> file on your own machine using JabRef, BibDesk or another utility, and then upload it to your Overleaf.</p>
+<blockquote>
+<p><strong>Pro tip:</strong> If you’d like to use the same <code>.bib</code> for multiple Overleaf projects, have a look at <a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Can_I_share_files_(e.g._.bib_and_some_graphics)_across_my_projects%3F">this help article</a> to set up a “master project”, or <a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/How_can_I_upload_files_from_Google_Drive%3F">this one</a> for sharing files from Google Drive (the instructions apply to other cloud-based storage solutions, such as Dropbox).</p>
+</blockquote>
+<h3><span class="mw-headline" id="Export_from_reference_library_services">Export from reference library services</span></h3>
+<p>If you click on the Upload files button above the file list panel, you'll notice some options: Import from Mendeley, and Import from Zotero. If you’re already using one of those reference library management services, Overleaf can now hook into the Web exporter APIs provided by those services to import the <code>.bib</code> file (generated from your library) into your Overleaf project. For more information, see the Overleaf article <a href="https://www.overleaf.com/learn/how-to/How_to_link_your_Overleaf_account_to_Mendeley_and_Zotero" title="Kb/How to link your Overleaf account to Mendeley and Zotero">How to link your Overleaf account to Mendeley and Zotero</a>.</p>
+<p>For other reference library services that don’t have a public API, or are not yet directly integrated with Overleaf, such as <a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Can_I_use_Overleaf_with_EndNote%3F">EndNote</a> or <a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Can_I_use_Overleaf_with_Paperpile%3F">Paperpile</a>, look for an “export to <code>.bib</code>” option in the application or service. Once you have a <code>.bib</code> file, you can then add it to your Overleaf project.</p>
+<h3><span id="I.E2.80.99ve_already_got_a_reference_list_in_a_Microsoft_Word.2FHTML.2FPDF_file.3B_can_I_somehow_reuse_the_data_without_re-typing_everything.3F"></span><span class="mw-headline" id="I’ve_already_got_a_reference_list_in_a_Microsoft_Word/HTML/PDF_file;_can_I_somehow_reuse_the_data_without_re-typing_everything?">I’ve already got a reference list in a Microsoft Word/HTML/PDF file; can I somehow reuse the data without re-typing everything?</span></h3>
+<p>It used to be that you would have to hand-code each line into a <code>\bibitem</code> or an <code>@article{...}</code> entry (or another entry type) in a <code>.bib</code> file. As you can imagine, it’s not exactly a task that many people look forward to. Fortunately, these days some tools are available to help. They typically take a plain text file, e.g.</p>
+<div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>[1] J. Smith, J. Doe and F. Bar (2001) A ground-breaking study.
+Journal of Amazing Research 5(11), pp. 29-34.
+
+[2] ...
+</pre></div>
+</div>
+</div>
+<p>and attempt to parse the lines, converting it into a structured bibliography as a \(\mathrm{Bib\TeX}\) <code>.bib</code> file. For example, have a look at <a rel="nofollow" class="external text" href="Bibliography_management_with_biblatex.html">text2bib</a> or <a rel="nofollow" class="external text" href="https://www.overleaf.com/blog/446-edifix-converts-unstructured-bibliographies-to-bibtex">Edifix</a>. Be sure to go through the options of these tools carefully, so that they work well with your existing unstructured bibliography in plain text.</p>
+<h2><span class="mw-headline" id="Summary_and_further_reading">Summary and further reading</span></h2>
+<p>We’ve had a quick look at how \(\mathrm{Bib\TeX}\) processes a <code>.bib</code> bibliography database file to resolve <code>\cite</code> commands and produce a formatted reference list, as well as how to prepare <code>.bib</code> files.</p>
+<p>Happy \(\mathrm{Bib\TeX}\)ing!</p>
+<h3><span class="mw-headline" id="Further_reading">Further reading</span></h3>
+<p>For more information see:
+</p>
+<ul><li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/">BibTeX documentation at CTAN web site</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ctan.org//tex-archive/macros/latex/contrib/tocbibind/tocbibind.pdf">tocbind package documentation</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li></ul>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="Operators.html" title="Operators">Operators</a></li>
+<li><a href="Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="French.html" title="French">French</a></li>
+<li><a href="German.html" title="German">German</a></li>
+<li><a href="Greek.html" title="Greek">Greek</a></li>
+<li><a href="Italian.html" title="Italian">Italian</a></li>
+<li><a href="Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="Korean.html" title="Korean">Korean</a></li>
+<li><a href="Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="Russian.html" title="Russian">Russian</a></li>
+<li><a href="Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="Indices.html" title="Indices">Indices</a></li>
+<li><a href="Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="Counters.html" title="Counters">Counters</a></li>
+<li><a href="Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="Tutorials.html">Tutorials</a></li><li><a href="Inserting_Images.html">How to insert images</a></li><li><a href="Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Bibliography_management_with_bibtex.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Bibliography_management_with_bibtex" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==" src="../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="bJhIVf4svs8wnpRoknGfWQ==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Bibliography_management_with_bibtex by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:43:09 GMT -->
+</html>

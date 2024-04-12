@@ -1,0 +1,624 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:10:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>How does \expandafter work: The meaning of expansion - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="How does \expandafter work: The meaning of expansion"><meta name="og:title" content="How does \expandafter work: The meaning of expansion"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="expandafter_work__The_meaning_of_expansion.html"><link rel="stylesheet" href="../../../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="expandafter_work__The_meaning_of_expansion.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" hreflang="ja"><link rel="preload" href="../../../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="GZGhEOITPS5Hbm1OQcd+2g=="><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="OPQAYdo5-DVbVgZeoP1EfZVy2Q0tsZdD-W_k"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>How does \expandafter work: The meaning of expansion</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introducing_TeX’s_concept_of_“expansion”"><span class="tocnumber">1</span> <span class="toctext">Introducing TeX’s concept of “expansion”</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#On_the_challenge_of_explaining_expansion..."><span class="tocnumber">1.1</span> <span class="toctext">On the challenge of explaining expansion...</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Key_points_about_TeX_tokens"><span class="tocnumber">1.2</span> <span class="toctext">Key points about TeX tokens</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#In_the_beginning..."><span class="tocnumber">1.3</span> <span class="toctext">In the beginning...</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#The_notion_of_“expandable”_commands"><span class="tocnumber">1.4</span> <span class="toctext">The notion of “expandable” commands</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#How_does_TeX_know_if_a_command_is_“expandable”?"><span class="tocnumber">1.4.1</span> <span class="toctext">How does TeX know if a command is “expandable”?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Command_codes"><span class="tocnumber">1.5</span> <span class="toctext">Command codes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Yes,_yes_but_what_is_expansion???"><span class="tocnumber">2</span> <span class="toctext">Yes, yes but what is expansion???</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Expansion:_A_general_term_for_a_set_of_operations"><span class="tocnumber">2.1</span> <span class="toctext">Expansion: A general term for a set of operations</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Which_commands_are_expandable?"><span class="tocnumber">2.1.1</span> <span class="toctext">Which commands are expandable?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#And_finally:_the_meaning_of_expansion?"><span class="tocnumber">2.2</span> <span class="toctext">And finally: the meaning of expansion?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Expansion_and_the_structure_of_TeX"><span class="tocnumber">3</span> <span class="toctext">Expansion and the structure of TeX</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Explanation_of_the_TeX_structure_diagram"><span class="tocnumber">3.1</span> <span class="toctext">Explanation of the TeX structure diagram</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Understanding_maincontrol()"><span class="tocnumber">3.2</span> <span class="toctext">Understanding maincontrol()</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#Getting_the_next_token"><span class="tocnumber">3.2.1</span> <span class="toctext">Getting the next token</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<p class="mw-empty-elt">
+</p><div class="btn-group">
+<a class="btn btn-default" href="expandafter_work__An_introduction_to_TeX_tokens.html"> Part 1 </a>
+<a class="btn btn-default" href="expandafter_work__The_meaning_of_expansion.html"> Part 2 </a>
+<a class="btn btn-default" href="expandafter_work__TeX_uses_temporary_token_lists.html"> Part 3 </a>
+<a class="btn btn-default" href="expandafter_work__From_basic_principles_to_exploring_TeX%27s_source_code.html"> Part 4 </a>
+<a class="btn btn-default" href="expandafter_work__A_detailed_macro_case_study.html"> Part 5 </a>
+<a class="btn btn-default" href="expandafter_work__A_detailed_study_of_consecutive_/expandafter_commands.html"> Part 6 </a>
+</div>
+
+<p class="mw-empty-elt"></p>
+<h2><span id="Introducing_TeX.E2.80.99s_concept_of_.E2.80.9Cexpansion.E2.80.9D"></span><span class="mw-headline" id="Introducing_TeX’s_concept_of_“expansion”">Introducing TeX’s concept of “expansion”</span></h2>
+<p class="mw-empty-elt">
+</p><p>Having reviewed <a href="expandafter_work__An_introduction_to_TeX_tokens.html?preview=true">TeX tokens and token lists</a>, next on our list of background topics for <code>\expandafter</code> is TeX’s concept of <em>expansion</em>: the core TeX process <code>\expandafter</code> is designed to work with.</p>
+
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="On_the_challenge_of_explaining_expansion...">On the challenge of explaining expansion...</span></h3>
+<p>For most of us, TeX’s concept of expansion, and the reasons/mechanism(s) behind it, can be confusing—they are not easy to <em>fully</em> explain in a simple, concise manner. Many of TeX’s inner operations/processes are interrelated in quite complex ways, which can present challenges when trying to “dissect” certain aspects of TeX’s operations: attemping to discuss them in isolation from the program as a whole. Expansion is certainly a concept which falls into that category because it is a <em>fundamental</em> element of TeX’s behaviour, and deeply embedded throughout TeX’s inner processes. However, this article attempts to construct an explanation of expansion, offering a foundation on which readers can build.</p>
+<p>To explain TeX’s expansion mechanism we’ll proceed step-by-step, surveying a range of related/relevant topics, and piece them together to develop an understanding of this crucial element of TeX’s behaviour. Later in the article, and for the more intrepid reader who is fond of detail, we take a look inside TeX itself, summarizing the key source code which drives the expansion process.</p>
+<h3><span class="mw-headline" id="Key_points_about_TeX_tokens">Key points about TeX tokens</span></h3>
+<p>Throughout the following discussion it’s important to remember that TeX can obtain its next item of input from two sources:</p> 
+<ol>
+<li><strong>physical text files</strong>: generating <em>new tokens</em> by reading/scanning characters and commands within those files,  or</li>
+<li><strong>token lists</strong>: getting input by reading from a list of existing, <em>pre-prepared</em>, tokens stored in TeX’s memory.</li>
+</ol>
+<p>Also recall that TeX uses tokens as a convenient way to neatly “package” information about any item (character or command) it has read-in.</p>
+<p>When TeX is generating <em>new tokens</em> it will, <em>at the point of token production</em>, have immediate access to information about the item whose token value it is calculating. For example, when generating new command tokens, TeX first calculates a value called <code>curcs</code> that enables TeX to lookup information about the command whose token it is about to produce.</p> 
+<p>However, if TeX is reading from token lists (sequences of <em>stored tokens</em>) it would first need to “unpackage” any token in that list before it could determine what each token represents. For example, TeX could be reading tokens stored as part of a macro definition: those tokens would have been generated from text that has long since been read-in, converted to tokens and stored away. The token type (character or command) determines what TeX’s “unpackaging” actually means:</p>
+<ul>
+<li>for <em>command tokens</em> (token value is &gt; 4095): calculate <code>curcs</code> via \(\text{curcs}=\text{token value}-4095\) and use <code>curcs</code> to look up information about the command;</li>
+<li>for <em>character tokens</em> (token value &lt; 4095): split the character token into its constituent pairing of (character code, category code).</li>
+</ul>
+<h3><span class="mw-headline" id="In_the_beginning...">In the beginning...</span></h3>
+<p>To begin our exploration of expansion we’ll look at how TeX engines classify, or categorize, the set of commands they can process. For the moment, assume that “expandable” is simply some, as yet unexplained, “property” of a TeX command.</p>
+<h3><span id="The_notion_of_.E2.80.9Cexpandable.E2.80.9D_commands"></span><span class="mw-headline" id="The_notion_of_“expandable”_commands">The notion of “expandable” commands</span></h3>
+<p>All TeX-based typesetting programs (TeX “engines”) understand two main “classes” of command:</p>
+<ul>
+<li>commands built into the executable engine itself: the so-called <em>primitives</em>;</li>
+ <li>commands defined by the user: so-called <em>macros</em>.</li>
+ </ul>
+<p>TeX engines also use “being expandable”, a type of command “behaviour”, as a mechanism for classifying all commands into two groups:</p>
+<ul>
+<li>expandable commands;</li>
+<li>non-expandable commands.</li>
+</ul>
+<p>So we can consider that the set of all commands (primitives plus macros) can be classified as shown in the following graphic:</p>
+<p class="mw-empty-elt">
+</p><p><img src="https://images.ctfassets.net/nrgyaltdicpt/5zggWehrqK4VWChLmexIIZ/df886adb2adeacc705beb3393d827d1c/expandornot-plain.svg" alt="Diagram showing the classification of all TeX commands" /></p>
+
+<p class="mw-empty-elt"></p>
+<p>Although we don’t yet know what expansion/expandable actually means, it’s possible to see that:</p>
+<ul>
+<li>all macros are classified as expandable commands;</li>
+<li>some primitive (built-in) commands are also classified as expandable (the vast majority are not).</li>
+</ul>
+<p><strong>Note on active characters</strong>: In addition to primitives and macros there is a third class of “expandable” item: active characters—any characters assigned to have category code 13 are also considered “expandable” because they are processed as “miniature  macros”. </p>
+<h4><span id="How_does_TeX_know_if_a_command_is_.E2.80.9Cexpandable.E2.80.9D.3F"></span><span class="mw-headline" id="How_does_TeX_know_if_a_command_is_“expandable”?">How does TeX know if a command is “expandable”?</span></h4>
+<p class="mw-empty-elt">
+</p><p>From our <a href="expandafter_work__An_introduction_to_TeX_tokens.html?preview=true">discussion of TeX tokens</a> we know that tokens are nothing more than integers which TeX calculates and uses to “package” information about an item of input: a character or a command. We also noted that, given any token (integer) value, TeX can, if/when required, reverse the tokenization process to “unpackage” a token and reveal data about the command or character it represents.</p> 
+
+<p class="mw-empty-elt"></p>
+<p>Using data produced when TeX creates a new token, or data extracted from an existing token—e.g., one stored in a macro or other token list—TeX can check its internal data-storage tables to find detailed information about the command (or character) represented by that token. The following graphic summarizes the process of creating a command token (“packaging”) and then, when TeX needs some information, reversing the process (“unpackaging” the token) to obtain data about the command represented by a particular token value.</p>  
+<p class="mw-empty-elt">
+</p><p><img src="https://images.ctfassets.net/nrgyaltdicpt/WzDp8utjCaHS7t5oagH0O/959c7a0109897e9f113cdc9881759267/packaging-plain.svg" alt="Diagram showing how TeX packges/unpackages tokens" /></p>
+
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="Command_codes">Command codes</span></h3>
+<p>Part of the information that TeX stores about every command (primitive or macro) is something called its <em>command code</em>: an integer value that TeX engines use (internally) to classify commands—commands that have similar behaviour/functionality share the same command code.</p> 
+<p><strong>Note</strong>: For an individual, <em>non-active</em>, character, its command code is the <em>category code</em> it was assigned at the point it was read-in (scanned) by TeX. Note too that, except for characters, command codes are purely internal to TeX: they are not accessible via macros or primitive commands—to see those details you’ll need to read TeX’s source code!</p>
+<p>Here are some examples of command codes:</p>
+<ul>
+<li><code>\hbox</code>, <code>\vbox</code>, <code>\vtop</code>, <code>\vcenter</code>, <code>\box</code> (and others) are all classified as “box making” commands and share command code 20;</li>
+
+<li><code>\def</code>, <code>\edef</code>, <code>\gdef</code>, <code>\xdef</code> are all “macro definition” commands and share command code 97;</li> 
+
+<li>all macros are classified with one of the command codes 111, 112, 113 or 114: the different command codes are determined by the use of <code>\long</code> or <code>\outer</code> when defining the macro:</li>
+
+<ul>
+<li>111: command code for a non-long, non-outer macro (e.g., <code>\def\foo{...}</code>)</li>
+<li>112: command code for a long, non-outer macro (e.g., <code>\long\def\foo{...}</code>)</li>
+<li>113: command code for a non-long, outer macro (e.g., <code>\outer\def\foo{...}</code>)</li>
+<li>114: command code for a long, outer macro (e.g., <code>\long\outer\def\foo{...}</code>)</li>
+</ul>
+</ul>
+<p>TeX also uses command codes to identify the subset of commands classified as “expandable”. To do that, TeX associates expandable commands with command code values that exceed the threshold value of 100 (the value used by Knuth’s original TeX, e-TeX and pdfTeX). Consequently:</p>
+<ul>
+<li><em>non-expandable</em> commands (the vast majority) have a command code &lt;= 100</li>
+<li><em>expandable</em> commands have a command code &gt; 100</li>
+</ul>
+<p>Hence, if TeX looks up the details for a particular command and detects a command code &gt; 100, TeX immediately knows it is expandable. All macros and a small number of primitives (built-in commands) are assigned a command code indicating they are expandable: but why does TeX bother with this “expandable” classification? As you may suspect, it simply means that those commands are somewhat “special”; i.e., they can be subjected to TeX’s process of <em>expansion</em>.</p>
+<p><strong>Note (characters)</strong>: Unless a character has been defined as active (category code 13) all characters are non-expandable. Active characters can be thought of as single-letter “mini macros”.</p>
+<h2><span id="Yes.2C_yes_but_what_is_expansion.3F.3F.3F"></span><span class="mw-headline" id="Yes,_yes_but_what_is_expansion???">Yes, yes but <em>what is</em> expansion???</span></h2>
+<p>We noted that token values greater than 4095 are used to represent commands; consequently, TeX can, if/when required, “unpackage” that token to access information about the TeX command represented by that token. TeX can lookup that command’s command-code value to determine if it falls into the special category of being expandable. But what does TeX do with that information and what does “being expandable”, i.e., expansion, <em>really mean</em>?</p>
+<h3><span class="mw-headline" id="Expansion:_A_general_term_for_a_set_of_operations">Expansion: A general term for a <em>set of operations</em></span></h3>
+<p>At certain points during TeX’s processing it needs to know whether a token represents an expandable command:</p>
+<ul>
+<li><strong>No</strong>: If that command token <em>does not</em> fall into the expandable category, TeX simply “passes it on” to the next stage of processing.</li> 
+<li><strong>Yes</strong>: If that command token <em>does</em> fall into the expandable category, you can think of TeX needing to take action which results in “filtering out” that particular token by performing a process that TeX refers to as “expanding that token”, or performing expansion.</li> 
+</ul>
+ <p>In essence, expansion involves TeX <em>removing</em> that token from its input and <em>replacing</em> it with tokens arising from the “expansion process” specific to that command or group of commands sharing the same command code.</p>
+<p>It takes practice and experience to know when TeX is, and is not, performing token expansion—page 215 of The TeXbook lists the situations in which an expandable tokens are not expanded. The reality is that TeX’s process of performing expansion is complex and nuanced.</p>
+<h4><span id="Which_commands_are_expandable.3F"></span><span class="mw-headline" id="Which_commands_are_expandable?">Which commands are expandable?</span></h4>
+<p>If you look at a list of primitive (built-in) commands that TeX engines classify as expandable  (e.g. pages 212–215 of The TeX book) it becomes apparent that, in practice, expansion is a rather general term which TeX uses to describe the behaviour of a somewhat eclectic group of commands. The results from expansion of a particular (expandable) command do vary and we can see this by listing a set of expandable commands—grouped by their functionality. The precise semantics of individual commands is not important here, of most interest are the general consequences of their actions—what their expansion actually <em>does or achieves</em>.</p>
+<p class="mw-empty-elt">
+</p><div style="overflow:hidden;overflow-x:auto;word-break:normal">
+<table style="background:white;max-width:100%">
+  <colgroup>
+<col span="1" style="width:25%"></col>
+<col span="1" style="width:25%"></col>
+<col span="1" style="width:50%"></col>
+  </colgroup>
+  <tbody>
+  <tr>
+   <td>
+<strong>Command</strong>
+   </td>
+   <td><strong>Description</strong>
+   </td>
+   <td><strong>Expansion behaviour</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>
+<ul>
+<li>all macros</li>
+</ul>
+   </td>
+   <td>A stored sequence of command/character tokens
+   </td>
+   <td>In effect, macro expansion means inserting a list of tokens for TeX to read. This involves:
+<ul>
+<li>creating token lists for any macro arguments—that process includes identifying/absorbing delimiter tokens;</li>
+<li>retrieving a list of stored tokens (the macro definition) and preparing  to insert (into the macro definition) the parameter tokens created in the first step.</li> 
+</ul>
+<p>Effectively, macro expansion <em>removes the macro token</em> from the input and <em>replaces it</em> with the tokens contained in the  definition.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+<ul>
+
+<li><code>\expandafter</code>
+</li>
+</ul>
+   </td>
+   <td>Change the order of expansion
+   </td>
+   <td>Token filtering/shuffling
+   </td>
+  </tr>
+  <tr>
+   <td>
+<ul>
+
+<li><code>\noexpand</code> 
+</li>
+</ul>
+   </td>
+   <td>Prevent expansion (yes, surprisingly it is classified as an expandable command)
+   </td>
+   <td>Delay expansion (sort of token filtering)
+   </td>
+  </tr>
+  <tr>
+   <td>
+<ul>
+
+<li><code>\input</code>, <code>\endinput</code>, <code>\scantokens</code> 
+</li>
+</ul>
+   </td>
+   <td>Related to inputting a new source of tokens via source files—yes, <code>\scantokens</code> in this category due to its use of so-called “pseudo-files”
+   </td>
+   <td>Act as a source of new tokens
+   </td>
+  </tr>
+  <tr>
+   <td>
+<ul>
+
+<li><code>\if</code>, <code>\ifcat</code>, <code>\ifnum</code>, <code>\ifdim</code>, <code>\ifodd</code>, <code>\ifvmode</code>, <code>\ifhmode</code>, <code>\ifmmode</code>, <code>\ifinner</code>, <code>\ifvoid</code>, <code>\ifhbox</code>, <code>\ifvbox</code>, <code>\ifx</code>, <code>\ifeof</code>, <code>\iftrue</code>, <code>\iffalse</code>, <code>\ifcase</code>, <code>\ifdefined</code>, <code>\ifcsname</code>, <code>\iffontchar</code>
+</li>
+</ul>
+   </td>
+   <td>Begin a conditional expression
+   </td>
+   <td>Start token “filtering”: deciding which of the following tokens to process.
+   </td>
+  </tr>
+  <tr>
+   <td>
+<ul>
+
+<li><code>\fi</code>, <code>\or</code>, <code>\else</code>
+</li>
+</ul>
+   </td>
+   <td>Terminate a conditional expression
+   </td>
+   <td>Stop token “filtering”: deciding which tokens to process
+   </td>
+  </tr>
+  <tr>
+   <td>
+<ul>
+
+<li><code>\csname</code>… <code>\endcsname</code>
+</li>
+</ul>
+   </td>
+   <td>Construct/generate a command token
+   </td>
+   <td>Convert a series of tokens into a single command token
+   </td>
+  </tr>
+  <tr>
+   <td>
+<ul>
+
+<li><code>\number</code>, <code>\romannumeral</code>, <code>\string</code>, <code>\meaning</code>, <code>\fontname</code>, <code>\jobname</code>, <code>\eTeXrevision</code>
+</li>
+</ul>
+   </td>
+   <td>Convert something into a sequence of tokens
+   </td>
+   <td>Generate some tokens (that represent an internal quantity or value)
+   </td>
+  </tr>
+  <tr>
+   <td>
+<ul>
+
+<li><code>\the</code>, <code>\unexpanded</code>, <code>\detokenize</code>
+</li>
+</ul>
+   </td>
+   <td><code>\the</code> has various uses including insertion of tokens; <code>\detokenize</code> converts a token list into a list of character tokens;  <code>\unexpanded</code> prevents expansion of tokens 
+   </td>
+   <td>Insert/generate some tokens or control expansion
+   </td>
+  </tr>
+  <tr>
+   <td>
+<ul>
+
+<li><code>\topmark</code>, <code>\firstmark</code>, <code>\botmark</code>, <code>\splitfirstmark</code>, <code>\splitbotmark</code>, <code>\topmarks</code>, <code>\firstmarks</code>, <code>\botmarks</code>, <code>\splitfirstmarks</code>, <code>\splitbotmarks</code>
+</li>
+</ul>
+   </td>
+   <td>Commands for accessing token lists that have specialized uses
+   </td>
+   <td>Access a source of stored tokens (token lists)
+   </td>
+  </tr>
+</tbody>
+</table>
+</div> 
+
+
+<p class="mw-empty-elt"></p>
+<p>Based on the list above, is it possible to extract any “general behaviours” from this collection of commands—to further refine our understanding of expansion? To a fair approximation, the results of expanding a command fall into a few key activities:</p>
+<ul>
+<li>token generation</li>
+<li>token insertion</li>
+<li>token filtering</li>
+<li>change/control expansion of the next token</li>
+</ul>
+<h3><span id="And_finally:_the_meaning_of_expansion.3F"></span><span class="mw-headline" id="And_finally:_the_meaning_of_expansion?">And finally: the meaning of expansion?</span></h3>
+<p>We can consider that expansion of a command token (including active characters) involves TeX <strong>removing</strong> that command token from the input and <strong>replacing</strong> that token with other tokens that arise from its expansion behaviour: generating/inserting tokens, filtering tokens or changing/controlling expansion of the next token. Once a token has been expanded, TeX would continue to read/process any tokens that might arise from the expansion process. Exactly when or where TeX will perform expansion is a very different question: due to the nuances and complexities of TeX’s processing it’s one that we can’t hope to fully address in this article but we can give an overview of TeX’s main input processing behaviour.</p>
+<h2><span class="mw-headline" id="Expansion_and_the_structure_of_TeX">Expansion and the structure of TeX</span></h2>
+<p>Arguably, the best way to see how/where TeX distinguishes between expandable and non-expandable commands is to look at TeX’s source code.</p> 
+<p>Internally, TeX is an extremely complex piece of software; consequently, it is impractical to attempt a full description of the many nuanced behaviours inherent to TeX’s operation. As noted, exactly when or where TeX will actually perform expansion as it reads tokens is “somewhat complex”; consequently, the following discussion assumes TeX is in a state that requires expansion to take place. Situations where TeX would be reading/creating tokens, but not performing expansion, include creating/storing tokens for the <code>\def</code> macro-definition command or storing tokens in a <code>\toks</code> register.</p>
+<p>The following diagram provides a simplified overview of the core parts of TeX’s structure which deal with input and processing of tokens: the objective is to highlight the way that expandable and non-expandable tokens are “filtered” during TeX’s input processing. The C programming language is used to describe the various key functions but, hopefully, the basic structure should be clear even if you are not familiar with the C language.</p>
+<p class="mw-empty-elt">
+</p><p><img src="https://images.ctfassets.net/nrgyaltdicpt/fcvwPO5pM0uHvjuF5cAYw/b5ef7834217269dc6e76665e1b2ccaa6/improvedtexstructure--plain.svg" /></p>
+
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="Explanation_of_the_TeX_structure_diagram">Explanation of the TeX structure diagram</span></h3>
+<p>In outline, TeX’s processing is driven by a function called <code>maincontrol()</code> which, in the source code of TeX, Knuth refers to as the “chief executive” and describes it as follows:</p>
+<p class="mw-empty-elt">
+</p><blockquote><p>
+“We come now to the <code>maincontrol</code> routine, which contains the master switch that causes all the various pieces of TeX to do their things, in the right order… this is the grand climax of the program… We are now at the hub of the web, the central nervous system that touches most of the other parts and ties them together.”
+</p></blockquote>
+
+<p class="mw-empty-elt"></p>
+<p>The following description is somewhat simplified but gives a “flavour” of the underlying structure of TeX-based software: how expandable commands are identified (“intercepted”) and filtered-out during TeX’s input processing.</p> 
+<p>In essence, during TeX’s earliest stage of input processing it uses the command code value of the current command (token) to detect exandable commands (macros, expandable primitives and active characters); if one is identified, such commands are “intercepted” and “pre-processed”—by being expanded. Through this filtering (expansion) process TeX removes expandable commands from the input and replaces them with tokens arising from their respective expansion behaviour. Once the expansion process is complete, TeX will read any tokens produced from that expansion. Only non-expandable items are passed through to the next stage of TeX’s processing: the “big switch” where TeX will execute all non-expandable primitive commands and typeset characters.</p> 
+<h3><span id="Understanding_maincontrol.28.29"></span><span class="mw-headline" id="Understanding_maincontrol()">Understanding <code>maincontrol()</code></span></h3>
+<p class="mw-empty-elt">
+</p><p>The <code>maincontrol()</code> function contains a large so-called <a href="https://en.wikipedia.org/wiki/Switch_statement">switch statement</a>—Knuth calls it the “big switch”—that TeX uses to action all <em>non-expandable</em> primitive commands: those with a command code &lt;=100.</p> 
+
+ <p>To action a particular command (or character) this “big switch” statement uses a combination of TeX’s current mode:</p>
+
+<p class="mw-empty-elt"></p>
+<ul>
+<li>internal/outer vertical mode, or</li>
+<li>restricted/paragraph horizontal mode, or</li>
+<li>inline/display math mode</li>
+</ul>
+<p><em>plus</em> the value of the command code for each primitive or charcter—the command code of a <em>non-active</em> character is its <em>category code</em> value. For the record, all 6 of TeX’s modes are allocated an integer value that can be used by TeX to save and restore its current mode whilst it switches between  typesetting various constructs—mathematics, paragraphs, boxes and so forth. Here are the integers allocated to TeX’s various modes:</p>
+<p class="mw-empty-elt">
+</p><table>
+  <tbody><tr>
+   <td><strong>Mode</strong>
+   </td>
+   <td><strong>Meaning</strong>
+   </td>
+   <td><strong>Mode value</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Outer vertical
+   </td>
+   <td>Between paragraphs  (building pages)
+   </td>
+   <td>1
+   </td>
+  </tr>
+  <tr>
+   <td>Internal vertical
+   </td>
+   <td>Immediately inside a <code>\vbox{...}</code>
+   </td>
+   <td>-1
+   </td>
+  </tr>
+  <tr>
+   <td>Horizontal 
+   </td>
+   <td>When typesetting/building paragraphs
+   </td>
+   <td>102
+   </td>
+  </tr>
+  <tr>
+   <td>Restricted horizontal
+   </td>
+   <td>Immediately inside an <code>\hbox{...}</code>
+   </td>
+   <td>-102
+   </td>
+  </tr>
+  <tr>
+   <td>Display math
+   </td>
+   <td>Typesetting <em>display</em> equations/formulae
+   </td>
+   <td>203
+   </td>
+  </tr>
+  <tr>
+   <td>Inline (formula) math
+   </td>
+   <td>Typesetting <em>inline </em>equations/formulae
+   </td>
+   <td>-203
+   </td>
+  </tr>
+</tbody></table>
+
+
+<p class="mw-empty-elt"></p>
+<p>Note the use of negative values for the complement of the various modes, such as internal vs. outer vertical mode. When processing commands in <code>maincontrol()</code>, TeX uses the absolute value of the current mode—i.e., ignores the negative sign. So, for example, if TeX is in either of its horizontal modes and needs to process a character with category code 11, it would used the sum \(102 + 11 = 113\) inside its “big switch” to branch off to the code which processes those characters in either horizontal mode (building paragraphs or inside an <code>\hbox</code>).</p>
+<h4><span class="mw-headline" id="Getting_the_next_token">Getting the next token</span></h4>
+<p>The <code>maincontrol()</code> function calls the function <code>getxtoken()</code> to get the next token of input; in turn, <code>getxtoken()</code> calls the lowest-level input function <code>getnext()</code>. After <code>getnext()</code> has completed its work, and set the value of key <em>global variables</em>, <code>getxtoken()</code> tests whether the item just read-in represents a macro or an expandable primitive.</p>
+<p>Some notes on <code>getnext()</code> and  <code>getxtoken()</code>:</p>  
+<ul>
+<li><strong><code>getnext()</code></strong>: this is TeX’s core input function. It reads and processes characters input from a from a physical file or reads tokens from a token list. Note that <code>getnext()</code> doesn’t actually calculate token values but it does set a number of key <em>global</em> variables (e.g., the command code and <code>curcs</code>) which are used later in the processing.</li>
+
+<li><strong><code>getxtoken()</code></strong>: “get expanded token” uses <code>getnext()</code> to read the next item of input. It then tests the command code of the item just read in to check if that item represents an expandable command: if so, it is expanded or the macro is called. For non-expandable items, <code>getxtoken()</code> calculates a token value and these details are passed on to the next stage of procesing: the “big switch” where non-expandable primitives are executed and characters are typeset.</li>
+</ul>
+<p>In essence, it is via <code>getxtoken()</code> that all expandable items are “filtered out” before they are processed in <code>maincontrol()</code>: this results TeX’s “big switch” only proceesing non-expandable primitive commands.</p>
+<p>Once again we stress that the above diagram is a simplification because other areas of TeX’s processing will also cause tokens to be expanded; for example:</p>
+<p class="mw-empty-elt">
+</p><ul>
+<li>when TeX is looking (scanning) for numeric values it will trigger expansion in its search for integers (by calling <code>getxtoken()</code>) ;</li>
+<li>the primitive command <code>\romannumeral</code> causes expansion—see the article <a href="https://www.texdev.net/2011/07/05/expansion-using-romannumeral/">Expansion using <code>\romannumeral</code></a> for a nuanced use of that fact;</li>
+<li>The <code>\edef</code> (“expanded definition”) macro-definition command forces full expansion;</li>
+<li>TeX will expand tokens at certain points when processing the preamble of an <code>\halign</code> or <code>\valign</code> (both commands are related to TeX’s table typesetting algorithms).</li>
+</ul>
+
+<div class="btn-group">
+<a class="btn btn-default" href="expandafter_work__An_introduction_to_TeX_tokens.html"> Part 1 </a>
+<a class="btn btn-default" href="expandafter_work__The_meaning_of_expansion.html"> Part 2 </a>
+<a class="btn btn-default" href="expandafter_work__TeX_uses_temporary_token_lists.html"> Part 3 </a>
+<a class="btn btn-default" href="expandafter_work__From_basic_principles_to_exploring_TeX%27s_source_code.html"> Part 4 </a>
+<a class="btn btn-default" href="expandafter_work__A_detailed_macro_case_study.html"> Part 5 </a>
+<a class="btn btn-default" href="expandafter_work__A_detailed_study_of_consecutive_/expandafter_commands.html"> Part 6 </a>
+</div>
+
+<p class="mw-empty-elt"></p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../../Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../../Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../../Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../../Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../../Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../../Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../../Lists.html" title="Lists">Lists</a></li>
+<li><a href="../../Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../../Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../../Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../../Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../../Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../../Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../../Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../../Operators.html" title="Operators">Operators</a></li>
+<li><a href="../../Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../../Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../../Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../../List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../../Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../../Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../../Tables.html" title="Tables">Tables</a></li>
+<li><a href="../../Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../../Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../../Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../../TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../../Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../../Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../../Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../../Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../../Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../../Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../../Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../../Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../../Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../../Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../../International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../../Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../../Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../../Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../../French.html" title="French">French</a></li>
+<li><a href="../../German.html" title="German">German</a></li>
+<li><a href="../../Greek.html" title="Greek">Greek</a></li>
+<li><a href="../../Italian.html" title="Italian">Italian</a></li>
+<li><a href="../../Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../../Korean.html" title="Korean">Korean</a></li>
+<li><a href="../../Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../../Russian.html" title="Russian">Russian</a></li>
+<li><a href="../../Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../../Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../../Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../../Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../../Indices.html" title="Indices">Indices</a></li>
+<li><a href="../../Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../../Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../../Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../../Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../../Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../../Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../../Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../../Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="../How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../../Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../../Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../../Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../../Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../../Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../../Counters.html" title="Counters">Counters</a></li>
+<li><a href="../../Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../../Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../../Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../../Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../../Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../../Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../../Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../../XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../../Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../../Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../../Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../../Commands.html" title="Commands">Commands</a></li>
+<li><a href="../../Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../../Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../../Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../../Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../../Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../../Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../../Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../../CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../../Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../../Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../../Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../../Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../../Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../../Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../../Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../../Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../../Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../../Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="../../Tutorials.html">Tutorials</a></li><li><a href="../../Inserting_Images.html">How to insert images</a></li><li><a href="../../Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="expandafter_work__The_meaning_of_expansion.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==" src="../../../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="GZGhEOITPS5Hbm1OQcd+2g==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_The_meaning_of_expansion by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:10:49 GMT -->
+</html>

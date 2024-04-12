@@ -1,0 +1,496 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:11:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>How does \expandafter work: From basic principles to exploring TeX's source code - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="How does \expandafter work: From basic principles to exploring TeX's source code"><meta name="og:title" content="How does \expandafter work: From basic principles to exploring TeX's source code"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="expandafter_work__From_basic_principles_to_exploring_TeX%27s_source_code.html"><link rel="stylesheet" href="../../../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="expandafter_work__From_basic_principles_to_exploring_TeX%27s_source_code.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" hreflang="ja"><link rel="preload" href="../../../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="FKhRmPZp1U7uwSkGH88wFw=="><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="EMFN4BZc-b04Y0JxjNzBiIvQTr1jbc3kZG_0"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>How does \expandafter work: From basic principles to exploring TeX's source code</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#And_so,_to_\expandafter"><span class="tocnumber">2</span> <span class="toctext">And so, to \expandafter</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Introduction_to_using_\expandafter"><span class="tocnumber">2.1</span> <span class="toctext">Introduction to using \expandafter</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#How_can_we_fix_this?_\expandafter_to_the_rescue"><span class="tocnumber">2.2</span> <span class="toctext">How can we fix this? \expandafter to the rescue</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#\expandafter_and_internal_token_lists"><span class="tocnumber">2.3</span> <span class="toctext">\expandafter and internal token lists</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#\expandafter_and_internal_token_lists:_example_2"><span class="tocnumber">2.3.1</span> <span class="toctext">\expandafter and internal token lists: example 2</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#How_\expandafter_really_works"><span class="tocnumber">3</span> <span class="toctext">How \expandafter really works</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#TeX’s_love_for_global_variables"><span class="tocnumber">3.1</span> <span class="toctext">TeX’s love for global variables</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#The_function_backinput()"><span class="tocnumber">3.1.1</span> <span class="toctext">The function backinput()</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Processing_macros:_the_macrocall()_function"><span class="tocnumber">3.2</span> <span class="toctext">Processing macros: the macrocall() function</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Macro_expansion_vs._macro_execution"><span class="tocnumber">3.2.1</span> <span class="toctext">Macro expansion vs. macro execution</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Macro_expansion"><span class="tocnumber">3.2.2</span> <span class="toctext">Macro expansion</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<p class="mw-empty-elt">
+</p><div class="btn-group">
+<a class="btn btn-default" href="expandafter_work__An_introduction_to_TeX_tokens.html"> Part 1 </a>
+<a class="btn btn-default" href="expandafter_work__The_meaning_of_expansion.html"> Part 2 </a>
+<a class="btn btn-default" href="expandafter_work__TeX_uses_temporary_token_lists.html"> Part 3 </a>
+<a class="btn btn-default" href="expandafter_work__From_basic_principles_to_exploring_TeX%27s_source_code.html"> Part 4 </a>
+<a class="btn btn-default" href="expandafter_work__A_detailed_macro_case_study.html"> Part 5 </a>
+<a class="btn btn-default" href="expandafter_work__A_detailed_study_of_consecutive_/expandafter_commands.html"> Part 6 </a>
+</div>
+
+<p class="mw-empty-elt"></p>
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>We have now covered the background topics necessary for a full exploration of <code>\expandafter</code>:</p> 
+<ul>
+<li>the basics of TeX tokens and how they are calculated;</li>
+<li>principles behind TeX’s expansion process;</li>
+<li>TeX’s use/creation of temporary token lists during document processing;</li>
+<li>how TeX uses and “juggles” multiple input sources (including temporary token lists).</li>
+</ul>
+<p>In this article we’ll bring these topics/concepts together to explain the mechanisms  underlying TeX’s <code>\expandafter</code> command: in short, how it works.</p>
+<h2><span id="And_so.2C_to_.5Cexpandafter"></span><span class="mw-headline" id="And_so,_to_\expandafter">And so, to <code>\expandafter</code></span></h2>
+<p>The idea behind <code>\expandafter</code> is to force expansion of a command (token) before TeX would normally do so. Given two tokens, \(\mathrm{T_1}\) and \(\mathrm{T_2}\) the action of <code>\expandafter</code> \(\mathrm{T_1T_2}\) results in TeX processing \(\mathrm{T_1}\text{&lt;}\)expansion of \(\mathrm{T_2}\text{&gt;}\), where \(\text{&lt;}\dots\text{&gt;}\) indicates a list of tokens. TeX expands \(\mathrm{T_2}\) ahead of time so that token \(\mathrm{T_1}\) (e.g., a primitive or a macro) gets to see, or can act upon, the tokens arising from expansion of \(\mathrm{T_2}\). If the token \(\mathrm{T_2}\) represents a non-expandable item such as a non-active character or (most) primitives, the action of <code>\expandafter</code> doesn’t change anything: TeX would continue to process tokens \(\mathrm{T_1T_2}\) in the normal way.</p>
+<h3><span id="Introduction_to_using_.5Cexpandafter"></span><span class="mw-headline" id="Introduction_to_using_\expandafter">Introduction to using <code>\expandafter</code></span></h3>
+<p>If you’ve not used <code>\expandafter</code>, here is an example using it with the primitive <code>\uppercase{...}</code>. Suppose that we wanted to typeset the name of our main <code>.tex</code> input file but in upper-case letters. We might know the following TeX primitive commands:</p>
+<ul>
+<li><code>\uppercase</code>: does as its name suggests, converts character tokens to their upper-case equivalent (where that exists);</li>
+<li><code>\jobname</code>: as we have seen, expands to give the name of the main <code>.tex</code> file.</li>
+</ul>
+<p>Assuming our TeX file is called <code>mycode.tex</code> we might reasonably expect <code>\uppercase{\jobname}</code> to typeset <code>MYCODE</code>. But no, it typesets <code>mycode</code> as lower-case. What went “wrong”?</p>
+<p>If we write the general use of <code>\uppercase</code> as</p>
+<p class="mw-empty-elt"></p><pre>\uppercase{&lt;token list&gt;}
+</pre><p class="mw-empty-elt"></p>
+<p>we can say that <code>\uppercase</code> looks through <code>&lt;token list&gt;</code> and will only operate (change case) on <em>character tokens</em> it detects within the <code>&lt;token list&gt;</code>: all non-character tokens are <em>ignored</em> because <code>\uppercase</code> will not “look into” (expand) non-character tokens to see what they contain or represent. Because a token is simply an integer value, all <code>\uppercase</code> has to do is look through the token list to check if the numeric value of each token in <code>&lt;token list&gt;</code> falls within the range of values indicating a character token. Incidentally, <code>\uppercase</code> will also <em>change the case of active characters</em> to create an upper-case active character which, because it is still active, will also need to have been defined, otherwise TeX will generate an error: <code>Undefined control sequence</code>, but we digress...</p>  
+<p>For example, even if we define a macro that is just text</p>
+<p class="mw-empty-elt">
+</p><pre>\def\foo{some lower-case text}</pre>
+<p class="mw-empty-elt"></p>
+<p>then <code>\uppercase{\foo}</code> still typesets <code>some lower-case text</code> and not <code>SOME LOWER-CASE TEXT</code> as we’d hope, simply because the action of <code>\uppercase</code> does not try to determine what <code>\foo</code> represents: it sees <code>\foo</code> as a command token and ignores it, as it did with <code>\jobname</code>.</p>
+<h3><span id="How_can_we_fix_this.3F_.5Cexpandafter_to_the_rescue"></span><span class="mw-headline" id="How_can_we_fix_this?_\expandafter_to_the_rescue">How can we fix this? <code>\expandafter</code> to the rescue</span></h3>
+<p>To typeset an upper-case version of the file name, we need to modify <code>\uppercase{\jobname}</code> by forcing TeX to replace <code>\jobname</code> with its expansion (a sequence of character tokens) <em>before</em> <code>\uppercase</code> gets to work. Once again, expansion is being used to remove the <code>\jobname</code> token (command) and replace it with the result of its expansion (a token list containing character tokens). So, if we write</p> 
+<p class="mw-empty-elt">
+</p><pre>\uppercase\expandafter{\jobname}</pre>
+<p class="mw-empty-elt"></p>
+<p>then it works: <code>MYCODE</code> would be typeset. What happens is that TeX starts to process <code>\uppercase</code> and immediately checks for the mandatory opening brace character (<code>{</code>); however, TeX detects an <code>\expandafter</code> command which causes it to temporarily “divert its attention” to processing <code>\expandafter{\jobname}</code>.</p> 
+<p>If we compare</p>
+<p><code>\expandafter</code> \(\mathrm{T_1T_2}\)</p>
+<p>with our example</p>
+<p><code>\expandafter{\jobname}</code></p>
+<p>we can see</p>
+<ul>
+<li>\(\mathrm{T_1} =\space \)<code>{</code><sub>token</sub></li>
+<li>\(\mathrm{T_2} =\space \)<code>\jobname</code><sub>token</sub></li>
+</ul>
+<p>Where <code>{</code><sub>token</sub> and <code>\jobname</code><sub>token</sub> refer to the token values calculated by TeX—the subscript notation <sub>token</sub> is used to remind ourselves that TeX works in the world of integer tokens.</p>
+<p>Writing <code>\uppercase\expandafter{\jobname}</code> works because, in outline (details to follow), <code>\expandafter</code> causes TeX to perform the following tasks:</p>
+<ol>
+<li>read and save the opening <code>{</code><sub>token</sub>;</li>
+<li>read the next token: <code>\jobname</code><sub>token</sub>. TeX recognizes that <code>\jobname</code><sub>token</sub> represents an expandable command and expands it. <code>\jobname</code><sub>token</sub> is replaced with its expansion—a series of character tokens;</li>
+<li>after expanding the <code>\jobname</code> command, TeX puts the <code>{</code>\(_\mathrm{token}\) “back into the input” and uses the token list arising from expansion of <code>\jobname</code> so that TeX will read <code>\uppercase{</code><sub>token</sub><code>&lt;expansion of \jobname&gt;</code><sub>token list (characters)</sub><code>}</code>, and this produces our desired result.</li>
+</ol>
+<p>The following diagram shows how TeX processes <code>\uppercase\expandafter{\jobname}</code>—read the graphic from the bottom and work upwards to follow the process flow.</p>
+<p class="mw-empty-elt">
+</p><p><img src="https://images.ctfassets.net/nrgyaltdicpt/4jjCBxCLwJGXMmJAodk00K/7b5096d5b14b6e8364c55f24d4357d1c/expandafter-uppercase-plain.svg" style="border-width:2px;border-color:#4f9c45;padding:5px;border-style:solid" alt="How \expandafter works" /></p>
+
+<p class="mw-empty-elt"></p>
+<p>The following notes explain the various stages of processing.</p>
+<ol>
+    <li> TeX starts to process <code>\uppercase</code> and checks for the mandatory opening brace character (<code>{</code>) but detects an <code>\expandafter</code> command.</li>
+        <li>If we compare <code>\expandafter</code> \(\mathrm{T_1T_2}\) to our input of  <code>\expandafter{\jobname}</code> we can see \(\mathrm{T_1} =\ \)<code>{</code><sub>token</sub> and \(\mathrm{T_2} =\ \)<code>\jobname</code><sub>token</sub>. Note that here we will use the subscript <sub>token</sub> to indicate TeX is processing integer token values.</li>
+        <li><code>\expandafter</code> reads, then temporarily saves, the <code>{</code><sub>token</sub> by storing that integer token value in an internal variable. Later, TeX will re-insert that token back into the input, after processing the <code>\jobname</code> command.</li>
+        <li><code>\expandafter</code> reads the next token, <code>\jobname</code><sub>token</sub>, and expands the <code>\jobname</code> command. </li>
+        <li>The expansion of <code>\jobname</code> creates a temporary token list which contains a sequence of character tokens representing the <code>.tex</code> file name. Note that all character tokens generated by <code>\jobname</code> are calculated using category code 12.</li>
+        <li>Once <code>\jobname</code> has been expanded, TeX re-inserts the token saved in step 3  (<code>{</code><sub>token</sub>) and puts it back into the input. TeX does that by creating another token list containing the <em>single</em> <code>{</code><sub>token</sub></li>
+        <li>TeX has now finished processing <code>\expandafter</code>, resulting in two token lists ready to be used as sources of TeX input. TeX now reverts back to processing <code>\uppercase</code> but has configured its input such that the two token lists created by <code>\expandafter</code> become the source of tokens for <code>\uppercase</code>—which now sees <code>\uppercase{</code><sub>token</sub><code>&lt;expansion of \jobname&gt;</code><sub>token list (characters)</sub><code>}</code>. <code>\uppercase</code> now sees a sequence of character tokens and can produce our desired result.</li>
+        <li>After reading all the character tokens produced by <code>\jobname</code>, TeX reverts back to obtaining tokens from its previous input source (our <code>.tex</code> file) from where it will read the next token: the closing <code>}</code> required to terminate the list of tokens to be processed by <code>\uppercase</code>. </li>
+</ol>
+<h3><span id=".5Cexpandafter_and_internal_token_lists"></span><span class="mw-headline" id="\expandafter_and_internal_token_lists"><code>\expandafter</code> and internal token lists</span></h3>
+<p>Temporary token lists are a <em>vital</em> element of <code>\expandafter</code>’s processing behaviour: understanding the use and existence of those token lists can help to clarify how <code>\expandafter</code> achieves its results, particularly when trying to write, or understand, macros which make use of multiple consecutive <code>\expandafter</code> commands to achieve more complex forms of token processing: <code>\expandafter\expandafter\expandafter...</code></p>
+<p>Another key element of <code>\expandafter</code>’s behaviour, especially with multiple consecutive <code>\expandafter</code> commands, is the use of <em>recursion</em> (inside the TeX software itself)—a topic we will consider later in this article.</p>
+<p>To further assist our understanding of temporary token lists we’ll look at one more example of <code>\expandafter</code>, this time with the <code>\the</code> command.</p>
+<h4><span id=".5Cexpandafter_and_internal_token_lists:_example_2"></span><span class="mw-headline" id="\expandafter_and_internal_token_lists:_example_2"><code>\expandafter</code> and internal token lists: example 2</span></h4>
+<p>In this example we’ll see how <code>\expandafter</code> can be used to influence tokens stored in a token register via the <code>\toks</code> command. Here are the TeX primitives we’ll be using:</p>
+<ul>
+<li><code><strong>\count</strong> <em>register</em>=<em>number</em></code>: a TeX primitive used to store the value <code><em>number</em></code> in the TeX location <code><em>register</em></code>;</li>
+<li><code><strong>\toks</strong> <em>register</em>={<em>token list</em>}</code>: a TeX primitive used to store <code><em>token list</em></code> into the token register location <code><em>register</em></code>—saving a sequence of tokens for later use;</li>
+<li><code><strong>\the</strong> <em>token</em></code>: an expandable TeX primitive command which processes <code><em>token</em></code>, although the exact results depend on the nature of the <code><em>token</em></code> being processed. <code>\the</code> has a number of uses: among those is typesetting the value stored in a TeX parameter or variable (e.g., a register). Other uses of <code>\the</code> include inserting a copy of tokens stored in a token register. Here, we’ll use <code>\the</code> to typeset the value stored in a <code>\count</code> register.</li>
+</ul>
+<p>We’ll start with the following TeX code to store the value <code>12345</code> in TeX’s <code>\count</code> register <code>99</code>:</p>
+<p class="mw-empty-elt"></p><pre>\count99=12345
+</pre><p class="mw-empty-elt"></p>
+<p>If we want to typeset the value stored in <code>\count99</code> we can use <code>\the\count99</code> (or <code>\number\count99</code>). </p>
+<p>Next we’ll use the <code>\toks</code> command to store some tokens in token register <code>99</code>:</p>
+<p class="mw-empty-elt">
+</p><pre>\toks99={\the\count99 }</pre>
+<p class="mw-empty-elt"></p>
+<p>The list of tokens stored in token register <code>99</code> would contain the following:</p>
+<p class="mw-empty-elt">
+</p><div style="overflow:hidden;overflow-x:auto;word-break:normal">
+    <table style="background:white;max-width:100%">
+      <colgroup>
+        <col span="1" style="width:25%"></col>
+        <col span="1" style="width:75%"></col>
+      </colgroup>
+      <tbody>
+        <tr>
+         <td><strong>TeX token value</strong>
+         </td>
+         <td><strong>Item represented</strong>
+         </td>
+        </tr>
+    <tr><td>5382</td><td><code>\the </code></td></tr>
+    <tr><td>7885</td><td><code>\count </code></td></tr>
+    <tr><td>3129</td><td><code>9</code> (character code 57 with category code 12) resulting in a token value of \(256 \times 12 + 57 = 3129\) </td></tr>
+    <tr><td>3129</td><td><code>9</code> (character code 57 with category code 12),  resulting in a token value of \(256 \times 12 + 57 = 3129\) </td></tr>
+    <tr><td>2592</td><td><code>&lt;space&gt;</code> (character code 32 with category code 10), resulting in a token value of \(256 \times 10 + 32 = 2592\) </td></tr>
+</tbody>
+</table>
+</div>
+ 
+<p class="mw-empty-elt"></p>
+<p>Note that the token list created by <code>\toks99</code> does <em>not</em> contain the actual data value stored in <code>\count99</code> because the <code>\toks</code> command does not perform expansion: it simply creates tokens and stores them. In our example, <code>\the</code> is not expanded so it doesn’t process <code>\count99</code>; here <code>\the</code> is merely turned into a token (value 5382) and stored in the token list.</p>
+<p>If we want the <code>\toks99</code> token list to contain tokens representing data stored in <code>\count99</code> we will need some way to create those tokens (make them available) so that the <code>\toks</code> command can access them. And of course <code>\expandafter</code> can do this for us. If we write:</p>
+<p class="mw-empty-elt"></p><pre>        \toks99=\expandafter{\the\count99 }
+</pre><p class="mw-empty-elt"></p>
+<p>the action/processing of the <code>\toks</code> command will be “put on hold” whilst <code>\expandafter</code> causes (forces) expansion of <code>\the</code> which, in turn, acts on <code>\count</code> to generate a temporary token list containing character tokens representing data stored in <code>\count99</code>. A small but important point is the <code>&lt;space&gt;</code> character after the digits <code>99</code>: that <code>&lt;space&gt;</code> character acts to terminate TeX’s scanning process when it is searching for a numeric quantity.</p>
+<p>Here, the action of <code>\expandafter</code> is very similar to the <code>\jobname</code> example.</p>
+<ol>
+    <li>Read and save the opening <code>{</code><sub>token</sub>.</li>
+    <li>Read the next token, <code>\the</code><sub>token</sub>, which represents an expandable command, so TeX expands it. <code>\expandafter</code> forces expansion of <code>\the</code> which then operates on <code>\count99</code> to convert data stored in <code>\count</code> register <code>99</code> (the number 12345) into a temporary token list. That list will contain character tokens representing the digits <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code> and <code>5</code>—character tokens with category code 12.</li>
+    <li>After expanding and processing <code>\the</code>, TeX puts the <code>{</code><sub>token</sub> “back into the input” and uses the token list arising from <code>\the\count99</code> so that TeX will read <code>\toks99={</code><sub>token</sub><code>&lt;expansion of \the\count99&gt;</code><sub>token list (characters)</sub><code>}</code> and this produces our desired result.</li>
+</ol>
+<p>This sequence of events is summarized in the following diagram—read the graphic from the bottom and work upwards to follow the process flow.</p>
+<p class="mw-empty-elt">
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/1JK0D8SBxUPFbV6PZIxHOd/77864482b30ee4db3f6fc06274424fbb/expandafter-thecount-plain.svg" style="border-width:2px;border-color:#4f9c45;padding:5px;border-style:solid" alt="How \expandafter works" /></p>
+
+<p class="mw-empty-elt"></p>
+<ol>
+    <li>TeX starts to process <code>\toks</code>; it sees the optional <code>=</code> sign, then checks for the mandatory opening brace character (<code>{</code>, or any character with category code 1) used to indicate the start of a token list. However, TeX detects an <code>\expandafter</code> command and proceeds to execute that instead.</li>
+        <li>If we compare <code>\expandafter</code> \(\mathrm{T_1T_2}\) to our input of  <code>\expandafter{\the\count99 }</code> we can see \(\mathrm{T_1} =\) <code>{</code><sub>token</sub> and \(\mathrm{T_2} =\) <code>\the<sub>token</sub></code>.</li>
+        <li><code>\expandafter</code> reads, then temporarily saves, the <code>{</code><sub>token</sub> (TeX temporarily stores that integer token value in an internal variable). Later, TeX will re-insert that token back into the input, after processing <code>\the</code></li>
+        <li><code>\expandafter</code> reads the next token, <code>\the</code><sub>token</sub> and expands it. </li>
+        <li>The expansion of <code>\the</code> creates a temporary token list from processing <code>\count99</code>—that token list contains a sequence of character tokens which represent the data value stored in the <code>\count</code> register <code>99</code>.</li>
+        <li>Once <code>\the</code> has been expanded, TeX re-inserts the token saved in step 3  (<code>{</code><sub>token</sub>) and puts that token back into the input. TeX does that by creating another token list containing the <em>single</em> token <code>{</code><sub>token</sub>.</li>
+        <li>TeX has now finished processing <code>\expandafter</code> and produced two tokens lists ready to be used as the next sources of input. TeX reverts back to processing <code>\toks99=</code> but now TeX has configured its input so that the two token lists created by <code>\expandafter</code> become the source of tokens for <code>\toks</code>—which now sees <code>{</code><sub>token</sub><code>&lt;expansion of \the\count99&gt;</code><sub>token list (characters)</sub><code>}</code>. <code>\toks</code> can now access, and store, the sequence of 5 character tokens which represent the data value (<code>12345</code>) stored in <code>\count99</code>: our desired result.</li>
+        <li>After reading the all character tokens produced by <code>\the\count99</code>, TeX reverts back to obtaining tokens from its previous input source (our <code>.tex</code> file) from where it will read the next token: the closing <code>}</code> required to terminate the list of tokens to be saved by <code>\toks99={...}</code>. </li>
+</ol>
+<h2><span id="How_.5Cexpandafter_really_works"></span><span class="mw-headline" id="How_\expandafter_really_works">How <code>\expandafter</code> <em>really</em> works</span></h2>
+<p>In this section we’ll take a “low level” look inside TeX itself: exploring the source code/functions within TeX which implement the behaviour of <code>\expandafter</code>. Details are expressed in a pseudo-C code but should be accessible to anyone familiar with other programming languages.</p>
+<p class="mw-empty-elt"></p><p>The following annotated diagram explains how TeX implements <code>\expandafter</code> as part of a larger function called <code>expand()</code>—the core function which drives TeX’s expansion processing. Within the section responsible for implementing <code>\expandafter</code> we can see <a href="https://en.wikipedia.org/wiki/Recursion"> <em>recursive</em> behaviour</a> where  another call to the <code>expand()</code> function is used to process the second token read-in, \(\mathrm{T_2}\), for those cases where \(\mathrm{T_2}\) is expandable.</p>
+<p class="mw-empty-elt"></p>
+<p>Although this code appears in Knuth’s TeX engine, the basic principles outlined by this graphic are applicable to all TeX engines.</p>
+<p class="mw-empty-elt">
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/WpD8qCbBvy3VH2xv6KJL7/ddc50fcf312032be094b35dd1d31465c/expandafter-ccode-plain.svg" alt="How \expandafter works inside TeX" />
+</p>
+
+<p class="mw-empty-elt"></p>
+<p>The first task of <code>expand()</code> is to determine if the command to be expanded is a macro or a primitive because macros have a specialized expansion process which is handled by a function called <code>macrocall()</code>.</p>
+<p>If the command to be expanded is a primitive, the <code>expand()</code> function uses the current command code value (stored in global variable <code>curcmd</code>) to identify which particular primitive needs to be processed. We can see these details in a more complete listing of <code>expand()</code>:</p> 
+<p class="mw-empty-elt">
+</p><pre>    <strong style="color:rgb(255, 0, 0)">void expand(void)</strong>
+    {
+    //curcmd is a global variable
+    if(curcmd != macro) // curcmd &lt; 111
+    {  
+      switch(curcmd)
+      {
+        case <strong>\expandafter</strong>: // Process the \expandafter T<sub>1</sub>T<sub>2</sub> command
+        {
+            gettoken(); // Read token T<sub>1</sub>
+            t = curtok; // Save token T<sub>1</sub> in local variable t
+            gettoken(); // Read token T<sub>2</sub>
+            if(curcmd &gt; 100) // Is token T<sub>2</sub> expandable?
+                <strong style="color:rgb(255, 0, 0)">expand();</strong>    // Yes! T<sub>2</sub> is expandable: 
+                             // perform expansion of T<sub>2</sub> by
+                             // making a <strong style="color:rgb(255, 0, 0)">recursive function call</strong> to expand()
+            else
+                backinput(); // T<sub>2</sub> is <em>not</em> expandable: put that token 
+                             // back in the input to be read again (later)
+    
+            curtok = t ;  // Restore global variable curtok to saved value of T<sub>1</sub>
+            backinput() ; // Put token T<sub>1</sub> back in the input
+                          // ahead of the tokens arising from expansion of T<sub>2</sub>
+        }
+        break;
+        
+        // Code to process other expandable commands
+        case <strong>“convert to text” command</strong>: // Any one of \number, \string, \romannumeral, 
+                                        // \meaning, \fontname, \jobname
+                                        // They share the same value of curcmd
+        break;
+
+        case <strong>\noexpand</strong>: // Suppress expansion of the next token
+        ...
+        break;
+
+        case <strong>\csname</strong>:  //Manufacture a control sequence name.
+        ...
+        break;
+
+        case <strong>\the:</strong> // Insert some tokens
+        ....
+        break;
+
+        case <strong>“\if... test command”</strong> : // Process one of TeX’s conditionals:  
+                                      // \if, \ifcat, \ifnum, \ifdim,\ifodd, \ifvmode, 
+                                      // \ifhmode, \ifmmode, \ifinner, \ifvoid, 
+                                      // \ifhbox, \ifvbox, \ifx, \ifeof, \iftrue, \iffalse, 
+                                      // \ifcase, \ifdefined, \ifcsname, \iffontchar
+        ...
+        break;
+
+        case <strong>“\fi or \else”</strong>: // Terminate the current conditional
+        ...
+        break;
+
+        // etc for any other expandable primitive commands supported by
+        // the TeX engine
+
+        }
+    
+    }else // Not an expandable primitive: it is a macro
+        {
+             macrocall()
+        }
+        //... more code removed
+    }
+</pre>
+
+<p class="mw-empty-elt"></p>
+<h3><span id="TeX.E2.80.99s_love_for_global_variables"></span><span class="mw-headline" id="TeX’s_love_for_global_variables">TeX’s love for global variables</span></h3>
+<p class="mw-empty-elt"></p><p>Perhaps reflecting its age and the era in which it was designed, TeX’s source code makes extensive use of so-called <a href="https://en.wikipedia.org/wiki/Global_variable">global variables</a>—in fact there are hundreds of them. By their very nature, global variables can be changed/modified from anywhere within the TeX source code—which, for Knuth’s TeX, is a single monolithic file containing over 25,000 lines of code and hundreds of functions. Understanding how TeX works is not always an easy task...</p> 
+<p class="mw-empty-elt"></p>
+<p>To process <code>\expandafter</code>, TeX reads tokens from its current input using a function called <code>gettoken()</code> whose action is to create a token and set the value of several key global variables used throughout TeX’s source code. Two such variables, updated by the action of <code>gettoken()</code>, are used in the implementation of <code>\expandafter</code>:</p>
+<ul>
+<li><code>curtok</code>: (current token) the integer value of the token just read in;</li>
+<li><code>curcmd</code>: (current command code) the command code of the command (or character) represented by the token <code>curtok</code>.</li>
+</ul>
+<p>When processing <code>\expandafter</code>\(\mathrm{T_1T_2}\) TeX reads token \(\mathrm{T_1}\) and temporarily saves its value (an integer) in a local variable called <code>t</code>. TeX then reads \(\mathrm{T_2}\) and checks to see if that token represents an expandable command—by checking if its command code (<code>curcmd</code>) is &gt; 100. If so, TeX needs to expand the command represented by \(\mathrm{T_2}\) and makes another call to the function <code>expand()</code>: this is an example of <em>recursion</em> because the <code>expand()</code> function is calling itself. An awareness of the recursive nature of expansion, especially when using <code>\expandafter</code>, can help with understanding how multiple consecutive <code>\expandafter</code> commands—i.e., <code>\expandafter\expandafter\expandafter...</code> achieve their effects.</p>
+<p>If token \(\mathrm{T_2}\) is expandable, the expansion takes place and when the recursive call to <code>expand()</code> returns, code within the implementation of <code>\expandafter</code> re-inserts token \(\mathrm{T_1}\) back into the input. The global variable <code>curtok</code> is re-assigned to the value of the saved token—stored in local variable <code>t</code>, which is the value of token \(\mathrm{T_1}\)—and a call is made to the function <code>backinput().</code></p>
+<h4><span id="The_function_backinput.28.29"></span><span class="mw-headline" id="The_function_backinput()">The function <code>backinput()</code></span></h4>
+<p>As its name suggests, this function puts a token “back into the input”. To do that, TeX uses the current value of the global variable <code>curtok</code> to create a token list which contains a single token (whose integer value is provided by <code>curtok</code>). TeX also arranges its input handling to ensure that single-token list will, at the appropriate time, be re-read by TeX as part of its subsequent input processing. Note carefully that the token \(\mathrm{T_1}\) is re-inserted <em>after the expansion is finished</em>, which ensures TeX will read that re-inserted token <em>before</em> it reads the tokens arising from expansion of \(\mathrm{T_2}\).</p>
+<h3><span id="Processing_macros:_the_macrocall.28.29_function"></span><span class="mw-headline" id="Processing_macros:_the_macrocall()_function">Processing macros: the <code>macrocall() function </code></span></h3>
+<p>As previously discussed, all macros, together with some primitive commands, are expandable and all expansion processing goes through the <code>expand()</code> function. However, <code>expand()</code> is careful to use the <code>curcmd</code> (current command) value to distinguish between expandable primitives and macros because the macro-expansion process is handled by a dedicated function called <code>macrocall()</code>. Macros need a specialized expansion process because macro arguments, and delimiter tokens, have to be scanned for in a very particular and rigorous way; consequently, that process is delegated to a function designed to do that: <code>macrocall()</code>.</p> 
+<h4><span class="mw-headline" id="Macro_expansion_vs._macro_execution">Macro <em>expansion</em> vs. macro <em>execution</em></span></h4>
+<p>Macro <em>expansion</em> is not the same process as macro <em>execution</em>: expansion of a macro is the pre-execution process TeX performs to get the macro <em>ready for execution</em>. The “execution” of a macro happens when TeX is actively reading and processing tokens contained in that macro’s definition (replacement text) and its arguments (parameters). </p>
+<h4><span class="mw-headline" id="Macro_expansion">Macro expansion</span></h4>
+<p class="mw-empty-elt">
+</p><p>To expand a macro TeX first checks if the macro takes arguments; if so, <code>macrocall()</code> very carefully scans the input looking for tokens destined to become the macro’s arguments. That process includes checking the user’s input for any delimiter tokens used in the macro’s original definition—the pattern of tokens used in a macro call must exactly match the pattern of tokens contained in the stored definition. However, tokens used as delimiters are simply discarded by TeX: they are, in effect, just a form of “punctuation” TeX uses to determine the actual tokens destined to become macro’s arguments—i.e., tokens the user intends for processing by the macro. For more information on delimiter tokens, see <a href="../../How_TeX_macros_actually_work__Part_4.html">How TeX macros actually work</a>.</p>
+
+<p class="mw-empty-elt"></p>
+<p>For each parameter (<code>#1, #2...#9</code>) present in the macro’s original definition, TeX scans the actual macro call to identify which tokens provided by the user are destined for each parameter (i.e., form the macro’s arguments). That process produces one or more mini token lists: one for each macro argument.</p>
+<p>After any macro arguments have been detected, and their token lists have been prepared, TeX retrieves the macro’s definition (replacement text) stored in its memory and arranges its input processing such that whenever TeX is ready to read/process more tokens, it will read them from the macro’s replacement text, thus executing the macro. At the appropriate point, during macro execution, token lists representing the macro arguments will be fed into the correct location within the macro’s replacement text.</p> 
+<p>Once again, expansion of a macro command means <em>removing</em> that macro command (token) from the input and <em>replacing</em> it with the token list stored as the macro’s replacement text.</p>
+<p class="mw-empty-elt">
+</p><p>For an in-depth look at TeX’s macro-processing see the six-part article series <a href="../../A_six-part_series__How_do_TeX_macros_actually_work_.html">How do TeX macros actually work?</a> </p>
+
+
+<div class="btn-group">
+<a class="btn btn-default" href="expandafter_work__An_introduction_to_TeX_tokens.html"> Part 1 </a>
+<a class="btn btn-default" href="expandafter_work__The_meaning_of_expansion.html"> Part 2 </a>
+<a class="btn btn-default" href="expandafter_work__TeX_uses_temporary_token_lists.html"> Part 3 </a>
+<a class="btn btn-default" href="expandafter_work__From_basic_principles_to_exploring_TeX%27s_source_code.html"> Part 4 </a>
+<a class="btn btn-default" href="expandafter_work__A_detailed_macro_case_study.html"> Part 5 </a>
+<a class="btn btn-default" href="expandafter_work__A_detailed_study_of_consecutive_/expandafter_commands.html"> Part 6 </a>
+</div>
+
+<p class="mw-empty-elt"></p>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../../Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../../Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../../Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../../Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../../Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../../Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../../Lists.html" title="Lists">Lists</a></li>
+<li><a href="../../Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../../Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../../Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../../Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../../Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../../Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../../Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../../Operators.html" title="Operators">Operators</a></li>
+<li><a href="../../Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../../Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../../Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../../List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../../Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../../Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../../Tables.html" title="Tables">Tables</a></li>
+<li><a href="../../Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../../Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../../Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../../TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../../Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../../Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../../Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../../Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../../Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../../Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../../Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../../Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../../Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../../Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../../International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../../Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../../Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../../Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../../French.html" title="French">French</a></li>
+<li><a href="../../German.html" title="German">German</a></li>
+<li><a href="../../Greek.html" title="Greek">Greek</a></li>
+<li><a href="../../Italian.html" title="Italian">Italian</a></li>
+<li><a href="../../Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../../Korean.html" title="Korean">Korean</a></li>
+<li><a href="../../Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../../Russian.html" title="Russian">Russian</a></li>
+<li><a href="../../Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../../Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../../Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../../Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../../Indices.html" title="Indices">Indices</a></li>
+<li><a href="../../Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../../Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../../Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../../Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../../Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../../Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../../Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../../Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="../How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../../Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../../Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../../Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../../Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../../Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../../Counters.html" title="Counters">Counters</a></li>
+<li><a href="../../Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../../Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../../Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../../Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../../Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../../Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../../Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../../XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../../Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../../Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../../Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../../Commands.html" title="Commands">Commands</a></li>
+<li><a href="../../Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../../Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../../Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../../Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../../Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../../Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../../Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../../CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../../Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../../Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../../Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../../Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../../Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../../Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../../Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../../Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../../Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../../Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="../../Tutorials.html">Tutorials</a></li><li><a href="../../Inserting_Images.html">How to insert images</a></li><li><a href="../../Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="expandafter_work__From_basic_principles_to_exploring_TeX%27s_source_code.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==" src="../../../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="FKhRmPZp1U7uwSkGH88wFw==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/How_does_%5Cexpandafter_work%3A_From_basic_principles_to_exploring_TeX%27s_source_code by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:11:17 GMT -->
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:10:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Positioning images and tables - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Positioning images and tables"><meta name="og:title" content="Positioning images and tables"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="Positioning_images_and_tables%23The_figure_environment.html"><link rel="stylesheet" href="../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Positioning_images_and_tables%23The_figure_environment.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" hreflang="ja"><link rel="preload" href="../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="Y08yB1vFQ4vKyLGBbRGZ1g=="><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="kPgdpZqr-jRd1lXMtx3tMDMdrqS7Hqijqe38"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Positioning_images_and_tables%23The_figure_environment&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Positioning_images_and_tables%23The_figure_environment&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Positioning images and tables</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><p><span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> is an editing tool that takes care of the format so you only have to worry about the contents of your document; nevertheless, better control of floating elements is sometimes necessary. This article explains how to position images and tables in a <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> document.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Positioning_images"><span class="tocnumber">2</span> <span class="toctext">Positioning images</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Basic_positioning"><span class="tocnumber">2.1</span> <span class="toctext">Basic positioning</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#The_figure_environment"><span class="tocnumber">2.2</span> <span class="toctext">The figure environment</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Multiple_images_in_one_figure"><span class="tocnumber">2.3</span> <span class="toctext">Multiple images in one figure</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Wrapping_text_around_a_figure"><span class="tocnumber">2.4</span> <span class="toctext">Wrapping text around a figure</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Positioning_tables"><span class="tocnumber">3</span> <span class="toctext">Positioning tables</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Basic_positioning_2"><span class="tocnumber">3.1</span> <span class="toctext">Basic positioning</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#The_table_environment"><span class="tocnumber">3.2</span> <span class="toctext">The table environment</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Wrapping_text_around_a_table"><span class="tocnumber">3.3</span> <span class="toctext">Wrapping text around a table</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Reference_guide"><span class="tocnumber">4</span> <span class="toctext">Reference guide</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Further_reading"><span class="tocnumber">5</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>The default alignment for images and tables is set to <i>left</i>
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+Etiam lobortis facilisis sem. Nullam nec mi et neque pharetra
+sollicitudin.
+
+<span class="k">\includegraphics</span><span class="na">[width=0.5\textwidth]</span><span class="nb">{</span>overleaf-logo<span class="nb">}</span>
+
+Praesent imperdiet mi nec
+ante. Donec ullamcorper, felis non sodales commodo, lectus velit
+ultrices augue, a dignissim nibh lectus placerat pede.
+ Vivamus nunc nunc, molestie ut, ultricies
+vel, semper in, velit. Ut porttitor.
+</pre></div>
+</div>
+<div class="output">
+<p><img alt="PositioningTnIEX1OverleafV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/8/82/PositioningTnIEX1OverleafV2.png" decoding="async" width="300" height="248" />
+</p>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>This is a simple example, for a description of this and other ways to include images in your <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> file see the article <a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a>.
+</p><p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/19663?id=66518064&amp;templateName=Example+of+positioning+tables+and+figures&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2020.1&amp;mainFile="><i class="fa fa-share"></i> Open an example in Overleaf</a>
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Positioning_images">Positioning images</span></h2>
+<h3><span class="mw-headline" id="Basic_positioning">Basic positioning</span></h3>
+<p>To change the default alignment of an image from <i>left</i> or <i>right</i>, an easy option is to add
+</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="na">[export]</span><span class="nb">{</span>adjustbox<span class="nb">}</span>
+</pre></div>
+<p>to the preamble of your file and then use an additional option in your image-importing statement
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+Etiam lobortis facilisis sem. Nullam nec mi et neque 
+pharetra sollicitudin.
+
+<span class="k">\includegraphics</span><span class="na">[width=0.5\textwidth, right]</span><span class="nb">{</span>overleaf-logo<span class="nb">}</span>
+
+Praesent imperdiet mi necante. Donec ullamcorper, felis 
+non sodales commodo, lectus velit ultrices augue,
+a dignissim nibh lectus placerat pede. Vivamus nunc nunc, 
+molestie ut, ultriciesvel, semper in, velit. Ut porttitor.
+</pre></div>
+</div>
+<div class="output">
+<p><img alt="PositioningTnIEx2OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/8/8c/PositioningTnIEx2OLV2.png" decoding="async" width="300" height="220" />
+</p>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>The package <b>adjustbox</b> enables an additional option in the <code>\includegraphics</code> command, in the example the picture is aligned to <code>right</code>. The available values are: <i>left</i>, <i>right</i>, <i>center</i>, <i>outer</i> and <i>inner</i>, the last two are intended for two-sided documents.
+</p><p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/19663?id=66518064&amp;templateName=Example+of+positioning+tables+and+figures&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2020.1&amp;mainFile="><i class="fa fa-share"></i> Open an example in Overleaf</a>
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="The_figure_environment">The figure environment</span></h3>
+<p>The figure environment (see <a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a>) is intended to provide automatic positioning.
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer adipiscing 
+elit. Duis fringilla tristique neque. Sed interdum libero ut metus. 
+Pellentesque placerat. Nam rutrum augue a leo. Morbi sed elit sit amet 
+ante lobortis sollicitudin.
+
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[h]
+<span class="k">\includegraphics</span><span class="na">[width=0.5\textwidth, inner]</span><span class="nb">{</span>overleaf-logo<span class="nb">}</span>
+<span class="k">\caption</span><span class="nb">{</span>Caption<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>fig:figure2<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+</pre></div>
+</div>
+<div class="output">
+<p><img alt="PositioningTnIEx3OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c7/PositioningTnIEx3OLV2.png" decoding="async" width="300" height="227" />
+</p>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>This environment uses a positioning parameter passed inside brackets, it can take the next values:
+</p>
+<table class="wikitable" style="word-break:normal">
+<tbody><tr>
+<th>Parameter
+</th>
+<th>Position
+</th></tr>
+<tr>
+<td><tt>h</tt>
+</td>
+<td>Place the float <i>here</i>, i.e., <i>approximately</i> at the same point it occurs in the source text (however, not <i>exactly</i> at the spot)
+</td></tr>
+<tr>
+<td><tt>t</tt>
+</td>
+<td>Position at the <i>top</i> of the page.
+</td></tr>
+<tr>
+<td><tt>b</tt>
+</td>
+<td>Position at the <i>bottom</i> of the page.
+</td></tr>
+<tr>
+<td><tt>p</tt>
+</td>
+<td>Put on a special <i>page</i> for floats only.
+</td></tr>
+<tr>
+<td><tt>!</tt>
+</td>
+<td>Override internal parameters LaTeX uses for determining "good" float positions.
+</td></tr>
+<tr>
+<td><tt>H</tt>
+</td>
+<td>Places the float at precisely the location in the <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> code. Requires the <code>float</code> package. This is somewhat equivalent to <tt>h!</tt>.
+</td></tr></tbody></table>
+<p>You can put more than one value in the parameter, for instance, if you write <code>[ht]</code> <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> will try to position the figure <b>here</b>, but if it's not possible (the space may be insufficient) then the figure will appear at the <b>top</b> of the page. It is recommended to use more than one positioning parameter to prevent unexpected results.
+</p><p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/19663?id=66518064&amp;templateName=Example+of+positioning+tables+and+figures&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2020.1&amp;mainFile="><i class="fa fa-share"></i> Open an example in Overleaf</a>
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Multiple_images_in_one_figure">Multiple images in one figure</span></h3>
+<p>It is possible to insert several images in one figure, each one with its own reference and label
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis fringilla tristique neque...
+
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[h]
+
+<span class="k">\begin</span><span class="nb">{</span>subfigure<span class="nb">}{</span>0.5<span class="k">\textwidth</span><span class="nb">}</span>
+<span class="k">\includegraphics</span><span class="na">[width=0.9\linewidth, height=6cm]</span><span class="nb">{</span>overleaf-logo<span class="nb">}</span> 
+<span class="k">\caption</span><span class="nb">{</span>Caption1<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>fig:subim1<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>subfigure<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>subfigure<span class="nb">}{</span>0.5<span class="k">\textwidth</span><span class="nb">}</span>
+<span class="k">\includegraphics</span><span class="na">[width=0.9\linewidth, height=6cm]</span><span class="nb">{</span>mesh<span class="nb">}</span>
+<span class="k">\caption</span><span class="nb">{</span>Caption 2<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>fig:subim2<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>subfigure<span class="nb">}</span>
+
+<span class="k">\caption</span><span class="nb">{</span>Caption for this figure with two images<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>fig:image2<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+
+Praesent blandit blandit mauris. Praesent lectus tellus, aliquet aliquam, luctus a, egestas a, turpis. Mauris lacinia lorem sit amet ipsum. Nunc quis urna dictum turpis accumsan semper.
+</pre></div>
+</div>
+<div class="output">
+<p><img alt="PositioningTnIEx4OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/0/0a/PositioningTnIEx4OLV2.png" decoding="async" width="400" height="372" />
+</p>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>First, you must import the package <b>subcaption</b> by adding to the preamble
+</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>subcaption<span class="nb">}</span>
+</pre></div>
+<p>then you can use the environment  <code>\subfigure</code> that takes one parameter, the width of the figure. This environment must be used inside a <code>figure</code> environment, captions and labels can be set to each <i>subfigure</i>.
+</p><p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/19663?id=66518064&amp;templateName=Example+of+positioning+tables+and+figures&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2020.1&amp;mainFile="><i class="fa fa-share"></i> Open an example in Overleaf</a>
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Wrapping_text_around_a_figure">Wrapping text around a figure</span></h3>
+<p>The package <b>wrapfig</b> provides a useful feature, text can be floated around the images.
+</p>
+<p class="mw-empty-elt">
+</p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer 
+adipiscing elit. Duis fringilla tristique neque. Sed interdum 
+libero ut metus. Pellentesque placerat.
+
+<span class="k">\begin</span><span class="nb">{</span>wrapfigure<span class="nb">}{</span>l<span class="nb">}{</span>0.25<span class="k">\textwidth</span><span class="nb">}</span>
+<span class="k">\includegraphics</span><span class="na">[width=0.9\linewidth]</span><span class="nb">{</span>overleaf-logo<span class="nb">}</span> 
+<span class="k">\caption</span><span class="nb">{</span>Caption1<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>fig:wrapfig<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>wrapfigure<span class="nb">}</span>
+
+Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer 
+adipiscing elit. Duis fringilla tristique neque. Sed interdum
+</pre></div>
+</div>
+<div class="output">
+<p><img alt="PositioningTnIEx5OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/d/d2/PositioningTnIEx5OLV2.png" decoding="async" width="400" height="242" />
+</p>
+</div>
+</div>
+<p class="mw-empty-elt"></p>
+<p>First import the package <i>wrapfig</i> by adding
+</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>wrapfig<span class="nb">}</span>
+</pre></div>
+<p>to the preamble.
+</p><p>After that you can use the environment <code>wrapfig</code>, it takes two parameters that are passed inside braces: the alignement that can be <i>l</i>, <i>r</i>, <i>c</i>, <i>i</i> or <i>o</i>; this letters stand for left, right, centre, inner and outer (the last two intended for two-sided documents). The second parameter is the width of the figure, in the example is 0.25 the width of the text. See the <a href="#Reference_guide">reference guide</a> for a list of possible length units.
+</p><p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/19663?id=66518064&amp;templateName=Example+of+positioning+tables+and+figures&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2020.1&amp;mainFile="><i class="fa fa-share"></i> Open an example in Overleaf</a>
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Positioning_tables">Positioning tables</span></h2>
+<p>Options for table positioning are similar to those available for figures.
+</p>
+<h3><span class="mw-headline" id="Basic_positioning_2">Basic positioning</span></h3>
+<p>Default position of the tabular environment is <i>centre</i>.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis fringilla tristique neque. 
+Sed interdum libero ut metus. Pellentesque placerat. Nam rutrum augue a leo. Morbi sed elit sit amet 
+ante lobortis sollicitudin.
+
+<span class="k">\arrayrulecolor</span><span class="na">[HTML]</span><span class="nb">{</span>DB5800<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span> |s|p<span class="nb">{</span>2cm<span class="nb">}</span>|p<span class="nb">{</span>2cm<span class="nb">}</span>|  <span class="nb">}</span>
+<span class="k">\hline</span>
+<span class="k">\rowcolor</span><span class="nb">{</span>lightgray<span class="nb">}</span> <span class="k">\multicolumn</span><span class="nb">{</span>3<span class="nb">}{</span>|c|<span class="nb">}{</span>Country List<span class="nb">}</span> <span class="k">\\</span>
+<span class="k">\hline</span>
+Country Name or Area Name<span class="nb">&amp;</span> ISO ALPHA 2 Code <span class="nb">&amp;</span>ISO ALPHA 3 <span class="k">\\</span>
+<span class="k">\hline</span>
+Afghanistan <span class="nb">&amp;</span> AF <span class="nb">&amp;</span>AFG <span class="k">\\</span>
+<span class="k">\rowcolor</span><span class="nb">{</span>gray<span class="nb">}</span>
+Aland Islands <span class="nb">&amp;</span> AX  <span class="nb">&amp;</span> ALA <span class="k">\\</span>
+Albania    <span class="nb">&amp;</span>AL <span class="nb">&amp;</span> ALB <span class="k">\\</span>
+Algeria   <span class="nb">&amp;</span>DZ <span class="nb">&amp;</span> DZA <span class="k">\\</span>
+American Samoa <span class="nb">&amp;</span> AS <span class="nb">&amp;</span> ASM <span class="k">\\</span>
+Andorra <span class="nb">&amp;</span> AD <span class="nb">&amp;</span> <span class="k">\cellcolor</span><span class="na">[HTML]</span><span class="nb">{</span>AA0044<span class="nb">}</span> AND <span class="k">\\</span>
+Angola <span class="nb">&amp;</span> AO <span class="nb">&amp;</span> AGO <span class="k">\\</span>
+<span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+
+Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer adipiscing 
+elit. Duis fringilla tristique neque. Sed interdum libero ut metus. 
+Pellentesque placerat. Nam rutrum augue a leo. Morbi sed elit sit 
+amet ante lobortis sollicitudin.
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=
+&amp;snip_name=Default+position+of+tabular
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%25Table-related+commands%0A%5Cusepackage%7Barray%7D%0A%5Cusepackage%5Btable%5D%7Bxcolor%7D%0A%5Csetlength%7B%5Carrayrulewidth%7D%7B1mm%7D%0A%5Csetlength%7B%5Ctabcolsep%7D%7B18pt%7D%0A%5Crenewcommand%7B%5Carraystretch%7D%7B1.5%7D%0A%5Cnewcolumntype%7Bs%7D%7B%3E%7B%5Ccolumncolor%5BHTML%5D%7BAAACED%7D%7D+p%7B3cm%7D%7D%0A%0A%5Cbegin%7Bdocument%7D%0APraesent+in+sapien.+Lorem+ipsum+dolor+sit+amet%2C+consectetuer+adipiscing+elit.+Duis+fringilla+tristique+neque.+%0ASed+interdum+libero+ut+metus.+Pellentesque+placerat.+Nam+rutrum+augue+a+leo.+Morbi+sed+elit+sit+amet+%0Aante+lobortis+sollicitudin.%0A%0A%5Carrayrulecolor%5BHTML%5D%7BDB5800%7D%0A%5Cbegin%7Btabular%7D%7B+%7Cs%7Cp%7B2cm%7D%7Cp%7B2cm%7D%7C++%7D%0A%5Chline%0A%5Crowcolor%7Blightgray%7D+%5Cmulticolumn%7B3%7D%7B%7Cc%7C%7D%7BCountry+List%7D+%5C%5C%0A%5Chline%0ACountry+Name+or+Area+Name%26+ISO+ALPHA+2+Code+%26ISO+ALPHA+3+%5C%5C%0A%5Chline%0AAfghanistan+%26+AF+%26AFG+%5C%5C%0A%5Crowcolor%7Bgray%7D%0AAland+Islands+%26+AX++%26+ALA+%5C%5C%0AAlbania++++%26AL+%26+ALB+%5C%5C%0AAlgeria+++%26DZ+%26+DZA+%5C%5C%0AAmerican+Samoa+%26+AS+%26+ASM+%5C%5C%0AAndorra+%26+AD+%26+%5Ccellcolor%5BHTML%5D%7BAA0044%7D+AND+%5C%5C%0AAngola+%26+AO+%26+AGO+%5C%5C%0A%5Chline%0A%5Cend%7Btabular%7D%0A%0APraesent+in+sapien.+Lorem+ipsum+dolor+sit+amet%2C+consectetuer+adipiscing+%0Aelit.+Duis+fringilla+tristique+neque.+Sed+interdum+libero+ut+metus.+%0APellentesque+placerat.+Nam+rutrum+augue+a+leo.+Morbi+sed+elit+sit+%0Aamet+ante+lobortis+sollicitudin.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this code fragment in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+The following graphic shows the result of the code fragment above:
+</p>
+<p><img alt="PositioningTnIEx6.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/7/74/PositioningTnIEx6.png" decoding="async" width="500" height="388" /></p>
+<p>You can also <a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/19663?id=66518064&amp;templateName=Example+of+positioning+tables+and+figures&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2020.1&amp;mainFile="><i class="fa fa-share"></i> open a complete  project example project in Overleaf.</a>
+</p>
+<p>To learn about how to create tables see the <a href="Tables.html" title="Tables">Tables</a> article.
+</p>
+<h3><span class="mw-headline" id="The_table_environment">The table environment</span></h3>
+<p>The table environment is intended to automatically position tables so they fit nicely in the flow of your document.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer 
+adipiscing elit. Duis fringilla tristique neque. Sed interdum 
+libero ut metus. Pellentesque placerat. Nam rutrum augue a leo.
+Morbi sed elit sit amet ante lobortis sollicitudin.
+
+<span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[ht]
+<span class="k">\arrayrulecolor</span><span class="na">[HTML]</span><span class="nb">{</span>DB5800<span class="nb">}</span>
+<span class="k">\centering</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span> |s|p<span class="nb">{</span>2cm<span class="nb">}</span>|p<span class="nb">{</span>2cm<span class="nb">}</span>|  <span class="nb">}</span>
+<span class="k">\hline</span>
+<span class="k">\rowcolor</span><span class="nb">{</span>lightgray<span class="nb">}</span> <span class="k">\multicolumn</span><span class="nb">{</span>3<span class="nb">}{</span>|c|<span class="nb">}{</span>Country List<span class="nb">}</span> <span class="k">\\</span>
+<span class="k">\hline</span>
+Country Name or Area Name<span class="nb">&amp;</span> ISO ALPHA 2 Code <span class="nb">&amp;</span>ISO ALPHA 3 <span class="k">\\</span>
+<span class="k">\hline</span>
+Afghanistan <span class="nb">&amp;</span> AF <span class="nb">&amp;</span>AFG <span class="k">\\</span>
+<span class="k">\rowcolor</span><span class="nb">{</span>gray<span class="nb">}</span>
+Aland Islands <span class="nb">&amp;</span> AX  <span class="nb">&amp;</span> ALA <span class="k">\\</span>
+Albania    <span class="nb">&amp;</span>AL <span class="nb">&amp;</span> ALB <span class="k">\\</span>
+Algeria   <span class="nb">&amp;</span>DZ <span class="nb">&amp;</span> DZA <span class="k">\\</span>
+American Samoa <span class="nb">&amp;</span> AS <span class="nb">&amp;</span> ASM <span class="k">\\</span>
+Andorra <span class="nb">&amp;</span> AD <span class="nb">&amp;</span> <span class="k">\cellcolor</span><span class="na">[HTML]</span><span class="nb">{</span>AA0044<span class="nb">}</span> AND <span class="k">\\</span>
+Angola <span class="nb">&amp;</span> AO <span class="nb">&amp;</span> AGO <span class="k">\\</span>
+<span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\caption</span><span class="nb">{</span>Table inside a floating element<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>table:ta<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+
+Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer 
+adipiscing elit. Duis fringilla tristique neque. Sed interdum 
+libero ut metus. Pellentesque placerat. Nam rutrum augue a leo. 
+Morbi sed elit sit amet ante lobortis sollicitudin.
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=
+&amp;snip_name=Default+position+of+tabular
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%25Table-related+commands%0A%5Cusepackage%7Barray%7D%0A%5Cusepackage%5Btable%5D%7Bxcolor%7D%0A%5Csetlength%7B%5Carrayrulewidth%7D%7B1mm%7D%0A%5Csetlength%7B%5Ctabcolsep%7D%7B18pt%7D%0A%5Crenewcommand%7B%5Carraystretch%7D%7B1.5%7D%0A%5Cnewcolumntype%7Bs%7D%7B%3E%7B%5Ccolumncolor%5BHTML%5D%7BAAACED%7D%7D+p%7B3cm%7D%7D%0A%0A%5Cbegin%7Bdocument%7D%0APraesent+in+sapien.+Lorem+ipsum+dolor+sit+amet%2C+consectetuer+%0Aadipiscing+elit.+Duis+fringilla+tristique+neque.+Sed+interdum+%0Alibero+ut+metus.+Pellentesque+placerat.+Nam+rutrum+augue+a+leo.%0AMorbi+sed+elit+sit+amet+ante+lobortis+sollicitudin.%0A%0A%5Cbegin%7Btable%7D%5Bht%5D%0A%5Carrayrulecolor%5BHTML%5D%7BDB5800%7D%0A%5Ccentering%0A%5Cbegin%7Btabular%7D%7B+%7Cs%7Cp%7B2cm%7D%7Cp%7B2cm%7D%7C++%7D%0A%5Chline%0A%5Crowcolor%7Blightgray%7D+%5Cmulticolumn%7B3%7D%7B%7Cc%7C%7D%7BCountry+List%7D+%5C%5C%0A%5Chline%0ACountry+Name+or+Area+Name%26+ISO+ALPHA+2+Code+%26ISO+ALPHA+3+%5C%5C%0A%5Chline%0AAfghanistan+%26+AF+%26AFG+%5C%5C%0A%5Crowcolor%7Bgray%7D%0AAland+Islands+%26+AX++%26+ALA+%5C%5C%0AAlbania++++%26AL+%26+ALB+%5C%5C%0AAlgeria+++%26DZ+%26+DZA+%5C%5C%0AAmerican+Samoa+%26+AS+%26+ASM+%5C%5C%0AAndorra+%26+AD+%26+%5Ccellcolor%5BHTML%5D%7BAA0044%7D+AND+%5C%5C%0AAngola+%26+AO+%26+AGO+%5C%5C%0A%5Chline%0A%5Cend%7Btabular%7D%0A%5Ccaption%7BTable+inside+a+floating+element%7D%0A%5Clabel%7Btable%3Ata%7D%0A%5Cend%7Btable%7D%0A%0APraesent+in+sapien.+Lorem+ipsum+dolor+sit+amet%2C+consectetuer+%0Aadipiscing+elit.+Duis+fringilla+tristique+neque.+Sed+interdum+%0Alibero+ut+metus.+Pellentesque+placerat.+Nam+rutrum+augue+a+leo.+%0AMorbi+sed+elit+sit+amet+ante+lobortis+sollicitudin.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this code fragment in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+The following graphic shows the output produced by the Overleaf link:
+</p>
+<p><img alt="PositioningTnIEx7.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/2c/PositioningTnIEx7.png" decoding="async" width="500" height="435" /></p>
+<p>A position parameter, inside brackets, can be passed to the <b>table</b> environment. This parameter can take the next values:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Parameter
+</th>
+<th>Position
+</th></tr>
+<tr>
+<td><tt>h</tt>
+</td>
+<td>Place the float <i>here</i>, i.e., <i>approximately</i> at the same point it occurs in the source text (however, not <i>exactly</i> at the spot)
+</td></tr>
+<tr>
+<td><tt>t</tt>
+</td>
+<td>Position at the <i>top</i> of the page.
+</td></tr>
+<tr>
+<td><tt>b</tt>
+</td>
+<td>Position at the <i>bottom</i> of the page.
+</td></tr>
+<tr>
+<td><tt>p</tt>
+</td>
+<td>Put on a special <i>page</i> for floats only.
+</td></tr>
+<tr>
+<td><tt>!</tt>
+</td>
+<td>Override internal parameters LaTeX uses for determining "good" float positions.
+</td></tr>
+<tr>
+<td><tt>H</tt>
+</td>
+<td>Places the float at precisely the location in the <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> code. Requires the <code>float</code> package. This is somewhat equivalent to <tt>h!</tt>.
+</td></tr></tbody></table>
+<p>You can set more than one value in the parameter, for instance, if you write <code>[ht]</code> <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> will try to position the table <b>here</b>, but if it's not possible (the space may be insufficient) then the table will appear at the <b>top</b> of the page. It is recommended to use more than one positioning parameter to prevent unexpected results.
+</p><p>Notice also the command <code>\centering</code>. This changes the alignment of the table within its container to <i>centre</i> instead of the default <i>left</i>.
+</p><p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/19663?id=66518064&amp;templateName=Example+of+positioning+tables+and+figures&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2020.1&amp;mainFile="><i class="fa fa-share"></i> Open an example in Overleaf</a>
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="Wrapping_text_around_a_table">Wrapping text around a table</span></h3>
+<p>If your table don't take all available space and you want to put text next or before it, is possible with the package <code>wrapfig</code>. 
+</p><p>First, import the package
+</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>wrapfig<span class="nb">}</span>
+</pre></div>
+<p>then you can use the environment <code>wraptable</code> which takes two parameters: The first one is the alignment that can be <code>l</code>, <code>r</code>, <code>c</code>, <code>i</code> or <code>o</code> for left, right, centre, inner and outer respectively. The second one is the width of the table container, keep in mind that this latter parameter must be the same as the width of the table, otherwise things may not be properly aligned.
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer 
+adipiscing elit. Duis fringilla tristique neque. Sed interdum 
+libero ut metus. Pellentesque placerat. Nam rutrum augue a leo. 
+Morbi sed elit sit amet ante lobortis sollicitudin.
+
+<span class="k">\begin</span><span class="nb">{</span>wraptable<span class="nb">}{</span>r<span class="nb">}{</span>8cm<span class="nb">}</span>
+<span class="k">\arrayrulecolor</span><span class="na">[HTML]</span><span class="nb">{</span>DB5800<span class="nb">}</span>
+<span class="k">\centering</span>
+<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span> |s|p<span class="nb">{</span>2cm<span class="nb">}</span>|  <span class="nb">}</span>
+<span class="k">\hline</span>
+<span class="k">\rowcolor</span><span class="nb">{</span>lightgray<span class="nb">}</span> <span class="k">\multicolumn</span><span class="nb">{</span>2<span class="nb">}{</span>|c|<span class="nb">}{</span>Country List<span class="nb">}</span> <span class="k">\\</span>
+<span class="k">\hline</span>
+Country Name or Area Name<span class="nb">&amp;</span> ISO ALPHA 2 Code <span class="k">\\</span>
+<span class="k">\hline</span>
+Afghanistan <span class="nb">&amp;</span> AF <span class="k">\\</span>
+<span class="k">\rowcolor</span><span class="nb">{</span>gray<span class="nb">}</span>
+Aland Islands <span class="nb">&amp;</span> AX <span class="k">\\</span>
+Albania    <span class="nb">&amp;</span>AL  <span class="k">\\</span>
+Algeria   <span class="nb">&amp;</span>DZ <span class="k">\\</span>
+American Samoa <span class="nb">&amp;</span> AS <span class="k">\\</span>
+Andorra <span class="nb">&amp;</span> <span class="k">\cellcolor</span><span class="na">[HTML]</span><span class="nb">{</span>AA0044<span class="nb">}</span> AD   <span class="k">\\</span>
+Angola <span class="nb">&amp;</span> AO <span class="k">\\</span>
+<span class="k">\hline</span>
+<span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\caption</span><span class="nb">{</span>Table inside a wraptable<span class="nb">}</span>
+<span class="k">\label</span><span class="nb">{</span>table:ta2<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>wraptable<span class="nb">}</span>
+
+Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer 
+adipiscing elit. Duis fringilla tristique neque. Sed interdum 
+libero ut metus. Pellentesque placerat. Nam rutrum augue a leo. 
+Morbi sed elit sit amet ante lobortis sollicitudin...
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=
+&amp;snip_name=Example+of+wrapfig
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bwrapfig%7D%0A%25Table-related+commands%0A%5Cusepackage%7Barray%7D%0A%5Cusepackage%5Btable%5D%7Bxcolor%7D%0A%5Csetlength%7B%5Carrayrulewidth%7D%7B1mm%7D%0A%5Csetlength%7B%5Ctabcolsep%7D%7B18pt%7D%0A%5Crenewcommand%7B%5Carraystretch%7D%7B1.5%7D%0A%5Cnewcolumntype%7Bs%7D%7B%3E%7B%5Ccolumncolor%5BHTML%5D%7BAAACED%7D%7D+p%7B3cm%7D%7D%0A%0A%5Cbegin%7Bdocument%7D%0APraesent+in+sapien.+Lorem+ipsum+dolor+sit+amet%2C+consectetuer+%0Aadipiscing+elit.+Duis+fringilla+tristique+neque.+Sed+interdum+%0Alibero+ut+metus.+Pellentesque+placerat.+Nam+rutrum+augue+a+leo.+%0AMorbi+sed+elit+sit+amet+ante+lobortis+sollicitudin.%0A%0A%5Cbegin%7Bwraptable%7D%7Br%7D%7B8cm%7D%0A%5Carrayrulecolor%5BHTML%5D%7BDB5800%7D%0A%5Ccentering%0A%5Cbegin%7Btabular%7D%7B+%7Cs%7Cp%7B2cm%7D%7C++%7D%0A%5Chline%0A%5Crowcolor%7Blightgray%7D+%5Cmulticolumn%7B2%7D%7B%7Cc%7C%7D%7BCountry+List%7D+%5C%5C%0A%5Chline%0ACountry+Name+or+Area+Name%26+ISO+ALPHA+2+Code+%5C%5C%0A%5Chline%0AAfghanistan+%26+AF+%5C%5C%0A%5Crowcolor%7Bgray%7D%0AAland+Islands+%26+AX+%5C%5C%0AAlbania++++%26AL++%5C%5C%0AAlgeria+++%26DZ+%5C%5C%0AAmerican+Samoa+%26+AS+%5C%5C%0AAndorra+%26+%5Ccellcolor%5BHTML%5D%7BAA0044%7D+AD+++%5C%5C%0AAngola+%26+AO+%5C%5C%0A%5Chline%0A%5Cend%7Btabular%7D%0A%5Ccaption%7BTable+inside+a+wraptable%7D%0A%5Clabel%7Btable%3Ata2%7D%0A%5Cend%7Bwraptable%7D%0A%0APraesent+in+sapien.+Lorem+ipsum+dolor+sit+amet%2C+consectetuer+%0Aadipiscing+elit.+Duis+fringilla+tristique+neque.+Sed+interdum+%0Alibero+ut+metus.+Pellentesque+placerat.+Nam+rutrum+augue+a+leo.+%0AMorbi+sed+elit+sit+amet+ante+lobortis+sollicitudin...%0APraesent+in+sapien.+Lorem+ipsum+dolor+sit+amet%2C+consectetuer+%0Aadipiscing+elit.+Duis+fringilla+tristique+neque.+Sed+interdum+%0Alibero+ut+metus.+Pellentesque+placerat.+Nam+rutrum+augue+a+leo.+%0AMorbi+sed+elit+sit+amet+ante+lobortis+sollicitudin...%0APraesent+in+sapien.+Lorem+ipsum+dolor+sit+amet%2C+consectetuer+%0Aadipiscing+elit.+Duis+fringilla+tristique+neque.+Sed+interdum+%0Alibero+ut+metus.+Pellentesque+placerat.+Nam+rutrum+augue+a+leo.+%0AMorbi+sed+elit+sit+amet+ante+lobortis+sollicitudin...%0APraesent+in+sapien.+Lorem+ipsum+dolor+sit+amet%2C+consectetuer+%0Aadipiscing+elit.+Duis+fringilla+tristique+neque.+Sed+interdum+%0Alibero+ut+metus.+Pellentesque+placerat.+Nam+rutrum+augue+a+leo.+%0AMorbi+sed+elit+sit+amet+ante+lobortis+sollicitudin...%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>wrapfig</code> code fragment in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+The following graphic shows the output produced by the Overleaf link:
+</p><p><img alt="PositioningTnIEx8OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/18/PositioningTnIEx8OLV2.png" decoding="async" width="500" height="504" />
+</p>
+<h2><span class="mw-headline" id="Reference_guide">Reference guide</span></h2>
+<p><b><span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> units and lengths</b>
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Abbreviation
+</th>
+<th>Definition
+</th></tr>
+<tr>
+<td><tt>pt</tt>
+</td>
+<td>A point, is the default length unit. About 0.3515mm
+</td></tr>
+<tr>
+<td><tt>mm</tt>
+</td>
+<td>a millimetre
+</td></tr>
+<tr>
+<td><tt>cm</tt>
+</td>
+<td>a centimetre
+</td></tr>
+<tr>
+<td><tt>in</tt>
+</td>
+<td>an inch
+</td></tr>
+<tr>
+<td><tt>ex</tt>
+</td>
+<td>the height of an <b>x</b> in the current font
+</td></tr>
+<tr>
+<td><tt>em</tt>
+</td>
+<td>the width of an <b>m</b> in the current font
+</td></tr>
+<tr>
+<td><tt>\columnsep</tt>
+</td>
+<td>distance between columns
+</td></tr>
+<tr>
+<td><tt>\columnwidth</tt>
+</td>
+<td>width of the column
+</td></tr>
+<tr>
+<td><tt>\linewidth</tt>
+</td>
+<td>width of the line in the current environment
+</td></tr>
+<tr>
+<td><tt>\paperwidth</tt>
+</td>
+<td>width of the page
+</td></tr>
+<tr>
+<td><tt>\paperheight</tt>
+</td>
+<td>height of the page
+</td></tr>
+<tr>
+<td><tt>\textwidth</tt>
+</td>
+<td>width of the text
+</td></tr>
+<tr>
+<td><tt>\textheight</tt>
+</td>
+<td>height of the text
+</td></tr>
+<tr>
+<td><tt>\unitlength</tt>
+</td>
+<td>units of length in the <i>picture</i> environment.
+</td></tr>
+</tbody></table>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span></h2>
+<p>For more information see:
+</p>
+<ul><li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of tables and figures</a></li>
+<li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in LaTeX</a></li>
+<li><a rel="nofollow" class="external text" href="http://tug.ctan.org/tex-archive/macros/latex/contrib/floatrow/floatrow.pdf"><b>floatrow</b> package for advanced caption managing of floating elements (tables and figures)</a></li>
+<li><a rel="nofollow" class="external text" href="ftp://ctan.tug.org/tex-archive/macros/latex/contrib/sidecap/sidecap.pdf"><b>sidecap</b> package documentation, for side-figure captions</a></li></ul>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="Operators.html" title="Operators">Operators</a></li>
+<li><a href="Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="French.html" title="French">French</a></li>
+<li><a href="German.html" title="German">German</a></li>
+<li><a href="Greek.html" title="Greek">Greek</a></li>
+<li><a href="Italian.html" title="Italian">Italian</a></li>
+<li><a href="Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="Korean.html" title="Korean">Korean</a></li>
+<li><a href="Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="Russian.html" title="Russian">Russian</a></li>
+<li><a href="Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="Indices.html" title="Indices">Indices</a></li>
+<li><a href="Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="Counters.html" title="Counters">Counters</a></li>
+<li><a href="Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="Tutorials.html">Tutorials</a></li><li><a href="Inserting_Images.html">How to insert images</a></li><li><a href="Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Positioning_images_and_tables%23The_figure_environment.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==" src="../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="Y08yB1vFQ4vKyLGBbRGZ1g==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Positioning_images_and_tables%23The_figure_environment by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:10:49 GMT -->
+</html>

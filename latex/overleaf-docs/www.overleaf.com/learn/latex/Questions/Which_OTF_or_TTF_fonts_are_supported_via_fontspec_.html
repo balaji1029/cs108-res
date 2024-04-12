@@ -1,0 +1,1604 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:58:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Which OTF or TTF fonts are supported via fontspec? - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Which OTF or TTF fonts are supported via fontspec?"><meta name="og:title" content="Which OTF or TTF fonts are supported via fontspec?"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="Which_OTF_or_TTF_fonts_are_supported_via_fontspec_.html"><link rel="stylesheet" href="../../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Which_OTF_or_TTF_fonts_are_supported_via_fontspec_.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" hreflang="ja"><link rel="preload" href="../../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="ZANBbJWYg3y2FWb8cUCv0Q=="><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="AIsb7a4x-7_UV6uaWmxhEqm8InNkKQBZVHAY"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Which OTF or TTF fonts are supported via fontspec?</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><p>Overleaf supports a fair number of OTF/TTF fonts in different scripts. Their names are listed below, and you can see <a rel="nofollow" class="external text" href="https://assets.ctfassets.net/nrgyaltdicpt/40JoOKfN9V417SomTnNqDP/8b59969749689a91f0254d22f7af309d/font-sampler-2022.pdf">a sampler here</a>. We also have <a rel="nofollow" class="external text" href="https://www.google.com/get/noto/">Google Noto fonts</a> as included in Ubuntu 22.04, so even if you don't see the listing for a particular language here, you can try using the relevant Google Noto font for that particular language or script.
+</p><p><br />
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Latin-script_Fonts"><span class="tocnumber">1</span> <span class="toctext">Latin-script Fonts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Serif_fonts"><span class="tocnumber">1.1</span> <span class="toctext">Serif fonts</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Sans-serif_fonts"><span class="tocnumber">1.2</span> <span class="toctext">Sans-serif fonts</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Monospaced_fonts"><span class="tocnumber">1.3</span> <span class="toctext">Monospaced fonts</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Heavy_faces"><span class="tocnumber">1.4</span> <span class="toctext">Heavy faces</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Cursive_fonts"><span class="tocnumber">1.5</span> <span class="toctext">Cursive fonts</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Handwriting_fonts"><span class="tocnumber">1.6</span> <span class="toctext">Handwriting fonts</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Blackletter_fonts"><span class="tocnumber">1.7</span> <span class="toctext">Blackletter fonts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Math_fonts"><span class="tocnumber">2</span> <span class="toctext">Math fonts</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Fonts_for_CJK"><span class="tocnumber">3</span> <span class="toctext">Fonts for CJK</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Chinese"><span class="tocnumber">3.1</span> <span class="toctext">Chinese</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Japanese"><span class="tocnumber">3.2</span> <span class="toctext">Japanese</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Korean"><span class="tocnumber">3.3</span> <span class="toctext">Korean</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Fonts_for_Arabic_script"><span class="tocnumber">4</span> <span class="toctext">Fonts for Arabic script</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Fonts_for_Hebrew_script"><span class="tocnumber">5</span> <span class="toctext">Fonts for Hebrew script</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Fonts_for_Greek"><span class="tocnumber">6</span> <span class="toctext">Fonts for Greek</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Fonts_for_Coptic_Alphabets"><span class="tocnumber">7</span> <span class="toctext">Fonts for Coptic Alphabets</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Fonts_for_Ethiopic_(Amharic)"><span class="tocnumber">8</span> <span class="toctext">Fonts for Ethiopic (Amharic)</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Indic_Languages"><span class="tocnumber">9</span> <span class="toctext">Indic Languages</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#Bengali"><span class="tocnumber">9.1</span> <span class="toctext">Bengali</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Hindi_(Devanagari_script)"><span class="tocnumber">9.2</span> <span class="toctext">Hindi (Devanagari script)</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Malayalam"><span class="tocnumber">9.3</span> <span class="toctext">Malayalam</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Sinhala"><span class="tocnumber">9.4</span> <span class="toctext">Sinhala</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Tamil"><span class="tocnumber">9.5</span> <span class="toctext">Tamil</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Telugu"><span class="tocnumber">9.6</span> <span class="toctext">Telugu</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-26"><a href="#Fonts_for_Thai"><span class="tocnumber">10</span> <span class="toctext">Fonts for Thai</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Fonts_for_Myanmar"><span class="tocnumber">11</span> <span class="toctext">Fonts for Myanmar</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#Fonts_for_Khmer_(Cambodian)"><span class="tocnumber">12</span> <span class="toctext">Fonts for Khmer (Cambodian)</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#Fonts_for_Tibetan"><span class="tocnumber">13</span> <span class="toctext">Fonts for Tibetan</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Latin-script_Fonts">Latin-script Fonts</span></h2>
+<h3><span class="mw-headline" id="Serif_fonts">Serif fonts</span></h3>
+<ul><li>Aboriginal Serif</li>
+<li>Abyssinica SIL</li>
+<li>Accanthis ADF Std No3</li>
+<li>Alegreya</li>
+<li>Alfios</li>
+<li>AlgolRevived</li>
+<li>Annapurna SIL</li>
+<li>Antykwa Poltawskiego</li>
+<li>Antykwa Poltawskiego Light</li>
+<li>Antykwa Torunska</li>
+<li>Antykwa Torunska Condensed</li>
+<li>Arapey</li>
+<li>Asea</li>
+<li>Avdira</li>
+<li>Averia Serif GWF</li>
+<li>BABEL Unicode</li>
+<li>Baskervald ADF Std</li>
+<li>Baskervaldx</li>
+<li>BaskervilleF</li>
+<li>Berenis ADF Pro</li>
+<li>Berenis ADF Pro SC</li>
+<li>Berylium</li>
+<li>Bitstream Vera Serif</li>
+<li>Bookman Uralic</li>
+<li>BPG Serif GPL&amp;GNU</li>
+<li>BPG Serif Modern GPL&amp;GNU</li>
+<li>C059</li>
+<li>Caladea</li>
+<li>Cardo</li>
+<li>Caslon</li>
+<li>Century Catalogue</li>
+<li>Charis SIL</li>
+<li>Charis SIL Compact</li>
+<li>Cinzel</li>
+<li>Cinzel Decorative</li>
+<li>Clara</li>
+<li>CMU Concrete</li>
+<li>CMU Serif</li>
+<li>CMU Serif Extra</li>
+<li>CMU Serif Upright Italic</li>
+<li>CMU Typewriter Text Variable Width</li>
+<li>Cochineal</li>
+<li>Coelacanth</li>
+<li>Conakry</li>
+<li>Cormorant Garamond</li>
+<li>Credit River</li>
+<li>Credit Valley</li>
+<li>Crimson</li>
+<li>Crimson Pro</li>
+<li>DejaVu Serif</li>
+<li>Domitian</li>
+<li>Doulos SIL</li>
+<li>Doulos SIL Compact</li>
+<li>Droid Serif</li>
+<li>Dustismo Roman</li>
+<li>EB Garamond</li>
+<li>Echelon Condensed</li>
+<li>Eczar</li>
+<li>Edmunds</li>
+<li>Edmunds Distressed</li>
+<li>Effloresce</li>
+<li>Effloresce Antique</li>
+<li>Elstob</li>
+<li>EMERITA Latina</li>
+<li>Essays1743</li>
+<li>ETbb</li>
+<li>Ezra SIL</li>
+<li>Ezra SIL SR</li>
+<li>Fanwood</li>
+<li>Fanwood Text</li>
+<li>Foulis Greek</li>
+<li>FreeSerif</li>
+<li>Furat</li>
+<li>Galatia SIL</li>
+<li>Gayathri</li>
+<li>Gentium</li>
+<li>Gentium Basic</li>
+<li>Gentium Book Basic</li>
+<li>Gentium Plus</li>
+<li>Gentium Plus Compact</li>
+<li>GentiumAlt</li>
+<li>Georgia</li>
+<li>GFS Artemisia</li>
+<li>GFS Bodoni</li>
+<li>GFS Didot</li>
+<li>Goodfish</li>
+<li>Goudy Bookletter 1911</li>
+<li>Heuristica</li>
+<li>IBM Plex Serif</li>
+<li>IM FELL DW Pica</li>
+<li>IM FELL English</li>
+<li>IM FELL English SC</li>
+<li>IndUni-N</li>
+<li>IndUni-P</li>
+<li>IndUni-T</li>
+<li>Inria Serif</li>
+<li>Irianis ADF Std</li>
+<li>Irianis ADF Style Std</li>
+<li>Junicode</li>
+<li>Kalpurush</li>
+<li>KpRoman</li>
+<li>Latin Modern Roman</li>
+<li>Latin Modern Roman Dunhill</li>
+<li>Liberation Serif</li>
+<li>Libertinus Serif</li>
+<li>Libre Baskerville</li>
+<li>Libre Bodoni</li>
+<li>Libre Caslon Text</li>
+<li>Linden Hill</li>
+<li>Linux Libertine Display O</li>
+<li>Linux Libertine O</li>
+<li>Mekanus ADF Std</li>
+<li>Mekanus ADF Titling Std</li>
+<li>Merriweather</li>
+<li>Merriweather Light</li>
+<li>MPH 2B Damase</li>
+<li>NewComputerModern08</li>
+<li>NewComputerModern10</li>
+<li>Nimbus Roman</li>
+<li>Noto Serif</li>
+<li>NovelDeco</li>
+<li>Old Standard TT</li>
+<li>Oradano-mincho-GSRR</li>
+<li>Palladio Uralic</li>
+<li>Parix</li>
+<li>Playfair Display</li>
+<li>Prociono</li>
+<li>PT Serif</li>
+<li>QTAntiquePost</li>
+<li>QTBasker</li>
+<li>QTBengal</li>
+<li>QTBodini</li>
+<li>QTBookmann</li>
+<li>QTCaslan</li>
+<li>QTCaslanOpen</li>
+<li>QTFrizQuad</li>
+<li>QTGaromand</li>
+<li>QTGraphLite</li>
+<li>QTGraveure</li>
+<li>QTKorrin</li>
+<li>QTOldGoudy</li>
+<li>QTPalatine</li>
+<li>QTSchoolCentury</li>
+<li>QTWeise</li>
+<li>Quattrocento</li>
+<li>Rasa</li>
+<li>RIT-Sundar</li>
+<li>Roboto Slab</li>
+<li>Romande ADF No2 Std</li>
+<li>Romande ADF Std</li>
+<li>Romande ADF Style Std</li>
+<li>Schoolbook Uralic</li>
+<li>Soufflet Vert</li>
+<li>Source Serif Pro</li>
+<li>Spira</li>
+<li>Subpear</li>
+<li>Sweynheim &amp; Pannartz</li>
+<li>Symbola</li>
+<li>Tempora</li>
+<li>TeX Gyre Bonum</li>
+<li>TeX Gyre Pagella</li>
+<li>TeX Gyre PagellaX</li>
+<li>TeX Gyre Schola</li>
+<li>TeX Gyre ScholaX</li>
+<li>TeX Gyre Termes</li>
+<li>TeX Gyre TermesX</li>
+<li>Times New Roman</li>
+<li>Tinos</li>
+<li>Tribun ADF Std</li>
+<li>Tymes</li>
+<li>URW Bookman</li>
+<li>Vahika</li>
+<li>Verana</li>
+<li>Vollkorn</li>
+<li>XCharter</li>
+<li>Yrsa</li></ul>
+<h3><span class="mw-headline" id="Sans-serif_fonts">Sans-serif fonts</span></h3>
+<ul><li>Aboriginal Sans</li>
+<li>Aerial</li>
+<li>Alegreya Sans</li>
+<li>Allerta</li>
+<li>Andika</li>
+<li>Andika Compact</li>
+<li>Andika New Basic</li>
+<li>Angostura</li>
+<li>Angostura Black</li>
+<li>Arial</li>
+<li>Arimo</li>
+<li>Aroania</li>
+<li>Asap</li>
+<li>Averia GWF</li>
+<li>Averia Sans GWF</li>
+<li>B612</li>
+<li>Baloo 2</li>
+<li>Bebas Neue</li>
+<li>Berenika</li>
+<li>Bitstream Vera Sans</li>
+<li>Blue Highway</li>
+<li>BPG DejaVu Sans 2011 GNU-GPL</li>
+<li>BPG Mrgvlovani GPL&amp;GNU</li>
+<li>BPG Nateli Condenced GPL&amp;GNU</li>
+<li>BPG Nateli GPL&amp;GNU</li>
+<li>BPG Sans GPL&amp;GNU</li>
+<li>BPG Sans Medium GPL&amp;GNU</li>
+<li>BPG Sans Modern GPL&amp;GNU</li>
+<li>BPG Sans Regular GPL&amp;GNU</li>
+<li>Cabin</li>
+<li>Cabin Condensed</li>
+<li>Cantarell</li>
+<li>Carlito</li>
+<li>Chivo</li>
+<li>Clear Sans</li>
+<li>CMU Bright</li>
+<li>CMU Sans Serif</li>
+<li>CMU Sans Serif Demi Condensed</li>
+<li>Comfortaa</li>
+<li>Comic Neue</li>
+<li>Comic Neue Angular</li>
+<li>Comic Neue Angular Light</li>
+<li>Comic Neue Light</li>
+<li>Comic Sans MS</li>
+<li>Cranberry Gin</li>
+<li>Cuprum</li>
+<li>DejaVu Sans</li>
+<li>Dosis</li>
+<li>Dream Orphans</li>
+<li>Droid</li>
+<li>Droid Sans</li>
+<li>Dustismo</li>
+<li>Dyuthi</li>
+<li>Eden Mills</li>
+<li>Electron</li>
+<li>Engebrechtre</li>
+<li>Engebrechtre Expanded</li>
+<li>eurofurence</li>
+<li>eurofurence classic</li>
+<li>eurofurence classic light</li>
+<li>eurofurence light</li>
+<li>Fetamont</li>
+<li>Fetamont Script</li>
+<li>Fira Sans</li>
+<li>Forgotten Futurist</li>
+<li>Forgotten Futurist College</li>
+<li>FreeSans</li>
+<li>Gemunu Libre</li>
+<li>Gemunu Libre ExtraLight</li>
+<li>GFS Neohellenic</li>
+<li>Gillius ADF</li>
+<li>Gillius ADF Cond</li>
+<li>Gillius ADF No2</li>
+<li>Gillius ADF No2 Cond</li>
+<li>Go</li>
+<li>GoSmallcaps</li>
+<li>Gothic Uralic</li>
+<li>Gotu</li>
+<li>Guanine</li>
+<li>Haramain</li>
+<li>Hind Madurai</li>
+<li>Hor</li>
+<li>IBM Plex Sans</li>
+<li>IBM Plex Sans Condensed</li>
+<li>Ikarius ADF No2 Std</li>
+<li>Ikarius ADF Std</li>
+<li>IndUni-H</li>
+<li>Inria Sans</li>
+<li>Inter</li>
+<li>Iwona</li>
+<li>Iwona Cond</li>
+<li>Iwona Cond Heavy</li>
+<li>Iwona Cond Light</li>
+<li>Iwona Cond Medium</li>
+<li>Iwona Heavy</li>
+<li>Iwona Light</li>
+<li>Iwona Medium</li>
+<li>Jara</li>
+<li>Josefin Sans</li>
+<li>Junction</li>
+<li>Jura</li>
+<li>Karmilla</li>
+<li>Klaudia</li>
+<li>KpSans</li>
+<li>Kurier</li>
+<li>Kurier Cond</li>
+<li>Kurier Cond Heavy</li>
+<li>Kurier Cond Light</li>
+<li>Kurier Cond Medium</li>
+<li>Kurier Heavy</li>
+<li>Kurier Light</li>
+<li>Kurier Medium</li>
+<li>Latin Modern Sans</li>
+<li>Latin Modern Sans Demi Cond</li>
+<li>Latin Modern Sans Quotation</li>
+<li>Lato</li>
+<li>League Spartan</li>
+<li>Libel Suit</li>
+<li>Liberation Sans</li>
+<li>Liberation Sans Narrow</li>
+<li>Libertinus Keyboard</li>
+<li>Libertinus Sans</li>
+<li>Libris ADF Std</li>
+<li>Linux Biolinum Keyboard O</li>
+<li>Linux Biolinum O</li>
+<li>Manrope</li>
+<li>Merriweather Sans</li>
+<li>Mint Spirit</li>
+<li>Mint Spirit No2</li>
+<li>Montserrat</li>
+<li>Montserrat Alternates</li>
+<li>Mukta</li>
+<li>NewComputerModernSans08</li>
+<li>NewComputerModernSans10</li>
+<li>Nimbus Sans</li>
+<li>Nimbus Sans Narrow</li>
+<li>Noto Sans</li>
+<li>Open Sans</li>
+<li>OpenDyslexic</li>
+<li>OpenDyslexicAlta</li>
+<li>Overlock</li>
+<li>Oxygen-Sans</li>
+<li>Pakenham</li>
+<li>Play</li>
+<li>Primer Print</li>
+<li>PT Sans</li>
+<li>PT Sans Caption</li>
+<li>PT Sans Narrow</li>
+<li>QTAgateType</li>
+<li>QTAncientOlive</li>
+<li>QTAvanti</li>
+<li>QTDoghaus</li>
+<li>QTEraType</li>
+<li>QTEurotype</li>
+<li>QTFloraline</li>
+<li>QTFrank</li>
+<li>QTFuture</li>
+<li>QTHelvetCnd</li>
+<li>QTHowardType</li>
+<li>QTLetterGoth</li>
+<li>QTOptimum</li>
+<li>QTParisFrance</li>
+<li>QTPeignoir</li>
+<li>QTVagaRound</li>
+<li>Quattrocento Sans</li>
+<li>Quicksand</li>
+<li>Radis Sans</li>
+<li>Raleway</li>
+<li>Roboto</li>
+<li>Roboto Condensed</li>
+<li>Rosario</li>
+<li>Sans Condensed Uralic</li>
+<li>Sans Uralic</li>
+<li>Sophia Nubian</li>
+<li>Sora</li>
+<li>Source Sans Pro</li>
+<li>Spongy</li>
+<li>Steelfish</li>
+<li>STOMP_Zeroes</li>
+<li>Switzera ADF</li>
+<li>Taogu</li>
+<li>Teen</li>
+<li>TeX Gyre Adventor</li>
+<li>TeX Gyre Heros</li>
+<li>TeX Gyre Heros Cn</li>
+<li>Trebuchet MS</li>
+<li>Tuffy</li>
+<li>Ubuntu</li>
+<li>unifur</li>
+<li>Universalis ADF Std</li>
+<li>URW Gothic</li>
+<li>Verana Sans</li>
+<li>Veranda</li>
+<li>Verdana</li>
+<li>Yanone Kaffeesatz</li>
+<li>Zrnic</li></ul>
+<h3><span class="mw-headline" id="Monospaced_fonts">Monospaced fonts</span></h3>
+<ul><li>AeMMono10</li>
+<li>Aerial Mono</li>
+<li>Andale Mono</li>
+<li>Anonymous Pro</li>
+<li>B612 Mono</li>
+<li>BabelStone Modern</li>
+<li>Bitstream Vera Sans Mono</li>
+<li>Cascadia Cod3</li>
+<li>Cascadia Code PL</li>
+<li>CMU Typewriter Text</li>
+<li>Courier 10 Pitch</li>
+<li>Courier New</li>
+<li>Cousine</li>
+<li>Cuomotype</li>
+<li>D2Coding</li>
+<li>D2Coding ligature</li>
+<li>DejaVu Sans Mono</li>
+<li>Droid Sans Mono</li>
+<li>Fantasque Sans Mono</li>
+<li>Fira Code</li>
+<li>Fira Mono</li>
+<li>FreeMono</li>
+<li>GNUTypewriter</li>
+<li>Go Mono</li>
+<li>GWMonospace</li>
+<li>Hack</li>
+<li>IBM Plex Mono</li>
+<li>Inconsolata</li>
+<li>InconsolataN</li>
+<li>Inconsolatazi4</li>
+<li>IndUni-C</li>
+<li>JetBrains Mono</li>
+<li>KpMono</li>
+<li>Larabiefont</li>
+<li>Latin Modern Mono</li>
+<li>Latin Modern Mono Caps</li>
+<li>Latin Modern Mono Light</li>
+<li>Latin Modern Mono Light Cond</li>
+<li>Latin Modern Mono Prop</li>
+<li>Latin Modern Mono Prop Light</li>
+<li>Latin Modern Mono Slanted</li>
+<li>League Mono</li>
+<li>Liberation Mono</li>
+<li>Libertinus Mono</li>
+<li>Linux Libertine Mono O</li>
+<li>Logix Mono</li>
+<li>Mono Uralic</li>
+<li>Monofonto</li>
+<li>monofur</li>
+<li>mononoki</li>
+<li>NewComputerModernMono10</li>
+<li>Nimbus Mono</li>
+<li>Nimbus Mono PS</li>
+<li>Noto Mono</li>
+<li>Noto Sans Mono</li>
+<li>OpenDyslexicMono</li>
+<li>osifont</li>
+<li>Oxygen Mono</li>
+<li>PT Mono</li>
+<li>QTChicagoland</li>
+<li>QTPristine</li>
+<li>QTRobotic2000</li>
+<li>Ricty Diminished</li>
+<li>Ricty Diminished Discord</li>
+<li>Roboto Mono</li>
+<li>Source Code Pro</li>
+<li>TeX Gyre Cursor</li>
+<li>Ubuntu Mono</li>
+<li>UM Typewriter</li>
+<li>Unispace</li></ul>
+<h3><span class="mw-headline" id="Heavy_faces">Heavy faces</span></h3>
+<ul><li>Apropal</li>
+<li>Apropal Bold</li>
+<li>Arial Black</li>
+<li>Carbon Block</li>
+<li>Carbon Phyber</li>
+<li>Coolvetica</li>
+<li>Cyklop</li>
+<li>Gemunu Libre ExtraBold</li>
+<li>Guanine</li>
+<li>Impact</li>
+<li>Kenyan Coffee</li>
+<li>Kimberley</li>
+<li>Millimetre</li>
+<li>Mold Papa</li>
+<li>Oliver's Barney</li>
+<li>Pricedown</li>
+<li>QTAtchen</li>
+<li>QTBlimpo</li>
+<li>QTBodiniPoster</li>
+<li>QTDeuce</li>
+<li>QTDoghausHeavy</li>
+<li>QTFrankHeavy</li>
+<li>QTGreece</li>
+<li>QTHowardTypeFat</li>
+<li>QTImpromptu</li>
+<li>QTKooper</li>
+<li>QTMilitary</li>
+<li>QTTheatre</li>
+<li>Rustproof Body</li>
+<li>Screengem</li>
+<li>Should've Known</li>
+<li>Strenuous</li>
+<li>Sui Generis</li>
+<li>Velvenda Megablack</li>
+<li>Vipnagorgialla</li>
+<li>Vollkorn ExtraBold</li></ul>
+<h3><span class="mw-headline" id="Cursive_fonts">Cursive fonts</span></h3>
+<ul><li>Bajaderka</li>
+<li>Bramalea Beauty</li>
+<li>Chancery Uralic</li>
+<li>Colourbars</li>
+<li>Compagnon</li>
+<li>Compagnon Italic</li>
+<li>Cretino</li>
+<li>Dancing Script</li>
+<li>Deftone Stylus</li>
+<li>Dyspepsia</li>
+<li>Elegante</li>
+<li>Great Vibes</li>
+<li>Joscelyn</li>
+<li>Kerkis-Calligraphic</li>
+<li>LeckerliOne</li>
+<li>Lemonada</li>
+<li>Lesser Concern</li>
+<li>Lobster Two</li>
+<li>Miama Nueva</li>
+<li>Oldania ADF Std</li>
+<li>Port Credit</li>
+<li>Ptolemy</li>
+<li>QTArabian</li>
+<li>QTArnieB</li>
+<li>QTArtiston</li>
+<li>QTBeckman</li>
+<li>QTBoulevard</li>
+<li>QTBrushStroke</li>
+<li>QTCaligulatype</li>
+<li>QTCanaithtype</li>
+<li>QTChanceryType</li>
+<li>QTCoronation</li>
+<li>QTFlorencia</li>
+<li>QTHoboken</li>
+<li>QTLautrecType</li>
+<li>QTLinostroke</li>
+<li>QTMerryScript</li>
+<li>QTPandora</li>
+<li>QTSlogantype</li>
+<li>QTUSA-Uncial</li>
+<li>QTWestEnd</li>
+<li>Rina</li>
+<li>Roman Uralic</li>
+<li>Romande ADF Script Std</li>
+<li>Rot</li>
+<li>Rusch</li>
+<li>TeX Gyre Chorus</li>
+<li>TriodPostnaja</li>
+<li>Z003</li></ul>
+<h3><span class="mw-headline" id="Handwriting_fonts">Handwriting fonts</span></h3>
+<ul><li>AirCut</li>
+<li>Breip</li>
+<li>Cabin Sketch</li>
+<li>CabinSketch</li>
+<li>Comic Neue</li>
+<li>Comic Neue Angular</li>
+<li>Comic Sans MS</li>
+<li>Deportees</li>
+<li>DkgHandwriting</li>
+<li>Domestic Manners</li>
+<li>Duality</li>
+<li>El Abogado Loco</li>
+<li>Eye Rhyme</li>
+<li>Field Day Filter</li>
+<li>Havana</li>
+<li>Hurontario</li>
+<li>Junction</li>
+<li>Karumbi</li>
+<li>Kaushan Script</li>
+<li>Kleptocracy</li>
+<li>Kristi</li>
+<li>Minya Nouvelle</li>
+<li>Mufferaw</li>
+<li>Pecita</li>
+<li>Pupcat</li>
+<li>Purisa</li>
+<li>QTAbbie</li>
+<li>QTCascadetype</li>
+<li>QTCasual</li>
+<li>QTHandwriting</li>
+<li>QTKung-Fu</li>
+<li>QTMagicMarker</li>
+<li>QTSanDiego</li>
+<li>QTTechtone</li>
+<li>Rufscript</li>
+<li>SetoFont</li>
+<li>Still Time</li>
+<li>Tork</li>
+<li>Walshes</li></ul>
+<h3><span class="mw-headline" id="Blackletter_fonts">Blackletter fonts</span></h3>
+<ul><li>Blankenburg_UNZ1A</li>
+<li>Fette classic UNZ Fraktur</li>
+<li>Fust &amp; Schoeffer</li>
+<li>Gamaliel</li>
+<li>Hamlet</li>
+<li>Jessen</li>
+<li>Isabella</li>
+<li>QTBlackForest</li>
+<li>QTCloisteredMonk</li>
+<li>QTDublinIrish</li>
+<li>QTFraktur</li>
+<li>QTHeidelbergType</li>
+<li>QTLinoscroll</li>
+<li>QTLondonScroll</li>
+<li>Zainer</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Math_fonts">Math fonts</span></h2>
+<p>(Use with <code>mathspec</code> or <code>unicode-math</code>)
+</p>
+<ul><li>Asana Math</li>
+<li>Erewhon Math</li>
+<li>Fira Math</li>
+<li>GFS Neohellenic Math</li>
+<li>Garamond-Math</li>
+<li>KpMath</li>
+<li>Latin Modern Math</li>
+<li>Libertinus Math</li>
+<li>NewComputerModernMath</li>
+<li>STIX Math</li>
+<li>STIX Two Math</li>
+<li>TeX Gyre Bonum Math</li>
+<li>TeX Gyre DejaVu Math</li>
+<li>TeX Gyre Pagella Math</li>
+<li>TeX Gyre Schola Math</li>
+<li>TeX Gyre Termes Math</li>
+<li>XCharter Math</li>
+<li>XITS Math</li></ul>
+<h2><span class="mw-headline" id="Fonts_for_CJK">Fonts for CJK</span></h2>
+<h3><span class="mw-headline" id="Chinese">Chinese</span></h3>
+<ul><li>AR PL KaitiM Big5</li>
+<li>AR PL KaitiM GB</li>
+<li>AR PL Mingti2L Big5</li>
+<li>AR PL SungtiL GB</li>
+<li>AR PL UKai CN</li>
+<li>AR PL UKai HK</li>
+<li>AR PL UKai TW</li>
+<li>AR PL UKai TW MBE</li>
+<li>AR PL UMing CN</li>
+<li>AR PL UMing HK</li>
+<li>AR PL UMing TW</li>
+<li>AR PL UMing TW MBE</li>
+<li>BabelStone Han</li>
+<li>Droid Sans Fallback</li>
+<li>FandolFang</li>
+<li>FandolHei</li>
+<li>FandolKai</li>
+<li>FandolSong</li>
+<li>HanaMinA</li>
+<li>Noto Sans CJK HK</li>
+<li>Noto Sans CJK SC</li>
+<li>Noto Sans CJK TC</li>
+<li>Noto Sans Mono CJK HK</li>
+<li>Noto Sans Mono CJK SC</li>
+<li>Noto Sans Mono CJK TC</li>
+<li>Noto Serif CJK SC</li>
+<li>Noto Serif CJK TC</li>
+<li>UKIJ CJK</li>
+<li>WenQuanYi Micro Hei</li>
+<li>WenQuanYi Micro Hei Mono</li>
+<li>WenQuanYi Zen Hei</li>
+<li>WenQuanYi Zen Hei Mono</li>
+<li>WenQuanYi Zen Hei Sharp</li>
+<li>cwTeXFangSong</li>
+<li>cwTeXHeiBold</li>
+<li>cwTeXKai</li>
+<li>cwTeXMing</li>
+<li>cwTeXYen</li>
+<li>TW-Kai</li>
+<li>TW-Sung</li></ul>
+<h3><span class="mw-headline" id="Japanese">Japanese</span></h3>
+<ul><li>AoyagiKouzanFontT</li>
+<li>AoyagiSosekiFont2</li>
+<li>BabelStone Han</li>
+<li>Droid Sans Fallback</li>
+<li>HanaMinA</li>
+<li>Harano Aji Gothic</li>
+<li>Harano Aji Mincho</li>
+<li>IPAexGothic</li>
+<li>IPAexMincho</li>
+<li>IPAGothic</li>
+<li>IPAMincho</li>
+<li>IPAmjMincho</li>
+<li>IPAPGothic</li>
+<li>IPAPMincho</li>
+<li>KanjiStrokeOrders</li>
+<li>kiloji</li>
+<li>Klee One</li>
+<li>Komatuna</li>
+<li>Komatuna P</li>
+<li>Konatu</li>
+<li>Konatu Tohaba</li>
+<li>KouzanBrushFont</li>
+<li>KouzanBrushFontGyousyo</li>
+<li>KouzanBrushFontSousyo</li>
+<li>MigMix 1M</li>
+<li>MigMix 1P</li>
+<li>MigMix 2M</li>
+<li>MigMix 2P</li>
+<li>Migu 1C</li>
+<li>Migu 1M</li>
+<li>Migu 1P</li>
+<li>Migu 2M</li>
+<li>mikachan</li>
+<li>mikachan-P</li>
+<li>mikachan-PB</li>
+<li>mikachan-PS</li>
+<li>mikachan-puchi</li>
+<li>mikachan-puchiB</li>
+<li>MisakiGothic</li>
+<li>MisakiMincho</li>
+<li>MMCedar</li>
+<li>MMCedar P</li>
+<li>Mona</li>
+<li>Monapo</li>
+<li>MotoyaLCedar</li>
+<li>MotoyaLMaru</li>
+<li>Noto Sans CJK JP</li>
+<li>Noto Sans Mono CJK JP</li>
+<li>Noto Serif CJK JP</li>
+<li>Oradano-mincho-GSRR</li>
+<li>Rampart One</li>
+<li>Reggae One</li>
+<li>Ricty Diminished</li>
+<li>Ricty Diminished Discord</li>
+<li>RocknRoll One</li>
+<li>Sawarabi Gothic</li>
+<li>SetoFont</li>
+<li>Stick</li>
+<li>TakaoGothic</li>
+<li>TakaoMincho</li>
+<li>TakaoPGothic</li>
+<li>TakaoPMincho</li>
+<li>Train One</li>
+<li>UKIJ CJK</li>
+<li>Ume Gothic</li>
+<li>Ume Hy Gothic</li>
+<li>Ume P Gothic</li>
+<li>Ume P Mincho</li>
+<li>UmePlus Gothic</li>
+<li>UmePlus P Gothic</li>
+<li>VL Gothic</li>
+<li>VL PGothic</li>
+<li>Yusei Magic</li></ul>
+<h3><span class="mw-headline" id="Korean">Korean</span></h3>
+<ul><li>Baekmuk Batang</li>
+<li>Baekmuk Dotum</li>
+<li>Baekmuk Gulim</li>
+<li>Baekmuk Headline</li>
+<li>Bandal</li>
+<li>Bangwool</li>
+<li>BM DoHyeon</li>
+<li>BM EULJIRO TTF</li>
+<li>BM HANNA 11yrs old</li>
+<li>BM HANNA Air</li>
+<li>BM HANNA Pro</li>
+<li>BM JUA_TTF</li>
+<li>BM KIRANGHAERANG</li>
+<li>BM YEONSUNG</li>
+<li>D2Coding</li>
+<li>Eunjin</li>
+<li>Eunjin Nakseo</li>
+<li>Guseul</li>
+<li>LexiSaebomR</li>
+<li>Nanum Brush Script</li>
+<li>Nanum Pen Script</li>
+<li>NanumBarunGothic</li>
+<li>NanumBarunpen</li>
+<li>NanumGothic</li>
+<li>NanumGothic Eco</li>
+<li>NanumGothicCoding</li>
+<li>NanumMyeongjo</li>
+<li>NanumMyeongjo Eco</li>
+<li>NanumSquare</li>
+<li>NanumSquareRound</li>
+<li>Noto Sans CJK KR</li>
+<li>Noto Sans Mono CJK KR</li>
+<li>Noto Serif CJK KR</li>
+<li>UKIJ CJK</li>
+<li>UnBatang</li>
+<li>UnDinaru</li>
+<li>UnDotum</li>
+<li>UnGraphic</li>
+<li>UnGungseo</li>
+<li>UnJamoBatang</li>
+<li>UnJamoDotum</li>
+<li>UnJamoNovel</li>
+<li>UnJamoSora</li>
+<li>UnPen</li>
+<li>UnPenheulim</li>
+<li>UnPilgi</li>
+<li>UnPilgia</li>
+<li>UnShinmun</li>
+<li>UnTaza</li>
+<li>UnVada</li>
+<li>UnYetgul</li></ul>
+<h2><span class="mw-headline" id="Fonts_for_Arabic_script">Fonts for Arabic script</span></h2>
+<ul><li>ALM Fixed</li>
+<li>AlArabiya</li>
+<li>AlBattar</li>
+<li>AlHor</li>
+<li>AlManzomah</li>
+<li>AlYarmook</li>
+<li>AlgolRevived</li>
+<li>Alkalami</li>
+<li>Alkalami Light</li>
+<li>Amiri</li>
+<li>Amiri Quran</li>
+<li>Amiri Quran Colored</li>
+<li>Arab</li>
+<li>Arial</li>
+<li>Awami Nastaliq</li>
+<li>Cortoba</li>
+<li>Courier New</li>
+<li>DejaVu Sans</li>
+<li>DejaVu Sans Mono</li>
+<li>Dimnah</li>
+<li>Electron</li>
+<li>FreeFarsi</li>
+<li>FreeFarsi Monospace</li>
+<li>FreeMono</li>
+<li>FreeSerif</li>
+<li>FreeSerifb</li>
+<li>Furat</li>
+<li>Granada</li>
+<li>Graph</li>
+<li>Hani</li>
+<li>Harmattan</li>
+<li>Homa</li>
+<li>Hor</li>
+<li>IBM Plex Sans Arabic</li>
+<li>Japan</li>
+<li>Jet</li>
+<li>KacstArt</li>
+<li>KacstBook</li>
+<li>KacstDecorative</li>
+<li>KacstDigital</li>
+<li>KacstFarsi</li>
+<li>KacstLetter</li>
+<li>KacstNaskh</li>
+<li>KacstOffice</li>
+<li>KacstOne</li>
+<li>KacstPen</li>
+<li>KacstPoster</li>
+<li>KacstQurn</li>
+<li>KacstScreen</li>
+<li>KacstTitle</li>
+<li>KacstTitleL</li>
+<li>Kayrawan</li>
+<li>Khalid</li>
+<li>LateefGR</li>
+<li>Lemonada</li>
+<li>Lexend Deca</li>
+<li>Lexend Exa</li>
+<li>Lexend Giga</li>
+<li>Lexend Mega</li>
+<li>Lexend Peta</li>
+<li>Lexend Tera</li>
+<li>Lexend Zetta</li>
+<li>MPH 2B Damase</li>
+<li>Mashq</li>
+<li>Metal</li>
+<li>Nada</li>
+<li>Nagham</li>
+<li>Nazli</li>
+<li>Nice</li>
+<li>Noto Kufi Arabic</li>
+<li>Noto Naskh Arabic</li>
+<li>Noto Nastaliq Urdu</li>
+<li>Noto Sans Arabic</li>
+<li>Ostorah</li>
+<li>Ouhod</li>
+<li>PakType Ajrak</li>
+<li>PakType Naqsh</li>
+<li>PakType Naskh Basic</li>
+<li>PakType Naskh Basic Farsi</li>
+<li>PakType Naskh Basic SA</li>
+<li>PakType Naskh Basic Sindhi</li>
+<li>PakType Naskh Basic Urdu</li>
+<li>PakType Tehreer</li>
+<li>Petra</li>
+<li>Rasheeq</li>
+<li>Rehan</li>
+<li>Salem</li>
+<li>Scheherazade</li>
+<li>Shado</li>
+<li>Sharjah</li>
+<li>Sindbad</li>
+<li>Tarablus</li>
+<li>Thabit</li>
+<li>Tholoth</li>
+<li>Times New Roman</li>
+<li>Titr</li>
+<li>UKIJ Basma</li>
+<li>UKIJ Bom</li>
+<li>UKIJ CJK</li>
+<li>UKIJ Chechek</li>
+<li>UKIJ Diwani Tom</li>
+<li>UKIJ Ekran</li>
+<li>UKIJ Esliye</li>
+<li>UKIJ Esliye Chiwer</li>
+<li>UKIJ Esliye Neqish</li>
+<li>UKIJ Kesme</li>
+<li>UKIJ Kesme Tuz</li>
+<li>UKIJ Merdane</li>
+<li>UKIJ Nasq</li>
+<li>UKIJ Orqun Basma</li>
+<li>UKIJ Orqun Yazma</li>
+<li>UKIJ Qara</li>
+<li>UKIJ Qolyazma Tez</li>
+<li>UKIJ Qolyazma Tuz</li>
+<li>UKIJ Qolyazma Yantu</li>
+<li>UKIJ Sulus Tom</li>
+<li>UKIJ Teng</li>
+<li>UKIJ Tiken</li>
+<li>UKIJ Title</li>
+<li>UKIJ Tor</li>
+<li>UKIJ Tughra</li>
+<li>UKIJ Tuz</li>
+<li>UKIJ Tuz Basma</li>
+<li>UKIJ Tuz Gezit</li>
+<li>UKIJ Tuz Kitab</li>
+<li>UKIJ Tuz Tom</li>
+<li>UKIJ_Mac Ekran</li>
+<li>mry_KacstQurn</li></ul>
+<h2><span class="mw-headline" id="Fonts_for_Hebrew_script">Fonts for Hebrew script</span></h2>
+<ul><li>Amit</li>
+<li>Arial</li>
+<li>Arimo</li>
+<li>BABEL Unicode</li>
+<li>Caliban</li>
+<li>Cardo</li>
+<li>Caslon</li>
+<li>Coelacanth</li>
+<li>Courier New</li>
+<li>Cousine</li>
+<li>Daniel</li>
+<li>David CLM</li>
+<li>DejaVu Sans</li>
+<li>ECO</li>
+<li>Ezra SIL</li>
+<li>Ezra SIL SR</li>
+<li>Frank Ruehl CLM</li>
+<li>FreeMono</li>
+<li>FreeSans</li>
+<li>FreeSerif</li>
+<li>FreeSerifb</li>
+<li>GWMonospace</li>
+<li>Hadasim CLM</li>
+<li>HarSinai</li>
+<li>Hidekel</li>
+<li>IBM Plex Sans Hebrew</li>
+<li>Josef</li>
+<li>Keter YG</li>
+<li>Kimchi</li>
+<li>Libertinus Keyboard</li>
+<li>Libertinus Math</li>
+<li>Libertinus Sans</li>
+<li>Libertinus Serif</li>
+<li>Libertinus Serif Display</li>
+<li>Lilach</li>
+<li>Linux Biolinum Keyboard O</li>
+<li>Linux Biolinum O</li>
+<li>Linux Libertine Display O</li>
+<li>Linux Libertine Initials O</li>
+<li>Linux Libertine O</li>
+<li>Miriam CLM</li>
+<li>Miriam Mono CLM</li>
+<li>Miso</li>
+<li>Mixer</li>
+<li>MPH 2B Damase</li>
+<li>Nachlieli CLM</li>
+<li>Neo</li>
+<li>NewComputerModern08</li>
+<li>NewComputerModern10</li>
+<li>Noam</li>
+<li>Noto Sans Hebrew</li>
+<li>Noto Serif Hebrew</li>
+<li>PatchSans</li>
+<li>PatchSerif</li>
+<li>PatchStencil</li>
+<li>Sayphan</li>
+<li>SetoFont</li>
+<li>Shofar</li>
+<li>Simple CLM</li>
+<li>Skechers</li>
+<li>Stam Ashkenaz CLM</li>
+<li>Stam Sefarad CLM</li>
+<li>Sticks</li>
+<li>Strokes</li>
+<li>Times New Roman</li>
+<li>Tinos</li>
+<li>Tnua-Libre</li>
+<li>YamSuf</li></ul>
+<h2><span class="mw-headline" id="Fonts_for_Greek">Fonts for Greek</span></h2>
+<ul><li>Aegean</li>
+<li>Alegreya</li>
+<li>Alegreya Sans</li>
+<li>Alegreya Sans SC</li>
+<li>Alegreya SC</li>
+<li>Alexander</li>
+<li>Alfios</li>
+<li>Anaktoria</li>
+<li>Analecta</li>
+<li>Andale Mono</li>
+<li>Anonymous Pro</li>
+<li>Antykwa Torunska</li>
+<li>Antykwa Torunska Condensed</li>
+<li>Arial</li>
+<li>Arial Black</li>
+<li>Arimo</li>
+<li>Aroania</li>
+<li>Asana Math</li>
+<li>Asea</li>
+<li>Atavyros</li>
+<li>Avdira</li>
+<li>BABEL Unicode</li>
+<li>BPG Mrgvlovani Caps GNU&amp;GPL</li>
+<li>BPG Mrgvlovani GPL&amp;GNU</li>
+<li>C059</li>
+<li>Caliban</li>
+<li>Cardo</li>
+<li>Carlito</li>
+<li>Cascadia Cod3</li>
+<li>Cascadia Code PL</li>
+<li>Caslon</li>
+<li>Clear Sans</li>
+<li>Clear Sans Light</li>
+<li>Clear Sans Medium</li>
+<li>Clear Sans Thin</li>
+<li>CMU Bright</li>
+<li>CMU Classical Serif</li>
+<li>CMU Concrete</li>
+<li>CMU Sans Serif</li>
+<li>CMU Sans Serif Demi Condensed</li>
+<li>CMU Serif</li>
+<li>CMU Serif Upright Italic</li>
+<li>CMU Typewriter Text</li>
+<li>Cochineal</li>
+<li>Coelacanth</li>
+<li>Comfortaa</li>
+<li>Comic Sans MS</li>
+<li>Courier New</li>
+<li>Cousine</li>
+<li>Crimson</li>
+<li>Cupola</li>
+<li>D2Coding</li>
+<li>DejaVu Sans</li>
+<li>DejaVu Sans Mono</li>
+<li>DejaVu Serif</li>
+<li>Domitian</li>
+<li>Droid Sans</li>
+<li>Droid Sans Mono</li>
+<li>Droid Serif</li>
+<li>EB Garamond</li>
+<li>eurofurence</li>
+<li>eurofurence classic</li>
+<li>eurofurence classic light</li>
+<li>eurofurence light</li>
+<li>Fantasque Sans Mono</li>
+<li>Fetamont</li>
+<li>Fetamont Script</li>
+<li>Fira Code</li>
+<li>Fira Math</li>
+<li>Fira Mono</li>
+<li>Fira Sans</li>
+<li>Foulis Greek</li>
+<li>Frederika2016</li>
+<li>FreeMono</li>
+<li>FreeSans</li>
+<li>FreeSerif</li>
+<li>FreeSerifb</li>
+<li>FutharkAdapted</li>
+<li>Galatia SIL</li>
+<li>Garamond Libre</li>
+<li>Gentium</li>
+<li>Gentium Plus</li>
+<li>Gentium Plus Compact</li>
+<li>GentiumAlt</li>
+<li>Georgia</li>
+<li>GFS Artemisia</li>
+<li>GFS Baskerville</li>
+<li>GFS Bodoni</li>
+<li>GFS BodoniClassic</li>
+<li>GFS Complutum</li>
+<li>GFS Didot</li>
+<li>GFS Didot Classic</li>
+<li>GFS DidotClassic</li>
+<li>GFS Gazis</li>
+<li>GFS Neohellenic</li>
+<li>GFS Neohellenic Math</li>
+<li>GFS Olga</li>
+<li>GFS Porson</li>
+<li>GFS Solomos</li>
+<li>GFS Theokritos</li>
+<li>Go</li>
+<li>Go Mono</li>
+<li>GoSmallcaps</li>
+<li>GWMonospace</li>
+<li>Hack</li>
+<li>IBM Plex Sans</li>
+<li>Impact</li>
+<li>Inter</li>
+<li>Iwona</li>
+<li>Iwona Cond</li>
+<li>Iwona Cond Heavy</li>
+<li>Iwona Cond Light</li>
+<li>Iwona Cond Medium</li>
+<li>Iwona Heavy</li>
+<li>Iwona Light</li>
+<li>Iwona Medium</li>
+<li>Jura</li>
+<li>Kerkis</li>
+<li>Kerkis-Calligraphic</li>
+<li>Kerkis-SemiBold</li>
+<li>KerkisSans</li>
+<li>Komatuna</li>
+<li>Komatuna P</li>
+<li>Kurier</li>
+<li>Kurier Cond</li>
+<li>Kurier Cond Heavy</li>
+<li>Kurier Cond Light</li>
+<li>Kurier Cond Medium</li>
+<li>Kurier Heavy</li>
+<li>Kurier Light</li>
+<li>Kurier Medium</li>
+<li>Lato</li>
+<li>Liberation Mono</li>
+<li>Liberation Sans</li>
+<li>Liberation Sans Narrow</li>
+<li>Liberation Serif</li>
+<li>Libertinus Math</li>
+<li>Libertinus Sans</li>
+<li>Libertinus Serif</li>
+<li>Libertinus Serif Display</li>
+<li>Linguistics Pro</li>
+<li>Linux Biolinum O</li>
+<li>Linux Libertine Display O</li>
+<li>Linux Libertine O</li>
+<li>Mint Spirit</li>
+<li>Mint Spirit No2</li>
+<li>monofur</li>
+<li>MPH 2B Damase</li>
+<li>NewComputerModern08</li>
+<li>NewComputerModern10</li>
+<li>NewComputerModernMono10</li>
+<li>NewComputerModernSans08</li>
+<li>NewComputerModernSans10</li>
+<li>Nimbus Mono</li>
+<li>Nimbus Roman</li>
+<li>Nimbus Sans</li>
+<li>Nimbus Sans Narrow</li>
+<li>Noto Mono</li>
+<li>Noto Sans</li>
+<li>Noto Sans Display</li>
+<li>Noto Sans Mono</li>
+<li>Noto Serif</li>
+<li>Noto Serif Display</li>
+<li>Old Standard</li>
+<li>Old Standard TT</li>
+<li>Open Sans</li>
+<li>Open Sans Condensed</li>
+<li>Open Sans Condensed Light</li>
+<li>Open Sans ExtraBold</li>
+<li>Open Sans Light</li>
+<li>Open Sans SemiBold</li>
+<li>osifont</li>
+<li>Pecita</li>
+<li>Philokalia</li>
+<li>Play</li>
+<li>Radio Stars</li>
+<li>Ricty Diminished</li>
+<li>Ricty Diminished Discord</li>
+<li>Roboto</li>
+<li>Roboto Condensed</li>
+<li>Roboto Mono</li>
+<li>Roboto Slab</li>
+<li>Source Code Pro</li>
+<li>Source Sans Pro</li>
+<li>Source Serif Pro</li>
+<li>STEP</li>
+<li>STIX</li>
+<li>STIX Two Text</li>
+<li>STIXGeneral</li>
+<li>Symbola</li>
+<li>Tempora</li>
+<li>Theano Didot</li>
+<li>Theano Modern</li>
+<li>Theano Old Style</li>
+<li>Times New Roman</li>
+<li>Tinos</li>
+<li>Trebuchet MS</li>
+<li>Tuffy</li>
+<li>Ubuntu</li>
+<li>Ubuntu Condensed</li>
+<li>Ubuntu Mono</li>
+<li>UM Typewriter</li>
+<li>unifur</li>
+<li>Verdana</li>
+<li>Vollkorn</li>
+<li>XCharter</li>
+<li>XITS</li>
+<li>ztm</li></ul>
+<h2><span class="mw-headline" id="Fonts_for_Coptic_Alphabets">Fonts for Coptic Alphabets</span></h2>
+<ul><li>Analecta</li>
+<li>FreeSerif</li>
+<li>Noto Sans Coptic</li>
+<li>Sophia Nubian</li></ul>
+<h2><span id="Fonts_for_Ethiopic_.28Amharic.29"></span><span class="mw-headline" id="Fonts_for_Ethiopic_(Amharic)">Fonts for Ethiopic (Amharic)</span></h2>
+<ul><li>Abyssinica SIL</li>
+<li>Ethiopia Jiret</li>
+<li>Ethiopic Fantuwua</li>
+<li>Ethiopic Hiwua</li>
+<li>Ethiopic Tint</li>
+<li>Ethiopic WashRa Bold</li>
+<li>Ethiopic WashRa SemiBold</li>
+<li>Ethiopic Wookianos</li>
+<li>Ethiopic Yebse</li>
+<li>Ethiopic Yigezu Bisrat Goffer</li>
+<li>Ethiopic Yigezu Bisrat Gothic</li>
+<li>Ethiopic Zelan</li>
+<li>Noto Serif Ethiopic</li>
+<li>Noto Sans Ethiopic</li></ul>
+<h2><span class="mw-headline" id="Indic_Languages">Indic Languages</span></h2>
+<h3><span class="mw-headline" id="Bengali">Bengali</span></h3>
+<ul><li>Ani</li>
+<li>BABEL Unicode</li>
+<li>FreeSans</li>
+<li>FreeSerif</li>
+<li>Jamrul</li>
+<li>Kalpurush</li>
+<li>Likhan</li>
+<li>Lohit Assamese</li>
+<li>Lohit Bengali</li>
+<li>Noto Sans Bengali</li>
+<li>Noto Serif Bengali</li>
+<li>Shimanto</li></ul>
+<h3><span id="Hindi_.28Devanagari_script.29"></span><span class="mw-headline" id="Hindi_(Devanagari_script)">Hindi (Devanagari script)</span></h3>
+<ul><li>Aksharyogini2</li>
+<li>Annapurna SIL</li>
+<li>BABEL Unicode</li>
+<li>Baloo 2</li>
+<li>Chandas</li>
+<li>Eczar</li>
+<li>FreeSans</li>
+<li>FreeSerif</li>
+<li>Gargi</li>
+<li>Gotu</li>
+<li>IBM Plex Sans Devanagari</li>
+<li>Jaini</li>
+<li>Jaini Purva</li>
+<li>Kalimati</li>
+<li>Lohit Devanagari</li>
+<li>Lohit Marathi</li>
+<li>Lohit Nepali</li>
+<li>Modak</li>
+<li>Mukta</li>
+<li>Nakula</li>
+<li>Noto Sans Devanagari</li>
+<li>Noto Serif Devanagari</li>
+<li>Sahadeva</li>
+<li>Samanata</li>
+<li>Samyak Devanagari</li>
+<li>Sarai</li>
+<li>Shobhika</li></ul>
+<h3><span class="mw-headline" id="Malayalam">Malayalam</span></h3>
+<ul><li>AnjaliOldLipi</li>
+<li>Chilanka</li>
+<li>FreeSans</li>
+<li>FreeSerif</li>
+<li>Gayathri</li>
+<li>Karumbi</li>
+<li>Keraleeyam</li>
+<li>Lohit Malayalam</li>
+<li>Manjari</li>
+<li>Meera</li>
+<li>Noto Sans Malayalam</li>
+<li>Noto Serif Malayalam</li>
+<li>Rachana</li>
+<li>RaghuMalayalamSans</li>
+<li>RIT-Sundar</li>
+<li>Samyak Malayalam</li>
+<li>Suruma</li>
+<li>Uroob</li></ul>
+<h3><span class="mw-headline" id="Sinhala">Sinhala</span></h3>
+<ul><li>FreeSerif</li>
+<li>Noto Sans Sinhala</li>
+<li>Noto Serif Sinhala</li></ul>
+<h3><span class="mw-headline" id="Tamil">Tamil</span></h3>
+<ul><li>FreeSerif</li>
+<li>Hind Madurai</li>
+<li>Karla Tamil Inclined</li>
+<li>Karla Tamil Upright</li>
+<li>Lohit Tamil</li>
+<li>Lohit Tamil Classical</li>
+<li>Meera Inimai</li>
+<li>Noto Sans Tamil</li>
+<li>Noto Serif Tamil</li>
+<li>Noto Serif Tamil Slanted</li>
+<li>Samyak Tamil</li>
+<li>TAMu_Kadambri</li>
+<li>TAMu_Kalyani</li>
+<li>TSCu_Paranar</li></ul>
+<h3><span class="mw-headline" id="Telugu">Telugu</span></h3>
+<ul><li>LakkiReddy</li>
+<li>Lohit Telugu</li>
+<li>Noto Sans Telugu</li>
+<li>Noto Serif Telugu</li>
+<li>Ponnala</li>
+<li>Pothana2000</li>
+<li>RaviPrakash</li>
+<li>Vemana2000</li></ul>
+<h2><span class="mw-headline" id="Fonts_for_Thai">Fonts for Thai</span></h2>
+<ul><li>Arundina Sans</li>
+<li>Arundina Sans Mono</li>
+<li>Arundina Serif</li>
+<li>Caslon</li>
+<li>FreeSerif</li>
+<li>Garuda</li>
+<li>IBM Plex Sans Thai</li>
+<li>IBM Plex Sans Thai Looped</li>
+<li>Kinnari</li>
+<li>Laksaman</li>
+<li>Loma</li>
+<li>Norasi</li>
+<li>Noto Sans Thai</li>
+<li>Noto Serif Thai</li>
+<li>Purisa</li>
+<li>Sawasdee</li>
+<li>Tlwg Mono</li>
+<li>Tlwg Typewriter</li>
+<li>Tlwg Typist</li>
+<li>Tlwg Typo</li>
+<li>Umpush</li>
+<li>Waree</li></ul>
+<h2><span class="mw-headline" id="Fonts_for_Myanmar">Fonts for Myanmar</span></h2>
+<ul><li>Noto Sans Myanmar</li>
+<li>Noto Serif Myanmar</li>
+<li>Padauk</li>
+<li>Padauk Book</li></ul>
+<p><br />
+</p>
+<h2><span id="Fonts_for_Khmer_.28Cambodian.29"></span><span class="mw-headline" id="Fonts_for_Khmer_(Cambodian)">Fonts for Khmer (Cambodian)</span></h2>
+<ul><li>Khmer Busra</li>
+<li>Khmer Mondulkiri</li>
+<li>Khmer OS</li>
+<li>Khmer OS Battambang</li>
+<li>Khmer OS Bokor</li>
+<li>Khmer OS Content</li>
+<li>Khmer OS Fasthand</li>
+<li>Khmer OS Freehand</li>
+<li>Khmer OS Metal Chrieng</li>
+<li>Khmer OS Muol</li>
+<li>Khmer OS Muol Light</li>
+<li>Khmer OS Muol Pali</li>
+<li>Khmer OS Siemreap</li>
+<li>Khmer OS System</li>
+<li>Khmer Oureang</li>
+<li>Khmer Ratanakiri</li>
+<li>Noto Sans Khmer</li>
+<li>Noto Serif Khmer</li></ul>
+<h2><span class="mw-headline" id="Fonts_for_Tibetan">Fonts for Tibetan</span></h2>
+<ul><li>DDC Uchen</li>
+<li>Jomolhari</li>
+<li>Monlam Uni Chouk</li>
+<li>Monlam Uni Choukmatik</li>
+<li>Monlam Uni Dutsa1</li>
+<li>Monlam Uni Dutsa2</li>
+<li>Monlam Uni OuChan1</li>
+<li>Monlam Uni OuChan2</li>
+<li>Monlam Uni OuChan3</li>
+<li>Monlam Uni OuChan4</li>
+<li>Monlam Uni OuChan5</li>
+<li>Monlam Uni PayTsik</li>
+<li>Monlam Uni Sans Serif</li>
+<li>Monlam Uni TikTong</li>
+<li>Monlam Uni Tikrang</li>
+<li>Noto Serif Tibetan</li>
+<li>Tibetan Machine Uni</li></ul>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../Lists.html" title="Lists">Lists</a></li>
+<li><a href="../Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../Operators.html" title="Operators">Operators</a></li>
+<li><a href="../Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../Tables.html" title="Tables">Tables</a></li>
+<li><a href="../Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../French.html" title="French">French</a></li>
+<li><a href="../German.html" title="German">German</a></li>
+<li><a href="../Greek.html" title="Greek">Greek</a></li>
+<li><a href="../Italian.html" title="Italian">Italian</a></li>
+<li><a href="../Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../Korean.html" title="Korean">Korean</a></li>
+<li><a href="../Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../Russian.html" title="Russian">Russian</a></li>
+<li><a href="../Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../Indices.html" title="Indices">Indices</a></li>
+<li><a href="../Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="../Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../Counters.html" title="Counters">Counters</a></li>
+<li><a href="../Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../Commands.html" title="Commands">Commands</a></li>
+<li><a href="../Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="../Tutorials.html">Tutorials</a></li><li><a href="../Inserting_Images.html">How to insert images</a></li><li><a href="../Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Which_OTF_or_TTF_fonts_are_supported_via_fontspec_.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==" src="../../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="ZANBbJWYg3y2FWb8cUCv0Q==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:58:50 GMT -->
+</html>

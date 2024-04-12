@@ -1,0 +1,883 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Chess_notation by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:55:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Chess notation - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Chess notation"><meta name="og:title" content="Chess notation"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="Chess_notation.html"><link rel="stylesheet" href="../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Chess_notation.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Chess_notation" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Chess_notation" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Chess_notation" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Chess_notation" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Chess_notation" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Chess_notation" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Chess_notation" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Chess_notation" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Chess_notation" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Chess_notation" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Chess_notation" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Chess_notation" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Chess_notation" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Chess_notation" hreflang="ja"><link rel="preload" href="../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="+b871RcjLowCF203gXQRSQ=="><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="yDl5Qrdr-zwwQz2zkYuRphwP8sIPVaxOiKg4"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Chess_notation&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Chess_notation&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Chess notation</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#One_package_to_rule_them_all"><span class="tocnumber">2</span> <span class="toctext">One package to rule them all</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Some_notes"><span class="tocnumber">2.1</span> <span class="toctext">Some notes</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Minimal_xskak_example"><span class="tocnumber">2.2</span> <span class="toctext">Minimal xskak example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Chess_conventions:_a_brief_review"><span class="tocnumber">3</span> <span class="toctext">Chess conventions: a brief review</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Portable_Game_Notation"><span class="tocnumber">3.1</span> <span class="toctext">Portable Game Notation</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Chess_board_ranks_and_files"><span class="tocnumber">3.2</span> <span class="toctext">Chess board ranks and files</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Algebraic_notation"><span class="tocnumber">3.3</span> <span class="toctext">Algebraic notation</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Notation_for_chess_pieces"><span class="tocnumber">3.4</span> <span class="toctext">Notation for chess pieces</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Notation_for_an_individual_move"><span class="tocnumber">3.5</span> <span class="toctext">Notation for an individual move</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Three_dots_(...)_black_piece_move_indication"><span class="tocnumber">3.5.1</span> <span class="toctext">Three dots (...) black piece move indication</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Convention_for_a_series_of_moves"><span class="tocnumber">3.6</span> <span class="toctext">Convention for a series of moves</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Other_chess_notations:_FAN_and_FEN"><span class="tocnumber">3.7</span> <span class="toctext">Other chess notations: FAN and FEN</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="#Figurine_Algebraic_Notation_(or_FAN)"><span class="tocnumber">3.7.1</span> <span class="toctext">Figurine Algebraic Notation (or FAN)</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Forsyth-Edwards_Notation_(FEN)"><span class="tocnumber">3.7.2</span> <span class="toctext">Forsyth-Edwards Notation (FEN)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#A_first_example_with_the_xskak_package"><span class="tocnumber">4</span> <span class="toctext">A first example with the xskak package</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Making_your_moves"><span class="tocnumber">4.1</span> <span class="toctext">Making your moves</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Introducing_the_\chessboard_command"><span class="tocnumber">4.2</span> <span class="toctext">Introducing the \chessboard command</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Additional_xskak_examples"><span class="tocnumber">5</span> <span class="toctext">Additional xskak examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#Text_comments"><span class="tocnumber">5.1</span> <span class="toctext">Text comments</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Initializing_a_board_using_FEN_notation"><span class="tocnumber">5.2</span> <span class="toctext">Initializing a board using FEN notation</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Using_\lastmove"><span class="tocnumber">5.3</span> <span class="toctext">Using \lastmove</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Variations_and_an_example_of_the_..._notation"><span class="tocnumber">5.4</span> <span class="toctext">Variations and an example of the ... notation</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Showing_only_certain_chess_pieces"><span class="tocnumber">5.5</span> <span class="toctext">Showing only certain chess pieces</span></a>
+<ul>
+<li class="toclevel-3 tocsection-25"><a href="#Using_keys_to_hide_certain_fields"><span class="tocnumber">5.5.1</span> <span class="toctext">Using keys to hide certain fields</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#Using_keys_to_hide_all_white_or_all_black_pieces"><span class="tocnumber">5.5.2</span> <span class="toctext">Using keys to hide all white or all black pieces</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="#Further_examples_from_tex.stackexchange"><span class="tocnumber">6</span> <span class="toctext">Further examples from tex.stackexchange</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="#How_to_highlight_squares?"><span class="tocnumber">6.1</span> <span class="toctext">How to highlight squares?</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Creating_different_board_styles"><span class="tocnumber">6.2</span> <span class="toctext">Creating different board styles</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-30"><a href="#Further_reading"><span class="tocnumber">7</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>This article explores the basics of chess typesetting, including <a href="#Chess_conventions:_a_brief_review">brief reviews/summaries of some chess conventions</a> that you might encounter in LaTeX chess package documentation. Readers who don't need that introductory material can jump straight to the <a href="#A_first_example_with_the_xskak_package">LaTeX package examples</a>.
+</p>
+<h2><span class="mw-headline" id="One_package_to_rule_them_all">One package to rule them all</span></h2>
+<p>The CTAN repository lists a number of <a rel="nofollow" class="external text" href="https://ctan.org/search?phrase=chess&amp;ext=false&amp;_PKG=&amp;PKG=on&amp;_AUTHORS=&amp;AUTHORS=on&amp;_TOPICS=&amp;TOPICS=on&amp;_FILES=&amp;_PORTAL=&amp;PORTAL=on&amp;wildcard=on&amp;max=32">chess-related packages</a>, so you may be wondering which one to choose? This article uses the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/xskak?lang=en"><code>xskak</code> package</a>, which is highly recommended for typesetting chess due to its wide range of features, extensive configuration options and excellent documentation. <code>xskak</code> loads and extends the original <a rel="nofollow" class="external text" href="https://ctan.org/pkg/skak?lang=en"><code>skak</code> package</a> and also loads the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/chessboard?lang=en"><code>chessboard</code> package</a> which provides a huge range of options to configure and create chess boards. 
+</p><p>The examples provided by this article cannot substitute for the <em>excellent</em> documentation accompanying the  <a rel="nofollow" class="external text" href="https://texdoc.org/serve/xskak/0"><code>xskak</code></a> and <a rel="nofollow" class="external text" href="https://texdoc.org/serve/chessboard/0"><code>chessboard</code></a> packages, which we strongly encourage you to browse, review and explore because both sets of documentation contain numerous, and very helpful, examples. 
+</p><p><strong>Note</strong>: Both <code>skak</code> and <code>xskak</code> can parse and typeset chess games in (a subset of) the <a href="#Portable_Game_Notation">Portable Game Notation (PGN)</a>. <code>xskak</code> extends the subset of PGN supported by <code>skak</code>.
+</p><p><strong>Trivia</strong>: skak is the Danish word for chess.
+</p>
+<h3><span class="mw-headline" id="Some_notes">Some notes</span></h3>
+<p>Here are some important points noted in the <code>xskak</code> documentation:
+</p>
+<blockquote>
+<p><code>xskak</code> will load the package <code>skak</code> without option (and won’t pass options to it). So, if you want to load <code>skak</code> with options, you
+must do it before loading the package <code>xskak</code>.
+</p>
+</blockquote><p class="mw-empty-elt"></p>
+<blockquote>
+<p><code>xskak</code> is an extension (and not a replacement) the <strong>main work is still done by the package <code>skak</code></strong>... please read first the documentation of the package <code>skak</code>...
+</p>
+</blockquote>
+<ul><li><strong>Note</strong>: Among the chess-related packages <a rel="nofollow" class="external text" href="https://ctan.org/search?phrase=chess&amp;ext=false&amp;_PKG=&amp;PKG=on&amp;_AUTHORS=&amp;AUTHORS=on&amp;_TOPICS=&amp;TOPICS=on&amp;_FILES=&amp;_PORTAL=&amp;PORTAL=on&amp;wildcard=on&amp;max=32">listed on CTAN</a> is one called  <a rel="nofollow" class="external text" href="https://ctan.org/pkg/skaknew"><code>skaknew</code></a>. Despite its name, the <code>skaknew</code> package is <em>not</em> a new or enhanced version of the original <code>skak</code> package: it is set of Type 1 chess fonts. The <code>xskak</code> package utilizes the <code>skaknew</code> fonts so there's no need for you to manually load them into your project.</li></ul>
+<h3><span class="mw-headline" id="Minimal_xskak_example">Minimal <code>xskak</code> example</span></h3>
+<p>To "set the scene", and without further explanation, here is a minimal <code>xskak</code> package example that typesets two chess boards: one is empty, the other has all the chess pieces in their initial positions: 
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="c">% Note: you only need to load xskak,</span>
+<span class="c">% not the skak or chessboard packages.</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="c">% This \chessboard command draws </span>
+<span class="c">% an empty chess board: the option</span>
+<span class="c">% showmover=false will be discussed</span>
+<span class="c">% later in the article</span>
+<span class="k">\chessboard</span><span class="na">[showmover=false]</span>
+<span class="c">% The \newchessgame command </span>
+<span class="c">% initializes a new game:</span>
+<span class="k">\newchessgame</span>
+<span class="c">% Because a new game was initialized, </span>
+<span class="c">% \chessboard now draws a </span>
+<span class="c">% board with chess pieces:</span>
+<span class="k">\chessboard</span>
+The small white square to the right of the second board is called the <span class="k">\textit</span><span class="nb">{</span>mover<span class="nb">}</span>.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=A+basic+xskak+package+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%25+Note%3A+you+only+need+to+load+xskak%2C%0A%25+not+the+skak+or+chessboard+packages.%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%25+This+%5Cchessboard+command+draws+%0A%25+an+empty+chess+board%3A+the+option%0A%25+showmover%3Dfalse+will+be+discussed%0A%25+later+in+the+article%0A%5Cchessboard%5Bshowmover%3Dfalse%5D%0A%25+The+%5Cnewchessgame+command+%0A%25+initializes+a+new+game%3A%0A%5Cnewchessgame%0A%25+Because+a+new+game+was+initialized%2C+%0A%25+%5Cchessboard+now+draws+a+%0A%25+board+with+chess+pieces%3A%0A%5Cchessboard%0AThe+small+white+square+to+the+right+of+the+second+board+is+called+the+%5Ctextit%7Bmover%7D.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This <code>xskak</code> example produces the following output: 
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/5FG6X4yXaTYe55cP08Ne6X/fe56303c3bfda03e14173421b01e3751/introdemo---plain.svg" />
+
+</p>
+<h2><span class="mw-headline" id="Chess_conventions:_a_brief_review">Chess conventions: a brief review</span></h2>
+<p>For the benefit of readers new to chess, especially typesetting it, the following sections provide <em>brief</em> introductions to topics and conventions you will encounter within LaTeX chess packages and their accompanying documentation. Readers familiar with chess conventions can skip these sections and jump to the LaTeX examples.
+</p>
+<h3><span class="mw-headline" id="Portable_Game_Notation">Portable Game Notation</span></h3>
+<p>The skak and xskak packages support a subset of the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Portable_Game_Notation">Portable Game Notation</a> (PGN), a standard which was invented circa 1994 by <a rel="nofollow" class="external text" href="https://www.chessprogramming.org/Steven_Edwards">Steven Edwards</a>. The original PGN specification, dated 1994, is <a rel="nofollow" class="external text" href="https://archive.org/details/pgn-standard-1994-03-12">available on archive.org</a>. A direct link to the standard is <a rel="nofollow" class="external text" href="https://tim-mann.org/Standard">https://tim-mann.org/Standard</a>. 
+</p><p>According to <a rel="nofollow" class="external text" href="https://tim-mann.org/Standard">the text of the PGN standard</a>:
+</p>
+<blockquote>
+<p>PGN is "Portable Game Notation", a standard designed for the representation of
+chess game data using ASCII text files.  PGN is structured for easy reading and
+writing by human users and for easy parsing and generation by computer
+programs... PGN is proposed as a universal portable representation for data
+interchange.
+</p>
+</blockquote>
+<p>Note that PGN files are designed for the <em>interchange of <strong>game</strong> data</em>; i.e., PGN files are designed to contain <em>complete game</em> information—such as the name of the players, details of the event/date etc., together with a record, in algebraic notation, of <em>all moves</em> in the game.
+</p><p><strong>Note</strong>: For another short introduction to PGN visit <a rel="nofollow" class="external text" href="http://www.enpassant.dk/chess/palview/p3manual/p3pgn.htm">http://www.enpassant.dk/chess/palview/p3manual/p3pgn.htm</a>
+</p>
+<h3><span class="mw-headline" id="Chess_board_ranks_and_files">Chess board ranks and files</span></h3>
+<p>A chess board is an 8×8 grid of squares which could, normally, be described as 8 horizontal rows and 8 vertical columns; however, a different terminology is used to describe a chess board:
+</p>
+<ul><li>there are 8 horizontal <strong><em>ranks</em></strong> (instead of rows)</li>
+<li>there are 8 vertical <strong><em>files</em></strong> (instead of columns)</li></ul>
+<p>Each square on the chess board can be identified (named) using <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Chessboard#Board_notation">several conventions</a> but the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Algebraic_notation_(chess)">algebraic notation</a> (coordinate system) is the accepted international standard.
+</p>
+<h3><span class="mw-headline" id="Algebraic_notation">Algebraic notation</span></h3>
+<p>Within the algebraic notation system the ranks and files are labelled as follows: 
+</p>
+<ul><li>the 8 horizontal <strong><em>ranks</em></strong> are labelled using the numbers <code>1</code> to <code>8</code></li>
+<li>the 8 vertical <strong><em>files</em></strong> are labelled using the letters <code>a</code> to <code>h</code>.</li></ul>
+<p>The next diagram shows a chess board with the algebraic notation labels used for the files and ranks:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/61Mdmllzex3fhcm8GOguCq/2f3fc7c47f80a36a12daba43d33d2590/basicboard-plain.svg" />
+
+</p><p>Each square on the chess board is at the intersection of a particular file (column) and rank (row): the corresponding file and rank value can be used as coordinates to uniquely identify each square for use in describing the location and movement of chess pieces.
+</p><p>By way of example, the following diagram shows the square located at <strong>e7</strong> followed by a second chess board which enumerates the location of all 64 squares:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/1o6nA83Wga4rVRZDgzepzl/0ebb1747287a3a3ae84227126a385ad1/rankandfile-plain.svg" />
+
+</p><p>If you are new to chess, the Wikipedia page <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Algebraic_notation_(chess)">Algebraic notation</a> contains some useful background information, some of which we summarize below.
+</p>
+<h3><span class="mw-headline" id="Notation_for_chess_pieces">Notation for chess pieces</span></h3>
+<p>Each chess piece type, usually excepting pawns, is identified by an uppercase letter which can vary according the language being used. English-speaking players use the following letters:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Letter</th>
+<th>Pieces
+</th></tr>
+<tr>
+<td>K</td>
+<td>King
+</td></tr>
+<tr>
+<td>Q</td>
+<td>Queen
+</td></tr>
+<tr>
+<td>R</td>
+<td>Rook
+</td></tr>
+<tr>
+<td>B</td>
+<td>Bishop
+</td></tr>
+<tr>
+<td>N</td>
+<td>Knight
+</td></tr>
+</tbody></table>
+<p>In standard algebraic notation pawns are not <em>usually</em> identified by an uppercase letter; instead, they are recognizable by the <em>absence</em> of an uppercase letter. However, that convention is not always adopted; the uppercase letter P may be used to identify pawns. In <a href="#Forsyth-Edwards_Notation_(FEN)">Forsyth-Edwards Notation (FEN)</a> uppercase and lowercase letters are used to represent chess pieces.
+</p>
+<h3><span class="mw-headline" id="Notation_for_an_individual_move">Notation for an <em>individual</em> move</span></h3>
+<p>To record the movement of a chess-piece you need to identify the piece and its destination square. That can be achieved by using the piece's uppercase letter plus the coordinates of the destination square. 
+</p><p><strong>Note</strong>: when describing a pawn move, a letter indicating the piece is a pawn is not <em>usually</em> used; only the destination square is <em>usually</em> given, as shown in the following examples:
+</p>
+<ul><li><em>non-pawn</em> moves:
+<ul><li><strong>Be5</strong>: <strong>B</strong>ishop moves to square <strong>e5</strong></li>
+<li><strong>Nf3</strong>: k<strong>N</strong>night moves to square <strong>f3</strong></li></ul></li>
+<li><em>pawn</em> moves:
+<ul><li><strong>c5</strong>: a pawn moves to square <strong>c5</strong></li>
+<li><strong>Note</strong>: in certain circumstances (e.g., some LaTeX commands) pawns <em>are identified</em> by uppercase letter <strong>P</strong>; so <strong>c5</strong> might be written <strong>Pc5</strong>.</li></ul></li></ul>
+<h4><span id="Three_dots_.28....29_black_piece_move_indication"></span><span class="mw-headline" id="Three_dots_(...)_black_piece_move_indication">Three dots (...) black piece move indication</span></h4>
+<p>Section 8.2.2.2 of the <a rel="nofollow" class="external text" href="https://tim-mann.org/Standard">Portable Game Notation standard</a> explains the use of three dots (...) after a move number indicator (e.g.,  <strong>3...e6</strong>):
+</p>
+<blockquote>
+<p>A white move number indication is formed from the integer giving the 
+fullmove number with a single period character appended.  A black 
+move number indication is formed from the integer giving the fullmove 
+number with <em><strong>three period characters appended</strong></em>.
+</p>
+</blockquote>
+<h3><span class="mw-headline" id="Convention_for_a_series_of_moves">Convention for a <em>series</em> of moves</span></h3>
+<p>As explained in the Wikipedia article on <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Algebraic_notation_(chess)#Formatting">Algebraic notation</a>, to describe a series of moves:
+</p>
+<ul><li>each individual move <em>usually</em> uses uppercase letters for non-pawn pieces, although, as noted above, in some circumstances (conventions) a capital P might be used to indicate a pawn move.</li>
+<li>a series of chess moves is a sequence of <code>&lt;white piece move&gt; &lt;black piece move&gt;</code> pairs—note that each move pair is numbered (see example below)</li></ul>
+<h3><span class="mw-headline" id="Other_chess_notations:_FAN_and_FEN">Other chess notations: FAN and FEN</span></h3>
+<h4><span id="Figurine_Algebraic_Notation_.28or_FAN.29"></span><span class="mw-headline" id="Figurine_Algebraic_Notation_(or_FAN)">Figurine Algebraic Notation (or FAN)</span></h4>
+<p>Language-specific letters used to represent chess pieces are often replaced by universally recognized symbols representing chess pieces. This symbolic representation is known as Figurine Algebraic Notation, or FAN. For example, the symbol ♞ (or ♘) can be used in place of N (for kNight). 
+</p><p>The Unicode specification encodes chess characters within the <a rel="nofollow" class="external text" href="https://www.unicode.org/charts/PDF/U2600.pdf">Miscellaneous Symbols set</a>. The following table lists the Unicode value, name, and representative symbol for each chess character—the actual glyphs (character designs) used to display the chess symbols will depend on your device/browser fonts settings.
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Representative symbol<br /> (glyph)
+</th>
+<th>Unicode value<br /> (in HEX)
+</th>
+<th>Unicode character name<br /> (formal)
+</th></tr>
+<tr>
+<td>♔
+</td>
+<td>2654
+</td>
+<td>WHITE CHESS KING
+</td></tr>
+<tr>
+<td>♕
+</td>
+<td>2655
+</td>
+<td>WHITE CHESS QUEEN
+</td></tr>
+<tr>
+<td>♖
+</td>
+<td>2656
+</td>
+<td>WHITE CHESS ROOK
+</td></tr>
+<tr>
+<td>♗
+</td>
+<td>2657
+</td>
+<td>WHITE CHESS BISHOP
+</td></tr>
+<tr>
+<td>♘
+</td>
+<td>2658
+</td>
+<td>WHITE CHESS KNIGHT
+</td></tr>
+<tr>
+<td>♙
+</td>
+<td>2659
+</td>
+<td>WHITE CHESS PAWN
+</td></tr>
+<tr>
+<td>♚
+</td>
+<td>265A
+</td>
+<td>BLACK CHESS KING
+</td></tr>
+<tr>
+<td>♛
+</td>
+<td>265B
+</td>
+<td>BLACK CHESS QUEEN
+</td></tr>
+<tr>
+<td>♜
+</td>
+<td>265C
+</td>
+<td>BLACK CHESS ROOK
+</td></tr>
+<tr>
+<td>♝
+</td>
+<td>265D
+</td>
+<td>BLACK CHESS BISHOP
+</td></tr>
+<tr>
+<td>♞
+</td>
+<td>265E
+</td>
+<td>BLACK CHESS KNIGHT
+</td></tr>
+<tr>
+<td>♟
+</td>
+<td>265F
+</td>
+<td>BLACK CHESS PAWN
+</td></tr>
+</tbody></table>
+<h4><span id="Forsyth-Edwards_Notation_.28FEN.29"></span><span class="mw-headline" id="Forsyth-Edwards_Notation_(FEN)">Forsyth-Edwards Notation (FEN)</span></h4>
+<p>As noted, PGN is used for the storage and interchange of <em>entire games</em>, including all moves played in that game. By contrast, the <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Forsyth–Edwards_Notation">Forsyth-Edwards Notation (FEN)</a> provides a snapshot of a game at some point in time. FEN notation makes use of uppercase and lowercase letters to represent chess pieces:
+</p>
+<ul><li>white pieces are identified by uppercase letters (PNBRQK)</li>
+<li>black pieces are identified by lowercase letters (pnbrqk)</li></ul>
+<p>where P is for a white pawn and p is for a black pawn. 
+</p><p>A detailed discussion of FEN, and comparing it to PGN, is outside the scope of this article. Readers wanting to better understand the differences between PGN and FEN may wish to explore the following video:
+</p><p class="mw-empty-elt">
+</p><div style="max-width:800px">
+<iframe src="https://www.youtube.com/embed/3PvmsmqKF_I" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<p class="mw-empty-elt"></p>
+<h2><span class="mw-headline" id="A_first_example_with_the_xskak_package">A first example with the <code>xskak</code> package</span></h2>
+<h3><span class="mw-headline" id="Making_your_moves">Making your moves</span></h3>
+<p>To typeset chess moves as the game progresses you use the command <code>\mainline{<em>list of moves</em>}</code> where <code><em>list of moves</em></code> is expressed in <a href="#Algebraic_notation">algebraic chess notation</a>. We'll demonstrate typesetting the following sequence of moves:
+</p>
+<ol><li><strong>e4 e5</strong>: white pawn moves to <strong>e4</strong>, black pawn moves to <strong>e5</strong></li>
+<li><strong>Nf3 Nc6</strong>: white k<strong>N</strong>ight moves to <strong>f3</strong>, black k<strong>N</strong>ight moves to <strong>c6</strong></li>
+<li><strong>Bb5 a6</strong>: white <strong>B</strong>ishop moves to <strong>b5</strong>, black pawn moves to <strong>a6</strong></li></ol>
+<p>This sequence of moves can be written using the <a rel="nofollow" class="external text" href="https://ctan.org/pkg/xskak?lang=en"><code>xskak</code> package</a> command <code>\mainline{1.e4 e5 2.Nf3 Nc6 3.Bb5 a6}</code>—note that each move–pair is numbered (e.g., <code><strong>1.</strong>e4 e5</code>):
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newchessgame</span>
+<span class="k">\mainline</span><span class="nb">{</span>1.e4 e5 2.Nf3 Nc6 3.Bb5 a6<span class="nb">}</span>
+<span class="k">\showboard</span> <span class="c">% A skak package command. Future examples will use \chessboard[...]</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=First+xskak+package+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewchessgame%0A%5Cmainline%7B1.e4+e5+2.Nf3+Nc6+3.Bb5+a6%7D%0A%5Cshowboard+%25+A+skak+package+command.+Future+examples+will+use+%5Cchessboard%5B...%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This <code>xskak</code> example produces the following output: 
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/2W6PU7XKT87c5IWnzfHxyL/3d03217cd8ff7fc9669ae3a4b37a33c7/Firstxskakexample-plain.svg" />
+
+</p><p>The following commands are used:
+</p>
+<ul><li><strong><code>\newchessgame[〈key=value list〉]</code></strong>: starts a new game and initializes the chess board. The <code>[〈key=value list〉]</code> is optional so you can also write <code>\newchessgame</code> and rely on the default board setup. The set of  optional keys is listed is the <a rel="nofollow" class="external text" href="https://texdoc.org/serve/xskak/0"><code>xskak</code> documentation</a>.</li></ul>
+<ul><li><strong><code>\mainline{〈list of chess moves〉}</code></strong>: processes the <code>〈list of chess moves〉</code> and updates the board so that <code>\showboard</code> (or <code>\chessboard</code>) typesets the board's current status.</li></ul>
+<ul><li><strong><code>\showboard</code></strong>: typesets the chess board. The <code>\showboard</code> command originates from the underlying <code>skak</code> package, which <code>xskak</code> extends. The <a rel="nofollow" class="external text" href="https://ctan.org/pkg/chessboard?lang=en"><code>chessboard</code> package</a>, which is loaded by <code>xskak</code>, provides the very versatile <strong><code>\chessboard[〈key=value list〉]</code></strong> command to which the <code>xskak</code> package adds additional keys. Because <code>\chessboard[...]</code> is intended to replace <code>\showboard</code>, future examples in this article will only use the <code>\chessboard[...]</code> command.</li></ul>
+<h3><span id="Introducing_the_.5Cchessboard_command"></span><span class="mw-headline" id="Introducing_the_\chessboard_command">Introducing the <code>\chessboard</code> command</span></h3>
+<p>The command <strong><code>\chessboard[〈key=value list〉]</code></strong>: typesets chess boards using an optional <code>〈key=value list〉</code>. The list of <code>keys</code> available to use is <em>extensive</em>, providing a great deal of control over the size, content, layout, design, annotation etc of chess boards. Readers are encouraged to read the excellent package documentation for <a rel="nofollow" class="external text" href="https://texdoc.org/serve/chessboard/0"><code>chessboard</code> (PDF)</a> and <a rel="nofollow" class="external text" href="https://texdoc.org/serve/xskak/0"><code>xskak</code> (PDF)</a>, both of which contain numerous helpful examples—<em>many</em> more than we can demonstrate in this article.
+</p><p>Because the keys are optional you can write <code>\chessboard</code> which uses package default values to typeset a chess board; for example, the following code typesets two boards using <code>\chessboard</code> without any options. Further annotations, added manually in Inkscape, show the <em>movers</em> (here as squares) that are typeset by default:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newchessgame</span>
+<span class="k">\mainline</span><span class="nb">{</span>1.e4 e5 2.Nf3 Nc6 3.Bb5<span class="nb">}</span>
+<span class="k">\chessboard</span> <span class="c">% instead of \showboard</span>
+
+<span class="k">\newchessgame</span>
+<span class="k">\mainline</span><span class="nb">{</span>1.e4 e5 2.Nf3 Nc6 3.Bb5 a6<span class="nb">}</span>
+<span class="k">\chessboard</span> <span class="c">% instead of \showboard</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=chessboard+command+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewchessgame%0A%5Cmainline%7B1.e4+e5+2.Nf3+Nc6+3.Bb5%7D%0A%5Cchessboard+%25+instead+of+%5Cshowboard%0A%0A%5Cnewchessgame%0A%5Cmainline%7B1.e4+e5+2.Nf3+Nc6+3.Bb5+a6%7D%0A%5Cchessboard+%25+instead+of+%5Cshowboard%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>The following graphic shows the two chess boards produced by the code above, both were typeset using <code>\chessboard</code>:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/3fYBKeWd4A6zHqjVPj6DZ6/5bb8fea0a3e721e5a6e5ebb50eb61d69/moversquares--plain.svg" />
+
+</p><p>Unsurprisingly, various keys are provided to control the mover, including showing or hiding it; for example, to hide the mover you can use the <code>showmover</code> key with a value of <code>false</code>:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newchessgame</span>
+<span class="k">\mainline</span><span class="nb">{</span>1.e4 e5 2.Nf3 Nc6 3.Bb5 a6<span class="nb">}</span><span class="k">\par</span>
+<span class="k">\chessboard</span><span class="na">[showmover=false]</span> <span class="c">% Hide the mover</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Hiding+the+chessboard+mover&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewchessgame%0A%5Cmainline%7B1.e4+e5+2.Nf3+Nc6+3.Bb5+a6%7D%5Cpar%0A%5Cchessboard%5Bshowmover%3Dfalse%5D+%25+Hide+the+mover%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output—a chess board without the mover:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/6X3AzETvGEA7jeQeCV2KEq/37b0a388c6e8216d4a7a9f5b7b27e5cb/nomover--plain.svg" />
+
+</p><p>The <a rel="nofollow" class="external text" href="https://texdoc.org/serve/chessboard/0"><code>chessboard</code> package documentation (PDF)</a> provides a list of keys for customizing the mover, together with a note on how to design your own mover!
+</p>
+<h2><span class="mw-headline" id="Additional_xskak_examples">Additional <code>xskak</code> examples</span></h2>
+<h3><span class="mw-headline" id="Text_comments">Text comments</span></h3>
+<p>The PGN specification supports making comments using braces around the text of the comment: <code>{〈Text〉}</code>; however, the <code>xskak</code> package prefers text comments to be written as <code>\xskakcomment{〈Text〉}</code>, as demonstrated in the following example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newchessgame</span> <span class="c">%Start a new chess game</span>
+<span class="k">\mainline</span><span class="nb">{</span>1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 <span class="k">\xskakcomment</span><span class="nb">{</span> This is a comment. <span class="nb">}}</span><span class="k">\vspace</span><span class="nb">{</span>3mm<span class="nb">}</span>
+
+<span class="k">\chessboard</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=xskak+chess+comment+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewchessgame+%25Start+a+new+chess+game%0A%5Cmainline%7B1.e4+e5+2.Nf3+Nc6+3.Bb5+a6+%5Cxskakcomment%7B+This+is+a+comment.+%7D%7D%5Cvspace%7B3mm%7D%0A%0A%5Cchessboard%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/33pB2aJstrgERvVv4M9DQ9/393f6b396fedf5b2b35d38833b0bf1ca/comment--plain.svg" />
+
+</p>
+<h3><span class="mw-headline" id="Initializing_a_board_using_FEN_notation">Initializing a board using FEN notation</span></h3>
+<p>You can use FEN to start the board in any position. The following example uses the <code>setfen</code> key in a <code>\chessboard</code> command to demonstrate a FEN example taken from the <code>skak</code> package documentation:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newchessgame</span>
+<span class="k">\chessboard</span><span class="na">[setfen=r5k1/1b1p1ppp/p7/1p1Q4/2p1r3/PP4Pq/BBP2b1P/R4R1K w - - 0 20]</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=FEN+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewchessgame%0A%5Cchessboard%5Bsetfen%3Dr5k1%2F1b1p1ppp%2Fp7%2F1p1Q4%2F2p1r3%2FPP4Pq%2FBBP2b1P%2FR4R1K+w+-+-+0+20%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/7o2S5WVlK8uVDnBSst4FC6/39c142b5c48f66233b6216d781446f74/fenboardexample--plain.svg" />
+
+</p><p>The FEN notation populates the board starting with the uppermost rank (number 8) and works downwards to populate subsequent ranks. For example, to initialize the board above rank 8 is described using <strong>r5k1</strong>:
+</p>
+<ul><li><strong>r</strong>ook</li>
+<li><strong>5</strong> empty squares</li>
+<li>the <strong>k</strong>ing</li>
+<li><strong>1</strong> empty square</li></ul>
+<p>hence using the notation <strong>r5k1</strong>. Note the use of lowercase letters to describe black chess pieces together with the use of uppercase <strong>P</strong> for white pawns and lowercase <strong>p</strong> for black pawns.
+</p>
+<h3><span id="Using_.5Clastmove"></span><span class="mw-headline" id="Using_\lastmove">Using \lastmove</span></h3>
+<p>The <code>\lastmove</code> command can be used for commenting on the last move made:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newchessgame</span>
+<span class="k">\mainline</span><span class="nb">{</span>1.e4<span class="nb">}</span>
+
+<span class="k">\chessboard</span>
+
+<span class="k">\lastmove</span><span class="nb">{}</span> is the most common opening move.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=xskak+lastmove+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewchessgame%0A%5Cmainline%7B1.e4%7D%0A%0A%5Cchessboard%0A%0A%5Clastmove%7B%7D+is+the+most+common+opening+move.%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/6XMiIoMZqmBPyyoBXdO2Hy/13573a6662435a44a431effee091bcf2/lastmove--plain.svg" />
+
+</p>
+<h3><span class="mw-headline" id="Variations_and_an_example_of_the_..._notation">Variations and an example of the ... notation</span></h3>
+<p>The following reproduces an example contained in the <code>skak</code> package documentation, updated to use <code>xskak</code> commands. Here, we see an example of the <code>\variation</code> command and the three-dot (...) syntax <a href="#Three_dots_(...)_black_piece_move_indication">used to indicate a black move</a>:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newchessgame</span>
+<span class="k">\mainline</span><span class="nb">{</span>1.e4 e5 2.Nf3 Nc6 3.Bb5<span class="nb">}</span>
+
+<span class="k">\chessboard</span>
+
+<span class="k">\mainline</span><span class="nb">{</span>3...a6<span class="nb">}</span>
+
+A variant <span class="k">\variation</span><span class="nb">{</span>3...Nf6<span class="nb">}</span> is used here to show a <span class="k">\texttt</span><span class="nb">{</span><span class="k">\string\variation</span><span class="nb">}</span> command.
+
+<span class="k">\mainline</span><span class="nb">{</span>4.Ba4<span class="nb">}</span>
+
+<span class="k">\chessboard</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=xskak+variations+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewchessgame%0A%5Cmainline%7B1.e4+e5+2.Nf3+Nc6+3.Bb5%7D%0A%0A%5Cchessboard%0A%0A%5Cmainline%7B3...a6%7D%0A%0AA+variant+%5Cvariation%7B3...Nf6%7D+is+used+here+to+show+a+%5Ctexttt%7B%5Cstring%5Cvariation%7D+command.%0A%0A%5Cmainline%7B4.Ba4%7D%0A%0A%5Cchessboard%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This example produces the following output:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/859o65u6r288qcpfNGYz3/83b5b95d371a8ec25ff0bc0c088d03ca/variation---plain.svg" />
+
+</p>
+<h3><span class="mw-headline" id="Showing_only_certain_chess_pieces">Showing only certain chess pieces</span></h3>
+<p>Because <code>xskak</code> loads the <code>chessboard</code> package you can use the extremely powerful <strong><code>\chessboard[〈key=value list〉]</code></strong> command to show or hide areas of the board, or collections of chess pieces, that are of interest. The <a rel="nofollow" class="external text" href="https://texdoc.org/serve/chessboard/0">chessboard documentation</a> contains numerous examples, such as those reproduced below.
+</p>
+<h4><span class="mw-headline" id="Using_keys_to_hide_certain_fields">Using keys to hide certain fields</span></h4>
+<p>This example uses the keys <code>hideall</code>, <code>showpieces</code> and <code>addpieces</code>:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newchessgame</span>
+<span class="k">\chessboard</span>[hideall,
+showpieces=<span class="nb">{</span>P,p<span class="nb">}</span>,
+addpieces=pe5]
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Showing+selected+pieces+in+xskak+example+1&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewchessgame%0A%5Cchessboard%5Bhideall%2C%0Ashowpieces%3D%7BP%2Cp%7D%2C%0Aaddpieces%3Dpe5%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This <code>xskak</code> example produces the following output:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/3by5p6bpI8t5pLDqXf6mWQ/6d1dd76b5b731a8ea53b7041bb9dda8f/show_pieces_example_1--plain.svg" />
+
+</p><p>This example uses the keys <code>hidefiles</code>, <code>showfiles</code> and <code>showranks</code>:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newchessgame</span>
+<span class="k">\def\myfiles</span><span class="nb">{</span>a,b<span class="nb">}</span>
+<span class="k">\chessboard</span>[hidefiles=<span class="k">\myfiles</span>,
+addpieces=Ra2,
+showfiles=a,
+showranks=2]
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Showing+selected+pieces+in+xskak+example+2&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewchessgame%0A%5Cdef%5Cmyfiles%7Ba%2Cb%7D%0A%5Cchessboard%5Bhidefiles%3D%5Cmyfiles%2C%0Aaddpieces%3DRa2%2C%0Ashowfiles%3Da%2C%0Ashowranks%3D2%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This <code>xskak</code> example produces the following output:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/6GkQ1lyhwVfIFt5TZ6MTPS/7a480c6da902053f79fe15530f346be1/show_pieces_example_2--plain.svg" />
+
+</p>
+<h4><span class="mw-headline" id="Using_keys_to_hide_all_white_or_all_black_pieces">Using keys to hide all white or all black pieces</span></h4>
+<p>The following example demonstrates the keys <code>hidewhite</code> and <code>hideblack</code>:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newchessgame</span>
+<span class="k">\mainline</span><span class="nb">{</span>1.e4 e5 2.Nf3 Nc6<span class="nb">}</span><span class="k">\chessboard</span><span class="na">[hidewhite]</span>
+
+<span class="k">\newchessgame</span>
+<span class="k">\mainline</span><span class="nb">{</span>1.e4 e5 2.Nf3 Nc6<span class="nb">}</span><span class="k">\chessboard</span><span class="na">[hideblack]</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Showing+selected+pieces+in+xskak+example+3&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewchessgame%0A%5Cmainline%7B1.e4+e5+2.Nf3+Nc6%7D%5Cchessboard%5Bhidewhite%5D%0A%0A%5Cnewchessgame%0A%5Cmainline%7B1.e4+e5+2.Nf3+Nc6%7D%5Cchessboard%5Bhideblack%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf</a>
+</p><p class="mw-empty-elt"></p>
+<p>This <code>xskak</code> example produces the following output:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/4eYuiI804gZx816nFUwMyY/21e01000ec211b731235dd142b14113c/show_pieces_example_3--plain.svg" />
+
+</p>
+<h2><span class="mw-headline" id="Further_examples_from_tex.stackexchange">Further examples from tex.stackexchange</span></h2>
+<p>The following examples use solutions found on <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/">tex.stackexchange.com</a>.
+</p>
+<h3><span id="How_to_highlight_squares.3F"></span><span class="mw-headline" id="How_to_highlight_squares?">How to highlight squares?</span></h3>
+<p>Source: based on <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/a/215334">https://tex.stackexchange.com/a/215334</a>
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\newgame</span>
+<span class="k">\chessboard</span>[setfen=8/8/8/3Q4/8/8/8/8 w - - 0 0,
+            pgfstyle=border,markfields=<span class="nb">{</span>d4,d6<span class="nb">}</span>,
+            color=blue!50,
+            colorbackfield=c5,
+            pgfstyle=color,
+            opacity=0.5,
+            color=red,
+            markfield=<span class="nb">{</span>d5<span class="nb">}</span>]
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Highlighting+chess+board+squares&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cnewgame%0A%5Cchessboard%5Bsetfen%3D8%2F8%2F8%2F3Q4%2F8%2F8%2F8%2F8+w+-+-+0+0%2C%0A++++++++++++pgfstyle%3Dborder%2Cmarkfields%3D%7Bd4%2Cd6%7D%2C%0A++++++++++++color%3Dblue%2150%2C%0A++++++++++++colorbackfield%3Dc5%2C%0A++++++++++++pgfstyle%3Dcolor%2C%0A++++++++++++opacity%3D0.5%2C%0A++++++++++++color%3Dred%2C%0A++++++++++++markfield%3D%7Bd5%7D%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+
+<img src="https://images.ctfassets.net/nrgyaltdicpt/7cPISQGLeMfXYhRZs25tNZ/7a80241039b20e62ec2a1abb0ad22986/Highlight_square--plain.svg" />
+
+</p>
+<h3><span class="mw-headline" id="Creating_different_board_styles">Creating different board styles</span></h3>
+<p>Source: based on <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/a/358041">https://tex.stackexchange.com/a/358041</a>
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>xskak<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\storechessboardstyle</span><span class="nb">{</span>4x16<span class="nb">}{</span><span class="c">%</span>
+  maxfield=d16,
+  borderwidth=1mm,
+  color=white,
+  colorwhitebackfields,
+  color=black,
+  colorblackbackfields,
+  blackfieldmaskcolor=black,
+  whitepiececolor=yellow,
+  whitepiecemaskcolor=red,
+  blackpiececolor=cyan,
+  blackpiecemaskcolor=blue,
+  addfontcolors,
+  pgfstyle=border,
+  color=white,
+  markregion=a1-d16,
+  showmover=false,
+  hlabelwidth=18pt,
+  vlabellift=16pt<span class="nb">}</span>
+  <span class="k">\chessboard</span>[
+    style=4x16,
+    setpieces=<span class="nb">{</span>Qa8,Qb4,Qc1,Qd3,Qb16,Qc12,Qa7,Qc15,qa1,qb14,qc11,qd13,qb6,qc2,qa4,qc5<span class="nb">}</span>,
+    padding=1ex,
+  ]
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=Creating+a+custom+chess+board&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%7Bxskak%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cstorechessboardstyle%7B4x16%7D%7B%25%0A++maxfield%3Dd16%2C%0A++borderwidth%3D1mm%2C%0A++color%3Dwhite%2C%0A++colorwhitebackfields%2C%0A++color%3Dblack%2C%0A++colorblackbackfields%2C%0A++blackfieldmaskcolor%3Dblack%2C%0A++whitepiececolor%3Dyellow%2C%0A++whitepiecemaskcolor%3Dred%2C%0A++blackpiececolor%3Dcyan%2C%0A++blackpiecemaskcolor%3Dblue%2C%0A++addfontcolors%2C%0A++pgfstyle%3Dborder%2C%0A++color%3Dwhite%2C%0A++markregion%3Da1-d16%2C%0A++showmover%3Dfalse%2C%0A++hlabelwidth%3D18pt%2C%0A++vlabellift%3D16pt%7D%0A++%5Cchessboard%5B%0A++++style%3D4x16%2C%0A++++setpieces%3D%7BQa8%2CQb4%2CQc1%2CQd3%2CQb16%2CQc12%2CQa7%2CQc15%2Cqa1%2Cqb14%2Cqc11%2Cqd13%2Cqb6%2Cqc2%2Cqa4%2Cqc5%7D%2C%0A++++padding%3D1ex%2C%0A++%5D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>This <code>xskak</code> example produces the following output:
+</p><p>
+<img src="https://images.ctfassets.net/nrgyaltdicpt/5Q54JUEQIFBnBLeMbpCScQ/468c8bf3de4d25f58a92ceda6f4ee660/Custom_chess_board--plain.svg" />
+
+</p>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span></h2>
+<p>For more information see:
+</p>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating a document in LaTeX</a></li>
+<li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning images and tables</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a rel="nofollow" class="external text" href="https://ctan.org/pkg/skak?lang=en">The <code>skak</code> package</a></li>
+<li><a rel="nofollow" class="external text" href="https://ctan.org/pkg/xskak?lang=en">The <code>xskak</code> package</a></li>
+<li><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Algebraic_notation_(chess)">Algebraic notation in chess (on Wikipedia)</a></li>
+<li><a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Forsyth–Edwards_Notation">Forsyth-Edwards Notation (FEN) (on Wikipedia)</a></li>
+<li><a rel="nofollow" class="external text" href="https://ctan.org/pkg/chessboard?lang=en">The <code>chessboard</code> package</a></li>
+<li><a rel="nofollow" class="external text" href="https://tim-mann.org/Standard">Text of the PGN standard</a></li></ul>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="Operators.html" title="Operators">Operators</a></li>
+<li><a href="Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="French.html" title="French">French</a></li>
+<li><a href="German.html" title="German">German</a></li>
+<li><a href="Greek.html" title="Greek">Greek</a></li>
+<li><a href="Italian.html" title="Italian">Italian</a></li>
+<li><a href="Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="Korean.html" title="Korean">Korean</a></li>
+<li><a href="Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="Russian.html" title="Russian">Russian</a></li>
+<li><a href="Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="Indices.html" title="Indices">Indices</a></li>
+<li><a href="Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="Counters.html" title="Counters">Counters</a></li>
+<li><a href="Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="Tutorials.html">Tutorials</a></li><li><a href="Inserting_Images.html">How to insert images</a></li><li><a href="Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Chess_notation.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Chess_notation" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Chess_notation" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Chess_notation" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Chess_notation" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Chess_notation" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Chess_notation" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Chess_notation" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Chess_notation" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Chess_notation" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Chess_notation" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Chess_notation" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Chess_notation" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Chess_notation" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Chess_notation" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==" src="../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="+b871RcjLowCF203gXQRSQ==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Chess_notation by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:55:55 GMT -->
+</html>

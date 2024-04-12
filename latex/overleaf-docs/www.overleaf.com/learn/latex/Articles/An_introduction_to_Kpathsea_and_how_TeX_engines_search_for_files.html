@@ -1,0 +1,934 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:02:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>An introduction to Kpathsea and how TeX engines search for files - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="An introduction to Kpathsea and how TeX engines search for files"><meta name="og:title" content="An introduction to Kpathsea and how TeX engines search for files"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files.html"><link rel="stylesheet" href="../../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" hreflang="ja"><link rel="preload" href="../../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="oXgaJmJmNKu+V/1t600GUw=="><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="kj6PbBGO-58r7u70IJQadToerTheK2uO08Bc"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>An introduction to Kpathsea and how TeX engines search for files</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#TeX_and_platform_independence"><span class="tocnumber">2</span> <span class="toctext">TeX and platform independence</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#TeX_engines_don’t_search_for_files…_really!?"><span class="tocnumber">3</span> <span class="toctext">TeX engines don’t search for files… really!?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Notes_on_LuaTeX"><span class="tocnumber">3.1</span> <span class="toctext">Notes on LuaTeX</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#The_Kpathsea_configuration_file:_texmf.cnf"><span class="tocnumber">3.2</span> <span class="toctext">The Kpathsea configuration file: texmf.cnf</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Kpathsea’s_concept_of_a_“path”"><span class="tocnumber">3.3</span> <span class="toctext">Kpathsea’s concept of a “path”</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Kpathsea:_A_very_brief_overview"><span class="tocnumber">4</span> <span class="toctext">Kpathsea: A very brief overview</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Kpathsea’s_core_purpose"><span class="tocnumber">4.1</span> <span class="toctext">Kpathsea’s core purpose</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Those_“extra_frills”"><span class="tocnumber">4.2</span> <span class="toctext">Those “extra frills”</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Our_OpenType_example_revisited"><span class="tocnumber">4.3</span> <span class="toctext">Our OpenType example revisited</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#$OSFONTDIR//"><span class="tocnumber">4.3.1</span> <span class="toctext">$OSFONTDIR//</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Brief_notes_on_$TEXMF"><span class="tocnumber">4.3.2</span> <span class="toctext">Brief notes on $TEXMF</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#TeX_Directory_Structure"><span class="tocnumber">4.3.3</span> <span class="toctext">TeX Directory Structure</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Kpathsea_file_types"><span class="tocnumber">5</span> <span class="toctext">Kpathsea file types</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Some_Kpathsea_nuances"><span class="tocnumber">5.1</span> <span class="toctext">Some Kpathsea nuances</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="#Debugging_Kpathsea_problems"><span class="tocnumber">5.1.1</span> <span class="toctext">Debugging Kpathsea problems</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#And_finally:_folders,_figure_files_and_latexmkrc"><span class="tocnumber">6</span> <span class="toctext">And finally: folders, figure files and latexmkrc</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#An_aside_on_BibTeX"><span class="tocnumber">6.1</span> <span class="toctext">An aside on BibTeX</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#TEXINPUTS_and_using_nested_folders_for_graphics_files"><span class="tocnumber">6.2</span> <span class="toctext">TEXINPUTS and using nested folders for graphics files</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Using_\graphicspath"><span class="tocnumber">6.3</span> <span class="toctext">Using \graphicspath</span></a>
+<ul>
+<li class="toclevel-3 tocsection-21"><a href="#\graphicspath_and_recursion_(subdirectories)"><span class="tocnumber">6.3.1</span> <span class="toctext">\graphicspath and recursion (subdirectories)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-22"><a href="#Kpathsea_and_TEXINPUTS_(latexmkrc_file_to_the_rescue)"><span class="tocnumber">6.4</span> <span class="toctext">Kpathsea and TEXINPUTS (latexmkrc file to the rescue)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#Table_listing_Kpathsea_“config_variables”"><span class="tocnumber">7</span> <span class="toctext">Table listing Kpathsea “config variables”</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>This article provides an introduction to how TeX engines locate the files needed to typeset your document—using LaTeX or any other macro package. Although Overleaf relieves users from the challenges of managing a TeX installation (<a rel="nofollow" class="external text" href="https://www.tug.org/texlive/">TeX Live</a>), the basics of how TeX engines search for files will be of use/interest if you want to create a folder structure to help manage your Overleaf project.</p>
+<p>Why might that be true? If you store some of your Overleaf project files inside folders then LaTeX might not find those files because, by default, the TeX engine (compiler) might not <em>know</em> that it needs to search those folders—thus won’t find the files they contain. To avoid this, you can create, and add to your project, a configuration file called a <a rel="nofollow" class="external text" href="https://mg.readthedocs.io/latexmk.html#configuration-files">latexmkrc file</a> which can be used to tell a TeX engine that your folders exist and that it should search them.</p>
+<p>If you want to jump into an example showing a latexmkrc file, you can read this help article: <a href="How_to_use_latexmkrc_with_Overleaf.html" class="mw-redirect" title="Articles/How to use latexmkrc with Overleaf: examples and techniques">How to use latexmkrc with Overleaf: examples and techniques</a>. It might not be immediately obvious how, or why, that latexmkrc file actually works. If you’d like to know why and, perhaps, develop a better understanding for use with further configuration possibilities for your project, then read on... At the end of this article we’ll work through a <a href="#Kpathsea_and_TEXINPUTS_(latexmkrc_file_to_the_rescue)">practical example</a>—using our knowledge of how TeX searches for files—to create a latexmkrc file to manage nested folders containing your graphics files.</p>
+<h2><span class="mw-headline" id="TeX_and_platform_independence">TeX and platform independence</span></h2>
+<p>When Knuth created TeX, platform-independence was a central principle guiding its design and implementation and that philosophy is echoed throughout TeX’s internal operations (e.g., using integer arithmetic, “home-grown” string handling, memory management, etc). Even today, the platform independence of modern TeX-based engines still raises questions and debate on public forums; for example, see this discussion on tex.stackexchange:  <a rel="nofollow" class="external text" href="https://tex.stackexchange.com/questions/94297/are-xetex-and-luatex-platform-dependent">Are XeTeX and LuaTeX platform dependent?</a> which contains comments and observations made by a number of well-known TeX experts.</p>
+<p>However, for now let us put to one side the finer details and note that TeX engines do still need to be highly portable—able to work on multiple operating systems and produce “identical” results. A key aspect of portability is searching for files in a platform-independent way.</p>
+<h2><span id="TeX_engines_don.E2.80.99t_search_for_files.E2.80.A6_really.21.3F"></span><span class="mw-headline" id="TeX_engines_don’t_search_for_files…_really!?">TeX engines don’t search for files… really!?</span></h2>
+<p>No, TeX engines don’t <em>directly</em> search for files <em>by themselves</em>. When processing a <code>.tex</code> file a TeX engine might identify the need to open a particular file but it <em>delegates</em> the task of finding it to another piece of software called <a rel="nofollow" class="external text" href="https://tug.org/kpathsea/"><em>Kpathsea</em></a>: an external software library that is not part of the <em>core</em> source code of TeX engines. What Kpathsea provides is, in effect, an API (<a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Application_programming_interface">Application Programming Interface</a>) that TeX engines (plus BibTeX, MetaPost and other applications) can call whenever they need to open a particular file: Kpathsea does the actual work of locating that file.</p>
+<p>When Knuth wrote the original TeX engine—from which all other TeX engines are, ultimately, descended—the problem of finding/opening files was a significant challenge due, in part, to the highly disparate technology ecosystem of that time. In fact, in the source code to TeX Knuth refers to file input/output as the “bane of portability” (see page 12, section 25 of <a rel="nofollow" class="external text" href="https://www.amazon.co.uk/Computers-Typesetting-TeX-Program-TEX/dp/0201134373">TeX: The Program</a>).</p>
+<p>The TeX community recognized the need to harmonize (standardize) file-searching for TeX—<em>and TeX-related software</em>—and decided to provide TeX with the tools to do that. To address the very thorny problem of a platform-independent method for finding files, Karl Berry, a leading member of the TeX community, wrote the software to solve the <em>path</em>-searching problem: a solution he named <a rel="nofollow" class="external text" href="http://tug.org/texinfohtml/kpathsea.html"><strong>Kpathsea</strong></a>—which is derived from <strong>K</strong>arl’s <strong>Path</strong> <strong>Sea</strong>rching (see this <a rel="nofollow" class="external text" href="http://www.tug.org/interviews/berry.html">interview with Karl Berry</a>).</p>
+<p>We can note that it is called K<strong>path</strong>sea and not K<strong>file</strong>sea because, as the <a rel="nofollow" class="external text" href="http://tug.org/texinfohtml/kpathsea.html">documentation</a> notes, it is a <em>path-</em>searching library. It’s important to recognize that Kpathsea is not only used by TeX engines; various TeX-related programs, including BibTeX and MetaPost, also use Kpathsea to search for input files.</p>
+<p>In outline, whenever TeX/LaTeX macros need to open a particular file, the commands from which those macros are constructed will, eventually, be converted into low-level TeX instructions (TeX primitives) that TeX engines actually execute. If those instructions include the need to open a file, the TeX engine will call on Kpathsea saying, in effect, “please find this file”; if that Kpathsea search is successful, the file is opened. However, if Kpathsea cannot locate the file then the TeX engine will be advised of that and will stop execution to issue the infamous error  <code>! I can't find file `...'</code> The truth is that Kpathsea cannot find it.</p>
+<h3><span class="mw-headline" id="Notes_on_LuaTeX">Notes on LuaTeX</span></h3>
+<p>Strictly speaking we should caveat this section by noting that LuaTeX does offer a mechanism for the user to provide their own file-searching code through the use of <em>callbacks</em>. LuaTeX enables users to write functions in the Lua scripting language and register them with LuaTeX so that it will call that user-defined function at certain stages during LuaTeX’s execution—hence the term <em>callbacks</em>. It is a very powerful technique and the interested reader can find more information in Section 9 of <a rel="nofollow" class="external text" href="http://www.pragma-ade.com/general/manuals/luatex.pdf">The LuaTeX Reference Manual</a> (at the time of writing, that link is for LuaTeX 1.09).</p>
+<h3><span class="mw-headline" id="The_Kpathsea_configuration_file:_texmf.cnf">The Kpathsea configuration file: <code>texmf.cnf</code></span></h3>
+<p>Every TeX installation contains a text file called <code>texmf.cnf</code> which is a configuration file used by Kpathsea: it contains numerous “config variables” which define the paths that Kpathsea will use to search for various types of file that TeX engines (or BibTeX, MetaPost etc) might need. As we’ll see below, those “config variables” define search paths constructed from so-called <em>path-elements</em>: using various constructs, variables and parameters to define each path element as a “template” that Kpathsea processes to generate the actual, physical, directories to search.</p>
+<p>Just to give a concrete example, here’s one such config variable which defines the search paths for OpenType fonts—for now, don’t worry about the meaning of this path’s construction:</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>OPENTYPEFONTS = .;$TEXMF/fonts/{opentype,truetype}//;$OSFONTDIR//
+</pre></div>
+<p>All that’s important here is that the file <code>texmf.cnf</code> (read by Kpathsea) defines a config variable called <code>OPENTYPEFONTS</code> which is used to define the path(s) that Kpathsea will use to search for OpenType fonts. The right-hand side of the “=” does not look like any path you see on a typical device because it is constructed using various variables and parameters to define each path as a “template” or “blueprint” that Kpathsea will use to generate real directories to search.</p>
+<h3><span id="Kpathsea.E2.80.99s_concept_of_a_.E2.80.9Cpath.E2.80.9D"></span><span class="mw-headline" id="Kpathsea’s_concept_of_a_“path”">Kpathsea’s concept of a “path”</span></h3>
+<p>Perhaps the central concept to grasp is Kpathsea’s notion of a “path”: the basic construct that Kpathsea uses to work out where a particular file is located. As we saw in the <code>OPENTYPEFONTS</code> example above, Kpathsea’s notion of a path looks very different to paths we’re accustomed to using on our desktop or portable devices.</p>
+<p>To quote from Kpathsea’s <a rel="nofollow" class="external text" href="http://tug.org/texinfohtml/kpathsea.html#Searching-overview">documentation</a>:</p>
+<blockquote>
+<p>... a <em>search path</em> is a colon-separated list of <em>path elements</em>, which are directory names with a few “extra frills”.
+</p>
+</blockquote>
+<p>—but note that a semi-colon (<code>;</code>) is also used to separate <em>path elements</em>. Later, we’ll briefly indicate the nature of some of those “extra frills”.</p>
+<p>In our <code>OPENTYPEFONTS</code> example there are three path elements, each delimited using semi-colon (<code>;</code>):</p>
+<p>
+        <img src="../../../../images.ctfassets.net/nrgyaltdicpt/3E91otZcogGi8uSk4yeMs4/007bdbd22e3e879613f684600d9780e6/pathelements.png" alt="Image showing the path elements contained in a Kpathsea path definition" />
+
+</p>
+<ol>
+<li><code>.</code> (meaning the current directory)</li>
+<li><code>$TEXMF/fonts/{opentype,truetype}//</code></li>
+<li><code>$OSFONTDIR//</code></li>
+</ol>
+<p>Note that a double-slash (<code>//</code>) in a path element means search subdirectories (recursively).</p>
+<p>A typical <code>texmf.cnf</code> file will contain numerous “config variables” to define search paths for the file types that Kpathsea can search for.</p>
+<h2><span class="mw-headline" id="Kpathsea:_A_very_brief_overview">Kpathsea: A very brief overview</span></h2>
+<p>Kpathsea is a sophisticated library—with many fine details and nuances—and even a brief glance at its <a rel="nofollow" class="external text" href="http://tug.org/texinfohtml/kpathsea.html">documentation</a> makes it clear that we can’t delve into all the details. However, we can try to provide an overview of what it does—to help orientate your thinking and offer a starting point for further reading.</p>
+<h3><span id="Kpathsea.E2.80.99s_core_purpose"></span><span class="mw-headline" id="Kpathsea’s_core_purpose">Kpathsea’s core purpose</span></h3>
+<p>As noted in the documentation, Kpathsea’s fundamental purpose is “to return a filename from a list of directories specified by the user” and that those directories (search paths) are specified using “a few extra frills”.</p>
+<h3><span id="Those_.E2.80.9Cextra_frills.E2.80.9D"></span><span class="mw-headline" id="Those_“extra_frills”">Those “extra frills”</span></h3>
+<p>The “few extra frills” mentioned above include various parameters and variables that Kpathsea uses to construct its search paths (or “path templates”) so that is can define paths in a more general way. When a TeX engine is actually running (executing), Kpathea can use the current value of those parameters/variables to work out the actual paths by replacing those variables with their actual (runtime) values. You can easily identify those variables (within path elements) because they start with a <code>$</code> sign.</p>
+<p>Thus, we say that Kpathsea <em>expands</em> a path element, meaning it transforms those parameters and variables: turning a path “template” into the actual name(s) of one or more physical directories in which to look for a file. This offers a great deal of flexibility and means that Kpathsea might construct a list of directories corresponding to an individual path element—for example, if it is told to search subdirectories.</p>
+<h3><span class="mw-headline" id="Our_OpenType_example_revisited">Our OpenType example revisited</span></h3>
+<p>We’ll pull together the various threads and explore <code>OPENTYPEFONTS</code> in a little more detail:</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>OPENTYPEFONTS = .;$TEXMF/fonts/{opentype,truetype}//;$OSFONTDIR//
+</pre></div>
+<p>Let’s consider the two path elements <code>$TEXMF/fonts/{opentype,truetype}//</code> and <code>$OSFONTDIR//</code>. Here, Kpathsea notices the use of braces <code>{...}</code> and treats <code>$TEXMF/fonts/{opentype,truetype}</code> as representing <em>two</em> path elements:</p>
+<ol>
+<li><code>$TEXMF/fonts/opentype//</code></li>
+<li><code>$TEXMF/fonts/truetype//</code></li>
+</ol>
+<p>and that the <em>subdirectories</em> of both those path elements should also be searched (indicated by the trailing <code>//</code>).</p>
+<p><strong>Note</strong>: See the Kpathsea documentation on <a rel="nofollow" class="external text" href="http://tug.org/texinfohtml/kpathsea.html#Subdirectory-expansion">subdirectory expansion</a> for an important caveat on the order in which subdirectories, at any level, are searched (it is is unspecified).</p>
+<p>We’ll make a few observations on <code>$TEXMF</code> below.</p>
+<h4><span id=".24OSFONTDIR.2F.2F"></span><span class="mw-headline" id="$OSFONTDIR//"><code>$OSFONTDIR//</code></span></h4>
+<p><code>$OSFONTDIR</code> is a variable whose value should be defined as an environment variable containing the location where fonts are stored: the exact value will, of course, depend on the operating system being used to run TeX. Note that, here, the trailing <code>//</code> instructs Kpathsea to search subdirectories when looking for OpenType fonts.</p>
+<p>The default definition of <code>OSFONTDIR</code> within <code>texmf.cnf</code> is:</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>OSFONTDIR = /please/set/osfontdir/in/the/environment
+</pre></div>
+<p>So it is certainly something you need to set if you wish to use it—your environment variable will override this “placeholder” definition contained in <code>texmf.cnf</code>.</p>
+<p>If you do set the environment variable <code>OSFONTDIR</code> then, at runtime, wherever Kpathsea sees <code>$OSFONTDIR</code> as part of a path element (in <code>texmf.cnf</code>) it can replace the variable <code>$OSFONTDIR</code> with the actual value stored in the environment variable <code>OSFONTDIR</code>. Remember, that when using it within <code>texmf.cnf</code> path elements we specify the variable <code>$OSFONTDIR</code>—with a leading <code>$</code>—to tell Kpathsea this is a variable whose <em>value</em> it needs to use.</p>
+<h4><span id="Brief_notes_on_.24TEXMF"></span><span class="mw-headline" id="Brief_notes_on_$TEXMF">Brief notes on <code>$TEXMF</code></span></h4>
+<p><code>TEXMF</code> is another config variable that is defined in <code>texmf.cnf</code>; for example, in the master TeX Live distribution you would see:</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>TEXMF = {$TEXMFAUXTREES$TEXMFCONFIG,$TEXMFVAR,$TEXMFHOME,!!$TEXMFLOCAL,!!$TEXMFSYSCONFIG,!!$TEXMFSYSVAR,!!$TEXMFDIST}
+</pre></div>
+<p>You don’t need to be concerned with the details of this definition of <code>TEXMF</code>—we won’t explore all the details, but simply note that the <code>$TEXMF</code> variable is used within path elements because it defines a series of top-level folders (referred to as “texmf trees”) from where you can start the search for files.</p>
+<p><code>TEXMF</code> is extremely useful if you want, or need, to split a TeX installation across multiple directories (or directory “trees”). For example, having a main or master collection of TeX/LaTeX packages (e.g., TeX Live) and another collection of files and folders used to store local LaTeX packages—or, perhaps, used to store local config files or customized versions of standard packages. Splitting the TeX installation in this way can make it easier to manage upgrading the main/master collection (distribution) of TeX/LaTeX packages because your local collection is separated from the master files which are updated when you upgrade your TeX Live distribution/installation.</p>
+<p>For further details on managing more complex TeX installations, the interested reader is referred to these two papers: 
+</p>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://tug.org/TUGboat/Articles/tb22-3/tb72downes.pdf">Managing Multiple TDS Trees</a> by Michael J Downes;</li> 
+<li><a rel="nofollow" class="external text" href="http://www.ntg.nl/maps/27/17.pdf">Juggling texmf trees</a> by Siep Kroonenberg.</li>
+</ul>
+<h4><span class="mw-headline" id="TeX_Directory_Structure">TeX Directory Structure</span></h4>
+<p>Anyone who has managed a TeX installation knows that modern TeX systems, such as TeX Live, contain many tens of thousands of files comprising a huge range of file types. The TeX Directory Structure (TDS) was designed as a best practice “blueprint” for organizing the vast collection of files in a working TeX installation and is strongly recommended for use with Kpathsea.</p>
+<p>For further information the reader is directed to the TDS specification: <a rel="nofollow" class="external text" href="https://www.tug.org/tds/tds.pdf">A Directory Structure for TeX Files</a>.</p>
+<h2><span class="mw-headline" id="Kpathsea_file_types">Kpathsea file types</span></h2>
+<p>The suite of applications which use Kpathsea need to access a broad range of file types so Kpathsea uses a “config variable” to identify the path(s) for each type of file (or group of files) it supports. The online documentation has a complete list (see also our <a href="#Table_listing_Kpathsea_“config_variables”">summary table, below</a>) but here are the “config variables” for the more common file types:</p>
+<table>
+  <tbody><tr>
+   <td><strong>Config variable</strong>
+   </td>
+   <td><strong>File type examples</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>TEXINPUTS
+   </td>
+   <td>TeX source files and figure/graphics files
+   </td>
+  </tr>
+  <tr>
+   <td>BIBINPUTS, BSTINPUTS
+   </td>
+   <td>BibTeX bibliography source files
+   </td>
+  </tr>
+  <tr>
+   <td>TTFONTS
+   </td>
+   <td>TrueType outline fonts
+   </td>
+  </tr>
+  <tr>
+   <td>OPENTYPEFONTS
+   </td>
+   <td>OpenType outline fonts
+   </td>
+  </tr>
+</tbody></table>
+<p><code>TEXINPUTS</code> is an especially important config variable because it specifies where a TeX engine obtains its input source files. Note that image files are considered input files and can also be searched for using the path defined by <code>TEXINPUTS</code>.</p>
+<h3><span class="mw-headline" id="Some_Kpathsea_nuances">Some Kpathsea nuances</span></h3>
+<p>As noted, Kpathsea has many nuances which we can’t explore here in any detail. However, here are features that some readers may wish to explore:</p>
+<ul>
+<li><strong>filename database: </strong>To minimize disk searches Kpathsea can make use of an “externally-built <a rel="nofollow" class="external text" href="http://tug.org/texinfohtml/kpathsea.html#Filename-database">filename database file named ls-R</a> that maps files to directories”. TeX Live provides one and the tools to update it if new files are added.
+
+</li><li><strong>environment variables</strong>: In addition to “config variables” (such as <code>OPENTYPEFONTS</code>) Kpathsea also makes clever use of <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Environment_variable">environment variables</a>; for example, the runtime value of environment variables can used to define path elements in the <code>texmf.cnf</code> file (possibly to override variables of the same name that are defined in <code>texmf.cnf</code>).
+
+</li><li><strong>program name: </strong>A subtle but essential aspect of Kpathsea’s behaviour is that it can make use of the name of the executable program (e.g., the TeX engine) to construct program-specific search-path constructions. This gives considerable flexibility because  path searching can be directed to files for a particular TeX engine. For example, for LuaTeX/LuaLaTeX:
+
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>TEXINPUTS.lualatex = .;$TEXMF/tex/{lualatex,latex,luatex,generic,}//
+TEXINPUTS.luatex = .;$TEXMF/tex/{luatex,plain,generic,}//
+</pre></div>
+</li>
+<li><strong>finding <code>texmf.cnf</code></strong>: A question you may be asking is how does Kpathsea know where <code>texmf.cnf</code> is stored? The answer is an environment variable called <code>TEXMFCNF</code>. This needs to be set (on the device/platform running TeX) to the path where <code>texmf.cnf</code> is stored.</li>
+</ul>
+<h4><span class="mw-headline" id="Debugging_Kpathsea_problems">Debugging Kpathsea problems</span></h4>
+<p>Users of Overleaf are unlikely to need these facilities but we list them for completeness:</p><ul>
+<li><strong>kpsewhich</strong>: A standalone program (included in TeX Live) that can be used to test your settings: determine the value of variables and find files. Interested readers are referred to the <a rel="nofollow" class="external text" href="http://tug.org/texinfohtml/kpathsea.html#Invoking-kpsewhich">online documentation</a> for further information.</li>
+</ul>
+<ul>
+<li><strong>environment variables</strong>: Kpathsea supports an environment variable called <a rel="nofollow" class="external text" href="http://www.tug.org/texinfohtml/kpathsea.html#Debugging"><code>KPATHSEA_DEBUG</code></a> to assist with debugging its behaviour. You can set <code>KPATHSEA_DEBUG</code> to different values depending on how much debug information you need. Setting <code>KPATHSEA_DEBUG=-1</code> will generate a <em>substantial</em> amount of data.</li>
+</ul>
+<h2><span id="And_finally:_folders.2C_figure_files_and_latexmkrc"></span><span class="mw-headline" id="And_finally:_folders,_figure_files_and_latexmkrc">And finally: folders, figure files and latexmkrc</span></h2>
+<p>
+So, how does the above relate to latexmkrc? If you read this article <a href="How_to_use_latexmkrc_with_Overleaf.html" class="mw-redirect" title="Articles/How to use latexmkrc with Overleaf: examples and techniques">How to use latexmkrc with Overleaf: examples and techniques</a> you can see that the (Perl) code in the latexmkrc example sets the value of an environment variable <code>TEXINPUTS</code>:</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>$ENV{'TEXINPUTS'}='./tex//:' . $ENV{'TEXINPUTS'};
+</pre></div>
+<p>Note that the colon (:) used here (<code>./tex//<strong>:</strong></code>) is <em>extremely</em> important. If you omit that colon then TeX/LaTeX may be unable to find vital system files, such as LaTeX packages!</p>
+<p>What this latexmkrc file does, in effect, is add a top-level folder path (<code>./tex</code> in the example above) to the system-defined <code>TEXINPUTS</code> environment variable so that when Kpathsea uses the variable <code>$TEXINPUTS</code> it will then be aware that the folder <code>/tex//</code> should be searched to find input files. If you look carefully, you’ll see that the actual path used is <code>./tex//:</code> the <code>//</code> tells Kpathsea to search the tex folder recursively—i.e., look into any sub-folders contained in the <code>tex</code> folder. As noted, we also added the important colon character.</p>
+<p>We can use exactly the same technique for figure files.</p>
+<h3><span class="mw-headline" id="An_aside_on_BibTeX">An aside on BibTeX</span></h3>
+<p>As noted, the BibTeX program also uses Kpathsea to search for its input files; in particular:</p>
+<ul>
+<li>the <code>BSTINPUTS</code> config variable (search path) is used to search for <code>.bst</code> files;
+</li><li>and the <code>BIBINPUTS</code> config variable (search path) will be used to search for <code>.bib</code> files.</li>
+</ul>
+<p>If you add new <code>.bst</code> or <code>.bib</code> files to your Overleaf project you can use the technique below to instruct BibTeX where to find these files—you need to replace <code>TEXINPUTS</code> with <code>BSTINPUTS</code> and/or <code>BIBINPUTS</code>.</p>
+<h3><span class="mw-headline" id="TEXINPUTS_and_using_nested_folders_for_graphics_files"><code>TEXINPUTS</code> and using nested folders for graphics files</span></h3>
+<p>If your project has a lot of graphics files it can be convenient to create a set of folders in which to store and manage them. For example, the following screengrab shows a section of an Overleaf project that uses a top-level folder called <strong><code>graphics</code></strong>:</p>
+<p>
+        <img src="../../../../images.ctfassets.net/nrgyaltdicpt/3kMkajSlnyksAGMG0E46UG/ac88c9153f7c0d029b39dbb5fec135bd/folders.png" alt="Image showing nested folders in an Overleaf project" />
+
+</p>
+<p>There are numerous (nested) sub-folders containing graphics for various sections of our document.</p>
+<p>Suppose we have the above folder structure and want to use the <code>graphicx</code> package (<code>\usepackage{graphicx}</code>) and that we try to do so like this:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\includegraphics</span><span class="nb">{</span>endlinechar<span class="nb">}</span><span class="c">% best practice is not to use the file extension</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+<p>It won’t work and you’ll get an error like this:</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>! LaTeX Error: File `endlinechar' not found.
+l.4 \includegraphics{endlinechar}
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.ai,.AI,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF,.bmp,.BMP,
+,.ps,.PS,.eps,.EPS,.mps,.MPS,.pz,.eps.Z,.ps.Z,.ps.gz,.eps.gz
+</pre></div>
+<p>That error arises because our graphics file is stored in a location that TeX/LaTeX (and Kpathsea) are unaware of, and thus cannot find it—the path to the graphics file is:</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>./graphics/Introduction/Chapter1/Section1/Subsection3/endlinechar.png
+</pre></div>
+<p><strong>Note</strong>: It is generally accepted best practice to <strong><em>avoid space characters in the folder names</em></strong>. Whilst it is certainly possible to have spaces in folder names, using the techniques discussed below, we would caution against doing so for reasons of document portability outside the Overleaf platform.</p>
+<p>As explained in this <a href="../Inserting_Images.html" title="Inserting Images">Overleaf help article</a> you can, of course, use folders to store your graphics but you need to tell LaTeX where they are stored. Here, we’ll look at two solutions:
+</p><ul>
+<li>Using the \graphicspath command;
+</li><li>Using our knowledge of Kpathsea and <code>TEXINPUTS</code>.</li></ul>
+<h3><span id="Using_.5Cgraphicspath"></span><span class="mw-headline" id="Using_\graphicspath">Using \graphicspath</span></h3>
+<p>The <code>graphicx</code> package provides the <code>\graphicspath</code> command that you can use to declare paths where your graphics are located; so we could do something like this:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\graphicspath</span><span class="nb">{{</span>./graphics/Introduction/Chapter1/Section1/Subsection3/<span class="nb">}}</span>
+</pre></div>
+<p>and LaTeX will now find any graphics stored under that path.</p>
+<p><strong>Note</strong>: If you <em>must</em> have spaces in folder names then you will need to enclose the paths in double quotes (<code>"..."</code>):</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\graphicspath</span><span class="nb">{{</span>"./graphics/Introduction/Chapter 1/Section 1/Subsection 3/"<span class="nb">}}</span>
+</pre></div>
+<p><strong>Note</strong>: You can declare multiple paths like this:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\graphicspath</span><span class="nb">{{</span>path1<span class="nb">}{</span>path2<span class="nb">}{</span>path3<span class="nb">}</span>...<span class="nb">{</span>pathN<span class="nb">}}</span>
+</pre></div>
+<p>where <code>...</code> means additional paths enclosed in braces.</p>
+<p><strong>Note</strong>: We start the path with <code>./graphics</code> and not just <code>/graphics</code>. The dot (.) tells the operating system that the path is relative to the current working directory.</p>
+<p>The <code>\graphicspath</code> command works well but if you have many folders it can become quite tedious to add every path; additionally, paths defined via <code>\graphicspath</code> would no longer work if you renamed the folders or re-structured them. Is there any easier way? Yes, you can use a latexmkrc file!</p>
+<h4><span id=".5Cgraphicspath_and_recursion_.28subdirectories.29"></span><span class="mw-headline" id="\graphicspath_and_recursion_(subdirectories)"><code>\graphicspath</code> and recursion (subdirectories)</span></h4>
+<p>Note that there are online discussions/debates on whether some systems support/enable <code>\graphicspath</code> to recursively search subdirectories if you add <code>//</code> at the end of the path: see, for example, these discussions on tex.stackexchange: 
+</p>
+<ul>
+<li><a rel="nofollow" class="external text" href="https://tex.stackexchange.com/questions/25443/latex-graphicspath-recursive-search">LaTeX \graphicspath recursive search</a>;</li>
+<li><a rel="nofollow" class="external text" href="https://tex.stackexchange.com/questions/3131/graphicspath-for-miktex">Graphicspath for MikTeX</a>.</li>
+</ul>
+<p>For greatest compatibility you should assume that <code>\graphicspath</code> does not support recursive directory searching.</p>
+<h3><span id="Kpathsea_and_TEXINPUTS_.28latexmkrc_file_to_the_rescue.29"></span><span class="mw-headline" id="Kpathsea_and_TEXINPUTS_(latexmkrc_file_to_the_rescue)">Kpathsea and TEXINPUTS (latexmkrc file to the rescue)</span></h3>
+<p><strong>CAVEAT: </strong>Note that the following technique works well on Overleaf and suitably-configured local TeX installations;  <strong>but</strong> if you use a latexmkrc file your project may become incompatible with other TeX installations, such as those used by publishers and online journal submission systems. Third-party TeX installations may, or may not, support or allow the use of latexmkrc. If you need to export your Overleaf project for use elsewhere, or want to submit it to a journal, you should remove any space characters from the path names and, for improved compatibility, add a <code>\graphicspath</code> command which defines all the paths:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\graphicspath</span><span class="nb">{{</span>path1<span class="nb">}{</span>path2<span class="nb">}{</span>path3<span class="nb">}</span>...<span class="nb">{</span>pathN<span class="nb">}}</span>
+</pre></div>
+<p>where <code>...</code> means additional paths enclosed in braces.</p>
+<p>The technique discussed below (using <code>TEXINPUTS</code>) has been tested successfully on Overleaf with the pdfTeX, XeTeX and LuaTeX engines (i.e., the pdfLaTeX, XeLaTeX and LuaLaTeX compiler options in the Overleaf menu):</p>
+<p>
+        <img src="../../../../images.ctfassets.net/nrgyaltdicpt/5rbZO5W72oqGQKywIcW6kS/2f3ea6817d9dab0e40cf1979a5fee848/compilerchoice.png" alt="Image showing how to choose the LaTeX compiler on Overleaf" />
+
+</p>
+<p>Going back to our example, we want to use this code (with deeply nested folders) and we’ll use a latexmkrc file to achieve it:</p>
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\includegraphics</span><span class="nb">{</span>endlinechar<span class="nb">}</span><span class="c">% best practice is not to use the file extension</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+<p>Here’s a screenshot showing the above code working without problems: LaTeX has found our graphics file (<code>endlinechar.png</code>) even though it is in a deeply nested folder structure (without any spaces in the folder names).</p>
+<p>
+        <img src="../../../../images.ctfassets.net/nrgyaltdicpt/5SilwEl9JYMsiwMoSAICem/b456165e4746082b3cea8df7dacae6b3/overleafproject.png" alt="Image showing a project with nested folders compiling on Overleaf" />
+
+</p>
+<p>So, how did we do this? All you need to do is:</p>
+<ul>
+<li>create a new file, without an extension, and call it latexmkrc;</li>
+<li>add the following line to that file:
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>$ENV{'TEXINPUTS'}='./graphics//:'.$ENV{'TEXINPUTS'};
+</pre></div>
+</li>
+</ul>
+<p>Kpathsea will now know about the folders contained under <code><strong>graphics</strong></code> and because of the <code>//</code> it will look into the sub-folders too.</p>
+<p>Note, again, that the colon in <code>./graphics//:</code> is actually <em>extremely</em> important. If you omit that colon then TeX/LaTeX may be unable to find vital system files, such as LaTeX packages!</p>
+<p>Using the simple project example above, you can now compile it and voila! LaTeX finds your graphics file—and you can rename or re-organize the folders under /graphics and it won’t prevent LaTeX from finding them.</p>
+<h2><span id="Table_listing_Kpathsea_.E2.80.9Cconfig_variables.E2.80.9D"></span><span class="mw-headline" id="Table_listing_Kpathsea_“config_variables”">Table listing Kpathsea “config variables”</span></h2>
+<p>The following table is a summary derived from <a rel="nofollow" class="external text" href="http://tug.org/texinfohtml/kpathsea.html#Supported-file-formats">data listed in the Kpathsea documentation</a>.</p>
+<table>
+  <tbody><tr>
+   <td><strong>Kpathsea config variable</strong>
+   </td>
+   <td><strong>File type description</strong>
+   </td>
+   <td><strong>File suffix</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>AFMFONTS
+   </td>
+   <td>Adobe font metrics
+   </td>
+   <td>.afm
+   </td>
+  </tr>
+  <tr>
+   <td>MFBASES, TEXMFINI
+   </td>
+   <td>Metafont memory dump
+   </td>
+   <td>.base
+   </td>
+  </tr>
+  <tr>
+   <td>BIBINPUTS, TEXBIB
+   </td>
+   <td>BibTeX bibliography source
+   </td>
+   <td>.bib
+   </td>
+  </tr>
+  <tr>
+   <td>BLTXMLINPUTS
+   </td>
+   <td>BibLaTeXML bibliography files for Biber
+   </td>
+   <td>.bltxml
+   </td>
+  </tr>
+  <tr>
+   <td>BSTINPUTS
+   </td>
+   <td>BibTeX style
+   </td>
+   <td>.bst
+   </td>
+  </tr>
+  <tr>
+   <td>CLUAINPUTS
+   </td>
+   <td>dynamic libraries for Lua
+   </td>
+   <td>.dll and .so
+   </td>
+  </tr>
+  <tr>
+   <td>CMAPFONTS
+   </td>
+   <td>character map files
+   </td>
+   <td>.cmap
+   </td>
+  </tr>
+  <tr>
+   <td>TEXMFCNF
+   </td>
+   <td>Runtime configuration files
+   </td>
+   <td>.cnf
+   </td>
+  </tr>
+  <tr>
+   <td>CWEBINPUTS
+   </td>
+   <td>CWEB input files
+   </td>
+   <td>.w, .web, .ch
+   </td>
+  </tr>
+  <tr>
+   <td>TEXCONFIG
+   </td>
+   <td>Dvips 'config.*' files, such as config.ps
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>ENCFONTS
+   </td>
+   <td>encoding vectors
+   </td>
+   <td>.enc
+   </td>
+  </tr>
+  <tr>
+   <td>TEXFORMATS, TEXMFINI
+   </td>
+   <td>TeX memory dump
+   </td>
+   <td>.fmt
+   </td>
+  </tr>
+  <tr>
+   <td>FONTCIDMAPS
+   </td>
+   <td>CJK mapping
+   </td>
+   <td>.cid
+   </td>
+  </tr>
+  <tr>
+   <td>FONTFEATURES
+   </td>
+   <td>primarily for OpenType font features
+   </td>
+   <td>.fea
+   </td>
+  </tr>
+  <tr>
+   <td>FONTS, GFFONTS, GLYPHFONTS, TEXFONTS
+   </td>
+   <td>generic font bitmap
+   </td>
+   <td>.gf
+   </td>
+  </tr>
+  <tr>
+   <td>TEXPICTS, TEXINPUTS
+   </td>
+   <td>Encapsulated PostScript figures
+   </td>
+   <td>.eps, .epsi
+   </td>
+  </tr>
+  <tr>
+   <td>TEXINDEXSTYLE, INDEXSTYLE
+   </td>
+   <td>makeindex style files
+   </td>
+   <td>.ist
+   </td>
+  </tr>
+  <tr>
+   <td>LIGFONTS
+   </td>
+   <td>ligature definition files
+   </td>
+   <td>.lig
+   </td>
+  </tr>
+  <tr>
+   <td>TEXMFDBS
+   </td>
+   <td>Filename databases
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>TEXFONTMAPS
+   </td>
+   <td>Fontmaps
+   </td>
+   <td>.map
+   </td>
+  </tr>
+  <tr>
+   <td>MPMEMS, TEXMFINI
+   </td>
+   <td>MetaPost memory dump
+   </td>
+   <td>.mem
+   </td>
+  </tr>
+  <tr>
+   <td>MPSUPPORT
+   </td>
+   <td>MetaPost support files, used by DMP
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>MFINPUTS
+   </td>
+   <td>Metafont source
+   </td>
+   <td>.mf
+   </td>
+  </tr>
+  <tr>
+   <td>MFPOOL, TEXMFINI
+   </td>
+   <td>Metafont program strings
+   </td>
+   <td>.pool
+   </td>
+  </tr>
+  <tr>
+   <td>MFTINPUTS
+   </td>
+   <td>MFT style file
+   </td>
+   <td>.mft
+   </td>
+  </tr>
+  <tr>
+   <td>MISCFONTS
+   </td>
+   <td>font-related files that don't fit the other categories
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>MLBIBINPUTS, BIBINPUTS, TEXBIB
+   </td>
+   <td>MlBibTeX bibliography source
+   </td>
+   <td>.mlbib, .mlbib
+   </td>
+  </tr>
+  <tr>
+   <td>MLBSTINPUTS, BSTINPUTS
+   </td>
+   <td>MlBibTeX style
+   </td>
+   <td>.mlbst, .bst
+   </td>
+  </tr>
+  <tr>
+   <td>MPINPUTS
+   </td>
+   <td>MetaPost source
+   </td>
+   <td>.mp
+   </td>
+  </tr>
+  <tr>
+   <td>MPPOOL, TEXMFINI
+   </td>
+   <td>MetaPost program strings
+   </td>
+   <td>.pool
+   </td>
+  </tr>
+  <tr>
+   <td>OCPINPUTS
+   </td>
+   <td>Omega compiled process files
+   </td>
+   <td>.ocp
+   </td>
+  </tr>
+  <tr>
+   <td>OFMFONTS, TEXFONTS
+   </td>
+   <td>Omega font metrics
+   </td>
+   <td>.ofm, .tfm
+   </td>
+  </tr>
+  <tr>
+   <td>OPENTYPEFONTS
+   </td>
+   <td>OpenType fonts
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>OPLFONTS, TEXFONTS
+   </td>
+   <td>Omega property lists
+   </td>
+   <td>.opl
+   </td>
+  </tr>
+  <tr>
+   <td>OTPINPUTS
+   </td>
+   <td>Omega translation process files
+   </td>
+   <td>.otp
+   </td>
+  </tr>
+  <tr>
+   <td>OVFFONTS, TEXFONTS
+   </td>
+   <td>Omega virtual fonts
+   </td>
+   <td>.ovf
+   </td>
+  </tr>
+  <tr>
+   <td>OVPFONTS, TEXFONTS
+   </td>
+   <td>Omega virtual property lists
+   </td>
+   <td>.ovp
+   </td>
+  </tr>
+  <tr>
+   <td>PDFTEXCONFIG
+   </td>
+   <td>PDFTeX-specific configuration files
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>PROGRAMFONTS, PKFONTS, TEXPKS, GLYPHFONTS, TEXFONTS
+   </td>
+   <td>packed bitmap fonts
+   </td>
+   <td>.pk
+   </td>
+  </tr>
+  <tr>
+   <td>TEXPSHEADERS, PSHEADERS
+   </td>
+   <td>downloadable PostScript
+   </td>
+   <td>.pro
+   </td>
+  </tr>
+  <tr>
+   <td>RISINPUTS
+   </td>
+   <td>RIS bibliography files, primarily for Bibe
+   </td>
+   <td>.ris
+   </td>
+  </tr>
+  <tr>
+   <td>SFDFONTS
+   </td>
+   <td>subfont definition files
+   </td>
+   <td>.sfd
+   </td>
+  </tr>
+  <tr>
+   <td>TEXINPUTS
+   </td>
+   <td>TeX source
+   </td>
+   <td>.tex
+   </td>
+  </tr>
+  <tr>
+   <td>TEXDOCS
+   </td>
+   <td>Documentation files for the TeX system
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>TEXSOURCES
+   </td>
+   <td>Source files for the TeX system
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>TEXMFSCRIPTS
+   </td>
+   <td>Architecture-independent executables distributed in the texmf trees
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>TEXPOOL, TEXMFINI
+   </td>
+   <td>TeX program strings
+   </td>
+   <td>.pool
+   </td>
+  </tr>
+  <tr>
+   <td>TFMFONTS, TEXFONTS
+   </td>
+   <td>TeX font metrics
+   </td>
+   <td>.tfm
+   </td>
+  </tr>
+  <tr>
+   <td>TRFONTS
+   </td>
+   <td>Troff fonts
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>TTFONTS
+   </td>
+   <td>TrueType outline fonts
+   </td>
+   <td>.ttf, ,TTF, .ttc, .TTC, .dfont
+   </td>
+  </tr>
+  <tr>
+   <td>T1FONTS, T1INPUTS, TEXPSHEADERS, DVIPSHEADERS
+   </td>
+   <td>Type 1 PostScript outline fonts
+   </td>
+   <td>.pfa, .pfb
+   </td>
+  </tr>
+  <tr>
+   <td>T42FONTS
+   </td>
+   <td>Type 42 PostScript outline fonts
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>VFFONTS, TEXFONTS
+   </td>
+   <td>virtual fonts
+   </td>
+   <td>.vf
+   </td>
+  </tr>
+  <tr>
+   <td>WEBINPUTS
+   </td>
+   <td>WEB input files
+   </td>
+   <td>.web, .ch
+   </td>
+  </tr>
+  <tr>
+   <td>WEB2C
+   </td>
+   <td>files specific to the web2c implementation
+   </td>
+   <td>
+   </td>
+  </tr>
+</tbody></table>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="../Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="../Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="../Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="../Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="../Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="../Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="../Lists.html" title="Lists">Lists</a></li>
+<li><a href="../Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="../Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="../Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="../Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="../Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="../Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="../Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="../Operators.html" title="Operators">Operators</a></li>
+<li><a href="../Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="../Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="../Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="../List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="../Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="../Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="../Tables.html" title="Tables">Tables</a></li>
+<li><a href="../Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="../Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="../Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="../TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="../Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="../Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="../Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="../Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="../Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="../Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="../Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="../Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="../Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="../Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="../International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="../Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="../Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="../Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="../French.html" title="French">French</a></li>
+<li><a href="../German.html" title="German">German</a></li>
+<li><a href="../Greek.html" title="Greek">Greek</a></li>
+<li><a href="../Italian.html" title="Italian">Italian</a></li>
+<li><a href="../Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="../Korean.html" title="Korean">Korean</a></li>
+<li><a href="../Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="../Russian.html" title="Russian">Russian</a></li>
+<li><a href="../Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="../Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="../Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="../Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="../Indices.html" title="Indices">Indices</a></li>
+<li><a href="../Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="../Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="../Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="../Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="../Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="../Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="../Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="../Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="../Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="../Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="../Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="../Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="../Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="../Counters.html" title="Counters">Counters</a></li>
+<li><a href="../Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="../Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="../Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="../Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="../Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="../Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="../Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="../XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="../Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="../Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="../Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="../Commands.html" title="Commands">Commands</a></li>
+<li><a href="../Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="../Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="../Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="../Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="../Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="../Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="../Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="../CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="../Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="../Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="../Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="../Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="../Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="../Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="../Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="../Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="../Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="../Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="../Tutorials.html">Tutorials</a></li><li><a href="../Inserting_Images.html">How to insert images</a></li><li><a href="../Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==" src="../../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="oXgaJmJmNKu+V/1t600GUw==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 14:02:18 GMT -->
+</html>

@@ -1,0 +1,779 @@
+<!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.overleaf.com/learn/latex/Pgfplots_package by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:55:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Pgfplots package - Overleaf, Online LaTeX Editor</title><meta name="twitter:title" content="Pgfplots package"><meta name="og:title" content="Pgfplots package"><meta name="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta itemprop="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta name="image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta itemprop="name" content="Overleaf, the Online LaTeX Editor"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@overleaf"><meta name="twitter:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta name="twitter:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="fb:app_id" content="400474170024644"><meta property="og:description" content="An online LaTeX editor that’s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more."><meta property="og:image" content="../../../cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png"><meta property="og:type" content="website"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="icon" href="https://www.overleaf.com/favicon.ico"><link rel="icon" sizes="192x192" href="https://www.overleaf.com/touch-icon-192x192.png"><link rel="apple-touch-icon-precomposed" href="https://www.overleaf.com/apple-touch-icon-precomposed.png"><link rel="mask-icon" href="https://www.overleaf.com/mask-favicon.svg" color="#138A07"><link rel="canonical" href="Pgfplots_package.html"><link rel="stylesheet" href="../../../cdn.overleaf.com/stylesheets/main-style-82a67b507675f5a9518e.css" id="main-stylesheet"><link rel="alternate" href="Pgfplots_package.html" hreflang="en"><link rel="alternate" href="https://cs.overleaf.com/learn/latex/Pgfplots_package" hreflang="cs"><link rel="alternate" href="https://es.overleaf.com/learn/latex/Pgfplots_package" hreflang="es"><link rel="alternate" href="https://pt.overleaf.com/learn/latex/Pgfplots_package" hreflang="pt"><link rel="alternate" href="https://fr.overleaf.com/learn/latex/Pgfplots_package" hreflang="fr"><link rel="alternate" href="https://de.overleaf.com/learn/latex/Pgfplots_package" hreflang="de"><link rel="alternate" href="https://sv.overleaf.com/learn/latex/Pgfplots_package" hreflang="sv"><link rel="alternate" href="https://tr.overleaf.com/learn/latex/Pgfplots_package" hreflang="tr"><link rel="alternate" href="https://it.overleaf.com/learn/latex/Pgfplots_package" hreflang="it"><link rel="alternate" href="https://cn.overleaf.com/learn/latex/Pgfplots_package" hreflang="zh-CN"><link rel="alternate" href="https://no.overleaf.com/learn/latex/Pgfplots_package" hreflang="no"><link rel="alternate" href="https://ru.overleaf.com/learn/latex/Pgfplots_package" hreflang="ru"><link rel="alternate" href="https://da.overleaf.com/learn/latex/Pgfplots_package" hreflang="da"><link rel="alternate" href="https://ko.overleaf.com/learn/latex/Pgfplots_package" hreflang="ko"><link rel="alternate" href="https://ja.overleaf.com/learn/latex/Pgfplots_package" hreflang="ja"><link rel="preload" href="../../../cdn.overleaf.com/js/en-json-5ee3d7a6fdd6e71a9730.js" as="script" nonce="3PQTYXUQ78gCEPylPMIcWQ=="><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" id="ga-loader" data-ga-token="UA-112092690-1" data-ga-token-v4="G-RV4YBCCCWJ" data-cookie-domain=".overleaf.com">var gaSettings = document.querySelector('#ga-loader').dataset;
+var gaid = gaSettings.gaTokenV4;
+var gaToken = gaSettings.gaToken;
+var cookieDomain = gaSettings.cookieDomain;
+if(gaid) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', gaid, { 'anonymize_ip': true });
+}
+if (gaToken) {
+    window.ga = window.ga || function () {
+        (window.ga.q = window.ga.q || []).push(arguments);
+    }, window.ga.l = 1 * new Date();
+}
+var loadGA = window.olLoadGA = function() {
+    if (gaid) {
+        var s = document.createElement('script');
+        s.setAttribute('async', 'async');
+        s.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + gaid);
+        document.querySelector('head').append(s);
+    } 
+    if (gaToken) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        ga('create', gaToken, cookieDomain.replace(/^\./, ""));
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    }
+};
+// Check if consent given (features/cookie-banner)
+var oaCookie = document.cookie.split('; ').find(function(cookie) {
+    return cookie.startsWith('oa=');
+});
+if(oaCookie) {
+    var oaCookieValue = oaCookie.split('=')[1];
+    if(oaCookieValue === '1') {
+        loadGA();
+    }
+}
+</script><meta name="ol-csrfToken" content="1y45bTXM-Keeflg1ZxJB9xBc6isG7KHNCl1c"><meta name="ol-baseAssetPath" content="https://cdn.overleaf.com/"><meta name="ol-mathJaxPath" content="/js/libs/mathjax-3.2.2/es5/tex-svg-full.js"><meta name="ol-usersEmail" content=""><meta name="ol-ab" data-type="json" content="{}"><meta name="ol-user_id"><meta name="ol-i18n" data-type="json" content="{&quot;currentLangCode&quot;:&quot;en&quot;}"><meta name="ol-ExposedSettings" data-type="json" content="{&quot;isOverleaf&quot;:true,&quot;appName&quot;:&quot;Overleaf&quot;,&quot;adminEmail&quot;:&quot;support@overleaf.com&quot;,&quot;dropboxAppName&quot;:&quot;Overleaf&quot;,&quot;ieeeBrandId&quot;:15,&quot;hasAffiliationsFeature&quot;:true,&quot;hasSamlFeature&quot;:true,&quot;samlInitPath&quot;:&quot;/saml/ukamf/init&quot;,&quot;hasLinkUrlFeature&quot;:true,&quot;hasLinkedProjectFileFeature&quot;:true,&quot;hasLinkedProjectOutputFileFeature&quot;:true,&quot;siteUrl&quot;:&quot;https://www.overleaf.com&quot;,&quot;emailConfirmationDisabled&quot;:false,&quot;maxEntitiesPerProject&quot;:2000,&quot;maxUploadSize&quot;:52428800,&quot;projectUploadTimeout&quot;:120000,&quot;recaptchaSiteKey&quot;:&quot;6LebiTwUAAAAAMuPyjA4pDA4jxPxPe2K9_ndL74Q&quot;,&quot;recaptchaDisabled&quot;:{&quot;invite&quot;:true,&quot;login&quot;:false,&quot;passwordReset&quot;:false,&quot;register&quot;:false,&quot;addEmail&quot;:false},&quot;textExtensions&quot;:[&quot;tex&quot;,&quot;latex&quot;,&quot;sty&quot;,&quot;cls&quot;,&quot;bst&quot;,&quot;bib&quot;,&quot;bibtex&quot;,&quot;txt&quot;,&quot;tikz&quot;,&quot;mtx&quot;,&quot;rtex&quot;,&quot;md&quot;,&quot;asy&quot;,&quot;lbx&quot;,&quot;bbx&quot;,&quot;cbx&quot;,&quot;m&quot;,&quot;lco&quot;,&quot;dtx&quot;,&quot;ins&quot;,&quot;ist&quot;,&quot;def&quot;,&quot;clo&quot;,&quot;ldf&quot;,&quot;rmd&quot;,&quot;lua&quot;,&quot;gv&quot;,&quot;mf&quot;,&quot;yml&quot;,&quot;yaml&quot;,&quot;lhs&quot;,&quot;mk&quot;,&quot;xmpdata&quot;,&quot;cfg&quot;,&quot;rnw&quot;,&quot;ltx&quot;,&quot;inc&quot;],&quot;editableFilenames&quot;:[&quot;latexmkrc&quot;,&quot;.latexmkrc&quot;,&quot;makefile&quot;,&quot;gnumakefile&quot;],&quot;validRootDocExtensions&quot;:[&quot;tex&quot;,&quot;Rtex&quot;,&quot;ltx&quot;,&quot;Rnw&quot;],&quot;fileIgnorePattern&quot;:&quot;**/{{__MACOSX,.git,.texpadtmp,.R}{,/**},.!(latexmkrc),*.{dvi,aux,log,toc,out,pdfsync,synctex,synctex(busy),fdb_latexmk,fls,nlo,ind,glo,gls,glg,bbl,blg,doc,docx,gz,swp}}&quot;,&quot;sentryAllowedOriginRegex&quot;:&quot;^(https://[a-z]+\\\\.overleaf.com|https://cdn.overleaf.com|https://compiles.overleafusercontent.com)/&quot;,&quot;sentryDsn&quot;:&quot;https://4f0989f11cb54142a5c3d98b421b930a@app.getsentry.com/34706&quot;,&quot;sentryEnvironment&quot;:&quot;production&quot;,&quot;sentryRelease&quot;:&quot;3d5f99705fbd6192ccae430e040be4b7fcb3f740&quot;,&quot;enableSubscriptions&quot;:true,&quot;gaToken&quot;:&quot;UA-112092690-1&quot;,&quot;gaTokenV4&quot;:&quot;G-RV4YBCCCWJ&quot;,&quot;cookieDomain&quot;:&quot;.overleaf.com&quot;,&quot;templateLinks&quot;:[{&quot;name&quot;:&quot;Academic Journal&quot;,&quot;url&quot;:&quot;/gallery/tagged/academic-journal&quot;,&quot;trackingKey&quot;:&quot;academic-journal&quot;},{&quot;name&quot;:&quot;Book&quot;,&quot;url&quot;:&quot;/gallery/tagged/book&quot;,&quot;trackingKey&quot;:&quot;book&quot;},{&quot;name&quot;:&quot;Formal Letter&quot;,&quot;url&quot;:&quot;/gallery/tagged/formal-letter&quot;,&quot;trackingKey&quot;:&quot;formal-letter&quot;},{&quot;name&quot;:&quot;Homework Assignment&quot;,&quot;url&quot;:&quot;/gallery/tagged/homework&quot;,&quot;trackingKey&quot;:&quot;homework-assignment&quot;},{&quot;name&quot;:&quot;Poster&quot;,&quot;url&quot;:&quot;/gallery/tagged/poster&quot;,&quot;trackingKey&quot;:&quot;poster&quot;},{&quot;name&quot;:&quot;Presentation&quot;,&quot;url&quot;:&quot;/gallery/tagged/presentation&quot;,&quot;trackingKey&quot;:&quot;presentation&quot;},{&quot;name&quot;:&quot;Project / Lab Report&quot;,&quot;url&quot;:&quot;/gallery/tagged/report&quot;,&quot;trackingKey&quot;:&quot;lab-report&quot;},{&quot;name&quot;:&quot;Résumé / CV &quot;,&quot;url&quot;:&quot;/gallery/tagged/cv&quot;,&quot;trackingKey&quot;:&quot;cv&quot;},{&quot;name&quot;:&quot;Thesis&quot;,&quot;url&quot;:&quot;/gallery/tagged/thesis&quot;,&quot;trackingKey&quot;:&quot;thesis&quot;},{&quot;name&quot;:&quot;view_all&quot;,&quot;url&quot;:&quot;/latex/templates&quot;,&quot;trackingKey&quot;:&quot;view-all&quot;}],&quot;labsEnabled&quot;:false,&quot;groupSSOEnabled&quot;:true,&quot;wikiEnabled&quot;:true,&quot;templatesEnabled&quot;:true}"><meta name="ol-splitTestVariants" data-type="json" content="{&quot;null-test-wiki&quot;:&quot;null-test&quot;}"><meta name="ol-splitTestInfo" data-type="json" content="{&quot;null-test-wiki&quot;:{&quot;phase&quot;:&quot;release&quot;}}"><meta name="ol-algolia" data-type="json" content="{&quot;appId&quot;:&quot;SK53GL4JLY&quot;,&quot;apiKey&quot;:&quot;9ac63d917afab223adbd2cd09ad0eb17&quot;,&quot;indexes&quot;:{&quot;wiki&quot;:&quot;learn-wiki&quot;,&quot;gallery&quot;:&quot;gallery-production&quot;}}"><meta name="ol-isManagedAccount" data-type="boolean"><meta name="ol-bootstrapVersion" data-type="json" content="3"></head><body ng-csp="no-unsafe-eval"><a class="skip-to-content" href="#main-content">Skip to content</a><nav class="navbar navbar-default navbar-main"><div class="container-fluid"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-label="Toggle Navigation"><i class="fa fa-bars" aria-hidden="true"></i></button><a class="navbar-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="navbar-collapse collapse" id="navbar-main-collapse"><ul class="nav navbar-nav navbar-right"><!-- loop over header_extras--><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Features & Benefits<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/features-overview" event-tracking="menu-clicked-premium-features" event-tracking-mb="true" event-tracking-trigger="click">Features</a></li><li><a href="https://www.overleaf.com/for/enterprises" event-tracking="menu-clicked-enterprises" event-tracking-mb="true" event-tracking-trigger="click">For business</a></li><li><a href="https://www.overleaf.com/for/universities" event-tracking="menu-clicked-universities" event-tracking-mb="true" event-tracking-trigger="click">For universities</a></li><li><a href="https://www.overleaf.com/for/publishers" event-tracking="menu-clicked-publishers" event-tracking-mb="true" event-tracking-trigger="click">For publishers</a></li><li><a href="https://www.overleaf.com/for/edu" event-tracking="menu-clicked-edu" event-tracking-mb="true" event-tracking-trigger="click">For teaching</a></li></ul></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/latex/templates" event-tracking="menu-clicked-templates" event-tracking-mb="true" event-tracking-trigger="click">Templates</a></li><li class="subdued"><a class="subdued" href="https://www.overleaf.com/user/subscription/plans" event-tracking="menu-clicked-plans" event-tracking-mb="true" event-tracking-trigger="click">Plans &amp; Pricing</a></li><li class="dropdown subdued"><a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">Help<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://www.overleaf.com/about/why-latex" event-tracking="menu-clicked-why-latex" event-tracking-mb="true" event-tracking-trigger="click">Why LaTeX?</a></li><li><a href="../../learn.html" event-tracking="menu-clicked-learn" event-tracking-mb="true" event-tracking-trigger="click">Documentation</a></li><li><a data-ol-open-contact-form-modal="contact-us" href><span event-tracking="menu-clicked-contact" event-tracking-mb="true" event-tracking-trigger="click">Contact Us</span></a></li></ul></li><!-- logged out--><!-- register link--><li class="primary"><a href="https://www.overleaf.com/register" event-tracking="menu-clicked-register" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Pgfplots_package&quot;}">Sign up</a></li><!-- login link--><li><a href="https://www.overleaf.com/login" event-tracking="menu-clicked-login" event-tracking-action="clicked" event-tracking-trigger="click" event-tracking-mb="true" event-segmentation="{&quot;page&quot;:&quot;/learn/latex/Pgfplots_package&quot;}">Log in</a></li><!-- projects link and account menu--></ul></div></div></nav><main class="content content-page content-alt" id="main-content"><div class="container wiki" ng-cloak><div class="row template-page-header"><div class="col-md-8" ng-cloak></div></div><div class="row"><div class="col-xs-12 col-sm-9 col-sm-push-3 page"><div class="wiki"><form class="project-search form-horizontal" role="search" data-ol-faq-search="data-ol-faq-search"><div class="form-group has-feedback has-feedback-left"><div class="col-sm-12"><input class="form-control" type="text" placeholder="Search help library…"/><i class="fa fa-search form-control-feedback-left" aria-hidden="true"></i><i class="fa fa-times form-control-feedback" style="cursor: pointer;" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-hidden="true"></i><button class="sr-only" type="button" hidden="hidden" data-ol-clear-search="data-ol-clear-search" aria-label="clear search"></button></div></div><div class="row" role="region" aria-label="search results"><div class="col-md-12"><div data-ol-search-results-wrapper="data-ol-search-results-wrapper"><span class="sr-only" aria-live="polite" data-ol-search-sr-help-message="data-ol-search-sr-help-message"></span><div data-ol-search-results="data-ol-search-results"></div></div><div class="row-spaced-small search-result card card-thin" hidden="hidden" data-ol-search-no-results="data-ol-search-no-results"><p>No Search Results</p></div></div></div></form></div><div class="card row-spaced"><div class="page-header"><h1 ng-non-bindable>Pgfplots package</h1></div><div data-ol-mathjax><div ng-non-bindable><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#The_document_preamble"><span class="tocnumber">1.1</span> <span class="toctext">The document preamble</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Compilation_time_(brief_background)"><span class="tocnumber">1.2</span> <span class="toctext">Compilation time (brief background)</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Reducing_compilation_time"><span class="tocnumber">1.3</span> <span class="toctext">Reducing compilation time</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Basic_example_(also_externalizing_the_figures)"><span class="tocnumber">2</span> <span class="toctext">Basic example (also externalizing the figures)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Explanation_of_the_code"><span class="tocnumber">2.1</span> <span class="toctext">Explanation of the code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#2D_plots"><span class="tocnumber">3</span> <span class="toctext">2D plots</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Plotting_mathematical_expressions"><span class="tocnumber">3.1</span> <span class="toctext">Plotting mathematical expressions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Explanation_of_the_code_2"><span class="tocnumber">3.1.1</span> <span class="toctext">Explanation of the code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Plotting_from_data"><span class="tocnumber">3.2</span> <span class="toctext">Plotting from data</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="#Explanation_of_the_code_3"><span class="tocnumber">3.2.1</span> <span class="toctext">Explanation of the code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Scatter_plots"><span class="tocnumber">3.3</span> <span class="toctext">Scatter plots</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#Explanation_of_the_code_4"><span class="tocnumber">3.3.1</span> <span class="toctext">Explanation of the code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-14"><a href="#Bar_graphs"><span class="tocnumber">3.4</span> <span class="toctext">Bar graphs</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#Explanation_of_the_code_5"><span class="tocnumber">3.4.1</span> <span class="toctext">Explanation of the code</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#3D_Plots"><span class="tocnumber">4</span> <span class="toctext">3D Plots</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Plotting_mathematical_expressions_2"><span class="tocnumber">4.1</span> <span class="toctext">Plotting mathematical expressions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="#Explanation_of_the_code_6"><span class="tocnumber">4.1.1</span> <span class="toctext">Explanation of the code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-19"><a href="#Contour_plots"><span class="tocnumber">4.2</span> <span class="toctext">Contour plots</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="#Explanation_of_the_code_7"><span class="tocnumber">4.2.1</span> <span class="toctext">Explanation of the code</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-21"><a href="#Plotting_a_surface_from_data"><span class="tocnumber">4.3</span> <span class="toctext">Plotting a surface from data</span></a>
+<ul>
+<li class="toclevel-3 tocsection-22"><a href="#Explanation_of_the_data"><span class="tocnumber">4.3.1</span> <span class="toctext">Explanation of the data</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-23"><a href="#Parametric_plot"><span class="tocnumber">4.4</span> <span class="toctext">Parametric plot</span></a>
+<ul>
+<li class="toclevel-3 tocsection-24"><a href="#Explanation_of_the_code_8"><span class="tocnumber">4.4.1</span> <span class="toctext">Explanation of the code</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Reference_guide"><span class="tocnumber">5</span> <span class="toctext">Reference guide</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#Further_reading"><span class="tocnumber">6</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>The <code>pgfplots</code> package, which is based on <a href="TikZ_package.html" title="TikZ package"><code>TikZ</code></a>, is a powerful visualization tool and ideal for creating scientific/technical graphics. The basic idea is that you provide the input data/formula and <code>pgfplots</code> does the rest.
+</p>
+<h3><span class="mw-headline" id="The_document_preamble">The document preamble</span></h3>
+<p>To use the <code>pgfplots</code> package in your document add following line to your preamble:
+</p><p><code>\usepackage{pgfplots}</code>
+</p><p>You also can configure the behaviour of <code>pgfplots</code> in the document preamble. For example, to change the size of each plot and guarantee backwards compatibility (recommended) add the next line:
+</p><p><code>\pgfplotsset{width=10cm,compat=1.9}</code>
+</p><p>This changes the size of each <code>pgfplot</code> figure to 10 centimeters, which is huge; you may use different units (pt, mm, in). The <i>compat</i> parameter is for the code to work on the package version 1.9 or later.
+</p>
+<h3><span id="Compilation_time_.28brief_background.29"></span><span class="mw-headline" id="Compilation_time_(brief_background)">Compilation time (brief background)</span></h3>
+<p>When the original TeX engine was conceived/written, more than 40 years ago, it was not designed for <em>direct</em> production of graphics—those were to be files created by external programs (e.g., MetaPost) and imported into the typeset document. The advent of pdfTeX—which is closely based on the original TeX software—brought the ability to create graphics <em>directly</em> by using pdfTeX's new built-in TeX language commands (called <em>primitives</em>) which can output the PDF operators/data required to produce graphics. The creation of pdfTeX led to the development of sophisticated LaTeX graphics packages, such as <code>TikZ</code>, <code>pgfplots</code> etc, capable of producing graphics coded using high-level LaTeX commands. 
+</p><p>However, behind the scenes, and deep inside the pdfTeX engine (and other engines), those high-level LaTeX graphics commands need to be processed by "converting" them back into low-level pdfTeX engine (primitive) commands which actually generate (output) the PDF operators required to produce the resultant figure(s). That processing of graphical LaTeX commands—expansion and execution of primitives—can take a non-negligible amount of time. Even a single high-level LaTeX graphics command, together with its corresponding data, might require repeated execution of <em>many</em> low-level TeX engine (primitive) commands. From an end-user's perspective, documents containing multiple <code>pgfplots</code> figures, and/or very complex graphics, can take a considerable amount of time to render (compile).
+</p>
+<h3><span class="mw-headline" id="Reducing_compilation_time">Reducing compilation time</span></h3>
+<p>To increase speed of document-compilation you can configure the <code>pgfplots</code> package to export the figures to separate PDF files and then import them into the document: compile once, then re-use the figures. To do that, add the code shown below to the preamble:
+</p>
+<pre>\usepgfplotslibrary{external}
+\tikzexternalize
+</pre>
+<p>See <a href="Questions/I_have_a_lot_of_tikz%2c_matlab2tikz_or_pgfplots_figures%2c_so_I%27m_getting_a_compilation_timeout.html" title="Questions/I have a lot of tikz, matlab2tikz or pgfplots figures, so I'm getting a compilation timeout. Can I externalise my figures?"> this help article</a> for further details on how to set up tikz-externalization in your Overleaf project.
+</p>
+<h2><span id="Basic_example_.28also_externalizing_the_figures.29"></span><span class="mw-headline" id="Basic_example_(also_externalizing_the_figures)">Basic example (also externalizing the figures)</span></h2>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="na">[margin=0.25in]</span><span class="nb">{</span>geometry<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>pgfplots<span class="nb">}</span>
+<span class="k">\pgfplotsset</span><span class="nb">{</span>width=10cm,compat=1.9<span class="nb">}</span>
+
+<span class="c">% We will externalize the figures</span>
+<span class="k">\usepgfplotslibrary</span><span class="nb">{</span>external<span class="nb">}</span>
+<span class="k">\tikzexternalize</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+First example is 2D and 3D math expressions plotted side-by-side.
+
+<span class="c">%Here begins the 2D plot</span>
+<span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\addplot</span><span class="na">[color=red]</span><span class="nb">{</span>exp(x)<span class="nb">}</span>;
+<span class="k">\end</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="c">%Here ends the 2D plot</span>
+<span class="k">\hskip</span> 5pt
+<span class="c">%Here begins the 3D plot</span>
+<span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\addplot</span>3[
+    surf,
+]
+<span class="nb">{</span>exp(-x<span class="nb">^</span>2-y<span class="nb">^</span>2)*x<span class="nb">}</span>;
+<span class="k">\end</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="c">%Here ends the 3D plot</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=pgfplots+example+1&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bmargin%3D0.25in%5D%7Bgeometry%7D%0A%5Cusepackage%7Bpgfplots%7D%0A%5Cpgfplotsset%7Bwidth%3D10cm%2Ccompat%3D1.9%7D%0A%0A%25+We+will+externalize+the+figures%0A%5Cusepgfplotslibrary%7Bexternal%7D%0A%5Ctikzexternalize%0A%0A%5Cbegin%7Bdocument%7D%0A%0AFirst+example+is+2D+and+3D+math+expressions+plotted+side-by-side.%0A%0A%25Here+begins+the+2D+plot%0A%5Cbegin%7Btikzpicture%7D%0A%5Cbegin%7Baxis%7D%0A%5Caddplot%5Bcolor%3Dred%5D%7Bexp%28x%29%7D%3B%0A%5Cend%7Baxis%7D%0A%5Cend%7Btikzpicture%7D%0A%25Here+ends+the+2D+plot%0A%5Chskip+5pt%0A%25Here+begins+the+3D+plot%0A%5Cbegin%7Btikzpicture%7D%0A%5Cbegin%7Baxis%7D%0A%5Caddplot3%5B%0A++++surf%2C%0A%5D%0A%7Bexp%28-x%5E2-y%5E2%29%2Ax%7D%3B%0A%5Cend%7Baxis%7D%0A%5Cend%7Btikzpicture%7D%0A%25Here+ends+the+3D+plot%0A%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>pgfplots</code> example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>The following image shows the result produced by the code above:
+</p><p><img alt="Plgplotsex1OLV2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/0/09/Plgplotsex1OLV2.png" decoding="async" width="600" height="261" />
+</p>
+<h3><span class="mw-headline" id="Explanation_of_the_code">Explanation of the code</span></h3>
+<p>Because <code>pgfplots</code> is based on <code>tikz</code> the plot must be inside a <code>tikzpicture</code> environment. Then the environment declaration <code>\begin{axis}</code>, <code>\end{axis}</code> will set the correct scaling for the plot—check the <a href="#Reference_guide">Reference guide</a> for other axis environments.
+</p><p>To add an actual plot, the command <code>\addplot[color=red]{log(x)};</code> is used. Inside the square brackets, <code>[...]</code>, some options can be passed in; here, we set the <code>color</code> of the plot to <code>red</code>. The square brackets are mandatory, if no options are passed leave a blank space between them. Inside the curly brackets you put the function to plot. Is important to remember that this command must end with a semicolon (;).
+</p><p>To put a second plot next to the first one declare a new <code>tikzpicture</code> environment. Do not insert a new line, but a small blank gap, in this case <code>hskip 10pt</code> will insert a 10pt-wide blank space.
+</p><p>The rest of the syntax is the same, except for the <code>\addplot3 [surf,]{exp(-x^2-y^2)*x};</code>. This will add a 3dplot, and the option <code>surf</code> inside squared brackets declares that it's a surface plot. The function to plot must be placed inside curly brackets. Again, don't forget to put a semicolon (;) at the end of the command.
+</p><p><strong>Note</strong>: It's recommended as a good practice to indent the code—see the second plot in the example above—and to add a comma (,) at the end of each option passed to <code>\addplot</code>. This way the code is more readable and is easier to add further options if needed.
+</p>
+<h2><span class="mw-headline" id="2D_plots">2D plots</span></h2>
+<p><code>pgfplots</code>' 2D plotting functionalities are vast—and you can personalize your plots to suit your requirements. Nevertheless, the default options usually give very good results, so all you need to do is feed the data and <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span> will do the rest. 
+</p>
+<h3><span class="mw-headline" id="Plotting_mathematical_expressions">Plotting mathematical expressions</span></h3>
+<p>Here is an example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>axis<span class="nb">}</span>[
+    axis lines = left,
+    xlabel = <span class="s">\(</span><span class="nb">x</span><span class="s">\)</span>,
+    ylabel = <span class="nb">{</span><span class="s">\(</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="s">\)</span><span class="nb">}</span>,
+]
+<span class="c">%Below the red parabola is defined</span>
+<span class="k">\addplot</span> [
+    domain=-10:10, 
+    samples=100, 
+    color=red,
+]
+<span class="nb">{</span>x<span class="nb">^</span>2 - 2*x - 1<span class="nb">}</span>;
+<span class="k">\addlegendentry</span><span class="nb">{</span><span class="s">\(</span><span class="nb">x^</span><span class="m">2</span><span class="nb"> </span><span class="o">-</span><span class="nb"> </span><span class="m">2</span><span class="nb">x </span><span class="o">-</span><span class="nb"> </span><span class="m">1</span><span class="s">\)</span><span class="nb">}</span>
+<span class="c">%Here the blue parabola is defined</span>
+<span class="k">\addplot</span> [
+    domain=-10:10, 
+    samples=100, 
+    color=blue,
+    ]
+    <span class="nb">{</span>x<span class="nb">^</span>2 + 2*x + 1<span class="nb">}</span>;
+<span class="k">\addlegendentry</span><span class="nb">{</span><span class="s">\(</span><span class="nb">x^</span><span class="m">2</span><span class="nb"> </span><span class="o">+</span><span class="nb"> </span><span class="m">2</span><span class="nb">x </span><span class="o">+</span><span class="nb"> </span><span class="m">1</span><span class="s">\)</span><span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=&amp;snip_name=pgfplots+example+2&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bmargin%3D0.25in%5D%7Bgeometry%7D%0A%5Cusepackage%7Bpgfplots%7D%0A%5Cpgfplotsset%7Bwidth%3D10cm%2Ccompat%3D1.9%7D%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Btikzpicture%7D%0A%5Cbegin%7Baxis%7D%5B%0A++++axis+lines+%3D+left%2C%0A++++xlabel+%3D+%5C%28x%5C%29%2C%0A++++ylabel+%3D+%7B%5C%28f%28x%29%5C%29%7D%2C%0A%5D%0A%25Below+the+red+parabola+is+defined%0A%5Caddplot+%5B%0A++++domain%3D-10%3A10%2C+%0A++++samples%3D100%2C+%0A++++color%3Dred%2C%0A%5D%0A%7Bx%5E2+-+2%2Ax+-+1%7D%3B%0A%5Caddlegendentry%7B%5C%28x%5E2+-+2x+-+1%5C%29%7D%0A%25Here+the+blue+parabola+is+defined%0A%5Caddplot+%5B%0A++++domain%3D-10%3A10%2C+%0A++++samples%3D100%2C+%0A++++color%3Dblue%2C%0A++++%5D%0A++++%7Bx%5E2+%2B+2%2Ax+%2B+1%7D%3B%0A%5Caddlegendentry%7B%5C%28x%5E2+%2B+2x+%2B+1%5C%29%7D%0A%0A%5Cend%7Baxis%7D%0A%5Cend%7Btikzpicture%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>pgfplots</code> example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link:
+</p><p><img alt="Plgplotsex2.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/1/1b/Plgplotsex2.png" decoding="async" width="600" height="480" />
+</p>
+<h4><span class="mw-headline" id="Explanation_of_the_code_2">Explanation of the code</span></h4>
+<p>Let's analyse the new commands line-by-line:
+</p>
+<dl><dt><code>axis lines = left</code>.</dt>
+<dd>This will set the axis only on the left and bottom sides of the plot, instead of the default <code>box</code>. Further customisation options at the <a href="#Reference_guide">reference guide</a>.</dd></dl>
+<dl><dt><code>xlabel = \(x\)</code> and <code>ylabel = {\(f(x)\)}</code>.</dt>
+<dd>Self-explanatory parameter names, these will let you put a label on the horizontal and vertical axis. Notice the <code>ylabel</code> value in between curly brackets, this brackets tell <code>pgfplots</code> how to group the text. The <code>xlabel</code> could have had brackets too. This is useful for complicated labels that may confuse <code>pgfplots</code>.</dd></dl>
+<dl><dt><code>\addplot</code>.</dt>
+<dd>This will add a plot to the axis, general usage was described at the <a href="#Introduction">introduction</a>. There are two new parameters in this example.</dd></dl>
+<dl><dt><code>domain=-10:10</code>.</dt>
+<dd>This establishes the range of values of \(x\).</dd></dl>
+<dl><dt><code>samples=100</code>.</dt>
+<dd>Determines the number of points in the interval defined by <code>domain</code>. The greater the value of <code>samples</code> the sharper the graph you get, but it will take longer to render.</dd></dl>
+<dl><dt><code>\addlegendentry{\(x^2 - 2x - 1\)}</code>.</dt>
+<dd>This adds the legend to identify the function \(x^2 - 2x - 1\).</dd></dl>
+<p>To add another graph to the plot just write a new <code>\addplot</code> entry.
+</p>
+<h3><span class="mw-headline" id="Plotting_from_data">Plotting from data</span></h3>
+<p>Scientific research often yields data that has to be analysed. The next example shows how to plot data with <i>pgfplots</i>:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span>Plotting from data:
+
+<span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>axis<span class="nb">}</span>[
+    title=<span class="nb">{</span>Temperature dependence of CuSO<span class="s">\(</span><span class="nb">_</span><span class="m">4</span><span class="nv">\cdot</span><span class="s">\)</span>5H<span class="s">\(</span><span class="nb">_</span><span class="m">2</span><span class="s">\)</span>O solubility<span class="nb">}</span>,
+    xlabel=<span class="nb">{</span>Temperature [<span class="k">\textcelsius</span>]<span class="nb">}</span>,
+    ylabel=<span class="nb">{</span>Solubility [g per 100 g water]<span class="nb">}</span>,
+    xmin=0, xmax=100,
+    ymin=0, ymax=120,
+    xtick=<span class="nb">{</span>0,20,40,60,80,100<span class="nb">}</span>,
+    ytick=<span class="nb">{</span>0,20,40,60,80,100,120<span class="nb">}</span>,
+    legend pos=north west,
+    ymajorgrids=true,
+    grid style=dashed,
+]
+
+<span class="k">\addplot</span>[
+    color=blue,
+    mark=square,
+    ]
+    coordinates <span class="nb">{</span>
+    (0,23.1)(10,27.5)(20,32)(30,37.8)(40,44.6)(60,61.8)(80,83.8)(100,114)
+    <span class="nb">}</span>;
+    <span class="k">\legend</span><span class="nb">{</span>CuSO<span class="s">\(</span><span class="nb">_</span><span class="m">4</span><span class="nv">\cdot</span><span class="s">\)</span>5H<span class="s">\(</span><span class="nb">_</span><span class="m">2</span><span class="s">\)</span>O<span class="nb">}</span>
+    
+<span class="k">\end</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=pgfplots+example+3
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bmargin%3D0.5in%5D%7Bgeometry%7D%0A%5Cusepackage%7Btextcomp%7D%0A%5Cusepackage%7Bpgfplots%7D%0A%5Cpgfplotsset%7Bwidth%3D10cm%2Ccompat%3D1.9%7D%0A%25%5Cusepgfplotslibrary%7Bexternal%7D%0A%25%5Ctikzexternalize%0A%5Cbegin%7Bdocument%7D%0APlotting+from+data%3A%0A%0A%5Cbegin%7Btikzpicture%7D%0A%5Cbegin%7Baxis%7D%5B%0A++++title%3D%7BTemperature+dependence+of+CuSO%5C%28_4%5Ccdot%5C%295H%5C%28_2%5C%29O+solubility%7D%2C%0A++++xlabel%3D%7BTemperature+%5B%5Ctextcelsius%5D%7D%2C%0A++++ylabel%3D%7BSolubility+%5Bg+per+100+g+water%5D%7D%2C%0A++++xmin%3D0%2C+xmax%3D100%2C%0A++++ymin%3D0%2C+ymax%3D120%2C%0A++++xtick%3D%7B0%2C20%2C40%2C60%2C80%2C100%7D%2C%0A++++ytick%3D%7B0%2C20%2C40%2C60%2C80%2C100%2C120%7D%2C%0A++++legend+pos%3Dnorth+west%2C%0A++++ymajorgrids%3Dtrue%2C%0A++++grid+style%3Ddashed%2C%0A%5D%0A%0A%5Caddplot%5B%0A++++color%3Dblue%2C%0A++++mark%3Dsquare%2C%0A++++%5D%0A++++coordinates+%7B%0A++++%280%2C23.1%29%2810%2C27.5%29%2820%2C32%29%2830%2C37.8%29%2840%2C44.6%29%2860%2C61.8%29%2880%2C83.8%29%28100%2C114%29%0A++++%7D%3B%0A++++%5Clegend%7BCuSO%5C%28_4%5Ccdot%5C%295H%5C%28_2%5C%29O%7D%0A++++%0A%5Cend%7Baxis%7D%0A%5Cend%7Btikzpicture%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>pgfplots</code> example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link:
+</p><p><img alt="Plgplotsex3.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/d/d0/Plgplotsex3.png" decoding="async" width="600" height="531" />
+</p>
+<h4><span class="mw-headline" id="Explanation_of_the_code_3">Explanation of the code</span></h4>
+<p>There are some new commands and parameters here:
+</p>
+<dl><dt><code>title={Temperature dependence of CuSO\(_4\cdot\)5H\(_2\)O solubility}</code>.</dt>
+<dd>As you might expect, assigns a title to the figure. The title will be displayed above the plot.</dd></dl>
+<dl><dt><code>xmin=0, xmax=100, ymin=0, ymax=120</code>.</dt>
+<dd>Minimum and maximum bounds of the x and y axes.</dd></dl>
+<dl><dt><code>xtick={0,20,40,60,80,100}, ytick={0,20,40,60,80,100,120}</code>.</dt>
+<dd>Points where the marks are placed. If empty the ticks are set automatically.</dd></dl>
+<dl><dt><code>legend pos=north west</code>.</dt>
+<dd>Position of the legend box. Check the <a href="#Reference_guide">reference guide</a> for more options.</dd></dl>
+<dl><dt><code>ymajorgrids=true</code>.</dt>
+<dd>This Enables/disables grid lines at the tick positions on the y axis. Use <code>xmajorgrids</code> to enable grid lines on the x axis.</dd></dl>
+<dl><dt><code>grid style=dashed</code>.</dt>
+<dd>Self-explanatory. To display dashed grid lines.</dd></dl>
+<dl><dt><code>mark=square</code>.</dt>
+<dd>This draws a squared mark at each point in the <code>coordinates</code> array. Each mark will be connected with the next one by a straight line.</dd></dl>
+<dl><dt><code>coordinates {(0,23.1)(10,27.5)(20,32)...}</code></dt>
+<dd>Coordinates of the points to be plotted. This is the data you want analyse graphically.</dd></dl>
+<p>If the data is in a file, which is the case most of the time; instead of the commands <code>\addplot</code> and <code>coordinates</code> you should use <code>\addplot table {file_with_the_data.dat}</code>, the rest of the options are valid in this environment.
+</p>
+<h3><span class="mw-headline" id="Scatter_plots">Scatter plots</span></h3>
+<p>Scatter plots are used to represent information by using some kind of marks and are commonly used when computing statistical regression. In this example we'll create a scatter plot using data contained in a file called <code>scattered_example.dat</code>, in which the data looks like this:
+</p>
+<pre>GPA  ma  ve  co   un
+3.45 643 589 3.76 3.52
+2.78 558 512 2.87 2.91
+2.52 583 503 2.54 2.4
+3.67 685 602 3.83 3.47
+3.24 592 538 3.29 3.47
+2.1 562 486 2.64 2.37
+...
+</pre>
+<p>Our scatter plot uses the first two columns of the data:
+</p>
+<div class="Example">
+<div class="Code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>axis<span class="nb">}</span>[
+    enlargelimits=false,
+]
+<span class="k">\addplot</span>+[
+    only marks,
+    scatter,
+    mark=halfcircle*,
+    mark size=2.9pt]
+table[meta=ma]
+<span class="nb">{</span>scattered<span class="nb">_</span>example.dat<span class="nb">}</span>;
+<span class="k">\end</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+<p><img alt="Scattered.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/cf/Scattered.png" decoding="async" width="600" height="504" />
+</p><p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/project/new/template/20099?id=68399290&amp;templateName=Scatter+plot+example&amp;latexEngine=pdflatex&amp;texImage=texlive-full%3A2020.1&amp;mainFile="><i class="fa fa-share"></i> Open a scatter plot project example in Overleaf (contains the data file <code>scattered_example.dat</code>).</a>
+</p><p><br />
+</p>
+<h4><span class="mw-headline" id="Explanation_of_the_code_4">Explanation of the code</span></h4>
+<p>The parameters passed to the <code>axis</code> and <code>addplot</code> environments can also be used in a data plot, except for <code>scatter</code>. Below the description of the code:
+</p>
+<dl><dt><code>enlarge limits=false</code></dt>
+<dd>This will shrink the axes so the point with maximum and minimum values lay on the edge of the plot.</dd></dl>
+<dl><dt><code>only marks</code></dt>
+<dd>Really explicit, will put a mark on each point.</dd></dl>
+<dl><dt><code>scatter</code></dt>
+<dd>When <code>scatter</code> is used the points are coloured depending on a value, the colour is given by the <code>meta</code> parameter explained below.</dd></dl>
+<dl><dt><code>mark=halfcircle*</code></dt>
+<dd>The kind of mark to use on each point, check the <a href="#Reference_guide">reference guide</a> for a list of possible values.</dd></dl>
+<dl><dt><code>mark size=2.9pt</code></dt>
+<dd>The size of each mark, different units can be used.</dd></dl>
+<dl><dt><code>table[meta=ma]{scattered_example.dat};</code></dt>
+<dd>Here the <code>table</code> command tells latex that the data to be plotted is in a file. The <code>meta=ma</code> parameter is passed to choose the column that determines the colour of each point. Inside curly brackets is the name of the data file.</dd></dl>
+<h3><span class="mw-headline" id="Bar_graphs">Bar graphs</span></h3>
+<p>Bar graphs (also known as bar charts and bar plots) are used to display gathered data, mainly statistical data about a population of some sort. Bar plots in <code>pgfplots</code> are highly configurable, but here we are going to show a plain example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>axis<span class="nb">}</span>[
+	x tick label style=<span class="nb">{</span>
+		/pgf/number format/1000 sep=<span class="nb">}</span>,
+	ylabel=Year,
+	enlargelimits=0.05,
+	legend style=<span class="nb">{</span>at=<span class="nb">{</span>(0.5,-0.1)<span class="nb">}</span>,
+	anchor=north,legend columns=-1<span class="nb">}</span>,
+	ybar interval=0.7,
+]
+<span class="k">\addplot</span> 
+	coordinates <span class="nb">{</span>(2012,408184) (2011,408348)
+		 (2010,414870) (2009,412156)<span class="nb">}</span>;
+<span class="k">\addplot</span> 
+	coordinates <span class="nb">{</span>(2012,388950) (2011,393007) 
+		(2010,398449) (2009,395972)<span class="nb">}</span>;
+<span class="k">\legend</span><span class="nb">{</span>Men,Women<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex
+&amp;snip_name=pgfplots+bar+chart+example
+&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bmargin%3D0.5in%5D%7Bgeometry%7D%0A%5Cusepackage%7Btextcomp%7D%0A%5Cusepackage%7Bpgfplots%7D%0A%5Cpgfplotsset%7Bwidth%3D10cm%2Ccompat%3D1.9%7D%0A%25%5Cusepgfplotslibrary%7Bexternal%7D%0A%25%5Ctikzexternalize%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Btikzpicture%7D%0A%5Cbegin%7Baxis%7D%5B%0A%09x+tick+label+style%3D%7B%0A%09%09%2Fpgf%2Fnumber+format%2F1000+sep%3D%7D%2C%0A%09ylabel%3DYear%2C%0A%09enlargelimits%3D0.05%2C%0A%09legend+style%3D%7Bat%3D%7B%280.5%2C-0.1%29%7D%2C%0A%09anchor%3Dnorth%2Clegend+columns%3D-1%7D%2C%0A%09ybar+interval%3D0.7%2C%0A%5D%0A%5Caddplot+%0A%09coordinates+%7B%282012%2C408184%29+%282011%2C408348%29%0A%09%09+%282010%2C414870%29+%282009%2C412156%29%7D%3B%0A%5Caddplot+%0A%09coordinates+%7B%282012%2C388950%29+%282011%2C393007%29+%0A%09%09%282010%2C398449%29+%282009%2C395972%29%7D%3B%0A%5Clegend%7BMen%2CWomen%7D%0A%5Cend%7Baxis%7D%0A%5Cend%7Btikzpicture%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>pgfplots</code> bar code example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p><br />
+The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link:
+</p><p><img alt="Barchartsexample.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/30/Barchartsexample.png" decoding="async" width="600" height="548" />
+</p>
+<h4><span class="mw-headline" id="Explanation_of_the_code_5">Explanation of the code</span></h4>
+<p>The figure starts with the (<a href="#Introduction">previously explained</a>) declaration of the <code>tikzpicture</code> and <code>axis</code> environments, but the <code>axis</code> declaration has a number of new parameters:
+</p>
+<dl><dt><code>x tick label style={/pgf/number format/1000 sep=}</code></dt>
+<dd>This piece of code defines a complete style for the plot. With this style you may include several <code>\addplot</code> commands within this <code>axis</code> environment, they will fit and look nice together with no further tweaks (the <code>ybar</code> parameter described below is mandatory for this to work).</dd></dl>
+<dl><dt><code>enlargelimits=0.05</code>.</dt>
+<dd>Enlarging the limits in a bar plot is necessary because these kind of plots often require some extra space above the bar to look better and/or add a label. Then number 0.05 is relative to the total height of of the plot.</dd></dl>
+<dl><dt><code>legend style={at={(0.5,-0.2)}, anchor=north,legend columns=-1}</code></dt>
+<dd>Again, this will work just fine most of the time. If anything, change the value of <code>-0.2</code> to locate the legend closer/farther from the x-axis.</dd></dl>
+<dl><dt><code>ybar interval=0.7,</code></dt>
+<dd>Thickness of each bar. <code>1</code> meaning the bars will be one next to the other with no gaps and <code>0</code> meaning there will be no bars, but only vertical lines.</dd></dl>
+<p>The <code>coordinates</code> in this kind of plot determine the base point of the bar and its height. 
+</p><p>The labels on the y-axis will show up to 4 digits. If the numbers you are working with are greater than 9999 <code>pgfplots</code> will use the same notation as in the example.
+</p>
+<h2><span class="mw-headline" id="3D_Plots">3D Plots</span></h2>
+<p><code>pgfplots</code> has the 3D Plotting capabilities that you may expect in a plotting software.
+</p>
+<h3><span class="mw-headline" id="Plotting_mathematical_expressions_2">Plotting mathematical expressions</span></h3>
+<p>There's a simple example about this at the <a href="#Introduction">introduction</a>, let's work on something slightly more complex:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>axis<span class="nb">}</span>[
+    title=Example using the mesh parameter,
+    hide axis,
+    colormap/cool,
+]
+<span class="k">\addplot</span>3[
+    mesh,
+    samples=50,
+    domain=-8:8,
+]
+<span class="nb">{</span>sin(deg(sqrt(x<span class="nb">^</span>2+y<span class="nb">^</span>2)))/sqrt(x<span class="nb">^</span>2+y<span class="nb">^</span>2)<span class="nb">}</span>;
+<span class="k">\addlegendentry</span><span class="nb">{</span><span class="s">\(</span><span class="nv">\frac</span><span class="nb">{sin</span><span class="o">(</span><span class="nb">r</span><span class="o">)</span><span class="nb">}{r}</span><span class="s">\)</span><span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=pgfplots+3D+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bmargin%3D0.5in%5D%7Bgeometry%7D%0A%5Cusepackage%7Bpgfplots%7D%0A%5Cpgfplotsset%7Bwidth%3D10cm%2Ccompat%3D1.9%7D%0A%25%5Cusepgfplotslibrary%7Bexternal%7D%0A%25%5Ctikzexternalize%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Btikzpicture%7D%0A%5Cbegin%7Baxis%7D%5B%0A++++title%3DExample+using+the+mesh+parameter%2C%0A++++hide+axis%2C%0A++++colormap%2Fcool%2C%0A%5D%0A%5Caddplot3%5B%0A++++mesh%2C%0A++++samples%3D50%2C%0A++++domain%3D-8%3A8%2C%0A%5D%0A%7Bsin%28deg%28sqrt%28x%5E2%2By%5E2%29%29%29%2Fsqrt%28x%5E2%2By%5E2%29%7D%3B%0A%5Caddlegendentry%7B%5C%28%5Cfrac%7Bsin%28r%29%7D%7Br%7D%5C%29%7D%0A%5Cend%7Baxis%7D%0A%5Cend%7Btikzpicture%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>pgfplots</code> 3D example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link:
+</p><p><img alt="Pgfplots3dexample.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/4/4b/Pgfplots3dexample.png" decoding="async" width="600" height="503" />
+</p>
+<h4><span class="mw-headline" id="Explanation_of_the_code_6">Explanation of the code</span></h4>
+<p>Most of the commands here have already been explained, but there are 3 new things:
+</p>
+<dl><dt><code>hide axis</code></dt>
+<dd>This option in the <code>axis</code> environment is self descriptive, the axis won't be shown.</dd></dl>
+<dl><dt><code>colormap/cool</code></dt>
+<dd>Is the colour scheme to be used in the plot. Check the <a href="#Reference_guide">reference guide</a> for more colour schemes.</dd></dl>
+<dl><dt><code>mesh</code></dt>
+<dd>This option is self-descriptive too, check also the <code>surf</code> parameter in the <a href="#Introduction">introductory example</a>.</dd></dl>
+<p><strong>Note</strong>: When working with trigonometric functions <code>pgfplots</code> uses degrees as default units, if the angle is in radians (as in this example) you have to use the <code>deg</code> function to convert to degrees.
+</p>
+<h3><span class="mw-headline" id="Contour_plots">Contour plots</span></h3>
+<p>In <code>pgfplots</code> it is possible to plot contour plots, but the data has to be pre-calculated by an external program. Let's see an example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>axis<span class="nb">}</span>
+[
+    title=<span class="nb">{</span>Contour plot, view from top<span class="nb">}</span>,
+    view=<span class="nb">{</span>0<span class="nb">}{</span>90<span class="nb">}</span>
+]
+<span class="k">\addplot</span>3[
+    contour gnuplot=<span class="nb">{</span>levels=<span class="nb">{</span>0.8, 0.4, 0.2, -0.2<span class="nb">}}</span>
+]
+<span class="nb">{</span>sin(deg(sqrt(x<span class="nb">^</span>2+y<span class="nb">^</span>2)))/sqrt(x<span class="nb">^</span>2+y<span class="nb">^</span>2)<span class="nb">}</span>;
+<span class="k">\end</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=pgfplots+contour+plot+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bmargin%3D0.5in%5D%7Bgeometry%7D%0A%5Cusepackage%7Bpgfplots%7D%0A%5Cpgfplotsset%7Bwidth%3D10cm%2Ccompat%3D1.9%7D%0A%25%5Cusepgfplotslibrary%7Bexternal%7D%0A%25%5Ctikzexternalize%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Btikzpicture%7D%0A%5Cbegin%7Baxis%7D%0A%5B%0A++++title%3D%7BContour+plot%2C+view+from+top%7D%2C%0A++++view%3D%7B0%7D%7B90%7D%0A%5D%0A%5Caddplot3%5B%0A++++contour+gnuplot%3D%7Blevels%3D%7B0.8%2C+0.4%2C+0.2%2C+-0.2%7D%7D%0A%5D%0A%7Bsin%28deg%28sqrt%28x%5E2%2By%5E2%29%29%29%2Fsqrt%28x%5E2%2By%5E2%29%7D%3B%0A%5Cend%7Baxis%7D%0A%5Cend%7Btikzpicture%7D%0A%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>pgfplots</code> contour plot example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link:
+</p><p><img alt="Contourplotexample.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/3/3a/Contourplotexample.png" decoding="async" width="600" height="530" />
+</p>
+<h4><span class="mw-headline" id="Explanation_of_the_code_7">Explanation of the code</span></h4>
+<p>This is a plot of some contour lines for the same equation used in the previous section. The value of the <code>title</code> parameter is inside curly brackets because it contains a comma, so we use the grouping brackets to avoid any confusion with the other parameters passed to the <code>\begin{axis}</code> declaration. There are two new commands:
+</p>
+<dl><dt><code>view={0}{90}</code></dt>
+<dd>This changes the view of the plot. The parameter is passed to the <code>axis</code> environment, which means this can be used in any other type of 3D plot. The first value is a rotation, in degrees, around the z-axis; the second value is to rotate the view around the x-axis. In this example when we combine a 0° rotation around the z-axis and a 90° rotation around the x-axis we end up with a view of the plot from top.</dd></dl>
+<dl><dt><code>contour gnuplot={levels={0.8, 0.4, 0.2, -0.2}}</code></dt>
+<dd>This line of code does two things: First, it tells LaTeX to use the external software <a rel="nofollow" class="external text" href="http://www.gnuplot.info/"><code>gnuplot</code></a> to compute the contour lines; this works fine in Overleaf but if you want to use this command in your local LaTeX installation you have to install gnuplot first (matlab will also work, in such case write <code>matlab</code> instead of <code>gnuplot</code> in the command). Second, the sub parameter <code>levels</code> is a list of values of elevation levels where the contour lines are to be computed.</dd></dl>
+<h3><span class="mw-headline" id="Plotting_a_surface_from_data">Plotting a surface from data</span></h3>
+<p>To plot a set of data into a 3D surface all we need is the coordinates of each point. These coordinates could be an unordered set or, in this case, a matrix:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\addplot</span>3[
+    surf,
+] 
+coordinates <span class="nb">{</span>
+(0,0,0) (0,1,0) (0,2,0)
+
+(1,0,0) (1,1,0.6) (1,2,0.7)
+
+(2,0,0) (2,1,0.7) (2,2,1.8)
+<span class="nb">}</span>;
+<span class="k">\end</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=plotting+a+surface+from+data+with+pgfplots&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bmargin%3D0.5in%5D%7Bgeometry%7D%0A%5Cusepackage%7Bpgfplots%7D%0A%5Cpgfplotsset%7Bwidth%3D10cm%2Ccompat%3D1.9%7D%0A%25%5Cusepgfplotslibrary%7Bexternal%7D%0A%25%5Ctikzexternalize%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Btikzpicture%7D%0A%5Cbegin%7Baxis%7D%0A%5Caddplot3%5B%0A++++surf%2C%0A%5D+%0Acoordinates+%7B%0A%280%2C0%2C0%29+%280%2C1%2C0%29+%280%2C2%2C0%29%0A%0A%281%2C0%2C0%29+%281%2C1%2C0.6%29+%281%2C2%2C0.7%29%0A%0A%282%2C0%2C0%29+%282%2C1%2C0.7%29+%282%2C2%2C1.8%29%0A%7D%3B%0A%5Cend%7Baxis%7D%0A%5Cend%7Btikzpicture%7D%0A%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>pgfplots</code> 3D surface example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link:
+</p><p><img alt="3dsurfacedata.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/2/2d/3dsurfacedata.png" decoding="async" width="600" height="490" />
+</p>
+<h4><span class="mw-headline" id="Explanation_of_the_data">Explanation of the data</span></h4>
+<p>The points passed to the <code>coordinates</code> parameter are treated as contained in a 3 × 3 matrix, using a blank line as the separator for each matrix row.
+</p><p>All the options for 3D plots in this article apply to data surfaces.
+</p>
+<h3><span class="mw-headline" id="Parametric_plot">Parametric plot</span></h3>
+<p>The syntax for parametric plots is slightly different. Let's see an example:
+</p>
+<p class="mw-empty-elt"></p><div class="example">
+<div class="code">
+<div class="mw-highlight mw-highlight-lang-latex mw-content-ltr" dir="ltr"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>axis<span class="nb">}</span>
+    [
+    view=<span class="nb">{</span>60<span class="nb">}{</span>30<span class="nb">}</span>,
+    ]
+<span class="k">\addplot</span>3[
+    domain=0:5*pi,
+    samples = 60,
+    samples y=0,
+]
+(<span class="nb">{</span>sin(deg(x))<span class="nb">}</span>,
+<span class="nb">{</span>cos(deg(x))<span class="nb">}</span>,
+<span class="nb">{</span>x<span class="nb">}</span>);
+<span class="k">\end</span><span class="nb">{</span>axis<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>tikzpicture<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+
+<p><a class="open-in-overleaf" target="_blank" href="https://www.overleaf.com/docs?engine=pdflatex&amp;snip_name=pgfplots+parametric+plot+example&amp;snip=%5Cdocumentclass%7Barticle%7D%0A%5Cusepackage%5Bmargin%3D0.5in%5D%7Bgeometry%7D%0A%5Cusepackage%7Bpgfplots%7D%0A%5Cpgfplotsset%7Bwidth%3D10cm%2Ccompat%3D1.9%7D%0A%25%5Cusepgfplotslibrary%7Bexternal%7D%0A%25%5Ctikzexternalize%0A%5Cbegin%7Bdocument%7D%0A%5Cbegin%7Btikzpicture%7D%0A%5Cbegin%7Baxis%7D%0A++++%5B%0A++++view%3D%7B60%7D%7B30%7D%2C%0A++++%5D%0A%5Caddplot3%5B%0A++++domain%3D0%3A5%2Api%2C%0A++++samples+%3D+60%2C%0A++++samples+y%3D0%2C%0A%5D%0A%28%7Bsin%28deg%28x%29%29%7D%2C%0A%7Bcos%28deg%28x%29%29%7D%2C%0A%7Bx%7D%29%3B%0A%5Cend%7Baxis%7D%0A%5Cend%7Btikzpicture%7D%0A%5Cend%7Bdocument%7D"><i class="fa fa-share"></i> Open this <code>pgfplots</code> parametric plot example in Overleaf.</a>
+</p><p class="mw-empty-elt"></p>
+<p>The output from this code is shown in the image below—the LaTeX document preamble is added automatically when you open the link:
+</p><p><img alt="Parametricplot.png" src="../../../sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/9/94/Parametricplot.png" decoding="async" width="600" height="494" />
+</p>
+<h4><span class="mw-headline" id="Explanation_of_the_code_8">Explanation of the code</span></h4>
+<p>There are only two new things in this example: first, the <code>samples y=0</code> to prevent <code>pgfplots</code> from joining the extreme points of the spiral and; second, the way the function to plot is passed to the <code>addplot3</code> environment. Each parameter function is grouped inside curly brackets and the three parameters are delimited with a parenthesis.
+</p>
+<h2><span class="mw-headline" id="Reference_guide">Reference guide</span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Command/Option/Environment
+</th>
+<th>Description
+</th>
+<th>Possible Values
+</th></tr>
+<tr>
+<td><b>axis</b>
+</td>
+<td>Normal plots with linear scaling
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>semilogxaxis</b>
+</td>
+<td>logarithmic scaling of x and normal scaling for y
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>semilogyaxis</b>
+</td>
+<td>logarithmic scaling for y and normal scaling for x
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>loglogaxis</b>
+</td>
+<td>logarithmic scaling for the x and y axes
+</td>
+<td>
+</td></tr>
+<tr>
+<td><b>axis lines</b>
+</td>
+<td>changes the way the axes are drawn. default is '<i>box</i>
+</td>
+<td>box, left, middle, center, right, none
+</td></tr>
+<tr>
+<td><b>legend pos</b>
+</td>
+<td>position of the legend box
+</td>
+<td>south west, south east, north west, north east, outer north east
+</td></tr>
+<tr>
+<td><b>mark</b>
+</td>
+<td>type of marks used in data plotting. When a single-character is used, the character appearance is very similar to the actual mark.
+</td>
+<td>*, x , +, |, o, asterisk, star, 10-pointed star, oplus, oplus*, otimes, otimes*, square, square*, triangle, triangle*, diamond, halfdiamond*, halfsquare*, right*, left*, Mercedes star, Mercedes star flipped, halfcircle, halfcircle*, pentagon, pentagon*, cubes. (cubes only work on 3d plots).
+</td></tr>
+<tr>
+<td><b>colormap</b>
+</td>
+<td>colour scheme to be used in a plot, can be personalized but there are some predefined colormaps
+</td>
+<td>hot, hot2, jet, blackwhite, bluered, cool, greenyellow, redyellow, violet.
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span></h2>
+<p>For more information see:
+</p>
+<ul><li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li>
+<li><a href="Questions/I_have_a_lot_of_tikz%2c_matlab2tikz_or_pgfplots_figures%2c_so_I%27m_getting_a_compilation_timeout.html" title="Questions/I have a lot of tikz, matlab2tikz or pgfplots figures, so I'm getting a compilation timeout. Can I externalise my figures?">Externalising pgfplots and tikzpictures</a></li>
+<li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of tables and figures</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning images and tables</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing diagrams directly in LaTeX</a></li>
+<li><a rel="nofollow" class="external text" href="http://mirrors.ctan.org/graphics/pgf/contrib/pgfplots/doc/pgfplots.pdf">The <b>pgfplots</b> package documentation</a>.</li>
+<li><a rel="nofollow" class="external text" href="http://mirror.utexas.edu/ctan/graphics/pgf/base/doc/pgfmanual.pdf">The TikZ and PGF Packages: Manual for version 3.0.0</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.texample.net/tikz/examples/all/">TikZ and PGF examples at TeXample.net</a></li></ul>
+
+
+
+
+</div></div></div></div></div><div class="col-xs-12 col-sm-3 col-sm-pull-9 contents card" ng-non-bindable><div class="mw-parser-output"><ul><li><a href="../../learn.html" title="Main Page">Documentation Home</a></li>
+<li><a href="Learn_LaTeX_in_30_minutes.html" title="Learn LaTeX in 30 minutes">Learn LaTeX in 30 minutes</a></li></ul>
+<h2><span class="mw-headline">Overleaf guides</span></h2>
+<ul><li><a href="https://www.overleaf.com/learn/how-to/Creating_a_document_in_Overleaf" title="Kb/Creating a document in Overleaf">Creating a document in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Uploading_a_project" title="Kb/Uploading a project">Uploading a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Copying_a_project" title="Kb/Copying a project">Copying a project</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Creating_a_project_from_a_template" title="Kb/Creating a project from a template">Creating a project from a template</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_the_Overleaf_project_menu" title="Kb/Using the Overleaf project menu">Using the Overleaf project menu</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf" title="Kb/Including images on Overleaf">Including images in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Exporting_your_work_from_Overleaf" title="Kb/Exporting your work from Overleaf">Exporting your work from Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Working_Offline_in_Overleaf" title="Kb/Working Offline in Overleaf">Working offline in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Track_Changes_in_Overleaf" title="Kb/Track Changes in Overleaf">Using Track Changes in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf" title="Kb/Using bibliographies on Overleaf">Using bibliographies in Overleaf</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Sharing_a_project" title="Kb/Sharing a project">Sharing your work with others</a></li>
+<li><a href="Using_the_History_feature.html" title="Using the History feature">Using the History feature</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Why_do_I_keep_getting_the_compile_timeout_error_message%3F" class="mw-redirect" title="Kb/Why do I keep getting the compile timeout error message?">Debugging Compilation timeout errors</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to" class="mw-redirect" title="Kb/Knowledge Base">How-to guides</a></li>
+<li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features" title="Kb/Overleaf premium features">Guide to Overleaf’s premium features</a></li></ul>
+<h2><span class="mw-headline">LaTeX Basics</span></h2>
+<ul><li><a href="Learn_LaTeX_in_30_minutes.html" class="mw-redirect" title="Creating a document in LaTeX">Creating your first LaTeX document</a></li>
+<li><a href="Choosing_a_LaTeX_Compiler.html" title="Choosing a LaTeX Compiler">Choosing a LaTeX Compiler</a></li>
+<li><a href="Paragraphs_and_new_lines.html" title="Paragraphs and new lines">Paragraphs and new lines</a></li>
+<li><a href="Bold%2c_italics_and_underlining.html" title="Bold, italics and underlining">Bold, italics and underlining</a></li>
+<li><a href="Lists.html" title="Lists">Lists</a></li>
+<li><a href="Errors.html" title="Errors">Errors</a></li></ul>
+<h2><span class="mw-headline">Mathematics</span></h2>
+<ul><li><a href="Mathematical_expressions.html" title="Mathematical expressions">Mathematical expressions</a></li>
+<li><a href="Subscripts_and_superscripts.html" title="Subscripts and superscripts">Subscripts and superscripts</a></li>
+<li><a href="Brackets_and_Parentheses.html" title="Brackets and Parentheses">Brackets and Parentheses</a></li>
+<li><a href="Matrices.html" title="Matrices">Matrices</a></li>
+<li><a href="Fractions_and_Binomials.html" title="Fractions and Binomials">Fractions and Binomials</a></li>
+<li><a href="Aligning_equations_with_amsmath.html" title="Aligning equations with amsmath">Aligning equations</a></li>
+<li><a href="Operators.html" title="Operators">Operators</a></li>
+<li><a href="Spacing_in_math_mode.html" title="Spacing in math mode">Spacing in math mode</a></li>
+<li><a href="Integrals%2c_sums_and_limits.html" title="Integrals, sums and limits">Integrals, sums and limits</a></li>
+<li><a href="Display_style_in_math_mode.html" title="Display style in math mode">Display style in math mode</a></li>
+<li><a href="List_of_Greek_letters_and_math_symbols.html" title="List of Greek letters and math symbols">List of Greek letters and math symbols</a></li>
+<li><a href="Mathematical_fonts.html" title="Mathematical fonts">Mathematical fonts</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.overleaf.com/learn/how-to/Using_the_Symbol_Palette_in_Overleaf">Using the Symbol Palette in Overleaf</a></li></ul>
+<h2><span class="mw-headline">Figures and tables</span></h2>
+<ul><li><a href="Inserting_Images.html" title="Inserting Images">Inserting Images</a></li>
+<li><a href="Tables.html" title="Tables">Tables</a></li>
+<li><a href="Positioning_images_and_tables.html" title="Positioning images and tables">Positioning Images and Tables</a></li>
+<li><a href="Lists_of_tables_and_figures.html" title="Lists of tables and figures">Lists of Tables and Figures</a></li>
+<li><a href="Picture_environment.html" title="Picture environment">Drawing Diagrams Directly in LaTeX</a></li>
+<li><a href="TikZ_package.html" title="TikZ package">TikZ package</a></li></ul>
+<h2><span class="mw-headline">References and Citations</span></h2>
+<ul><li><a href="Bibliography_management_with_bibtex.html" title="Bibliography management with bibtex">Bibliography management with bibtex</a></li>
+<li><a href="Bibliography_management_with_natbib.html" title="Bibliography management with natbib">Bibliography management with natbib</a></li>
+<li><a href="Bibliography_management_with_biblatex.html" title="Bibliography management with biblatex">Bibliography management with biblatex</a></li>
+<li><a href="Bibtex_bibliography_styles.html" title="Bibtex bibliography styles">Bibtex bibliography styles</a></li>
+<li><a href="Natbib_bibliography_styles.html" title="Natbib bibliography styles">Natbib bibliography styles</a></li>
+<li><a href="Natbib_citation_styles.html" title="Natbib citation styles">Natbib citation styles</a></li>
+<li><a href="Biblatex_bibliography_styles.html" title="Biblatex bibliography styles">Biblatex bibliography styles</a></li>
+<li><a href="Biblatex_citation_styles.html" title="Biblatex citation styles">Biblatex citation styles</a></li></ul>
+<h2><span class="mw-headline">Languages</span></h2>
+<ul><li><a href="Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec.html" title="Multilingual typesetting on Overleaf using polyglossia and fontspec">Multilingual typesetting on Overleaf using polyglossia and fontspec</a></li>
+<li><a href="Multilingual_typesetting_on_Overleaf_using_babel_and_fontspec.html" title="Multilingual typesetting on Overleaf using babel and fontspec">Multilingual typesetting on Overleaf using babel and fontspec</a></li>
+<li><a href="International_language_support.html" title="International language support">International language support</a></li>
+<li><a href="Typesetting_quotations.html" title="Typesetting quotations">Quotations and quotation marks</a></li>
+<li><a href="Arabic.html" title="Arabic">Arabic</a></li>
+<li><a href="Chinese.html" title="Chinese">Chinese</a></li>
+<li><a href="French.html" title="French">French</a></li>
+<li><a href="German.html" title="German">German</a></li>
+<li><a href="Greek.html" title="Greek">Greek</a></li>
+<li><a href="Italian.html" title="Italian">Italian</a></li>
+<li><a href="Japanese.html" title="Japanese">Japanese</a></li>
+<li><a href="Korean.html" title="Korean">Korean</a></li>
+<li><a href="Portuguese.html" title="Portuguese">Portuguese</a></li>
+<li><a href="Russian.html" title="Russian">Russian</a></li>
+<li><a href="Spanish.html" title="Spanish">Spanish</a></li></ul>
+<h2><span class="mw-headline">Document structure</span></h2>
+<ul><li><a href="Sections_and_chapters.html" title="Sections and chapters">Sections and chapters</a></li>
+<li><a href="Table_of_contents.html" title="Table of contents">Table of contents</a></li>
+<li><a href="Cross_referencing_sections%2c_equations_and_floats.html" title="Cross referencing sections, equations and floats">Cross referencing sections, equations and floats</a></li>
+<li><a href="Indices.html" title="Indices">Indices</a></li>
+<li><a href="Glossaries.html" title="Glossaries">Glossaries</a></li>
+<li><a href="Nomenclatures.html" title="Nomenclatures">Nomenclatures</a></li>
+<li><a href="Management_in_a_large_project.html" title="Management in a large project">Management in a large project</a></li>
+<li><a href="Multi-file_LaTeX_projects.html" title="Multi-file LaTeX projects">Multi-file LaTeX projects</a></li>
+<li><a href="Hyperlinks.html" title="Hyperlinks">Hyperlinks</a></li></ul>
+<h2><span class="mw-headline">Formatting</span></h2>
+<ul><li><a href="Lengths_in_LaTeX.html" title="Lengths in LaTeX">Lengths in <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li>
+<li><a href="Headers_and_footers.html" title="Headers and footers">Headers and footers</a></li>
+<li><a href="Page_numbering.html" title="Page numbering">Page numbering</a></li>
+<li><a href="Articles/How_to_change_paragraph_spacing_in_LaTeX.html" class="mw-redirect" title="Paragraph formatting">Paragraph formatting</a></li>
+<li><a href="Line_breaks_and_blank_spaces.html" title="Line breaks and blank spaces">Line breaks and blank spaces</a></li>
+<li><a href="Text_alignment.html" title="Text alignment">Text alignment</a></li>
+<li><a href="Page_size_and_margins.html" title="Page size and margins">Page size and margins</a></li>
+<li><a href="Single_sided_and_double_sided_documents.html" title="Single sided and double sided documents">Single sided and double sided documents</a></li>
+<li><a href="Multiple_columns.html" title="Multiple columns">Multiple columns</a></li>
+<li><a href="Counters.html" title="Counters">Counters</a></li>
+<li><a href="Code_listing.html" title="Code listing">Code listing</a></li>
+<li><a href="Code_Highlighting_with_minted.html" title="Code Highlighting with minted">Code Highlighting with minted</a></li>
+<li><a href="Using_colors_in_LaTeX.html" class="mw-redirect" title="Using colours in LaTeX">Using colours in LaTeX</a></li>
+<li><a href="Footnotes.html" title="Footnotes">Footnotes</a></li>
+<li><a href="Margin_notes.html" title="Margin notes">Margin notes</a></li></ul>
+<h2><span class="mw-headline">Fonts</span></h2>
+<ul><li><a href="Font_sizes%2c_families%2c_and_styles.html" title="Font sizes, families, and styles">Font sizes, families, and styles</a></li>
+<li><a href="Font_typefaces.html" title="Font typefaces">Font typefaces</a></li>
+<li><a href="XeLaTeX.html" title="XeLaTeX">Supporting modern fonts with <span class="texhtml" style="font-family:'CMU Serif', cmr10, LMRoman10-Regular, 'Times New Roman', 'Nimbus Roman No9 L', Times, serif">X<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.075em">Ǝ</span>L<span style="text-transform:uppercase;font-size:70%;margin-left:-0.36em;vertical-align:0.3em;line-height:0;margin-right:-0.15em">a</span>T<span style="text-transform:uppercase;margin-left:-0.1667em;vertical-align:-0.5ex;line-height:0;margin-right:-0.125em">e</span>X</span></a></li></ul>
+<h2><span class="mw-headline">Presentations</span></h2>
+<ul><li><a href="Beamer.html" title="Beamer">Beamer</a></li>
+<li><a href="Powerdot.html" title="Powerdot">Powerdot</a></li>
+<li><a href="Posters.html" title="Posters">Posters</a></li></ul>
+<h2><span class="mw-headline">Commands</span></h2>
+<ul><li><a href="Commands.html" title="Commands">Commands</a></li>
+<li><a href="Environments.html" title="Environments">Environments</a></li></ul>
+<h2><span class="mw-headline">Field specific</span></h2>
+<ul><li><a href="Theorems_and_proofs.html" title="Theorems and proofs">Theorems and proofs</a></li>
+<li><a href="Chemistry_formulae.html" title="Chemistry formulae">Chemistry formulae</a></li>
+<li><a href="Feynman_diagrams.html" title="Feynman diagrams">Feynman diagrams</a></li>
+<li><a href="Molecular_orbital_diagrams.html" title="Molecular orbital diagrams">Molecular orbital diagrams</a></li>
+<li><a href="Chess_notation.html" title="Chess notation">Chess notation</a></li>
+<li><a href="Knitting_patterns.html" title="Knitting patterns">Knitting patterns</a></li>
+<li><a href="CircuiTikz_package.html" title="CircuiTikz package">CircuiTikz package</a></li>
+<li><a href="Pgfplots_package.html" title="Pgfplots package">Pgfplots package</a></li>
+<li><a href="Typesetting_exams_in_LaTeX.html" title="Typesetting exams in LaTeX">Typesetting exams in LaTeX</a></li>
+<li><a href="Knitr.html" title="Knitr">Knitr</a></li>
+<li><a href="Attribute_Value_Matrices.html" title="Attribute Value Matrices">Attribute Value Matrices</a></li></ul>
+<h2><span class="mw-headline">Class files</span></h2>
+<ul><li><a href="Understanding_packages_and_class_files.html" title="Understanding packages and class files">Understanding packages and class files</a></li>
+<li><a href="Overleaf_and_TeX_Live.html" class="mw-redirect" title="List of packages and class files">List of packages and class files</a></li>
+<li><a href="Writing_your_own_package.html" title="Writing your own package">Writing your own package</a></li>
+<li><a href="Writing_your_own_class.html" title="Writing your own class">Writing your own class</a></li></ul>
+<h2><span></span><span class="mw-headline">Advanced TeX/LaTeX</span></h2>
+<ul><li><a href="Articles.html" title="Articles">In-depth technical articles on TeX/LaTeX</a></li></ul>
+
+
+
+
+</div></div></div></div></main><footer class="fat-footer hidden-print"><div class="fat-footer-container" role="navigation" aria-label="Footer navigation"><div class="fat-footer-sections"><div class="footer-section" id="footer-brand"><a class="footer-brand" href="../../index.html" aria-label="Overleaf"></a></div><div class="footer-section"><h2 class="footer-section-heading">About</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about">About us</a></li><li><a href="https://www.overleaf.com/about/values">Our values</a></li><li><a href="https://www.overleaf.com/about/careers">Careers</a></li><li><a href="https://www.overleaf.com/for/press">Press &amp; awards</a></li><li><a href="https://www.overleaf.com/blog">Blog</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Learn</h2><ul class="list-unstyled"><li><a href="Learn_LaTeX_in_30_minutes.html">LaTeX in 30 minutes</a></li><li><a href="https://www.overleaf.com/latex/templates">Templates</a></li><li><a href="https://www.overleaf.com/events/webinars">Webinars</a></li><li><a href="Tutorials.html">Tutorials</a></li><li><a href="Inserting_Images.html">How to insert images</a></li><li><a href="Tables.html">How to create tables</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Plans &amp; pricing</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/learn/how-to/Overleaf_premium_features">Premium features</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-indv-groups">For individuals &amp; groups</a></li><li><a href="https://www.overleaf.com/for/enterprises">For enterprise</a></li><li><a href="https://www.overleaf.com/for/universities">For universities</a></li><li><a href="https://www.overleaf.com/user/subscription/plans?itm_referrer=footer-for-students#view=student">For students</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Get involved</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/for/community/advisors">Become an Overleaf advisor</a></li><li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a></li></ul></div><div class="footer-section"><h2 class="footer-section-heading">Help</h2><ul class="list-unstyled"><li><a href="https://www.overleaf.com/about/why-latex">Why LaTeX?</a></li><li><a href="../../learn.html">Documentation </a></li><li><a href="https://www.overleaf.com/contact">Contact us  </a></li><li><a href="https://status.overleaf.com/">Website status</a></li></ul></div></div><div class="fat-footer-base"><div class="fat-footer-base-section fat-footer-base-meta"><div class="fat-footer-base-item"> <div class="fat-footer-base-copyright">© 2024 Overleaf</div><a href="https://www.overleaf.com/legal">Privacy and Terms</a><a href="https://www.digital-science.com/security-certifications/">Compliance</a></div><ul class="fat-footer-base-item list-unstyled fat-footer-base-language"><li class="dropdown dropup subdued language-picker" dropdown><a class="dropdown-toggle" id="language-picker-toggle" href="#" dropdown-toggle data-ol-lang-selector-tooltip data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="Select Language" tooltip="Language" title="Language"><i class="fa fa-fw fa-language"></i>
+English</a><ul class="dropdown-menu" role="menu" aria-labelledby="language-picker-toggle"><li class="dropdown-header">Language</li><li class="lngOption"><a class="menu-indent" href="Pgfplots_package.html" role="menuitem">English</a></li><li class="lngOption"><a class="menu-indent" href="https://cs.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">Čeština</a></li><li class="lngOption"><a class="menu-indent" href="https://es.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">Español</a></li><li class="lngOption"><a class="menu-indent" href="https://pt.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">Português</a></li><li class="lngOption"><a class="menu-indent" href="https://fr.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">Français</a></li><li class="lngOption"><a class="menu-indent" href="https://de.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">Deutsch</a></li><li class="lngOption"><a class="menu-indent" href="https://sv.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">Svenska</a></li><li class="lngOption"><a class="menu-indent" href="https://tr.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">Türkçe</a></li><li class="lngOption"><a class="menu-indent" href="https://it.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">Italiano</a></li><li class="lngOption"><a class="menu-indent" href="https://cn.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">简体中文</a></li><li class="lngOption"><a class="menu-indent" href="https://no.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">Norsk</a></li><li class="lngOption"><a class="menu-indent" href="https://ru.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">Русский</a></li><li class="lngOption"><a class="menu-indent" href="https://da.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">Dansk</a></li><li class="lngOption"><a class="menu-indent" href="https://ko.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">한국어</a></li><li class="lngOption"><a class="menu-indent" href="https://ja.overleaf.com/learn/latex/Pgfplots_package" role="menuitem">日本語</a></li></ul></li></ul></div><div class="fat-footer-base-section fat-footer-base-social"><div class="fat-footer-base-item"><a class="fat-footer-social" href="https://twitter.com/overleaf"><i class="fa fa-twitter-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Twitter</div></a><a class="fat-footer-social" href="https://www.facebook.com/overleaf.editor"><i class="fa fa-facebook-square" aria-hidden="true"></i><div class="sr-only">Overleaf on Facebook</div></a><a class="fat-footer-social" href="https://www.linkedin.com/company/writelatex-limited"><i class="fa fa-linkedin-square" aria-hidden="true"></i><div class="sr-only">Overleaf on LinkedIn</div></a></div></div></div></div></footer><div class="cookie-banner hidden-print hidden"><div class="cookie-banner-content">We only use cookies for essential purposes and to improve your experience on our site. You can find out more in our <a href="https://www.overleaf.com/legal#Cookies">cookie policy</a>.</div><div class="cookie-banner-actions"><button class="btn btn-link btn-sm" type="button" data-ol-cookie-banner-set-consent="essential">Essential cookies only</button><button class="btn btn-primary btn-sm" type="button" data-ol-cookie-banner-set-consent="all">Accept all cookies</button></div></div><div class="modal fade" tabindex="-1" role="dialog" data-ol-contact-form-modal="contact-us"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Contact Us</h4></div><div class="modal-body contact-us-modal"><form data-ol-async-form data-ol-contact-form data-ol-contact-form-with-search name="contactForm" role="form" aria-label="Contact Us" action="https://www.overleaf.com/support"><input name="inbox" type="hidden" value="support"><span data-ol-not-sent><div data-ol-form-messages="" role="alert"></div><label>Subject</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Subject" name="subject" required autocomplete="off" maxlength="255"></div><div class="contact-suggestions" data-ol-search-results-wrapper hidden><p class="contact-suggestion-label" aria-live="polite">Have you checked our <a href="https://www.overleaf.com/learn/kb" target="_blank">knowledge base</a>?</p><ul class="contact-suggestion-list" data-ol-search-results aria-role="region" aria-label="Help articles matching your subject"></ul></div><label class="desc">Email</label><div class="form-group"><input class="field text medium span8 form-control" aria-label="Email" name="email" required type="email" spellcheck="false" value="" maxlength="255"></div><label class="desc" id="title12">Affected project URL (Optional)</label><div class="form-group"><input class="field text medium span8 form-control" name="projectUrl" aria-label="Affected project URL Optional"></div><label class="desc">Message</label><div class="form-group"><textarea class="field text medium span8 form-control" aria-label="Message" name="message" required type="text"></textarea></div><div class="form-group hidden"><input class="field text medium span8 form-control" aria-label="important message" name="important_message"></div><div class="form-group text-center"><button class="btn-primary btn btn-lg" type="submit" data-ol-disabled-inflight event-tracking="form-submitted-contact-us" event-tracking-mb="true" event-tracking-trigger="click" event-segmentation="{&quot;location&quot;:&quot;contact-us-form&quot;}"><span data-ol-inflight="idle" aria-label="Contact Us">Contact Us</span><span hidden data-ol-inflight="pending" aria-label="Sending">Sending&hellip;</span></button></div></span><span data-ol-sent hidden><p>Message sent! Our team will review it and reply by email.</p></span></form></div></div></div></div></body><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/6708-bb0ec2a596e2d79e281e.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/1299-340aed457cf26db6735c.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/6355-7163e9bedb3c31a04d77.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/2450-b356853f41e99815b7e0.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/5071-4caa6fbe5a39e716483c.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/2570-27469efce30426390030.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/7604-4813a9465eb5181932ed.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/7958-6dee6439f476be110b3e.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/2456-e8a135acd34ece76b735.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/9484-53dbcb6a83726e8175ee.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/8234-ab2cbc754c35edf623d7.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/5442-81e5ef7105f5588be644.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/8489-58002e7913f5e7202666.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==" src="../../../cdn.overleaf.com/js/modules/learn/pages/learn-3368073b3c035b5683a3.js"></script><script type="text/javascript" nonce="3PQTYXUQ78gCEPylPMIcWQ==">window.addEventListener('DOMContentLoaded', function() {
+	//- Look for bundle
+	var cdnBlocked = typeof Frontend === 'undefined'
+	//- Prevent loops
+	var noCdnAlreadyInUrl = window.location.href.indexOf("nocdn=true") != -1
+	if (cdnBlocked && !noCdnAlreadyInUrl && navigator.userAgent.indexOf("Googlebot") == -1) {
+		//- Set query param, server will not set CDN url
+		window.location.search += "&nocdn=true";
+	}
+})</script>
+<!-- Mirrored from www.overleaf.com/learn/latex/Pgfplots_package by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Apr 2024 13:56:00 GMT -->
+</html>
