@@ -1,0 +1,40 @@
+% Document class declaration
+\documentclass{article}
+
+% Package for including graphics
+\usepackage{graphicx}
+
+% Directory containing images (optional)
+% \graphicspath{{images/}}
+
+% Title of the document
+\title{CS108\_LaTeX}
+
+% Author(s) of the document
+\author{Saksham Rathi}
+
+% Date of the document
+\date{March 2024}
+
+% Begin document content
+\begin{document}
+
+% Create title based on \title, \author, and \date commands
+\maketitle
+
+% Begin figure environment to insert image
+\begin{figure}[h]
+    \centering
+    % Include the image with width 0.75 times the text width
+    \includegraphics[width=0.75\textwidth]{7473766-Google-images-Quote-Practice-like-you-ve-never-won-Perform-like.jpg}
+    % Caption for the image
+    \caption{A nice plot.}
+    % Label for referencing the image
+    \label{fig:mesh1}
+\end{figure}
+
+% Text referring to the image using \ref and \pageref commands
+As you can see in Figure \ref{fig:mesh1}, the function grows near the origin. This example is on page \pageref{fig:mesh1}.
+
+% End of document content
+\end{document}

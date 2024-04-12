@@ -1,0 +1,169 @@
+% Declare the document class as article
+\documentclass{article}
+
+% Include the xcolor package with the 'table' option to enable table cell coloring
+\usepackage[table]{xcolor}
+
+% Include the array package for advanced array and tabular environments
+\usepackage{array}
+
+% Include the booktabs package for improved table layout
+\usepackage{booktabs}
+
+% Include the multirow package to enable multirow cells in tables
+\usepackage{multirow}
+
+% Set the title of the document
+\title{CS108\_LaTeX}
+
+% Set the author(s) of the document
+\author{Saksham Rathi}
+
+% Set the date of the document
+\date{March 2024}
+
+% Begin the document content
+\begin{document}
+
+% Generate the title based on the previously set title, author, and date
+\maketitle
+
+% Start a new section titled "Basic Tables"
+\section{Basic Tables}
+
+% Subsection: "Simple Table"
+\subsection{Simple Table}
+
+% Begin a tabular environment with 3 columns, each centered and separated by vertical lines
+\begin{tabular}{|c|c|c|}
+% Draw a horizontal line
+\hline
+% Table header row
+Header 1 & Header 2 & Header 3 \\
+% Draw a horizontal line
+\hline
+% Table content rows
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+% Draw a horizontal line
+\hline
+% End the tabular environment
+\end{tabular}
+
+% Subsection: "Table with Borders Removed"
+\subsection{Table with Borders Removed}
+
+% Begin a tabular environment with 3 columns, each centered and without vertical lines
+\begin{tabular}{ccc}
+% Draw a horizontal line
+\hline
+% Table header row
+Header 1 & Header 2 & Header 3 \\
+% Draw a horizontal line
+\hline
+% Table content rows
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+% Draw a horizontal line
+\hline
+% End the tabular environment
+\end{tabular}
+
+% Subsection: "Table with Different Column Types"
+\subsection{Table with Different Column Types}
+
+% Begin a tabular environment with 3 columns: left-aligned, right-aligned, and a paragraph column with a fixed width of 3cm
+\begin{tabular}{|l|r|p{3cm}|}
+% Draw a horizontal line
+\hline
+% Table header row
+Left-aligned & Right-aligned & Paragraph \\
+% Draw a horizontal line
+\hline
+% Table content row
+Column 1 & Column 2 & A paragraph of text. \\
+% Draw a horizontal line
+\hline
+% End the tabular environment
+\end{tabular}
+
+% Start a new section titled "Advanced Tables"
+\section{Advanced Tables}
+
+% Subsection: "Table with Booktabs"
+\subsection{Table with Booktabs}
+
+% Begin a tabular environment with 3 columns, using booktabs for improved layout
+\begin{tabular}{ccc}
+% Insert a top rule
+\toprule
+% Table header row
+Header 1 & Header 2 & Header 3 \\
+% Insert a midrule
+\midrule
+% Table content rows
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+% Insert a bottom rule
+\bottomrule
+% End the tabular environment
+\end{tabular}
+
+% Subsection: "Table with Multirow"
+\subsection{Table with Multirow}
+
+% Begin a tabular environment with 2 columns
+\begin{tabular}{cc}
+% Draw a horizontal line
+\hline
+% Multirow cell spanning 2 rows, containing the text "Multirow"
+\multirow{2}{*}{Multirow} & Cell 1 \\
+% Insert a blank cell followed by "Cell 2"
+& Cell 2 \\
+% Draw a horizontal line
+\hline
+% End the tabular environment
+\end{tabular}
+
+% Start a new section titled "Formatting Options"
+\section{Formatting Options}
+
+% Subsection: "Cell Coloring"
+\subsection{Cell Coloring}
+
+% Begin a tabular environment with 3 columns, each centered and separated by vertical lines
+\begin{tabular}{|c|c|c|}
+% Draw a horizontal line
+\hline
+% Table header row with cell coloring
+\rowcolor{gray!20} Header 1 & Header 2 & Header 3 \\
+% Draw a horizontal line
+\hline
+% Table content rows with alternate row coloring
+1 & 2 & 3 \\
+\rowcolor{gray!10} 4 & 5 & 6 \\
+7 & 8 & 9 \\
+% Draw a horizontal line
+\hline
+% End the tabular environment
+\end{tabular}
+
+% Subsection: "Cell Text Formatting"
+\subsection{Cell Text Formatting}
+
+% Begin a tabular environment with 2 columns, each centered and separated by vertical lines
+\begin{tabular}{|c|c|}
+% Draw a horizontal line
+\hline
+% Bold text in the first cell, italic text in the second cell
+\textbf{Bold} & \textit{Italic} \\
+% Draw a horizontal line
+\hline
+% End the tabular environment
+\end{tabular}
+
+% End the document content
+\end{document}

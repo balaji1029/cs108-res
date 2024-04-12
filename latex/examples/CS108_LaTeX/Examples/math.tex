@@ -1,0 +1,80 @@
+\documentclass{article} % Define the document class as "article", which is suitable for short documents like articles or reports
+\usepackage{amsmath} % Required for many math environments and symbols
+\usepackage{amsfonts} % Required for certain math fonts
+\usepackage{amssymb} % Required for additional math symbols
+\usepackage{amsthm} % Required for theorem environments
+
+\begin{document} % Begin the document content
+
+\title{Mathematics in LaTeX} % Set the title of the document
+\author{Saksham Rathi} % Set the author(s) of the document
+\date{\today} % Set the date of the document to today's date
+\maketitle % Generate the title based on the previously set title, author, and date
+
+\section{Basic Math} % Start a new section titled "Basic Math"
+
+\subsection{Inline Math} % Subsection: "Inline Math"
+The Pythagorean theorem: $a^2 + b^2 = c^2$. % Text explaining the Pythagorean theorem in inline math mode
+
+\subsection{Display Math} % Subsection: "Display Math"
+The quadratic formula: % Text explaining the quadratic formula
+\[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \] % Display math mode displaying the quadratic formula
+
+\section{Mathematical Environments} % Start a new section titled "Mathematical Environments"
+
+\subsection{Equation Environment} % Subsection: "Equation Environment"
+\begin{equation} % Begin the equation environment
+    \lim_{x \to \infty} \frac{1}{x} = 0 % Equation demonstrating a limit as x approaches infinity
+\end{equation} % End the equation environment
+
+\subsection{Aligned Equations} % Subsection: "Aligned Equations"
+\begin{align} % Begin the align environment for aligned equations
+    f(x) &= x^2 \\ % Aligned equation 1
+    g(x) &= \sin(x) % Aligned equation 2
+\end{align} % End the align environment
+
+\subsection{Cases Environment} % Subsection: "Cases Environment"
+\[ % Begin the display math mode
+f(x) = % Start defining a function
+\begin{cases} % Begin the cases environment for piecewise functions
+    1 & \text{if } x \geq 0 \\ % First case
+    0 & \text{if } x < 0 % Second case
+\end{cases} % End the cases environment
+\] % End the display math mode
+
+\section{Mathematical Symbols} % Start a new section titled "Mathematical Symbols"
+
+\subsection{Greek Letters} % Subsection: "Greek Letters"
+\[ \alpha, \beta, \gamma, \Delta, \epsilon, \theta, \pi, \Sigma, \omega \] % Display various Greek letters
+
+\subsection{Mathematical Operators} % Subsection: "Mathematical Operators"
+\[ \sin(x), \cos(x), \lim_{n \to \infty}, \sum_{i=1}^{n} \] % Display various mathematical operators
+
+\subsection{Brackets and Delimiters} % Subsection: "Brackets and Delimiters"
+\[ (a + b) \times (c - d) = ac - ad + bc - bd \] % Display an equation with brackets and delimiters
+\[ \left( \frac{1}{2} \right) \] % Display a fraction with left and right delimiters
+
+\section{Theorem Environments} % Start a new section titled "Theorem Environments"
+
+% \newtheorem{theorem}{Theorem} defines a new environment called "theorem" for typesetting theorems. The first argument {theorem} is the name of the environment, and the second argument {Theorem} is the name that will be displayed when a theorem is typeset.
+\newtheorem{theorem}{Theorem} % Define theorem environment
+
+% \newtheorem{lemma}[theorem]{Lemma} defines a new environment called "lemma" for typesetting lemmas. The optional argument [theorem] indicates that lemmas will be numbered within the same counter as theorems. This means that lemmas and theorems will share the same numbering. The third argument {Lemma} is the name that will be displayed when a lemma is typeset.
+
+
+\newtheorem{lemma}[theorem]{Lemma} % Define lemma environment
+
+\begin{theorem}[Pythagorean Theorem] % Begin a theorem environment with the title "Pythagorean Theorem"
+    For a right triangle, the square of the length of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the lengths of the other two sides. % Text explaining the Pythagorean theorem
+    \[ a^2 + b^2 = c^2 \] % Display the Pythagorean theorem equation
+\end{theorem} % End the theorem environment
+
+\begin{proof} % Begin a proof environment
+    This follows directly from the definition of a right triangle. % Text explaining the proof of the Pythagorean theorem
+\end{proof} % End the proof environment
+
+\section{Conclusion} % Start a new section titled "Conclusion"
+
+This document has demonstrated various mathematical expressions, environments, symbols, and theorem environments available in \LaTeX. % Text summarizing the content of the document
+
+\end{document} % End the document content

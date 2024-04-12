@@ -1,0 +1,48 @@
+\documentclass{article}
+% This line sets the title of the document
+\title{CS108\_LaTeX}
+
+% This line sets the author(s) of the document
+\author{Saksham Rathi}
+
+% This line sets the date of the document
+\date{March 2024}
+
+% Define a command without arguments
+\newcommand{\myHello}{Hello, LaTeX!}
+
+% Define a command with one argument
+\newcommand{\myGreet}[1]{Hello, #1!}
+
+% Define a command with two arguments
+\newcommand{\mySum}[2]{The sum of #1 and #2 is #1+#2.}
+
+% Define a command with default value for an argument
+\newcommand{\myDefault}[2][World]{Hello, #1, #2!}
+
+% Define a command with optional argument
+\newcommand{\myOpt}[2][]{Hello, #2#1!}
+
+\begin{document}
+\maketitle
+% Using commands defined above
+
+% Using \myHello
+\myHello
+
+% Using \myGreet with an argument
+\myGreet{John}
+
+% Using \mySum with two arguments
+\mySum{5}{3}
+
+% Using \myDefault with and without argument
+\myDefault{LaTeX}
+
+% Using \myOpt with and without optional argument
+\myOpt{Alice}
+
+% "!" stands for the optional argument.
+\myOpt[!]{Bob}
+
+\end{document}

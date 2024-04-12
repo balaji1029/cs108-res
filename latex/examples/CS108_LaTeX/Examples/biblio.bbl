@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{book_example}
+A.~Author and Saksham Rathi.
+\newblock {\em The Sun: A Star}.
+\newblock Publisher, 2020.
+
+\bibitem{article_example}
+B.~Author.
+\newblock The earth's orbit.
+\newblock {\em Journal of Astronomy}, 10(2):123--135, 2018.
+
+\bibitem{conference_example}
+C.~Author.
+\newblock Introduction to relativity.
+\newblock In {\em Proceedings of the International Conference on Physics},
+  2016.
+
+\bibitem{website_example}
+D.~Author.
+\newblock Discovery of the higgs boson.
+\newblock \url{http://example.com}, 2013.
+\newblock Accessed: March 15, 2024.
+
+\end{thebibliography}
